@@ -1,0 +1,2413 @@
+             Evaluation Summary: llama-3.2-3b-4bit             
+┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┓
+┃         ┃         ┃ Expected ┃         ┃ Assertio ┃         ┃
+┃ Case ID ┃ Inputs  ┃ Output   ┃ Outputs ┃ ns       ┃ Durati… ┃
+┡━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━┩
+│ Test #1 │ {'name' │ Heritage │ Heritag │ ✔        │    1.0s │
+│ - Ryan  │ : 'Ryan │ Action   │ e       │          │         │
+│ Walker  │ Walker' │ for      │ Action  │          │         │
+│         │ ,       │ America  │ for     │          │         │
+│         │ 'email' │          │ America │          │         │
+│         │ :       │          │         │          │         │
+│         │ 'newsle │          │         │          │         │
+│         │ tter@ne │          │         │          │         │
+│         │ wslette │          │         │          │         │
+│         │ r.conse │          │         │          │         │
+│         │ rvative │          │         │          │         │
+│         │ direct. │          │         │          │         │
+│         │ com',   │          │         │          │         │
+│         │ 'subjec │          │         │          │         │
+│         │ t':     │          │         │          │         │
+│         │ '“Garba │          │         │          │         │
+│         │ ge”     │          │         │          │         │
+│         │ That’s  │          │         │          │         │
+│         │ what    │          │         │          │         │
+│         │ Joe     │          │         │          │         │
+│         │ Biden   │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ called  │          │         │          │         │
+│         │ MILLION │          │         │          │         │
+│         │ S of    │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ ns.',   │          │         │          │         │
+│         │ 'date': │          │         │          │         │
+│         │ '11/1/2 │          │         │          │         │
+│         │ 4       │          │         │          │         │
+│         │ 0:00',  │          │         │          │         │
+│         │ 'year': │          │         │          │         │
+│         │ '2024', │          │         │          │         │
+│         │ 'month' │          │         │          │         │
+│         │ : '11', │          │         │          │         │
+│         │ 'day':  │          │         │          │         │
+│         │ '1',    │          │         │          │         │
+│         │ 'hour': │          │         │          │         │
+│         │ '0',    │          │         │          │         │
+│         │ 'minute │          │         │          │         │
+│         │ ': '0', │          │         │          │         │
+│         │ 'domain │          │         │          │         │
+│         │ ':      │          │         │          │         │
+│         │ 'newsle │          │         │          │         │
+│         │ tter.co │          │         │          │         │
+│         │ nservat │          │         │          │         │
+│         │ ivedire │          │         │          │         │
+│         │ ct.com' │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ 'body': │          │         │          │         │
+│         │ "Here’s │          │         │          │         │
+│         │ why it  │          │         │          │         │
+│         │ doesn’t │          │         │          │         │
+│         │ surpris │          │         │          │         │
+│         │ e me    │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ Biden   │          │         │          │         │
+│         │ slander │          │         │          │         │
+│         │ ed half │          │         │          │         │
+│         │ of      │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ Pleases │          │         │          │         │
+│         │ ee a    │          │         │          │         │
+│         │ special │          │         │          │         │
+│         │ message │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ sponsor │          │         │          │         │
+│         │ . If    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ would   │          │         │          │         │
+│         │ like to │          │         │          │         │
+│         │ unsubsc │          │         │          │         │
+│         │ ribe,vi │          │         │          │         │
+│         │ sit     │          │         │          │         │
+│         │ thislin │          │         │          │         │
+│         │ k       │          │         │          │         │
+│         │ “Garbag │          │         │          │         │
+│         │ e.”     │          │         │          │         │
+│         │ That’s  │          │         │          │         │
+│         │ what    │          │         │          │         │
+│         │ Joe     │          │         │          │         │
+│         │ Biden   │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ called  │          │         │          │         │
+│         │ MILLION │          │         │          │         │
+│         │ S       │          │         │          │         │
+│         │ ofAmeri │          │         │          │         │
+│         │ cans.   │          │         │          │         │
+│         │ It’s    │          │         │          │         │
+│         │ disgust │          │         │          │         │
+│         │ ing     │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Preside │          │         │          │         │
+│         │ nt      │          │         │          │         │
+│         │ would   │          │         │          │         │
+│         │ slander │          │         │          │         │
+│         │ half of │          │         │          │         │
+│         │ thecoun │          │         │          │         │
+│         │ try he  │          │         │          │         │
+│         │ serves, │          │         │          │         │
+│         │ but it  │          │         │          │         │
+│         │ doesn’t │          │         │          │         │
+│         │ surpris │          │         │          │         │
+│         │ e me.   │          │         │          │         │
+│         │ The     │          │         │          │         │
+│         │ Biden-H │          │         │          │         │
+│         │ arris   │          │         │          │         │
+│         │ adminis │          │         │          │         │
+│         │ tration │          │         │          │         │
+│         │ has     │          │         │          │         │
+│         │ ignored │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ ns hurt │          │         │          │         │
+│         │ by      │          │         │          │         │
+│         │ their   │          │         │          │         │
+│         │ inflati │          │         │          │         │
+│         │ on and  │          │         │          │         │
+│         │ familie │          │         │          │         │
+│         │ s who   │          │         │          │         │
+│         │ lost    │          │         │          │         │
+│         │ lovedon │          │         │          │         │
+│         │ es to   │          │         │          │         │
+│         │ fentany │          │         │          │         │
+│         │ l for   │          │         │          │         │
+│         │ years.  │          │         │          │         │
+│         │ My name │          │         │          │         │
+│         │ is Ryan │          │         │          │         │
+│         │ Walker, │          │         │          │         │
+│         │ and I’m │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Executi │          │         │          │         │
+│         │ ve      │          │         │          │         │
+│         │ VicePre │          │         │          │         │
+│         │ sident  │          │         │          │         │
+│         │ of      │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action. │          │         │          │         │
+│         │ We’re   │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ conserv │          │         │          │         │
+│         │ ative   │          │         │          │         │
+│         │ group   │          │         │          │         │
+│         │ fightin │          │         │          │         │
+│         │ g the   │          │         │          │         │
+│         │ Biden-H │          │         │          │         │
+│         │ arris   │          │         │          │         │
+│         │ policie │          │         │          │         │
+│         │ s that  │          │         │          │         │
+│         │ leave   │          │         │          │         │
+│         │ million │          │         │          │         │
+│         │ s of    │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ ns      │          │         │          │         │
+│         │ behind. │          │         │          │         │
+│         │ If,     │          │         │          │         │
+│         │ like    │          │         │          │         │
+│         │ me,     │          │         │          │         │
+│         │ you’red │          │         │          │         │
+│         │ isguste │          │         │          │         │
+│         │ d not   │          │         │          │         │
+│         │ only by │          │         │          │         │
+│         │ what    │          │         │          │         │
+│         │ Kamala  │          │         │          │         │
+│         │ Harris  │          │         │          │         │
+│         │ and Joe │          │         │          │         │
+│         │ Biden   │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ said    │          │         │          │         │
+│         │ but     │          │         │          │         │
+│         │ also    │          │         │          │         │
+│         │ bywhat  │          │         │          │         │
+│         │ they    │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ done in │          │         │          │         │
+│         │ office, │          │         │          │         │
+│         │ thenjoi │          │         │          │         │
+│         │ ning    │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action’ │          │         │          │         │
+│         │ s team  │          │         │          │         │
+│         │ is the  │          │         │          │         │
+│         │ firstst │          │         │          │         │
+│         │ ep in   │          │         │          │         │
+│         │ fightin │          │         │          │         │
+│         │ g back. │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ is the  │          │         │          │         │
+│         │ country │          │         │          │         │
+│         │ 's #1   │          │         │          │         │
+│         │ most    │          │         │          │         │
+│         │ effecti │          │         │          │         │
+│         │ veconse │          │         │          │         │
+│         │ rvative │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ organiz │          │         │          │         │
+│         │ ation,  │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ thousan │          │         │          │         │
+│         │ ds of   │          │         │          │         │
+│         │ grassro │          │         │          │         │
+│         │ ots     │          │         │          │         │
+│         │ activis │          │         │          │         │
+│         │ ts in   │          │         │          │         │
+│         │ statesl │          │         │          │         │
+│         │ ike     │          │         │          │         │
+│         │ yours   │          │         │          │         │
+│         │ fightin │          │         │          │         │
+│         │ g back  │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ radical │          │         │          │         │
+│         │ Left’s  │          │         │          │         │
+│         │ dangero │          │         │          │         │
+│         │ us      │          │         │          │         │
+│         │ policie │          │         │          │         │
+│         │ s.      │          │         │          │         │
+│         │ We’vefo │          │         │          │         │
+│         │ ught    │          │         │          │         │
+│         │ and won │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Biden-H │          │         │          │         │
+│         │ arris   │          │         │          │         │
+│         │ adminis │          │         │          │         │
+│         │ tration │          │         │          │         │
+│         │  on     │          │         │          │         │
+│         │ everyth │          │         │          │         │
+│         │ ing     │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ thebord │          │         │          │         │
+│         │ er to   │          │         │          │         │
+│         │ electio │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ integri │          │         │          │         │
+│         │ ty and  │          │         │          │         │
+│         │ governm │          │         │          │         │
+│         │ ent     │          │         │          │         │
+│         │ overrea │          │         │          │         │
+│         │ ch.     │          │         │          │         │
+│         │ Joining │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Actionm │          │         │          │         │
+│         │ eans    │          │         │          │         │
+│         │ you’ll  │          │         │          │         │
+│         │ be      │          │         │          │         │
+│         │ working │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ the #1  │          │         │          │         │
+│         │ grassro │          │         │          │         │
+│         │ ots     │          │         │          │         │
+│         │ team in │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ country │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ fightin │          │         │          │         │
+│         │ gand    │          │         │          │         │
+│         │ winning │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ politic │          │         │          │         │
+│         │ ians    │          │         │          │         │
+│         │ like    │          │         │          │         │
+│         │ Biden-H │          │         │          │         │
+│         │ arris,  │          │         │          │         │
+│         │ pushing │          │         │          │         │
+│         │ garbage │          │         │          │         │
+│         │ policie │          │         │          │         │
+│         │ s.Herit │          │         │          │         │
+│         │ age     │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ is a    │          │         │          │         │
+│         │ 501(c)4 │          │         │          │         │
+│         │ non-pro │          │         │          │         │
+│         │ fit     │          │         │          │         │
+│         │ organiz │          │         │          │         │
+│         │ ation.  │          │         │          │         │
+│         │ Donatio │          │         │          │         │
+│         │ nsare   │          │         │          │         │
+│         │ not tax │          │         │          │         │
+│         │ deducti │          │         │          │         │
+│         │ ble.    │          │         │          │         │
+│         │ State   │          │         │          │         │
+│         │ Registr │          │         │          │         │
+│         │ ation   │          │         │          │         │
+│         │ Disclos │          │         │          │         │
+│         │ ures.   │          │         │          │         │
+│         │ By      │          │         │          │         │
+│         │ partici │          │         │          │         │
+│         │ pating, │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ youagre │          │         │          │         │
+│         │ e to    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ terms & │          │         │          │         │
+│         │ privacy │          │         │          │         │
+│         │ policy  │          │         │          │         │
+│         │ (51776- │          │         │          │         │
+│         │ info.co │          │         │          │         │
+│         │ m) for  │          │         │          │         │
+│         │ recurri │          │         │          │         │
+│         │ ng      │          │         │          │         │
+│         │ autodia │          │         │          │         │
+│         │ ledmark │          │         │          │         │
+│         │ eting   │          │         │          │         │
+│         │ message │          │         │          │         │
+│         │ s from  │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ to the  │          │         │          │         │
+│         │ phone   │          │         │          │         │
+│         │ number  │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ provide │          │         │          │         │
+│         │ .       │          │         │          │         │
+│         │ Noconse │          │         │          │         │
+│         │ nt      │          │         │          │         │
+│         │ require │          │         │          │         │
+│         │ d to    │          │         │          │         │
+│         │ buy.    │          │         │          │         │
+│         │ Msg&dat │          │         │          │         │
+│         │ a;      │          │         │          │         │
+│         │ rates   │          │         │          │         │
+│         │ may     │          │         │          │         │
+│         │ apply.  │          │         │          │         │
+│         │ When    │          │         │          │         │
+│         │ selecti │          │         │          │         │
+│         │ ng a    │          │         │          │         │
+│         │ recurri │          │         │          │         │
+│         │ ngdonat │          │         │          │         │
+│         │ ion,    │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ process │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n every │          │         │          │         │
+│         │ monthon │          │         │          │         │
+│         │ the day │          │         │          │         │
+│         │ of the  │          │         │          │         │
+│         │ month   │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ you set │          │         │          │         │
+│         │ up the  │          │         │          │         │
+│         │ recurri │          │         │          │         │
+│         │ ng gift │          │         │          │         │
+│         │ in the  │          │         │          │         │
+│         │ amount  │          │         │          │         │
+│         │ thatyou │          │         │          │         │
+│         │ specify │          │         │          │         │
+│         │ using   │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ method  │          │         │          │         │
+│         │ of      │          │         │          │         │
+│         │ payment │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ identif │          │         │          │         │
+│         │ ied.    │          │         │          │         │
+│         │ You can │          │         │          │         │
+│         │ cancel  │          │         │          │         │
+│         │ orchang │          │         │          │         │
+│         │ e this  │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n at    │          │         │          │         │
+│         │ any     │          │         │          │         │
+│         │ time by │          │         │          │         │
+│         │ contact │          │         │          │         │
+│         │ ing us  │          │         │          │         │
+│         │ at      │          │         │          │         │
+│         │ 1-(202) │          │         │          │         │
+│         │ 548-528 │          │         │          │         │
+│         │ 0.      │          │         │          │         │
+│         │ Thisaut │          │         │          │         │
+│         │ horizat │          │         │          │         │
+│         │ ion     │          │         │          │         │
+│         │ shall   │          │         │          │         │
+│         │ remain  │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ effect  │          │         │          │         │
+│         │ until   │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ notify  │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ forAmer │          │         │          │         │
+│         │ ica and │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ has had │          │         │          │         │
+│         │ reasona │          │         │          │         │
+│         │ ble     │          │         │          │         │
+│         │ time to │          │         │          │         │
+│         │ act on  │          │         │          │         │
+│         │ it. A   │          │         │          │         │
+│         │ record  │          │         │          │         │
+│         │ ofeach  │          │         │          │         │
+│         │ debit   │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ appear  │          │         │          │         │
+│         │ on your │          │         │          │         │
+│         │ bank    │          │         │          │         │
+│         │ stateme │          │         │          │         │
+│         │ nt. You │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ right   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ instruc │          │         │          │         │
+│         │ tyour   │          │         │          │         │
+│         │ bank to │          │         │          │         │
+│         │ reverse │          │         │          │         │
+│         │ any and │          │         │          │         │
+│         │ all     │          │         │          │         │
+│         │ debits. │          │         │          │         │
+│         │ Paid    │          │         │          │         │
+│         │ for and │          │         │          │         │
+│         │ Authori │          │         │          │         │
+│         │ zed by  │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ eAction │          │         │          │         │
+│         │  for    │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ This    │          │         │          │         │
+│         │ email   │          │         │          │         │
+│         │ was     │          │         │          │         │
+│         │ sent to │          │         │          │         │
+│         │ dpwilli │          │         │          │         │
+│         │ s67@gma │          │         │          │         │
+│         │ il.com  │          │         │          │         │
+│         │ Unsubsc │          │         │          │         │
+│         │ ribefro │          │         │          │         │
+│         │ m       │          │         │          │         │
+│         │ message │          │         │          │         │
+│         │ s       │          │         │          │         │
+│         │ sponsor │          │         │          │         │
+│         │ ed by   │          │         │          │         │
+│         │ Heritag │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ .       │          │         │          │         │
+│         │ Unsubsc │          │         │          │         │
+│         │ ribe    │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ allcomm │          │         │          │         │
+│         │ unicati │          │         │          │         │
+│         │ ons .", │          │         │          │         │
+│         │ 'party' │          │         │          │         │
+│         │ : 'R',  │          │         │          │         │
+│         │ 'discla │          │         │          │         │
+│         │ imer':  │          │         │          │         │
+│         │ 'TRUE'} │          │         │          │         │
+├─────────┼─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Test #2 │ {'name' │ Adam for │ Adam    │ ✔        │    1.0s │
+│ -       │ :       │ Colorado │ for     │          │         │
+│ Trisha  │ 'Trisha │          │ Colorad │          │         │
+│ Calvar… │ Calvare │          │ o       │          │         │
+│         │ se',    │          │         │          │         │
+│         │ 'email' │          │         │          │         │
+│         │ :       │          │         │          │         │
+│         │ 'info@a │          │         │          │         │
+│         │ damforc │          │         │          │         │
+│         │ olorado │          │         │          │         │
+│         │ .com',  │          │         │          │         │
+│         │ 'subjec │          │         │          │         │
+│         │ t': '$5 │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ defeat  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ ',      │          │         │          │         │
+│         │ 'date': │          │         │          │         │
+│         │ '11/1/2 │          │         │          │         │
+│         │ 4       │          │         │          │         │
+│         │ 0:02',  │          │         │          │         │
+│         │ 'year': │          │         │          │         │
+│         │ '2024', │          │         │          │         │
+│         │ 'month' │          │         │          │         │
+│         │ : '11', │          │         │          │         │
+│         │ 'day':  │          │         │          │         │
+│         │ '1',    │          │         │          │         │
+│         │ 'hour': │          │         │          │         │
+│         │ '0',    │          │         │          │         │
+│         │ 'minute │          │         │          │         │
+│         │ ': '2', │          │         │          │         │
+│         │ 'domain │          │         │          │         │
+│         │ ':      │          │         │          │         │
+│         │ 'adamfo │          │         │          │         │
+│         │ rcolora │          │         │          │         │
+│         │ do.com' │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ 'body': │          │         │          │         │
+│         │ "Click  │          │         │          │         │
+│         │ here to │          │         │          │         │
+│         │ stop    │          │         │          │         │
+│         │ receivi │          │         │          │         │
+│         │ ng      │          │         │          │         │
+│         │ emails  │          │         │          │         │
+│         │ about   │          │         │          │         │
+│         │ Trisha  │          │         │          │         │
+│         │ Calvare │          │         │          │         │
+│         │ se's    │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ todefea │          │         │          │         │
+│         │ t       │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ us.http │          │         │          │         │
+│         │ s://sec │          │         │          │         │
+│         │ ure.act │          │         │          │         │
+│         │ blue.co │          │         │          │         │
+│         │ m/contr │          │         │          │         │
+│         │ ibute/p │          │         │          │         │
+│         │ age/fri │          │         │          │         │
+│         │ sch_ema │          │         │          │         │
+│         │ il_calv │          │         │          │         │
+│         │ arese?r │          │         │          │         │
+│         │ efcode= │          │         │          │         │
+│         │ em20241 │          │         │          │         │
+│         │ 031pm3- │          │         │          │         │
+│         │ nd&amou │          │         │          │         │
+│         │ nts;=5% │          │         │          │         │
+│         │ 2C10%2C │          │         │          │         │
+│         │ 25%2C35 │          │         │          │         │
+│         │ %2C50%2 │          │         │          │         │
+│         │ C100%2C │          │         │          │         │
+│         │ 250&ref │          │         │          │         │
+│         │ code2;= │          │         │          │         │
+│         │ df8bfc3 │          │         │          │         │
+│         │ 9-e497- │          │         │          │         │
+│         │ ef11-88 │          │         │          │         │
+│         │ ce-000d │          │         │          │         │
+│         │ 3a98fa6 │          │         │          │         │
+│         │ b&recur │          │         │          │         │
+│         │ ring;=t │          │         │          │         │
+│         │ rueHell │          │         │          │         │
+│         │ o,I am  │          │         │          │         │
+│         │ emailin │          │         │          │         │
+│         │ g to    │          │         │          │         │
+│         │ ask you │          │         │          │         │
+│         │ to give │          │         │          │         │
+│         │ $5 to   │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ .Here’s │          │         │          │         │
+│         │  why: I │          │         │          │         │
+│         │ am the  │          │         │          │         │
+│         │ Democra │          │         │          │         │
+│         │ tic     │          │         │          │         │
+│         │ nominee │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ , and a │          │         │          │         │
+│         │ brand-n │          │         │          │         │
+│         │ ew poll │          │         │          │         │
+│         │ shows   │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ still   │          │         │          │         │
+│         │ incredi │          │         │          │         │
+│         │ bly     │          │         │          │         │
+│         │ vulnera │          │         │          │         │
+│         │ ble! In │          │         │          │         │
+│         │ 2022,   │          │         │          │         │
+│         │ Adam    │          │         │          │         │
+│         │ Frischn │          │         │          │         │
+│         │ early   │          │         │          │         │
+│         │ defeate │          │         │          │         │
+│         │ d       │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ . He    │          │         │          │         │
+│         │ lost by │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ 546     │          │         │          │         │
+│         │ votes.  │          │         │          │         │
+│         │ That    │          │         │          │         │
+│         │ scared  │          │         │          │         │
+│         │ LaurenB │          │         │          │         │
+│         │ oebert  │          │         │          │         │
+│         │ so much │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ she     │          │         │          │         │
+│         │ came    │          │         │          │         │
+│         │ running │          │         │          │         │
+│         │ to my   │          │         │          │         │
+│         │ distric │          │         │          │         │
+│         │ t. But  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ voters  │          │         │          │         │
+│         │ ofeaste │          │         │          │         │
+│         │ rn      │          │         │          │         │
+│         │ Colorad │          │         │          │         │
+│         │ o don’t │          │         │          │         │
+│         │ want a  │          │         │          │         │
+│         │ carpetb │          │         │          │         │
+│         │ agging  │          │         │          │         │
+│         │ extremi │          │         │          │         │
+│         │ st more │          │         │          │         │
+│         │ concern │          │         │          │         │
+│         │ ed      │          │         │          │         │
+│         │ withget │          │         │          │         │
+│         │ ting on │          │         │          │         │
+│         │ Fox     │          │         │          │         │
+│         │ News    │          │         │          │         │
+│         │ than    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ needs   │          │         │          │         │
+│         │ of her  │          │         │          │         │
+│         │ constit │          │         │          │         │
+│         │ uents.  │          │         │          │         │
+│         │ Even    │          │         │          │         │
+│         │ Republi │          │         │          │         │
+│         │ cans    │          │         │          │         │
+│         │ aredone │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ : 57%   │          │         │          │         │
+│         │ voted   │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ someone │          │         │          │         │
+│         │ else in │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ primary │          │         │          │         │
+│         │ ! We    │          │         │          │         │
+│         │ can     │          │         │          │         │
+│         │ finally │          │         │          │         │
+│         │ kick    │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ out of  │          │         │          │         │
+│         │ Congres │          │         │          │         │
+│         │ s in    │          │         │          │         │
+│         │ Novembe │          │         │          │         │
+│         │ r, but  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ only    │          │         │          │         │
+│         │ way     │          │         │          │         │
+│         │ I’ll be │          │         │          │         │
+│         │ ableto  │          │         │          │         │
+│         │ win is  │          │         │          │         │
+│         │ if we   │          │         │          │         │
+│         │ hit     │          │         │          │         │
+│         │ every   │          │         │          │         │
+│         │ fundrai │          │         │          │         │
+│         │ sing    │          │         │          │         │
+│         │ goal    │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ resourc │          │         │          │         │
+│         │ es to   │          │         │          │         │
+│         │ fullyfu │          │         │          │         │
+│         │ nd my   │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n.      │          │         │          │         │
+│         │ We’ve   │          │         │          │         │
+│         │ set a   │          │         │          │         │
+│         │ goal of │          │         │          │         │
+│         │ raising │          │         │          │         │
+│         │ another │          │         │          │         │
+│         │ $250,00 │          │         │          │         │
+│         │ 0       │          │         │          │         │
+│         │ before  │          │         │          │         │
+│         │ ourfina │          │         │          │         │
+│         │ l       │          │         │          │         │
+│         │ end-of- │          │         │          │         │
+│         │ month   │          │         │          │         │
+│         │ fundrai │          │         │          │         │
+│         │ sing    │          │         │          │         │
+│         │ deadlin │          │         │          │         │
+│         │ e, but  │          │         │          │         │
+│         │ right   │          │         │          │         │
+│         │ now,    │          │         │          │         │
+│         │ we’re   │          │         │          │         │
+│         │ still   │          │         │          │         │
+│         │ incredi │          │         │          │         │
+│         │ blyshor │          │         │          │         │
+│         │ t. So I │          │         │          │         │
+│         │ have to │          │         │          │         │
+│         │ ask:    │          │         │          │         │
+│         │ Please, │          │         │          │         │
+│         │ if you  │          │         │          │         │
+│         │ can     │          │         │          │         │
+│         │ afford  │          │         │          │         │
+│         │ to,     │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ make    │          │         │          │         │
+│         │ adonati │          │         │          │         │
+│         │ on to   │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n –     │          │         │          │         │
+│         │ every   │          │         │          │         │
+│         │ dollar  │          │         │          │         │
+│         │ you can │          │         │          │         │
+│         │ spare – │          │         │          │         │
+│         │ to help │          │         │          │         │
+│         │ me      │          │         │          │         │
+│         │ defeatL │          │         │          │         │
+│         │ auren   │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ ?Please │          │         │          │         │
+│         │  use    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ links   │          │         │          │         │
+│         │ in this │          │         │          │         │
+│         │ email   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ start a │          │         │          │         │
+│         │ monthly │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ through │          │         │          │         │
+│         │ ActBlue │          │         │          │         │
+│         │ :       │          │         │          │         │
+│         │ DONATE  │          │         │          │         │
+│         │ $10DONA │          │         │          │         │
+│         │ TE      │          │         │          │         │
+│         │ $25DONA │          │         │          │         │
+│         │ TE      │          │         │          │         │
+│         │ $35DONA │          │         │          │         │
+│         │ TE      │          │         │          │         │
+│         │ $50DONA │          │         │          │         │
+│         │ TE      │          │         │          │         │
+│         │ $100Oth │          │         │          │         │
+│         │ er      │          │         │          │         │
+│         │ AmountE │          │         │          │         │
+│         │ very    │          │         │          │         │
+│         │ dollar  │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ give    │          │         │          │         │
+│         │ today   │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ bring   │          │         │          │         │
+│         │ us one  │          │         │          │         │
+│         │ step    │          │         │          │         │
+│         │ closer  │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ finally │          │         │          │         │
+│         │ sending │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ packing │          │         │          │         │
+│         │ , and   │          │         │          │         │
+│         │ truly   │          │         │          │         │
+│         │ no      │          │         │          │         │
+│         │ amount  │          │         │          │         │
+│         │ you can │          │         │          │         │
+│         │ afford  │          │         │          │         │
+│         │ is too  │          │         │          │         │
+│         │ small.  │          │         │          │         │
+│         │ Iwill   │          │         │          │         │
+│         │ never   │          │         │          │         │
+│         │ be able │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ fully   │          │         │          │         │
+│         │ express │          │         │          │         │
+│         │ how     │          │         │          │         │
+│         │ thankfu │          │         │          │         │
+│         │ l I am  │          │         │          │         │
+│         │ to have │          │         │          │         │
+│         │ your    │          │         │          │         │
+│         │ support │          │         │          │         │
+│         │ .Thank  │          │         │          │         │
+│         │ you,    │          │         │          │         │
+│         │ Trisha  │          │         │          │         │
+│         │ Paid    │          │         │          │         │
+│         │ for by  │          │         │          │         │
+│         │ Adam    │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ Colorad │          │         │          │         │
+│         │ o.Adam  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ Colorad │          │         │          │         │
+│         │ o PO    │          │         │          │         │
+│         │ Box     │          │         │          │         │
+│         │ 1240Gle │          │         │          │         │
+│         │ nwood   │          │         │          │         │
+│         │ Springs │          │         │          │         │
+│         │ , CO    │          │         │          │         │
+│         │ 81602   │          │         │          │         │
+│         │ United  │          │         │          │         │
+│         │ States  │          │         │          │         │
+│         │ Contrib │          │         │          │         │
+│         │ utions  │          │         │          │         │
+│         │ or      │          │         │          │         │
+│         │ gifts   │          │         │          │         │
+│         │ to Adam │          │         │          │         │
+│         │ forColo │          │         │          │         │
+│         │ rado    │          │         │          │         │
+│         │ are not │          │         │          │         │
+│         │ tax     │          │         │          │         │
+│         │ deducti │          │         │          │         │
+│         │ ble.    │          │         │          │         │
+│         │ This    │          │         │          │         │
+│         │ email   │          │         │          │         │
+│         │ was     │          │         │          │         │
+│         │ sent to │          │         │          │         │
+│         │ dpwilli │          │         │          │         │
+│         │ s67@gma │          │         │          │         │
+│         │ il.com. │          │         │          │         │
+│         │ Click   │          │         │          │         │
+│         │ here to │          │         │          │         │
+│         │ stop    │          │         │          │         │
+│         │ receivi │          │         │          │         │
+│         │ ng      │          │         │          │         │
+│         │ emails  │          │         │          │         │
+│         │ about   │          │         │          │         │
+│         │ Trisha  │          │         │          │         │
+│         │ Calvare │          │         │          │         │
+│         │ se's    │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ todefea │          │         │          │         │
+│         │ t       │          │         │          │         │
+│         │ Lauren  │          │         │          │         │
+│         │ Boebert │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ us. If  │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ receive │          │         │          │         │
+│         │ d this  │          │         │          │         │
+│         │ emailin │          │         │          │         │
+│         │ error   │          │         │          │         │
+│         │ or if   │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ don't   │          │         │          │         │
+│         │ want to │          │         │          │         │
+│         │ receive │          │         │          │         │
+│         │ any     │          │         │          │         │
+│         │ emails  │          │         │          │         │
+│         │ from us │          │         │          │         │
+│         │ anymore │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ pleaseu │          │         │          │         │
+│         │ nsubscr │          │         │          │         │
+│         │ ibe:htt │          │         │          │         │
+│         │ ps://se │          │         │          │         │
+│         │ cure.ng │          │         │          │         │
+│         │ pvan.co │          │         │          │         │
+│         │ m/p/Uv6 │          │         │          │         │
+│         │ ihFy0Uk │          │         │          │         │
+│         │ OXP2-vh │          │         │          │         │
+│         │ 91pzA2? │          │         │          │         │
+│         │ unsubsc │          │         │          │         │
+│         │ ribedat │          │         │          │         │
+│         │ a=9XuF8 │          │         │          │         │
+│         │ fY%2B0H │          │         │          │         │
+│         │ 1BDwYQe │          │         │          │         │
+│         │ 6tgnQ5Q │          │         │          │         │
+│         │ P7fAalC │          │         │          │         │
+│         │ twu1fa8 │          │         │          │         │
+│         │ Or3Awzj │          │         │          │         │
+│         │ 5%2Fx4Z │          │         │          │         │
+│         │ n0pbfG5 │          │         │          │         │
+│         │ AiO3DOH │          │         │          │         │
+│         │ W7WjsLJ │          │         │          │         │
+│         │ CWAA6pb │          │         │          │         │
+│         │ zzqyU0z │          │         │          │         │
+│         │ unBFRrI │          │         │          │         │
+│         │ thB6QM7 │          │         │          │         │
+│         │ nZZZnKV │          │         │          │         │
+│         │ IL4BAhZ │          │         │          │         │
+│         │ d9RtDL0 │          │         │          │         │
+│         │ h4seuHf │          │         │          │         │
+│         │ jTHpMEW │          │         │          │         │
+│         │ rBjdRYX │          │         │          │         │
+│         │ ZWHye8S │          │         │          │         │
+│         │ C1hiJlt │          │         │          │         │
+│         │ Xm%2FoN │          │         │          │         │
+│         │ 2xEtG3U │          │         │          │         │
+│         │ 5BOkB%2 │          │         │          │         │
+│         │ BLep6ID │          │         │          │         │
+│         │ ns30rwq │          │         │          │         │
+│         │ xe2d15p │          │         │          │         │
+│         │ zN0Al8e │          │         │          │         │
+│         │ rO1LUoJ │          │         │          │         │
+│         │ hcZpRAv │          │         │          │         │
+│         │ I08IkUT │          │         │          │         │
+│         │ JitdLt5 │          │         │          │         │
+│         │ S3AMBOx │          │         │          │         │
+│         │ %2BccJx │          │         │          │         │
+│         │ uqdOMBV │          │         │          │         │
+│         │ NLoiIv6 │          │         │          │         │
+│         │ Q3PLN9v │          │         │          │         │
+│         │ HiJcPwI │          │         │          │         │
+│         │ weugjhs │          │         │          │         │
+│         │ fdZYhed │          │         │          │         │
+│         │ 1%2B864 │          │         │          │         │
+│         │ RXDQoQW │          │         │          │         │
+│         │ RDvDLm5 │          │         │          │         │
+│         │ prdch%2 │          │         │          │         │
+│         │ Fw8plu% │          │         │          │         │
+│         │ 2Bl7JxF │          │         │          │         │
+│         │ 93jI4gv │          │         │          │         │
+│         │ om199%2 │          │         │          │         │
+│         │ BkeQBfA │          │         │          │         │
+│         │ 8TSLmXS │          │         │          │         │
+│         │ 4VMhDvs │          │         │          │         │
+│         │ hjmivre │          │         │          │         │
+│         │ pWbxEkM │          │         │          │         │
+│         │ YqmneGP │          │         │          │         │
+│         │ i1hU3WR │          │         │          │         │
+│         │ Y9GorVY │          │         │          │         │
+│         │ jqHMJuh │          │         │          │         │
+│         │ mGeZ5DO │          │         │          │         │
+│         │ q%2FHop │          │         │          │         │
+│         │ 7Ed6bYC │          │         │          │         │
+│         │ gROBXCS │          │         │          │         │
+│         │ JsB7zuk │          │         │          │         │
+│         │ BCHxPqQ │          │         │          │         │
+│         │ OxIZMnk │          │         │          │         │
+│         │ 3elhl2u │          │         │          │         │
+│         │ k.",    │          │         │          │         │
+│         │ 'party' │          │         │          │         │
+│         │ : 'D',  │          │         │          │         │
+│         │ 'discla │          │         │          │         │
+│         │ imer':  │          │         │          │         │
+│         │ 'TRUE'} │          │         │          │         │
+├─────────┼─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Test #3 │ {'name' │ Integrit │ Integri │ ✔        │    1.0s │
+│ - Voter │ :       │ y First  │ ty      │          │         │
+│ Action  │ 'Voter  │ Voter    │ First   │          │         │
+│ Project │ Action  │ Action   │ Voter   │          │         │
+│ Team    │ Project │ Project  │ Action  │          │         │
+│         │ Team',  │          │ Project │          │         │
+│         │ 'email' │          │         │          │         │
+│         │ :       │          │         │          │         │
+│         │ 'info@v │          │         │          │         │
+│         │ oteract │          │         │          │         │
+│         │ ionproj │          │         │          │         │
+│         │ ect.org │          │         │          │         │
+│         │ ',      │          │         │          │         │
+│         │ 'subjec │          │         │          │         │
+│         │ t':     │          │         │          │         │
+│         │ 'All    │          │         │          │         │
+│         │ in',    │          │         │          │         │
+│         │ 'date': │          │         │          │         │
+│         │ '11/1/2 │          │         │          │         │
+│         │ 4       │          │         │          │         │
+│         │ 0:02',  │          │         │          │         │
+│         │ 'year': │          │         │          │         │
+│         │ '2024', │          │         │          │         │
+│         │ 'month' │          │         │          │         │
+│         │ : '11', │          │         │          │         │
+│         │ 'day':  │          │         │          │         │
+│         │ '1',    │          │         │          │         │
+│         │ 'hour': │          │         │          │         │
+│         │ '0',    │          │         │          │         │
+│         │ 'minute │          │         │          │         │
+│         │ ': '2', │          │         │          │         │
+│         │ 'domain │          │         │          │         │
+│         │ ':      │          │         │          │         │
+│         │ 'votera │          │         │          │         │
+│         │ ctionpr │          │         │          │         │
+│         │ oject.o │          │         │          │         │
+│         │ rg',    │          │         │          │         │
+│         │ 'body': │          │         │          │         │
+│         │ "At     │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ point   │          │         │          │         │
+│         │ all the │          │         │          │         │
+│         │ chips   │          │         │          │         │
+│         │ are all │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ table.  │          │         │          │         │
+│         │ 2024's  │          │         │          │         │
+│         │ electio │          │         │          │         │
+│         │ ns are  │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ ahandfu │          │         │          │         │
+│         │ l of    │          │         │          │         │
+│         │ days    │          │         │          │         │
+│         │ away,   │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ opponen │          │         │          │         │
+│         │ ts of   │          │         │          │         │
+│         │ voting  │          │         │          │         │
+│         │ rights  │          │         │          │         │
+│         │ are     │          │         │          │         │
+│         │ all-in. │          │         │          │         │
+│         │ Now     │          │         │          │         │
+│         │ thepres │          │         │          │         │
+│         │ s, the  │          │         │          │         │
+│         │ pundits │          │         │          │         │
+│         │ , and   │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ politic │          │         │          │         │
+│         │ al      │          │         │          │         │
+│         │ strateg │          │         │          │         │
+│         │ ists    │          │         │          │         │
+│         │ are all │          │         │          │         │
+│         │ watchin │          │         │          │         │
+│         │ g to    │          │         │          │         │
+│         │ see     │          │         │          │         │
+│         │ ifwe -- │          │         │          │         │
+│         │ along   │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ pro-dem │          │         │          │         │
+│         │ ocracy  │          │         │          │         │
+│         │ partner │          │         │          │         │
+│         │ s --    │          │         │          │         │
+│         │ can     │          │         │          │         │
+│         │ produce │          │         │          │         │
+│         │ record- │          │         │          │         │
+│         │ breakin │          │         │          │         │
+│         │ gpro-vo │          │         │          │         │
+│         │ ter     │          │         │          │         │
+│         │ turnout │          │         │          │         │
+│         │ nationw │          │         │          │         │
+│         │ ide and │          │         │          │         │
+│         │ help    │          │         │          │         │
+│         │ defend  │          │         │          │         │
+│         │ ballot  │          │         │          │         │
+│         │ access, │          │         │          │         │
+│         │ drop    │          │         │          │         │
+│         │ boxes,  │          │         │          │         │
+│         │ mail-in │          │         │          │         │
+│         │ voting, │          │         │          │         │
+│         │ and so  │          │         │          │         │
+│         │ much    │          │         │          │         │
+│         │ more.   │          │         │          │         │
+│         │ We have │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ grassro │          │         │          │         │
+│         │ ots     │          │         │          │         │
+│         │ team to │          │         │          │         │
+│         │ get the │          │         │          │         │
+│         │ job     │          │         │          │         │
+│         │ done,bu │          │         │          │         │
+│         │ t we    │          │         │          │         │
+│         │ need    │          │         │          │         │
+│         │ your    │          │         │          │         │
+│         │ help to │          │         │          │         │
+│         │ get     │          │         │          │         │
+│         │ over    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ finish  │          │         │          │         │
+│         │ line.   │          │         │          │         │
+│         │ Team,   │          │         │          │         │
+│         │ can you │          │         │          │         │
+│         │ fuel    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ workwit │          │         │          │         │
+│         │ h $25   │          │         │          │         │
+│         │ or more │          │         │          │         │
+│         │ for our │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Mobiliz │          │         │          │         │
+│         │ ation   │          │         │          │         │
+│         │ Fund    │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ help    │          │         │          │         │
+│         │ turn    │          │         │          │         │
+│         │ out the │          │         │          │         │
+│         │ voteacr │          │         │          │         │
+│         │ oss the │          │         │          │         │
+│         │ country │          │         │          │         │
+│         │ on      │          │         │          │         │
+│         │ Tuesday │          │         │          │         │
+│         │ ? >>    │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ LogoSev │          │         │          │         │
+│         │ en more │          │         │          │         │
+│         │ days,   │          │         │          │         │
+│         │ Team.   │          │         │          │         │
+│         │ It's    │          │         │          │         │
+│         │ time to │          │         │          │         │
+│         │ get     │          │         │          │         │
+│         │ fired   │          │         │          │         │
+│         │ up and  │          │         │          │         │
+│         │ ready   │          │         │          │         │
+│         │ to turn │          │         │          │         │
+│         │ out as  │          │         │          │         │
+│         │ manysup │          │         │          │         │
+│         │ porters │          │         │          │         │
+│         │  of     │          │         │          │         │
+│         │ voting  │          │         │          │         │
+│         │ rights  │          │         │          │         │
+│         │ as we   │          │         │          │         │
+│         │ can on  │          │         │          │         │
+│         │ Novembe │          │         │          │         │
+│         │ r       │          │         │          │         │
+│         │ 5th!It' │          │         │          │         │
+│         │ s on us │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ protect │          │         │          │         │
+│         │ mail-in │          │         │          │         │
+│         │ ballots │          │         │          │         │
+│         │ , voter │          │         │          │         │
+│         │ accessi │          │         │          │         │
+│         │ bility, │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ same-da │          │         │          │         │
+│         │ yregist │          │         │          │         │
+│         │ ration, │          │         │          │         │
+│         │  and    │          │         │          │         │
+│         │ more.   │          │         │          │         │
+│         │ To do   │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ we've   │          │         │          │         │
+│         │ got to  │          │         │          │         │
+│         │ turn    │          │         │          │         │
+│         │ out     │          │         │          │         │
+│         │ early   │          │         │          │         │
+│         │ voters, │          │         │          │         │
+│         │ Electio │          │         │          │         │
+│         │ n Day   │          │         │          │         │
+│         │ voters, │          │         │          │         │
+│         │ and new │          │         │          │         │
+│         │ voters  │          │         │          │         │
+│         │ through │          │         │          │         │
+│         │ same-da │          │         │          │         │
+│         │ y       │          │         │          │         │
+│         │ registr │          │         │          │         │
+│         │ ation.  │          │         │          │         │
+│         │ We've   │          │         │          │         │
+│         │ allgo   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ stand   │          │         │          │         │
+│         │ up and  │          │         │          │         │
+│         │ fight   │          │         │          │         │
+│         │ for the │          │         │          │         │
+│         │ rights  │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ country │          │         │          │         │
+│         │ we      │          │         │          │         │
+│         │ deserve │          │         │          │         │
+│         │ . Can   │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ stepup  │          │         │          │         │
+│         │ today   │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ fuel    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ GOTV    │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ voter   │          │         │          │         │
+│         │ registr │          │         │          │         │
+│         │ ation   │          │         │          │         │
+│         │ work    │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ last    │          │         │          │         │
+│         │ week    │          │         │          │         │
+│         │ incriti │          │         │          │         │
+│         │ cal     │          │         │          │         │
+│         │ states  │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ $25 or  │          │         │          │         │
+│         │ whateve │          │         │          │         │
+│         │ r you   │          │         │          │         │
+│         │ can     │          │         │          │         │
+│         │ give to │          │         │          │         │
+│         │ help    │          │         │          │         │
+│         │ protect │          │         │          │         │
+│         │ votingr │          │         │          │         │
+│         │ ights?  │          │         │          │         │
+│         │ >>  If  │          │         │          │         │
+│         │ you've  │          │         │          │         │
+│         │ saved   │          │         │          │         │
+│         │ your    │          │         │          │         │
+│         │ payment │          │         │          │         │
+│         │ informa │          │         │          │         │
+│         │ tionwit │          │         │          │         │
+│         │ h       │          │         │          │         │
+│         │ ActBlue │          │         │          │         │
+│         │ Express │          │         │          │         │
+│         │ , your  │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n will  │          │         │          │         │
+│         │ go      │          │         │          │         │
+│         │ through │          │         │          │         │
+│         │ immedia │          │         │          │         │
+│         │ tely:   │          │         │          │         │
+│         │ GIVE    │          │         │          │         │
+│         │ $15     │          │         │          │         │
+│         │ NOW➜    │          │         │          │         │
+│         │ GIVE    │          │         │          │         │
+│         │ $25 NOW │          │         │          │         │
+│         │ ➜ GIVE  │          │         │          │         │
+│         │ $50 NOW │          │         │          │         │
+│         │ ➜ GIVE  │          │         │          │         │
+│         │ $100    │          │         │          │         │
+│         │ NOW ➜   │          │         │          │         │
+│         │ GIVE    │          │         │          │         │
+│         │ $250    │          │         │          │         │
+│         │ NOW ➜   │          │         │          │         │
+│         │ Other   │          │         │          │         │
+│         │ Amount  │          │         │          │         │
+│         │ Wecan   │          │         │          │         │
+│         │ do      │          │         │          │         │
+│         │ this.   │          │         │          │         │
+│         │ We know │          │         │          │         │
+│         │ we can, │          │         │          │         │
+│         │ because │          │         │          │         │
+│         │ we've   │          │         │          │         │
+│         │ done it │          │         │          │         │
+│         │ before. │          │         │          │         │
+│         │ We just │          │         │          │         │
+│         │ need    │          │         │          │         │
+│         │ tostep  │          │         │          │         │
+│         │ it up   │          │         │          │         │
+│         │ these   │          │         │          │         │
+│         │ last    │          │         │          │         │
+│         │ few     │          │         │          │         │
+│         │ days!   │          │         │          │         │
+│         │ Onward  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ democra │          │         │          │         │
+│         │ cy, The │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ GOTV    │          │         │          │         │
+│         │ Team    │          │         │          │         │
+│         │ http:// │          │         │          │         │
+│         │ secure. │          │         │          │         │
+│         │ actblue │          │         │          │         │
+│         │ .com/do │          │         │          │         │
+│         │ nate/if │          │         │          │         │
+│         │ vap-wee │          │         │          │         │
+│         │ kly?ref │          │         │          │         │
+│         │ code=10 │          │         │          │         │
+│         │ 3124_4& │          │         │          │         │
+│         │ amount; │          │         │          │         │
+│         │ =25     │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /www.fa │          │         │          │         │
+│         │ cebook. │          │         │          │         │
+│         │ com/    │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /twitte │          │         │          │         │
+│         │ r.com/  │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /instag │          │         │          │         │
+│         │ ram.com │          │         │          │         │
+│         │ /       │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /www.li │          │         │          │         │
+│         │ nkedin. │          │         │          │         │
+│         │ com/    │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ dedicat │          │         │          │         │
+│         │ edto    │          │         │          │         │
+│         │ expandi │          │         │          │         │
+│         │ ng      │          │         │          │         │
+│         │ ballot  │          │         │          │         │
+│         │ access  │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ increas │          │         │          │         │
+│         │ ing     │          │         │          │         │
+│         │ voter   │          │         │          │         │
+│         │ partici │          │         │          │         │
+│         │ pation  │          │         │          │         │
+│         │ across  │          │         │          │         │
+│         │ thecoun │          │         │          │         │
+│         │ try.    │          │         │          │         │
+│         │ Since   │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Supreme │          │         │          │         │
+│         │ Court   │          │         │          │         │
+│         │ gutted  │          │         │          │         │
+│         │ key     │          │         │          │         │
+│         │ provisi │          │         │          │         │
+│         │ ons in  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Voting  │          │         │          │         │
+│         │ RightsA │          │         │          │         │
+│         │ ct,     │          │         │          │         │
+│         │ extreme │          │         │          │         │
+│         │ politic │          │         │          │         │
+│         │ ians    │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ taken   │          │         │          │         │
+│         │ advanta │          │         │          │         │
+│         │ ge to   │          │         │          │         │
+│         │ pass    │          │         │          │         │
+│         │ harsh   │          │         │          │         │
+│         │ laws    │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ restric │          │         │          │         │
+│         │ taccess │          │         │          │         │
+│         │  to the │          │         │          │         │
+│         │ ballot  │          │         │          │         │
+│         │ box.    │          │         │          │         │
+│         │ These   │          │         │          │         │
+│         │ restric │          │         │          │         │
+│         │ tions   │          │         │          │         │
+│         │ particu │          │         │          │         │
+│         │ larly   │          │         │          │         │
+│         │ affect  │          │         │          │         │
+│         │ disadva │          │         │          │         │
+│         │ ntagedc │          │         │          │         │
+│         │ ommunit │          │         │          │         │
+│         │ ies and │          │         │          │         │
+│         │ people  │          │         │          │         │
+│         │ of      │          │         │          │         │
+│         │ color.  │          │         │          │         │
+│         │ It’s    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ goal to │          │         │          │         │
+│         │ bring   │          │         │          │         │
+│         │ awarene │          │         │          │         │
+│         │ ss to   │          │         │          │         │
+│         │ thesela │          │         │          │         │
+│         │ ws      │          │         │          │         │
+│         │ whereve │          │         │          │         │
+│         │ r they  │          │         │          │         │
+│         │ may     │          │         │          │         │
+│         │ crop up │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ organiz │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ voters  │          │         │          │         │
+│         │ to take │          │         │          │         │
+│         │ action  │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ ensuret │          │         │          │         │
+│         │ he      │          │         │          │         │
+│         │ right   │          │         │          │         │
+│         │ to vote │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ availab │          │         │          │         │
+│         │ le to   │          │         │          │         │
+│         │ everyon │          │         │          │         │
+│         │ e in    │          │         │          │         │
+│         │ their   │          │         │          │         │
+│         │ states  │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ communi │          │         │          │         │
+│         │ ties.Yo │          │         │          │         │
+│         │ ur      │          │         │          │         │
+│         │ support │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ crucial │          │         │          │         │
+│         │ to our  │          │         │          │         │
+│         │ efforts │          │         │          │         │
+│         │ . Will  │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ donate  │          │         │          │         │
+│         │ today   │          │         │          │         │
+│         │ to help │          │         │          │         │
+│         │ usprote │          │         │          │         │
+│         │ ct      │          │         │          │         │
+│         │ voting  │          │         │          │         │
+│         │ rights? │          │         │          │         │
+│         │ Donate  │          │         │          │         │
+│         │ NowCont │          │         │          │         │
+│         │ ributio │          │         │          │         │
+│         │ ns or   │          │         │          │         │
+│         │ gifts   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ are not │          │         │          │         │
+│         │ taxdedu │          │         │          │         │
+│         │ ctible  │          │         │          │         │
+│         │ as      │          │         │          │         │
+│         │ charita │          │         │          │         │
+│         │ ble     │          │         │          │         │
+│         │ contrib │          │         │          │         │
+│         │ utions  │          │         │          │         │
+│         │ or as   │          │         │          │         │
+│         │ busines │          │         │          │         │
+│         │ s       │          │         │          │         │
+│         │ expense │          │         │          │         │
+│         │ s under │          │         │          │         │
+│         │ IRCSect │          │         │          │         │
+│         │ ion     │          │         │          │         │
+│         │ 162(3). │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ organiz │          │         │          │         │
+│         │ ed and  │          │         │          │         │
+│         │ operate │          │         │          │         │
+│         │ sunder  │          │         │          │         │
+│         │ section │          │         │          │         │
+│         │ 501(c)( │          │         │          │         │
+│         │ 4) of   │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Interna │          │         │          │         │
+│         │ l       │          │         │          │         │
+│         │ Revenue │          │         │          │         │
+│         │ Code. A │          │         │          │         │
+│         │ copy of │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ tyFirst │          │         │          │         │
+│         │  Voter  │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ 's      │          │         │          │         │
+│         │ latest  │          │         │          │         │
+│         │ financi │          │         │          │         │
+│         │ al      │          │         │          │         │
+│         │ report  │          │         │          │         │
+│         │ may be  │          │         │          │         │
+│         │ obtaine │          │         │          │         │
+│         │ d by    │          │         │          │         │
+│         │ mailat  │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ , c/o   │          │         │          │         │
+│         │ Mele    │          │         │          │         │
+│         │ Brengar │          │         │          │         │
+│         │ th &    │          │         │          │         │
+│         │ Assoc,  │          │         │          │         │
+│         │ PO      │          │         │          │         │
+│         │ Box1584 │          │         │          │         │
+│         │ 5,      │          │         │          │         │
+│         │ Washing │          │         │          │         │
+│         │ ton, DC │          │         │          │         │
+│         │ 20003.  │          │         │          │         │
+│         │ Paid    │          │         │          │         │
+│         │ for by  │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ ,www.vo │          │         │          │         │
+│         │ teracti │          │         │          │         │
+│         │ onproje │          │         │          │         │
+│         │ ct.org, │          │         │          │         │
+│         │  and    │          │         │          │         │
+│         │ not     │          │         │          │         │
+│         │ authori │          │         │          │         │
+│         │ zed by  │          │         │          │         │
+│         │ any     │          │         │          │         │
+│         │ candida │          │         │          │         │
+│         │ te or   │          │         │          │         │
+│         │ candida │          │         │          │         │
+│         │ te'scom │          │         │          │         │
+│         │ mittee. │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ Integri │          │         │          │         │
+│         │ ty      │          │         │          │         │
+│         │ First   │          │         │          │         │
+│         │ Voter   │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Project │          │         │          │         │
+│         │ P.O.    │          │         │          │         │
+│         │ Box     │          │         │          │         │
+│         │ 19294   │          │         │          │         │
+│         │ Portlan │          │         │          │         │
+│         │ d,      │          │         │          │         │
+│         │ OR97280 │          │         │          │         │
+│         │ United  │          │         │          │         │
+│         │ States  │          │         │          │         │
+│         │ This    │          │         │          │         │
+│         │ email   │          │         │          │         │
+│         │ was     │          │         │          │         │
+│         │ sent    │          │         │          │         │
+│         │ to:     │          │         │          │         │
+│         │ dpwilli │          │         │          │         │
+│         │ s67@gma │          │         │          │         │
+│         │ il.com. │          │         │          │         │
+│         │  Emails │          │         │          │         │
+│         │ are     │          │         │          │         │
+│         │ acrucia │          │         │          │         │
+│         │ l way   │          │         │          │         │
+│         │ to keep │          │         │          │         │
+│         │ support │          │         │          │         │
+│         │ ers up  │          │         │          │         │
+│         │ to date │          │         │          │         │
+│         │ on the  │          │         │          │         │
+│         │ latest  │          │         │          │         │
+│         │ attacks │          │         │          │         │
+│         │ on      │          │         │          │         │
+│         │ votingr │          │         │          │         │
+│         │ ights   │          │         │          │         │
+│         │ and our │          │         │          │         │
+│         │ efforts │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ expand  │          │         │          │         │
+│         │ ballot  │          │         │          │         │
+│         │ access  │          │         │          │         │
+│         │ for all │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ ns. If  │          │         │          │         │
+│         │ youbeli │          │         │          │         │
+│         │ eve you │          │         │          │         │
+│         │ receive │          │         │          │         │
+│         │ d this  │          │         │          │         │
+│         │ message │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ error   │          │         │          │         │
+│         │ or wish │          │         │          │         │
+│         │ to no   │          │         │          │         │
+│         │ longer  │          │         │          │         │
+│         │ receive │          │         │          │         │
+│         │ emailfr │          │         │          │         │
+│         │ om us,  │          │         │          │         │
+│         │ please  │          │         │          │         │
+│         │ unsubsc │          │         │          │         │
+│         │ ribe:ht │          │         │          │         │
+│         │ tps://s │          │         │          │         │
+│         │ ecure.e │          │         │          │         │
+│         │ veryact │          │         │          │         │
+│         │ ion.com │          │         │          │         │
+│         │ /p/FQb7 │          │         │          │         │
+│         │ Rbo110q │          │         │          │         │
+│         │ LPmSvMA │          │         │          │         │
+│         │ n63Q2?u │          │         │          │         │
+│         │ nsubscr │          │         │          │         │
+│         │ ibedata │          │         │          │         │
+│         │ =E98SIF │          │         │          │         │
+│         │ 3J60riH │          │         │          │         │
+│         │ gAEaYkR │          │         │          │         │
+│         │ 1RJk5Ni │          │         │          │         │
+│         │ 5hGpN2T │          │         │          │         │
+│         │ VgyqFmj │          │         │          │         │
+│         │ x0v0x7t │          │         │          │         │
+│         │ BBimLZ0 │          │         │          │         │
+│         │ G%2FQjD │          │         │          │         │
+│         │ oV3S35i │          │         │          │         │
+│         │ B6VvHmy │          │         │          │         │
+│         │ 0U7Yvex │          │         │          │         │
+│         │ IYsT7F3 │          │         │          │         │
+│         │ 2oigY%2 │          │         │          │         │
+│         │ BcbMQEs │          │         │          │         │
+│         │ bJjTa9D │          │         │          │         │
+│         │ A8Hr1mZ │          │         │          │         │
+│         │ OgfzY4P │          │         │          │         │
+│         │ oNKjQaw │          │         │          │         │
+│         │ CQ%2FWb │          │         │          │         │
+│         │ TYoaPVY │          │         │          │         │
+│         │ GjWL46a │          │         │          │         │
+│         │ 8fy1BPD │          │         │          │         │
+│         │ L2xpdyb │          │         │          │         │
+│         │ 05bCQTP │          │         │          │         │
+│         │ WlRfiN% │          │         │          │         │
+│         │ 2BoWaI0 │          │         │          │         │
+│         │ RrY0H2W │          │         │          │         │
+│         │ 6WYIAPI │          │         │          │         │
+│         │ HQFl2Us │          │         │          │         │
+│         │ aqRp72s │          │         │          │         │
+│         │ qKqvcV% │          │         │          │         │
+│         │ 2BXk1lc │          │         │          │         │
+│         │ hP43zOl │          │         │          │         │
+│         │ %2FNVbF │          │         │          │         │
+│         │ zFb9cqb │          │         │          │         │
+│         │ xM5kL8N │          │         │          │         │
+│         │ naZtTQo │          │         │          │         │
+│         │ 9%2BWYU │          │         │          │         │
+│         │ gdcVQNG │          │         │          │         │
+│         │ lMXzXJl │          │         │          │         │
+│         │ X4KLuc0 │          │         │          │         │
+│         │ 7%2BioB │          │         │          │         │
+│         │ i0VNXmL │          │         │          │         │
+│         │ EUsnsmR │          │         │          │         │
+│         │ VV8irUJ │          │         │          │         │
+│         │ DpcYK0F │          │         │          │         │
+│         │ uXvy4Vh │          │         │          │         │
+│         │ Z0VkNY8 │          │         │          │         │
+│         │ ev3a7Vn │          │         │          │         │
+│         │ gZa7j0F │          │         │          │         │
+│         │ WCb1%2B │          │         │          │         │
+│         │ 8yhKyeH │          │         │          │         │
+│         │ vzDaQc8 │          │         │          │         │
+│         │ RgOTwEq │          │         │          │         │
+│         │ FsWKn88 │          │         │          │         │
+│         │ u%2FJHT │          │         │          │         │
+│         │ w73cB37 │          │         │          │         │
+│         │ G3o4Xi% │          │         │          │         │
+│         │ 2BeeWUp │          │         │          │         │
+│         │ ASPsIyZ │          │         │          │         │
+│         │ WwV8HNr │          │         │          │         │
+│         │ 4ntaeDt │          │         │          │         │
+│         │ T79WAxi │          │         │          │         │
+│         │ vk%3D." │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ 'party' │          │         │          │         │
+│         │ : 'D',  │          │         │          │         │
+│         │ 'discla │          │         │          │         │
+│         │ imer':  │          │         │          │         │
+│         │ 'TRUE'} │          │         │          │         │
+├─────────┼─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Test #4 │ {'name' │ New      │ New Dem │ ✗        │    1.0s │
+│ -       │ :       │ Democrat │ Action  │          │         │
+│ Elissa  │ 'Elissa │ Coalitio │ Fund    │          │         │
+│ Slotkin │ Slotkin │ n Action │         │          │         │
+│         │ ',      │ Fund     │         │          │         │
+│         │ 'email' │          │         │          │         │
+│         │ :       │          │         │          │         │
+│         │ 'team@n │          │         │          │         │
+│         │ ewdemac │          │         │          │         │
+│         │ tionfun │          │         │          │         │
+│         │ d.com', │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ 'subjec │          │         │          │         │
+│         │ t':     │          │         │          │         │
+│         │ 'Real   │          │         │          │         │
+│         │ urgency │          │         │          │         │
+│         │ ',      │          │         │          │         │
+│         │ 'date': │          │         │          │         │
+│         │ '11/1/2 │          │         │          │         │
+│         │ 4       │          │         │          │         │
+│         │ 0:02',  │          │         │          │         │
+│         │ 'year': │          │         │          │         │
+│         │ '2024', │          │         │          │         │
+│         │ 'month' │          │         │          │         │
+│         │ : '11', │          │         │          │         │
+│         │ 'day':  │          │         │          │         │
+│         │ '1',    │          │         │          │         │
+│         │ 'hour': │          │         │          │         │
+│         │ '0',    │          │         │          │         │
+│         │ 'minute │          │         │          │         │
+│         │ ': '2', │          │         │          │         │
+│         │ 'domain │          │         │          │         │
+│         │ ':      │          │         │          │         │
+│         │ 'newdem │          │         │          │         │
+│         │ actionf │          │         │          │         │
+│         │ und.com │          │         │          │         │
+│         │ ',      │          │         │          │         │
+│         │ 'body': │          │         │          │         │
+│         │ "Team — │          │         │          │         │
+│         │ If your │          │         │          │         │
+│         │ inbox   │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ anythin │          │         │          │         │
+│         │ g like  │          │         │          │         │
+│         │ mine,   │          │         │          │         │
+│         │ you are │          │         │          │         │
+│         │ bombard │          │         │          │         │
+│         │ ed with │          │         │          │         │
+│         │ emailst │          │         │          │         │
+│         │ elling  │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ the sky │          │         │          │         │
+│         │ is      │          │         │          │         │
+│         │ falling │          │         │          │         │
+│         │ and all │          │         │          │         │
+│         │ hope is │          │         │          │         │
+│         │ lost.   │          │         │          │         │
+│         │ You     │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ never   │          │         │          │         │
+│         │ getthat │          │         │          │         │
+│         │ fake    │          │         │          │         │
+│         │ urgency │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ me. On  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ flip    │          │         │          │         │
+│         │ side, I │          │         │          │         │
+│         │ also    │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ never   │          │         │          │         │
+│         │ sugarco │          │         │          │         │
+│         │ atthing │          │         │          │         │
+│         │ s.      │          │         │          │         │
+│         │ There   │          │         │          │         │
+│         │ *are*   │          │         │          │         │
+│         │ real    │          │         │          │         │
+│         │ needs   │          │         │          │         │
+│         │ that we │          │         │          │         │
+│         │ have    │          │         │          │         │
+│         │ right   │          │         │          │         │
+│         │ now if  │          │         │          │         │
+│         │ we’re   │          │         │          │         │
+│         │ going   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ win.Rea │          │         │          │         │
+│         │ l       │          │         │          │         │
+│         │ needs,  │          │         │          │         │
+│         │ because │          │         │          │         │
+│         │ we are  │          │         │          │         │
+│         │ seeing  │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ margin  │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ public  │          │         │          │         │
+│         │ polls   │          │         │          │         │
+│         │ start   │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ tighten │          │         │          │         │
+│         │ ,and    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ opponen │          │         │          │         │
+│         │ t is    │          │         │          │         │
+│         │ trumpet │          │         │          │         │
+│         │ ing     │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ his     │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n’s     │          │         │          │         │
+│         │ interna │          │         │          │         │
+│         │ l polls │          │         │          │         │
+│         │ show a  │          │         │          │         │
+│         │ tiedrac │          │         │          │         │
+│         │ e. Real │          │         │          │         │
+│         │ needs,  │          │         │          │         │
+│         │ because │          │         │          │         │
+│         │ if we   │          │         │          │         │
+│         │ lose    │          │         │          │         │
+│         │ here in │          │         │          │         │
+│         │ Michiga │          │         │          │         │
+│         │ n,      │          │         │          │         │
+│         │ Republi │          │         │          │         │
+│         │ cans    │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ almostc │          │         │          │         │
+│         │ ertainl │          │         │          │         │
+│         │ y take  │          │         │          │         │
+│         │ control │          │         │          │         │
+│         │ of the  │          │         │          │         │
+│         │ U.S.    │          │         │          │         │
+│         │ Senate. │          │         │          │         │
+│         │ Real    │          │         │          │         │
+│         │ needs,  │          │         │          │         │
+│         │ because │          │         │          │         │
+│         │ voting  │          │         │          │         │
+│         │ hasalre │          │         │          │         │
+│         │ ady     │          │         │          │         │
+│         │ begun   │          │         │          │         │
+│         │ here in │          │         │          │         │
+│         │ Michiga │          │         │          │         │
+│         │ n and   │          │         │          │         │
+│         │ we are  │          │         │          │         │
+│         │ just 5  │          │         │          │         │
+│         │ days    │          │         │          │         │
+│         │ out     │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ Electio │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ Day.So  │          │         │          │         │
+│         │ I am    │          │         │          │         │
+│         │ concret │          │         │          │         │
+│         │ ely     │          │         │          │         │
+│         │ asking: │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ split a │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n of $5 │          │         │          │         │
+│         │ between │          │         │          │         │
+│         │ New     │          │         │          │         │
+│         │ Demsand │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n for   │          │         │          │         │
+│         │ U.S.    │          │         │          │         │
+│         │ Senate  │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ Michiga │          │         │          │         │
+│         │ n? At   │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ point   │          │         │          │         │
+│         │ in the  │          │         │          │         │
+│         │ campaig │          │         │          │         │
+│         │ n,the   │          │         │          │         │
+│         │ vast    │          │         │          │         │
+│         │ majorit │          │         │          │         │
+│         │ y of    │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ contrib │          │         │          │         │
+│         │ utions  │          │         │          │         │
+│         │ come    │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ people  │          │         │          │         │
+│         │ like    │          │         │          │         │
+│         │ you in  │          │         │          │         │
+│         │ respons │          │         │          │         │
+│         │ eto     │          │         │          │         │
+│         │ emails  │          │         │          │         │
+│         │ like    │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ one. »  │          │         │          │         │
+│         │ If      │          │         │          │         │
+│         │ you've  │          │         │          │         │
+│         │ saved   │          │         │          │         │
+│         │ your    │          │         │          │         │
+│         │ payment │          │         │          │         │
+│         │ informa │          │         │          │         │
+│         │ tion    │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ ActBlue │          │         │          │         │
+│         │ Express │          │         │          │         │
+│         │ , your  │          │         │          │         │
+│         │ split   │          │         │          │         │
+│         │ donatio │          │         │          │         │
+│         │ n       │          │         │          │         │
+│         │ between │          │         │          │         │
+│         │ Elissa  │          │         │          │         │
+│         │ Slotkin │          │         │          │         │
+│         │ and New │          │         │          │         │
+│         │ Dems    │          │         │          │         │
+│         │ will go │          │         │          │         │
+│         │ through │          │         │          │         │
+│         │ immedia │          │         │          │         │
+│         │ tely:   │          │         │          │         │
+│         │ CONTRIB │          │         │          │         │
+│         │ UTE $5  │          │         │          │         │
+│         │ »CONTRI │          │         │          │         │
+│         │ BUTE    │          │         │          │         │
+│         │ $25 »   │          │         │          │         │
+│         │ CONTRIB │          │         │          │         │
+│         │ UTE $50 │          │         │          │         │
+│         │ »       │          │         │          │         │
+│         │ CONTRIB │          │         │          │         │
+│         │ UTE     │          │         │          │         │
+│         │ $100 »  │          │         │          │         │
+│         │ CUSTOMA │          │         │          │         │
+│         │ MOUNT » │          │         │          │         │
+│         │ Thank   │          │         │          │         │
+│         │ you,    │          │         │          │         │
+│         │ Elissa- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │ ------- │          │         │          │         │
+│         │  Paid   │          │         │          │         │
+│         │ for by  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ NewDemo │          │         │          │         │
+│         │ crat    │          │         │          │         │
+│         │ Coaliti │          │         │          │         │
+│         │ on      │          │         │          │         │
+│         │ Action  │          │         │          │         │
+│         │ Fund    │          │         │          │         │
+│         │ www.new │          │         │          │         │
+│         │ demacti │          │         │          │         │
+│         │ onfund. │          │         │          │         │
+│         │ com Not │          │         │          │         │
+│         │ authori │          │         │          │         │
+│         │ zed by  │          │         │          │         │
+│         │ anycand │          │         │          │         │
+│         │ idate   │          │         │          │         │
+│         │ or      │          │         │          │         │
+│         │ candida │          │         │          │         │
+│         │ te's    │          │         │          │         │
+│         │ committ │          │         │          │         │
+│         │ ee. 910 │          │         │          │         │
+│         │ 17th St │          │         │          │         │
+│         │ NW,     │          │         │          │         │
+│         │ Ste.    │          │         │          │         │
+│         │ 925,    │          │         │          │         │
+│         │ Washing │          │         │          │         │
+│         │ ton,    │          │         │          │         │
+│         │ DC20006 │          │         │          │         │
+│         │ Click   │          │         │          │         │
+│         │ here to │          │         │          │         │
+│         │ receive │          │         │          │         │
+│         │ fewer   │          │         │          │         │
+│         │ emails: │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /secure │          │         │          │         │
+│         │ .ngpvan │          │         │          │         │
+│         │ .com/-y │          │         │          │         │
+│         │ mSU2BFb │          │         │          │         │
+│         │ kKwWnO3 │          │         │          │         │
+│         │ OD_Qow2 │          │         │          │         │
+│         │  Click  │          │         │          │         │
+│         │ here to │          │         │          │         │
+│         │ update  │          │         │          │         │
+│         │ yourinf │          │         │          │         │
+│         │ ormatio │          │         │          │         │
+│         │ n:      │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /secure │          │         │          │         │
+│         │ .ngpvan │          │         │          │         │
+│         │ .com/Zm │          │         │          │         │
+│         │ tR17C14 │          │         │          │         │
+│         │ ECCICIW │          │         │          │         │
+│         │ NbuZKA2 │          │         │          │         │
+│         │  Click  │          │         │          │         │
+│         │ here    │          │         │          │         │
+│         │ tounsub │          │         │          │         │
+│         │ scribe: │          │         │          │         │
+│         │ https:/ │          │         │          │         │
+│         │ /secure │          │         │          │         │
+│         │ .ngpvan │          │         │          │         │
+│         │ .com/p/ │          │         │          │         │
+│         │ wD897t7 │          │         │          │         │
+│         │ NsE6hW4 │          │         │          │         │
+│         │ QmZqIXf │          │         │          │         │
+│         │ g2?unsu │          │         │          │         │
+│         │ bscribe │          │         │          │         │
+│         │ data=c2 │          │         │          │         │
+│         │ bg95jdR │          │         │          │         │
+│         │ grRMyxS │          │         │          │         │
+│         │ OPwKNg7 │          │         │          │         │
+│         │ %2FJlTo │          │         │          │         │
+│         │ 6wHdLXy │          │         │          │         │
+│         │ BQ0ieEV │          │         │          │         │
+│         │ VJEefNv │          │         │          │         │
+│         │ 22tfPex │          │         │          │         │
+│         │ 1yKVucd │          │         │          │         │
+│         │ rrB4QrC │          │         │          │         │
+│         │ l80kHX% │          │         │          │         │
+│         │ 2FdSMlk │          │         │          │         │
+│         │ %2F10gI │          │         │          │         │
+│         │ 9gRKpyd │          │         │          │         │
+│         │ ZpbG5Yx │          │         │          │         │
+│         │ eFF%2F5 │          │         │          │         │
+│         │ SwFiwiC │          │         │          │         │
+│         │ hdwTzOK │          │         │          │         │
+│         │ K2mlG9R │          │         │          │         │
+│         │ uADd7nk │          │         │          │         │
+│         │ tttOqvc │          │         │          │         │
+│         │ CpaOquy │          │         │          │         │
+│         │ r3CjYg9 │          │         │          │         │
+│         │ lVazj3w │          │         │          │         │
+│         │ DPAEgbp │          │         │          │         │
+│         │ 5R92XA0 │          │         │          │         │
+│         │ luoxT7j │          │         │          │         │
+│         │ E5KKEyY │          │         │          │         │
+│         │ wiju7%2 │          │         │          │         │
+│         │ BU59HCR │          │         │          │         │
+│         │ K1%2FEs │          │         │          │         │
+│         │ Mwb1nEz │          │         │          │         │
+│         │ q9hrqqN │          │         │          │         │
+│         │ Bz5w6dJ │          │         │          │         │
+│         │ 6foQcNr │          │         │          │         │
+│         │ Gqi0xQ7 │          │         │          │         │
+│         │ spU%2F0 │          │         │          │         │
+│         │ IoYP0BH │          │         │          │         │
+│         │ McpyU2m │          │         │          │         │
+│         │ AAb8Fos │          │         │          │         │
+│         │ 2uX3tdI │          │         │          │         │
+│         │ AvmMoyo │          │         │          │         │
+│         │ p0e%2FZ │          │         │          │         │
+│         │ pNjLvo2 │          │         │          │         │
+│         │ G3CPybI │          │         │          │         │
+│         │ Da71pg4 │          │         │          │         │
+│         │ U61XBxi │          │         │          │         │
+│         │ ZFH1U52 │          │         │          │         │
+│         │ NpCnSrI │          │         │          │         │
+│         │ otCwBA1 │          │         │          │         │
+│         │ 3WrwJjt │          │         │          │         │
+│         │ X2gW2JQ │          │         │          │         │
+│         │ ZaBEaOI │          │         │          │         │
+│         │ jmW4uSZ │          │         │          │         │
+│         │ wny1wP6 │          │         │          │         │
+│         │ 9kp63sb │          │         │          │         │
+│         │ 6rN%2BN │          │         │          │         │
+│         │ pPCyt5a │          │         │          │         │
+│         │ JyBNDaC │          │         │          │         │
+│         │ mqqj3JD │          │         │          │         │
+│         │ Q6fR1dZ │          │         │          │         │
+│         │ VSDbLTX │          │         │          │         │
+│         │ D0yMpBL │          │         │          │         │
+│         │ SjHPy7S │          │         │          │         │
+│         │ pN6BAVe │          │         │          │         │
+│         │ 7rO7DjV │          │         │          │         │
+│         │ vO.",   │          │         │          │         │
+│         │ 'party' │          │         │          │         │
+│         │ : 'D',  │          │         │          │         │
+│         │ 'discla │          │         │          │         │
+│         │ imer':  │          │         │          │         │
+│         │ 'TRUE'} │          │         │          │         │
+├─────────┼─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Test #5 │ {'name' │ Hung Cao │ Hung    │ ✔        │    1.0s │
+│ - CAPT  │ : 'CAPT │ for      │ Cao for │          │         │
+│ Hung    │ Hung    │ Virginia │ Virgini │          │         │
+│ Cao     │ Cao',   │          │ a       │          │         │
+│         │ 'email' │          │         │          │         │
+│         │ :       │          │         │          │         │
+│         │ 'info@m │          │         │          │         │
+│         │ akingam │          │         │          │         │
+│         │ ericath │          │         │          │         │
+│         │ egreate │          │         │          │         │
+│         │ st.com' │          │         │          │         │
+│         │ ,       │          │         │          │         │
+│         │ 'subjec │          │         │          │         │
+│         │ t':     │          │         │          │         │
+│         │ 'I’ve   │          │         │          │         │
+│         │ waited  │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ whole   │          │         │          │         │
+│         │ life to │          │         │          │         │
+│         │ send    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ this',  │          │         │          │         │
+│         │ 'date': │          │         │          │         │
+│         │ '11/1/2 │          │         │          │         │
+│         │ 4       │          │         │          │         │
+│         │ 0:02',  │          │         │          │         │
+│         │ 'year': │          │         │          │         │
+│         │ '2024', │          │         │          │         │
+│         │ 'month' │          │         │          │         │
+│         │ : '11', │          │         │          │         │
+│         │ 'day':  │          │         │          │         │
+│         │ '1',    │          │         │          │         │
+│         │ 'hour': │          │         │          │         │
+│         │ '0',    │          │         │          │         │
+│         │ 'minute │          │         │          │         │
+│         │ ': '2', │          │         │          │         │
+│         │ 'domain │          │         │          │         │
+│         │ ':      │          │         │          │         │
+│         │ 'making │          │         │          │         │
+│         │ america │          │         │          │         │
+│         │ thegrea │          │         │          │         │
+│         │ test.co │          │         │          │         │
+│         │ m',     │          │         │          │         │
+│         │ 'body': │          │         │          │         │
+│         │ 'Friend │          │         │          │         │
+│         │ , I’ve  │          │         │          │         │
+│         │ waited  │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ whole   │          │         │          │         │
+│         │ life to │          │         │          │         │
+│         │ send    │          │         │          │         │
+│         │ you     │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ email.  │          │         │          │         │
+│         │ The     │          │         │          │         │
+│         │ Democra │          │         │          │         │
+│         │ ts      │          │         │          │         │
+│         │ inpower │          │         │          │         │
+│         │ are     │          │         │          │         │
+│         │ TERRIFI │          │         │          │         │
+│         │ ED I’d  │          │         │          │         │
+│         │ reach   │          │         │          │         │
+│         │ out to  │          │         │          │         │
+│         │ you.    │          │         │          │         │
+│         │ They    │          │         │          │         │
+│         │ think   │          │         │          │         │
+│         │ they    │          │         │          │         │
+│         │ can     │          │         │          │         │
+│         │ shut us │          │         │          │         │
+│         │ up      │          │         │          │         │
+│         │ &margin │          │         │          │         │
+│         │ alize   │          │         │          │         │
+│         │ people  │          │         │          │         │
+│         │ like    │          │         │          │         │
+│         │ you &   │          │         │          │         │
+│         │ me. Hi, │          │         │          │         │
+│         │ I’m     │          │         │          │         │
+│         │ Hung    │          │         │          │         │
+│         │ Cao.    │          │         │          │         │
+│         │ I’m a   │          │         │          │         │
+│         │ ret.    │          │         │          │         │
+│         │ Navy    │          │         │          │         │
+│         │ Captain │          │         │          │         │
+│         │ who     │          │         │          │         │
+│         │ served  │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ Special │          │         │          │         │
+│         │ Forces  │          │         │          │         │
+│         │ for 25  │          │         │          │         │
+│         │ years.  │          │         │          │         │
+│         │ I was a │          │         │          │         │
+│         │ refugee │          │         │          │         │
+│         │ from    │          │         │          │         │
+│         │ Vietnam │          │         │          │         │
+│         │ in1975  │          │         │          │         │
+│         │ & my    │          │         │          │         │
+│         │ family, │          │         │          │         │
+│         │ by the  │          │         │          │         │
+│         │ grace   │          │         │          │         │
+│         │ of God, │          │         │          │         │
+│         │ came to │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ right   │          │         │          │         │
+│         │ way—leg │          │         │          │         │
+│         │ ally.My │          │         │          │         │
+│         │  wife   │          │         │          │         │
+│         │ April & │          │         │          │         │
+│         │ I have  │          │         │          │         │
+│         │ 5       │          │         │          │         │
+│         │ beautif │          │         │          │         │
+│         │ ul kids │          │         │          │         │
+│         │ that we │          │         │          │         │
+│         │ homesch │          │         │          │         │
+│         │ ool.    │          │         │          │         │
+│         │ Look,   │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ life’ss │          │         │          │         │
+│         │ tory is │          │         │          │         │
+│         │ not     │          │         │          │         │
+│         │ what    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ liberal │          │         │          │         │
+│         │ media & │          │         │          │         │
+│         │ Democra │          │         │          │         │
+│         │ t mob   │          │         │          │         │
+│         │ claims  │          │         │          │         │
+│         │ conserv │          │         │          │         │
+│         │ atives  │          │         │          │         │
+│         │ shouldb │          │         │          │         │
+│         │ e. I    │          │         │          │         │
+│         │ represe │          │         │          │         │
+│         │ nt      │          │         │          │         │
+│         │ EVERYTH │          │         │          │         │
+│         │ ING     │          │         │          │         │
+│         │ they    │          │         │          │         │
+│         │ hate    │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ most.   │          │         │          │         │
+│         │ Biden   │          │         │          │         │
+│         │ and the │          │         │          │         │
+│         │ Radical │          │         │          │         │
+│         │ Dems    │          │         │          │         │
+│         │ havealr │          │         │          │         │
+│         │ eady    │          │         │          │         │
+│         │ announc │          │         │          │         │
+│         │ ed $45  │          │         │          │         │
+│         │ MILLION │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ destroy │          │         │          │         │
+│         │ our GOP │          │         │          │         │
+│         │ candida │          │         │          │         │
+│         │ tes.    │          │         │          │         │
+│         │ They’ll │          │         │          │         │
+│         │ mock us │          │         │          │         │
+│         │ &smear  │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ records │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ lies &  │          │         │          │         │
+│         │ insults │          │         │          │         │
+│         │ .       │          │         │          │         │
+│         │ That’s  │          │         │          │         │
+│         │ why I’m │          │         │          │         │
+│         │ humbly  │          │         │          │         │
+│         │ asking  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ afew    │          │         │          │         │
+│         │ bucks   │          │         │          │         │
+│         │ before  │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ October │          │         │          │         │
+│         │ deadlin │          │         │          │         │
+│         │ e       │          │         │          │         │
+│         │ tonight │          │         │          │         │
+│         │ at      │          │         │          │         │
+│         │ midnigh │          │         │          │         │
+│         │ t: CHIP │          │         │          │         │
+│         │ IN A    │          │         │          │         │
+│         │ FEW     │          │         │          │         │
+│         │ $$TODAY │          │         │          │         │
+│         │ → We’re │          │         │          │         │
+│         │ out of  │          │         │          │         │
+│         │ time.   │          │         │          │         │
+│         │ I’m a   │          │         │          │         │
+│         │ veteran │          │         │          │         │
+│         │ & not   │          │         │          │         │
+│         │ someone │          │         │          │         │
+│         │ who     │          │         │          │         │
+│         │ normall │          │         │          │         │
+│         │ y asks  │          │         │          │         │
+│         │ forhelp │          │         │          │         │
+│         │ , but   │          │         │          │         │
+│         │ everyth │          │         │          │         │
+│         │ ing     │          │         │          │         │
+│         │ rests   │          │         │          │         │
+│         │ on      │          │         │          │         │
+│         │ this.   │          │         │          │         │
+│         │ My      │          │         │          │         │
+│         │ candida │          │         │          │         │
+│         │ cy is   │          │         │          │         │
+│         │ in your │          │         │          │         │
+│         │ hands.  │          │         │          │         │
+│         │ If      │          │         │          │         │
+│         │ you’reg │          │         │          │         │
+│         │ oing to │          │         │          │         │
+│         │ give $5 │          │         │          │         │
+│         │ or $10  │          │         │          │         │
+│         │ this    │          │         │          │         │
+│         │ electio │          │         │          │         │
+│         │ n –     │          │         │          │         │
+│         │ make it │          │         │          │         │
+│         │ count,  │          │         │          │         │
+│         │ make it │          │         │          │         │
+│         │ THIS    │          │         │          │         │
+│         │ race.   │          │         │          │         │
+│         │ Igive   │          │         │          │         │
+│         │ you my  │          │         │          │         │
+│         │ word as │          │         │          │         │
+│         │ a       │          │         │          │         │
+│         │ veteran │          │         │          │         │
+│         │ & proud │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ n, I    │          │         │          │         │
+│         │ will    │          │         │          │         │
+│         │ never,  │          │         │          │         │
+│         │ never   │          │         │          │         │
+│         │ let     │          │         │          │         │
+│         │ youdown │          │         │          │         │
+│         │ .       │          │         │          │         │
+│         │ DONATE  │          │         │          │         │
+│         │ TODAY → │          │         │          │         │
+│         │ In      │          │         │          │         │
+│         │ Liberty │          │         │          │         │
+│         │ , CAPT  │          │         │          │         │
+│         │ Hung    │          │         │          │         │
+│         │ Cao,    │          │         │          │         │
+│         │ USN     │          │         │          │         │
+│         │ (Ret)   │          │         │          │         │
+│         │ TEXT    │          │         │          │         │
+│         │ HUNG    │          │         │          │         │
+│         │ TO21412 │          │         │          │         │
+│         │ I came  │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ with    │          │         │          │         │
+│         │ little  │          │         │          │         │
+│         │ besides │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ clothes │          │         │          │         │
+│         │ on my   │          │         │          │         │
+│         │ back.   │          │         │          │         │
+│         │ But     │          │         │          │         │
+│         │ withfai │          │         │          │         │
+│         │ th,     │          │         │          │         │
+│         │ dedicat │          │         │          │         │
+│         │ ion,    │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ hard    │          │         │          │         │
+│         │ work,   │          │         │          │         │
+│         │ my      │          │         │          │         │
+│         │ family  │          │         │          │         │
+│         │ and I   │          │         │          │         │
+│         │ made it │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ .       │          │         │          │         │
+│         │ I’mrunn │          │         │          │         │
+│         │ ing for │          │         │          │         │
+│         │ Senate  │          │         │          │         │
+│         │ to      │          │         │          │         │
+│         │ defend  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ America │          │         │          │         │
+│         │ n Dream │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ gave me │          │         │          │         │
+│         │ everyth │          │         │          │         │
+│         │ ing.The │          │         │          │         │
+│         │ Left is │          │         │          │         │
+│         │ on a    │          │         │          │         │
+│         │ war     │          │         │          │         │
+│         │ path    │          │         │          │         │
+│         │ against │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ values  │          │         │          │         │
+│         │ that    │          │         │          │         │
+│         │ make us │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ greates │          │         │          │         │
+│         │ t       │          │         │          │         │
+│         │ country │          │         │          │         │
+│         │ onEarth │          │         │          │         │
+│         │ . I     │          │         │          │         │
+│         │ didn’t  │          │         │          │         │
+│         │ put my  │          │         │          │         │
+│         │ life on │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ line    │          │         │          │         │
+│         │ defendi │          │         │          │         │
+│         │ ng      │          │         │          │         │
+│         │ those   │          │         │          │         │
+│         │ values  │          │         │          │         │
+│         │ in      │          │         │          │         │
+│         │ Special │          │         │          │         │
+│         │ Operati │          │         │          │         │
+│         │ ons in  │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Navy to │          │         │          │         │
+│         │ let the │          │         │          │         │
+│         │ Left    │          │         │          │         │
+│         │ destroy │          │         │          │         │
+│         │ them. I │          │         │          │         │
+│         │ know we │          │         │          │         │
+│         │ can win │          │         │          │         │
+│         │ thisbat │          │         │          │         │
+│         │ tle for │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ future, │          │         │          │         │
+│         │ but I   │          │         │          │         │
+│         │ need    │          │         │          │         │
+│         │ your    │          │         │          │         │
+│         │ help.Ca │          │         │          │         │
+│         │ n you   │          │         │          │         │
+│         │ chip in │          │         │          │         │
+│         │ just $5 │          │         │          │         │
+│         │ now     │          │         │          │         │
+│         │ tofuel  │          │         │          │         │
+│         │ our     │          │         │          │         │
+│         │ fight?  │          │         │          │         │
+│         │ We are  │          │         │          │         │
+│         │ fueled  │          │         │          │         │
+│         │ by      │          │         │          │         │
+│         │ grassro │          │         │          │         │
+│         │ ots     │          │         │          │         │
+│         │ patriot │          │         │          │         │
+│         │ s like  │          │         │          │         │
+│         │ you.    │          │         │          │         │
+│         │ Even    │          │         │          │         │
+│         │ just    │          │         │          │         │
+│         │ adollar │          │         │          │         │
+│         │ or two  │          │         │          │         │
+│         │ makes   │          │         │          │         │
+│         │ all the │          │         │          │         │
+│         │ differe │          │         │          │         │
+│         │ nce.Tha │          │         │          │         │
+│         │ nk you  │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ standin │          │         │          │         │
+│         │ g with  │          │         │          │         │
+│         │ us!     │          │         │          │         │
+│         │ JOINTEA │          │         │          │         │
+│         │ M CAO!  │          │         │          │         │
+│         │ Paid    │          │         │          │         │
+│         │ for by  │          │         │          │         │
+│         │ Hung    │          │         │          │         │
+│         │ Cao for │          │         │          │         │
+│         │ Virgini │          │         │          │         │
+│         │ a Use   │          │         │          │         │
+│         │ of      │          │         │          │         │
+│         │ militar │          │         │          │         │
+│         │ y rank, │          │         │          │         │
+│         │ job     │          │         │          │         │
+│         │ titles, │          │         │          │         │
+│         │ and     │          │         │          │         │
+│         │ photogr │          │         │          │         │
+│         │ aphs in │          │         │          │         │
+│         │ uniform │          │         │          │         │
+│         │ does    │          │         │          │         │
+│         │ not     │          │         │          │         │
+│         │ imply   │          │         │          │         │
+│         │ endorse │          │         │          │         │
+│         │ ment by │          │         │          │         │
+│         │ the     │          │         │          │         │
+│         │ Departm │          │         │          │         │
+│         │ ent of  │          │         │          │         │
+│         │ theNavy │          │         │          │         │
+│         │ or the  │          │         │          │         │
+│         │ Departm │          │         │          │         │
+│         │ ent of  │          │         │          │         │
+│         │ Defense │          │         │          │         │
+│         │ . Email │          │         │          │         │
+│         │ sent to │          │         │          │         │
+│         │ dpwilli │          │         │          │         │
+│         │ s67@gma │          │         │          │         │
+│         │ il.com  │          │         │          │         │
+│         │ by      │          │         │          │         │
+│         │ HungCao │          │         │          │         │
+│         │ for     │          │         │          │         │
+│         │ Virgini │          │         │          │         │
+│         │ a       │          │         │          │         │
+│         │ Unsubsc │          │         │          │         │
+│         │ ribe.', │          │         │          │         │
+│         │         │          │         │          │         │
+│         │ 'party' │          │         │          │         │
+│         │ : 'R',  │          │         │          │         │
+│         │ 'discla │          │         │          │         │
+│         │ imer':  │          │         │          │         │
+│         │ 'TRUE'} │          │         │          │         │
+├─────────┼─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Averag… │         │          │         │ 80.0% ✔  │    1.0s │
+└─────────┴─────────┴──────────┴─────────┴──────────┴─────────┘

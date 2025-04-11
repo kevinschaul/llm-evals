@@ -59,23 +59,17 @@ def convert_csv_to_json(csv_file_path, json_file_path):
 
                 # Create JSON structure
                 json_entry = {
-                    "vars": vars_obj,
-                    "assert": [
-                        {"type": "equals", "value": row["committee"]},
-                        {
-                            "type": "levenshtein",
-                            "value": row["committee"],
-                            "threshold": 5,
-                        },
-                    ],
-                    "description": f"Test #{row_count} - {row.get('name', 'Unknown')}",
+                    "inputs": vars_obj,
+                    "expected_output": row["committee"],
+                    "name": f"Test #{row_count} - {row.get('name', 'Unknown')}",
                 }
                 data.append(json_entry)
 
         # Write to JSON file
         with open(json_file_path, "w", encoding="utf-8") as json_file:
-            for row in data:
-                json_file.write(json.dumps(row) + "\n")
+            json_file.write(
+                json.dumps({"cases": data, "evaluators": ["EqualsExpected"]}, indent=2)
+            )
 
         print(f"Successfully converted {csv_file_path} to {json_file_path}")
         print(f"Processed {len(data)} records")

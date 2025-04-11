@@ -8,4 +8,11 @@ dependencies = [
     "llm-gemini>=0.17",
     "llm>=0.24",
     "llm-mlx>=0.3",
+    "pydantic-evals>=0.0.55",
+    "cachier>=3.1.2",
 ]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = ["."]
