@@ -6,7 +6,7 @@ from rich.console import Console
 from cachier import cachier
 
 
-@cachier(cache_dir='./cached-llm-responses', separate_files=True)
+@cachier(cache_dir="./cached-llm-responses", separate_files=True)
 def run_llm(model_name: str, prompt: str) -> str:
     model = llm.get_model(model_name)
     response = model.prompt(prompt)
@@ -20,6 +20,7 @@ def main():
     ]
     dataset = Dataset[Any, Any, Any].from_file("tests.json")
 
+    reports = []
     for model_name in models:
 
         async def _run_llm(input: Dict) -> str:
@@ -34,7 +35,7 @@ def main():
             return result
 
         report = dataset.evaluate_sync(_run_llm, name=model_name)
-        report.print(include_input=True, include_output=True, include_durations=False)
+        reports.append(report)
 
         table = report.console_table(
             include_input=True, include_output=True, include_expected_output=True
@@ -43,6 +44,14 @@ def main():
             io_file = StringIO()
             Console(file=io_file).print(table)
             file.write(io_file.getvalue())
+
+    table = reports[0].console_table(
+        baseline=reports[1], include_output=True, include_expected_output=True
+    )
+    with open(f"results/diff.txt", "w", encoding="utf-8") as file:
+        io_file = StringIO()
+        Console(file=io_file).print(table)
+        file.write(io_file.getvalue())
 
 
 if __name__ == "__main__":

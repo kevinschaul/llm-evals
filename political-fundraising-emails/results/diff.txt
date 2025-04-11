@@ -1,0 +1,30 @@
+                               Evaluation Diff: llama-3.2-3b-4bit → gemini-2.0-flash                               
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Case ID                   ┃ Expected Output           ┃ Outputs                   ┃ Assertions       ┃ Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ Test #1 - Ryan Walker     │ Heritage Action for       │ Heritage Action for       │ ✔ → ✗            │     1.0s │
+│                           │ America                   │ America → HeritageAction  │                  │          │
+│                           │                           │ for America               │                  │          │
+│                           │                           │                           │                  │          │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────┼──────────┤
+│ Test #2 - Trisha          │ Adam for Colorado         │ Adam for Colorado → Adam  │ ✔ → ✗            │     1.0s │
+│ Calvarese                 │                           │ for Colorado              │                  │          │
+│                           │                           │                           │                  │          │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────┼──────────┤
+│ Test #3 - Voter Action    │ Integrity First Voter     │ Integrity First Voter     │ ✔ → ✗            │     1.0s │
+│ Project Team              │ Action Project            │ Action Project →          │                  │          │
+│                           │                           │ Integrity First Voter     │                  │          │
+│                           │                           │ Action Project            │                  │          │
+│                           │                           │                           │                  │          │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────┼──────────┤
+│ Test #4 - Elissa Slotkin  │ New Democrat Coalition    │ New Dem Action Fund → the │ ✗                │     1.0s │
+│                           │ Action Fund               │ NewDemocrat Coalition     │                  │          │
+│                           │                           │ Action Fund               │                  │          │
+│                           │                           │                           │                  │          │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────┼──────────┤
+│ Test #5 - CAPT Hung Cao   │ Hung Cao for Virginia     │ Hung Cao for Virginia →   │ ✔ → ✗            │     1.0s │
+│                           │                           │ Hung Cao for Virginia     │                  │          │
+│                           │                           │                           │                  │          │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼──────────────────┼──────────┤
+│ Averages                  │                           │                           │ 80.0% ✔ → 0.0% ✔ │     1.0s │
+└───────────────────────────┴───────────────────────────┴───────────────────────────┴──────────────────┴──────────┘
