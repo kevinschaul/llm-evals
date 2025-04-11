@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: "Political fundraising emails"
+evaluateOptions:
+  maxConcurrency: 1
+
+prompts:
+  - |-
+    Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return "None". Do not include any other text, no yapping.
+    name: {{name}}
+    email: {{email}}
+    subject: {{subject}}
+    body: {{body}}
+
+providers:
+  - id: "file://llm_provider.py"
+    label: "gemini-2.0-flash"
+    config:
+      model: "gemini-2.0-flash"
+      pythonExecutable: ".venv/bin/python"
+  - id: "file://llm_provider.py"
+    label: "llama-3.2-3b-4bit"
+    # llm mlx download-model mlx-community/Llama-3.2-3B-Instruct-4bit -a llama-3.2-3b-4bit
+    config:
+      model: "llama-3.2-3b-4bit"
+      pythonExecutable: ".venv/bin/python"
+
+tests: "file://tests.jsonl"
