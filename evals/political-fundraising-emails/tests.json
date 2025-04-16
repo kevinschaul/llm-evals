@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "inputs": {
+        "name": "Ryan Walker",
+        "email": "newsletter@newsletter.conservativedirect.com",
+        "subject": "\u201cGarbage\u201d That\u2019s what Joe Biden just called MILLIONS of Americans.",
+        "date": "11/1/24 0:00",
+        "year": "2024",
+        "month": "11",
+        "day": "1",
+        "hour": "0",
+        "minute": "0",
+        "domain": "newsletter.conservativedirect.com",
+        "body": "Here\u2019s why it doesn\u2019t surprise me that Biden slandered half of America Pleasesee a special message from our sponsor. If you would like to unsubscribe,visit thislink \u201cGarbage.\u201d That\u2019s what Joe Biden just called MILLIONS ofAmericans. It\u2019s disgusting that the President would slander half of thecountry he serves, but it doesn\u2019t surprise me. The Biden-Harris administrationhas ignored the Americans hurt by their inflation and families who lost lovedones to fentanyl for years. My name is Ryan Walker, and I\u2019m the Executive VicePresident of Heritage Action. We\u2019re the conservative group fighting the Biden-Harris policies that leave millions of Americans behind. If, like me, you\u2019redisgusted not only by what Kamala Harris and Joe Biden have said but also bywhat they have done in office, thenjoining Heritage Action\u2019s team is the firststep in fighting back. Heritage Action is the country's #1 most effectiveconservative organization, with thousands of grassroots activists in stateslike yours fighting back against the radical Left\u2019s dangerous policies. We\u2019vefought and won against the Biden-Harris administration on everything from theborder to election integrity and government overreach. Joining Heritage Actionmeans you\u2019ll be working with the #1 grassroots team in the country, fightingand winning against politicians like Biden-Harris, pushing garbage policies.Heritage Action for America is a 501(c)4 non-profit organization. Donationsare not tax deductible. State Registration Disclosures. By participating, youagree to the terms & privacy policy (51776-info.com) for recurring autodialedmarketing messages from Heritage Action to the phone number you provide. Noconsent required to buy. Msg&data; rates may apply. When selecting a recurringdonation, Heritage Action for America will process this donation every monthon the day of the month that you set up the recurring gift in the amount thatyou specify using the method of payment that you identified. You can cancel orchange this donation at any time by contacting us at 1-(202) 548-5280. Thisauthorization shall remain in effect until you notify Heritage Action forAmerica and Heritage Action has had reasonable time to act on it. A record ofeach debit will appear on your bank statement. You have the right to instructyour bank to reverse any and all debits. Paid for and Authorized by HeritageAction for America This email was sent to dpwillis67@gmail.com Unsubscribefrom messages sponsored by Heritage Action for America. Unsubscribe from allcommunications .",
+        "party": "R",
+        "disclaimer": "TRUE"
+      },
+      "expected_output": "Heritage Action for America",
+      "name": "Test #1 - Ryan Walker"
+    },
+    {
+      "inputs": {
+        "name": "Trisha Calvarese",
+        "email": "info@adamforcolorado.com",
+        "subject": "$5 to defeat Boebert",
+        "date": "11/1/24 0:02",
+        "year": "2024",
+        "month": "11",
+        "day": "1",
+        "hour": "0",
+        "minute": "2",
+        "domain": "adamforcolorado.com",
+        "body": "Click here to stop receiving emails about Trisha Calvarese's campaign todefeat Lauren Boebert from us.[https://secure.ngpvan.com/dnlofXhZPkKkpo6bJIYbzQ2]https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b&recurring;=true[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b&recurring;=true]Hello,I am emailing to ask you to give $5 to my campaign against Lauren Boebert.Here\u2019s why: I am the Democratic nominee against Lauren Boebert, and a brand-new poll shows Boebert is still incredibly vulnerable! In 2022, Adam Frischnearly defeated Lauren Boebert. He lost by just 546 votes. That scared LaurenBoebert so much that she came running to my district. But the voters ofeastern Colorado don\u2019t want a carpetbagging extremist more concerned withgetting on Fox News than the needs of her constituents. Even Republicans aredone with Boebert: 57% voted for someone else in the primary! We can finallykick Lauren Boebert out of Congress in November, but the only way I\u2019ll be ableto win is if we hit every fundraising goal and have the resources to fullyfund my campaign. We\u2019ve set a goal of raising another $250,000 before ourfinal end-of-month fundraising deadline, but right now, we\u2019re still incrediblyshort. So I have to ask: Please, if you can afford to, will you make adonation to my campaign \u2013 every dollar you can spare \u2013 to help me defeatLauren Boebert?[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b&recurring;=true]Please use the links in this email to start a monthly donation throughActBlue: DONATE $10[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&recurring;=true&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b]DONATE $25[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&recurring;=true&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b]DONATE $35[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&recurring;=true&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b]DONATE $50[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&recurring;=true&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b]DONATE $100[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&recurring;=true&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b]Other Amount[https://secure.actblue.com/contribute/page/frisch_email_calvarese?refcode=em20241031pm3-nd&amounts;=5%2C10%2C25%2C35%2C50%2C100%2C250&refcode2;=df8bfc39-e497-ef11-88ce-000d3a98fa6b&recurring;=true]Every dollar you give today will bring us one step closer to finally sendingLauren Boebert packing, and truly no amount you can afford is too small. Iwill never be able to fully express how thankful I am to have your support.Thank you, Trisha Paid for by Adam for Colorado.Adam for Colorado PO Box 1240Glenwood Springs, CO 81602 United States Contributions or gifts to Adam forColorado are not tax deductible. This email was sent to dpwillis67@gmail.com.Click here to stop receiving emails about Trisha Calvarese's campaign todefeat Lauren Boebert from us.[https://secure.ngpvan.com/dnlofXhZPkKkpo6bJIYbzQ2] If you received this emailin error or if you don't want to receive any emails from us anymore, pleaseunsubscribe:https://secure.ngpvan.com/p/Uv6ihFy0UkOXP2-vh91pzA2?unsubscribedata=9XuF8fY%2B0H1BDwYQe6tgnQ5QP7fAalCtwu1fa8Or3Awzj5%2Fx4Zn0pbfG5AiO3DOHW7WjsLJCWAA6pbzzqyU0zunBFRrIthB6QM7nZZZnKVIL4BAhZd9RtDL0h4seuHfjTHpMEWrBjdRYXZWHye8SC1hiJltXm%2FoN2xEtG3U5BOkB%2BLep6IDns30rwqxe2d15pzN0Al8erO1LUoJhcZpRAvI08IkUTJitdLt5S3AMBOx%2BccJxuqdOMBVNLoiIv6Q3PLN9vHiJcPwIweugjhsfdZYhed1%2B864RXDQoQWRDvDLm5prdch%2Fw8plu%2Bl7JxF93jI4gvom199%2BkeQBfA8TSLmXS4VMhDvshjmivrepWbxEkMYqmneGPi1hU3WRY9GorVYjqHMJuhmGeZ5DOq%2FHop7Ed6bYCgROBXCSJsB7zukBCHxPqQOxIZMnk3elhl2uk.",
+        "party": "D",
+        "disclaimer": "TRUE"
+      },
+      "expected_output": "Adam for Colorado",
+      "name": "Test #2 - Trisha Calvarese"
+    }
+  ],
+  "evaluators": [
+    "EqualsExpected"
+  ]
+}
