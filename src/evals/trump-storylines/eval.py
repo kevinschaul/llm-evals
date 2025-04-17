@@ -52,6 +52,10 @@ def parse_boolean(text: str) -> bool:
 
 def main():
     models = [
+        "openai/gpt-4.1",
+        "openai/gpt-4.1-mini",
+        "openai/gpt-4o-mini",
+        "openai/o4-mini-2025-04-16",
         "claude-3.7-sonnet",
         "claude-3.5-sonnet",
         "claude-3.5-haiku",
@@ -68,13 +72,13 @@ def main():
             {content}
             """
         ),
-        textwrap.dedent(
-            """
-            Does this describe a specific, new, official action or formal announcement already taken/made by the Trump administration? Answer only "yes" or "no".
-            {headline}
-            {content}
-            """
-        ),
+        # textwrap.dedent(
+        #     """
+        #     Does this describe a specific, new, official action or formal announcement already taken/made by the Trump administration? Answer only "yes" or "no".
+        #     {headline}
+        #     {content}
+        #     """
+        # ),
     ]
     dataset = Dataset[Any, Any, Any].from_file("./tests.json")
     results, aggregate_df = eval_utils.run_eval(
