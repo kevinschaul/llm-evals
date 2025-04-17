@@ -511,6 +511,7 @@ dependencies = [
     { name = "llm-anthropic" },
     { name = "llm-gemini" },
     { name = "llm-mlx" },
+    { name = "llm-openai-plugin" },
     { name = "pandas" },
     { name = "pydantic-evals" },
 ]
@@ -521,6 +522,7 @@ requires-dist = [
     { name = "llm-anthropic", specifier = ">=0.15.1" },
     { name = "llm-gemini", specifier = ">=0.17" },
     { name = "llm-mlx", specifier = ">=0.3" },
+    { name = "llm-openai-plugin", specifier = ">=0.3" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydantic-evals", specifier = ">=0.0.55" },
 ]
@@ -550,6 +552,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d1/16/47abf862f49fcfc21b9f1eed875acc8a489ccc6e318a0d5ff7014a207ab9/llm_mlx-0.3.tar.gz", hash = "sha256:9ca248b96a7099fc14d0bd43953a202de937c25a71c2aeb906a601bd2805ca72", size = 10827 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2b/93/b4583797749f1f13412cf7560e4c0f05fd4cf80032507f967de9d167e196/llm_mlx-0.3-py3-none-any.whl", hash = "sha256:bf4490ca1e8332bdd2b1d3e88da8a84158f176cdeb616e300b68a265c7116476", size = 10877 },
+]
+
+[[package]]
+name = "llm-openai-plugin"
+version = "0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llm" },
+    { name = "openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3b/5c/6ad47246d8e811f17597ed01877c56121b37f74577ca7c6dd6bda51a2ecc/llm_openai_plugin-0.3.tar.gz", hash = "sha256:b67e032ac31516e7aad3ed23d0540ee19ec5798e4da85fd48b7965ef6ba1db88", size = 10584 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/79/c0/2e9150706a458f6ea735b1b384c06f537e42373079425e048703ca0a5545/llm_openai_plugin-0.3-py3-none-any.whl", hash = "sha256:5aed314cc890b70e24c00479e1dc26978e0c987e17d819f835d78ec129e8c4fe", size = 10527 },
 ]
 
 [[package]]

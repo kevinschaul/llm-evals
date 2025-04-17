@@ -8,12 +8,12 @@ export default {
   // lets you organize them into sections and have unlisted pages.
   pages: [
     {
-      name: "Political fundraising emails",
-      path: "/evals/political-fundraising-emails/",
+      name: "Article tracking: Trump",
+      path: "/evals/article-tracking-trump/",
     },
     {
-      name: "Trump storylines",
-      path: "/evals/trump-storylines/",
+      name: "Political fundraising emails",
+      path: "/evals/political-fundraising-emails/",
     },
   ],
 
@@ -26,7 +26,8 @@ export default {
   // Some additional configuration options and their defaults:
   // theme: "default", // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
-  // footer: "Built with Observable.", // what to show in the footer (HTML)
+  footer:
+    'Built by <a href="https://www.kschaul.com/">Kevin Schaul</a> with Observable.', // what to show in the footer (HTML)
   // sidebar: true, // whether to show the sidebar
   toc: false, // whether to show the table of contents
   pager: false, // whether to show previous & next links in the footer
@@ -36,4 +37,4 @@ export default {
   // typographer: false, // smart quotes and other typographic improvements
   // preserveExtension: false, // drop .html from URLs
   // preserveIndex: false, // drop /index from URLs
-};
+}

@@ -1,5 +1,7 @@
 # LLM evals
 
+*← Click on an eval category in the sidebar to see the results.*
+
 [View on GitHub](https://github.com/kevinschaul/llm-evals)
 
 Every week some company releases another LLM that blows the previous models out of the water, according to the benchmarks. The charts only go up. The benchmarks are useful on some level. But honestly, they are pretty weird.
