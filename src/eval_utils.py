@@ -110,16 +110,15 @@ def report_to_df(report: EvaluationReport) -> pd.DataFrame:
 
 
 def calculate_aggregates(df):
-    result = df.groupby("attributes.model").agg(
-        total_count=("assertion.EqualsExpected", "count"),
-        equals_expected_true=("assertion.EqualsExpected", lambda x: x.sum()),
+    # Group by both model and prompt
+    result = df.groupby(["attributes.model", "attributes.prompt"]).agg(
+        count=("assertion.EqualsExpected", "count"),
+        is_correct=("assertion.EqualsExpected", lambda x: x.sum()),
     )
 
-    # Calculate the rate
-    result["equals_expected_rate"] = (
-        result["equals_expected_true"] / result["total_count"]
+    result["share_correct"] = (
+        result["is_correct"] / result["count"]
     )
-
     return result
 
 

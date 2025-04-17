@@ -1,6 +1,7 @@
 # Trump storylines
 
 ```js
+import sparkBar from "../../components/sparkBar.js"
 const results = FileAttachment(
   "results/results.csv",
 ).csv({ typed: true })
@@ -13,10 +14,13 @@ const aggregate = FileAttachment(
 
 ```js
 Inputs.table(aggregate, {
-  sort: "equals_expected_rate",
+  sort: "share_correct",
   reverse: true,
   format: {
-    equals_expected_rate: (x) => (x * 100).toFixed(0) + "%",
+    share_correct: sparkBar(1),
+  },
+  align: {
+    share_correct: "center",
   },
 })
 ```

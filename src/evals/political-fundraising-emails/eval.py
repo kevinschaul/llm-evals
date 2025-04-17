@@ -10,6 +10,8 @@ import eval_utils
 
 def main():
     models = [
+        "gemini-1.5-flash-latest",
+        "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
         "llama-3.2-3b-4bit",
     ]
