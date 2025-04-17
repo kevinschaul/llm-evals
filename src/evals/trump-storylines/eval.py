@@ -8,6 +8,7 @@ from pydantic_evals import Dataset
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 import eval_utils
 
+
 def parse_boolean(text: str) -> bool:
     """Parse the output of an LLM call to a boolean.
 
@@ -51,6 +52,11 @@ def parse_boolean(text: str) -> bool:
 
 def main():
     models = [
+        "claude-3.7-sonnet",
+        "claude-3.5-sonnet",
+        "claude-3.5-haiku",
+        "gemini-1.5-flash-latest",
+        "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
         "llama-3.2-3b-4bit",
     ]
@@ -71,7 +77,9 @@ def main():
         ),
     ]
     dataset = Dataset[Any, Any, Any].from_file("./tests.json")
-    results, aggregate_df = eval_utils.run_eval(models, prompts, dataset, transform_output=parse_boolean)
+    results, aggregate_df = eval_utils.run_eval(
+        models, prompts, dataset, transform_output=parse_boolean
+    )
     results.to_csv(f"./results/results.csv", index=False)
     aggregate_df.to_csv(f"./results/aggregate.csv")
 

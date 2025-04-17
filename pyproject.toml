@@ -10,6 +10,7 @@ dependencies = [
     "llm-mlx>=0.3",
     "pydantic-evals>=0.0.55",
     "pandas>=2.2.3",
+    "llm-anthropic>=0.15.1",
 ]
 
 [tool.pyright]
