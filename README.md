@@ -1,6 +1,8 @@
 # llm-evals
 
-[Because we should all have our own set of LLM evals.](https://kschaul.com/post/2025/04/10/2025-04-10-your-own-llm-evals/)
+Because we should all have our own set of LLM evals. [Blog post](https://kschaul.com/post/2025/04/10/2025-04-10-your-own-llm-evals/)
+
+[Explore my leaderboard](https://kschaul.com/llm-evals/)
 
 ## Installation
 
@@ -10,7 +12,7 @@
 uv sync
 ```
 
-Observable framework
+[Observable framework](https://observablehq.com/framework/)
 ```
 npm install
 ```

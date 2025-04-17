@@ -141,12 +141,13 @@ def run_eval(models, prompts, dataset, transform_output=None):
                 print(f"Evaluating {i} of {n_cases}")
                 i += 1
                 prompt_filled = prompt.format(**input)
-                result = run_llm(model_name, prompt_filled)
-                if transform_output:
-                    try:
+                result = "[ERROR]"
+                try:
+                    result = run_llm(model_name, prompt_filled)
+                    if transform_output:
                         result = transform_output(result)
-                    except Exception:
-                        pass
+                except Exception:
+                    pass
                 return result
 
             report = dataset.evaluate_sync(_run_llm, name=model_name)
