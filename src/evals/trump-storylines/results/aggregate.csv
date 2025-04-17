@@ -1,0 +1,2 @@
+attributes.model,total_count,equals_expected_true,equals_expected_rate
+llama-3.2-3b-4bit,400,254,0.635

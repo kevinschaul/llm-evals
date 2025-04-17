@@ -1,0 +1,31 @@
+Evaluation Diff: llama-3.2-3b-4bit → gemini-2.0-flash
+┏━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━┓
+┃         ┃ Expected ┃         ┃ Assertio ┃         ┃
+┃ Case ID ┃ Output   ┃ Outputs ┃ ns       ┃ Durati… ┃
+┡━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━┩
+│ Test #1 │ Heritage │ Heritag │ ✔ → ✗    │    1.0s │
+│ - Ryan  │ Action   │ e       │          │         │
+│ Walker  │ for      │ Action  │          │         │
+│         │ America  │ for     │          │         │
+│         │          │ America │          │         │
+│         │          │ →       │          │         │
+│         │          │ Heritag │          │         │
+│         │          │ e       │          │         │
+│         │          │ Action  │          │         │
+│         │          │ for     │          │         │
+│         │          │ America │          │         │
+│         │          │         │          │         │
+├─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Test #2 │ Adam for │ Adam    │ ✔ → ✗    │    1.0s │
+│ -       │ Colorado │ for     │          │         │
+│ Trisha  │          │ Colorad │          │         │
+│ Calvar… │          │ o →     │          │         │
+│         │          │ Adam    │          │         │
+│         │          │ for     │          │         │
+│         │          │ Colorad │          │         │
+│         │          │ o       │          │         │
+│         │          │         │          │         │
+├─────────┼──────────┼─────────┼──────────┼─────────┤
+│ Averag… │          │         │ 100.0% ✔ │    1.0s │
+│         │          │         │ → 0.0% ✔ │         │
+└─────────┴──────────┴─────────┴──────────┴─────────┘
