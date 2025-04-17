@@ -10,6 +10,10 @@ import eval_utils
 
 def main():
     models = [
+        "openai/gpt-4.1-mini",
+        "openai/gpt-4o-mini",
+        "openai/o4-mini-2025-04-16",
+        "claude-3.5-haiku",
         "gemini-1.5-flash-latest",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash",

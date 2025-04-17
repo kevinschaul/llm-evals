@@ -1,4 +1,4 @@
-# Trump storylines
+# Article tracking: Trump
 
 Determine whether an article is describing a new action/policy by the Trump administration.
 
