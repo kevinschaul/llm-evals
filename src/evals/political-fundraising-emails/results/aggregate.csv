@@ -1,3 +1,29 @@
-attributes.model,total_count,equals_expected_true,equals_expected_rate
-gemini-2.0-flash,100,71,0.71
-llama-3.2-3b-4bit,100,62,0.62
+attributes.model,attributes.prompt,count,is_correct,share_correct
+gemini-1.5-flash-latest,"
+Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+name: {name}
+email: {email}
+subject: {subject}
+body: {body}
+",100,87,0.87
+gemini-2.0-flash,"
+Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+name: {name}
+email: {email}
+subject: {subject}
+body: {body}
+",100,69,0.69
+gemini-2.0-flash-lite,"
+Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+name: {name}
+email: {email}
+subject: {subject}
+body: {body}
+",100,87,0.87
+llama-3.2-3b-4bit,"
+Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+name: {name}
+email: {email}
+subject: {subject}
+body: {body}
+",100,62,0.62
