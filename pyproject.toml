@@ -9,7 +9,6 @@ dependencies = [
     "llm>=0.24",
     "llm-mlx>=0.3",
     "pydantic-evals>=0.0.55",
-    "cachier>=3.1.2",
     "pandas>=2.2.3",
 ]
 
