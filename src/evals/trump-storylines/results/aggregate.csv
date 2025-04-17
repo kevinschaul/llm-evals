@@ -1,21 +1,56 @@
 attributes.model,attributes.prompt,count,is_correct,share_correct
-gemini-2.0-flash,"
-Does this describe a specific, new, official action or formal announcement already taken/made by the Trump administration? Answer only ""yes"" or ""no"".
+claude-3.5-haiku,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
 {headline}
 {content}
-",200,124,0.62
+",200,148,0.74
+claude-3.5-sonnet,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,137,0.685
+claude-3.7-sonnet,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,134,0.67
+gemini-1.5-flash-latest,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,163,0.815
 gemini-2.0-flash,"
 Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
 {headline}
 {content}
 ",200,149,0.745
-llama-3.2-3b-4bit,"
-Does this describe a specific, new, official action or formal announcement already taken/made by the Trump administration? Answer only ""yes"" or ""no"".
+gemini-2.0-flash-lite,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
 {headline}
 {content}
-",200,124,0.62
+",200,151,0.755
 llama-3.2-3b-4bit,"
 Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
 {headline}
 {content}
 ",200,130,0.65
+openai/gpt-4.1,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,152,0.76
+openai/gpt-4.1-mini,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,145,0.725
+openai/gpt-4o-mini,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,150,0.75
+openai/o4-mini-2025-04-16,"
+Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .
+{headline}
+{content}
+",200,144,0.72
