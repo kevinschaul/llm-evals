@@ -2,6 +2,8 @@
 
 A random sample of 100 fundraising emails from [Derek Willis](https://thescoop.org/archives/2025/01/27/llm-extraction-challenge-fundraising-emails/index.html).
 
+[View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/political-fundraising-emails)
+
 ```js
 import sparkBar from "../../components/sparkBar.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
