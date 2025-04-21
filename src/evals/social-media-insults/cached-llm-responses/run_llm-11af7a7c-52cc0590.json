@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: We\u2019re not ready for a Marxist President, and Lyin\u2019 Kamala Harris is a RADICAL LEFT MARXIST, AND WORSE!\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:49:41"}

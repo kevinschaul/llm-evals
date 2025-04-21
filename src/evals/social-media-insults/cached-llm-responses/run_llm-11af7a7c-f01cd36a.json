@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: Tim Walz is not doing well. He is not qualified to be Vice President - Very much like Kamala, he is a TOTAL JOKE!\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:40:55"}

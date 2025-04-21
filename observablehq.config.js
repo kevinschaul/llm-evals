@@ -15,6 +15,10 @@ export default {
       name: "Political fundraising emails",
       path: "/evals/political-fundraising-emails/",
     },
+    {
+      name: "Social media insults",
+      path: "/evals/social-media-insults/",
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

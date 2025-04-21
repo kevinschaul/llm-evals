@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: \u201cKamala Harris praising Defund Police Movement in resurfaced video\u2026\u201d\n"], "kwargs": {}, "result": "no", "cached_at": "2025-04-21 11:49:17"}

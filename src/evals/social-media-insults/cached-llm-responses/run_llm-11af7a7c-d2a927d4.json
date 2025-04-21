@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: Just imagine, 60 Minutes actually took Lyin\u2019 Kamala\u2019s answers, and CHANGED THEM. It\u2019s unthinkable. They are in big trouble!\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:29:11"}

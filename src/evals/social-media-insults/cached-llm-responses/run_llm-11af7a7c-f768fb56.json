@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: RT @realamericasvoiceI AM CONVINCED THAT HE (BIDEN) LIKES ME MORE...THAN HE LIKES HER. (KAMALA)  President @RealDonaldTrump\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:28:38"}

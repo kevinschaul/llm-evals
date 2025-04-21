@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: Kamala\u2019s Border Invasion is killing the jobs of our Black and Hispanic populations. BAD NUMBERS, will only get worse!\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:28:55"}

@@ -1,0 +1,1 @@
+{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: RT @TeamTrumpPresident Trump REACTS LIVE to a clip of Kamala vowing to BAN FRACKING in Pennsylvania \ud83d\udd25\n"], "kwargs": {}, "result": "no", "cached_at": "2025-04-21 11:48:49"}
