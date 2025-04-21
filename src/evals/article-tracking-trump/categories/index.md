@@ -1,15 +1,9 @@
-# Article tracking: Trump
+# Article tracking: Trump - categories
 
-Determine whether an article is describing a new action/policy by the Trump administration.
-
-[Read full blog post](https://kschaul.com/post/2025/03/05/2025-03-05-use-llm-to-keep-trackers-updated/)
-
-[View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/article-tracking-trump)
-
-See also: [categories/](categories/)
+How well do the llm categories match up with mine?
 
 ```js
-import sparkBar from "../../components/sparkBar.js"
+import sparkBar from "../../../components/sparkBar.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
 ```
