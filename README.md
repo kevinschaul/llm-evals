@@ -19,7 +19,19 @@ npm install
 
 ## Running the evals
 
-1. `cd` into a src/evals directory
-2. Run `uv run eval.py` to run the evals
-3. Run `npm run dev` to open the results in your browser
+```
+# Create a new evaluation
+uv run cli/cli.py create my-new-eval
+
+# Run an evaluation with a config file
+uv run cli/cli.py run src/evals/my-new-eval/llm-evals-config.yaml
+
+# View results in browser
+uv run cli/cli.py view
+
+# Debug cache issues
+uv run cli/cli.py debug_cache my-eval 
+uv run cli/cli.py debug_cache my-eval --check "claude-3.5-sonnet"
+uv run cli/cli.py debug_cache my-eval --list --verbose
+```
 

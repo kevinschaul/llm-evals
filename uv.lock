@@ -507,6 +507,7 @@ name = "llm-evals"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "click" },
     { name = "llm" },
     { name = "llm-anthropic" },
     { name = "llm-gemini" },
@@ -518,6 +519,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "click", specifier = ">=8.1.8" },
     { name = "llm", specifier = ">=0.24" },
     { name = "llm-anthropic", specifier = ">=0.15.1" },
     { name = "llm-gemini", specifier = ">=0.17" },
