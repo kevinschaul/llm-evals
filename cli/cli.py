@@ -104,13 +104,6 @@ def cache(cache_dir: str = None):
                 try:
                     with open(cache_file, "r") as f:
                         cached_data = json.load(f)
-                        # with open(
-                        #     os.path.join(
-                        #         "new-cache", "-".join(filename_parts) + ".json"
-                        #     ),
-                        #     "w",
-                        # ) as f:
-                        #     json.dump(cached_data, f, cls=JsonEncoder)
                         # Return just the result part of the cached data
                         return cast(T, cached_data["result"])
                 except (json.JSONDecodeError, KeyError) as e:
@@ -143,12 +136,6 @@ def cache(cache_dir: str = None):
 
 # Directory for caching LLM responses
 CONFIG_CACHE_DIR = "./cached-llm-responses/"
-
-
-# Fact Checker
-# openai/gpt-4o-mini
-# Is this article ...
-# dae45be3
 
 
 @cache()
@@ -636,11 +623,10 @@ def _load_dataset(dataset):
     records = df.to_dict(orient="records")
     cases = []
     for rec in records:
-        name = rec.get("name")
         expected = rec.get("expected_output")
         # Inputs are all other fields
-        inputs = {k: v for k, v in rec.items() if k not in ("name", "expected_output")}
-        cases.append(Case(name=name, inputs=inputs, expected_output=expected))
+        inputs = {k: v for k, v in rec.items() if k not in ("expected_output",)}
+        cases.append(Case(inputs=inputs, expected_output=expected))
     return Dataset(cases=cases, evaluators=[EqualsExpected()])
 
 
