@@ -1,57 +1,41 @@
 attributes.model,attributes.prompt,count,is_correct,share_correct
-claude-3.5-haiku,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+claude-3.5-haiku,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,75,0.75
-gemini-1.5-flash-latest,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,77,0.77
+gemini-1.5-flash-latest,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,87,0.87
-gemini-2.0-flash,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,84,0.84
+gemini-2.0-flash,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,69,0.69
-gemini-2.0-flash-lite,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,64,0.64
+gemini-2.0-flash-lite,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,87,0.87
-llama-3.2-3b-4bit,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,88,0.88
+llama-3.2-3b-4bit,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,62,0.62
-openai/gpt-4.1-mini,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,56,0.56
+openai/gpt-4.1-mini,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,87,0.87
-openai/gpt-4o-mini,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,84,0.84
+openai/gpt-4o-mini,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,85,0.85
-openai/o4-mini-2025-04-16,"
-Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+body: {body}",100,84,0.84
+openai/o4-mini-2025-04-16,"Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {name}
 email: {email}
 subject: {subject}
-body: {body}
-",100,75,0.75
+body: {body}",100,73,0.73
