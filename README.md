@@ -28,10 +28,5 @@ uv run cli/cli.py run src/evals/my-new-eval/llm-evals-config.yaml
 
 # View results in browser
 uv run cli/cli.py view
-
-# Debug cache issues
-uv run cli/cli.py debug_cache my-eval 
-uv run cli/cli.py debug_cache my-eval --check "claude-3.5-sonnet"
-uv run cli/cli.py debug_cache my-eval --list --verbose
 ```
 
