@@ -1,7 +1,0 @@
-prompts: prompts.csv
-models: models.csv
-tests: tests.csv
-transform_func: parse_boolean
-
-cache_dir: cached-llm-responses
-output_dir: results

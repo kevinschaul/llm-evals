@@ -6,27 +6,29 @@ Because we should all have our own set of LLM evals. [Blog post](https://kschaul
 
 ## Installation
 
-[llm library](https://llm.datasette.io/en/stable/) and plugins:
-
+Python stuff:
 ```
 uv sync
 ```
 
-[Observable framework](https://observablehq.com/framework/)
+Node stuff:
 ```
 npm install
 ```
 
 ## Running the evals
 
+My evals use [ai-yardstick](https://github.com/kevinschaul/ai-yardstick/)
+
+To run an eval, use the following command pointing to the eval's config file:
+
 ```
-# Create a new evaluation
-uv run cli/cli.py create my-new-eval
+ai-yardstick run src/evals/article-tracking-trump/ai-yardstick-config.yaml
+```
 
-# Run an evaluation with a config file
-uv run cli/cli.py run src/evals/my-new-eval/llm-evals-config.yaml
+To view the dashboard/results in a browser:
 
-# View results in browser
-uv run cli/cli.py view
+```
+npm run dev
 ```
 
