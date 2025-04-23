@@ -1,0 +1,6 @@
+prompts: prompts.csv
+models: models.csv
+tests: tests.csv
+
+cache_dir: cached-llm-responses
+output_dir: results
