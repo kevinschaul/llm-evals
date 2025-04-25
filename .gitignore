@@ -14,3 +14,5 @@ wheels/
 node_modules/
 yarn-error.log
 
+# passwords and api keys and stuff
+.env 
