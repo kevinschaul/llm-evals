@@ -147,7 +147,6 @@ def run_eval(models, prompts, dataset, transform_output=None):
                         result = transform_output(result)
                 except Exception:
                     pass
-                print(model_name, result)
                 return result
 
             report = dataset.evaluate_sync(_run_llm, name=model_name)

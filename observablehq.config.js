@@ -19,6 +19,11 @@ export default {
       name: "Social media insults",
       path: "/evals/social-media-insults/",
     },
+    {
+      name: "NHTSA Recalls",
+      path: "/evals/nhtsa-recalls/",
+    },
+
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
