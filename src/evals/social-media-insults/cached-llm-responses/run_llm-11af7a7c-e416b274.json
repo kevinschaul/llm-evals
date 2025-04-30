@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: ABC POLL: 59% of Americans Say the Economy is Getting WORSE Under Lyin' Kamala\n"], "kwargs": {}, "result": "yes", "cached_at": "2025-04-21 11:28:32"}

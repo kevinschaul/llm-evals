@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: Rep. McCaul: Kamala was the LAST PERSON in the room on the Afghanistan withdrawal. This didn't have to happen.\n"], "kwargs": {}, "result": "no", "cached_at": "2025-04-21 11:44:01"}

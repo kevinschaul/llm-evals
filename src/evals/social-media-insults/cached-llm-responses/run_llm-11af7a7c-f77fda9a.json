@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: Larry Kudlow: \u201cThe Kamala \u2018BUZZ\u2019 is long OVER!\u201d\n"], "kwargs": {}, "result": "yes", "cached_at": "2025-04-21 11:29:01"}

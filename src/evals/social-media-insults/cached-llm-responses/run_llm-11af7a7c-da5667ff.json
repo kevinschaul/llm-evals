@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: We will END Kamala's Electric Vehicle Mandate!\n"], "kwargs": {}, "result": "no", "cached_at": "2025-04-21 11:47:20"}

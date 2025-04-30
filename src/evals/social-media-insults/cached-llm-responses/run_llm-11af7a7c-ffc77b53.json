@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: 65% of Americans Say Kamala Will Be NO DIFFERENT Than Biden! It&#39;s TRUE!\n"], "kwargs": {}, "result": "no", "cached_at": "2025-04-21 11:37:15"}

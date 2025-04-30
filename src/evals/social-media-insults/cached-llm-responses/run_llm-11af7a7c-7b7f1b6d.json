@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump is an insult to Kamala Harris. Simply return \"yes\" or \"no\".\ncontent: 25 days from now, we are going to WIN Nevada, we are going to defeat Kamala Harris, and we are going to MAKE AMERICA GREAT AGAIN!\n"], "kwargs": {}, "result": "Yes", "cached_at": "2025-04-21 11:28:42"}

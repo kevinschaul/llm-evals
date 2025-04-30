@@ -1,1 +1,0 @@
-{"args": ["openai/gpt-4o-mini", "\nDetermine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return \"yes\" or \"no\".\ncontent: Lyin\u2019 Kamala has left the people of North Carolina STRANDED. Hope they remember at the Ballot Box!\n"], "kwargs": {}, "result": "yes", "cached_at": "2025-04-21 11:40:27"}
