@@ -16,3 +16,5 @@ yarn-error.log
 
 # passwords and api keys and stuff
 .env 
+
+promptfoo-errors.log

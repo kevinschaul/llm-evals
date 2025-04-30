@@ -35,7 +35,7 @@ Inputs.table(aggregate, {
 const selection = view(
   Inputs.table(results, {
     columns: [
-      "attributes.model",
+      "model",
       "attributes.prompt",
       "input.headline",
       "input.content",
