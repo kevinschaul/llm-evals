@@ -8,10 +8,11 @@ run config:
   @just eval {{config}}
   @just aggregate {{config}}
 
+# Last line here ignore errors code 100, which means at least one eval failed
 eval config:
-    # Ignore error code 100, which means at least one eval failed
     @echo "Running promptfoo eval for {{config}}..."
     cd src/evals/{{config}} && promptfoo eval \
+      -n 20 \
       -c promptfoo-config.yaml \
       --output results/results.csv \
       || test $? -eq 100

@@ -26,8 +26,8 @@ def parse_boolean(text: str) -> bool:
         boolean
     """
 
-    TRUE_VAL = "YES"
-    FALSE_VAL = "NO"
+    TRUE_VAL = "TRUE"
+    FALSE_VAL = "FALSE"
 
     regexp = rf"\b({TRUE_VAL}|{FALSE_VAL})\b"
 
@@ -94,7 +94,6 @@ def call_api(prompt, options, context):
         parsed = transform(output.text())
     except ValueError:
         parsed = None
-    parsed = True
 
     result = {
         "output": parsed,
