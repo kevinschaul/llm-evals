@@ -1,17 +1,3 @@
-attributes.model,attributes.prompt,count,is_correct,share_correct
-openai/gpt-4o-mini,"Determine whether this NHTSA investigation summary is relevant to the Washington Post. Return `{{result"": true}}` or `{{""result"": false}}`
-content: {content}""",149,20,0.1342281879194631
-openai/gpt-4o-mini,"You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.
-
-Read the provided NHTSA investigation summary and return a JSON response of `{{""result"": true}}` if the recall is newsworthy to the Washington Post or  `{{""result"": false}}` if it is not.
-
-As a reminder, the Washington Post is very interested in automated vehicles, automation and advanced driver assistance systems, electric vehicles and Teslas, as well as any defect that lead to multiple deaths or serious injuries. The Post is not interested in recalls, component failures (mechanical, electronic or hydraulic), or fuel leaks that haven't led to deaths or injuries, so you should return  `{{""result"": false}}` for those.
-
-{content}",149,131,0.8791946308724832
-openai/gpt-4o-mini,"You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.
-
-Read the provided NHTSA investigation summary and return a JSON response of `{{""result"": true}}` if the recall is newsworthy to the Washington Post or  `{{""result"": false}}` if it is not.
-
-As a reminder, the Washington Post is very interested in automated vehicles, automation and advanced driver assistance systems, major failures of electric vehicles, as well as any defect that lead to multiple deaths or serious injuries. The Post is not interested in recalls, component failures (mechanical, electronic or hydraulic), or fuel leaks that haven't led to deaths or injuries, so you should return  `{{""result"": false}}` for those.
-
-{content}",149,124,0.8322147651006712
+model,prompt,count,n_correct,share_correct
+openai/gpt-4o-mini,"Determine whether this NHTSA investigation summary is relevant to the Washington Post. Return `{""result"": true}` or `{""result"": false}`",149,20,0.13
+openai/gpt-4o-mini,"You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.",298,257,0.86

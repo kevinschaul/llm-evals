@@ -1,5 +1,5 @@
 model,prompt,count,n_correct,share_correct
-openai/gpt-4o-mini,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .",2,1,0.50
-openai/gpt-4o-mini,"Is this about Trump? ""yes"" or ""no"" .",2,1,0.50
-wapo,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""yes"" or ""no"" .",2,1,0.50
-wapo,"Is this about Trump? ""yes"" or ""no"" .",2,1,0.50
+openai/gpt-4o-mini,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,149,0.74
+openai/gpt-4o-mini,"Is this about Trump? ""true"" or ""false"" .",200,131,0.66
+wapo,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,154,0.77
+wapo,"Is this about Trump? ""true"" or ""false"" .",200,131,0.66

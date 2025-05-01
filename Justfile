@@ -4,14 +4,11 @@ default:
 view:
   promptfoo view --yes
 
-run-all:
+eval-all:
   @just eval article-tracking-trump
   @just eval social-media-insults
   @just eval nhtsa-recalls
-
-run config:
-  @just eval {{config}}
-  @just aggregate {{config}}
+  @just eval political-fundraising-emails
 
 # Last line here ignore errors code 100, which means at least one eval failed
 eval config:
@@ -20,10 +17,8 @@ eval config:
       -c promptfoo-config.yaml \
       --output results/results.csv \
       || test $? -eq 100
-
-aggregate config:
-  @echo "Aggregating results for {{config}}..."
-  python aggregate_results.py src/evals/{{config}}/results/results.csv
+    @echo "Aggregating results for {{config}}..."
+    python aggregate_results.py src/evals/{{config}}/results/results.csv
 
 view-dashboard:
   npm run dev

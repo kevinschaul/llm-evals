@@ -28,28 +28,30 @@ Inputs.table(aggregate, {
 ## Results
 
 ```js
+const resultColumns = Object.keys(results[0]).filter((d) => d.startsWith("["))
+const resultsFormatters = resultColumns.reduce((p, v) => {
+  p[v] = (x) =>
+    x.includes("PASS")
+      ? htl.html`<div style="background: #d5edca;">✔</div>`
+      : htl.html`<div style="background: #f9dddb;">✗</div>`
+  return p
+}, {})
+const resultsAligns = resultColumns.reduce((p, v) => {
+  p[v] = "center"
+  return p
+}, {})
+const columns = ['subject'].concat(resultColumns)
+```
+
+```js
 const selection = view(
   Inputs.table(results, {
-    columns: [
-      "attributes.model",
-      "attributes.prompt",
-      "input.body",
-      "expected_output",
-      "output",
-      "assertions_passed_rate",
-    ],
+    columns: columns,
     widths: {
       "input.body": 80,
     },
-    format: {
-      assertions_passed_rate: (x) =>
-        x === 1
-          ? htl.html`<div style="background: #d5edca;">✔</div>`
-          : htl.html`<div style="background: #f9dddb;">✗</div>`,
-    },
-    align: {
-      assertions_passed_rate: "center",
-    },
+    format: resultsFormatters,
+    align: resultsAligns,
     layout: "fixed",
     required: false,
     multiple: false,
