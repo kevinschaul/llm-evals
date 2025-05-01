@@ -91,7 +91,7 @@ def call_api(prompt, options, context):
         output.log_to_db(db)
 
     try:
-        parsed = transform(output.text())
+        parsed = transform(output.text().strip())
     except ValueError:
         parsed = None
 
