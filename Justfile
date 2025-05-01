@@ -4,6 +4,11 @@ default:
 view:
   promptfoo view --yes
 
+run-all:
+  @just eval article-tracking-trump
+  @just eval social-media-insults
+  @just eval nhtsa-recalls
+
 run config:
   @just eval {{config}}
   @just aggregate {{config}}
@@ -12,7 +17,6 @@ run config:
 eval config:
     @echo "Running promptfoo eval for {{config}}..."
     cd src/evals/{{config}} && promptfoo eval \
-      -n 20 \
       -c promptfoo-config.yaml \
       --output results/results.csv \
       || test $? -eq 100

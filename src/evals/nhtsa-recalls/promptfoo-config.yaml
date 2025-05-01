@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: "NHTSA recalls"
+
+prompts:
+  - |
+    Determine whether this NHTSA investigation summary is relevant to the Washington Post. Return `{"result": true}` or `{"result": false}`\ncontent: {{content}}
+  - |
+    You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.\n\nRead the provided NHTSA investigation summary and return a JSON response of `{"result": true}` if the recall is newsworthy to the Washington Post or  `{"result": false}` if it is not.\n\nAs a reminder, the Washington Post is very interested in automated vehicles, automation and advanced driver assistance systems, electric vehicles and Teslas, as well as any defect that lead to multiple deaths or serious injuries. The Post is not interested in recalls, component failures (mechanical, electronic or hydraulic), or fuel leaks that haven't led to deaths or injuries, so you should return `{"result": false}` for those.\n\n{{content}}
+  - |
+    You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.\n\nRead the provided NHTSA investigation summary and return a JSON response of `{"result": true}` if the recall is newsworthy to the Washington Post or  `{"result": false}` if it is not.\n\nAs a reminder, the Washington Post is very interested in automated vehicles, automation and advanced driver assistance systems, major failures of electric vehicles, as well as any defect that lead to multiple deaths or serious injuries. The Post is not interested in recalls, component failures (mechanical, electronic or hydraulic), or fuel leaks that haven't led to deaths or injuries, so you should return `{"result": false}` for those.\n\n{{content}}
+
+providers:
+  - id: "file://../../../llm_provider.py"
+    label: "openai/gpt-4o-mini"
+    config:
+      model: "openai/gpt-4o-mini"
+      transform_func: parse_boolean
+
+tests: file://tests.csv
+
