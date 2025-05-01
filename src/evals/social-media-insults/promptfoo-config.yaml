@@ -18,6 +18,20 @@ prompts:
     Response: {"category": true}
     Now, categorize this post: {{content}}
   - |
+    Categorize the following social media posts by whether or not they include a personal insult about Kamala Harris's intelligence, and return
+    the results in JSON format, as follows:
+    {"category": true} or {"category": false}
+    Review your analysis carefully before returning a response.
+    Go slowly and use context clues.
+    Here are some examples to help you:
+    Input: "Kamala Harris doesn’t have the mental capacity to do a REAL Debate against me, scheduled for September 4th in Pennsylvania. She’s afraid to do it because there is no way she can justify her Corrupt and Open Borders, the Environmental Destruction of our Country, the Afghanistan Embarrassment, Runaway."
+    Response: {"category": true}
+    Input: "For the past four years as Border Czar, Kamala Harris... has imported an ARMY of illegal alien gang members and migrant criminals from the dungeons of the third-world... from prisons and jails, insane"
+    Response: {"category": false}
+    Input: "savage Venezuelan Gang “Tren de Aragua” are plotting to conduct ambush attacks on police and law enforcement in the United States—all while Harris and Biden sit in the White House and try to figure out who is dumber.On Sunday, in a separate incident, a Venezuelan illegal alien criminal"
+    Response: {"category": true}
+    Now, categorize this post: {{content}}
+  - |
     Determine whether this social media post from Donald Trump contains a personal insult to Kamala Harris's intelligence. Simply return "true" or "false".
     content: {{content}}
 

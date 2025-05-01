@@ -16,19 +16,31 @@ Node stuff:
 npm install
 ```
 
+just:
+```
+brew install just
+```
+
 ## Running the evals
 
-My evals use [ai-yardstick](https://github.com/kevinschaul/ai-yardstick/)
-
-To run an eval, use the following command pointing to the eval's config file:
-
+Run them all:
 ```
-ai-yardstick run src/evals/article-tracking-trump/ai-yardstick-config.yaml
+just eval-all
 ```
 
-To view the dashboard/results in a browser:
-
+Run a specific one:
 ```
-npm run dev
+just eval CONFIG
+```
+where CONFIG is "social-media-insults" for example.
+
+To view all evals:
+```
+just view
+```
+
+To view the dashboard (the version published at [https://kschaul.com/llm-evals/](https://kschaul.com/llm-evals/)):
+```
+just view-dashboard
 ```
 
