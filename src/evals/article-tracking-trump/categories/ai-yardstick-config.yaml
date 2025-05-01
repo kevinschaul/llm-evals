@@ -1,7 +1,0 @@
-prompts: prompts.csv
-models:
-  - gemini-1.5-flash-latest
-tests: tests.csv
-
-cache_dir: cached-llm-responses
-output_dir: results

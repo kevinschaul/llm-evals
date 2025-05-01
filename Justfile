@@ -6,6 +6,7 @@ view:
 
 eval-all:
   @just eval article-tracking-trump
+  @just eval article-tracking-trump/categories
   @just eval social-media-insults
   @just eval nhtsa-recalls
   @just eval political-fundraising-emails
