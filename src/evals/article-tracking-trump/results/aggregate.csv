@@ -3,3 +3,5 @@ openai/gpt-4o-mini,"Is this article primarily about a new action or announcement
 openai/gpt-4o-mini,"Is this about Trump? ""true"" or ""false"" .",200,131,0.66
 wapo,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,154,0.77
 wapo,"Is this about Trump? ""true"" or ""false"" .",200,131,0.66
+gemma3:12b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,138,0.69
+gemma3:12b,"Is this about Trump? ""true"" or ""false"" .",200,128,0.64

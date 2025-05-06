@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: "Grab bag"
+
+prompts:
+  - "{{prompt}}"
+
+providers:
+  - id: "file://../../../llm_provider.py"
+    label: "openai/gpt-4o-mini"
+    config:
+      model: "openai/gpt-4o-mini"
+
+  - id: "file://../../../llm_provider.py"
+    label: "openai/gpt-4o"
+    config:
+      model: "openai/gpt-4o"
+
+  - id: "file://../../../llm_provider.py"
+    label: "gemini-2.5-pro-exp-03-25"
+    config:
+      model: "gemini-2.5-pro-exp-03-25"
+
+  - id: "file://../../../llm_provider.py"
+    label: "gemma3:12b"
+    config:
+      model: "gemma3:12b"
+
+tests: https://docs.google.com/spreadsheets/d/1mr8K_IP4yJP_cAHGm_OsQXwJg_7WpqchgMbvMpAuCdM/edit?gid=0

@@ -14,42 +14,54 @@ providers:
     label: "openai/gpt-4.1-mini-2025-04-14"
     config:
       model: "openai/gpt-4.1-mini-2025-04-14"
+      transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "openai/gpt-4o-mini"
     config:
       model: "openai/gpt-4o-mini"
+      transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "openai/o4-mini-2025-04-16"
     config:
       model: "openai/o4-mini-2025-04-16"
+      transform_func: to_uppercase
 
   # - id: "file://../../../llm_provider.py"
   #   label: "anthropic/claude-3-5-haiku-latest"
   #   config:
   #     model: "anthropic/claude-3-5-haiku-latest"
+  #     transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "gemini-1.5-flash-002"
     config:
       model: "gemini-1.5-flash-002"
+      transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "gemini-2.0-flash-lite"
     config:
       model: "gemini-2.0-flash-lite"
+      transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "gemini-2.0-flash"
     config:
       model: "gemini-2.0-flash"
+      transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
     label: "llama-3.2-3b-4bit"
     config:
       model: "llama-3.2-3b-4bit"
+      transform_func: to_uppercase
 
+  - id: "file://../../../llm_provider.py"
+    label: "gemma3:12b"
+    config:
+      model: "gemma3:12b"
+      transform_func: to_uppercase
 
 tests: file://tests.csv
-

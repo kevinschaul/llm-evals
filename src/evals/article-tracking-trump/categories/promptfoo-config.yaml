@@ -19,4 +19,10 @@ providers:
     config:
       model: "openai/gpt-4o-mini"
 
+  - id: "file://../../../llm_provider.py"
+    label: "gemma3:12b"
+    config:
+      model: "gemma3:12b"
+      transform_func: parse_boolean
+
 tests: file://tests.csv

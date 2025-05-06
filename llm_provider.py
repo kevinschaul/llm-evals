@@ -55,6 +55,10 @@ def parse_boolean(text: str) -> bool:
     )
 
 
+def to_uppercase(text: str) -> str:
+    return text.upper()
+
+
 def find_cached_response(db, prompt, system, model):
     """Search the llm db for this exact query, and return it if it already exists"""
 
@@ -80,8 +84,12 @@ def call_api(prompt, options, context):
     transform_func = config.get("transform_func")
     transform = lambda x: x
     if transform_func:
-        # TODO Load the real func
-        transform = parse_boolean
+        if transform_func == "parse_boolean":
+            transform = parse_boolean
+        elif transform_func == "to_uppercase":
+            transform = to_uppercase
+        else:
+            raise ValueError(f"Unknown transform_func: {transform_func}")
 
     db = sqlite_utils.Database(logs_db_path())
     output = find_cached_response(db, prompt, None, model_name)
