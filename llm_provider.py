@@ -59,6 +59,14 @@ def to_uppercase(text: str) -> str:
     return text.upper()
 
 
+def strip_think_tags(text):
+    """
+    Remove all content between <think> and </think> tags, including the tags themselves.
+    """
+    pattern = r"<think>.*?</think>"
+    return re.sub(pattern, "", text, flags=re.DOTALL).strip()
+
+
 def find_cached_response(db, prompt, system, model):
     """Search the llm db for this exact query, and return it if it already exists"""
 
@@ -88,6 +96,8 @@ def call_api(prompt, options, context):
             transform = parse_boolean
         elif transform_func == "to_uppercase":
             transform = to_uppercase
+        elif transform_func == "strip_think_tags":
+            transform = strip_think_tags
         else:
             raise ValueError(f"Unknown transform_func: {transform_func}")
 

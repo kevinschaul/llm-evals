@@ -25,4 +25,9 @@ providers:
     config:
       model: "gemma3:12b"
 
+  - id: "file://../../../llm_provider.py"
+    label: "gemma-3-27b-it"
+    config:
+      model: "gemma-3-27b-it"
+
 tests: https://docs.google.com/spreadsheets/d/1mr8K_IP4yJP_cAHGm_OsQXwJg_7WpqchgMbvMpAuCdM/edit?gid=0

@@ -24,6 +24,10 @@ providers:
       model: "gemma3:12b"
       transform_func: parse_boolean
 
+  - id: "file://../../../llm_provider.py"
+    label: "gemma-3-27b-it"
+    config:
+      model: "gemma-3-27b-it"
+      transform_func: parse_boolean
 
 tests: file://tests.csv
-

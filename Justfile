@@ -15,6 +15,7 @@ eval-all:
 eval config:
     @echo "Running promptfoo eval for {{config}}..."
     cd src/evals/{{config}} && promptfoo eval \
+      -j 1 \
       -c promptfoo-config.yaml \
       --output results/results.csv \
       || test $? -eq 100
