@@ -1,4 +1,13 @@
-content,headline,"[openai/gpt-4o-mini] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
+content,headline,"[openai/gpt-4o] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
+
+The allowed categories are:
+Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
+
+Respond ONLY with the category.
+
+{{headline}}
+{{content}}
+","[openai/gpt-4o-mini] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
 
 The allowed categories are:
 Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
@@ -25,6 +34,15 @@ Respond ONLY with the category.
 
 {{headline}}
 {{content}}
+","[qwen3:30b-a3b:IQ4_XS] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
+
+The allowed categories are:
+Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
+
+Respond ONLY with the category.
+
+{{headline}}
+{{content}}
 ","[gemma3:12b:IQ4_XS] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
 
 The allowed categories are:
@@ -35,6 +53,15 @@ Respond ONLY with the category.
 {{headline}}
 {{content}}
 ","[gemma3:12b:Q4_0] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
+
+The allowed categories are:
+Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
+
+Respond ONLY with the category.
+
+{{headline}}
+{{content}}
+","[gemma-3-27b-it] Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
 
 The allowed categories are:
 Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
@@ -59,7 +86,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Guantánamo Bay
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Guantánamo Bay
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
 
 Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
@@ -74,6 +117,18 @@ Deportations
 Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay"""
 "A divided Supreme Court on Friday <a href=""https://www.supremecourt.gov/opinions/24pdf/24a790_6i79.pdf"" target=_blank>put off ruling on</a> the Trump administration’s request to allow the president to remove the leader of an independent government watchdog agency until at least after a lower-court hearing next week. It is the first case to reach the justices involving President Donald<b> </b>Trump’s expansive efforts to reshape the federal bureaucracy.
 <a href=""https://www.washingtonpost.com/politics/2025/02/21/trump-dellinger-fire-supreme-court/"" target=_blank>Read the full story</a>",Supreme Court delays decision on Trump’s firing of watchdog agency leader,"[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Firing government watchdogs
 
@@ -112,13 +167,25 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Guantánamo Bay
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Guantánamo Bay
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Guantánamo Bay
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay"""
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[PASS] (1.00)
+
+Guantánamo Bay
+
+Pass Reason: All assertions passed"
 "Elon Musk, the Tesla CEO and top ally of President Donald Trump, is casting doubt on the funding source for a massive artificial intelligence project that Trump announced Tuesday.
 “They don’t actually have the money,” Musk <a href=""https://x.com/elonmusk/status/1881923570458304780"" target=_blank>said late Tuesday on X</a>, responding to an announcement about the initiative from OpenAI, one of the partners in the venture.
 The <a href=""https://www.washingtonpost.com/technology/2025/01/21/stargate-500-billion-trump-ai/"" target=_blank>project, deemed “Stargate,”</a> seeks to spend as much as $500 billion over the next four years to build up to 20 new data centers to support AI projects. Trump announced it at the White House alongside OpenAI CEO Sam Altman, Oracle Chairman Larry Ellison and SoftBank CEO Masayoshi Son.
@@ -144,10 +211,36 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 AI
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+AI
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+AI
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+AI
+
 Pass Reason: All assertions passed"
 "The Trump administration is moving forward with its campaign to eradicate federal funding intended to improve the lives and health of transgender people, including by sending notices in recent days that terminate grants for transgender health services and research.
 The National Institutes of Health, for example, has demanded a halt to a large-scale study that was<b> </b>examining ways to prevent HIV infections in transgender youths of color before it could enroll participants this week. California clinics lost funding to provide care to hundreds of transgender patients. A federal scientific journal blocked publication of a paper that details the value of teaching transgender health.
-<a href=""https://www.washingtonpost.com/health/2025/02/04/trump-order-transgender-health-research-programs/"">Read the full story</a>","Trans health, research programs ordered to stop by Trump administration","[PASS] (1.00)
+<a href=""https://www.washingtonpost.com/health/2025/02/04/trump-order-transgender-health-research-programs/"">Read the full story</a>","Trans health, research programs ordered to stop by Trump administration","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Transgender policy""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Transgender policy""","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
@@ -175,6 +268,18 @@ Adams and the Justice Department have denied a quid quo pro exists, but the orde
 Acting deputy attorney general Emil Bove argued in court last week without offering proof that the case was politically motivated and would interfere with the 2025 mayoral election. Bove asked Judge Dale Ho to dismiss the case “without prejudice,” which would leave open a possible future revival of the matter.
 Spiro argued in his letter to Ho on Wednesday that the case should be dismissed “with prejudice” instead, because “the government’s conduct has destroyed whatever presumption of innocence Mayor Adams had left.”
 Ho cannot ultimately deny Bove’s request, but he did not immediately toss the case. He instead assigned an independent lawyer to evaluate arguments against the government’s dismissal request.",N.Y. Mayor Eric Adams pushes for permanent dismissal of his corruption case,"[PASS] (1.00)
+
+Eric Adams case
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Eric Adams case
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Eric Adams case
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Eric Adams case
 
@@ -227,6 +332,24 @@ The pattern is familiar. During a 10-day period last year, many died when soup k
 With USAID funding curtailed, more than 80 percent of those soup kitchens have closed again, she said. Many of those remaining open are unable to afford the lentils they usually buy and are scraping together vegetable soups.
 “Everyone, including myself, have lost a lot of weight. Some have lost more than half their body weight. I see the faces of people I used to know and I can’t recognize them — they are just bone and skin,” she said.
 <i>Houreld reported from Nairobi. Alice Crites contributed to this report.</i>",GOP lawmakers scramble to protect foreign aid as food relief languishes,"[FAIL] (0.00)
+
+Expected output ""Foreign aid"" to equal ""USAID""
+---
+Foreign aid
+
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+
+Expected output ""Foreign aid"" to equal ""USAID""
+---
+Foreign aid
+
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+
+Expected output ""Foreign aid"" to equal ""USAID""
+---
+Foreign aid
+
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
 
 Expected output ""Foreign aid"" to equal ""USAID""
 ---
@@ -316,7 +439,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Department of Education
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Department of Education
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal grant pause"" to equal ""Department of Education""
+---
+Federal grant pause
+
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Department of Education""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""Department of Education""
 ---
@@ -328,13 +461,31 @@ Expected output ""Federal workforce reductions"" to equal ""Department of Educat
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Department of Education"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Department of Education""","[PASS] (1.00)
+
+Department of Education
+
+Pass Reason: All assertions passed"
 "In an extraordinary move, the Department of Health and Human Services is in the process of firing about 5,200 health workers, part of a <a href=""https://css.washingtonpost.com/dc-md-va/2025/02/13/trump-administration-fires-probationary-federal-workers/"" target=_blank>government-wide purging</a> of new employees who remain on probationary status, according to an internal memo obtained by The Washington Post.
 The terminations come one day after <a href=""https://www.washingtonpost.com/health/2025/02/13/robert-kennedy-hhs-secretary-confirmation-vote/"" target=_blank>Robert F. Kennedy Jr</a>. was sworn in as secretary of<b> </b>the sprawling agency, which oversees the National Institutes of Health, the Food and Drug Administration, the Centers for Disease Control and Prevention and other agencies.
 Employees across the department are receiving information sporadically about the firings as the Trump administration takes aggressive measures to impose its policies on the federal bureaucracy.
 At the CDC, 1,269 staffers who had been on a probationary list will be terminated, according to three federal health officials who spoke on the condition of anonymity due to fear of retribution. All were supposed to receive emails by 4 p.m. That would represent close to 10 percent of the Atlanta-based agency.
 At NIH, employees were informed that there will be exceptions made for some probationary workers, but details have not been announced.
-“HHS is following the Administration’s guidance and taking action to support the President’s broader efforts to restructure and streamline the federal government. This is to ensure that HHS better serves the American people at the highest and most efficient standard,” HHS spokesperson Andrew G. Nixon said in an email when asked to comment on the firings.","HHS in process of firing 5,200 workers, according to internal memo","[PASS] (1.00)
+“HHS is following the Administration’s guidance and taking action to support the President’s broader efforts to restructure and streamline the federal government. This is to ensure that HHS better serves the American people at the highest and most efficient standard,” HHS spokesperson Andrew G. Nixon said in an email when asked to comment on the firings.","HHS in process of firing 5,200 workers, according to internal memo","[FAIL] (0.00)
+
+Expected output ""Senior government officials ousted"" to equal ""Federal workforce reductions""
+---
+Senior government officials ousted
+
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Federal workforce reductions""","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -379,15 +530,39 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
 Pass Reason: All assertions passed"
 "The Trump administration is seeking to grant U.S. immigration officers access to a database that contains information on hundreds of thousands of immigrant teens and children who crossed into the United States without their parents, White House border czar Tom Homan told The Washington Post in an interview Friday.
-<a href=""https://www.washingtonpost.com/immigration/2025/01/31/administration-access-immigrant-minors-data/"" target=_blank>Read the full story</a>",Trump administration seeking access to database of immigrant minors,"[FAIL] (0.00)
+<a href=""https://www.washingtonpost.com/immigration/2025/01/31/administration-access-immigrant-minors-data/"" target=_blank>Read the full story</a>",Trump administration seeking access to database of immigrant minors,"[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
 U.S.-Mexico border
 
 Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
@@ -428,6 +603,14 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Expanding executive power"" to equal ""DOGE""
@@ -440,8 +623,18 @@ Expected output ""Expanding executive power"" to equal ""DOGE""
 ---
 Expanding executive power
 
-Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE"""
-"President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil fuel production. It was not immediately clear what government actions the energy emergency would entail, although Trump allies have suggested the order could allow the administration to quickly approve pipelines and other fossil fuel infrastructure.",President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil...,"[PASS] (1.00)
+Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
+"President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil fuel production. It was not immediately clear what government actions the energy emergency would entail, although Trump allies have suggested the order could allow the administration to quickly approve pipelines and other fossil fuel infrastructure.",President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil...,"[FAIL] (0.00)
+
+Expected output ""Other"" to equal ""Climate""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""Climate""","[PASS] (1.00)
 
 Climate
 
@@ -456,6 +649,14 @@ Expected output ""Other"" to equal ""Climate""
 Other
 
 Fail Reason: Expected output ""Other"" to equal ""Climate""","[PASS] (1.00)
+
+Climate
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Climate
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Climate
 
@@ -498,6 +699,10 @@ On Wednesday, more than 200 former officials wrote a letter to leaders of the Ho
 
 USAID
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+USAID
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Foreign aid"" to equal ""USAID""
@@ -505,6 +710,10 @@ Expected output ""Foreign aid"" to equal ""USAID""
 Foreign aid
 
 Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 USAID
 
@@ -520,10 +729,20 @@ Expected output ""Federal workforce reductions"" to equal ""USAID""
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""USAID"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""USAID""","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed"
 "More than 40,000 people have accepted the Trump administration’s deferred resignation offer, according to a person familiar with the figures who spoke on the condition of anonymity because they were not authorized to speak publicly.
 A day before the offer expires, the total is double what was <a href=""https://www.axios.com/2025/02/04/trump-buyout-federal-workers-20000"" target=_blank>first reported by Axios</a> earlier this week but still less than the goal advertised by Elon Musk, the billionaire spearheading President Donald Trump’s vision for a smaller and more loyal workforce. Musk shared a post on X, his social media platform, that claimed that between 5 and 10 percent of employees eligible for the order would take it.
 Asked about the total, which is less than 2 percent of the civilian workforce of 2.3 million, an official with the Office of Personnel Management said the number of employees who have accepted the offer “is growing.”","More than 40,000 workers said to accept deferred resignation offer","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""
 ---
@@ -537,7 +756,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal worker buyout
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""","[PASS] (1.00)
 
 Federal worker buyout
 
@@ -545,14 +770,30 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal worker buyout
 
-Pass Reason: All assertions passed"
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal worker buyout"""
 "The White House is preparing to issue a trio of executive orders on education, including one directing the Education Department to withhold federal funding from any school that teaches about “radical gender ideology” or “critical race theory,” officials said Wednesday.
 The order instructs the secretary of education to present a strategy to achieve this within 90 days, according to a summary.
 A second order promotes school choice options, including an attempt to help states use federal funding for private-school voucher programs. The third order seeks to combat antisemitism in schools.
 For years, Republicans including President Donald Trump have attacked schools for teaching a basket of ideas about systemic racism labeled critical race theory. Trump has also attacked schools for policies and lessons that recognize and respect transgender students.
 Federal law allows the agency to withhold federal funds from any school that discriminates based on race. Trump and his allies argue that lessons about systemic racism amount to discrimination, because they presume certain things about people based on race, such as that White Americans enjoy certain privileges based on their race. They say that giving rights to transgender students, especially transgender girls and women, discriminates against cisgender girls and women by forcing them to share spaces and sports teams.
 The order also reinstates the<a href=""https://www.washingtonpost.com/politics/2024/09/02/trump-1776-commission-education/"" target=_blank> 1776 Commission</a>, which Trump created just a week before the 2020 presidential election to promote “patriotic education.” The commission wrote a report that was published in the final days of his first term. The report came under heavy fire from historians as a distortion of American history, and President Joe Biden disbanded the panel as one of his first acts. As a candidate, Trump promised to reinstate the commission if reelected.
-<i>Cleve R. Wootson Jr. contributed to this report.</i>","Trump set to pull funding from schools based on race, gender teaching","[PASS] (1.00)
+<i>Cleve R. Wootson Jr. contributed to this report.</i>","Trump set to pull funding from schools based on race, gender teaching","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""DEI in schools""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""DEI in schools""","[PASS] (1.00)
+
+DEI in schools
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in schools
 
@@ -574,10 +815,24 @@ Fail Reason: Expected output ""Department of Education"" to equal ""DEI in schoo
 
 DEI in schools
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in schools
+
 Pass Reason: All assertions passed"
 "The Trump administration has directed the Centers for Disease Control and Prevention to indefinitely postpone a public <a href=""https://www.cdc.gov/acip/meetings/index.html"" target=_blank>meeting</a> of its vaccine advisory panel, a key forum for the nation’s discussion of information about vaccine safety and effectiveness.
 The decision<b> </b>came Thursday from officials at the Department of Health and Human Services, CDC’s parent agency, led by <a href=""https://www.washingtonpost.com/health/2025/02/13/robert-kennedy-hhs-secretary-confirmation-vote/"" target=_blank>anti-vaccine activist Robert F. Kennedy Jr.</a>, who has long criticized the panel and the CDC.
-<a href=""https://www.washingtonpost.com/health/2025/02/20/cdc-vaccine-advisory-panel-meeting-postponed/"" target=""_blank"">Read the full story</a>",Vaccine safety panel long criticized by RFK Jr. told to postpone meeting,"[PASS] (1.00)
+<a href=""https://www.washingtonpost.com/health/2025/02/20/cdc-vaccine-advisory-panel-meeting-postponed/"" target=""_blank"">Read the full story</a>",Vaccine safety panel long criticized by RFK Jr. told to postpone meeting,"[FAIL] (0.00)
+
+Expected output ""Health agencies' communications pause"" to equal ""Health care""
+---
+Health agencies' communications pause
+
+Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[PASS] (1.00)
+
+Health care
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Health care
 
@@ -601,13 +856,29 @@ Expected output ""Health agencies' communications pause"" to equal ""Health care
 ---
 Health agencies' communications pause
 
-Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care"""
+Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[PASS] (1.00)
+
+Health care
+
+Pass Reason: All assertions passed"
 "A federal judge in D.C. on Thursday told the Trump administration it had failed to comply with his order to restart billions in foreign aid but stopped short of holding officials in contempt of court as plaintiffs in a pair of lawsuits had asked.
 Earlier this month, U.S. District Court Judge Amir H. Ali issued a temporary restraining order blocking the administration from putting a 90-day pause on foreign assistance. In Thursday’s ruling, he said the order “was clear,” but Trump officials had not followed it.
 President Donald Trump placed the aid on hold as one of his first actions after taking office in January, saying the aid did not align with American interests or values.
 Health organizations filed suit in response, claiming the Trump administration was endangering the lives of many around the world who relied on the assistance to combat HIV, malaria and tuberculosis. The money also went to other development projects.
 After Ali issued his temporary restraining order, or TRO, requiring Trump officials to restart the aid on Feb. 13, the administration said it had authority under other statutes to continue much of the freeze. Ali rejected that idea Thursday.
 “The TRO does not permit Defendants to simply search for and invoke new legal authorities as a post-hoc rationalization for the enjoined agency action,” Ali wrote.",Judge says Trump officials have not complied with order to restart foreign aid,"[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
@@ -641,6 +912,14 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Kennedy Center""
@@ -648,6 +927,10 @@ Expected output ""Senior government officials ousted"" to equal ""Kennedy Center
 Senior government officials ousted
 
 Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Kennedy Center""","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
@@ -697,6 +980,14 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Gaza
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Gaza
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Gaza
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Foreign policy"" to equal ""Gaza""
@@ -709,10 +1000,18 @@ Expected output ""Foreign policy"" to equal ""Gaza""
 ---
 Foreign policy
 
-Fail Reason: Expected output ""Foreign policy"" to equal ""Gaza"""
+Fail Reason: Expected output ""Foreign policy"" to equal ""Gaza""","[PASS] (1.00)
+
+Gaza
+
+Pass Reason: All assertions passed"
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> is preparing to send 10,000 troops to the southern border, and Border Patrol agents have been directed to deny entry to asylum seekers if they “traveled through a country with communicable disease,” according to a U.S. Customs and Border Protection briefing document obtained by The Washington Post.
 The order does not list any specific disease, essentially closing the border to anyone attempting to exercise the right to seek humanitarian refuge under U.S. law.
 <a href=""https://www.washingtonpost.com/immigration/2025/01/22/trump-asylum-border-troops-immigration/"">Read the full story</a>","Trump shuts off access to asylum, plans to send 10,000 troops to border","[PASS] (1.00)
+
+U.S.-Mexico border
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 U.S.-Mexico border
 
@@ -728,7 +1027,17 @@ Expected output ""Immigration policy"" to equal ""U.S.-Mexico border""
 ---
 Immigration policy
 
+Fail Reason: Expected output ""Immigration policy"" to equal ""U.S.-Mexico border""","[FAIL] (0.00)
+
+Expected output ""Immigration policy"" to equal ""U.S.-Mexico border""
+---
+Immigration policy
+
 Fail Reason: Expected output ""Immigration policy"" to equal ""U.S.-Mexico border""","[PASS] (1.00)
+
+U.S.-Mexico border
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 U.S.-Mexico border
 
@@ -761,9 +1070,27 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
 Pass Reason: All assertions passed"
 "President Donald Trump signed an executive order Monday creating the “Department of Government Efficiency” led by his billionaire adviser and donor Elon Musk. The executive order was expected to create a DOGE office within the White House, although Trump had initially said the panel would exist outside the government.
-Musk will have an office in the White House with about 20 people, Trump said Monday. Trump said DOGE’s White House office would help ensure the executive actions would get implemented.",President Donald Trump signed an executive order Monday creating the “Department of Government Efficiency” led by...,"[PASS] (1.00)
+Musk will have an office in the White House with about 20 people, Trump said Monday. Trump said DOGE’s White House office would help ensure the executive actions would get implemented.",President Donald Trump signed an executive order Monday creating the “Department of Government Efficiency” led by...,"[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""DOGE""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE""","[PASS] (1.00)
 
 DOGE
 
@@ -781,18 +1108,32 @@ Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE""","[
 
 DOGE
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Expanding executive power"" to equal ""DOGE""
 ---
 Expanding executive power
 
-Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE"""
+Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "The Department of Housing and Urban Development, acting on a directive from DOGE, is moving to terminate more than $1.1 billion in loans and grants awarded to improve the energy efficiency and weather resilience of multifamily housing, according to a department official with knowledge of the order.
 The termination of the Green and Resilient Retrofit Program puts into jeopardy more than 260 projects across the country, several of which have already begun construction. The projects were expected to create “hundreds, if not thousands of jobs” according to the department official. “It’s unfortunate that they are targeting such an effective program just because it has the word ‘green’ in its name,” the official said.
 The department communications office did not respond to questions from The Washington Post. The move is likely to spark legal challenges, as the congressionally authorized funds were already awarded by the department, which is now trying to claw them back.
 The program, created through the 2022 Inflation Reduction Act, is targeted at upgrading subsidized housing units. It is designed to help building owners and residents lower their utility bills by using less energy, as well as help fund improvements such as fire-resistant roofs and new heating systems that will prolong the life of the units.
 “This program helps to rehabilitate affordable apartments, making sure residents have lower utility costs and can survive extreme weather,” said Lowell Ungar, federal policy director for the American Council for an Energy-Efficient Economy. “You disrupt that and it means higher bills for those who can least afford them and greater risk from storms and heat waves.”",HUD moves to cancel $1.1 billion in already-awarded housing upgrades,"[FAIL] (0.00)
+
+Expected output ""Federal grant pause"" to equal ""Federal funding""
+---
+Federal grant pause
+
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Federal funding""","[FAIL] (0.00)
 
 Expected output ""Other"" to equal ""Federal funding""
 ---
@@ -818,7 +1159,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal funding
 
-Pass Reason: All assertions passed"
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal funding
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal grant pause"" to equal ""Federal funding""
+---
+Federal grant pause
+
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Federal funding"""
 "The Federal Aviation Administration is close to canceling a $2.4 billion contract to overhaul a communications system that serves as the backbone of the nation’s air traffic control system and awarding the work to Elon Musk’s Starlink, according to two people briefed on the plans.
 The move to cancel a major contract in favor of a venture led by Musk — who is leading<b> </b>President Donald Trump’s disruptive<b> </b>overhaul of the federal government through the U.S. DOGE Service — would represent a significant test of protections against conflicts of interest in government projects. It would be an especially extraordinary step for the typically cautious FAA, whose systems are vital to the safety of millions of air travelers every day.
 The existing contract was awarded to Verizon in 2023, with the aim of upgrading a platform that different air traffic control facilities and FAA offices use to communicate with one another.
@@ -846,7 +1197,17 @@ She said negotiating a settlement can take a year.
 In awarding a new contract, agencies must comply with the Competition and Contracting Act, which requires competition in government procurements. It does have some exceptions. Among those: national security, public interest or urgency, she said.
 “But the question is, how is it so urgent when you already had a contractor dealing with it?,” said Tillipman, adding that there are many different guardrails within the federal acquisition system to make sure things are fair, transparent and efficient.
 “However, in the last few weeks she said many of these guardrails have been tested, which will likely lead to litigation,” she said.
-<i>Washington Post researcher Aaron Schaffer contributed to this report.</i>","FAA targeting Verizon contract in favor of Musk’s Starlink, sources say","[PASS] (1.00)
+<i>Washington Post researcher Aaron Schaffer contributed to this report.</i>","FAA targeting Verizon contract in favor of Musk’s Starlink, sources say","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Other""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Other""","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Other
 
@@ -870,7 +1231,13 @@ Expected output ""Expanding executive power"" to equal ""Other""
 ---
 Expanding executive power
 
-Fail Reason: Expected output ""Expanding executive power"" to equal ""Other"""
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Other""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Other"""
 "President Donald Trump said on Tuesday that the United States will soon sell a $5 million “gold card” to give foreign nationals “green card privileges” and a “route to citizenship.”
 Trump made the announcement during an executive order signing in the Oval Office, telling reporters, “Wealthy people will be coming into our country by buying this card.”
 “They’ll be spending a lot of money and paying a lot of taxes and employing a lot of people, and we think it’s going to be extremely successful,” Trump said, claiming that the program — which he said will  begin in about two weeks under his executive authority and without the approval of Congress — is “totally legal.”
@@ -898,19 +1265,43 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
 Pass Reason: All assertions passed"
 "“Numerous countries” have offered to imprison U.S. citizen criminals, President Donald Trump said Tuesday, and “if we have the legal right to do it, I would do it in a heartbeat.”
 For “a small fee compared to what we pay” in government-run and private prisons in this country, he said, “we can make deals where we get these animals out of our country.”
 He said his administration was examining the legality of such action.
 Trump’s comments, made in response to questions from reporters witnessing his signing of new executive orders at the White House, came after Salvadoran President Nayib Bukele said this week that he would imprison U.S. criminals for payment.
 “We have hardened criminals, horrible people, you see them pushing people into subways,” Trump said. “We don’t want these people in our country. … These people are never going to be any good.”
-If they are sent out of the country, he said, “you would have a lot less crime automatically.”",Trump says administration looking at sending criminals out of country,"[FAIL] (0.00)
+If they are sent out of the country, he said, “you would have a lot less crime automatically.”",Trump says administration looking at sending criminals out of country,"[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Immigration policy"" to equal ""Deportations""
 ---
 Immigration policy
 
 Fail Reason: Expected output ""Immigration policy"" to equal ""Deportations""","[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
@@ -951,9 +1342,27 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
 Pass Reason: All assertions passed"
 "The Trump administration and the Ukrainian government were nearing a deal Friday to hand Ukrainian mineral resources over to the United States in exchange for continued security assistance, a person familiar with the negotiations said, potentially easing President Donald Trump’s days of attacks against the embattled country and its leadership.
 <a href=""https://www.washingtonpost.com/politics/2025/02/21/us-ukraine-near-minerals-deal/"" target=_blank>Read the full story</a>","U.S., Ukraine near deal to grant mineral rights to Washington","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""War in Ukraine""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""War in Ukraine""","[FAIL] (0.00)
 
 Expected output ""Foreign policy"" to equal ""War in Ukraine""
 ---
@@ -969,6 +1378,12 @@ Expected output ""Foreign policy"" to equal ""War in Ukraine""
 ---
 Foreign policy
 
+Fail Reason: Expected output ""Foreign policy"" to equal ""War in Ukraine""","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""War in Ukraine""
+---
+Foreign policy
+
 Fail Reason: Expected output ""Foreign policy"" to equal ""War in Ukraine""","[PASS] (1.00)
 
 War in Ukraine
@@ -977,10 +1392,22 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 War in Ukraine
 
-Pass Reason: All assertions passed"
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""War in Ukraine""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""War in Ukraine"""
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> said he will order the construction of a mass detention camp that can hold 30,000 deportees at the Guantánamo Bay Naval Base, outlining plans Wednesday for the largest U.S. facility of its kind.
 Speaking at the White House before signing the <a href=""https://www.washingtonpost.com/politics/2025/01/22/laken-riley-act-house-vote/"" target=_blank>Laken Riley Act</a>, a bill that is expected to expand the number of immigrant detainees held in U.S. custody for minor property crimes, Trump said the massive camp would “detain the worst criminal illegal aliens threatening the American people” and be “a tough place to get out of.”
 <a href=""https://www.washingtonpost.com/immigration/2025/01/29/guantanamo-cuba-el-salvador-deportations/"" target=_blank>Read the full story</a>",Trump to build mass detention camp for deportees at Guantánamo Bay,"[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
 
 Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
@@ -1008,10 +1435,26 @@ Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
 Deportations
 
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
+---
+Deportations
+
 Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay"""
 "A federal district judge granted a temporary restraining order Monday that blocks the Trump administration from making<b> </b>drastic cuts to biomedical research funding in 22 states that banded together to sue.
 Judge Angel Kelley, in federal district court in Massachusetts, ordered the National Institutes of Health not to implement a <a href=""https://www.washingtonpost.com/health/2025/02/08/nih-cuts-billions-dollars-biomedical-funding-effective-immediately/"" target=""_blank"">funding change that the agency had announced Friday night</a>, which would dramatically reduce funding to universities and other research organizations for indirect costs related to research.
-<a href=""https://www.washingtonpost.com/education/2025/02/10/lawsuit-halts-nih-research-overhead-funding-cut/"">Read the full story</a>",Federal judge blocks Trump from slashing NIH funding in 22 states that sued,"[FAIL] (0.00)
+<a href=""https://www.washingtonpost.com/education/2025/02/10/lawsuit-halts-nih-research-overhead-funding-cut/"">Read the full story</a>",Federal judge blocks Trump from slashing NIH funding in 22 states that sued,"[PASS] (1.00)
+
+NIH
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Health care"" to equal ""NIH""
 ---
@@ -1024,6 +1467,16 @@ Expected output ""Federal funding"" to equal ""NIH""
 Federal funding
 
 Fail Reason: Expected output ""Federal funding"" to equal ""NIH""","[PASS] (1.00)
+
+NIH
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Health care"" to equal ""NIH""
+---
+Health care
+
+Fail Reason: Expected output ""Health care"" to equal ""NIH""","[PASS] (1.00)
 
 NIH
 
@@ -1050,6 +1503,14 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Kennedy Center
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Kennedy Center""
@@ -1062,7 +1523,11 @@ Expected output ""D.C."" to equal ""Kennedy Center""
 ---
 D.C.
 
-Fail Reason: Expected output ""D.C."" to equal ""Kennedy Center"""
+Fail Reason: Expected output ""D.C."" to equal ""Kennedy Center""","[PASS] (1.00)
+
+Kennedy Center
+
+Pass Reason: All assertions passed"
 "The Trump administration put scores of additional employees of the U.S. Agency for International Development on leave Tuesday, dealing a further blow to the beleaguered aid agency.
 In a new letter, Pete Marocco, who was appointed by Secretary of State Marco Rubio as a senior agency official, told affected USAID personnel they were being put on a paid “excused absence” effective immediately.
 “During the period that you are on administrative leave you are not to enter USAID premises, access USAID systems, or attempt to use your position or authority with USAID in any way without my prior permission or prior permission of a supervisor in your chain of command,” Marocco said in the letter, copies of which were obtained by The Washington Post.
@@ -1087,16 +1552,36 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 USAID
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+USAID
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Foreign aid"" to equal ""USAID""
 ---
 Foreign aid
 
-Fail Reason: Expected output ""Foreign aid"" to equal ""USAID"""
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed"
 "Homeland Security Secretary Kristi L. Noem has requested that the Treasury Department provide IRS personnel to assist with immigration enforcement, the Trump administration’s latest effort to expand federal resources to fulfill his campaign pledge to deport more undocumented immigrants.
 In a Friday memo to Treasury Secretary Scott Bessent, Noem cited several areas in which U.S. Immigration and Customs Enforcement needs additional help.
 <a href=""https://www.washingtonpost.com/immigration/2025/02/10/irs-immigration-ice-raids/"">Read the full story</a>",Dept. of Homeland Security wants IRS to help with immigration enforcement,"[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
@@ -1118,10 +1603,20 @@ Expected output ""Deportations"" to equal ""Immigration policy""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Immigration policy"""
+Fail Reason: Expected output ""Deportations"" to equal ""Immigration policy""","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed"
 "Defense Secretary Pete Hegseth has ordered senior leaders at the Pentagon and throughout the U.S. military to develop plans for cutting eight percent from the defense budget in each of the next five years, according to a memo obtained by The Washington Post and officials familiar with the matter — a striking proposal certain to face internal resistance and strident bipartisan opposition in Congress.
 Hegseth ordered the proposed cuts to be drawn up by Feb. 24, according to the memo, which includes a list of 17 categories that the Trump administration wants exempted. Among them: operations at the southern U.S. border, modernization of nuclear weapons and missile defense, and acquisition of one-way attack drones and other munitions.
 <a href=""https://www.washingtonpost.com/national-security/2025/02/19/trump-pentagon-budget-cuts/"" target=_blank>Read the full story</a>",Trump administration orders Pentagon to plan for sweeping budget cuts,"[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Federal funding""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal funding""","[FAIL] (0.00)
 
 Expected output ""Other"" to equal ""Federal funding""
 ---
@@ -1137,7 +1632,11 @@ Expected output ""Other"" to equal ""Federal funding""
 ---
 Other
 
-Fail Reason: Expected output ""Other"" to equal ""Federal funding""","[FAIL] (0.00)
+Fail Reason: Expected output ""Other"" to equal ""Federal funding""","[PASS] (1.00)
+
+Federal funding
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""Federal funding""
 ---
@@ -1149,10 +1648,28 @@ Expected output ""Federal workforce reductions"" to equal ""Federal funding""
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal funding"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Federal funding""","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""Federal funding""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""Federal funding"""
 "NAIROBI — President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> has threatened to cut all U.S. aid to South Africa while claiming, without evidence, that the government there is confiscating land, wading into a sensitive racial issue while deepening already sharp divisions between the United States and South Africa over the wars in Gaza and Ukraine.
 In a post on Truth Social on Sunday, Trump wrote that South Africa “is confiscating land, and treating certain classes of people VERY BADLY,” in comments widely interpreted as referring to White South Africans. “I will be cutting off all future funding to South Africa until a full investigation of this situation has been completed!”
 <a href=""https://www.washingtonpost.com/world/2025/02/03/trump-south-africa-musk-land/"">Read the full story</a>",Trump threatens to cut U.S. aid to South Africa over land law,"[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
@@ -1177,6 +1694,18 @@ Pass Reason: All assertions passed"
 “This is a big deal — making America rich again,” Trump said as he signed the orders.
 The tariffs are likely to renew tensions between the United States and its North American neighbors, which are among the largest suppliers of steel imports. The president last week paused plans to impose a separate set of import taxes on goods from Canada and Mexico, which he linked to concerns over immigration and drug trafficking.
 Canada, the No. 1 foreign supplier, last year shipped 6.6 million tons of steel to American buyers, according to the American Iron and Steel Institute. Brazil, Mexico, South Korea and Vietnam rounded out the top five import sources. Read more <a href=""https://www.washingtonpost.com/business/2025/02/10/trump-tariffs-steel/"" target=_blank>here</a>.","Trump announces 25% tariffs on steel and aluminum, including for Canada and Mexico","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Tariffs
 
@@ -1239,6 +1768,20 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Expanding executive power
 
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Other"" to equal ""Expanding executive power""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""Expanding executive power""","[PASS] (1.00)
+
+Expanding executive power
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Expanding executive power
+
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 Expanding executive power
@@ -1288,11 +1831,27 @@ Expected output ""Foreign policy"" to equal ""Tariffs""
 ---
 Foreign policy
 
+Fail Reason: Expected output ""Foreign policy"" to equal ""Tariffs""","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""Tariffs""
+---
+Foreign policy
+
 Fail Reason: Expected output ""Foreign policy"" to equal ""Tariffs""","[PASS] (1.00)
 
 Tariffs
 
 Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""Tariffs""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""Tariffs""","[PASS] (1.00)
 
 Tariffs
 
@@ -1321,7 +1880,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 CFPB
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+CFPB
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal office space"" to equal ""CFPB""
+---
+Federal office space
+
+Fail Reason: Expected output ""Federal office space"" to equal ""CFPB""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""CFPB""
 ---
@@ -1333,7 +1902,11 @@ Expected output ""Federal workforce reductions"" to equal ""CFPB""
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""CFPB"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""CFPB""","[PASS] (1.00)
+
+CFPB
+
+Pass Reason: All assertions passed"
 "The Justice Department is recruiting new attorneys to help defend President Donald Trump’s immigration and other policies in court, according to public job postings, department officials and legal experts.
 The aim is to create a cadre of lawyers with the skills and willingness to back the administration as it gears up for legal challenges on <a href=""https://www.washingtonpost.com/immigration/2025/02/24/birthright-citizenship-democrats-lawsuits/"" target=_blank>birthright citizenship</a>, <a href=""https://www.washingtonpost.com/immigration/2025/02/25/guantanamo-trump-migrants-deportations-venezuela/"" target=_blank>sending migrants</a> to Guantánamo Bay, <a href=""https://www.washingtonpost.com/dc-md-va/2025/02/26/doge-federal-workforce-firings-job-cuts/"" target=_blank>federal workforce firings</a>, deep spending cuts and more.
 The hirings are largely to fill openings created by the high number of civil division attorneys who have resigned since the 2024 presidential election, according to people familiar with the situation, who like others interviewed for this article spoke on the condition of anonymity to avoid reprisals and to discuss sensitive information.
@@ -1385,14 +1958,40 @@ Immigration policy
 
 Fail Reason: Expected output ""Immigration policy"" to equal ""Other""","[FAIL] (0.00)
 
+Expected output ""Immigration policy"" to equal ""Other""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Immigration policy"" to equal ""Other""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Other""","[FAIL] (0.00)
+
 Expected output ""Targeting political enemies"" to equal ""Other""
 ---
 Targeting political enemies
 
-Fail Reason: Expected output ""Targeting political enemies"" to equal ""Other"""
+Fail Reason: Expected output ""Targeting political enemies"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Immigration policy"" to equal ""Other""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Other"""
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> says he has ordered the U.S. Treasury to stop minting new pennies, calling their production “wasteful.”
 “For far too long the United States has minted pennies which literally cost us more than 2 cents,” Trump <a href=""https://truthsocial.com/@realDonaldTrump/posts/113977224933701762"" target=_blank>said</a> in a Truth Social post Sunday night. “Let’s rip the waste out of our great nations budget, even if it’s a penny at a time.”
 <a href=""https://www.washingtonpost.com/nation/2025/02/10/trump-us-mint-penny-coins/"">Read the full story</a>",Trump says he ordered Treasury Department to stop producing new pennies,"[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Other
 
@@ -1416,10 +2015,28 @@ Expected output ""Federal workforce reductions"" to equal ""Other""
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Other"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Other""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Other"""
 "Heads of federal agencies have until 5 p.m. Friday to revise their telework policies, according to <a href=""https://chcoc.gov/sites/default/files/OPM%20Return%20to%20Office%20Guidance%20Memorandum%201-22-25.pdf"" target=_blank>guidelines</a> released late Wednesday by the White House’s Office of Personnel Management, the latest indication of how President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> is seeking to reshape the sprawling federal government.
 The memo did not set a date for the new policies to take effect, but directed agencies to require employees to comply with in-office mandates within roughly 30 days of the new policy announcement.
 <a href=""https://www.washingtonpost.com/politics/2025/01/23/federal-worker-mandates-resistance-trump/"">Read the full story</a>","Federal agencies must revise telework policies by Friday, White House says","[PASS] (1.00)
+
+Federal workers return to office
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workers return to office
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workers return to office
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workers return to office
 
@@ -1474,6 +2091,18 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Foreign aid
+
 Pass Reason: All assertions passed"
 "President Donald Trump and Maine Gov. Janet Mills (D) briefly sparred Friday over the president’s threat to withhold federal funds from her state if it doesn’t comply with a <a href=""https://www.washingtonpost.com/education/2025/02/05/transgender-students-trump-executive-order/"" target=_blank>recent executive order barring transgender athletes</a> from competing on women’s sports teams.
 In a gathering with a group of governors at the White House, Trump began to talk about one of his signature culture war promises when he asked whether anyone among the governors gathered at the White House was from Maine. The Maine Principals’ Association has said it will not enforce his executive order aiming to ban trans athletes from competing in girls’ sports.
@@ -1481,6 +2110,18 @@ In a gathering with a group of governors at the White House, Trump began to talk
 “We’re going to follow the law, sir. We’ll see you in court,” she said.
 “Enjoy your life after governor because I don’t think you’ll be in elected office,” Trump said to the term-limited governor.
 The back-and-forth followed Trump’s remark Thursday to a group of Republican governors that he would withhold federal funds from Maine unless the state complies with his executive order. In a <a href=""https://mainemorningstar.com/2025/02/21/gov-mills-said-maine-will-not-be-bullied-into-complying-with-trumps-transgender-athlete-order/"" target=""_blank"">statement</a> to the Maine Morning Star, Mills responded Friday morning that “the State of Maine will not be intimidated by the president’s threats.”","Trump, Maine Gov. Mills spar over executive order on transgender athletes","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
@@ -1525,6 +2166,18 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
 Pass Reason: All assertions passed"
 "The National Science Foundation has halted for at least the rest of the week <a href=""https://www.washingtonpost.com/politics/2025/01/27/trump-presidency-news/#link-7P4XE6CJD5BVRHTR2U2DIEBMJY"" target=_blank>the work of review panels</a>, in which outside experts rate the merit of proposals for scientific research.
 The NSF, a $10 billion agency that spreads research dollars across the country in quantities both large and small, issued a brief statement Monday that added minimal clarity to a situation that had alarmed researchers.
@@ -1532,12 +2185,6 @@ The NSF, a $10 billion agency that spreads research dollars across the country i
 The broader scientific community has been scrambling for the past week amid a flurry of executive orders from President Donald Trump, including his directive to end all diversity, equity and inclusion programs. Federal science agencies, including NSF, NASA and the National Institutes of Health, have broadly embraced the need to diversify the community of researchers and the subjects they study.
 The cancellations at NSF come in the wake of news that NIH had also <a href=""https://www.washingtonpost.com/health/2025/01/23/trump-administration-hhs-health-agencies-pause-travel-communications/"" target=_blank>paused the work</a> of study sections that review grants.",National Science Foundation halts reviews of research proposals,"[FAIL] (0.00)
 
-Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""
----
-DEI in the federal government
-
-Fail Reason: Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
-
 Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""
 ---
 Federal grant pause
@@ -1556,17 +2203,45 @@ Federal grant pause
 
 Fail Reason: Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
 
+Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""
+---
+DEI in the federal government
+
+Fail Reason: Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
+
+Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""
+---
+DEI in the federal government
+
+Fail Reason: Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
+
 Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""
 ---
 Federal grant pause
 
-Fail Reason: Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause"""
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
+
+Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""
+---
+Federal grant pause
+
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Health agencies' communications pause""","[FAIL] (0.00)
+
+Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause""
+---
+DEI in the federal government
+
+Fail Reason: Expected output ""DEI in the federal government"" to equal ""Health agencies' communications pause"""
 "The U.S. Labor Department has been temporarily blocked by court order from sharing data with Elon Musk’s U.S. DOGE Service, according to an email from a union that represents federal government workers. The email was obtained by The Washington Post.
 The temporary order arrives after DOGE representatives visited the Labor Department this week, seeking sensitive data that the agency keeps. In response, a group of powerful unions swiftly sued DOGE in U.S. District Court for the District of Columbia on Wednesday, arguing that DOGE’s work was illegal and has “already been catastrophic.”
 “Thanks to our swift response and the support of our labor partners, we successfully obtained a temporary order preventing DOL from sharing any data with DOGE,” said an email sent Thursday to rank-and-file Labor Department staffers by AFGE Local 12, a union representing federal government employees.
 On Wednesday, a protest led by major unions including the AFL-CIO drew hundreds of people outside the agency’s headquarters in Washington.
 The Labor Department manages huge volumes of sensitive data related to the labor market, unemployment claims, disability insurance, workplace health and safety, whistleblower reports and wage theft.
 “This order remains in effect until the court rules on the temporary restraining order,” the union email said. “The DOGE will continue to visit but should not be accessing anything.”","Labor Department blocked from sharing data with DOGE, email says","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
@@ -1577,6 +2252,10 @@ Expected output ""Crypto"" to equal ""DOGE""
 Crypto
 
 Fail Reason: Expected output ""Crypto"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
@@ -1592,7 +2271,11 @@ Expected output ""Federal worker buyout"" to equal ""DOGE""
 ---
 Federal worker buyout
 
-Fail Reason: Expected output ""Federal worker buyout"" to equal ""DOGE"""
+Fail Reason: Expected output ""Federal worker buyout"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "Trump officials have canceled a federal vaccine advisory committee meeting expected to be held<b> </b>next month that was intended to help select the makeup of next winter’s influenza vaccine.
 This is the <a href=""https://www.washingtonpost.com/health/2025/02/20/cdc-vaccine-advisory-panel-meeting-postponed/"">second federal vaccine advisory panel that has been postponed</a> or canceled since <a href=""https://www.washingtonpost.com/politics/2025/02/12/how-rfk-jr-once-long-shot-arrived-precipice-trumps-cabinet/"">Robert F. Kennedy Jr.</a>, a longtime anti-vaccine activist, was sworn in as health and human services secretary.
 The Food and Drug Administration notified members of its vaccine advisory committee Wednesday that a planned March 13 meeting was canceled, according to an email sent to members that was read to The Washington Post. No reason was provided.
@@ -1606,7 +2289,17 @@ Last week, Trump officials <a href=""https://www.washingtonpost.com/health/2025/
 During his confirmation hearings, Kennedy repeatedly denied that he is anti-vaccine, contending that he is simply seeking more data and pledging not to undermine confidence in the shots. But public health experts have long warned that as HHS secretary, Kennedy could use his authority to undermine vaccine safety and effectiveness. A pivotal swing vote in Kennedy’s confirmation, Sen. Bill Cassidy (R-Louisiana) said he grappled with his vote but later said he had received a list of commitments from Kennedy that included protecting vaccine oversight.
 Kennedy was critical of the CDC vaccine panel during his <a href=""https://www.washingtonpost.com/health/2025/01/30/rfk-health-secretary-confirmation-hearings/"">confirmation process</a> and has argued that federal agencies are <a href=""https://www.washingtonpost.com/health/2025/02/18/trump-health-firings-fda-cdc/"">captive</a> to the industries they regulate.
 “We will remove conflicts of interest on the committees and research partners whenever possible, or balance them with other stakeholders,” Kennedy said in remarks to HHS staff earlier this month.
-An executive order issued by President Donald Trump last week to reduce federal bureaucracy said White House officials would identify “unnecessary governmental entities and Federal Advisory Committees that should be terminated on grounds that they are unnecessary.”",Vaccine meeting to prepare for coming winter’s flu season canceled,"[PASS] (1.00)
+An executive order issued by President Donald Trump last week to reduce federal bureaucracy said White House officials would identify “unnecessary governmental entities and Federal Advisory Committees that should be terminated on grounds that they are unnecessary.”",Vaccine meeting to prepare for coming winter’s flu season canceled,"[FAIL] (0.00)
+
+Expected output ""Health agencies' communications pause"" to equal ""Health care""
+---
+Health agencies' communications pause
+
+Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[PASS] (1.00)
+
+Health care
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Health care
 
@@ -1628,17 +2321,31 @@ Expected output ""Health agencies' communications pause"" to equal ""Health care
 ---
 Health agencies' communications pause
 
-Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care"""
+Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[PASS] (1.00)
+
+Health care
+
+Pass Reason: All assertions passed"
 "A Space Force military base in Colorado will serve as a detention center for immigrant detainees facing deportation, Defense Department officials said Wednesday.
 In a statement, military officials said facilities would be provided at Buckley Space Force Base for U.S. Immigration and Customs Enforcement “to stage and process criminal aliens.” The site will be operated by ICE officials and other federal law enforcement agencies, not the U.S. military, according to U.S. Northern Command. Homeland Security Secretary Kristi L. Noem said during an interview Wednesday morning on Fox News that  the Trump administration might use Guantánamo Bay Naval Base in Cuba to house deportees whose home countries won’t take them back.
 President Donald Trump has ordered the Pentagon to take on a larger role in U.S. border security and immigration enforcement. Military officials are sending 1,500 troops to the U.S.-Mexico border and have prepared to send 10,000. Deportation flights carrying detainees to Guatemala, Colombia and Ecuador in C-17 military transport planes have departed from border areas carrying recent migrants caught attempting to enter the United States.
 ICE has the capacity to hold about 40,000 detainees nationwide  in private jails and county facilities where the agency rents beds. Those facilities are nearly full, ICE officials say, and the agency has taken thousands of detainees into custody since Trump took office last week and launched a mass deportation campaign. The use of military bases has raised concerns among ICE officials and immigrant advocates regarding the use of barracks that do not meet detention and safety standards for secure facilities.",Trump plans emerge to use U.S. military bases for immigrant detention,"[FAIL] (0.00)
+
+Expected output ""Deportations"" to equal ""Immigration policy""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Immigration policy""","[FAIL] (0.00)
 
 Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
 U.S.-Mexico border
 
 Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
@@ -1658,11 +2365,27 @@ Expected output ""Deportations"" to equal ""Immigration policy""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Immigration policy"""
+Fail Reason: Expected output ""Deportations"" to equal ""Immigration policy""","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed"
 "President Donald Trump on Tuesday ordered all employees focused on diversity, equity and inclusion initiatives<a href=""https://www.washingtonpost.com/politics/2025/01/22/dei-federal-employees-trump/"" target=_blank> to be placed on leave</a> no later than 5 p.m. Wednesday, and on Wednesday he revoked a 60-year-old executive order banning discrimination in hiring practices in the federal government.
 Some acting <a href=""https://www.washingtonpost.com/politics/2025/01/22/federal-workers-trump-remote-work/"" target=_blank>agency heads started enacting the guidance</a>, with multiple directors Wednesday telling staff that all “DEIA offices” are closing and mandating that employees report instances where government workers were trying to “disguise” programs by using “coded or precise language,” according to emails obtained by The Washington Post. The White House did not respond to questions about how many of the 2.3 million federal employees were affected by his order.
 A memo from Secretary of State Marco Rubio warns State Department officials that they will face “adverse consequences” if they fail to report on colleagues who have concealed or obscured existing DEI programs at the department.
 “The Administration is aware of efforts by some in government to disguise these programs,” the memo says. “There will be no adverse consequences for timely reporting this information. However, failure to report this information within 10 days may result in adverse consequences.”",Some agency heads mandate that employees report efforts to ‘disguise’ DEI programs,"[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
@@ -1707,10 +2430,34 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Crypto
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Crypto
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Crypto
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Crypto
+
 Pass Reason: All assertions passed"
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> on Tuesday proposed moving Gazans to a “good, fresh, beautiful piece of land” in another country, offering a vision of mass displacement that would likely inflame sentiments in the Arab world as he prepared to welcome <a href=""https://www.washingtonpost.com/world/2025/02/03/netanyahu-trump-white-house-gaza/"" target=_blank>Israeli Prime Minister Benjamin Netanyahu to the White House</a>.
 Trump framed the vision as a practical response to the physical destruction of Gaza after 16 months of intense bombardment from Israel. But given the decades-long history of the displacement of Palestinians in the region, as well as vows by the Israeli far-right to claim the Gaza Strip for themselves, Trump’s proposal was likely to provoke a furious reaction from many Palestinians as well as their Arab allies in the region, since it suggested permanently removing Gaza’s 2.2 million residents from Palestinian territory and settling them somewhere else.
 <a href=""https://www.washingtonpost.com/politics/2025/02/04/trump-netanyahu-meeting/"">Read the full story</a>",Trump proposes permanent displacement of Gazans as he welcomes Netanyahu to White House,"[PASS] (1.00)
+
+Gaza
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Gaza
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Gaza
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Gaza
 
@@ -1752,6 +2499,10 @@ Aid advocates believe the Trump administration is determined to dismantle USAID,
 
 USAID
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+USAID
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Foreign aid"" to equal ""USAID""
@@ -1759,6 +2510,10 @@ Expected output ""Foreign aid"" to equal ""USAID""
 Foreign aid
 
 Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 USAID
 
@@ -1774,17 +2529,33 @@ Expected output ""Foreign aid"" to equal ""USAID""
 ---
 Foreign aid
 
-Fail Reason: Expected output ""Foreign aid"" to equal ""USAID"""
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed"
 "DORAL, Fla. — President Donald Trump said Monday that he doesn’t just want to deport undocumented immigrants with criminal convictions, but also hopes to remove violent, repeat offenders — in the United States legally — from the country.
 “I don’t want these violent repeat offenders in our country any more than I want illegal aliens from other countries who misbehave,” Trump said at House Republicans’ retreat at his Doral golf club. “And I say — and this is subject to getting it approved — but if they’ve been arrested many, many times, they’re repeat offenders by many numbers, I want them out of our country.
 “I also will be seeking permission to do so,” Trump continued, musing: “Let them be brought to a foreign land and maintained by others for a very small fee.” He complained about the cost of keeping inmates in the United States.
-Trump did not provide more details about his plans, and it is not clear how he would seek to carry them out.",Trump says he wants to send ‘repeat offenders’ in U.S. legally to foreign countries,"[FAIL] (0.00)
+Trump did not provide more details about his plans, and it is not clear how he would seek to carry them out.",Trump says he wants to send ‘repeat offenders’ in U.S. legally to foreign countries,"[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Immigration policy"" to equal ""Deportations""
 ---
 Immigration policy
 
 Fail Reason: Expected output ""Immigration policy"" to equal ""Deportations""","[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
@@ -1807,7 +2578,23 @@ The executive order was one of multiple first-day Trump directives aimed at over
 
 Reclassifying federal jobs
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Reclassifying federal jobs
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""
 ---
@@ -1862,13 +2649,25 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Federal worker buyout"" to equal ""Federal workforce reductions""
 ---
 Federal worker buyout
 
-Fail Reason: Expected output ""Federal worker buyout"" to equal ""Federal workforce reductions"""
+Fail Reason: Expected output ""Federal worker buyout"" to equal ""Federal workforce reductions""","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed"
 "President Donald Trump signed <a href=""https://x.com/Scavino47/status/1889083008331972688"" target=_blank>an executive order</a> on Monday requiring the federal government to return to the use of plastic straws and away from paper straws.
 “We’re going back to plastic straws. These things don’t work,” Trump said from the Oval Office. “I’ve had them many times, and on occasion, they break, they explode.”",President Donald Trump signed an executive order on Monday requiring the federal government to return to...,"[FAIL] (0.00)
 
@@ -1900,10 +2699,40 @@ Expected output ""Other"" to equal ""Climate""
 ---
 Other
 
-Fail Reason: Expected output ""Other"" to equal ""Climate"""
+Fail Reason: Expected output ""Other"" to equal ""Climate""","[FAIL] (0.00)
+
+Expected output ""Other"" to equal ""Climate""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""Climate""","[FAIL] (0.00)
+
+Expected output ""Other"" to equal ""Climate""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""Climate""","[FAIL] (0.00)
+
+Expected output ""Federal workers return to office"" to equal ""Climate""
+---
+Federal workers return to office
+
+Fail Reason: Expected output ""Federal workers return to office"" to equal ""Climate"""
 "The White House issued a freeze on the hiring of civilian employees across the government Monday night, exempting active-duty military personnel and positions related to immigration enforcement, national security and public safety. The order also prohibits the use of outside contractors to get around the freeze, a strategy used by previous administrations to maneuver around hiring caps.
 The order also appears to open the door for the permanent federal personnel reductions that President Donald Trump campaigned on. Within 90 days, the administration is directed to come up with plans to “reduce the size of the Federal Government’s workforce through efficiency improvements and attrition.” Then the hiring freeze will be lifted.
 The exception is the Internal Revenue Service. The freeze will remain in place there until Trump officials “determine that it is in the national interest” to lift it.",Trump freezes hiring for many federal jobs,"[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -1941,6 +2770,12 @@ The Trump administration has sought to take an<a href=""https://www.washingtonpo
 Homan has said he is “not happy” with the results so far. Senate Budget Committee Chair Lindsey Graham (R-South Carolina) said recently that Homan came to the Hill “begging” for additional money. The Senate adopted a budget blueprint early Friday  for legislation to increase border security and immigration enforcement by $175 billion. Trump has backed a competing, more expansive plan in the House.
 The Biden administration deported 271,000 people in fiscal year 2024, the highest annual total in a decade. Deportations during Trump’s first term reached a peak of about 267,000 during the 2019 fiscal year, even as he made similar promises. ICE would need to deport more than 2,700 people a day to hit 1 million deportations a year, a goal that veteran immigration officials say is improbable.",Acting ICE director removed amid White House pressure to boost arrests,"[FAIL] (0.00)
 
+Expected output ""Deportations"" to equal ""Senior government officials ousted""
+---
+Deportations
+
+Fail Reason: Expected output ""Deportations"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
+
 Expected output ""U.S.-Mexico border"" to equal ""Senior government officials ousted""
 ---
 U.S.-Mexico border
@@ -1959,6 +2794,12 @@ Immigration policy
 
 Fail Reason: Expected output ""Immigration policy"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
 
+Expected output ""Immigration policy"" to equal ""Senior government officials ousted""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
+
 Expected output ""Deportations"" to equal ""Senior government officials ousted""
 ---
 Deportations
@@ -1969,7 +2810,13 @@ Expected output ""Deportations"" to equal ""Senior government officials ousted""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Senior government officials ousted"""
+Fail Reason: Expected output ""Deportations"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
+
+Expected output ""Immigration policy"" to equal ""Senior government officials ousted""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Senior government officials ousted"""
 "President Donald Trump said Wednesday that he is appointing Sean Curran — the special agent in charge of Trump’s security detail who shielded him during an assassination attempt at a Pennsylvania campaign rally last year — to serve as the next U.S. Secret Service director.
 “Sean has distinguished himself as a brilliant leader, who is capable of directing and leading operational security plans for some of the most complex Special Security Events in the History of our Country, and the World,” Trump <a href=""https://truthsocial.com/@realDonaldTrump/113874811205486989"" target=_blank>wrote </a>in a post on his social media platform, Truth Social. “He proved his fearless courage when he risked his own life to help save mine from an assassin’s bullet in Butler, Pennsylvania. I have complete and total confidence in Sean to make the United States Secret Service stronger than ever before.”
 Curran is widely respected for his rigor and skills as a protective detail agent and supervisor, growing extremely close to Trump after serving as the agent in charge of his detail for the past four years. It was Curran, however, who approved assigning a junior detail agent with minimal experience to prepare the security plan for the campaign visit to Butler, <a href=""https://www.washingtonpost.com/investigations/2024/12/31/butler-trump-secret-service-shooting/"" target=_blank>a plan that failed</a> to address basic security protocols and allowed a would-be assassin a clear shot at Trump from higher ground.
@@ -1986,7 +2833,21 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Other
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Other
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Senior government officials ousted"" to equal ""Other""
+---
+Senior government officials ousted
+
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
@@ -2036,6 +2897,18 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
 Pass Reason: All assertions passed"
 "Native American leaders said they’re worried about the impact of a freeze on federal grants and loans that could affect dozens of programs that provide a range of services including food, health care, education, housing and law enforcement.
 The United States has more than 570 federally recognized tribes, and many receive some type of funds to provide programs and services for their tribal citizens through the federal government.
@@ -2061,6 +2934,20 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Federal grant pause""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Federal grant pause""","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
@@ -2069,7 +2956,11 @@ Pass Reason: All assertions passed"
 "A coalition of labor unions and individuals filed suit in federal court Monday alleging that Elon Musk and the U.S. DOGE Service have been given access to sensitive records of millions of American in violation of the Privacy Act.
 The suit alleges that DOGE staff who do not have appropriate security clearances or vetting have been given access to personal information at the Education Department, which has private information of 43 million student borrowers; the Treasury Department, whose records include information on every American who receives a tax refund or Social Security benefit; and the Office of Personnel Management, which has personal information for every federal employee.
 The suit was filed by the American Federation of Teachers, the National Active and Retired Federal Employees Association, the International Association of Machinists and Aerospace Workers and the National Federation of Federal Employees. Several individuals are also named as plaintiffs.
-“Defendants are permitting Elon Musk and a cadre of loyalists imported from his private companies to help themselves to the personal information of millions of Americans” in violation of the Privacy Act, the suit charges. “Steamrolling into sensitive government record systems threatens to upend how these critical systems are maintained and compromises the safety and security of personal identifying information for Americans all across the country. It also violates federal law.”",Suit charges violation of Privacy Act as DOGE accesses personal data,"[FAIL] (0.00)
+“Defendants are permitting Elon Musk and a cadre of loyalists imported from his private companies to help themselves to the personal information of millions of Americans” in violation of the Privacy Act, the suit charges. “Steamrolling into sensitive government record systems threatens to upend how these critical systems are maintained and compromises the safety and security of personal identifying information for Americans all across the country. It also violates federal law.”",Suit charges violation of Privacy Act as DOGE accesses personal data,"[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Other"" to equal ""DOGE""
 ---
@@ -2087,6 +2978,12 @@ DOGE
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
+Expected output ""Other"" to equal ""DOGE""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""DOGE""","[FAIL] (0.00)
+
 Expected output ""Privacy Act"" to equal ""DOGE""
 ---
 Privacy Act
@@ -2097,7 +2994,11 @@ Expected output ""Privacy Act"" to equal ""DOGE""
 ---
 Privacy Act
 
-Fail Reason: Expected output ""Privacy Act"" to equal ""DOGE"""
+Fail Reason: Expected output ""Privacy Act"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "A federal judge on Wednesday extended for three days an order preventing the Trump administration from firing the head of an independent watchdog agency that has sought to pause President Donald Trump’s mass termination of some probationary federal workers.
 U.S. District Judge Amy Berman Jackson said she wanted more time to consider the lawyers’ arguments before issuing a broader ruling on whether the administration’s attempted ouster of Hampton Dellinger, the head of the Office of Special Counsel, was unlawful. A temporary restraining order barring Dellinger’s firing will remain in place until Saturday, she said.
 Dellinger, an appointee of President Joe Biden, sued the administration after he received a one-sentence email earlier this month telling him he was fired from the office, which protects government whistleblowers. He said his termination violated a law that says the president can remove him only for “inefficiency, neglect of duty, or malfeasance.” Jackson on Feb. 12 ordered him reinstated for two weeks while his case proceeds.
@@ -2106,7 +3007,11 @@ On Tuesday, an independent federal board <a href=""https://www.washingtonpost.co
 In court Wednesday morning, Jackson sharply questioned claims by the Trump administration’s lawyer that Trump had the power to fire Dellinger without cause and that the law prohibiting him from doing so was unconstitutional. Unlike other agency heads, the special counsel was granted independence from the president to investigate potential wrongdoing by the administration, the judge said. Dellinger was appointed to a five-year term that ends in 2029.
 “His actual job is to be a check and balance on the president,” Jackson said.
 The judge pressed Justice Department lawyer Madeline McMahon to explain why it would be in the public interest to fire Dellinger.
-McMahon said barring Dellinger’s removal would cause Trump to “lose control over an executive branch agency” and would represent an “intrusion” into Trump’s authority under the Constitution.",Judge briefly extends order barring Trump from firing watchdog leader,"[FAIL] (0.00)
+McMahon said barring Dellinger’s removal would cause Trump to “lose control over an executive branch agency” and would represent an “intrusion” into Trump’s authority under the Constitution.",Judge briefly extends order barring Trump from firing watchdog leader,"[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Targeting political enemies"" to equal ""Firing government watchdogs""
 ---
@@ -2119,6 +3024,14 @@ Expected output ""Expanding executive power"" to equal ""Firing government watch
 Expanding executive power
 
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Firing government watchdogs
 
@@ -2145,11 +3058,29 @@ IRS employees cheered the Biden administration’s funding boosts, which yielded
 “It’s going to be like going off a cliff immediately,” said David Carrone, a revenue agent and president of the Louisiana-Arkansas National Treasury Employees Union chapter.
 <i>Isaac Arnsdorf contributed to this report.</i>",Layoffs to hit IRS as DOGE targets tax collections,"[FAIL] (0.00)
 
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[FAIL] (0.00)
+
 Expected output ""Debt ceiling"" to equal ""DOGE""
 ---
 Debt ceiling
 
 Fail Reason: Expected output ""Debt ceiling"" to equal ""DOGE""","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""DOGE""
 ---
@@ -2180,7 +3111,11 @@ Mills responded: “We’re going to follow the law, sir. We’ll see you in cou
 On Friday, the Education Department’s Office for Civil Rights announced an investigation.
 “Maine would have you believe that it has no choice in how it treats women and girls in athletics — that is, that it must follow its state laws and allow male athletes to compete against women and girls,” Craig Trainor, the Education Department’s acting assistant secretary for civil rights,<a href=""https://www.ed.gov/about/news/press-release/office-civil-rights-launches-title-ix-violation-investigations-maine-department-of-education-and-maine-school-district"" target=_blank> said in a statement.</a> “Let me be clear: If Maine wants to continue to receive federal funds from the Education Department, it has to follow Title IX.”
 Mills responded promptly saying the state was standing firm.
-“If the President attempts to unilaterally deprive Maine school children of the benefit of Federal funding, my Administration and the Attorney General will take all appropriate and necessary legal action to restore that funding and the academic opportunity it provides. The State of Maine will not be intimidated by the President’s threats,” Mills <a href=""https://www.maine.gov/governor/mills/news/governor-mills-statement-presidents-threat-withhold-education-funding-maine-2025-02-21"" target=""_blank"">replied in a statement</a>.",Education Dept. launches investigation into Maine over transgender policies,"[FAIL] (0.00)
+“If the President attempts to unilaterally deprive Maine school children of the benefit of Federal funding, my Administration and the Attorney General will take all appropriate and necessary legal action to restore that funding and the academic opportunity it provides. The State of Maine will not be intimidated by the President’s threats,” Mills <a href=""https://www.maine.gov/governor/mills/news/governor-mills-statement-presidents-threat-withhold-education-funding-maine-2025-02-21"" target=""_blank"">replied in a statement</a>.",Education Dept. launches investigation into Maine over transgender policies,"[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""DEI in schools"" to equal ""Transgender policy""
 ---
@@ -2196,7 +3131,11 @@ Expected output ""Department of Education"" to equal ""Transgender policy""
 ---
 Department of Education
 
-Fail Reason: Expected output ""Department of Education"" to equal ""Transgender policy""","[FAIL] (0.00)
+Fail Reason: Expected output ""Department of Education"" to equal ""Transgender policy""","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Department of Education"" to equal ""Transgender policy""
 ---
@@ -2208,19 +3147,31 @@ Expected output ""DEI in schools"" to equal ""Transgender policy""
 ---
 DEI in schools
 
-Fail Reason: Expected output ""DEI in schools"" to equal ""Transgender policy"""
+Fail Reason: Expected output ""DEI in schools"" to equal ""Transgender policy""","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed"
 "Lawyers for eight inspectors general suing the Trump administration over their firings last month were forced by an angry federal judge to withdraw their motion seeking a temporary restraining order.
 Judge Ana C. Reyes of the U.S. District Court for the District of Columbia tore into the attorneys for the plaintiffs in a brief but heated hearing on Friday afternoon.
 Reyes demanded to know why the plaintiffs’ attorneys waited 21 days after the firings <a href=""https://www.washingtonpost.com/politics/2025/02/12/trump-fired-inspectors-general-lawsuit/"" target=_blank>to file their lawsuit</a>, only to then seek emergency same-day relief. She ticked off the list of emergency actions that have flooded the federal dockets and then limited the attorneys to “yes” and “no” answers.
 She also objected to the plaintiffs’ counsel comparing the facts of their case to those of Hampton Dellinger, the fired head of the Office of Special Counsel who <a href=""https://www.washingtonpost.com/politics/2025/02/10/trump-office-of-special-counsel-firing-lawsuit/3195b7de-e7ce-11ef-969b-cfbefacb1eb3_story.html"" target=""_blank"">sued the Trump administration last week</a>. Dellinger argued in his complaint that his termination violated a law that shields the leaders of independent agencies from removal by the president. The inspectors general, however, are arguing that their firing was illegal because Trump did not give Congress 30 days’ notice of his decision as required by law.
 After forcing the plaintiffs to withdraw their motion for a temporary restraining order, the parties agreed to an expedited schedule. The government must reply to the lawsuit by Feb. 21.
-“Why on earth this could not have been decided in a five-minute phone call is beyond me,” Reyes said. She said she considered sanctioning the plaintiff’s attorneys but had more pressing matters on her docket.",Judge forces lawyers for fired inspectors general to withdraw TRO request,"[FAIL] (0.00)
+“Why on earth this could not have been decided in a five-minute phone call is beyond me,” Reyes said. She said she considered sanctioning the plaintiff’s attorneys but had more pressing matters on her docket.",Judge forces lawyers for fired inspectors general to withdraw TRO request,"[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Targeting political enemies"" to equal ""Firing government watchdogs""
 ---
 Targeting political enemies
 
 Fail Reason: Expected output ""Targeting political enemies"" to equal ""Firing government watchdogs""","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Firing government watchdogs
 
@@ -2240,10 +3191,26 @@ Expected output ""Senior government officials ousted"" to equal ""Firing governm
 ---
 Senior government officials ousted
 
-Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Firing government watchdogs"""
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Firing government watchdogs""","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed"
 "The White House budget office on Wednesday rescinded an order freezing federal grants, according to a copy of a new memo obtained by The Washington Post, after the administration’s move to halt spending earlier this week provoked a backlash.
 In a memo dated Wednesday and distributed to federal agencies, Matthew J. Vaeth, acting director of the White House Office of Management and Budget, states that OMB memorandum M-25-13 “is rescinded.”
 <a href=""https://www.washingtonpost.com/business/2025/01/29/white-house-budget-office-spending-freeze/"">Read the full story</a>","White House, in reversal, rescinds freeze on federal grants","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
@@ -2278,7 +3245,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""DEI in the federal government""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DEI in the federal government""","[FAIL] (0.00)
 
 Expected output ""Federal workforce reductions"" to equal ""DEI in the federal government""
 ---
@@ -2292,10 +3269,26 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
 Pass Reason: All assertions passed"
 "President Donald Trump’s administration took aim at government DEI programs, ordering federal diversity, equity and inclusion employees to be placed on leave no later than Wednesday and for DEI offices to be closed down, according to a memorandum sent Tuesday by the Office of Personnel Management.
 The directive will eventually lead to these employees being laid off or reassigned. It followed executive <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/"" target=""_blank"">orders</a> on <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/ending-radical-and-wasteful-government-dei-programs-and-preferencing/"" target=""_blank"">Monday</a> in which Trump directed<b> </b>an end to what he called “radical and wasteful” federal government DEI programs.
 <a href=""https://www.washingtonpost.com/politics/2025/01/22/dei-federal-employees-trump/"">Read the full story</a>",Layoffs loom as Trump administration orders federal DEI workers on leave,"[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DEI in the federal government
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
@@ -2364,6 +3357,18 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
 Pass Reason: All assertions passed"
 "A federal judge on Monday blocked Elon Musk’s U.S. DOGE Service from using private information collected by<b> </b>the Education Department and the Office of Personnel Management.
 U.S. District Judge Deborah L. Boardman in Maryland issued a <a href=""https://protectdemocracy.org/wp-content/uploads/2025/02/Dkt-39-Opinion-and-Order-on-TRO.pdf"">temporary restraining order</a> in a lawsuit led by the American Federation of Teachers to stop DOGE, which stands for Department of Government Efficiency,<b> </b>from accessing databases containing personal information on millions of Americans. She denied the union’s request to block DOGE from sensitive Treasury Department data because a <a href=""https://www.washingtonpost.com/national-security/2025/02/21/doge-treasury-data-access/"">preliminary injunction</a> in a separate case achieved that goal.
@@ -2388,6 +3393,14 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""AI"" to equal ""DOGE""
@@ -2400,7 +3413,11 @@ Expected output ""AI"" to equal ""DOGE""
 ---
 AI
 
-Fail Reason: Expected output ""AI"" to equal ""DOGE"""
+Fail Reason: Expected output ""AI"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "A group of farmers and environmental nonprofits <a href=""https://earthjustice.org/brief/2025/were-suing-to-stop-the-trump-admins-climate-censorship-that-threatens-farmers-and-our-food-supply"" target=""_blank"">sued</a> the U.S. Department of Agriculture, accusing the department of scrubbing data relating to climate change from its website and saying the move would hinder research and hurt farming initiatives.
 In a <a href=""https://earthjustice.org/wp-content/uploads/2025/02/usdaclimatewebpagespurgecomplaint_2.24.25_final-1.pdf"" target=_blank>lawsuit</a> filed Monday in the U.S. District Court for the Southern District of New York, the Northeast Organic Farming Association of New York (NOFA-NY) and two environmental nonprofits, the Natural Resources Defense Council and the Environmental Working Group, accused USDA of deleting “climate-related policies, guides, datasets, and resources from its websites” in violation of laws on government transparency and agency action.
 The suit said the department’s actions hurt farmers who used the data to plan “agricultural decisions” and access funding, made it more difficult for climate researchers and advocates to do their jobs, and “deprived the public” of “vital information.” USDA websites include the Forest Service, Food Safety and Inspection Service, and Natural Resources Conservation Service.
@@ -2416,6 +3433,18 @@ In recent weeks, government agencies have removed material relating to topics de
 The lawsuit claimed that in deleting the materials so quickly and without notice, USDA violated the <a href=""https://www.govinfo.gov/content/pkg/PLAW-104publ13/pdf/PLAW-104publ13.pdf"" target=_blank>Paperwork Reduction Act</a>, which requires agencies to provide notice when terminating “significant information dissemination products,” and the Freedom of Information Act. The groups also sued under<b> </b>the <a href=""https://crsreports.congress.gov/product/pdf/LSB/LSB10558"" target=_blank>Administrative Procedure Act</a>, which allows people to request judicial reviews of certain harmful agency actions.
 The suit asked the court to declare USDA’s actions unlawful and order the department to restore the deleted webpages and not to comply further with the Jan. 30 directive.
 <a href=""https://www.washingtonpost.com/politics/interactive/2023/presidential-candidates-2024-policies-issues/donald-trump-climate-change/"" target=_blank>Trump has long rejected climate science</a> and in his first term aggressively targeted policies aimed at protecting the environment and lowering planet-warming emissions. He has called climate change “an expensive hoax,” and in 2016, he told The Post’s editorial board that he is “not a great believer in man-made climate change.” But he also <a href=""https://www.vox.com/2020/1/10/21060410/trump-climate-change-book"" target=_blank>said in 2020</a> that “the environment is very important to me.”",Farmers sue USDA after agency deletes climate change data,"[PASS] (1.00)
+
+Climate
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Climate
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Climate
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Climate
 
@@ -2454,7 +3483,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[FAIL] (0.00)
 
 Expected output ""Crypto"" to equal ""DOGE""
 ---
@@ -2466,7 +3505,11 @@ Expected output ""Crypto"" to equal ""DOGE""
 ---
 Crypto
 
-Fail Reason: Expected output ""Crypto"" to equal ""DOGE"""
+Fail Reason: Expected output ""Crypto"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "President Donald Trump sent a memorandum Friday directing agency and department heads across the federal government to review all funding that agencies provide to nongovernmental organizations, or NGOs.
 The memorandum claims that many NGOs “are engaged in actions that actively undermine the security, prosperity, and safety of the American people” and that it’s the policy of the Trump administration “to stop funding NGOs that undermine the national interest.”
 The memo directs agency heads to “align future funding decisions with the interests of the United States and with the goals and priorities of my Administration.”
@@ -2490,22 +3533,50 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Foreign aid""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Foreign aid""","[PASS] (1.00)
+
+Foreign aid
+
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
-Pass Reason: All assertions passed"
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""Federal funding"" to equal ""Foreign aid""
+---
+Federal funding
+
+Fail Reason: Expected output ""Federal funding"" to equal ""Foreign aid"""
 "Providers of the national program Head Start, which provides early-childhood education to children from ­low-income families, say that they cannot access the federal funds they need to keep the program running.
 After the Trump administration’s executive order to pause some grants and loans disbursed by the federal government, providers couldn’t access the payment management system they use to request funds and get reimbursement. The White House Office of Management and Budget issued guidance Tuesday that the order was not supposed to impact programs such as Head Start, yet access to funding appears to have been frozen.
 These funds — which must be spent within two days of when they are requested — are used to pay for everything from staff salary to utility bills, said Donna Davidson, president and CEO of Easter Seals North Georgia, a Head Start provider.
 “If this doesn’t correct itself fairly quickly, we’re going to have to close,” Davidson said. “We are hoping that this was an error, but we’re already on Tuesday, payroll is on Friday. We have to be able to draw down that money to make payroll.”
-Closing would mean that staffers, many of whom live paycheck to paycheck, would lose their income, and parents who rely on the program would need to figure out alternative child-care arrangements or stay home from work, Davidson said. So far, she said, providers have gotten no guidance from OMB or the federal Head Start agency offices on when access would be reinstated or what to do in the meantime.",Early education programs can’t access federal funding to pay bills,"[FAIL] (0.00)
+Closing would mean that staffers, many of whom live paycheck to paycheck, would lose their income, and parents who rely on the program would need to figure out alternative child-care arrangements or stay home from work, Davidson said. So far, she said, providers have gotten no guidance from OMB or the federal Head Start agency offices on when access would be reinstated or what to do in the meantime.",Early education programs can’t access federal funding to pay bills,"[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Department of Education"" to equal ""Federal grant pause""
 ---
 Department of Education
 
 Fail Reason: Expected output ""Department of Education"" to equal ""Federal grant pause""","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
@@ -2544,11 +3615,35 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Eric Adams case
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Eric Adams case
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Eric Adams case
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Eric Adams case
+
 Pass Reason: All assertions passed"
 "At least 20 states have been <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/28/trump-funding-freeze-dmv-vance/"" target=""_blank"">frozen out</a> of their Medicaid reimbursement systems after the Trump administration ordered a pause in federal grant spending, attorneys general said Tuesday.
 The attorneys general said they would file a lawsuit to block the federal grant directive, which they said has already led to frozen funds for programs including Medicaid, Head Start in Michigan and child development block grants in Maryland.
 “We will not stand for any illegal policy that puts essential services for millions of Americans at risk,” New York Attorney General Letitia James (D) said at a news conference also attended by her Democratic peers from several other states.
 White House press secretary Karoline Leavitt, however, <a href=""https://x.com/PressSec/status/1884329868030271759"" target=_blank>said on social media</a> that the Medicaid website portal had suffered an outage, but that Medicaid payments had not been affected and the portal would be “back online shortly.”",State attorneys general say they will sue to block pause on federal grants,"[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal grant pause
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
@@ -2624,6 +3719,24 @@ Expected output ""Expanding executive power"" to equal ""Firing government watch
 ---
 Expanding executive power
 
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""
+---
+Expanding executive power
+
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs"""
 "The Education Department on Monday shut down a large swath of work at the Institute of Educational Sciences, the arm of the department responsible for education research, by unilaterally cancelling at least 90 contracts worth $900 million. The agency is responsible for education research, evaluation of programs and collection of a vast amount of data about American schools.
 The vast majority of the work of this agency is done by contractors, so canceling their work will have a significant impact on its ability to function, they said.
@@ -2634,6 +3747,12 @@ Biedermann said the canceled contracts would be rebid in hopes of getting the sa
 “The significant amount of money as compared to the outcomes generated for students is not commensurate,” she said. She said they are “looking for vendors to generate better outcomes for students.”
 Asked how DOGE workers have the requisite expertise to make these determinations, she said, “The entire goal of DOGE is to cut waste, and they have been trained to identify that.”
 Biedermann said 90 contracts worth $900 million were canceled. The second official said the list included 167 contracts.",Ed Dept DOGE team cancels $900 million in research contracts,"[FAIL] (0.00)
+
+Expected output ""Federal grant pause"" to equal ""DOGE""
+---
+Federal grant pause
+
+Fail Reason: Expected output ""Federal grant pause"" to equal ""DOGE""","[FAIL] (0.00)
 
 Expected output ""Department of Education"" to equal ""DOGE""
 ---
@@ -2653,6 +3772,12 @@ Federal funding
 
 Fail Reason: Expected output ""Federal funding"" to equal ""DOGE""","[FAIL] (0.00)
 
+Expected output ""Department of Education"" to equal ""DOGE""
+---
+Department of Education
+
+Fail Reason: Expected output ""Department of Education"" to equal ""DOGE""","[FAIL] (0.00)
+
 Expected output ""Federal grant pause"" to equal ""DOGE""
 ---
 Federal grant pause
@@ -2663,7 +3788,13 @@ Expected output ""Federal grant pause"" to equal ""DOGE""
 ---
 Federal grant pause
 
-Fail Reason: Expected output ""Federal grant pause"" to equal ""DOGE"""
+Fail Reason: Expected output ""Federal grant pause"" to equal ""DOGE""","[FAIL] (0.00)
+
+Expected output ""Department of Education"" to equal ""DOGE""
+---
+Department of Education
+
+Fail Reason: Expected output ""Department of Education"" to equal ""DOGE"""
 "President Donald Trump on Monday signed an <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/restoring-the-death-penalty-and-protecting-public-safety/"" target=""_blank"">executive order</a> directing the attorney general to seek the death penalty much more often and to encourage local and state prosecutors do to the same.
 Trump also took aim at his predecessor, President Joe Biden, for <a href=""https://www.washingtonpost.com/national-security/2024/12/23/biden-death-penalty-commutation/"" target=_blank>commuting the sentences</a> last month of 37 of the 40 people on federal death row. Biden commuted their sentences to life in prison without parole. While Trump cannot undo those commutations, he raised the possibility that his administration could encourage local officials to seek new death sentences for them.
 Writing in the order, Trump directed his attorney general to examine whether those people could be charged with state-level capital crimes and then “recommend appropriate action to state and local authorities.”
@@ -2671,7 +3802,17 @@ In addition to broadly requesting that the Justice Department seek more federal 
 During Trump’s first term, the Justice Department restarted executions and carried out 13, including some in the days leading up to Biden’s inauguration. Under Biden, the Justice Department imposed a moratorium blocking new executions, but prosecutors also continued to seek new death sentences.
 Biden’s action commuting sentences last month left three men on federal death row: the surviving Boston Marathon bomber; the Charleston, South Carolina, church gunman; and the Pittsburgh synagogue gunman, who was prosecuted and sentenced to death during Biden’s term.
 Trump has long been a vocal supporter of the death penalty. Capital punishment’s use nationwide has waned in recent decades, with executions and new death sentences plummeting. A Washington Post examination <a href=""https://www.washingtonpost.com/nation/interactive/2024/death-row-inmates-us-executions/"" target=_blank>last year</a> found that many of the 2,100 people on death row appeared likely to die there without being executed.
-Officials in some states have not sought to carry out executions, but in other cases, authorities say they have struggled to obtain the drugs needed for lethal injections. Trump’s order also directs his attorney general to make sure that states with the death penalty have the necessary drugs for lethal injections.",Trump signs executive order seeking more death sentences,"[PASS] (1.00)
+Officials in some states have not sought to carry out executions, but in other cases, authorities say they have struggled to obtain the drugs needed for lethal injections. Trump’s order also directs his attorney general to make sure that states with the death penalty have the necessary drugs for lethal injections.",Trump signs executive order seeking more death sentences,"[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Other""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Other
 
@@ -2695,7 +3836,11 @@ Expected output ""Pardons"" to equal ""Other""
 ---
 Pardons
 
-Fail Reason: Expected output ""Pardons"" to equal ""Other"""
+Fail Reason: Expected output ""Pardons"" to equal ""Other""","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed"
 "President Donald Trump said he would soon announce new tariffs on computer chips, <a href=""https://www.washingtonpost.com/technology/2024/12/07/raimondo-trump-chips-reckless/"" target=_blank>repeating a campaign promise</a> that if enacted could have deep impacts on the global tech industry and the geopolitical battle over AI with China.
 Trump criticized the Biden administration’s policy of using taxpayer money to subsidize the construction of U.S. semiconductor manufacturing facilities and said that a tariff on importing computer chips would work better at forcing companies to move their factories to the United States.
 “They’re not going to want to pay a 25, 50 or even 100 percent tax,” Trump said. “If you want to stop paying the taxes or the tariffs, you have to build your plant right here in America.”
@@ -2724,11 +3869,35 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Tariffs
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Tariffs
+
 Pass Reason: All assertions passed"
 "President Donald Trump on Tuesday is signing an executive order that calls on federal agencies to work with the U.S. DOGE Service in a bid to cut their existing workforce and limit future hiring, a White House official told The Washington Post.
 The order calls on agency leaders to limit hiring to “essential” positions, prepare for large reductions in force and reduce backfills after staff departures. The order includes some exceptions, such as allowing more hiring of national security and law enforcement personnel. Semafor <a href=""https://www.semafor.com/article/02/11/2025/trump-moves-to-significantly-reduce-federal-workforce"" target=_blank>first reported</a> that Trump will sign the executive order.
 Ahead of the signing, Trump was joined in the Oval Office by Elon Musk, his billionaire ally who is overseeing DOGE, an agency that Trump has empowered to find government efficiencies. Musk praised some federal workers but also criticized the “unelected” bureaucracy in remarks made to reporters in the room.
 DOGE’s actions — which include <a href=""https://www.washingtonpost.com/national-security/2025/02/04/usaid-trump-foreign-aid/"" target=_blank>moving to dismantle some U.S. agencies</a>, pushing out <a href=""https://www.washingtonpost.com/dc-md-va/2025/02/06/federal-workers-trump-buyout/"" target=_blank>tens of thousands of civil servants</a> and <a href=""https://www.washingtonpost.com/national-security/2025/02/06/elon-musk-doge-access-personnel-data-opm-security/"" target=_blank>gaining access to some of the federal government’s most sensitive payment systems</a> — have prompted lawsuits and fears that many of the actions are <a href=""https://www.washingtonpost.com/business/2025/02/04/elon-musk-government-legal-doge/"" target=_blank>illegal</a>.",Trump signing executive order intended to reduce federal workforce,"[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Federal workforce reductions
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -2788,11 +3957,31 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Transgender policy
+
 Pass Reason: All assertions passed"
 "Infantry Marines and other U.S. troops have begun arriving at the U.S. naval base at Guantánamo Bay, Cuba, U.S. military officials said Monday, in what is expected to be a <a href=""https://www.washingtonpost.com/immigration/2025/01/29/guantanamo-cuba-el-salvador-deportations/"" target=_blank>significant operation to house migrants</a> until the Trump administration sends them to their home countries.
 The deployments include members of 1st Battalion, 6th Marines, of Camp Lejeune in North Carolina, along with service members from U.S. Southern Command and U.S. Army North — headquarters units that will oversee aspects of the operation. The Defense Department disclosed the deployment Monday, after the White House posted Sunday morning that the Marines had begun arriving.
 Defense Secretary Pete Hegseth, who is due to travel to the southern U.S. border Monday, has said the Guantánamo facility will be useful to house migrants whose home country is not immediately assisting with return. They would be detained on a separate part of the base from where militants and terrorism suspects have long been held.
 The Trump administration has said that up to 30,000 migrants could be held at Guantánamo. Migrants have been held there in the past, but in much smaller numbers.",U.S. troops arrive at Guantánamo Bay in Trump migrant crackdown,"[PASS] (1.00)
+
+Guantánamo Bay
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Guantánamo Bay
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Guantánamo Bay
 
@@ -2816,7 +4005,11 @@ Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay"""
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[PASS] (1.00)
+
+Guantánamo Bay
+
+Pass Reason: All assertions passed"
 "MEXICO CITY — Mexico extradited 29 alleged drug traffickers to the United States on Thursday, including Rafael Caro Quintero, a prized target long sought in the killing of a U.S. narcotics agent, and two leaders of the hyper-violent Zetas cartel, in a dramatic gesture apparently aimed at heading off crushing economic sanctions, according to U.S. officials.
 President Donald Trump has threatened to impose 25 percent tariffs on Mexico next week for what he calls its failure to stop drugs — especially fentanyl — from crossing the border. A high-level Mexican delegation met Thursday with senior Trump administration officials in an effort to hammer out a deal to avoid the economic penalties.
 “Twenty-nine, that’s huge! What they’ve done is literally cleaned out the cupboard,” said John Feeley, a former U.S. diplomat who served as deputy chief of mission in Mexico from 2009 to 2012. Normally, he said, extraditions of major capos were handled one by one, often involving long negotiations. But Mexican President Claudia Sheinbaum was “pulling out all the stops” to avoid the tariffs, he said.
@@ -2839,6 +4032,12 @@ Trump had initially said the penalties on Mexico and Canada would take effect in
 Fentanyl has set off the deadliest drug epidemic in U.S. history. But deaths from overdoses, and quantities of the opioid seized in the United States, have declined over the past year, officials say.
 <i>Valentina Muñoz Castillo and Gabriela Martinez contributed to this report.</i>",Mexico extradites 29 drug suspects to U.S. as Trump threatens sanctions,"[FAIL] (0.00)
 
+Expected output ""Foreign policy"" to equal ""Tariffs""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""Tariffs""","[FAIL] (0.00)
+
 Expected output ""U.S.-Mexico border"" to equal ""Tariffs""
 ---
 U.S.-Mexico border
@@ -2850,6 +4049,18 @@ Expected output ""U.S.-Mexico border"" to equal ""Tariffs""
 U.S.-Mexico border
 
 Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Tariffs""","[FAIL] (0.00)
+
+Expected output ""U.S.-Mexico border"" to equal ""Tariffs""
+---
+U.S.-Mexico border
+
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Tariffs""","[FAIL] (0.00)
+
+Expected output ""Foreign policy"" to equal ""Tariffs""
+---
+Foreign policy
+
+Fail Reason: Expected output ""Foreign policy"" to equal ""Tariffs""","[FAIL] (0.00)
 
 Expected output ""U.S.-Mexico border"" to equal ""Tariffs""
 ---
@@ -2902,11 +4113,33 @@ Expected output ""Expanding executive power"" to equal ""Other""
 ---
 Expanding executive power
 
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Other""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Other""
+---
+Expanding executive power
+
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
+
+Expected output ""Expanding executive power"" to equal ""Other""
+---
+Expanding executive power
+
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Other"""
 "Trump in an executive order on Monday directed the revocation of any active security clearances held by John Bolton, his former national security adviser, and the living signatories of a notorious October 2020 letter suggesting that emails purportedly taken from a laptop belonging to Hunter Biden could be part of a “Russian information operation.”
 The action all together targets 50 former national security officials, including several former directors of the Central Intelligence Agency. Some of the former officials no longer have security clearances, making the impact of the order unclear.
 A Bolton representative did not immediately respond to a request for comment. Bolton, a former ambassador to the United Nations, served as Trump’s national security adviser for 17 months, ending in September 2019. In 2020, he published a memoir about his time in the administration that included damaging assessments of the president, portraying him as reckless and unfit for office.
 In Monday’s order, Trump claimed that Bolton’s book was “rife with sensitive information drawn from his time in government,” an assertion that the former national security adviser has denied. The president has long assailed the signatories of the <a href=""https://www.politico.com/f/?id=00000175-4393-d7aa-af77-579f9b330000"" target=_blank>October 2020 letter</a>, calling the statement a form of “election interference.”",Trump revokes security clearances for dozens of former national security officials,"[PASS] (1.00)
+
+Targeting political enemies
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Targeting political enemies
 
@@ -2923,6 +4156,14 @@ Expected output ""Other"" to equal ""Targeting political enemies""
 Other
 
 Fail Reason: Expected output ""Other"" to equal ""Targeting political enemies""","[PASS] (1.00)
+
+Targeting political enemies
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Targeting political enemies
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Targeting political enemies
 
@@ -2976,6 +4217,12 @@ And on Sunday morning, the NASA directorate that had urged employees to reply re
 
 <i>Ellen Nakashima, John Hudson, Mariana Alfaro, Warren Strobel, Derek Hawkins, Spencer S. Hsu, Ann Marimow, Lena H. Sun, Dan Diamond, Jeremy Roebuck, Olivia George, Perry Stein and Carolyn Y. Johnson contributed to this report.</i>",Several administration officials tell workers not to reply to Musk email,"[FAIL] (0.00)
 
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[FAIL] (0.00)
+
 Expected output ""D.C."" to equal ""DOGE""
 ---
 D.C.
@@ -2994,6 +4241,12 @@ Other
 
 Fail Reason: Expected output ""Other"" to equal ""DOGE""","[FAIL] (0.00)
 
+Expected output ""Other"" to equal ""DOGE""
+---
+Other
+
+Fail Reason: Expected output ""Other"" to equal ""DOGE""","[FAIL] (0.00)
+
 Expected output ""Expanding executive power"" to equal ""DOGE""
 ---
 Expanding executive power
@@ -3004,13 +4257,25 @@ Expected output ""Federal worker buyout"" to equal ""DOGE""
 ---
 Federal worker buyout
 
-Fail Reason: Expected output ""Federal worker buyout"" to equal ""DOGE"""
+Fail Reason: Expected output ""Federal worker buyout"" to equal ""DOGE""","[FAIL] (0.00)
+
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
+---
+Federal workforce reductions
+
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE"""
 "CIUDAD JUÁREZ, Mexico — Ridel Jiménez arrived at the border bridge leading into Texas before dawn Monday with his wife and their infant daughter, hoping to be allowed into the United States after fleeing Cuba.
 They had waited six months in Mexico City for their appointment with U.S. immigration officials through <a href=""https://www.washingtonpost.com/immigration/2023/02/20/cbpone-boder-app-biden-migrants/"" target=_blank>CBP One</a>, the mobile app the Biden administration launched and that President Donald Trump’s team has vowed to eliminate.
 Moments after Trump was sworn in, Jiménez logged into the app and saw a new message that left him flummoxed.
 “<a href=""https://www.washingtonpost.com/immigration/2025/01/20/trump-border-cbp-one-migrants/"" target=_blank>Existing appointments are no longer valid</a>,” it said.
 Other migrants gathered around him logged onto the app and received the same message. One woman sat down and began to weep beneath a fleece blanket. Another leaned against a pole, buried her face into her gloved hands and cried. Jiménez made a video call to his mother, anxiously  awaiting news in Cuba.
 “After everything we’ve done and gone through to get here,” Jiménez lamented. “If only I had had the appointment for three hours earlier. That’s why we tried.”",Migrants at border get message saying CBP One appointments ‘no longer valid’,"[FAIL] (0.00)
+
+Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
+---
+U.S.-Mexico border
+
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[FAIL] (0.00)
 
 Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
@@ -3038,20 +4303,38 @@ Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
 U.S.-Mexico border
 
-Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy"""
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[FAIL] (0.00)
+
+Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
+---
+U.S.-Mexico border
+
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[PASS] (1.00)
+
+Immigration policy
+
+Pass Reason: All assertions passed"
 "President Donald Trump <a href=""https://www.washingtonpost.com/national-security/2025/02/23/dan-bongino-fbi-deputy-director-trump/"" target=_blank>announced</a> Sunday evening that Dan Bongino — a former New York police officer and Secret Service agent turned right-wing podcaster and prolific conspiracy theorist — would serve as the FBI’s deputy director.
 The appointment quickly drew criticism from Democrats and was cheered by Trump allies.
 “Trump has chosen grifters to lead the FBI. Kash Patel sells ‘K$SH’ branded <a href=""https://www.washingtonpost.com/national-security/2025/01/29/kash-patel-fbi-nominee-trump-confirmation-hearing/"" target=_blank>merch</a>, vaccine reversal pills. Dan Bongino’s entire show is telling listeners the world is ending so they buy the dozens of survivalist products he sells,” Sen. Chris Murphy (D-Connecticut) <a href=""https://x.com/chrismurphyct/status/1893876724011569401?s=12"" target=_blank>wrote on X</a>. “I know this feels like a bad dream. It isn’t.”
 Patel, a Trump loyalist who was <a href=""https://www.washingtonpost.com/national-security/2025/02/20/kash-patel-fbi-senate-confirmation-vote/"" target=_blank>narrowly confirmed</a> last week as FBI director, praised Bongino and welcomed him to the job in a social media post. “Tremendous news for law enforcement and the future of American justice!” Patel <a href=""https://x.com/fbidirectorkash/status/1894005754866139466?s=12"" target=_blank>wrote on X</a>, calling Bongino “a warrior and lifelong public servant.”
 The appointment, which places a second Trump <a href=""https://www.washingtonpost.com/politics/2024/11/30/trump-kash-patel-fbi-director/"" target=_blank>ally</a> at the top of the FBI, adds to concerns about the lack of experience among those running the country’s premier law enforcement agency.
 The FBI deputy director role does not require Senate confirmation, but typically, such appointees have had long careers as FBI agents before assuming the role.
-“Even the WWE never constructed a tag-team better than: KASH / BONGINO We are making @FBI great again!” <a href=""https://x.com/FmrRepMattGaetz/status/1893842632461209729"" target=_blank>said</a> former congressman Matt Gaetz (R-Florida), who was Trump’s first choice to serve as attorney general but was forced to withdraw his nomination because he did not have enough support from Republican senators.","Trump allies rejoice, Democrats sound alarm over latest FBI appointment","[FAIL] (0.00)
+“Even the WWE never constructed a tag-team better than: KASH / BONGINO We are making @FBI great again!” <a href=""https://x.com/FmrRepMattGaetz/status/1893842632461209729"" target=_blank>said</a> former congressman Matt Gaetz (R-Florida), who was Trump’s first choice to serve as attorney general but was forced to withdraw his nomination because he did not have enough support from Republican senators.","Trump allies rejoice, Democrats sound alarm over latest FBI appointment","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""D.C."" to equal ""Other""
 ---
 D.C.
 
 Fail Reason: Expected output ""D.C."" to equal ""Other""","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Other
 
@@ -3071,7 +4354,11 @@ Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
 Senior government officials ousted
 
-Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other"""
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[PASS] (1.00)
+
+Other
+
+Pass Reason: All assertions passed"
 "Chief Justice John G. Roberts Jr. granted the Trump administration’s request late Wednesday to pause a lower court’s midnight deadline for the government to resume nearly $2 billion in foreign aid payments suspended for weeks.
 The brief administrative order, which did not address the underlying legal issues, will allow time for a full Supreme Court review.
 U.S. District Judge Amir H. Ali had given the administration until 11:59 p.m. to fulfill its contractual obligations and restart the payments to organizations whose work in impoverished parts of the world had been stopped since President Donald Trump halted such foreign assistance in late January.
@@ -3092,7 +4379,11 @@ A Trump administration official said via email Wednesday evening that the State 
 USAID retained critical awards, including food assistance, lifesaving medical treatments for HIV, tuberculosis and malaria, and support for nations like Lebanon, Haiti, Venezuela and Cuba, the official said.
 The review had been ongoing when Ali “intervened” in the process, the official added, and the State Department and USAID moved “rapidly to complete the programmatic evaluation,” lifting stop-work orders for some programs and terminating others.
 Aid groups and contractors told The Washington Post on Wednesday that they were receiving government notices of thousands of aid projects being terminated, despite the federal judge’s ruling that foreign assistance should continue.
-<i>John Hudson contributed to this report.</i>",Supreme Court grants Trump request to pause USAID payments order,"[FAIL] (0.00)
+<i>John Hudson contributed to this report.</i>",Supreme Court grants Trump request to pause USAID payments order,"[PASS] (1.00)
+
+USAID
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Foreign aid"" to equal ""USAID""
 ---
@@ -3120,10 +4411,28 @@ Expected output ""Foreign aid"" to equal ""USAID""
 ---
 Foreign aid
 
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+
+Expected output ""Foreign aid"" to equal ""USAID""
+---
+Foreign aid
+
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+
+Expected output ""Foreign aid"" to equal ""USAID""
+---
+Foreign aid
+
 Fail Reason: Expected output ""Foreign aid"" to equal ""USAID"""
 "Defense Secretary Pete Hegseth has decided to remove<b> </b>retired Gen. Mark A. Milley’s security detail, suspend his security clearance,<b> </b>and order an inspector general inquiry into his behavior as the Pentagon’s top officer, senior defense officials said Tuesday, taking extraordinary action against a frequent target of President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a>.
 The move comes after years of Trump criticizing Milley for perceived disloyalty and Milley acknowledging in congressional testimony that he had served as a source for several unflattering books about the first Trump administration.
-<a href=""https://www.washingtonpost.com/national-security/2025/01/28/mark-milley-hegseth-trump/"">Read the full story</a>",Hegseth takes action against Trump foe Mark Milley,"[PASS] (1.00)
+<a href=""https://www.washingtonpost.com/national-security/2025/01/28/mark-milley-hegseth-trump/"">Read the full story</a>",Hegseth takes action against Trump foe Mark Milley,"[FAIL] (0.00)
+
+Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""
+---
+Senior government officials ousted
+
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""","[PASS] (1.00)
 
 Targeting political enemies
 
@@ -3137,7 +4446,11 @@ Expected output ""Other"" to equal ""Targeting political enemies""
 ---
 Other
 
-Fail Reason: Expected output ""Other"" to equal ""Targeting political enemies""","[FAIL] (0.00)
+Fail Reason: Expected output ""Other"" to equal ""Targeting political enemies""","[PASS] (1.00)
+
+Targeting political enemies
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""
 ---
@@ -3149,7 +4462,11 @@ Expected output ""Senior government officials ousted"" to equal ""Targeting poli
 ---
 Senior government officials ousted
 
-Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies"""
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""","[PASS] (1.00)
+
+Targeting political enemies
+
+Pass Reason: All assertions passed"
 "The Trump White House<b> </b>and Treasury Department officials have agreed to prohibit the U.S. DOGE Service from accessing personal taxpayer data, according to two people familiar with the arrangement, heading off a brewing privacy<b> </b>crisis at the tax agency.
 Gavin Kliger, a software engineer with Elon Musk’s DOGE effort assigned to the IRS, will have read-only access to anonymized tax data, the same access granted to academic researchers and IT professionals who work on IRS systems, said the people, who spoke on the condition of anonymity to share details of the agreement.
 DOGE, which stands for the Department of Government Efficiency, over the weekend requested broad access to the most sensitive IRS data systems, which would have given Kliger the ability to see and in some cases edit detailed information — including bank accounts, payment balances, Social Security and other personal identification numbers and, in some instances, medical information — on virtually every individual, business and nonprofit in the country.
@@ -3158,6 +4475,14 @@ The IRS was prepared to reject the White House’s request, the people said, on 
 Representatives for the White House and Treasury Department did not immediately respond to requests for comment.
 DOGE has sought entry to several highly sensitive data systems across the government. The group sought access to the Treasury Department’s payment systems; the career official who was in charge of that program resigned rather than grant the request. He was later replaced by a DOGE staffer on assignment to Treasury.
 DOGE is also attempting to gain access to Social Security Administration datasets, which include the world’s largest repository of medical data and years of history on social safety net payments and employment histories. The acting Social Security administrator resigned late last week after clashing with DOGE officials over that request.",Treasury agrees to block DOGE’s access to personal taxpayer data at IRS,"[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
@@ -3181,13 +4506,21 @@ Expected output ""Crypto"" to equal ""DOGE""
 ---
 Crypto
 
-Fail Reason: Expected output ""Crypto"" to equal ""DOGE"""
+Fail Reason: Expected output ""Crypto"" to equal ""DOGE""","[PASS] (1.00)
+
+DOGE
+
+Pass Reason: All assertions passed"
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> fired Susan Tsui Grundmann, who until Tuesday served as chair of the Federal Labor Relations Authority, a White House official confirmed.
 Grundmann’s firing from the agency tasked with overseeing public-sector unions appears to violate federal law that protects the agency’s board members from removal by the president without cause. In recent days, Trump has <a href=""https://www.washingtonpost.com/business/2025/01/28/trump-fire-eeoc-nlrb-board-members/"" target=_blank>also taken the extraordinary step</a> of firing members of the National Labor Relations Board and the Equal Employment Opportunity Commission.
 The unprecedented wave of firings appears to contravene a 1935 Supreme Court ruling that shields the leaders of independent agencies from removal by the president “except in cases of neglect of duty, malfeasance or inefficiency.”
 Grundmann’s term was set to expire in July.
 A White House official said about the firing that Trump is committed to building a team that advances his “America First” agenda.
-Everett Kelley, president of the American Federation of Government Employees, the largest federal workers’ union, said in a statement that Grundmann’s termination was “one more piece of evidence demonstrating this administration is engaged in a continued, unlawful attack on federal workers.”",Trump fires Federal Labor Relations Authority member,"[FAIL] (0.00)
+Everett Kelley, president of the American Federation of Government Employees, the largest federal workers’ union, said in a statement that Grundmann’s termination was “one more piece of evidence demonstrating this administration is engaged in a continued, unlawful attack on federal workers.”",Trump fires Federal Labor Relations Authority member,"[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Federal workers return to office"" to equal ""Firing government watchdogs""
 ---
@@ -3205,7 +4538,11 @@ Expected output ""Expanding executive power"" to equal ""Firing government watch
 ---
 Expanding executive power
 
-Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Federal worker buyout"" to equal ""Firing government watchdogs""
 ---
@@ -3217,10 +4554,18 @@ Expected output ""Federal workforce reductions"" to equal ""Firing government wa
 ---
 Federal workforce reductions
 
-Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Firing government watchdogs"""
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Firing government watchdogs""","[PASS] (1.00)
+
+Firing government watchdogs
+
+Pass Reason: All assertions passed"
 "The United States and Colombia averted a trade war, for now, after the White House said late Sunday that Bogotá agreed to accept deportation flights from the United States.
 The two nations had spent much of the day in a tense standoff, with President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> threatening to impose steep tariffs and visa restrictions on Colombia after the South American nation turned away two deportation flights.
 <a href=""https://www.washingtonpost.com/immigration/2025/01/26/trump-colombia-deportation-flights-migrants-tariffs/"">Read the full story</a>",Trump backs off trade threats after Colombia agrees to deportation flights,"[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
@@ -3238,6 +4583,12 @@ Tariffs
 
 Fail Reason: Expected output ""Tariffs"" to equal ""Deportations""","[FAIL] (0.00)
 
+Expected output ""Immigration policy"" to equal ""Deportations""
+---
+Immigration policy
+
+Fail Reason: Expected output ""Immigration policy"" to equal ""Deportations""","[FAIL] (0.00)
+
 Expected output ""U.S.-Mexico border"" to equal ""Deportations""
 ---
 U.S.-Mexico border
@@ -3248,4 +4599,8 @@ Expected output ""U.S.-Mexico border"" to equal ""Deportations""
 ---
 U.S.-Mexico border
 
-Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Deportations"""
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Deportations""","[PASS] (1.00)
+
+Deportations
+
+Pass Reason: All assertions passed"

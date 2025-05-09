@@ -15,6 +15,11 @@ prompts:
 
 providers:
   - id: "file://../../../../llm_provider.py"
+    label: "openai/gpt-4o"
+    config:
+      model: "openai/gpt-4o"
+
+  - id: "file://../../../../llm_provider.py"
     label: "openai/gpt-4o-mini"
     config:
       model: "openai/gpt-4o-mini"
