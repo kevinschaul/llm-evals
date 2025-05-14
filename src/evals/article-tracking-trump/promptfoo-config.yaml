@@ -19,15 +19,17 @@ providers:
       transform_func: parse_boolean
 
   - id: "file://../../../llm_provider.py"
-    label: "gemma3:12b"
+    label: "qwen3:14b:IQ4_XS"
     config:
-      model: "gemma3:12b"
-      transform_func: parse_boolean
+      model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+      transform_funcs:
+        - strip_think_tags
+        - parse_boolean
 
   - id: "file://../../../llm_provider.py"
-    label: "gemma-3-27b-it"
+    label: "gemma3:12b:Q4_0"
     config:
-      model: "gemma-3-27b-it"
+      model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
       transform_func: parse_boolean
 
 tests: file://tests.csv

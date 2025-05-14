@@ -16,6 +16,7 @@ eval config:
     @echo "Running promptfoo eval for {{config}}..."
     cd src/evals/{{config}} && promptfoo eval \
       -j 1 \
+      --env-path .env \
       -c promptfoo-config.yaml \
       --output results/results.csv \
       || test $? -eq 100

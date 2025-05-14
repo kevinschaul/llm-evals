@@ -25,27 +25,10 @@ providers:
       model: "openai/gpt-4o-mini"
 
   - id: "file://../../../../llm_provider.py"
-    label: "qwen3:8b:Q4_0"
-    config:
-      model: "hf.co/unsloth/Qwen3-8B-GGUF:Q4_0"
-      transform_func: strip_think_tags
-
-  - id: "file://../../../../llm_provider.py"
     label: "qwen3:14b:IQ4_XS"
     config:
       model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
       transform_func: strip_think_tags
-
-  - id: "file://../../../../llm_provider.py"
-    label: "qwen3:30b-a3b:IQ4_XS"
-    config:
-      model: "hf.co/unsloth/Qwen3-30B-A3B-GGUF:IQ4_XS"
-      transform_func: strip_think_tags
-
-  - id: "file://../../../../llm_provider.py"
-    label: "gemma3:12b:IQ4_XS"
-    config:
-      model: "hf.co/unsloth/gemma-3-12b-it-GGUF:IQ4_XS"
 
   - id: "file://../../../../llm_provider.py"
     label: "gemma3:12b:Q4_0"

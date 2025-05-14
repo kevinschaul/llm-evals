@@ -28,12 +28,12 @@ name: {{name}}
 email: {{email}}
 subject: {{subject}}
 body: {{body}}
-","[llama-3.2-3b-4bit] Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+","[qwen3:14b:IQ4_XS] Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {{name}}
 email: {{email}}
 subject: {{subject}}
 body: {{body}}
-","[gemma3:12b] Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
+","[gemma3:12b:Q4_0] Given this political fundraising email, respond with the name of the committee in the disclaimer that begins with Paid for by but does not include Paid for by, the committee address or the treasurer name. If no committee is present, return ""None"". Do not include any other text, no yapping.
 name: {{name}}
 email: {{email}}
 subject: {{subject}}
@@ -102,13 +102,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 RUDY GIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+RUDY GIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Levenshtein distance 20 is greater than threshold 5
----
-RUDY GIULIANI FREEDOM FUND
-
-Fail Reason: Levenshtein distance 20 is greater than threshold 5","[FAIL] (0.00)
 
 Levenshtein distance 21 is greater than threshold 5
 ---
@@ -174,13 +172,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NELLA FOR SENATE
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 12 is greater than threshold 5
----
-NONE
+NELLA FOR SENATE
 
-Fail Reason: Levenshtein distance 12 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NELLA FOR SENATE
 
@@ -244,7 +240,7 @@ HARRIS FORPRESIDENT
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-HARRIS FOR PRESIDENT
+HARRIS FORPRESIDENT
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -343,13 +339,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE NRCC
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 39 is greater than threshold 5
----
-NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE
+NRCC
 
-Fail Reason: Levenshtein distance 39 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRCC
 
@@ -384,13 +378,11 @@ Levenshtein distance 107 is greater than threshold 5
 ---
 TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC.
 
-Fail Reason: Levenshtein distance 107 is greater than threshold 5","[FAIL] (0.00)
-
-Levenshtein distance 107 is greater than threshold 5
----
-TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC.
-
 Fail Reason: Levenshtein distance 107 is greater than threshold 5","[PASS] (1.00)
+
+TEAM SCALISE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 TEAM SCALISE
 
@@ -683,13 +675,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THERESA4TEXAS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 13 is greater than threshold 5
----
-PAID FOR BY THERESA4TEXAS.
+THERESA4TEXAS
 
-Fail Reason: Levenshtein distance 13 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 THERESA4TEXAS
 
@@ -718,13 +708,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 LISA BLUNT ROCHESTER FOR SENATE
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 27 is greater than threshold 5
----
-NONE
+LISA BLUNT ROCHESTER FOR SENATE
 
-Fail Reason: Levenshtein distance 27 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 LISA BLUNT ROCHESTER FOR SENATE
 
@@ -786,13 +774,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DAVIDPAN FOR CONGRESS 2024
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 23 is greater than threshold 5
----
-NONE
+DAVIDPAN FOR CONGRESS 2024
 
-Fail Reason: Levenshtein distance 23 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DAVIDPAN FOR CONGRESS 2024
 
@@ -924,13 +910,11 @@ Levenshtein distance 107 is greater than threshold 5
 ---
 TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC.
 
-Fail Reason: Levenshtein distance 107 is greater than threshold 5","[FAIL] (0.00)
-
-Levenshtein distance 107 is greater than threshold 5
----
-TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC.
-
 Fail Reason: Levenshtein distance 107 is greater than threshold 5","[PASS] (1.00)
+
+TEAM SCALISE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 TEAM SCALISE
 
@@ -961,13 +945,11 @@ Levenshtein distance 74 is greater than threshold 5
 ---
 THE NRCC AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE. NRCC.ORG
 
-Fail Reason: Levenshtein distance 74 is greater than threshold 5","[FAIL] (0.00)
+Fail Reason: Levenshtein distance 74 is greater than threshold 5","[PASS] (1.00)
 
-Levenshtein distance 15 is greater than threshold 5
----
-HOUSE REPUBLICANS
+NRCC
 
-Fail Reason: Levenshtein distance 15 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRCC
 
@@ -998,7 +980,7 @@ HARRIS FORPRESIDENT
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-HARRIS FOR PRESIDENT
+HARRIS FORPRESIDENT
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -1029,13 +1011,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 18 is greater than threshold 5
----
-NONE
+HUNG CAO FOR VIRGINIA
 
-Fail Reason: Levenshtein distance 18 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
@@ -1097,13 +1077,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 16 is greater than threshold 5
----
-NONE
+ADAM FOR COLORADO
 
-Fail Reason: Levenshtein distance 16 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
@@ -1134,17 +1112,17 @@ Levenshtein distance 141 is greater than threshold 5
 ---
 TRUMP NATIONAL COMMITTEE JFC, INC., A JOINT FUNDRAISING COMMITTEE COMPOSED OF AND AUTHORIZED BY DONALD J. TRUMP FOR PRESIDENT 2024, INC. AND THE REPUBLICAN NATIONAL COMMITTEE
 
-Fail Reason: Levenshtein distance 141 is greater than threshold 5","[FAIL] (0.00)
+Fail Reason: Levenshtein distance 141 is greater than threshold 5","[PASS] (1.00)
+
+TRUMP NATIONAL COMMITTEE JFC, INC.
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Levenshtein distance 6 is greater than threshold 5
 ---
 TRUMP NATIONALCOMMITTEE JFC
 
-Fail Reason: Levenshtein distance 6 is greater than threshold 5","[PASS] (1.00)
-
-TRUMP NATIONAL COMMITTEE JFC
-
-Pass Reason: All assertions passed"
+Fail Reason: Levenshtein distance 6 is greater than threshold 5"
 "BREAKING! BREAKING! BREAKING!https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] Peter, we can’t saywe’re surprised, but this is bad news for our Democracy! Trump is desperate tostop Jack Smith, so he needs to know that Democrats still support him! If youwant Jack Smith to keep fighting to hold Trump accountable, take this poll toshow him your support. »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] Do you approve ofJack Smith? YES! TRUMP NEEDS TO BE HELD ACCOUNTABLE! »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] NO, I’M OK WITH TRUMPTHREATENING OUR DEMOCRACY »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] I’M NOT SURE YET »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] [479] RESPONSESNEEDED FROM PA DEADLINE : 10:45 PM Peter, Trump and MAGA Republicans have beenRUTHLESS in their attacks on Jack Smith: 1️⃣ They smeared Jack Smith’s nameand tried to distract from the indictment. 2️⃣ They attacked him NON-STOP whenhe started holding Trump accountable. 3️⃣ They’re DESPERATE to remove him fromhis role as Special Counsel. So Peter,We really need you to HURRY and showJack Smith your support by completing this poll by 10:45 PM tonight! »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] Do you approve ofJack Smith? YES! TRUMP NEEDS TO BE HELD ACCOUNTABLE! »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] NO, I’M OK WITH TRUMPTHREATENING OUR DEMOCRACY »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] I’M NOT SURE YET »[https://secure.everyaction.com/ztWbTWS3VkSgg0uuXcqV0g2] [479] RESPONSESNEEDED FROM PA DEADLINE : 10:45 PM – UNITEDemocrats------------------------------------------ Paid for by UNITEDemocrats PAC Notauthorized by any candidate or candidate's committee. 514 Daniels St., #286,Raleigh, NC 27605 www.unitedemocrats.org Click here to receive fewer emails.https://unitedemocrats.org/fewer-emails Click here to update your information.https://unitedemocrats.org/update-your-info Click here to unsubscribe:https://secure.everyaction.com/p/uJCHxyr8MEudFu2DagJemg2?unsubscribedata=H4nnqORx5INPOj%2Bis%2FwNl6spcr3PcNrtKqt3eSj4bOvrHwmlCXmPanrgftYctjovJPo%2Buizza10TPcLnpyEaHf5wjEId0WvvpiPGP1yZDU7h7oPYlIiEtBK0WEp4L40WRFjakPJdMCSsQLFtMs4WF%2B2FdRqPvyy60F5D5MHU4a%2FVDjJFl6Q3Pv01aRDX23A3UB7lnbTif0a7%2BEtjhqfgaW2D3g7JTNtFUtYml45UzWsorNEGWSH3DtFkLQRjuP9aAeK3Yo6AC%2BBWcBUo7uf6V8OCNDoZFaB0IS33zpI4PFzwyHFfEIoWYqnNeg7eTntJk17LMnCDz0Q4ZdNg9XACe76xhL9nByIYNwzeD7PwXTxtFee3UODfXYmI8q8uVLvoOn%2FTlHQiWsG7rz%2B1UTQ3mpH2iXocakC%2FIhb4GfBqjbQ%3D.",2024-11-01T20:42:00,1,TRUE,unitedemocrats.org,info@unitedemocrats.org,20,42,11,SAVE JACK SMITH >> [via UD],D,"Trump’s attacks are escalating, Peter 📈",2024,"[PASS] (1.00)
 
 UNITEDEMOCRATS PAC
@@ -1340,7 +1318,7 @@ DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-THE DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
+DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
 Pass Reason: All assertions passed"
 "͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏Seth is in Congress to fight for themiddle class and those working hard to join it. If you’d like to unsubscribe,click here.[https://act.sethmagaziner.com/p/9_n7o1XMskam_GoKXFDAdg2?unsubscribedata=1I8uoXCMYyLmYdWVr3Nqnt8rb33lIs85xDwgflFeOWmyF8Kl2pvM2UtxiiIWpRRbeBLyx6YFXf54FCAXUk3n6F1bLIQbSX68UZWeo6NQx6Y4pO7KghfCr0Z9HlnhPEGx9pTlV7wtR0dNUp00PvcapXkAmFavn9TeWmYi8qeXQ3ynfl34cGJ0aBhMCAJicLKF%2FxEVL9cIft04JrWjl9uPeCvTJceNpfEISvVHmNYjm47mT7mA8alPlA58cqqH7EI%2FxiltxCPwSst%2F5JLFrbbAHlQgwqoVSi2EyRRg%2FubOKC8pcTYhwXqTPOEZtpIpfGF4upNAJudCU72HRGfxM0KTtgTN8jzXUfUS69hGU5SylALWIp%2BIEhhUH9wVUxmaTpSw5n3YdSyidhIwGffIu8r6sPEpCd0%2F5ASrXGmsGbJRBxI0EG7lhCaSQLR7vsdr6ldO]​# [#] Peter, The House of Representatives is the last line of defense beforea MAGA takeover. We need to do everything we can to take back the House inNovember and turn the page on extremism. To do that, we need to not just winraces like this one, but give no room for Mike Johnson and his MAGA buddies totry to reject the results. It’s up to us to take the energy and turn it intomomentum, expand our voter outreach efforts, and keep this seat blue. Donate $now to help us keep up our momentum in these final days and make sure everyvoter in RI-02 votes on or before Election Day →[https://secure.actblue.com/donate/sm-nov24?amount=] If you've saved yourpayment information with ActBlue Express, your donation will processimmediately. DONATE $ NOW » [https://secure.actblue.com/donate/sm-nov24?amount=&express;_lane=true] DONATE $ NOW »[https://secure.actblue.com/donate/sm-nov24?amount=&express;_lane=true] DONATE$50 NOW » [https://secure.actblue.com/donate/sm-nov24?amount=50&express;_lane=true] DONATE $100 NOW »[https://secure.actblue.com/donate/sm-nov24?amount=100&express;_lane=true]DONATE $250 NOW » [https://secure.actblue.com/donate/sm-nov24?amount=250&express;_lane=true] DONATE OTHER »[https://secure.actblue.com/donate/sm-nov24?amount=] Let’s Get to Work! Seth[https://sethmagaziner.com/] DONATE NOW [https://secure.actblue.com/donate/sm-nbi-footer?amount=25] PAID FOR BY Magaziner for Congress PO BOX 40993,PROVIDENCE, RI 02940 If you’d like to unsubscribe, click here[https://act.sethmagaziner.com/p/9_n7o1XMskam_GoKXFDAdg2?unsubscribedata=1I8uoXCMYyLmYdWVr3Nqnt8rb33lIs85xDwgflFeOWmyF8Kl2pvM2UtxiiIWpRRbeBLyx6YFXf54FCAXUk3n6F1bLIQbSX68UZWeo6NQx6Y4pO7KghfCr0Z9HlnhPEGx9pTlV7wtR0dNUp00PvcapXkAmFavn9TeWmYi8qeXQ3ynfl34cGJ0aBhMCAJicLKF%2FxEVL9cIft04JrWjl9uPeCvTJceNpfEISvVHmNYjm47mT7mA8alPlA58cqqH7EI%2FxiltxCPwSst%2F5JLFrbbAHlQgwqoVSi2EyRRg%2FubOKC8pcTYhwXqTPOEZtpIpfGF4upNAJudCU72HRGfxM0KTtgTN8jzXUfUS69hGU5SylALWIp%2BIEhhUH9wVUxmaTpSw5n3YdSyidhIwGffIu8r6sPEpCd0%2F5ASrXGmsGbJRBxI0EG7lhCaSQLR7vsdr6ldO]. You can also click here to donate [https://secure.actblue.com/donate/sm-nbi-footer?amount=25] .",2024-11-01T19:01:00,1,TRUE,sethmagaziner.com,info@sethmagaziner.com,19,1,11,Seth Magaziner,D,leave no room for doubt,2024,"[PASS] (1.00)
@@ -1400,13 +1378,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE NRSC
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 23 is greater than threshold 5
----
-AMERICAN LIBERTY FRONTIER
+NRSC
 
-Fail Reason: Levenshtein distance 23 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRSC
 
@@ -1439,7 +1415,7 @@ THE NRSC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. WWW.NRSC.ORG
 
 Fail Reason: Levenshtein distance 76 is greater than threshold 5","[PASS] (1.00)
 
-NONE
+NRSC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -1470,13 +1446,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ALEXANDRIA OCASIO-CORTEZ FORCONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 33 is greater than threshold 5
----
-NONE
+ALEXANDRIA OCASIO-CORTEZ FORCONGRESS
 
-Fail Reason: Levenshtein distance 33 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS
 
@@ -1538,13 +1512,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 COOKE FOR CONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 15 is greater than threshold 5
----
-NONE
+COOKE FOR CONGRESS
 
-Fail Reason: Levenshtein distance 15 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 COOKE FOR CONGRESS
 
@@ -1575,7 +1547,7 @@ ROSEN FOR NEVADA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-ROSEN FOR NEVADA
+ROSENFOR NEVADA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -1744,7 +1716,7 @@ DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-THE DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
+DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
 Pass Reason: All assertions passed"
 "                                                                                                                                                        I'm beyond worried. I'm petrified... I didn't want to burden you with this butthis is one message you must read:https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e43cebf9b52be21ee56f0038092bbf26bacd4ec45f69cd37c4deb8d35cb61ac42b287f8ea8a55c674e4f27c54c5f9f61c0466dba992f7f1210VIEW NOW - Marsha Blackburn Paid for by Blackburn Tennessee Victory Fund, ajoint fundraising committee authorized by and composed of Marsha for Senate,MARSHA PAC, and Tennessee Republican Party Federal Election Account. To ensurethat you don't miss out on important messages, please addinfo@updates.marshablackburn.com ""info@updates.marshablackburn.com"" to youraddress book. Not Sure How? Follow the link below to your email provider toget step by step instructions on how to add us to your address book.https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e4ab70a8caffa961b101f7e3bec89de2bd2cea25900d912a76f07062d371579a73d544d1f8aeaf45fd32933a67c7b5272ab75f1026ac27b1dfiCloud ,https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e432766867dbab71ee15b9bcf8038bc475a09ef89c75defb06650649947c1afe0f14e1ed7e1bbc17a8af33380301229a916001b30ab6e528e7Gmail ,https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e4f9147c37967e191806a0361ef23ccc6d1b3568ae937bbe62b82bb9f0ca16c936ba233233728634ad0eec9003f6990f55722e6ffe7a537eb2Outlook ,https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e4448b98e9c59031eebf007f589daa4a0e49ecdf717c0af0b08f5e49cdb4de6e8e515845e35fdde6124d25bbca644ae19adb6cd74f77d32fb3Yahoo Mail ,https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e40d15ccfbf8ef3ab76e6180a3bdf6660842aaf25db485997cc6e4a597bd7e31be52bf813f6521e3a3e225f5cd2430473fdbdfdf9a13018ce0AOL Mail Blackburn Tennessee Victory Fund PO Box 3750 Brentwood, TN 37024 Thismessage reflects the opinions and representations of Blackburn TennesseeVictory Fund. You are receiving this email because you signed up as a memberof Blackburn Tennessee Victory Fund's online community.https://click.updates.marshablackburn.com/?qs=c515ba2b42b693e4a506ae4d79974feaf1ea3069294961ea9e8f4ffc1785166ac4fb9154363a61f1a324e463b511a84d54949b4f554052154dc092395a755f1bPrivacy Policy If you would prefer not to receive future emails from Blackburnfor Tennessee Victory Fund, click here.",2024-11-01T14:42:00,1,TRUE,updates.marshablackburn.com,info@updates.marshablackburn.com,14,42,11,Marsha Blackburn,R,I'm beyond worried. I'm petrified...,2024,"[PASS] (1.00)
@@ -1839,13 +1811,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TROY DOWNING FOR CONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 6 is greater than threshold 5
----
-TROY DOWNING FOR MONTANA
+TROY DOWNING FOR CONGRESS
 
-Fail Reason: Levenshtein distance 6 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 TROY DOWNING FOR CONGRESS
 
@@ -1874,13 +1844,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MIKE JOHNSON FOR LOUISIANA
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 23 is greater than threshold 5
----
-NONE
+MIKE JOHNSON FOR LOUISIANA
 
-Fail Reason: Levenshtein distance 23 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 MIKE JOHNSON FOR LOUISIANA
 
@@ -1911,13 +1879,11 @@ Levenshtein distance 75 is greater than threshold 5
 ---
 TURNING POINT ACTION (TPACTION.COM)AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
 
-Fail Reason: Levenshtein distance 75 is greater than threshold 5","[FAIL] (0.00)
+Fail Reason: Levenshtein distance 75 is greater than threshold 5","[PASS] (1.00)
 
-Levenshtein distance 17 is greater than threshold 5
----
-NONE
+TURNING POINT ACTION
 
-Fail Reason: Levenshtein distance 17 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 TURNING POINT ACTION
 
@@ -1979,13 +1945,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 SUSANWILD FOR CONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 19 is greater than threshold 5
----
-NONE
+SUSAN WILD FOR CONGRESS
 
-Fail Reason: Levenshtein distance 19 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 SUSANWILD FOR CONGRESS
 
@@ -2084,7 +2048,7 @@ EMILYRANDALL FOR CONGRESS
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-EMILY RANDALL FOR CONGRESS
+EMILYRANDALL FOR CONGRESS
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -2117,13 +2081,11 @@ Levenshtein distance 58 is greater than threshold 5
 ---
 THE COLLECTIVE PAC; NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
 
-Fail Reason: Levenshtein distance 58 is greater than threshold 5","[FAIL] (0.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
-Levenshtein distance 71 is greater than threshold 5
----
-PAID FOR BY THE COLLECTIVE PAC; NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
+THE COLLECTIVE PAC
 
-Fail Reason: Levenshtein distance 71 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
@@ -2152,15 +2114,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Levenshtein distance 20 is greater than threshold 5
----
-NONE
-
-Fail Reason: Levenshtein distance 20 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+BERNIE MORENO FORSENATE
 
 Pass Reason: All assertions passed"
 "Good morning! If you drink it black, I got something for you.                                 | | | | ![MAKE AMERICA GREAT AGAIN. >](https://cdn.nucleusfiles.com/87/87617793-81db-4da2-81a1-ac4f530b13d8/black-and-white-classic-logo.png) --- | --- **MESSAGE FROM TRUMP!** Hey. Friend. Coffee?  ![MAKE AMERICA GREAT AGAIN.>](https://cdn.nucleusfiles.com/56/56b3f146-5966-4de4-99a1-9cd034bf347f/official-dark-maga-mug-limited-edition-claim-mug-black.png) If you drink it black or with cream, this is the DARK MAGA way to start yourday.  CLAIM MUG We only ordered a limited amount, and we WILL NOT be ordering any more. With millions of voters voting this week, your support right now means nowmore than ever.  CLAIM MUG **_So PLEASE claim your LIMITED EDITION DARK MAGA MUG today.>_** WE WILL MAKE AMERICA GREAT AGAIN! Sincerely,  ![MAKE AMERICA GREAT AGAIN.>](https://cdn.nucleusfiles.com/b0/b028923f-aa71-493e-a406-a3ae3dd63e4b/trumpheadshot.png) | --- ![MAKE AMERICA GREAT AGAIN.>](https://cdn.nucleusfiles.com/cb/cb3fa8bb-6df3-4771-a7a6-1eb7fa1da014/trump-signature.png) Donald J. Trump 45th President of the United States CLAIM MUG | --- | --- | --- | --- | --- ![MAKE AMERICA GREAT AGAIN.>](https://cdn.nucleusfiles.com/10/10cd0096-0965-4373-8732-fe72b64c4165/swamp-the-vote.png) Are you registered to vote? Do you need to request a ballot? Use this link tohelp President Trump Swamp the Vote. REGISTER TO VOTE LINK. > | --- Contributions to Trump National Committee JFC Inc. are not deductible forfederal income tax purposes. All contributions are subject to the limits andprohibitions of the Federal Election Campaign Act. Contributions fromcorporations, foreign nationals (i.e., without “green cards”), federalgovernment contractors, and other federally impermissible sources are strictlyprohibited. Contributions made in the name of, or refunded by, any otherperson are unlawful. | Paid for by Trump National Committee JFC Inc., a joint fundraising committeecomposed of and authorized by Donald J. Trump for President 2024, Inc. and theRepublican National Committee. ---   You are receiving this email at dpwillis67@gmail.com Trump National Committee JFC Inc., PO Box 509, Arlington, VA 22216 donaldjtrump.com If you'd like to change your subscription status follow this link. Privacy Policy  ![](https://email.win.donaldjtrump.com/o/eJw8zstOwzAQheGncXaN7GNP3Cy8KFAJIUAiReraHbvUkBtJSenbo6Aq2_k_aY5v-jodr07YOwGcUhgFIPRGAJs37HfvcRvtClWQK7-NT69zxf2NTlhwy76rvvnlt398Hrtq2H3tqZjUws_XPi749jSPjU_1fLUPWXDgNZiz6JTVkozWymQnF70PhSKvKUpJVh9KXh9LPlgiCyN9lhwkjFISSioYkysCUYRhppLYQxh5SW0eutbX4fM8_DR9zl2TDS70l1TXaSysMPJjHvMfJoe_AAAA__8GG1Ap)",2024-11-02T10:12:00,2,TRUE,win.donaldjtrump.com,contact@win.donaldjtrump.com,10,12,11,Mugs From Trump - Limited Edition Release,R,Friend. Coffee?,2024,"[PASS] (1.00)
@@ -2195,7 +2155,7 @@ TRUMP NATIONAL COMMITTEE JFC INC.
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-TRUMP NATIONAL COMMITTEE JFC INC
+TRUMP NATIONAL COMMITTEE JFC INC.
 
 Pass Reason: All assertions passed"
 "We’re in real trouble- here’s why We’re in real trouble- here’s why Peter,Here is the situation. Senator Chuck Schumer (D-NY) the powerful MajorityLeader for the Senate Democrats has directed his forces to inject millions andmillions of dollars into Texas to defeat me and flip Texas brightblue. Schumerhas said they will spend over one-hundred million dollars to defeat me. Otherradical leftwing groups and National Democrat Party committees are jumpinginto the fray as well-just flooding us with attack ads, flyers, and boots onthe ground… But here’s the worst part: The National Party is not coming tosave us. I am standing alone against this massive progressive onslaught. Weare getting almost NO HELP from Mitch McConnell. And the major RepublicanSenate Super PAC has no operations or ads running in Texas… That’s why I’mcalling on all grassroots conservatives from Maine to Marfa for help… RUSHHELP HERE >> The Washington DC Party Establishment doesn’t want a grassrootsconservative like me in the Senate- they never have, and their lack of helpduring the fight of my life is proof! I need YOUR help. Not because ourfundraising hasn’t been successful- we’re doing well, and thousands of Texansand patriots from all over are stepping in to give generously. Many are givingfor the very first time, while others have given every month this year. Butwith no air cover. I'm forced to ask for urgent help. We can’t lose Texas- andright now we’re in real trouble. STAND WITH TEXAS & SAVE AMERICA RIGHT NOW >>Thank you for standing with me. Ted Cruz DONATE >> Paid for by Ted Cruz forSenate 815 A Brazos, PMB 550, Austin, TX 78701 Unsubscribe",2024-11-01T23:37:00,1,TRUE,standingstrongamerica.com,info@standingstrongamerica.com,23,37,11,Ted Cruz,R,I’m standing alone,2024,"[PASS] (1.00)
@@ -2290,13 +2250,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 EMILYSLIST
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 15 is greater than threshold 5
----
-EMILYS LIST P.O. BOX 96612
+EMILYSLIST
 
-Fail Reason: Levenshtein distance 15 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 EMILYSLIST
 
@@ -2558,13 +2516,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 JESSICA MORSE FOR CONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 23 is greater than threshold 5
----
-NONE
+JESSICA MORSE FOR CONGRESS
 
-Fail Reason: Levenshtein distance 23 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 JESSICA MORSE FOR CONGRESS
 
@@ -2665,7 +2621,7 @@ KAINE FOR VIRGINIA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-KAINE FOR VIRGINIA
+KAINE FORVIRGINIA
 
 Pass Reason: All assertions passed"
 "Your $7 donation could be the difference between electing state Democrats who fight to protect abortion rights or losing to one of our far-right Republican opponents. | | |  --- | ![](https://actionnetwork.org/user_files/user_files/000/097/354/original/2023_09_Email-Wrapper-Graphic_B_v2.png) |  ---|--- We have one question: Is defeating extreme Republicans across the country worth $7 to you? At the state legislative ballot level, races come down to a handful of votes, and resources are limited. A 5X-matched gift of $7 could give our in-state partners the necessary resources to fund get-out-the-vote efforts, hire digital staff, and invest in TV ads to spread our message across the airwaves. **Your 5X-matched $7 donation could be the difference between electing state Democrats who will fight to protect abortion rights or losing to one of our far-right Republican opponents who aim to attack all of our fundamental freedoms.** Before our match extension ends, we’re asking you directly. Is seeing Democrats win next week and defeating MAGA Republicans worth $7 to you? If it is, own a piece of this fight by chipping in now. We’re working to expand Democratic power, defend our majorities, and break up Republican supermajorities this fall – but it all starts with a donation from grassroots supporters like you. If you step up and decide $7 is worth investing before our deadline, you can feel good knowing that you helped Democrats gain power in states nationwide. We’re asking again: Will you donate a 5X-matched gift of $7 to help state Democrats defeat extreme Republicans in this election and beyond? | If you've stored your payment information with ActBlue Express, your donation will process immediately.  --- | 5X-MATCH $7 --- | 5X-MATCH $25 --- | 5X-MATCH $50 --- | 5X-MATCH $100 --- | 5X-MATCH $250 --- | OTHER » ---  Thank you so much,Team DLCC  **5X-MATCH: ACTIVE »** **MAKE IT MONTHLY »**             | --- Paid for by the Democratic Legislative Campaign Committee, dlcc.org. Notauthorized by any candidate or candidate's committee.  Contributions or gifts to DLCC are not tax deductible. | The Democratic Legislative Campaign Committee is dedicated to winning and defending Democratic majorities in state legislatures across the country. This message was sent to dpwillis67@gmail.com because you are a part of our grassroots network.  Emails are a crucial way to stay in touch with our supporters. Please add usto your address book or safe senders list to ensure timely election updates.  We're fighting to elect Democrats and advance a progressive vision in thestates. Our success depends on grassroots donors like you. Ninety-eightpercent of our donors give less than $200, and two-thirds give less than $20.To make a contribution, please click here. To unsubscribe and stop receivingemails about our efforts, please click here. ---  | | Sent via ActionNetwork.org. To update your email address, change your name or address, or to stop receiving emails from Democratic Legislative Campaign Committee, please click here.  ---  ![](https://an.dlcc.org/ss/o/u001.ZbNyqOfLYPaP-d23SgKjnQ/4b4/G6tcPgcmRiWN0OjcS-ZmXQ/ho.gif)",2024-11-02T13:42:00,2,TRUE,dlcc.org,staff@dlcc.org,13,42,11,Team DLCC,D,asking directly,2024,"[PASS] (1.00)
@@ -2729,7 +2685,7 @@ THE NRCC AND NOT AUTHORIZED BY ANY CANDIDATEOR CANDIDATE'S COMMITTEE.NRCC.ORG
 
 Fail Reason: Levenshtein distance 73 is greater than threshold 5","[PASS] (1.00)
 
-NONE
+NRCC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -2760,13 +2716,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MICHAEL B. MOORE FOR SOUTHCAROLINA
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 28 is greater than threshold 5
----
-TEAM MOORE
+MICHAEL B. MOORE FOR SOUTH CAROLINA
 
-Fail Reason: Levenshtein distance 28 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 MICHAEL B. MOORE FOR SOUTH CAROLINA
 
@@ -3028,7 +2982,7 @@ THE NRSC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-NRSC.
+NRSC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -3199,7 +3153,7 @@ FRIENDS OF SHERROD BROWN
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-FRIENDS OFSHERROD BROWN
+FRIENDS OF SHERROD BROWN
 
 Pass Reason: All assertions passed"
 "Peter, I’m an actress, director, singer, longtime activist, and, above all, acitizen of our great democracy. And as a citizen with a platform larger thanmost, I believe it is not only my right but also my duty to express myconcerns. So here goes Peter: I’m concerned by what I’m seeing in Pennsylvaniaand national Republicans’ ruthless efforts to unseat Bob Casey and flip thisbattleground red. If the GOP succeeds in flipping Pennsylvania red, they’llalmost certainly regain control of both the Senateand the White House,threatening everything from voting rights to women’s rights to the fightagainst climate change. That’s why outside interest groups have startedspending upwards of $150 million to defeat Bob. The stakes this November arehigher than ever before.So before I go on, can you please split a donationbetween Bob’s re-election campaign and Defeat Boebert PAC? DONATE NOW >> I’mcommitted to electing lawmakers like Bob Casey, who believes that everyonedeserves a fair shot at getting ahead and staying ahead. Bob’s opponent on theother hand is a Connecticut mega-millionaire who will do and say anything tohelp his own bottom line. With the most extreme Republican party of mylifetime teetering on the edge of regaining power, we need all hands on deck.If we’re going to protect our Senate majority and the White House, we must allstay informed and stay involved. So please, rush $25 or as much as you can toBob Casey and Defeat Boebert PAC right now to win in Pennsylvania. If you'vesaved your payment information with ActBlue Express, your weekly donation willgo through immediately: RUSH IN $25 RUSH IN $50 RUSH IN $100 RUSH IN $250RUSH IN $500 OTHER AMOUNT Thank you, Barbra DONATE Paid for by DefeatBoebert PAC This email was sent to dpwillis67@gmail.com . Don't want toreceive these emails anymore?Unsubscribe Defeat Boebert PAC,",2024-11-02T02:31:00,2,TRUE,defeatboebertpac.com,info@defeatboebertpac.com,2,31,11,Barbra Streisand,D,No one has ever regretted getting off the sidelines,2024,"[PASS] (1.00)
@@ -3228,7 +3182,7 @@ DEFEAT BOEBERT PAC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-DEFEAT BOEBERT PAC
+DEFEATBOEBERT PAC
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -3259,13 +3213,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MARK TAKANO FORCONGRESS
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Levenshtein distance 36 is greater than threshold 5
----
-MARK TAKANO FORCONGRESS P.O. BOX 5214, RIVERSIDE, CA 92517
+MARK TAKANO FORCONGRESS
 
-Fail Reason: Levenshtein distance 36 is greater than threshold 5","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 MARK TAKANO FORCONGRESS
 
@@ -3333,7 +3285,7 @@ FRIENDS OF SHERROD BROWN
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-FRIENDS OF SHERROD BROWN
+FRIENDS OFSHERROD BROWN
 
 Pass Reason: All assertions passed"
 "                                                                                                                     https://www.caraveoforcongress.com/[https://www.caraveoforcongress.com/] Peter – the ghosts and monsters outsidearen’t the only scary part of this Halloween. The stakes of this election arenothing less than spooky. To protect our rights this Halloween, can you donatetoday? Donate Now →[https://secure.actblue.com/donate/em_yc_q4_2024?refcode=email_103124_trick-or-treat] My opponent is all tricks and no treat : * He has supported a totalabortion ban with no exceptions for rape or incest, even calling overturningRoe v. Wade a “success”. * He voted against expanding Title X funding, whichprovides essential reproductive healthcare like ultrasounds and affordablecontraception. * He voted against lowering insurance premiums and prescriptioncosts, capping the price of life-saving medication, and cutting hospital fees.* In Congress, he would have the power to enact this dangerous agenda on anational level. In contrast, I’m dedicated to building a future that protectsabortion rights, lowers costs for families, and provides affordable healthcarefor everyone. To create that future and fight back against my opponent’s scaryagenda, I need your help. Can you donate today to help us meet our end-of-month goal this Halloween? If you've saved your payment information withActBlue Express, your donation will go through immediately: Donate $5 →[https://secure.actblue.com/donate/em_yc_q4_2024?refcode=email_103124_trick-or-treat&amounts;=5,25,35,50,75,100,250&amount;=5&express;_lane=true] Donate$50 →[https://secure.actblue.com/donate/em_yc_q4_2024?refcode=email_103124_trick-or-treat&amounts;=5,25,35,50,75,100,250&amount;=50&express;_lane=true] Other →[https://secure.actblue.com/donate/em_yc_q4_2024?refcode=email_103124_trick-or-treat&amounts;=5,25,35,50,75,100,250] Thanks for your help and HappyHalloween 🎃 . - Yadira Caraveo Make sure this email goes to your inbox. Addinfo@caraveoforcongress.com to your address book. This campaign is powered bygrassroots donations. You can click here[https://secure.actblue.com/donate/caraveongpfooter&refcode;=email_ngpfooter]to make a donation to support Yadira Caraveo for CO-08. Email is a key way forus to stay in touch and make sure you get the latest updates from ourcampaign. But if you would like to unsubscribe:https://secure.ngpvan.com/p/tGPOegMQMEaYhe93A2byqA2?unsubscribedata=opme3Qreb71M9FXbyw72%2FHqnp0Ug4yopooAusNm9JoveyolGVl2k4Y5Z7NkYVjPobG92qgruJtJrXHQkVZ92eTdaowtQVhSH4gt8uX3QGYDaEFHeuLKZkoBv7lTumec9PofeoH4SFyKpE2RNhpB3bu0hZQzNmlQux609FrGjWqp%2B7SLPdIPCSMeupTiM4ke6VzT%2BNfXjOeBmdLjpG9OEMqp9k0k2w%2BwM2xFfRwS4OZrsMsyjFJi1ii4MUJA4tiX7vOkgcQC89o0Z1co2HU4UBSNtvWdipWhKZmptFTBrVgJ18JAJJIyvjgtUeIFrP9TCozSMgHicaQIkRRUvye669sXtN%2FNGN05lwthYDGI5odQYQmsLNDJAt6aiBe3k1SAO1MRrAsqVmD3QIm6EYAs4GK0P7aFwCFZpuFIqfKIXTi8vdq3QWTlYKX%2BNsnz27pQg. Paid for by Caraveo for Congress Caraveo for Congress PO Box 953 Eastlake,CO 80614 United States",2024-11-01T00:11:00,1,TRUE,caraveoforcongress.com,info@caraveoforcongress.com,0,11,11,Yadira Caraveo,D,all tricks and no treat,2024,"[PASS] (1.00)

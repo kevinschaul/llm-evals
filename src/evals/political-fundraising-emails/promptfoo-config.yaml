@@ -53,15 +53,17 @@ providers:
       transform_func: to_uppercase
 
   - id: "file://../../../llm_provider.py"
-    label: "llama-3.2-3b-4bit"
+    label: "qwen3:14b:IQ4_XS"
     config:
-      model: "llama-3.2-3b-4bit"
-      transform_func: to_uppercase
+      model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+      transform_funcs:
+        - strip_think_tags
+        - to_uppercase
 
   - id: "file://../../../llm_provider.py"
-    label: "gemma3:12b"
+    label: "gemma3:12b:Q4_0"
     config:
-      model: "gemma3:12b"
+      model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
       transform_func: to_uppercase
 
 tests: file://tests.csv

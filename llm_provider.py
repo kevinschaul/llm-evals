@@ -89,15 +89,21 @@ def call_api(prompt, options, context):
     config = options.get("config", {})
     model_name = config.get("model")
 
-    transform_func = config.get("transform_func")
-    transform = lambda x: x
-    if transform_func:
+    transform_funcs_raw = config.get("transform_funcs")
+    if not transform_funcs_raw:
+        transform_funcs_raw = [config.get("transform_func", "nop")]
+
+    transform_funcs = []
+    for transform_func in transform_funcs_raw:
+        if transform_func == "nop":
+            # no-op
+            continue
         if transform_func == "parse_boolean":
-            transform = parse_boolean
+            transform_funcs.append(parse_boolean)
         elif transform_func == "to_uppercase":
-            transform = to_uppercase
+            transform_funcs.append(to_uppercase)
         elif transform_func == "strip_think_tags":
-            transform = strip_think_tags
+            transform_funcs.append(strip_think_tags)
         else:
             raise ValueError(f"Unknown transform_func: {transform_func}")
 
@@ -109,7 +115,9 @@ def call_api(prompt, options, context):
         output.log_to_db(db)
 
     try:
-        parsed = transform(output.text().strip())
+        parsed = output.text().strip()
+        for func in transform_funcs:
+            parsed = func(parsed)
     except ValueError:
         parsed = None
 
