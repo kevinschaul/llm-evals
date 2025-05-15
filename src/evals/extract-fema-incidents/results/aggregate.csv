@@ -1,0 +1,2 @@
+model,prompt,count,n_correct,share_correct
+openai/gpt-4o-mini,Extract all declaration requests,2,2,1.00
