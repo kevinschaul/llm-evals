@@ -1,0 +1,137 @@
+[
+  {
+    "state": "KY",
+    "incident_description": "Severe Winter Storms and Snowstorms",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-01-30"
+  },
+  {
+    "state": "OK",
+    "incident_description": "Wildfires and Straight-line Winds",
+    "type": "DR",
+    "IA": true,
+    "PA": false,
+    "HM": true,
+    "requested": "2025-03-21"
+  },
+  {
+    "state": "HI",
+    "incident_description": "Flooding",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-03-27"
+  },
+  {
+    "state": "MS",
+    "incident_description": "Severe Storms, Straight-line Winds, Tornadoes, and Flooding",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-01"
+  },
+  {
+    "state": "MO",
+    "incident_description": "Severe Storms, Straight-line Winds, Tornadoes, and Wildfires",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-02"
+  },
+  {
+    "state": "MI",
+    "incident_description": "Severe Winter Storm",
+    "type": "EM",
+    "IA": false,
+    "PA": true,
+    "HM": false,
+    "requested": "2025-04-11"
+  },
+  {
+    "state": "NE",
+    "incident_description": "Severe Winter Storm and Straight-line Winds",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-14"
+  },
+  {
+    "state": "KS",
+    "incident_description": "Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-14"
+  },
+  {
+    "state": "IA",
+    "incident_description": "Severe Winter Storm",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-15"
+  },
+  {
+    "state": "TX",
+    "incident_description": "Severe Weather and Flooding",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-17"
+  },
+  {
+    "state": "TN",
+    "incident_description": "Severe Storms, Straight-line Winds, Tornadoes, and Flooding",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-17"
+  },
+  {
+    "state": "AR",
+    "incident_description": "Severe Storms and Tornadoes (Appeal) - APPROVED",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-18"
+  },
+  {
+    "state": "Muscogee (Creek) Nation",
+    "incident_description": "Severe Winter Storm",
+    "type": "DR",
+    "IA": false,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-21"
+  },
+  {
+    "state": "MO",
+    "incident_description": "Severe Storms, Straight-line Winds, Tornadoes, and Flooding",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-04-30"
+  },
+  {
+    "state": "AR",
+    "incident_description": "Severe Storms, Tornadoes, and Flooding",
+    "type": "DR",
+    "IA": true,
+    "PA": true,
+    "HM": true,
+    "requested": "2025-05-03"
+  }
+]

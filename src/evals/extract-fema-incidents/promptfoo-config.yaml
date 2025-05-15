@@ -9,6 +9,73 @@ providers:
     label: "openai/gpt-4o-mini"
     config:
       model: "openai/gpt-4o-mini"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "openai/gpt-4o"
+    config:
+      model: "openai/gpt-4o"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "openai/o4-mini-2025-04-16"
+    config:
+      model: "openai/o4-mini-2025-04-16"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "openai/o3"
+    config:
+      model: "openai/o3"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "openai/o1"
+    config:
+      model: "openai/o1"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  # - id: "file://../../../llm_provider.py"
+  #   label: "gemini-2.5-flash-latest"
+  #   config:
+  #     model: "gemini-2.5-flash-latest"
+  #   transform: |
+  #     const parsed = JSON.parse(output)
+  #     return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "gemini-2.5-pro-preview-03-25"
+    config:
+      model: "gemini-2.5-pro-preview-03-25"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "gemini-1.5-pro-latest"
+    config:
+      model: "gemini-1.5-pro-latest"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "gemini-1.5-flash-latest"
+    config:
+      model: "gemini-1.5-flash-latest"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
 
 tests:
   - vars:
@@ -25,6 +92,12 @@ tests:
           PA bool
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
+    assert:
+      - type: is-json
+        value: file://expected-schema.json
+      - type: equals
+        value: file://expected.json
+
   - vars:
       attachments:
         - path: fema-daily-operation-brief.pdf
@@ -39,3 +112,9 @@ tests:
           PA bool
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
+    assert:
+      - type: is-json
+        value: file://expected-schema.json
+      - type: equals
+        value: file://expected.json
+  #

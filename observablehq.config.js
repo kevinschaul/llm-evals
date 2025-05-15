@@ -23,7 +23,10 @@ export default {
       name: "NHTSA Recalls",
       path: "/evals/nhtsa-recalls/",
     },
-
+    {
+      name: "Extract FEMA indcidents",
+      path: "/evals/extract-fema-incidents/",
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

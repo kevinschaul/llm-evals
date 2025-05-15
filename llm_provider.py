@@ -72,15 +72,13 @@ def strip_think_tags(text):
 
 def find_cached_response(
     db: sqlite_utils.Database,
-    prompt_text: Optional[str],
+    prompt_text: str,
     model_id_or_alias: str,
     system_prompt_text: Optional[str] = None,
     schema: Optional[Union[Dict[str, Any], type[llm.models.BaseModel]]] = None,
     fragments: Optional[List[str]] = None,
     system_fragments: Optional[List[str]] = None,
     attachments: Optional[List[llm.Attachment]] = None,
-    # For simplicity, tools and tool_results are not included in this basic cache key.
-    # A full "exact query" match for tools would be more complex.
     **options: Any,
 ) -> Optional[llm.Response]:
     """
@@ -141,53 +139,46 @@ def find_cached_response(
             current_schema_dict = schema
         schema_id_to_match, _ = make_schema_id(current_schema_dict)
 
-    # 3. Build the WHERE clause and parameters for the SQL query
-    where_clauses: List[str] = []
-    sql_params: Dict[str, Any] = {}
+    where_clauses = []
+    params = {}
 
     where_clauses.append("model = :model_id")
-    sql_params["model_id"] = canonical_model_id
+    params["model_id"] = canonical_model_id
 
-    if prompt_text is None:
-        where_clauses.append("prompt IS NULL")
-    else:
-        where_clauses.append("prompt = :prompt_text")
-        sql_params["prompt_text"] = prompt_text
+    where_clauses.append("prompt = :prompt_text")
+    params["prompt_text"] = prompt_text
 
     if system_prompt_text is None:
         where_clauses.append("system IS NULL")
     else:
         where_clauses.append("system = :system_prompt_text")
-        sql_params["system_prompt_text"] = system_prompt_text
+        params["system_prompt_text"] = system_prompt_text
 
-    # `options_json` is stored as '{}' for empty options by log_to_db
     where_clauses.append("options_json = :options_json")
-    sql_params["options_json"] = options_json_to_match
+    params["options_json"] = options_json_to_match
 
     if schema_id_to_match is None:
         where_clauses.append("schema_id IS NULL")
     else:
         where_clauses.append("schema_id = :schema_id")
-        sql_params["schema_id"] = schema_id_to_match
+        params["schema_id"] = schema_id_to_match
 
-    # Construct the main query for the `responses` table
-    # We select `id` first to find potential candidates
-    sql_query = f"""
-        SELECT id FROM responses
-        WHERE {' AND '.join(where_clauses)}
-        ORDER BY id DESC
-    """
+    candidate_responses = list(
+        db["responses"].rows_where(
+            where=" AND ".join(where_clauses),
+            where_args=params,
+            select="id",
+            order_by="id DESC",
+        )
+    )
 
-    # Find candidate response IDs
-    candidate_response_ids = [row["id"] for row in db.query(sql_query, sql_params)]
-
-    if not candidate_response_ids:
+    if not candidate_responses:
         return None
 
-    # 4. Filter candidates by matching fragments, system_fragments, and attachments
-    # This requires fetching their details and comparing.
+    # Convert list of dicts to list of IDs
+    candidate_response_ids = [row["id"] for row in candidate_responses]
 
-    # Canonicalize input fragments and attachments for comparison
+    # 4. Canonicalize input fragments and attachments for comparison
     current_fragment_hashes = sorted([llm.Fragment(f).id() for f in (fragments or [])])
     current_system_fragment_hashes = sorted(
         [llm.Fragment(f).id() for f in (system_fragments or [])]
@@ -196,46 +187,53 @@ def find_cached_response(
 
     for response_id in candidate_response_ids:
         # Check fragments
-        logged_prompt_fragments_sql = """
+        logged_prompt_fragments = list(
+            db.query(
+                """
             SELECT f.hash FROM fragments f
             JOIN prompt_fragments pf ON f.id = pf.fragment_id
             WHERE pf.response_id = ? ORDER BY f.hash
-        """
-        logged_prompt_fragment_hashes = [
-            row["hash"] for row in db.query(logged_prompt_fragments_sql, [response_id])
-        ]
+            """,
+                [response_id],
+            )
+        )
+        logged_prompt_fragment_hashes = [row["hash"] for row in logged_prompt_fragments]
         if logged_prompt_fragment_hashes != current_fragment_hashes:
             continue
 
         # Check system fragments
-        logged_system_fragments_sql = """
+        logged_system_fragments = list(
+            db.query(
+                """
             SELECT f.hash FROM fragments f
             JOIN system_fragments sf ON f.id = sf.fragment_id
             WHERE sf.response_id = ? ORDER BY f.hash
-        """
-        logged_system_fragment_hashes = [
-            row["hash"] for row in db.query(logged_system_fragments_sql, [response_id])
-        ]
+            """,
+                [response_id],
+            )
+        )
+        logged_system_fragment_hashes = [row["hash"] for row in logged_system_fragments]
         if logged_system_fragment_hashes != current_system_fragment_hashes:
             continue
 
         # Check attachments
-        logged_attachments_sql = """
+        logged_attachments = list(
+            db.query(
+                """
             SELECT a.id FROM attachments a
             JOIN prompt_attachments pa ON a.id = pa.attachment_id
             WHERE pa.response_id = ? ORDER BY a.id
-        """
-        logged_attachment_ids = [
-            row["id"] for row in db.query(logged_attachments_sql, [response_id])
-        ]
+            """,
+                [response_id],
+            )
+        )
+        logged_attachment_ids = [row["id"] for row in logged_attachments]
         if logged_attachment_ids != current_attachment_ids:
             continue
 
-        # If all checks pass, this is our match. Fetch the full row and reconstruct.
+        # If all checks pass, this is our match
         full_response_row = db["responses"].get(response_id)
         if full_response_row:
-            # llm.Response.from_row will handle reconstructing the full object,
-            # including its fragments, attachments, etc., from the database.
             return llm.Response.from_row(db, full_response_row)
 
     return None

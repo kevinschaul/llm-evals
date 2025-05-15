@@ -1,0 +1,46 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "state_or_tribe_or_territory",
+      "incident_description",
+      "incident_type",
+      "IA",
+      "PA",
+      "HM",
+      "requested"
+    ],
+    "properties": {
+      "state_or_tribe_or_territory": {
+        "type": "string",
+        "description": "The state, tribe, or territory where the incident occurred"
+      },
+      "incident_description": {
+        "type": "string",
+        "description": "Description of the incident"
+      },
+      "incident_type": {
+        "type": "string",
+        "description": "Type of incident, e.g., 'DR' for disaster"
+      },
+      "IA": {
+        "type": "boolean",
+        "description": "Individual Assistance flag"
+      },
+      "PA": {
+        "type": "boolean",
+        "description": "Public Assistance flag"
+      },
+      "HM": {
+        "type": "boolean",
+        "description": "Hazard Mitigation flag"
+      },
+      "requested": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when assistance was requested (YYYY-MM-DD)"
+      }
+    }
+  }
+}
