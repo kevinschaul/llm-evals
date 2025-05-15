@@ -1,7 +1,7 @@
 model,prompt,count,n_correct,share_correct
-openai/gpt-4o-mini,,6,5,0.83
-openai/gpt-4o,,6,4,0.67
-gemini-2.5-pro-exp-03-25,,6,6,1.00
-qwen3:14b:IQ4_XS,,6,6,1.00
-gemma3:12b:Q4_0,,6,4,0.67
-gemma-3-27b-it,,6,4,0.67
+openai/gpt-4o-mini,,7,6,0.86
+openai/gpt-4o,,7,5,0.71
+gemini-2.5-pro-preview-03-25,,7,7,1.00
+qwen3:14b:IQ4_XS,,7,7,1.00
+gemma3:12b:Q4_0,,7,5,0.71
+gemma-3-27b-it,,7,5,0.71

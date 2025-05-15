@@ -12,13 +12,14 @@ eval-all:
   @just eval political-fundraising-emails
 
 # Last line here ignore errors code 100, which means at least one eval failed
-eval config:
+eval config *ARGS:
     @echo "Running promptfoo eval for {{config}}..."
     cd src/evals/{{config}} && promptfoo eval \
       -j 1 \
-      --env-path .env \
+      --env-path ../../.env \
       -c promptfoo-config.yaml \
       --output results/results.csv \
+      {{ ARGS }} \
       || test $? -eq 100
     @echo "Aggregating results for {{config}}..."
     python aggregate_results.py src/evals/{{config}}/results/results.csv
