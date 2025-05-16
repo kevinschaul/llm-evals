@@ -93,8 +93,8 @@ tests:
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
     assert:
-      - type: is-json
-        value: file://expected-schema.json
+      # - type: is-json
+      #   value: file://expected-schema.json
       - type: equals
         value: file://expected.json
 
@@ -113,8 +113,8 @@ tests:
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
     assert:
-      - type: is-json
-        value: file://expected-schema.json
+      # - type: is-json
+      #   value: file://expected-schema.json
       - type: equals
         value: file://expected.json
   #

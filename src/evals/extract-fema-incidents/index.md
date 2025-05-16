@@ -8,8 +8,10 @@ The table is on page 9 of [this pdf](fema-daily-operation-brief.pdf). Here is th
 
 ```js
 import sparkBar from "../../components/sparkBar.js"
+import jsonDiff from "../../components/jsonDiff.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
+const expected = FileAttachment("expected.json").json()
 ```
 
 ## Aggregate
@@ -60,13 +62,45 @@ const selection = view(
 ```
 
 ```js
+const extractJSONStrings = (text) => {
+  const jsonRegex = /Expected output "(.*)" to equal "(.*)"/
+  const matches = text.match(jsonRegex)
+
+  if (matches.length < 3) {
+    throw new Error("Could not find two JSON arrays in the input")
+  }
+
+  try {
+    return [JSON.parse(matches[1]), JSON.parse(matches[2])]
+  } catch (err) {
+    throw new Error("Failed to parse one of the JSON arrays: " + err.message)
+  }
+}
+
+const resultToDiff = (text) => {
+  try {
+    const [actual, expected] = extractJSONStrings(text)
+    return jsonDiff(expected, actual)
+  } catch (err) {
+    return htl.html`<i>Error parsing results</i>`
+  }
+}
+```
+
+```js
 if (selection) {
   display(htl.html`<h3>Selection details</h3>`)
+
   const keys = Object.keys(selection)
   for (const key of keys) {
     display(
       Inputs.textarea({ label: key, value: selection[key], readonly: true }),
     )
+    if (key.startsWith("[")) {
+      display(htl.html`<h4>JSON diff</h4>`)
+      display(htl.html`<p>Red is expected; Green is actual</p>`)
+      display(resultToDiff(selection[key]))
+    }
     display(htl.html`<br/>`)
   }
 } else {
