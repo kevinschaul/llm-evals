@@ -101,6 +101,14 @@ providers:
       const parsed = JSON.parse(output)
       return "items" in parsed ? parsed.items : parsed
 
+  - id: "file://../../../llm_provider.py"
+    label: "qwen3:14b:IQ4_XS"
+    config:
+      model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
 tests:
   - vars:
       attachments:
