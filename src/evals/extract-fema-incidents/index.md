@@ -64,22 +64,27 @@ const resultToDiff = (text) => {
   }
 }
 
-const modelKeys = Object.keys(results[0]).filter((d) => d.startsWith("["))
-const resultsTransposed = modelKeys.map((d) => {
-  let output
-  try {
-    output = JSON.stringify(extractJSONStrings(results[0][d])[1])
-  } catch (err) {
-    output = "Pass"
-  }
+const resultsTransposed = results
+  .map((row) => {
+    const modelKeys = Object.keys(row).filter((d) => d.startsWith("["))
 
-  return {
-    model: d.match(/\[(.*)\]/)[1],
-    attachments: results[0].attachments,
-    raw: results[0][d],
-    correct: results[0][d].includes("PASS"),
-  }
-})
+    return modelKeys.map((d) => {
+      let output
+      try {
+        output = JSON.stringify(extractJSONStrings(row[d])[1])
+      } catch (err) {
+        output = "Pass"
+      }
+
+      return {
+        model: d.match(/\[(.*)\]/)[1],
+        attachments: row.attachments,
+        raw: row[d],
+        correct: row[d].includes("PASS"),
+      }
+    })
+  })
+  .flat()
 ```
 
 ```js
