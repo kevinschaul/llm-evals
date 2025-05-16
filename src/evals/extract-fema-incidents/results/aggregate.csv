@@ -4,6 +4,9 @@ openai/gpt-4o,Extract all declaration requests,2,0,0.00
 openai/o4-mini-2025-04-16,Extract all declaration requests,2,0,0.00
 openai/o3,Extract all declaration requests,2,0,0.00
 openai/o1,Extract all declaration requests,2,0,0.00
+anthropic/claude-3-opus-20240229,Extract all declaration requests,2,0,0.00
+anthropic/claude-3-5-sonnet-20241022,Extract all declaration requests,2,1,0.50
+anthropic/claude-3-7-sonnet-20250219,Extract all declaration requests,2,1,0.50
 gemini-2.5-pro-preview-03-25,Extract all declaration requests,2,2,1.00
 gemini-1.5-pro-latest,Extract all declaration requests,2,0,0.00
 gemini-1.5-flash-latest,Extract all declaration requests,2,0,0.00
