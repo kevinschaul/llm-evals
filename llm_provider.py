@@ -242,6 +242,7 @@ def find_cached_response(
 def call_api(prompt, options, context):
     config = options.get("config", {})
     model_name = config.get("model")
+    model_options = config.get("options", {})
 
     transform_funcs_raw = config.get("transform_funcs")
     if not transform_funcs_raw:
@@ -279,10 +280,11 @@ def call_api(prompt, options, context):
         model_id_or_alias=model_name,
         schema=schema,
         attachments=attachments,
+        **model_options,
     )
     if not output:
         model = llm.get_model(model_name)
-        output = model.prompt(prompt, schema=schema, attachments=attachments)
+        output = model.prompt(prompt, schema=schema, attachments=attachments, **model_options)
         output.log_to_db(db)
 
     try:
