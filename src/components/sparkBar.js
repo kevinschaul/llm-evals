@@ -9,7 +9,7 @@ export default function sparkBar(max) {
       font-weight: bold;
       padding-left: 10px;
       ">
-      ${(x * 100).toFixed(0)}%
+      <div style="flex-grow: 1; text-align: right;">${(x * 100).toFixed(0)}%</div>
       <div style="width: 80px; position: relative; height: 8px;">
         <div style="
           position: absolute;

@@ -20,7 +20,7 @@ Inputs.table(aggregate, {
     share_correct: sparkBar(1),
   },
   align: {
-    share_correct: "center",
+    share_correct: "right",
   },
 })
 ```
