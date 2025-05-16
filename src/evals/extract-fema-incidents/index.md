@@ -11,7 +11,6 @@ import sparkBar from "../../components/sparkBar.js"
 import jsonDiff from "../../components/jsonDiff.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
-const expected = FileAttachment("expected.json").json()
 ```
 
 ## Aggregate
@@ -32,36 +31,6 @@ Inputs.table(aggregate, {
 ## Results
 
 ```js
-const resultColumns = Object.keys(results[0]).filter((d) => d.startsWith("["))
-const resultsFormatters = resultColumns.reduce((p, v) => {
-  p[v] = (x) =>
-    x.includes("PASS")
-      ? htl.html`<div style="background: #d5edca;">✔</div>`
-      : htl.html`<div style="background: #f9dddb;">✗</div>`
-  return p
-}, {})
-const resultsAligns = resultColumns.reduce((p, v) => {
-  p[v] = "center"
-  return p
-}, {})
-```
-
-```js
-const selection = view(
-  Inputs.table(results, {
-    widths: {
-      "input.body": 80,
-    },
-    format: resultsFormatters,
-    align: resultsAligns,
-    layout: "fixed",
-    required: false,
-    multiple: false,
-  }),
-)
-```
-
-```js
 const extractJSONStrings = (text) => {
   const jsonRegex = /Expected output "(.*)" to equal "(.*)"/
   const matches = text.match(jsonRegex)
@@ -71,7 +40,16 @@ const extractJSONStrings = (text) => {
   }
 
   try {
-    return [JSON.parse(matches[1]), JSON.parse(matches[2])]
+    return [
+      _.sortBy(JSON.parse(matches[1]), [
+        "state_or_tribe_or_territory",
+        "requested",
+      ]),
+      _.sortBy(JSON.parse(matches[2]), [
+        "state_or_tribe_or_territory",
+        "requested",
+      ]),
+    ]
   } catch (err) {
     throw new Error("Failed to parse one of the JSON arrays: " + err.message)
   }
@@ -85,24 +63,79 @@ const resultToDiff = (text) => {
     return htl.html`<i>Error parsing results</i>`
   }
 }
+
+const modelKeys = Object.keys(results[0]).filter((d) => d.startsWith("["))
+const resultsTransposed = modelKeys.map((d) => {
+  let output
+  try {
+    output = JSON.stringify(extractJSONStrings(results[0][d])[1])
+  } catch (err) {
+    output = "Pass"
+  }
+
+  return {
+    model: d.match(/\[(.*)\]/)[1],
+    attachments: results[0].attachments,
+    raw: results[0][d],
+    correct: results[0][d].includes("PASS"),
+  }
+})
+```
+
+```js
+const selection = view(
+  Inputs.table(resultsTransposed, {
+    format: {
+      correct: (x) =>
+        x
+          ? htl.html`<div style="background: #d5edca;">✔</div>`
+          : htl.html`<div style="background: #f9dddb;">✗</div>`,
+    },
+    align: { correct: "center" },
+    required: false,
+    multiple: false,
+  }),
+)
 ```
 
 ```js
 if (selection) {
-  display(htl.html`<h3>Selection details</h3>`)
-
-  const keys = Object.keys(selection)
+  display(htl.html`<h3>${selection.model}</h3>`)
+  const keys = Object.keys(selection).filter((d) =>
+    ["attachments", "raw"].includes(d),
+  )
   for (const key of keys) {
     display(
       Inputs.textarea({ label: key, value: selection[key], readonly: true }),
     )
-    if (key.startsWith("[")) {
-      display(htl.html`<h4>JSON diff</h4>`)
-      display(htl.html`<p>Red is expected; Green is actual</p>`)
-      display(resultToDiff(selection[key]))
-    }
     display(htl.html`<br/>`)
   }
+
+  if (!selection.correct) {
+    const [actual, expected] = extractJSONStrings(selection.raw)
+    display(
+      Inputs.textarea({
+        label: "actual",
+        value: JSON.stringify(actual),
+        readonly: true,
+        monospace: true,
+      }),
+    )
+    display(htl.html`<br/>`)
+    display(
+      Inputs.textarea({
+        label: "expected",
+        value: JSON.stringify(expected),
+        readonly: true,
+        monospace: true,
+      }),
+    )
+    display(htl.html`<br/>`)
+  }
+
+  display(htl.html`<h4>JSON diff</h4>`)
+  display(htl.html`<p>Red is expected; Green is actual</p>`)
+  display(resultToDiff(selection.raw))
 } else {
   display(htl.html`<i>Click a row above to see all details</i>`)
 }
