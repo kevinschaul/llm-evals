@@ -5,3 +5,8 @@ gemini-2.5-pro-preview-03-25,,7,7,1.00
 qwen3:14b:IQ4_XS,,7,7,1.00
 gemma3:12b:Q4_0,,7,5,0.71
 gemma-3-27b-it,,7,5,0.71
+anthropic/claude-3-opus-20240229,,7,6,0.86
+anthropic/claude-3-5-sonnet-20241022,,7,5,0.71
+anthropic/claude-3-7-sonnet-20250219,,7,7,1.00
+anthropic/claude-sonnet-4-0,,7,7,1.00
+anthropic/claude-opus-4-0,,7,6,0.86

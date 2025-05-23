@@ -3,7 +3,7 @@ description: "Trump storylines"
 
 prompts:
   - Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with "true" or "false".\n{{headline}}\n{{content}}
-  - Is this about Trump? "true" or "false" .\n{{headline}}\n{{content}}
+  # - Is this about Trump? "true" or "false" .\n{{headline}}\n{{content}}
 
 providers:
   - id: "file://../../../llm_provider.py"
@@ -30,6 +30,18 @@ providers:
     label: "gemma3:12b:Q4_0"
     config:
       model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+      transform_func: parse_boolean
+
+  - id: "file://../../../llm_provider.py"
+    label: "anthropic/claude-sonnet-4-0"
+    config:
+      model: "anthropic/claude-sonnet-4-0"
+      transform_func: parse_boolean
+
+  - id: "file://../../../llm_provider.py"
+    label: "anthropic/claude-opus-4-0"
+    config:
+      model: "anthropic/claude-opus-4-0"
       transform_func: parse_boolean
 
 tests: file://tests.csv

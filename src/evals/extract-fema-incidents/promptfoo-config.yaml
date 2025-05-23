@@ -70,6 +70,22 @@ providers:
       return "items" in parsed ? parsed.items : parsed
 
   - id: "file://../../../llm_provider.py"
+    label: "anthropic/claude-sonnet-4-0"
+    config:
+      model: "anthropic/claude-sonnet-4-0"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
+    label: "anthropic/claude-opus-4-0"
+    config:
+      model: "anthropic/claude-opus-4-0"
+    transform: |
+      const parsed = JSON.parse(output)
+      return "items" in parsed ? parsed.items : parsed
+
+  - id: "file://../../../llm_provider.py"
     label: "gemini-2.5-pro-preview-03-25"
     config:
       model: "gemini-2.5-pro-preview-03-25"
