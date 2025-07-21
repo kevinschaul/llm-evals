@@ -1,7 +1,5 @@
 """
-A provider for promptfoo that calls the llm library
-
-Provide the model to use with the "model" option
+A promptfoo provider to call the llm library via HTTP
 
 Docs:
 - https://www.promptfoo.dev/docs/providers/python/
@@ -15,6 +13,13 @@ from pydantic import ValidationError
 import llm
 from llm.cli import logs_db_path
 from llm.utils import make_schema_id, sqlite_utils
+from flask import Flask, request, jsonify
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+app = Flask(__name__)
 
 
 def parse_boolean(text: str) -> bool:
@@ -80,7 +85,7 @@ def find_cached_response(
     system_fragments: Optional[List[str]] = None,
     attachments: Optional[List[llm.Attachment]] = None,
     **options: Any,
-) -> Optional[llm.Response]:
+) -> Optional[str]:
     """
     Searches the LLM database for an exact cached query and returns the Response object if found.
 
@@ -234,12 +239,12 @@ def find_cached_response(
         # If all checks pass, this is our match
         full_response_row = db["responses"].get(response_id)
         if full_response_row:
-            return llm.Response.from_row(db, full_response_row)
+            return full_response_row["response"]
 
     return None
 
 
-def call_api(prompt, options, context):
+def call_llm(prompt, options, context):
     config = options.get("config", {})
     model_name = config.get("model")
     model_options = config.get("options", {})
@@ -274,7 +279,7 @@ def call_api(prompt, options, context):
     attachments = [llm.Attachment(**a) for a in attachments_raw]
 
     db = sqlite_utils.Database(logs_db_path())
-    output = find_cached_response(
+    response = find_cached_response(
         db,
         prompt_text=prompt,
         model_id_or_alias=model_name,
@@ -282,13 +287,16 @@ def call_api(prompt, options, context):
         attachments=attachments,
         **model_options,
     )
-    if not output:
+    if not response:
         model = llm.get_model(model_name)
-        output = model.prompt(prompt, schema=schema, attachments=attachments, **model_options)
+        output = model.prompt(
+            prompt, schema=schema, attachments=attachments, **model_options
+        )
         output.log_to_db(db)
+        response = output.text()
 
     try:
-        parsed = output.text().strip()
+        parsed = response.strip()
         for func in transform_funcs:
             parsed = func(parsed)
     except ValueError:
@@ -301,9 +309,20 @@ def call_api(prompt, options, context):
     return result
 
 
-# Just for testing this script
+@app.route("/eval", methods=["POST"])
+def evaluate():
+    try:
+        data = request.json
+
+        # Get the raw result
+        response = call_llm(data["prompt"], data["options"], data.get("context", {}))
+        return response['output']
+
+    except Exception as e:
+        logger.error(f"Error in evaluation: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == "__main__":
-    response = call_api(
-        "Tell me a dog joke", {"config": {"model": "openai/gpt-4o-mini"}}, None
-    )
-    print(response)
+    logger.info("Starting fast evaluation server on port 4242")
+    app.run(host="127.0.0.1", port=4242, threaded=True, debug=False)

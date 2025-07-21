@@ -10,60 +10,105 @@ prompts:
     body: {{body}}
 
 providers:
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4.1-mini-2025-04-14"
     config:
-      model: "openai/gpt-4.1-mini-2025-04-14"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-4.1-mini-2025-04-14"
+            transform_func: to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
-      model: "openai/gpt-4o-mini"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-4o-mini"
+            transform_func: to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "openai/o4-mini-2025-04-16"
     config:
-      model: "openai/o4-mini-2025-04-16"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/o4-mini-2025-04-16"
+            transform_func: to_uppercase
 
-  # - id: "file://../../../llm_provider.py"
-  #   label: "anthropic/claude-3-5-haiku-latest"
-  #   config:
-  #     model: "anthropic/claude-3-5-haiku-latest"
-  #     transform_func: to_uppercase
-
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "gemini-1.5-flash-002"
     config:
-      model: "gemini-1.5-flash-002"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "gemini-1.5-flash-002"
+            transform_func: to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "gemini-2.0-flash-lite"
     config:
-      model: "gemini-2.0-flash-lite"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "gemini-2.0-flash-lite"
+            transform_func: to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "gemini-2.0-flash"
     config:
-      model: "gemini-2.0-flash"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "gemini-2.0-flash"
+            transform_func: to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "qwen3:14b:IQ4_XS"
     config:
-      model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
-      transform_funcs:
-        - strip_think_tags
-        - to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+            transform_funcs:
+              - strip_think_tags
+              - to_uppercase
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "gemma3:12b:Q4_0"
     config:
-      model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
-      transform_func: to_uppercase
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+            transform_func: to_uppercase
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "ministral:8b:Q8_0"
+    config:
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "hf.co/bartowski/Ministral-8B-Instruct-2410-GGUF:Q8_0"
+            transform_func: to_uppercase
 
 tests: file://tests.csv
