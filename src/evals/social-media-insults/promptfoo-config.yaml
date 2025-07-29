@@ -36,11 +36,16 @@ prompts:
     content: {{content}}
 
 providers:
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
-      model: "openai/gpt-4o-mini"
-      transform_func: parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-4o-mini"
+            transform_func: parse_boolean
 
 tests: file://tests.csv
 

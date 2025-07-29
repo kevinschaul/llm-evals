@@ -1,6 +1,5 @@
 model,prompt,count,n_correct,share_correct
 openai/gpt-4o-mini,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,149,0.74
-wapo,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,154,0.77
 qwen3:14b:IQ4_XS,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,145,0.72
 gemma3:12b:Q4_0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,144,0.72
 anthropic/claude-sonnet-4-0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,145,0.72

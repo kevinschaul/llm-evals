@@ -9,9 +9,10 @@ dependencies = [
     "llm-gemini>=0.17",
     "llm>=0.24",
     "llm-mlx>=0.3",
-    "llm-anthropic>=0.15.1",
     "llm-openai-plugin>=0.3",
     "flask>=3.1.1",
+    "llm-ollama>=0.10.0",
+    "llm-anthropic==0.16",
 ]
 
 [tool.pyright]

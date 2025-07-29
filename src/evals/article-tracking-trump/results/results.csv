@@ -1,12 +1,8 @@
-content,headline,"[openai/gpt-4o-mini] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[wapo] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[qwen3:14b:IQ4_XS] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[gemma3:12b:Q4_0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[anthropic/claude-sonnet-4-0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[anthropic/claude-opus-4-0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}"
+content,headline,"[openai/gpt-4o-mini] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[qwen3:14b:IQ4_XS] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[gemma3:12b:Q4_0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[anthropic/claude-sonnet-4-0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}","[anthropic/claude-opus-4-0] Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".\n{{headline}}\n{{content}}"
 "Homeland Security Secretary Kristi L. Noem signaled Wednesday morning that the Trump administration is considering using the Guantánamo Bay detention camp to house undocumented immigrants whom officials are seeking to deport.
 Asked directly whether Guantánamo Bay was an option for sending undocumented immigrants apprehended by Immigration and Customs Enforcement agents, Noem told Fox News’s “Fox &amp; Friends” that President Donald Trump and his administration are looking at all their options for expelling people who are in the United States illegally, particularly those from countries that do not currently accept deportees, such as Venezuela and Cuba.
 “We’re evaluating and talking about that right now. It’s the president’s decision, but it’s an asset, and we’re going to continue to look at how we can use all of our assets to keep America safe,” Noem said.
 Guantánamo Bay is known for its military prison within the naval base on the coast of Cuba, where suspected terrorists have been held in the years since the attacks of Sept. 11, 2001. It also has a separate migrant processing facility, which the Biden administration used to process some asylum seekers.",Noem: Guantánamo Bay on the table to house deportees,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -54,31 +50,25 @@ Other Palestinians in the compound describe similar feelings. Yehya al-Ustaz, 68
 He said he’s been horrified by images of the destruction in the enclave. “An earthquake would have been kinder.” But he said, “Nothing is like Gaza. Ultimately, Gaza is home. That’s it.”
 <i>Hajar Harb in London contributed to this report.</i>",Medical evacuations from Gaza slow amid uncertainty over right of return,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""true"" to equal ""false""
+---
+true
+
+Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
+
+false
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The National Park Service predicted Thursday that D.C.’s iconic cherry trees will reach peak bloom from March 28 to March 31.
@@ -98,38 +88,28 @@ But Mayhew, who has organized the festival for 25 years, added that it’s impor
 On Thursday, Mayhew also said the festival would include a new event to “to keep Stumpy’s spirit alive.” The first Stumpy’s Petals and Paddles boat race will take place on March 20 at the Tidal Basin.
 “Spring is such a joyous time here in D.C.” Mayhew said.","Cherry blossoms will be at peak March 28-31, Park Service says","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "As the Trump administration this week dismantled the U.S. Agency for International Development, the primary vehicle for U.S. foreign aid, the White House issued a statement justifying its actions. Titled “At USAID, Waste and Abuse Runs Deep,” the <a href=""https://www.whitehouse.gov/uncategorized/2025/02/at-usaid-waste-and-abuse-runs-deep/"" target=_blank>news release</a> claimed USAID “has been unaccountable to taxpayers as it funnels massive sums of money to the ridiculous — and, in many cases, malicious — pet projects of entrenched bureaucrats, with next-to-no oversight.”
 The news release then listed 12 examples, plucked from the websites of right-wing media. But the numbers cited — as low as $32,000 — hardly justify the claim that these are “massive sums” of money.
 <a href=""https://www.washingtonpost.com/politics/2025/02/07/usaid-trump-fact-checker/"">Read the full story</a>",Fact Checker: The White House’s wildly inaccurate claims about USAID spending,"[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -169,31 +149,25 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "President Donald Trump is scheduled to meet Thursday with British Prime Minister Keir Starmer in the Oval Office as the U.K. leader seeks to make a case for Trump to support Ukraine amid its war with Russia.
@@ -202,15 +176,11 @@ Trump did not make those guarantees in his meeting with Macron. Speaking to repo
 Trump has falsely claimed that Ukraine started the war with Russia and <a href=""https://www.washingtonpost.com/world/2025/02/19/ukraine-russia-trump-elections-zelensky/"" target=_blank>called</a> Ukrainian President Volodymyr Zelensky a dictator, while declining to label Russian President Vladimir Putin as one.
 Zelensky is <a href=""https://www.washingtonpost.com/world/2025/02/26/zelensky-trump-support-ukraine-minerals/"" target=_blank>scheduled to meet Trump</a> on Friday at the White House.",U.K.’s Starmer set to meet with Trump in Oval Office today,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -226,29 +196,25 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Rep. Morgan Griffith (R-Virginia) said the federal grant freeze did not come up during a meeting Tuesday between House Republicans and Vice President JD Vance in Miami.
 “Obviously all of our constituents are concerned,” Griffith told The Post. “But the Biden administration was shoveling money out the door so fast that there’s real questions as to whether they went through the proper protocols on it.”",Rep. Morgan Griffith (R-Virginia) said the federal grant freeze did not come up during a meeting...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -260,10 +226,6 @@ Fail Reason: Expected output ""true"" to equal ""false"""
 "Defense Secretary Pete Hegseth is expected to visit the naval base at Guantánamo Bay as soon as Wednesday as the Trump administration’s effort to detain migrants there continues to take shape, two military officials familiar with that matter said.
 The trip will come after the Trump administration dispatched hundreds of U.S. Marines to the installation to assist in an operation detaining what Hegseth has called “high-threat” migrants due for deportation. Administration officials, seeking to project strength, put them in a prison at Guantánamo Bay that has been used to house suspected terrorists after the attacks on Sept. 11, 2001, saying that an initial wave was all from the Venezuelan gang Tren de Aragua.
 Hegseth is expected to highlight the mission and how it is taking shape, said the military officials, who spoke on the condition of anonymity because of the sensitivity of the issue. Some troops at Guantánamo Bay were informed of the visit on Tuesday, one of the officials said.",Hegseth to visit Guantanamo Bay as migrant detention takes shape,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -315,12 +277,6 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "The head of the U.S. Forest Service announced his retirement in a blunt, emotional email to staff Wednesday, after thousands of employees <a href=""https://www.washingtonpost.com/nation/2025/02/17/trump-fires-federal-workers-performance/"" target=_blank>were let go</a> from a department that oversees nearly 200 million acres of American woods and grasslands.
 “The past several weeks has been incredibly difficult,” Forest Service Chief Randy Moore wrote in the email, which was also <a href=""https://www.fs.usda.gov/inside-fs/leadership/note-reflection"" target=_blank>posted</a> on the agency’s website. Thousands of Forest Service employees have been fired amid President Donald Trump’s effort to downsize the federal government, led by billionaire Elon Musk’s <a href=""https://www.washingtonpost.com/business/2025/02/25/doge-administrator/"" target=_blank>U.S. DOGE Service.</a>
@@ -340,11 +296,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -394,18 +346,10 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "The Trump administration is moving forward with its campaign to eradicate federal funding intended to improve the lives and health of transgender people, including by sending notices in recent days that terminate grants for transgender health services and research.
 The National Institutes of Health, for example, has demanded a halt to a large-scale study that was<b> </b>examining ways to prevent HIV infections in transgender youths of color before it could enroll participants this week. California clinics lost funding to provide care to hundreds of transgender patients. A federal scientific journal blocked publication of a paper that details the value of teaching transgender health.
 <a href=""https://www.washingtonpost.com/health/2025/02/04/trump-order-transgender-health-research-programs/"">Read the full story</a>","Trans health, research programs ordered to stop by Trump administration","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -436,37 +380,31 @@ Ho cannot ultimately deny Bove’s request, but he did not immediately toss the 
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "As GOP lawmakers in Washington try to protect a key food aid program from the Trump administration’s cutbacks, international humanitarian organizations say the ongoing disruptions<b> </b>in assistance are devastating countries that are on the verge of famine.
@@ -504,13 +442,7 @@ With USAID funding curtailed, more than 80 percent of those soup kitchens have c
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -594,10 +526,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "An Iraqi man who staged Quran burnings in Sweden was shot dead hours before he was set to receive a verdict on Thursday in a trial tied to the desecrations of Islam’s holy book that drew worldwide uproar, authorities said.
 Salwan Momika, an asylum seeker in Sweden and anti-Islam campaigner, <a href=""https://www.washingtonpost.com/world/2023/08/03/sweden-quran-burning-denmark-islam-stunt-global-attention/"" target=""_blank"">sparked waves of outrage</a> throughout parts of the Muslim world in 2023 when he burned a copy of the Quran outside a mosque during the Islamic holiday of Eid al-Adha. Videos of Quran burnings by a small group of men in Sweden and Denmark that year ignited a global controversy, drawing <a href=""https://www.washingtonpost.com/world/2023/08/03/sweden-quran-burning-denmark-islam-stunt-global-attention/"" target=""_blank"">condemnation</a> from several Muslim nations and leading to riots in some places.
@@ -610,27 +538,23 @@ The court had been scheduled to hand down a verdict Thursday in a trial over “
 At the time, Sweden also raised its terrorism alert level in fear of revenge attacks. Stockholm condemned the 2023 burnings, although Swedish authorities allowed the demonstrations that summer, citing freedom of speech, and filed charges against Momika.
 Turkish President Recep Tayyip Erdogan even tied the Quran burnings to Stockholm’s bid to join NATO, suggesting he would hold up the process if Swedish authorities kept granting permits for the protests. Sweden <a href=""https://www.washingtonpost.com/world/2024/03/07/sweden-joins-nato/"" target=_blank>ultimately joined</a> the military alliance last year.",Iraqi at center of Quran burnings in Sweden shot dead before court verdict,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "INDIANAPOLIS — The NFL will consider modifying its <a href=""https://www.washingtonpost.com/sports/2024/03/27/nfl-new-kickoff-breakdown/"" target=_blank>year-old kickoff format</a> this offseason by moving the spot of the ball <a href=""https://www.washingtonpost.com/sports/2024/10/01/nfl-kickoff-format-change/"" target=_blank>on a touchback</a> or by moving the spot of the kick itself, the co-chairman of the league’s competition committee said Sunday.
@@ -648,27 +572,23 @@ The special teams coaches believe the onside kick success rate could be improved
 The committee spent two hours Sunday on <a href=""https://www.washingtonpost.com/sports/2025/01/22/nfl-officiating-patrick-mahomes-roughing/"" target=""_blank"">potential further expansion</a> of the list of plays that could be subject <a href=""https://www.washingtonpost.com/sports/2024/06/02/nfl-electronic-first-downs-replay-assist/"" target=""_blank"">to the replay assist system</a>, McKay said, and will spend more time on that topic Monday. It is scheduled to receive a presentation Monday regarding the <a href=""https://www.washingtonpost.com/sports/2025/02/01/nfl-first-down-electronic-measurement-system/"" target=""_blank"">possible use next season</a> of an electronic system <a href=""https://www.washingtonpost.com/sports/2024/02/29/nfl-high-tech-first-downs/"" target=""_blank"">to measure first downs</a>. That system still would require the on-field officials to spot the ball manually following a play before the electronic system would be used to determine whether a first down was achieved.
 The push-the-quarterback sneak <a href=""https://www.washingtonpost.com/sports/2025/02/08/tush-push-eagles-super-bowl/"" target=_blank>popularized by the Philadelphia Eagles</a> was not discussed Sunday by the committee, McKay said, but he added: “I think it will be.”",NFL competition committee begins mulling possible tweaks to kickoff format,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "In an extraordinary move, the Department of Health and Human Services is in the process of firing about 5,200 health workers, part of a <a href=""https://css.washingtonpost.com/dc-md-va/2025/02/13/trump-administration-fires-probationary-federal-workers/"" target=_blank>government-wide purging</a> of new employees who remain on probationary status, according to an internal memo obtained by The Washington Post.
@@ -696,10 +616,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Sens. Elizabeth Warren (Massachusetts) and Ron Wyden (Oregon), the top Democrats on the Senate Banking, Housing, and Urban Affairs Committee and the Senate Finance Committee, respectively, are asking the Government Accountability Office to investigate Treasury Secretary Scott Bessent’s decision to grant Elon Musk and his “Department of Government Efficiency” acolytes <a href=""https://www.washingtonpost.com/business/2025/02/01/elon-musk-treasury-payments-system/"" target=_blank>access to sensitive government payment systems</a>.
 In a letter to the GAO — the congressional watchdog — Warren and Wyden say reports of Musk’s access to the delicate financial systems “are deeply troubling.” The systems, they note, process trillions of dollars of transactions each year, contain sensitive personal and financial information about millions of Americans, and ensure that Social Security checks, tax refunds and Medicare benefits are paid on time.
@@ -707,19 +623,15 @@ In a letter to the GAO — the congressional watchdog — Warren and Wyden say r
 “The access may threaten economic and national security,” the senators wrote.
 Warren and Wyden directed the GAO to investigate and determine which specific systems were accessed, whether the individuals who accessed the sensitive information had the appropriate security clearances, and whether guardrails are in place to protect economic and national security and Americans’ privacy.",Democratic senators call for investigation of Musk’s access to federal financial systems,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -741,15 +653,9 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -759,7 +665,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -773,10 +679,6 @@ White House press secretary Karoline Leavitt <a href=""https://x.com/PressSec/st
 The action, according to Melugin’s reporting, may be designed to target immigrants who are granted humanitarian parole by the U.S. Department of Homeland Security.
 Along with lawful permanent residents, refugees, people granted asylum and victims of abuse or trafficking, people with parole have access to additional benefits, but are still excluded in many cases, according to the National Immigration Law Center.
 Some of the benefits available to people regardless of immigration status include emergency disaster assistance, school breakfast and lunch programs and certain public health programs, according to the NILC.",Trump plans to further restrict undocumented immigrants from public benefits,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -813,11 +715,7 @@ Even on his own platform, Truth Social, some viewers found the video strange or 
 Ismail al-Thawabta, head of the Hamas government media office in Gaza, condemned the video “in the harshest terms,” calling it “degrading.” He said Palestinians will not allow any force to “impose a reality” that contradicts their identity — “even if that force is the United States.”
 Basem Naim, a member of Hamas’s political bureau, said in a statement that Trump was “once again proposing ideas and solutions that do not take into account the cultures and interests” of Palestinians. “Our goal is not to improve our prison conditions but to get rid of the prison and the jailer,” Naim said, adding that Palestinians must first be enabled to establish their state before any building occurs.",Trump posts video offering imagined vision of Gaza after his takeover plan,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -851,37 +749,29 @@ Advances in clinical diagnosis and treatment have lessened the burden of heart d
 “We need to stop these risk factors in their tracks, keep people healthy throughout their lifespan,” he said in a <a href=""https://newsroom.heart.org/news/heart-disease-remains-leading-cause-of-death-as-key-health-risk-factors-continue-to-rise"" target=""_blank"">press release</a>. “That will only be possible with a strong emphasis on early prevention and equitable health access for all.”
 <i>This article is part of The Post’s “Big Number” series, which takes a brief look at the statistical aspect of health issues. Additional information and relevant research are available through the hyperlinks.</i>",Heart disease remains the top cause of death in the U.S.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Capitol Rotunda saw a concentration of wealth on Monday so rare as to be historic: a caste of magnates worth more than $1 trillion, gathered behind <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> as he was sworn in as the nation’s 47th president, delivering a standing ovation and implicitly pledging their support to his agenda as he declared plans to expand U.S. territory, cast aside transgender rights and end “radical political theories” in the U.S. military.
 <a href=""https://www.washingtonpost.com/politics/2025/01/20/billionaires-trump-inauguration-elon-musk-jeff-bezos/?utm_source=twitter&utm_medium=social&utm_campaign=wp_main"" target=_blank>Read the full story</a>","Under the Rotunda, a historic concentration of wealth salutes Trump","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -891,7 +781,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -901,15 +791,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The Trump administration is seeking to grant U.S. immigration officers access to a database that contains information on hundreds of thousands of immigrant teens and children who crossed into the United States without their parents, White House border czar Tom Homan told The Washington Post in an interview Friday.
 <a href=""https://www.washingtonpost.com/immigration/2025/01/31/administration-access-immigrant-minors-data/"" target=_blank>Read the full story</a>",Trump administration seeking access to database of immigrant minors,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -946,19 +832,13 @@ Another federal judge in Manhattan <a href=""https://www.washingtonpost.com/nati
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -968,13 +848,13 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "A federal judge in Seattle on Tuesday temporarily<b> </b>blocked the Trump administration’s <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/realigning-the-united-states-refugee-admissions-program/"" target=""_blank"">sweeping ban</a> on refugee admissions, saying the presidential executive order represented an improper nullification of congressional authority.
@@ -987,13 +867,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -1003,7 +877,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -1011,10 +885,6 @@ true
 
 Pass Reason: All assertions passed"
 "President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil fuel production. It was not immediately clear what government actions the energy emergency would entail, although Trump allies have suggested the order could allow the administration to quickly approve pipelines and other fossil fuel infrastructure.",President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil...,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -1073,13 +943,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -1127,27 +991,23 @@ For YouTube, a reset involves deleting the history of videos you’ve watched in
 If you’re not ready to totally say goodbye to your algorithm, there may be other things you can do to tailor your experience. Many social media apps let you nip and tuck around the edges of your algorithm by tapping buttons to say you like or want to see more or less of certain topics. TikTok has a slider, in settings, to request more or less dance, fashion, nature or pets. On YouTube, if you click “like” on what you do like, its algorithms should listen. (Some people even turn shaping their algorithms into an art — there was <a href=""https://x.com/old_ric/status/1875955842509635944"" target=_blank>one guy</a> who crafted an Instagram that recommends nothing but eggs.)
 If, like me, what you really want is social media that features only the stuff you followed, you can kind of hack your way into it. There’s another Instagram setting under “Content preferences” called “snooze suggested posts in feed” that tells the app to stop recommending content there for 30 days. You just have to keep going back to press it again every month. This, sadly, is what counts as putting users “in control” these days.",You can finally press ‘reset’ on your Instagram feed. Here’s why you should.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Argentina will withdraw from the World Health Organization, a spokesman for President Javier Milei said Wednesday, just weeks after his ally, President Donald Trump, announced he would again pull out of the global health alliance.
@@ -1164,11 +1024,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1178,11 +1034,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "On Thursday night, before a packed auditorium at Eastern Senior High School, D.C. Mayor Muriel E. Bowser (D) made it clear once again: She wants the Washington Commanders to build its next NFL home at the site of RFK Stadium, and she’s not ruling out a public subsidy to help them do it.
@@ -1214,15 +1070,11 @@ Penn Branch resident<b> </b>Jimmie Williams said he was generally supportive of 
 “This is an economic benefit for D.C.,” said Williams. “But it’s got to be done right.”
 <i>Sam Fortier contributed to this report.</i>","At forum, Bowser won’t rule out public funds for NFL stadium at RFK","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1232,11 +1084,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "More than 40,000 people have accepted the Trump administration’s deferred resignation offer, according to a person familiar with the figures who spoke on the condition of anonymity because they were not authorized to speak publicly.
@@ -1245,13 +1097,7 @@ Asked about the total, which is less than 2 percent of the civilian workforce of
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -1298,15 +1144,9 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The White House is preparing to issue a trio of executive orders on education, including one directing the Education Department to withhold federal funding from any school that teaches about “radical gender ideology” or “critical race theory,” officials said Wednesday.
@@ -1316,10 +1156,6 @@ For years, Republicans including President Donald Trump have attacked schools fo
 Federal law allows the agency to withhold federal funds from any school that discriminates based on race. Trump and his allies argue that lessons about systemic racism amount to discrimination, because they presume certain things about people based on race, such as that White Americans enjoy certain privileges based on their race. They say that giving rights to transgender students, especially transgender girls and women, discriminates against cisgender girls and women by forcing them to share spaces and sports teams.
 The order also reinstates the<a href=""https://www.washingtonpost.com/politics/2024/09/02/trump-1776-commission-education/"" target=_blank> 1776 Commission</a>, which Trump created just a week before the 2020 presidential election to promote “patriotic education.” The commission wrote a report that was published in the final days of his first term. The report came under heavy fire from historians as a distortion of American history, and President Joe Biden disbanded the panel as one of his first acts. As a candidate, Trump promised to reinstate the commission if reelected.
 <i>Cleve R. Wootson Jr. contributed to this report.</i>","Trump set to pull funding from schools based on race, gender teaching","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -1362,10 +1198,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump took questions in the Oval Office on Thursday, shortly after signing several more executive orders on his fourth day in office.
 Asked for reaction on a U.S. judge <a href=""https://www.washingtonpost.com/immigration/2025/01/23/trump-judge-birthright-citizenship-block/"" target=_blank>temporarily blocking </a>his executive order ending birthright citizenship, Trump said, “Obviously, we’ll appeal it. They put it before a certain judge in Seattle, I guess. Right? And there’s no surprises with that judge.”","President Donald Trump took questions in the Oval Office on Thursday, shortly after signing several more...","[FAIL] (0.00)
@@ -1374,11 +1206,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -1416,13 +1244,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -1432,21 +1254,17 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "President Donald Trump on Friday announced plans to overhaul the Kennedy Center for the Performing Arts, writing that he had decided to “immediately terminate multiple individuals from the Board of Trustees,” including chairman David M. Rubenstein, in a post on Truth Social. He added that he plans to install himself as the new chairman of the prominent arts institution. He did not say which board members he plans to terminate. It is unclear whether the president has the power to make such changes.
 <a href=""https://www.washingtonpost.com/entertainment/2025/02/07/trump-kennedy-center/"" target=_blank>Read the full story</a>","Trump says he will fire Kennedy Center board members, appoint himself chairman","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -1474,11 +1292,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -1492,11 +1306,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "When asked Tuesday about inhumane conditions described by migrants held at Guantánamo Bay over the past two weeks, White House press secretary Karoline Leavitt told reporters not to forget that they were “criminals.”
@@ -1511,11 +1325,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1531,7 +1341,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The incoming Trump administration said it will issue 10 executive orders regarding the border Monday.
@@ -1559,15 +1369,9 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Defense Secretary Pete Hegseth on Monday refused to address whether the Trump administration’s choice to become chairman of the Joint Chiefs of Staff is “underqualified” for the position, as concerns proliferated in Washington following last week’s firing of the military’s top officer and six other senior Pentagon leaders.
@@ -1619,12 +1423,6 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "At the National Science Foundation, staff have been combing through thousands of active science research projects, alongside a list of keywords, to determine if they include activities that violate executive orders President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> issued in his first week in office.
 Those include orders to <a href=""https://www.washingtonpost.com/nation/2025/01/29/trump-trans-executive-orders-fear-confusion/"" target=_blank>recognize only two genders</a> and roll back <a href=""https://www.washingtonpost.com/politics/2025/01/22/federal-workers-trump-remote-work/"" target=_blank>diversity, equity and inclusion initiatives</a>. The search is driven by dozens of flagged words, according to an internal document reviewed by The Post and two NSF employees with knowledge of the review process who spoke on the condition of anonymity because they were not authorized to speak.
@@ -1634,11 +1432,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -1679,27 +1473,23 @@ It apparently occurred shortly before theater patrons left the Arena after Tuesd
 According to information published online, the show, Sarah Silverman’s musical “The Bedwetter,” was scheduled to begin at 7:30 p.m. and run until about 9:10 p.m.
 Metro described the investigation of the incident Tuesday night as active, and photographs showed the flashing lights of police vehicles clustered in the area.",Bystander shot during robbery attempt at Waterfront Metro,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A Senate confirmation hearing on Wednesday for three top Justice Department lawyers was dominated by concerns from lawmakers who asked when, if ever, a president could defy a court order.
@@ -1751,11 +1541,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1765,38 +1551,34 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "We all know winning an Oscar is hard, but finding them on a disorganized and messy movie set might be harder. With the help of illustrator Max Guther, we hid 23 Oscar statues, one per category, and 17 Easter eggs for nominated films. Can you find them all before the Academy Awards show on Sunday? Test your skills below. (Psst, you can zoom in for a better view.)
 About this story
 Editing by Betty Chavarria and Junne Joaquin Alcantara. Copy editing by Emily Morman.",Can you find all the Oscar statues? Try our image search.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A 25-year-old staffer who was granted access to the Treasury Department’s sensitive payments system has resigned after the Wall Street Journal surfaced his racist and pro-eugenics posts, a person familiar with the matter said.
@@ -1805,27 +1587,23 @@ Elez was one of two people affiliated with DOGE that a federal court allowed to 
 The person familiar with the matter spoke on the condition of anonymity to describe internal government matters.
 Elez worked for Musk at SpaceX, Starlink and X, according to the Journal.",DOGE staffer Marko Elez resigns after report on racist social media posts,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump’s plan to remove Palestinians from the Gaza Strip and create a real estate “riviera” on the eastern Mediterranean has spurred a regional scramble for an alternative, with Arab leaders working on a proposal that aims to pump billions of dollars in reconstruction money into the enclave, according to people familiar with the planning.
@@ -1865,15 +1643,11 @@ Witkoff said Arab leaders are now considering new solutions for rebuilding Gaza,
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -1910,10 +1684,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump was officially elected chair of the John F. Kennedy Center for the Performing Arts in Washington on Wednesday, installing a new board of trustees as he furthers his executive authority to remake one of the nation’s premier cultural institutions.
 The Kennedy Center’s new board is composed of Trump loyalists, including White House Chief of Staff Susie Wiles, White House Deputy Chief of Staff Dan Scavino, second lady Usha Vance, former transportation secretary Elaine Chao and Trump himself, <a href=""https://www.kennedy-center.org/about-us/leadership/trustees/"" target=_blank>according to its website</a>.
@@ -1923,13 +1693,7 @@ On Monday on Truth Social, Trump also named former acting director of national i
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -1967,19 +1731,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Attorney General Pam Bondi called the corruption charges against New York City Mayor Eric Adams “the weaponization of government” during a CPAC talk. She accused prosecutors of bringing charges to “make deportation harder.”
 “It’s about ending their weaponization of the government and fighting violent crime and enabling cities like New York and mayors like Eric Adams to enforce Donald Trump’s immigration policies,” Bondi said.",Attorney General Pam Bondi called the corruption charges against New York City Mayor Eric Adams “the...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1989,15 +1745,15 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Department of Housing and Urban Development, acting on a directive from DOGE, is moving to terminate more than $1.1 billion in loans and grants awarded to improve the energy efficiency and weather resilience of multifamily housing, according to a department official with knowledge of the order.
@@ -2008,15 +1764,11 @@ The program, created through the 2022 Inflation Reduction Act, is targeted at up
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -2062,13 +1814,7 @@ In awarding a new contract, agencies must comply with the Competition and Contra
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2093,10 +1839,6 @@ Lutnick said the $5 million requirement for the “gold card” would be paid �
 Lutnick suggested the money would be used “to reduce our deficit,” but Trump would not definitively state whether that money would be earmarked specifically for deficit reduction. The president said that if “gold card” holders create jobs within the United States, “they’ll pay full taxes like everybody else.”
 Trump also said he anticipated that the card would be used by American companies seeking to bring in talent from abroad.
 When asked whether Russian oligarchs would be eligible for a “gold card,” Trump responded, “Yeah, possibly. I know some Russian oligarchs that are very nice people.”",Trump: Government will sell $5 million ‘gold card’ to wealthy immigrants,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2142,10 +1884,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Shortly after President Donald Trump signed a proclamation celebrating National Black History Month on Friday, the Pentagon issued guidance declaring that “identity months” were “dead” within the Defense Department.
 Trump’s proclamation acknowledged the contribution of several history-making Black Americans, calling upon “public officials, educators, librarians, and all the people of the United States to observe this month with appropriate programs, ceremonies, and activities.”
@@ -2171,17 +1909,9 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "The Trump administration and the Ukrainian government were nearing a deal Friday to hand Ukrainian mineral resources over to the United States in exchange for continued security assistance, a person familiar with the negotiations said, potentially easing President Donald Trump’s days of attacks against the embattled country and its leadership.
 <a href=""https://www.washingtonpost.com/politics/2025/02/21/us-ukraine-near-minerals-deal/"" target=_blank>Read the full story</a>","U.S., Ukraine near deal to grant mineral rights to Washington","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2224,10 +1954,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump ended his speech on an optimistic note about the future of the United States, while making a dig at his predecessor by asserting that the “nation has suffered greatly” in recent years.
 “We will be a nation like no other,” he said. “Full of compassion, courage and exceptionalism. Our power will stop all wars and bring a new spirit of unity to a world that has been angry, violent and totally unpredictable.”
@@ -2235,19 +1961,15 @@ Trump has not yet specified what his plan is to end the <a href=""https://www.wa
 Trump shocked the political establishment at his first inauguration by <a href=""https://www.washingtonpost.com/politics/2025/01/20/trump-promises-unity-inaugural-address-can-he-deliver-it/"" target=_blank>straying from the formula</a> for these speeches, painting a dark picture of “American carnage.” On Monday, he again presented a negative view of the current state of affairs, but he ended on a far more traditional tone that acknowledged the ambition and success of Americans.
 “We will dream boldly, and nothing will stand in our way because we are Americans,” he said. “The future is ours and our golden age has just begun.”",Trump ends with a bold promise for a ‘golden age’,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -2257,7 +1979,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "VATICAN CITY — Pope Francis remained in critical condition Monday as the Vatican held the first nightly rosary recitation in St. Peter’s Square, underscoring concern over the 88-year-old pontiff’s health.
@@ -2283,27 +2005,23 @@ On Saturday, the Vatican acknowledged in a written bulletin that Francis was in 
 In a Sunday evening update, the Vatican said the pope’s condition remained “critical” but that there had been no recurrence of the respiratory crisis. He received treatment to boost his red blood cells. Blood tests showed “mild” renal insufficiency but that it was “under control.” The pope, officials said, continued to receive high-flow oxygen through a nasal tube.
 Cardinal Gianfranco Ravasi marveled at the level of detail being released about a pope’s health. He told Corriere della Sera last week: “It’s remarkable how his conditions have been clearly explained. There used to be a tendency to conceal things related to the [the pope], like the Soviet bulletins in which the secretary had but a cold until he died. Now we go into detail. The ‘polymicrobial infection.’ The ‘bilateral pneumonia.’”",Pope shows ‘slight improvement’ amid special prayers at St. Peter’s,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "American Eagle Flight 5342 had 60 passengers and four crew members aboard as the <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/31/dc-plane-crash-happened-potomac-river/"">plane collided with an Army helicopter</a> carrying three crew members, a crash with no survivors just outside Reagan National Airport whose horror reverberated across the country.
@@ -2318,27 +2036,23 @@ As family members, friends and colleagues grieve, they also shared memories of t
 About this story
 Design by Irfan Uraizee. Alice Crites, Aaron Schaffer, Razzan Nakhlawi, Erin Cox, Ellie Silverman, Kyle Swenson, Steve Thompson and Aaron Wiener contributed to this report.",The lives lost in the D.C. plane-helicopter crash,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "On a party-line vote, the Senate Health, Education, Labor and Pensions Committee voted Thursday to advance the nomination of Linda McMahon as secretary of education. The tally was 12-11 to send her nomination to the Senate floor, where she is expected to be confirmed.
@@ -2363,19 +2077,13 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "More Republicans are more satisfied with the way democracy is working in the United States than they were a year ago, when dissatisfaction was at an all-time low, according to a poll released Wednesday.
@@ -2384,27 +2092,23 @@ Gallup attributed the increased satisfaction among Republicans to Donald Trump�
 However, while Republicans are more upbeat about democracy, the nation’s overall sentiment has declined in recent decades to 34 percent today and remains low compared to the 1980s and 1990s. Satisfaction with U.S. democracy reached a record high of 61 percent in 1984.
 Americans’ satisfaction with democracy today matches what it was in January 2021, shortly after Trump contested the results of the 2020 election, which led to the Jan. 6, 2021, attack on the U.S. Capitol.",Republican satisfaction in democracy increases to 33 percent,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The deportation blitz President Donald Trump promised on the campaign trail kicked off in U.S. cities this week, delighting many of his supporters and jolting communities where immigration officers appeared — or whose arrival was merely rumored, sending a chill nonetheless.
@@ -2476,12 +2180,6 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "A federal district judge granted a temporary restraining order Monday that blocks the Trump administration from making<b> </b>drastic cuts to biomedical research funding in 22 states that banded together to sue.
 Judge Angel Kelley, in federal district court in Massachusetts, ordered the National Institutes of Health not to implement a <a href=""https://www.washingtonpost.com/health/2025/02/08/nih-cuts-billions-dollars-biomedical-funding-effective-immediately/"" target=""_blank"">funding change that the agency had announced Friday night</a>, which would dramatically reduce funding to universities and other research organizations for indirect costs related to research.
@@ -2493,25 +2191,19 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -2532,15 +2224,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -2597,27 +2285,23 @@ About this story
 The Post used 3D modeling software to reconstruct the scene in the sky over Washington in the minutes leading up to the fatal collision. The Post imported OpenStreetMap data of roads and building footprints into the scene as well as commercially available models of the Black Hawk helicopter, the Bombardier CRJ-700 and additional aircraft. We plotted and animated the flight paths of all aircraft using data from ADS-B Exchange, and timed these alongside key moments from Air Traffic Control radio communications. The Black Hawk’s Model S signal was picked up through multilateration, which can be imprecise because it requires multiple receivers to have line of sight. Two former helicopter pilots said data that appeared to show the helicopter turn sharply, west of Hains Point, was most likely an anomaly as the speed at that time would make such a turn unlikely, so The Post excluded this data point from the reconstruction. Altitude data for the helicopter was available only in 100 feet increments. By mounting a camera inside a model of the helicopter, we were able to show the pilot’s perspective throughout the flight and display where key aircraft would have likely appeared in their field of vision. The lighting within the 3D model is a representation rather than an accurate depiction of the thousands of lights across the city, which would be too complex to precisely render at this scale. Pilots consulted for this story include Ken Biddulph, Phillip Brashear and Bradley Bowman who all flew this route many times.
 Credits: Story editing by Nadine Ajaka and Eric Rich. Design editing by Madison Walls. Copy editing by Dorine Bethea. William Neff, Kevin Uhrmacher and Ian Duncan contributed to this report.",3D analysis shows how helicopter pilots could have mixed up jets in DCA crash,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Trump administration put scores of additional employees of the U.S. Agency for International Development on leave Tuesday, dealing a further blow to the beleaguered aid agency.
@@ -2629,10 +2313,6 @@ The campaign to overhaul — and potentially abolish — USAID has been led by b
 Placing officials on administrative leave has hamstrung large parts of USAID just as humanitarian groups around the world seek exemptions to Trump’s 90-day aid freeze. Officials who received the letter were immediately locked out of emails and unable to manage the flood of exemption requests, a bottleneck that aid workers say has prevented life-saving aid projects from restarting across the developing world.
 USAID did not immediately respond to a request for comment.
 Democrats have vowed to fight any attempt to dismantle the agency, citing its creation in statute. A Democratic Senate aide, who spoke on the condition of anonymity, said Tuesday’s move to put additional staff on leave was “sweeping in nature.”","In new order, Trump administration places more USAID staff on leave","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2675,18 +2355,10 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Defense Secretary Pete Hegseth has ordered senior leaders at the Pentagon and throughout the U.S. military to develop plans for cutting eight percent from the defense budget in each of the next five years, according to a memo obtained by The Washington Post and officials familiar with the matter — a striking proposal certain to face internal resistance and strident bipartisan opposition in Congress.
 Hegseth ordered the proposed cuts to be drawn up by Feb. 24, according to the memo, which includes a list of 17 categories that the Trump administration wants exempted. Among them: operations at the southern U.S. border, modernization of nuclear weapons and missile defense, and acquisition of one-way attack drones and other munitions.
 <a href=""https://www.washingtonpost.com/national-security/2025/02/19/trump-pentagon-budget-cuts/"" target=_blank>Read the full story</a>",Trump administration orders Pentagon to plan for sweeping budget cuts,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2729,19 +2401,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump signed executive orders Monday imposing 25 percent tariffs on imported steel and aluminum, the latest salvo in his ongoing effort to overhaul the U.S. trading relationship with the rest of the world.
 “This is a big deal — making America rich again,” Trump said as he signed the orders.
 The tariffs are likely to renew tensions between the United States and its North American neighbors, which are among the largest suppliers of steel imports. The president last week paused plans to impose a separate set of import taxes on goods from Canada and Mexico, which he linked to concerns over immigration and drug trafficking.
 Canada, the No. 1 foreign supplier, last year shipped 6.6 million tons of steel to American buyers, according to the American Iron and Steel Institute. Brazil, Mexico, South Korea and Vietnam rounded out the top five import sources. Read more <a href=""https://www.washingtonpost.com/business/2025/02/10/trump-tariffs-steel/"" target=_blank>here</a>.","Trump announces 25% tariffs on steel and aluminum, including for Canada and Mexico","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2789,10 +2453,6 @@ The New York Fed declined to comment.
 At the Kansas City Fed, top officials told staff members on Halloween — less than a week before the presidential election — that the bank’s commitment to DEI “remains steadfast,” according to a message to the bank’s roughly 2,000 employees reviewed by The Post.
 That contrasted sharply with a Jan. 28 message from the top two officials at each Fed bank announcing the system was “temporarily pausing” diversity initiatives through at least February.
 <i>Jeff Stein contributed to this report.</i>","Trump moves to narrow independence of Fed, along with other Wall Street overseers","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2871,20 +2531,12 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "The Trump administration is laying the groundwork to close the headquarters building for the Consumer Financial Protection Bureau in downtown Washington, the latest signal officials are planning to make significant cuts to the agency with broad authority over the consumer finance market.
 CFPB officials this week notified the Office of the Comptroller of the Currency that the bureau plans to terminate its long-term lease on the building, according to a person familiar with the matter who spoke on the condition of anonymity to convey internal plans.
 The Comptroller, which regulates large national banks, owns the boxy Brutalist structure that has housed the bureau since October 2011.
 The agency stands to become the latest casualty in Trump’s aggressive reconfiguration of the U.S. government. Staff of the CFPB are already bracing for widespread cuts as early as Friday.
 The administration already temporarily shuttered the access of CFPB officials to the building this week.","CFPB prepares to end lease on headquarters building, ahead of expected cuts","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2942,15 +2594,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -2960,10 +2608,6 @@ Pass Reason: All assertions passed"
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> says he has ordered the U.S. Treasury to stop minting new pennies, calling their production “wasteful.”
 “For far too long the United States has minted pennies which literally cost us more than 2 cents,” Trump <a href=""https://truthsocial.com/@realDonaldTrump/posts/113977224933701762"" target=_blank>said</a> in a Truth Social post Sunday night. “Let’s rip the waste out of our great nations budget, even if it’s a penny at a time.”
 <a href=""https://www.washingtonpost.com/nation/2025/02/10/trump-us-mint-penny-coins/"">Read the full story</a>",Trump says he ordered Treasury Department to stop producing new pennies,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -2996,27 +2640,23 @@ According to the final fall numbers, freshman head counts grew 5.5 percent, driv
 Community colleges, which bore the brunt of enrollment losses during the pandemic, are now reporting some of the strongest enrollment gains, although they remain below pre-pandemic levels. Those with a focus on vocational education witnessed double-digit growth for the second year in a row. Students are also flocking to certificate programs, where enrollments are now 28.5 percent above 2019 levels, according to the Clearinghouse.
 Enrollment in bachelor’s and associate’s degree programs is also up, by 2.9 percent and 6.3 percent, respectively, but these remain below 2019 levels. Student head counts are up across all regions, with the Northeast recording the first gain in enrollment since before the pandemic.","College enrollment rebounds, surpassing pre-pandemic levels","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "House Speaker Mike Johnson (R-Louisiana) announced a new select subcommittee to continue House Republicans’ investigation into the events leading up to and after the Jan. 6, 2021, attack on the U.S. Capitol.
@@ -3025,36 +2665,28 @@ Loudermilk’s team published a 128-interim report last month chronicling invest
 “House Republicans are proud of our work so far in exposing the false narratives peddled by the politically motivated January 6 Select Committee during the 117th Congress, but there is still more work to be done,” Loudermilk said in an emailed statement. “We are establishing this Select Subcommittee to continue our efforts to uncover the full truth that is owed to the American people. The composition and other details regarding the Select Subcommittee will be announced soon.”
 The effort is a part of the Republican Party’s broader push to recast the violent events of Jan. 6, 2021, and comes on the heels of Trump’s <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/20/trump-pardons-jan-6-defendants/"" target=_blank>blanket pardon</a> Monday evening of virtually all of the Jan. 6 defendants. He also commuted the sentences of the remaining 14, cutting short sentences for nine members of the Oath Keepers and five members of the Proud Boys, both far-right groups.",House Republicans announce panel to continue investigation into Jan. 6,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Heads of federal agencies have until 5 p.m. Friday to revise their telework policies, according to <a href=""https://chcoc.gov/sites/default/files/OPM%20Return%20to%20Office%20Guidance%20Memorandum%201-22-25.pdf"" target=_blank>guidelines</a> released late Wednesday by the White House’s Office of Personnel Management, the latest indication of how President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> is seeking to reshape the sprawling federal government.
 The memo did not set a date for the new policies to take effect, but directed agencies to require employees to comply with in-office mandates within roughly 30 days of the new policy announcement.
 <a href=""https://www.washingtonpost.com/politics/2025/01/23/federal-worker-mandates-resistance-trump/"">Read the full story</a>","Federal agencies must revise telework policies by Friday, White House says","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -3109,10 +2741,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump and Maine Gov. Janet Mills (D) briefly sparred Friday over the president’s threat to withhold federal funds from her state if it doesn’t comply with a <a href=""https://www.washingtonpost.com/education/2025/02/05/transgender-students-trump-executive-order/"" target=_blank>recent executive order barring transgender athletes</a> from competing on women’s sports teams.
 In a gathering with a group of governors at the White House, Trump began to talk about one of his signature culture war promises when he asked whether anyone among the governors gathered at the White House was from Maine. The Maine Principals’ Association has said it will not enforce his executive order aiming to ban trans athletes from competing in girls’ sports.
@@ -3120,10 +2748,6 @@ In a gathering with a group of governors at the White House, Trump began to talk
 “We’re going to follow the law, sir. We’ll see you in court,” she said.
 “Enjoy your life after governor because I don’t think you’ll be in elected office,” Trump said to the term-limited governor.
 The back-and-forth followed Trump’s remark Thursday to a group of Republican governors that he would withhold federal funds from Maine unless the state complies with his executive order. In a <a href=""https://mainemorningstar.com/2025/02/21/gov-mills-said-maine-will-not-be-bullied-into-complying-with-trumps-transgender-athlete-order/"" target=""_blank"">statement</a> to the Maine Morning Star, Mills responded Friday morning that “the State of Maine will not be intimidated by the president’s threats.”","Trump, Maine Gov. Mills spar over executive order on transgender athletes","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -3171,11 +2795,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3191,19 +2811,13 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump continues to face criticism from Republican and Democratic senators over his decision on Tuesday to issue pardons to roughly 1,500 criminal defendants involved in the Jan. 6 attack on the U.S. Capitol.
 Sen. Lisa Murkowski (R-Alaska), one of the seven Republican senators who voted to convict Trump in his second impeachment trial, is the latest to express public disapproval, particularly for the pardons for those convicted of assaulting police officers.
 “The Capitol Police officers are the backbone of Congress — every day they protect and serve the halls of democracy. I strongly denounce the blanket pardons given to the violent offenders who assaulted these brave men and women in uniform,” Murkowski wrote on X.
 She joins a growing chorus of senators who have condemned Trump’s decision, including Republican Sens. Mitch McConnell (Kentucky) — who said, “No one should excuse violence. And particularly violence against police officers” — and Thom Tillis (North Carolina), who said he “just can’t agree” with Trump’s clemency moves.",Murkowski condemns Trump’s pardons to Jan. 6 rioters who assaulted police,"[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -3292,27 +2906,23 @@ The IDF denied that families are still displaced.
 In an effort to shed its associations with Assad’s Baath Party, the town renamed itself Madinat al-Salaam, or City of Peace, in December. “Maybe they didn’t understand the message,” said Qasem al-Mohammad, 57, gesturing toward the tank.
 <i>Kelly reported from Washington.</i>","Israel is building outposts in Syria, raising local fears of occupation","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump’s <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/prioritizing-military-excellence-and-readiness-2/"" target=""_blank"">executive order</a> targeting <a href=""https://www.washingtonpost.com/national-security/2025/01/28/trump-transgender-troops-military-hegseth/"" target=""_blank"">transgender service members</a> and an array of other people was <a href=""https://glad-org-wpom.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2025/01/20250128_Talbott-v-Trump_Complaint.pdf"" target=""_blank"">quickly met with a lawsuit</a> brought Tuesday by organizations advocating for transgender people. The lawsuit, filed in U.S. District Court in Washington on behalf of six service members, challenges the order’s legality on constitutional grounds, stating that affected service members have built their lives around military service.
@@ -3339,34 +2949,26 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Rep. Lisa C. McClain (R-Michigan), speaking at a GOP leadership news conference Tuesday, dismissed <a href=""https://www.washingtonpost.com/politics/2025/02/21/doge-georgia-town-hall-gop/"">concerns that have been aired at Republican town halls</a> around the country about the U.S. DOGE Service — calling the concerns “orchestrated” and from “hijackers” who are “happy with the bloated status quo.”","Rep. Lisa C. McClain (R-Michigan), speaking at a GOP leadership news conference Tuesday, dismissed concerns that...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The National Science Foundation has halted for at least the rest of the week <a href=""https://www.washingtonpost.com/politics/2025/01/27/trump-presidency-news/#link-7P4XE6CJD5BVRHTR2U2DIEBMJY"" target=_blank>the work of review panels</a>, in which outside experts rate the merit of proposals for scientific research.
@@ -3374,10 +2976,6 @@ The NSF, a $10 billion agency that spreads research dollars across the country i
 “All review panels scheduled for the remainder of this week, 1/28-1/31 will be rescheduled to a future date as appropriate,” an NSF spokesperson said in an email. “This will allow the agency to make the best use of everyone’s time and resources as we continue to develop guidance to ensure compliance with the recent executive orders.”
 The broader scientific community has been scrambling for the past week amid a flurry of executive orders from President Donald Trump, including his directive to end all diversity, equity and inclusion programs. Federal science agencies, including NSF, NASA and the National Institutes of Health, have broadly embraced the need to diversify the community of researchers and the subjects they study.
 The cancellations at NSF come in the wake of news that NIH had also <a href=""https://www.washingtonpost.com/health/2025/01/23/trump-administration-hhs-health-agencies-pause-travel-communications/"" target=_blank>paused the work</a> of study sections that review grants.",National Science Foundation halts reviews of research proposals,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -3406,27 +3004,23 @@ Simmons and her co-authors described the collection in a December <a href=""http
 “Open data sharing is essential to equal advancement in all fields of science,” they write, noting that 3D scanning of important specimens is often an on-demand process provided to individuals. Making the collection freely available, they write, will enable more comprehensive research and could advance the study of human origins, which is closely linked to that of primate evolution.
 Want to take a look at the data? You can view the 3D scans at <a href=""http://bit.ly/3dprimates"" target=_blank>bit.ly/3dprimates</a>.",New database gives public easy access to 3D primate skeletons,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "<i>You’re reading an excerpt from the WorldView newsletter. </i><a href=""https://www.washingtonpost.com/newsletters/todays-worldview/"" target=_blank><i>Sign up to get the rest free</i></a><i>, including news from around the globe and interesting ideas and opinions to know, sent to your inbox on Mondays, Wednesdays and Fridays.</i>
@@ -3475,12 +3069,6 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "The U.S. Labor Department has been temporarily blocked by court order from sharing data with Elon Musk’s U.S. DOGE Service, according to an email from a union that represents federal government workers. The email was obtained by The Washington Post.
 The temporary order arrives after DOGE representatives visited the Labor Department this week, seeking sensitive data that the agency keeps. In response, a group of powerful unions swiftly sued DOGE in U.S. District Court for the District of Columbia on Wednesday, arguing that DOGE’s work was illegal and has “already been catastrophic.”
@@ -3491,37 +3079,31 @@ The Labor Department manages huge volumes of sensitive data related to the labor
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "Trump officials have canceled a federal vaccine advisory committee meeting expected to be held<b> </b>next month that was intended to help select the makeup of next winter’s influenza vaccine.
@@ -3538,10 +3120,6 @@ During his confirmation hearings, Kennedy repeatedly denied that he is anti-vacc
 Kennedy was critical of the CDC vaccine panel during his <a href=""https://www.washingtonpost.com/health/2025/01/30/rfk-health-secretary-confirmation-hearings/"">confirmation process</a> and has argued that federal agencies are <a href=""https://www.washingtonpost.com/health/2025/02/18/trump-health-firings-fda-cdc/"">captive</a> to the industries they regulate.
 “We will remove conflicts of interest on the committees and research partners whenever possible, or balance them with other stakeholders,” Kennedy said in remarks to HHS staff earlier this month.
 An executive order issued by President Donald Trump last week to reduce federal bureaucracy said White House officials would identify “unnecessary governmental entities and Federal Advisory Committees that should be terminated on grounds that they are unnecessary.”",Vaccine meeting to prepare for coming winter’s flu season canceled,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -3601,15 +3179,11 @@ Collins, who voted to convict Trump in the 2021 impeachment trial, indicated she
 Coons doesn’t even know how Democrats would write such a guarantee into legislation, given that it is already the law.
 “I mean, it is demonstrably the law that when we pass an appropriations bill, and the president signs it into law, it has the force of law,” he said. “And you’re supposed to follow it.”","Congress ignores looming shutdown to focus on tax cuts, agency layoffs","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3619,11 +3193,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Utah could become the first state to ban fluoride in its drinking water, alarming <a href=""https://adanews.ada.org/ada-news/2025/february/utah-set-to-ban-community-water-fluoridation/"" target=_blank>public health experts and dentists </a>who note the mineral’s role in reducing tooth decay across the nation.
@@ -3648,11 +3222,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3662,11 +3232,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The airspace along the Potomac River where an <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/30/dc-plane-crash-updates-helicopter-potomac-reagan-airport/"" target=_blank>Army helicopter and an airliner crashed</a> Wednesday night poses some of the most complex challenges in the country for pilots, requiring them to rely on layers of procedures and electronic safeguards to avoid a catastrophe.
@@ -3693,27 +3263,23 @@ The FAA has investigated at least three close calls at National in recent years.
 Michael McCormick, an associate professor at Embry-Riddle Aeronautical University who specializes in air traffic control, said complacency about the airport’s complicated traffic patterns and lower nighttime staffing levels for air traffic controllers could be a factor.
 “This is an avoidable and unfortunate tragedy,” McCormick said.","D.C. crash took place in congested airspace shared by jets, helicopters","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "House Speaker Mike Johnson (R-Louisiana) said “the time has come” to disband the Department of Education, as President Donald Trump has pledged. Shutting down the department would require congressional approval.
@@ -3726,23 +3292,19 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Connecticut Attorney General William Tong, the son of Chinese immigrants, <a href=""https://www.nbcnews.com/politics/donald-trump/-first-sue-opposing-trumps-desire-end-birthright-citizenship-personal-rcna184891"" target=""_blank"">laid down a marker</a> when asked in December about Donald Trump’s pledge to end birthright citizenship: “I would be the first to sue.”
@@ -3780,11 +3342,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3809,11 +3367,7 @@ Fail Reason: Expected output ""true"" to equal ""false"""
 As Musk’s deputies embed themselves deep inside federal agencies, alarm is growing over their unchecked access, the scope of their authority and the Trump administration’s willingness to let them operate in the shadows.
 Here’s a look at some of the latest news on DOGE:",New targets of — and new challenges to — Musk’s U.S. DOGE Service,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3823,7 +3377,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3833,7 +3387,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The billionaire family that owns Purdue Pharma, maker of the pain medication blamed for helping fuel the nation’s opioid crisis, has agreed to increase payments to settle long-running litigation against the company, promising to pay $6.5 billion over 15 years as part of a deal announced Thursday by several state attorneys general.
@@ -3859,42 +3413,34 @@ Relatives of some opioid victims also criticized the deal.
 Since 2000, hundreds of thousands have died in the United States of prescription opioid overdoses, according to statistics from the Centers for Disease Control and Prevention. The crisis recently has evolved into an even deadlier phase, marked by the use of synthetic opioids such as fentanyl that typically are illegally manufactured and imported.
 Ed Bisch, who lost his son to an overdose and runs a group called Relatives Against Purdue Pharma, said victims “paid with their lives and get peanuts in the end — while states collect billions in blood money.”",Purdue Pharma owners strike new $6.5 billion deal in opioid case,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Trump claimed without evidence that federal funding to improve voter turnout in India was “a kickback scheme.” He said this while listing a number of foreign aid contracts that have been eliminated by the U.S. DOGE Service.
 “I would say in many cases, many of these cases, anytime you have no idea what we’re talking about, that means there’s a kickback, because nobody has any idea what’s going on,” he said.
 The USAID inspector’s general office regularly investigates allegations of corruption, and people have been <a href=""https://www.stateoig.gov/report-289"" target=_blank>fined or jailed</a> for participation in kickback schemes.",Trump claimed without evidence that federal funding to improve voter turnout in India was “a kickback...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -3910,7 +3456,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "The question:
@@ -3939,27 +3485,23 @@ In the spirit of Valentine’s Day, The Washington Post asked readers to share s
 The bottom line:
 While some research suggests that there is a greater tendency for men to hold certain romantic beliefs such as love at first sight, romanticism is significantly influenced by<b> </b>cultural, societal, generational and individual relationship dynamics, experts said.","Men may be more romantic than women, experts say","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A Space Force military base in Colorado will serve as a detention center for immigrant detainees facing deportation, Defense Department officials said Wednesday.
@@ -3985,19 +3527,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump on Tuesday ordered all employees focused on diversity, equity and inclusion initiatives<a href=""https://www.washingtonpost.com/politics/2025/01/22/dei-federal-employees-trump/"" target=_blank> to be placed on leave</a> no later than 5 p.m. Wednesday, and on Wednesday he revoked a 60-year-old executive order banning discrimination in hiring practices in the federal government.
 Some acting <a href=""https://www.washingtonpost.com/politics/2025/01/22/federal-workers-trump-remote-work/"" target=_blank>agency heads started enacting the guidance</a>, with multiple directors Wednesday telling staff that all “DEIA offices” are closing and mandating that employees report instances where government workers were trying to “disguise” programs by using “coded or precise language,” according to emails obtained by The Washington Post. The White House did not respond to questions about how many of the 2.3 million federal employees were affected by his order.
 A memo from Secretary of State Marco Rubio warns State Department officials that they will face “adverse consequences” if they fail to report on colleagues who have concealed or obscured existing DEI programs at the department.
 “The Administration is aware of efforts by some in government to disguise these programs,” the memo says. “There will be no adverse consequences for timely reporting this information. However, failure to report this information within 10 days may result in adverse consequences.”",Some agency heads mandate that employees report efforts to ‘disguise’ DEI programs,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -4042,19 +3576,9 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump said in his remarks at the U.S. Capitol that his administration will work to “forge a society that is color-blind and merit-based.” He declared he will end federal policies that he claims are efforts to “socially engineer race and gender into every aspect of public and private life.”
 Trump also announced: “As of today, it will henceforth be the policy of the United States government that there are only two genders, male and female.”",President Donald Trump said in his remarks at the U.S. Capitol that his administration will work...,"[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -4118,20 +3642,10 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> on Tuesday proposed moving Gazans to a “good, fresh, beautiful piece of land” in another country, offering a vision of mass displacement that would likely inflame sentiments in the Arab world as he prepared to welcome <a href=""https://www.washingtonpost.com/world/2025/02/03/netanyahu-trump-white-house-gaza/"" target=_blank>Israeli Prime Minister Benjamin Netanyahu to the White House</a>.
 Trump framed the vision as a practical response to the physical destruction of Gaza after 16 months of intense bombardment from Israel. But given the decades-long history of the displacement of Palestinians in the region, as well as vows by the Israeli far-right to claim the Gaza Strip for themselves, Trump’s proposal was likely to provoke a furious reaction from many Palestinians as well as their Arab allies in the region, since it suggested permanently removing Gaza’s 2.2 million residents from Palestinian territory and settling them somewhere else.
 <a href=""https://www.washingtonpost.com/politics/2025/02/04/trump-netanyahu-meeting/"">Read the full story</a>",Trump proposes permanent displacement of Gazans as he welcomes Netanyahu to White House,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -4177,13 +3691,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4193,13 +3701,13 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "Adrien Stevens watched the frenzy unfold from his backside.
@@ -4213,52 +3721,44 @@ From the second quarter on, the game felt destined to come down to the final sho
 But the shot bounced off the iron, and the game was over. Queen’s “We Are the Champions” soon blared from the gym’s speakers. The Bulldogs wouldn’t dare tempt the basketball gods by practicing the ritual beforehand, meaning they finally could climb a stepladder to cut down the nets.
 “That was the greatest feeling I’ve ever had,” freshman Xavier Skipworth said. “Coach always says we have to be a fist and not separate fingers. We knew they were going to punch hard, but we just had to stick together. We just did that.”","With one last stop, Bullis is too much and makes it three straight IAC titles","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "In the lead-up to President Donald Trump’s inauguration, mentions of “oligarchy” among prominent left-wing politicians and influencers surged nearly tenfold, according to a Washington Post analysis. Sen. Bernie Sanders (I-Vermont) <a href=""https://x.com/SenSanders/status/1870258569058099253"" target=_blank>revived</a> the term in response to reports about Elon Musk heading a new commission focused on government spending. The discussion intensified after President Joe Biden’s farewell address Jan. 15, when he <a href=""https://www.washingtonpost.com/politics/2025/01/15/biden-farewell-address-oval-office/"" target=_blank>warned of an emerging oligarchy</a> and a powerful tech-industrial complex in America.","In the lead-up to President Donald Trump’s inauguration, mentions of “oligarchy” among prominent left-wing politicians and...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "DORAL, Fla. — President Donald Trump said Monday that he doesn’t just want to deport undocumented immigrants with criminal convictions, but also hopes to remove violent, repeat offenders — in the United States legally — from the country.
@@ -4268,15 +3768,11 @@ Trump did not provide more details about his plans, and it is not clear how he w
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4313,36 +3809,28 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump’s defense secretary nominee, Pete Hegseth, in his Senate confirmation hearing last week dismissed a series of allegations against him as “<a href=""https://www.washingtonpost.com/politics/2025/01/15/hegseth-hearing-questions-drinking-affairs/"" target=""_blank"">anonymous smears</a>.”
 But not all of them have been anonymous. And now, for the second time, Hegseth has been accused of abusive behavior toward women by a woman named Hegseth.
 <a href=""https://www.washingtonpost.com/politics/2025/01/22/pete-hegseth-danielle-affidavit-abuse-allegation/"" target=_blank>Read the full story</a>",Analysis: Parsing the latest Pete Hegseth allegation,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A total of six girls, ages 11 to 14, have been arrested and charged in an “egregious” and apparently random attack on a woman by a group of youths outside Union Station, according to the D.C. police.
@@ -4361,27 +3849,23 @@ In the attack outside Union Station on Massachusetts Avenue, the assailants assa
 In addition to the assault charge, those located and arrested Friday were also charged with rioting, the police statement said.
 In their original statement, police also said they were collaborating with counterparts in other jurisdictions to determine whether the youths could be connected to similar attacks elsewhere. Those other areas were not identified.","Six girls, 11 to 14, arrested in assault outside Union Station","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "An independent federal board on Tuesday <a href=""https://democracyforward.org/updates/breaking-merit-systems-protection-board-stays-termination-of-six-probationary-federal-workers/"" target=""_blank"">granted a request</a> from the U.S. Office of Special Counsel (OSC) to halt the termination of six probationary government employees amid the Trump administration’s efforts to slash the federal workforce.
@@ -4406,13 +3890,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4422,7 +3900,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4431,10 +3909,6 @@ true
 Pass Reason: All assertions passed"
 "President Donald Trump signed <a href=""https://x.com/Scavino47/status/1889083008331972688"" target=_blank>an executive order</a> on Monday requiring the federal government to return to the use of plastic straws and away from paper straws.
 “We’re going back to plastic straws. These things don’t work,” Trump said from the Oval Office. “I’ve had them many times, and on occasion, they break, they explode.”",President Donald Trump signed an executive order on Monday requiring the federal government to return to...,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -4477,35 +3951,27 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Sen. Amy Klobuchar (D-Minnesota), the chairwoman of the bipartisan Joint Congressional Committee on Inaugural Ceremonies, said in opening remarks that there was “a reason” that the ceremony takes place at the U.S. Capitol.
 “In other countries, it might be in a presidential palace or a gilded executive office building. Here, it is traditionally held at the Capitol, the People’s House,” she said. “It is a fitting reminder of the system of checks and balances that is the very foundation of our government. Three equal branches of government.”","Sen. Amy Klobuchar (D-Minnesota), the chairwoman of the bipartisan Joint Congressional Committee on Inaugural Ceremonies, said...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump spoke Wednesday with Saudi Crown Prince Mohammed bin Salman, his first call with a foreign leader since he was sworn in as president again.
@@ -4517,11 +3983,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -4568,27 +4030,23 @@ But Wizards fans probably don’t want to see their team win <i>too much</i> ove
 
 This season undoubtedly has been painful, evident in the red on all of these graphs. Winger, Dawkins and the rest of the organization hope the short-term struggles lead to a high draft pick and eventually the type of sustainable winner that has been absent in Washington for nearly 50 years.",Losing is the Wizards’ way. It might also be their way out.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Trump administration has removed the top official at Immigration and Customs Enforcement one month into his tenure, as White House officials have become <a href=""https://www.washingtonpost.com/immigration/2025/02/15/ice-arrests-immigration-deportations/"" target=_blank>increasingly frustrated</a> that the agency isn’t arresting immigrants fast enough to satisfy the president’s deportation goals.
@@ -4626,10 +4084,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump on Monday touted his weekend <a href=""https://www.washingtonpost.com/immigration/2025/01/26/trump-colombia-deportation-flights-migrants-tariffs/"" target=_blank>threat to levy tariffs</a> on Colombia after they turned away deportation flights — and said his actions should send a message to other nations.
 “As you saw yesterday, we’ve made it clear to every country that they will be taking back our people … and they’re going to take them back fast,” Trump said at the House Republicans’ Florida retreat. “And if they don’t, they’ll pay a very high economic price. And we’re going to immediately install massive tariffs.”
@@ -4639,11 +4093,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -4692,37 +4142,29 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Senate Democrats plan to protest the confirmation vote of Russell Vought to lead the Office of Management and Budget by holding the Senate floor for the full 30 hours of debate that are allowed before a final vote Thursday.
 Democrats will speak overnight about what they see as the dangers of <a href=""https://www.washingtonpost.com/business/2025/01/24/russell-vought-trump-budget/"" target=_blank>Vought’s vision for reducing federal spending</a> through freezing and reviewing funds.
 Vought, who has warned that the government is “woke and weaponized” and has said federal workers should be viewed as villains, is emerging as a new opponent for Democrats given President Donald Trump’s aggressive moves to overhaul and diminish some federal agencies.
 He is expected to be confirmed Thursday on a party-line vote.",Senate Democrats plan 30-hour protest of Vought’s nomination for OMB,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A federal judge on Thursday refused to stop the CIA and director of national intelligence from firing 51 officers who had been assigned to diversity, equity, inclusion and accessibility roles that were scrapped last month by President Donald Trump. The officers may not appeal to civil service boards, and they may not transfer to other jobs in the intelligence community because agency rules allow the director to fire employees without any recourse.
@@ -4762,10 +4204,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Native American leaders said they’re worried about the impact of a freeze on federal grants and loans that could affect dozens of programs that provide a range of services including food, health care, education, housing and law enforcement.
 The United States has more than 570 federally recognized tribes, and many receive some type of funds to provide programs and services for their tribal citizens through the federal government.
@@ -4779,17 +4217,13 @@ Arce said some tribes use the federal grants for much-needed services, and “if
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4812,27 +4246,23 @@ Referring to the world’s richest man as “actually a very good businessman,�
 “He gets it done,” Trump said. Musk, for his part, described himself as “tech support” for carrying out Trump’s executive orders.
 “I feel like I’m interviewing two brothers here,” Hannity said.","‘Interviewing two brothers:’ Trump, Musk speak about relationship","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A coalition of labor unions and individuals filed suit in federal court Monday alleging that Elon Musk and the U.S. DOGE Service have been given access to sensitive records of millions of American in violation of the Privacy Act.
@@ -4842,25 +4272,19 @@ The suit was filed by the American Federation of Teachers, the National Active a
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -4883,37 +4307,31 @@ McMahon said barring Dellinger’s removal would cause Trump to “lose control 
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "NEW YORK — When I was sent to photograph New York Fashion Week in September 2024, many people I spoke with were shocked to hear it was my first time. I’ve been working as a photographer for 25 years, but in this arena, I felt something like an alien. Coming back this week for a second time was more familial. One word that comes to mind, to sum it all up, is <i>community</i>. It’s remarkable, and to state the obvious — beautiful — to see the art of garments, hats, shoes and accessories, celebrated with such reverence and a kinship among fashion fans and favorites.
@@ -4921,37 +4339,27 @@ February’s fashion seemed extra chilly with a dash of snowflakes. I had hoped 
 Sure, most of these folks were headed inside to witness the latest designs come down the runways. But the real circus is indeed outside of these events. Dozens of fashion editors, models, designers, stylists and even the want-to-be-seen parade down the streets — sometimes even stopping traffic. I saw amateur and professional photographers turning their lenses on fashionistas in the middle of intersections as motorists angrily honked their horns. This is where all the action is.
 I’m highly attracted to the fun chaos of it all. Folks proudly sashaying down alleys. People wearing garments of all kinds — some they made themselves. The funniest accessory I saw at a fashion show was a cheetah-printed bong, and the model had the pants to match. It is indeed a community, an eclectic one at that.",Snow and slush didn’t dampen street style at New York Fashion Week,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump on Wednesday said he wanted the Department of Education to be “closed immediately.”
 “Look, the Department of Education’s a big con job,” he said in the Oval Office.",President Donald Trump on Wednesday said he wanted the Department of Education to be “closed immediately.”,"[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -5008,27 +4416,23 @@ While championship aspirations seem far-fetched, Lesesne and the players say the
 “We were competitive last year, and we started to show ourselves in terms of the proof of concept was there,” Lesesne said. “We want to build on that, but we have to take a bigger step this year. I don’t want to be around this position of nine, 10, 11 [in the standings] and just be in the mix. I’d like us to take a step forward.”
 D.C. United roster","After under-the-radar retool, D.C. United hopes to ‘prove people wrong’","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "“Post Next 50,” a project profiling 50 individuals set to shape society in 2025 and beyond, launched this week. Produced by The Washington Post’s Special Initiatives &amp; Partnerships (SIP) team, it featured multiple feature formats, dynamic off-platform storytelling, and a bespoke print product. The initiative highlighted a wide range of honorees, each carefully evaluated by reporters and editors with subject-matter expertise to confirm their potential to drive meaningful change.
@@ -5039,52 +4443,44 @@ To commemorate the inaugural list, The Post hosted an intimate gathering to reco
 Guests from the Post Next 50 List included,<a href=""https://www.washingtonpost.com/post-next/interactive/2025/#kizzmekia-corbetthelaire"" target=""_blank""> Dr. Kizzmekia Corbett-Helaire</a>, <a href=""https://www.washingtonpost.com/post-next/interactive/2025/jocelyne-bloch-gregoire-courtine/?itid=landing-page"" target=""_blank"">Grégoire Courtine and Jocelyne Bloch</a>,<a href=""https://www.washingtonpost.com/post-next/interactive/2025/#kara-calvert"" target=""_blank""> Kara Valvert, </a><a href=""https://www.washingtonpost.com/post-next/interactive/2025/#vinod-balachandran"" target=""_blank"">Vinod Balachandran</a>, <a href=""https://www.washingtonpost.com/post-next/interactive/2025/jeff-jenkins/?itid=landing-page"" target=""_blank"">Jeff Jenkins</a>, and more.
 You can find more information and experience “Post Next 50” <a href=""https://www.washingtonpost.com/post-next/interactive/2025/"" target=_blank>here.</a>","‘Post Next 50’ Debuts, Highlighting People Shaping Society in 2025","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Under the original planning document for the inauguration ceremony, Supreme Court Justice Brett M. Kavanaugh was supposed to be swearing in JD Vance as vice president at 11:32 a.m. Eastern time. The event is running  behind schedule, by perhaps 30 minutes or so.","Under the original planning document for the inauguration ceremony, Supreme Court Justice Brett M. Kavanaugh was...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump, early on in his speech, offered strong criticism of the current government while former president Joe Biden and former vice president Kamala Harris sat behind him.
@@ -5092,27 +4488,23 @@ Pass Reason: All assertions passed"
 “From this moment on, America’s decline is over,” he added.
 The remarks sound reminiscent of what he would say at his campaign rallies.","President Donald Trump, early on in his speech, offered strong criticism of the current government while...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Trump administration is expected to begin laying off thousands of employees at the Internal Revenue Service, six people briefed on the matter said, as billionaire Elon Musk’s team begins to target tax collections.
@@ -5131,13 +4523,9 @@ IRS employees cheered the Biden administration’s funding boosts, which yielded
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5180,10 +4568,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Lawyers for eight inspectors general suing the Trump administration over their firings last month were forced by an angry federal judge to withdraw their motion seeking a temporary restraining order.
 Judge Ana C. Reyes of the U.S. District Court for the District of Columbia tore into the attorneys for the plaintiffs in a brief but heated hearing on Friday afternoon.
@@ -5194,37 +4578,31 @@ After forcing the plaintiffs to withdraw their motion for a temporary restrainin
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "Pam Bondi was sworn in as the nation’s 87th attorney general Wednesday, inheriting a Justice Department roiled by recent staffing shake-ups and under pressure from President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> to remake a federal law enforcement apparatus he has denounced as “weaponized” against conservatives. She took the oath of office just hours after the department’s interim leaders sought to assure thousands of FBI agents who had worked on cases tied to the Jan. 6, 2021, attack on the U.S. Capitol that they were not in imminent danger of being purged.
@@ -5234,11 +4612,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -5258,7 +4632,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Speaker Mike Johnson (R-Louisiana) hinted that the GOP-led Congress may have to rely on Democrats to raise the debt ceiling this year in an interview during the House GOP retreat in Doral, Florida.
@@ -5266,36 +4640,28 @@ Though Johnson and many Republicans would like to raise the debt ceiling with on
 Senate Republicans hold 53 seats, meaning they need seven Democrats to agree on passing bills that require a filibuster-proof majority. Republicans are hoping to use and approve of a budgetary maneuver — often referenced as “reconciliation” — that would  lower the filibuster threshold to a simple majority to pass President Donald Trump’s agenda. Some House Republicans would like to tack the debt ceiling onto the reconciliation process — which is expected to address border security, energy and tax changes — because it could be passed with GOP-only votes. But it’s unclear whether the debt ceiling can be included under the strict budgetary parameters of reconciliation.
 House Republicans privately say they will need Democratic help, too, given that many fiscal hawks have pledged not to support raising the debt ceiling unless there are substantial spending cuts.",House speaker suggests Democratic votes could be needed on debt ceiling,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The White House budget office on Wednesday rescinded an order freezing federal grants, according to a copy of a new memo obtained by The Washington Post, after the administration’s move to halt spending earlier this week provoked a backlash.
 In a memo dated Wednesday and distributed to federal agencies, Matthew J. Vaeth, acting director of the White House Office of Management and Budget, states that OMB memorandum M-25-13 “is rescinded.”
 <a href=""https://www.washingtonpost.com/business/2025/01/29/white-house-budget-office-spending-freeze/"">Read the full story</a>","White House, in reversal, rescinds freeze on federal grants","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5342,18 +4708,10 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump’s administration took aim at government DEI programs, ordering federal diversity, equity and inclusion employees to be placed on leave no later than Wednesday and for DEI offices to be closed down, according to a memorandum sent Tuesday by the Office of Personnel Management.
 The directive will eventually lead to these employees being laid off or reassigned. It followed executive <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/"" target=""_blank"">orders</a> on <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/ending-radical-and-wasteful-government-dei-programs-and-preferencing/"" target=""_blank"">Monday</a> in which Trump directed<b> </b>an end to what he called “radical and wasteful” federal government DEI programs.
 <a href=""https://www.washingtonpost.com/politics/2025/01/22/dei-federal-employees-trump/"">Read the full story</a>",Layoffs loom as Trump administration orders federal DEI workers on leave,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5422,10 +4780,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "A federal judge on Monday blocked Elon Musk’s U.S. DOGE Service from using private information collected by<b> </b>the Education Department and the Office of Personnel Management.
 U.S. District Judge Deborah L. Boardman in Maryland issued a <a href=""https://protectdemocracy.org/wp-content/uploads/2025/02/Dkt-39-Opinion-and-Order-on-TRO.pdf"">temporary restraining order</a> in a lawsuit led by the American Federation of Teachers to stop DOGE, which stands for Department of Government Efficiency,<b> </b>from accessing databases containing personal information on millions of Americans. She denied the union’s request to block DOGE from sensitive Treasury Department data because a <a href=""https://www.washingtonpost.com/national-security/2025/02/21/doge-treasury-data-access/"">preliminary injunction</a> in a separate case achieved that goal.
@@ -5442,37 +4796,31 @@ Boardman released the order days after a federal judge in a separate lawsuit <a 
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "Democratic Party leaders in New York’s 21st Congressional District have backed farmer Blake Gendebien for the anticipated special election to replace Republican Rep. Elise Stefanik, President Donald Trump’s pick to be U.N. ambassador.
@@ -5480,29 +4828,23 @@ The party chairs in the 15 counties that make up the district released a stateme
 The race would be an uphill battle for Democrats — Stefanik won reelection last year by over 20 percentage points — but it could serve as a gauge of Democratic enthusiasm in the first months of the second Trump term. New York Gov. Kathy Hochul (D) gets to schedule the special election once Stefanik is confirmed and gives up her seat.
 Republican leaders in the district have not picked a candidate yet.",Democrats settle on candidate for Rep. Stefanik’s seat,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "A group of farmers and environmental nonprofits <a href=""https://earthjustice.org/brief/2025/were-suing-to-stop-the-trump-admins-climate-censorship-that-threatens-farmers-and-our-food-supply"" target=""_blank"">sued</a> the U.S. Department of Agriculture, accusing the department of scrubbing data relating to climate change from its website and saying the move would hinder research and hurt farming initiatives.
@@ -5523,13 +4865,7 @@ The suit asked the court to declare USDA’s actions unlawful and order the depa
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5556,13 +4892,7 @@ O’Donnell’s exit follows the departure of <a href=""https://www.washingtonpo
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -5576,7 +4906,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -5591,10 +4921,6 @@ The memorandum is the latest in a series of efforts by Trump to scrutinize feder
 Last week, Homeland Security Secretary Kristi L. Noem said she would cut off agency funding for NGOs that she said were using federal funds to assist in illegal migration into the United States.
 The administration <a href=""https://www.washingtonpost.com/national-security/2025/02/04/usaid-trump-foreign-aid/"" target=_blank>has also moved</a> to shrink the U.S. Agency for International Development, which administers humanitarian aid programs. The administration has put a vast swath of employees on leave and notified all overseas staff that they will be recalled within a month.
 Trump had also issued a sweeping freeze on new funding for almost all U.S. foreign assistance, but Secretary of State Marco Rubio last week <a href=""https://www.washingtonpost.com/national-security/2025/01/28/state-department-foreign-aid-trump-waiver/"" target=_blank>approved a waiver</a> for lifesaving humanitarian assistance.",Trump directs agency heads to review funding for NGOs,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5634,36 +4960,28 @@ The small crowd of Proud Boys and others involved in the Jan. 6 attack then walk
 Shortly after, Tarrio was arrested as live-streamers and journalists recorded police escorting him away.
 <i>Spencer S. Hsu contributed to this report.</i>",Former Proud Boys leader Enrique Tarrio arrested outside U.S. Capitol,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The Justice Department has abruptly revoked recent job offers from<b> </b>the Attorney General’s Honors Program — a prestigious and competitive opportunity for top<b> </b>law school graduates to work in entry-level positions across the department.
 The Trump administration’s cancellation of the program was confirmed by people familiar with the decision, who spoke on the condition of anonymity because they were not authorized to discuss it.
 <a href=""https://www.washingtonpost.com/national-security/2025/01/23/justice-revokes-job-offers-young-lawyers/"">Read the full story</a>",Justice Department revokes job offers to young lawyers in elite honors program,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5708,10 +5026,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "NEW YORK — Hagan Scotten, the lead prosecutor in Mayor Eric Adams’s federal corruption case, has quit over the Justice Department’s demand that the case be dismissed, calling any lawyer who would move in court to toss the matter a “fool” or “coward,” according to a copy of a letter obtained Friday.
 Scotten wrote a resignation letter to acting deputy attorney general Emil Bove in which he accuses the official of abandoning his legal ethics to do the bidding of President Donald Trump.
@@ -5719,25 +5033,19 @@ Scotten wrote a resignation letter to acting deputy attorney general Emil Bove i
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -5764,27 +5072,23 @@ Lester’s cause of death was not released. He was scheduled to be sentenced Mar
 In a statement posted to Instagram, Yarl’s family <a href=""https://www.instagram.com/p/DGRbbDCp2nf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="" target=_blank>said</a> that Lester’s death “does not bring justice.”
 “For nearly two years, Andrew Lester never apologized. Instead, he and his attorney used every legal maneuver possible to delay accountability,” the statement reads. “Now, another Black child harmed by prejudice will never see the man who shot him face the full weight of the justice system.”",Man who shot Black teen ringing wrong doorbell dies before sentencing,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "At least 20 states have been <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/28/trump-funding-freeze-dmv-vance/"" target=""_blank"">frozen out</a> of their Medicaid reimbursement systems after the Trump administration ordered a pause in federal grant spending, attorneys general said Tuesday.
@@ -5794,13 +5098,7 @@ White House press secretary Karoline Leavitt, however, <a href=""https://x.com/P
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5862,10 +5160,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "The Education Department on Monday shut down a large swath of work at the Institute of Educational Sciences, the arm of the department responsible for education research, by unilaterally cancelling at least 90 contracts worth $900 million. The agency is responsible for education research, evaluation of programs and collection of a vast amount of data about American schools.
 The vast majority of the work of this agency is done by contractors, so canceling their work will have a significant impact on its ability to function, they said.
@@ -5883,15 +5177,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -5929,10 +5219,6 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "President Donald Trump said he would soon announce new tariffs on computer chips, <a href=""https://www.washingtonpost.com/technology/2024/12/07/raimondo-trump-chips-reckless/"" target=_blank>repeating a campaign promise</a> that if enacted could have deep impacts on the global tech industry and the geopolitical battle over AI with China.
 Trump criticized the Biden administration’s policy of using taxpayer money to subsidize the construction of U.S. semiconductor manufacturing facilities and said that a tariff on importing computer chips would work better at forcing companies to move their factories to the United States.
@@ -5943,10 +5229,6 @@ Trump also said the technical breakthroughs made by Chinese AI start-up DeepSeek
 DeepSeek’s AI tech has <a href=""https://www.washingtonpost.com/business/2025/01/27/deep-seek-ai-markets-nvidia/"" target=_blank>sent shock waves through Silicon Valley and Wall Street</a>, after the company claimed that its AI chatbot that rivals the capability of OpenAI’s ChatGPT cost just $6 million to train, a fraction of what top U.S. AI companies use to develop their programs.
 “The release of DeepSeek AI from a Chinese company should be a wake-up call for our industries that we need to be laser-focused on competing to win because we have the greatest scientists in the world,” Trump said.
 DeepSeek’s apparent breakthrough in making much more efficient AI could be a positive because the tech is now also available to U.S. companies, he said.",Trump says new tariffs on computer chips are coming,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -5999,21 +5281,11 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "President Donald Trump on Tuesday is signing an executive order that calls on federal agencies to work with the U.S. DOGE Service in a bid to cut their existing workforce and limit future hiring, a White House official told The Washington Post.
 The order calls on agency leaders to limit hiring to “essential” positions, prepare for large reductions in force and reduce backfills after staff departures. The order includes some exceptions, such as allowing more hiring of national security and law enforcement personnel. Semafor <a href=""https://www.semafor.com/article/02/11/2025/trump-moves-to-significantly-reduce-federal-workforce"" target=_blank>first reported</a> that Trump will sign the executive order.
 Ahead of the signing, Trump was joined in the Oval Office by Elon Musk, his billionaire ally who is overseeing DOGE, an agency that Trump has empowered to find government efficiencies. Musk praised some federal workers but also criticized the “unelected” bureaucracy in remarks made to reporters in the room.
 DOGE’s actions — which include <a href=""https://www.washingtonpost.com/national-security/2025/02/04/usaid-trump-foreign-aid/"" target=_blank>moving to dismantle some U.S. agencies</a>, pushing out <a href=""https://www.washingtonpost.com/dc-md-va/2025/02/06/federal-workers-trump-buyout/"" target=_blank>tens of thousands of civil servants</a> and <a href=""https://www.washingtonpost.com/national-security/2025/02/06/elon-musk-doge-access-personnel-data-opm-security/"" target=_blank>gaining access to some of the federal government’s most sensitive payment systems</a> — have prompted lawsuits and fears that many of the actions are <a href=""https://www.washingtonpost.com/business/2025/02/04/elon-musk-government-legal-doge/"" target=_blank>illegal</a>.",Trump signing executive order intended to reduce federal workforce,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -6073,73 +5345,59 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "NEW YORK — A federal judge on Friday issued an order prohibiting Elon Musk’s U.S. DOGE Service from gaining access to the Treasury Department’s systems and databases that contain sensitive financial information on Americans,<b> </b>leaving in place a<b> </b>temporary block that has been in effect since Feb. 8. U.S. District Judge Jeannette A. Vargas said in her ruling that there’s a public interest in protecting the security of personal information and banking information.
 <a href=""https://www.washingtonpost.com/national-security/2025/02/21/doge-treasury-data-access/"" target=_blank>Read the full story</a>",Judge continues ban on DOGE from access to sensitive Treasury data,"[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "Senator-designates Ashley Moody (R-Florida), Florida Gov. Ron DeSantis’s choice to replace Secretary of State Marco Rubio, and Jon Husted (R-Ohio), Ohio Gov. Mike DeWine’s choice to replace Vice President JD Vance, are both scheduled to be sworn in to the Senate on Tuesday afternoon.
 “Both our new senators bring valuable experience, expertise, and perspective to the Senate Republican majority, and the whole Senate will benefit from them joining our ranks,” said Senate Majority Leader John Thune (R-South Dakota) on the Senate floor earlier Tuesday.","Senator-designates Ashley Moody (R-Florida), Florida Gov. Ron DeSantis’s choice to replace Secretary of State Marco Rubio,...","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Since taking office, President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> has <a href=""https://www.washingtonpost.com/business/2025/01/26/trump-trade-war/"" target=_blank>threatened tariffs</a> on an array of trading partners, including Mexico, Canada, Europe, Colombia and India. He has instituted a <a href=""https://www.washingtonpost.com/world/2025/02/09/china-tariffs-trade-war-united-states/"" target=_blank>10 percent tariff on Chinese goods</a> and a <a href=""https://www.washingtonpost.com/business/2025/02/10/trump-tariffs-steel/"" target=_blank>25 percent tariff on aluminum and steel imports</a>.
@@ -7019,35 +6277,61 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
-
-
-Pass Reason: All assertions passed","[ERROR] (0.00)
-
-No output
+Expected output ""<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"" to equal ""false""
 ---
-null","[ERROR] (0.00)
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
 
-No output
+
+Fail Reason: Expected output ""<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"" to equal ""false""","[FAIL] (0.00)
+
+Expected output ""<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"" to equal ""false""
 ---
-null","[PASS] (1.00)
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
 
 
+Fail Reason: Expected output ""<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+"" to equal ""false""","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Infantry Marines and other U.S. troops have begun arriving at the U.S. naval base at Guantánamo Bay, Cuba, U.S. military officials said Monday, in what is expected to be a <a href=""https://www.washingtonpost.com/immigration/2025/01/29/guantanamo-cuba-el-salvador-deportations/"" target=_blank>significant operation to house migrants</a> until the Trump administration sends them to their home countries.
 The deployments include members of 1st Battalion, 6th Marines, of Camp Lejeune in North Carolina, along with service members from U.S. Southern Command and U.S. Army North — headquarters units that will oversee aspects of the operation. The Defense Department disclosed the deployment Monday, after the White House posted Sunday morning that the Marines had begun arriving.
 Defense Secretary Pete Hegseth, who is due to travel to the southern U.S. border Monday, has said the Guantánamo facility will be useful to house migrants whose home country is not immediately assisting with return. They would be detained on a separate part of the base from where militants and terrorism suspects have long been held.
 The Trump administration has said that up to 30,000 migrants could be held at Guantánamo. Migrants have been held there in the past, but in much smaller numbers.",U.S. troops arrive at Guantánamo Bay in Trump migrant crackdown,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -7107,27 +6391,23 @@ She spends about 20 hours a week piecing together her creations. Her trick is to
 When asked by a reporter about her latest jigsaw creation, she stifled a laugh through the phone.
 “It’s a puzzle that shows a shelf with a bunch of spices,” Linda said. “I finished it while we were talking.”",You think you like puzzles? Wait until you see this house.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "MEXICO CITY — Mexico extradited 29 alleged drug traffickers to the United States on Thursday, including Rafael Caro Quintero, a prized target long sought in the killing of a U.S. narcotics agent, and two leaders of the hyper-violent Zetas cartel, in a dramatic gesture apparently aimed at heading off crushing economic sanctions, according to U.S. officials.
@@ -7154,15 +6434,11 @@ Fentanyl has set off the deadliest drug epidemic in U.S. history. But deaths fro
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -7172,13 +6448,13 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true"""
 "President Donald Trump ordered federal agencies Wednesday to review all of their regulations and cease enforcing those that do not conform to his political views, intensifying a sweeping deregulatory campaign that could eliminate many of the government’s rules on climate, education, health and labor protections.
@@ -7205,19 +6481,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Trump in an executive order on Monday directed the revocation of any active security clearances held by John Bolton, his former national security adviser, and the living signatories of a notorious October 2020 letter suggesting that emails purportedly taken from a laptop belonging to Hunter Biden could be part of a “Russian information operation.”
 The action all together targets 50 former national security officials, including several former directors of the Central Intelligence Agency. Some of the former officials no longer have security clearances, making the impact of the order unclear.
 A Bolton representative did not immediately respond to a request for comment. Bolton, a former ambassador to the United Nations, served as Trump’s national security adviser for 17 months, ending in September 2019. In 2020, he published a memoir about his time in the administration that included damaging assessments of the president, portraying him as reckless and unfit for office.
 In Monday’s order, Trump claimed that Bolton’s book was “rife with sensitive information drawn from his time in government,” an assertion that the former national security adviser has denied. The president has long assailed the signatories of the <a href=""https://www.politico.com/f/?id=00000175-4393-d7aa-af77-579f9b330000"" target=_blank>October 2020 letter</a>, calling the statement a form of “election interference.”",Trump revokes security clearances for dozens of former national security officials,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -7270,12 +6538,6 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "President Donald Trump hosted a meeting at the White House with British Prime Minister Keir Starmer at the White House on Thursday followed by a joint news conference. Trump told reporters that Starmer had “earned whatever they pay him” in working to convince Trump not to place tariffs on the United Kingdom, and suggested he may not do so. Starmer is the latest European leader — French President <a href=""https://www.washingtonpost.com/politics/2025/02/24/trump-macron-meeting-ukraine-russia/"" target=""_blank"">Emmanuel Macron visited</a> earlier this week — expected to plead with Trump not to abandon Ukraine as he seeks to end the war. Trump also said Thursday that he plans to visit the United Kingdom in “the near future.”","Trump and U.K. Prime Minister Starmer discuss tariffs, Ukraine","[FAIL] (0.00)
 
@@ -7283,11 +6545,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -7307,7 +6565,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Elon Musk’s demand that all 2.3 million government workers<b> </b>justify their work prompted confusion and resistance on Sunday, as several government agency leaders told their staffs not to reply to a mass email requesting bullet-point summations of their accomplishments.
@@ -7357,23 +6615,19 @@ And on Sunday morning, the NASA directorate that had urged employees to reply re
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
+false
+
+Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
+
 Expected output ""false"" to equal ""true""
+---
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -7393,13 +6647,9 @@ Other migrants gathered around him logged onto the app and received the same mes
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -7428,11 +6678,7 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
-
-
-
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -7515,27 +6761,17 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "Although flags around the country are flying at half-staff in honor of late former president Jimmy Carter, flags around the U.S. Capitol complex are flying at full-staff on Monday morning at the request of House Speaker Mike Johnson.
 But the winter weather did not make that task easy.
 Icy precipitation and freezing temperatures froze the flags’ cords, complicating staff members’ efforts to raise the flags, according to a person familiar with the process who spoke on the condition of anonymity to speak candidly. The staff was able to raise the flags eventually.
 Flags had been at half-staff, as is the tradition for 30 days after a president dies. But Johnson <a href=""https://www.washingtonpost.com/politics/2025/01/14/flags-trump-inauguration-full-staff-mike-johnson/"" target=_blank>ordered the flags raised for Monday</a> in honor of Donald Trump’s inauguration as president. Afterward, they will be lowered again for the rest of the mourning period.",Capitol flags at full-staff — after a weather-related struggle,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -7545,11 +6781,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "Crucial personnel forms vanished from a government database across multiple federal agencies Thursday, according to emails obtained by The Washington Post and people with knowledge of the development.
@@ -7559,19 +6795,15 @@ Employees at the State Department, the U.S. Agency for International Development
 Human resources personnel at USCIS sent emails to staffers Thursday saying the missing forms were a “known issue as of this morning,” according to copies of the messages obtained by The Post. In the emails, human resources staff also wrote that they had reported the issue to the OPM and asked for the forms to be returned.
 The OPM did not respond to a request for comment.","Personnel forms vanish from government database, emails obtained by The Post show","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -7581,7 +6813,7 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump <a href=""https://www.washingtonpost.com/national-security/2025/02/23/dan-bongino-fbi-deputy-director-trump/"" target=_blank>announced</a> Sunday evening that Dan Bongino — a former New York police officer and Secret Service agent turned right-wing podcaster and prolific conspiracy theorist — would serve as the FBI’s deputy director.
@@ -7591,10 +6823,6 @@ Patel, a Trump loyalist who was <a href=""https://www.washingtonpost.com/nationa
 The appointment, which places a second Trump <a href=""https://www.washingtonpost.com/politics/2024/11/30/trump-kash-patel-fbi-director/"" target=_blank>ally</a> at the top of the FBI, adds to concerns about the lack of experience among those running the country’s premier law enforcement agency.
 The FBI deputy director role does not require Senate confirmation, but typically, such appointees have had long careers as FBI agents before assuming the role.
 “Even the WWE never constructed a tag-team better than: KASH / BONGINO We are making @FBI great again!” <a href=""https://x.com/FmrRepMattGaetz/status/1893842632461209729"" target=_blank>said</a> former congressman Matt Gaetz (R-Florida), who was Trump’s first choice to serve as attorney general but was forced to withdraw his nomination because he did not have enough support from Republican senators.","Trump allies rejoice, Democrats sound alarm over latest FBI appointment","[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -7643,13 +6871,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -7659,7 +6881,7 @@ Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""false"" to equal ""true""
 ---
-Expected output ""false"" to equal ""true""
+false
 
 Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
 
@@ -7670,11 +6892,7 @@ Pass Reason: All assertions passed"
 USA Hockey <a href=""https://x.com/usahockey/status/1892599748692971955"" target=_blank>posted</a> a photo of the team listening to Trump over the phone’s speaker in the locker room.
 Ahead of the call, Trump <a href=""https://truthsocial.com/@realDonaldTrump/posts/114036421460956478"" target=_blank>posted</a> on Truth Social that he was calling the players “to spur them on towards victory tonight against Canada, which with FAR LOWER TAXES AND MUCH STRONGER SECURITY, will someday, maybe soon, become our cherished, and very important, Fifty First State.”",President Donald Trump called the U.S. men’s national ice hockey team on Thursday morning ahead of...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -7715,19 +6933,13 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -7748,13 +6960,7 @@ The move comes after years of Trump criticizing Milley for perceived disloyalty 
 
 true
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""false"" to equal ""true""
----
-Expected output ""false"" to equal ""true""
-
-Fail Reason: Expected output ""false"" to equal ""true""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
@@ -7798,25 +7004,17 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "European powers on Wednesday called for “strong security guarantees” for Ukraine and said that any negotiation with Russia must include both Ukraine and Europe.
 “We are looking forward to discussing the way ahead together with our American allies. Our shared objectives should be to put Ukraine in a position of strength,” wrote France, Britain, Germany, Poland, Italy, Spain and the European Union in a <a href=""https://www.auswaertiges-amt.de/en/newsroom/news/baerbock-weimar-2700212"" target=_blank>statement</a>.
 The pointed pledge of support came hours after President Donald Trump appeared to affirm Defense Secretary Pete Hegseth’s line that Ukraine’s stated goal of reclaiming its full internationally recognized territory was “<a href=""https://www.washingtonpost.com/politics/2025/02/12/trump-putin-talks-ukraine-war/"" target=_blank>unrealistic</a>.”
 <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Trump</a> <a href=""https://truthsocial.com/@realDonaldTrump/posts/113991956474899296"" target=_blank>spoke by phone</a> on Wednesday with Russian President Vladimir Putin in their first publicized call since Trump returned to the White House.",European powers call for ‘strong security guarantees’ for Ukraine,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -7826,11 +7024,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump directed the Justice Department on Monday to relax enforcement of a law used to prosecute U.S. companies who bribe foreign officials, saying it has put American business at a competitive disadvantage while operating abroad.
@@ -7841,12 +7039,6 @@ Trump’s antipathy toward the FCPA predates his time in the White House. <a hre
 “Every other country in the world is doing it,” he said. “We’re not allowed to do so. It puts us at a huge disadvantage.”
 Trump publicly floated the idea of restricting enforcement during his first term but ultimately took no action. Even before his executive order Monday, Bondi had moved to narrow the Justice Department’s pursuit of foreign antibribery cases.
 Within hours of being sworn in as attorney general last week, she issued a directive instructing prosecutors to prioritize FCPA cases “related to foreign bribery that facilitates criminal operations of [drug and human smuggling] cartels” and “shift away from investigations that do not involve such a connection.”",Trump curbs enforcement of foreign antibribery law,"[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
 ---
@@ -7941,50 +7133,42 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The area outside Capital One Arena is clogged with people hoping to make it into the venue now hosting the presidential parade due to the 22-degree weather.
 It’s a zoo — with sidewalks so crowded it’s hard to move and vendors hawking their Trump merchandise as flamboyantly as they can.
 “Daddy’s home!” one seller is yelling from a corner as people stream past. He is alternating between that and shouting profane slogans from his T-shirts. Elsewhere, a handful of Trump supporters from New Jersey are dressed as the Founding Fathers.",The area outside Capital One Arena is clogged with people hoping to make it into the...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Greeted with loud cheers, Elon Musk virtually delivered a short speech Saturday at a rally for the far-right<b> </b>Alternative for Germany (AfD) party, where he urged the crowd to not be ashamed of their country’s history.
@@ -8004,27 +7188,23 @@ Musk <a href=""https://www.washingtonpost.com/world/2024/12/20/elon-musk-afd-ger
 On Jan. 9, Musk interviewed Weidel on X, the social platform he owns. The two agreed that Germany’s education sponsored a “wokeish, leftist” agenda and said that speech regulations were comparable to Adolf Hitler’s media censorship.
 The interview had about 200,000 listeners.",Elon Musk urges far-right German party to move beyond ‘past guilt’,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "JENIN, West Bank — The Palestinian Authority recently took a high-stakes gamble in this restive city, launching a major military operation aimed at clipping the wings of militant groups that had grown in influence and audacity.
@@ -8070,15 +7250,11 @@ The sequence of events fueled the perception among Palestinians that Israel and 
 The Palestinian security forces “laid the groundwork for the Israelis,” said Nasser, Umm Ibrahim’s husband.
 <i>Miriam Berger in Jericho, John Hudson in Washington and Heidi Levine in Jenin contributed to this report.</i>","With Gaza rule at stake, Palestinian forces struggle to make their case","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -8088,11 +7264,11 @@ true
 
 Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed"
 "While delivering the sermon at Washington National Cathedral on Tuesday, the Right Rev. Mariann Budde directly addressed President Donald Trump in her plea for unity.
@@ -8103,27 +7279,23 @@ This was not the first time Budde, the Episcopal bishop of Washington, has direc
 A year later, Budde said she was “outraged” when federal officers used force to clear a crowd of peaceful demonstrators from the street between the White House and St. John’s Church, apparently so Trump could visit.
 “Everything he has said and done is to inflame violence,” Budde told The Washington Post <a href=""https://www.washingtonpost.com/religion/bishop-budde-trump-church/2020/06/01/20ca70f8-a466-11ea-b619-3f9133bbb482_story.html"" target=_blank>at the time</a>. “We need moral leadership, and he’s done everything to divide us.”",Bishop at prayer service urges Trump to ‘have mercy’,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "Pope Francis sharply rebuked President Donald Trump’s policy of mass deportation of undocumented immigrants and urged American Catholics not to lean into anti-immigrant sentiment in an open letter to U.S. Catholic bishops Tuesday.
@@ -8133,27 +7305,23 @@ The letter served as a strong rejection of Trump’s treatment of migrants, with
 Francis’s letter comes as Vice President JD Vance has <a href=""https://www.washingtonpost.com/nation/2025/01/30/jd-vance-catholic-church-immigration/"" target=_blank>questioned</a> whether the Catholic Church’s substantial, decades-long work with migrants is driven by a desire for money — criticism that has dismayed Catholic leaders.
 Trump and Francis have had back-and-forths dating back to Trump’s first candidacy in 2016, when the pope said Trump was “not Christian” for his plan to build a U.S.-Mexico border wall. The pontiff also called Trump’s plan to mass deport migrants “a disgrace” the day before his 2025 inauguration.","Pope Francis rebukes Trump over mass deportations, warns it ‘will end badly’","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> fired Susan Tsui Grundmann, who until Tuesday served as chair of the Federal Labor Relations Authority, a White House official confirmed.
@@ -8181,36 +7349,28 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-true
-
 Pass Reason: All assertions passed"
 "Video: Kash Patel speaks at Trump’s inauguration celebration
 
 Kash Patel spoke at President Donald Trump’s inauguration celebration at Capital One Arena on Monday.",Kash Patel spoke at President Donald Trump’s inauguration celebration at Capital One Arena on Monday.,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President Donald Trump’s directive for federal employees to return to in-person work could run into a significant hurdle: At agencies across the country, there simply isn’t enough space at their offices to accommodate everyone,<b> </b>multiple federal workers said.
@@ -8245,36 +7405,26 @@ Expected output ""true"" to equal ""false""
 ---
 true
 
-Fail Reason: Expected output ""true"" to equal ""false""","[FAIL] (0.00)
-
-Expected output ""true"" to equal ""false""
----
-true
-
 Fail Reason: Expected output ""true"" to equal ""false"""
 "The Senate Foreign Relations Committee is voting on Marco Rubio. Chairman James E. Risch (R-Idaho) said most votes are in and no one has voted against him. As soon as he is voted out of committee, Risch will report the vote to the floor. He predicted that Rubio will be secretary of state by nightfall.",The Senate Foreign Relations Committee is voting on Marco Rubio. Chairman James E. Risch (R-Idaho) said...,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "President-elect Donald Trump will start the day’s formal festivities by attending a service at St. John’s Church, on Lafayette Square in Washington. He and Melania Trump will then meet President Joe Biden and first lady Jill Biden for tea at the White House before the Trumps and Bidens go together to the swearing-in ceremony inside the Capitol Rotunda.
@@ -8282,36 +7432,28 @@ After the swearing-in and speech, Trump will go to a signing ceremony and a cong
 The rest of the night will be all about partying and policymaking.
 The Bidens will depart Washington in the afternoon, giving a speech to staffers at Joint Base Andrews before they leave for California.",What to expect today,"[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-
+false
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
+false
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+false
 
 Pass Reason: All assertions passed"
 "The United States and Colombia averted a trade war, for now, after the White House said late Sunday that Bogotá agreed to accept deportation flights from the United States.
 The two nations had spent much of the day in a tense standoff, with President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> threatening to impose steep tariffs and visa restrictions on Colombia after the South American nation turned away two deportation flights.
 <a href=""https://www.washingtonpost.com/immigration/2025/01/26/trump-colombia-deportation-flights-migrants-tariffs/"">Read the full story</a>",Trump backs off trade threats after Colombia agrees to deportation flights,"[PASS] (1.00)
-
-true
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 true
 

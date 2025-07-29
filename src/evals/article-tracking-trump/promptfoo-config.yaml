@@ -6,42 +6,72 @@ prompts:
   # - Is this about Trump? "true" or "false" .\n{{headline}}\n{{content}}
 
 providers:
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
-      model: "openai/gpt-4o-mini"
-      transform_func: parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-4o-mini"
+            transform_func: parse_boolean
 
-  - id: "file://../../../llm_provider.py"
-    label: "wapo"
-    config:
-      model: "wapo"
-      transform_func: parse_boolean
+  # - id: "http://127.0.0.1:4242/eval"
+  #   label: "wapo"
+  #   config:
+  #     method: POST
+  #     body:
+  #       prompt: "{{prompt}}"
+  #       options:
+  #         config:
+  #           model: "wapo"
+  #           transform_func: parse_boolean
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "qwen3:14b:IQ4_XS"
     config:
-      model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
-      transform_funcs:
-        - strip_think_tags
-        - parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+            transform_funcs:
+              - strip_think_tags
+              - parse_boolean
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "gemma3:12b:Q4_0"
     config:
-      model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
-      transform_func: parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+            transform_func: parse_boolean
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-sonnet-4-0"
     config:
-      model: "anthropic/claude-sonnet-4-0"
-      transform_func: parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "anthropic/claude-sonnet-4-0"
+            transform_func: parse_boolean
 
-  - id: "file://../../../llm_provider.py"
+  - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-opus-4-0"
     config:
-      model: "anthropic/claude-opus-4-0"
-      transform_func: parse_boolean
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "anthropic/claude-opus-4-0"
+            transform_func: parse_boolean
 
 tests: file://tests.csv

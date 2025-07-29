@@ -542,15 +542,15 @@ wheels = [
 
 [[package]]
 name = "llm-anthropic"
-version = "0.15.1"
+version = "0.16"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anthropic" },
     { name = "llm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/f2/05bfd432161a9829443a174f5b95e5cfb8a4d19b7f3c126cf7e43e59ba97/llm_anthropic-0.15.1.tar.gz", hash = "sha256:0bcc4db38a12e75631027d6226493c8f8b09e5d3b4a553b02223f89affcc9d09", size = 14692 }
+sdist = { url = "https://files.pythonhosted.org/packages/91/08/063744171c04d6b15a80aa6b4a18e5ce783ff3e61a0e6792c8c280b82aed/llm_anthropic-0.16.tar.gz", hash = "sha256:a85893d07e3f36889923963e1af772f11ab122ea92f9cd76032c4a9ee2876f3e", size = 14174 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/86/64/46493fcdada0c457b38bb97c8a40f9b1f07980420912908ec3efa121282d/llm_anthropic-0.15.1-py3-none-any.whl", hash = "sha256:1f66507df807fb27e53e73f448b4a22e2285ef0b198e9c4889c3a695dd7f8d34", size = 12588 },
+    { url = "https://files.pythonhosted.org/packages/34/ff/0a8579cf324c93ba28d8ae1d4d88ab898f2f0779f5f476d3e64e5eae36ec/llm_anthropic-0.16-py3-none-any.whl", hash = "sha256:d61853867c4d382087477d72238f1e851b25bf47afe8838df79a796c3f97c6a8", size = 12411 },
 ]
 
 [[package]]
@@ -564,6 +564,7 @@ dependencies = [
     { name = "llm-anthropic" },
     { name = "llm-gemini" },
     { name = "llm-mlx" },
+    { name = "llm-ollama" },
     { name = "llm-openai-plugin" },
 ]
 
@@ -572,9 +573,10 @@ requires-dist = [
     { name = "ai-yardstick" },
     { name = "flask", specifier = ">=3.1.1" },
     { name = "llm", specifier = ">=0.24" },
-    { name = "llm-anthropic", specifier = ">=0.15.1" },
+    { name = "llm-anthropic", specifier = "==0.16" },
     { name = "llm-gemini", specifier = ">=0.17" },
     { name = "llm-mlx", specifier = ">=0.3" },
+    { name = "llm-ollama", specifier = ">=0.10.0" },
     { name = "llm-openai-plugin", specifier = ">=0.3" },
 ]
 
@@ -603,6 +605,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d1/16/47abf862f49fcfc21b9f1eed875acc8a489ccc6e318a0d5ff7014a207ab9/llm_mlx-0.3.tar.gz", hash = "sha256:9ca248b96a7099fc14d0bd43953a202de937c25a71c2aeb906a601bd2805ca72", size = 10827 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2b/93/b4583797749f1f13412cf7560e4c0f05fd4cf80032507f967de9d167e196/llm_mlx-0.3-py3-none-any.whl", hash = "sha256:bf4490ca1e8332bdd2b1d3e88da8a84158f176cdeb616e300b68a265c7116476", size = 10877 },
+]
+
+[[package]]
+name = "llm-ollama"
+version = "0.10.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llm" },
+    { name = "ollama" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/16/17/6621614a6470db488399025347d075f541b3f945d34bf784e024d209e12c/llm_ollama-0.10.0.tar.gz", hash = "sha256:2cf47b8a289e47ab663c9581fca93c348874af4825defce88e159d2bf36b400f", size = 20155 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/e6/332b1242856f21e4bca743397bee44a0c6a430b3e9169af88ee231c9c821/llm_ollama-0.10.0-py3-none-any.whl", hash = "sha256:4ce06e72c9bbc6e192cc27d6d3babbcd12a300b73987ccea06f3f0037186cc39", size = 14568 },
 ]
 
 [[package]]
@@ -876,6 +892,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ba/30/74c48b3b6494c4b820b7fa1781d441e94d87a08daa5b35d222f06ba41a6f/numpy-2.2.4-pp310-pypy310_pp73-macosx_14_0_x86_64.whl", hash = "sha256:ab2939cd5bec30a7430cbdb2287b63151b77cf9624de0532d629c9a1c59b1d5c", size = 6827143 },
     { url = "https://files.pythonhosted.org/packages/54/f5/ab0d2f48b490535c7a80e05da4a98902b632369efc04f0e47bb31ca97d8f/numpy-2.2.4-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d0f35b19894a9e08639fd60a1ec1978cb7f5f7f1eace62f38dd36be8aecdef4d", size = 16233350 },
     { url = "https://files.pythonhosted.org/packages/3b/3a/2f6d8c1f8e45d496bca6baaec93208035faeb40d5735c25afac092ec9a12/numpy-2.2.4-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:b4adfbbc64014976d2f91084915ca4e626fbf2057fb81af209c1a6d776d23e3d", size = 12857565 },
+]
+
+[[package]]
+name = "ollama"
+version = "0.5.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8d/96/c7fe0d2d1b3053be614822a7b722c7465161b3672ce90df71515137580a0/ollama-0.5.1.tar.gz", hash = "sha256:5a799e4dc4e7af638b11e3ae588ab17623ee019e496caaf4323efbaa8feeff93", size = 41112 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d6/76/3f96c8cdbf3955d7a73ee94ce3e0db0755d6de1e0098a70275940d1aff2f/ollama-0.5.1-py3-none-any.whl", hash = "sha256:4c8839f35bc173c7057b1eb2cbe7f498c1a7e134eafc9192824c8aecb3617506", size = 13369 },
 ]
 
 [[package]]

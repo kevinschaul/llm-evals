@@ -18,3 +18,4 @@ yarn-error.log
 .env 
 
 promptfoo-errors.log
+server.log

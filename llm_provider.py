@@ -313,10 +313,22 @@ def call_llm(prompt, options, context):
 def evaluate():
     try:
         data = request.json
+        logger.info(f"Request received: {data}")
+        logger.debug(f"Available models: {llm.get_models()}")
 
         # Get the raw result
         response = call_llm(data["prompt"], data["options"], data.get("context", {}))
-        return response['output']
+
+        # Ensure we return a proper JSON response
+        output = response["output"]
+        logger.info(f"Raw output: {output}")
+        if isinstance(output, bool):
+            return "true" if output else "false"
+        elif isinstance(output, (dict, list)):
+            return jsonify(output)
+        else:
+            # For strings and other types, return as-is (Flask will handle)
+            return output
 
     except Exception as e:
         logger.error(f"Error in evaluation: {e}")
