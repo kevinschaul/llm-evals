@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
     "ai-yardstick",
-    "llm-gemini>=0.17",
+    "llm-gemini>=0.24",
     "llm>=0.24",
     "llm-mlx>=0.3",
     "llm-openai-plugin>=0.3",

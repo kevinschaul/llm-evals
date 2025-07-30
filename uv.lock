@@ -191,11 +191,11 @@ wheels = [
 
 [[package]]
 name = "condense-json"
-version = "0.1.2"
+version = "0.1.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ca/c7/fb14dfac23e6e27170f8a94bf13355987d15f8db62df99146f81bf6b2508/condense_json-0.1.2.tar.gz", hash = "sha256:a161e1984122ad35801cc14ecfe2b38d9d638c8c089e04cb545d26300fdc485e", size = 8625 }
+sdist = { url = "https://files.pythonhosted.org/packages/94/b3/d784cbc05556192ea1e798cae96363835d649fe7420ff030190789645be1/condense_json-0.1.3.tar.gz", hash = "sha256:25fe8d434fdafd849e8d98f21a3e18f96ae2d6dbc2c17565f29e4843d039d2bc", size = 8697 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/88/3c/51cf297b9fe99577a5b1c16ca6a38787bf65555455a2991135c510dfc189/condense_json-0.1.2-py3-none-any.whl", hash = "sha256:bedc4f9de5c626483e57577adfebb9ef655a3b8ad15ab85401e2fdcc27aa37bb", size = 8457 },
+    { url = "https://files.pythonhosted.org/packages/28/5f/63badd4924358fad1efa6defd66eef700ccf8783c0e44098987f867e8b1f/condense_json-0.1.3-py3-none-any.whl", hash = "sha256:e0a3d42db4f44a89e74af8737d8e517e97420be0f7e5437087f4decfd38c3366", size = 8432 },
 ]
 
 [[package]]
@@ -517,7 +517,7 @@ wheels = [
 
 [[package]]
 name = "llm"
-version = "0.24.2"
+version = "0.26"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -535,9 +535,9 @@ dependencies = [
     { name = "sqlite-migrate" },
     { name = "sqlite-utils" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/79/ec/fac39709b653c799c92f8f8b5ab5aba3f2e326ca6b8e118239e3f413130d/llm-0.24.2.tar.gz", hash = "sha256:e14f2722183884ce09692201b54cdd961942492f0d93ca749a62d02b3b8bf43a", size = 58088 }
+sdist = { url = "https://files.pythonhosted.org/packages/4e/88/1acdae8cc6122d3ab2d3d30477d3273608f92177a6bb17ab98881af65627/llm-0.26.tar.gz", hash = "sha256:c2e9ddbc582da10c61112c0f983383fa0dc7bee3ca7d6f2ade1a2d003771eb1b", size = 82037 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cc/37/345204e0ef9df423ba42e630feb12c9925e5886f29cc98ba328809f192c6/llm-0.24.2-py3-none-any.whl", hash = "sha256:057f4035560aaf5453dea8758233d83c68be80b8b4bb1bf82babe530c55b52b9", size = 59726 },
+    { url = "https://files.pythonhosted.org/packages/da/5f/ed9d5c47c46632f2c3a844c14412f434bc1263faa4890306b5f911cd3aaf/llm-0.26-py3-none-any.whl", hash = "sha256:93dc331facbfb909f946df8812fb1d627ec9ce764aab2ebd29f9011ed647339c", size = 79376 },
 ]
 
 [[package]]
@@ -574,7 +574,7 @@ requires-dist = [
     { name = "flask", specifier = ">=3.1.1" },
     { name = "llm", specifier = ">=0.24" },
     { name = "llm-anthropic", specifier = "==0.16" },
-    { name = "llm-gemini", specifier = ">=0.17" },
+    { name = "llm-gemini", specifier = ">=0.24" },
     { name = "llm-mlx", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
     { name = "llm-openai-plugin", specifier = ">=0.3" },
@@ -582,16 +582,16 @@ requires-dist = [
 
 [[package]]
 name = "llm-gemini"
-version = "0.17"
+version = "0.24"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "ijson" },
     { name = "llm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b3/97/311b89bc10be0f64b52f6d28c934c6f43af91488a265f9174ec1180910ab/llm_gemini-0.17.tar.gz", hash = "sha256:9759282daf1844c5b8313a4966d9f6dfc6997111be7461a78e577d9f4aba952a", size = 13616 }
+sdist = { url = "https://files.pythonhosted.org/packages/01/15/9486773117b39c9516fc754699e3d43bad7f0625363ad8d8065b7d28a399/llm_gemini-0.24.tar.gz", hash = "sha256:8283784f5e4cd0239ae0bd40e631ab3595f9a5145b2c5ab170e49cf5a1d28aff", size = 16266 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3a/10/c9ef9bfc0c91a8bf8b8c226a16c8b755391de3f425eddd484a90cbb44b0f/llm_gemini-0.17-py3-none-any.whl", hash = "sha256:f6fda2fda74c5a618f7a916f4dd7fca5b8e7a43297c3f65fcedb23e3c0fccd88", size = 12687 },
+    { url = "https://files.pythonhosted.org/packages/c2/20/b3f5c0605dc69c80e8fe39503e5d6f45da6c23d1fc90ae295230a65fcb69/llm_gemini-0.24-py3-none-any.whl", hash = "sha256:197d9d0b1e1c4a2af0b0cc170b0dce4b94fd405c15ac4782bba6f2921973c57f", size = 14800 },
 ]
 
 [[package]]

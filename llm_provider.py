@@ -244,7 +244,7 @@ def find_cached_response(
     return None
 
 
-def call_llm(prompt, options, context):
+def call_llm(prompt, options, attachments=[], schema={}):
     config = options.get("config", {})
     model_name = config.get("model")
     model_options = config.get("options", {})
@@ -267,15 +267,14 @@ def call_llm(prompt, options, context):
         else:
             raise ValueError(f"Unknown transform_func: {transform_func}")
 
-    schema = None
-    schema_raw = context.get("vars", {}).get("schema")
+    schema_raw = schema
     if schema_raw:
         if schema_raw["syntax"] == "dsl":
             schema = llm.schema_dsl(schema_raw["content"], multi=schema_raw["multi"])
         else:
             schema = schema_raw["content"]
 
-    attachments_raw = context.get("vars", {}).get("attachments", [])
+    attachments_raw = attachments
     attachments = [llm.Attachment(**a) for a in attachments_raw]
 
     db = sqlite_utils.Database(logs_db_path())
@@ -314,18 +313,16 @@ def evaluate():
     try:
         data = request.json
         logger.info(f"Request received: {data}")
-        logger.debug(f"Available models: {llm.get_models()}")
+        logger.info(f"Available models: {llm.get_models()}")
 
         # Get the raw result
-        response = call_llm(data["prompt"], data["options"], data.get("context", {}))
+        response = call_llm(data["prompt"], data["options"], data.get("attachments", []), data.get("schema", {}))
 
         # Ensure we return a proper JSON response
         output = response["output"]
         logger.info(f"Raw output: {output}")
         if isinstance(output, bool):
             return "true" if output else "false"
-        elif isinstance(output, (dict, list)):
-            return jsonify(output)
         else:
             # For strings and other types, return as-is (Flask will handle)
             return output

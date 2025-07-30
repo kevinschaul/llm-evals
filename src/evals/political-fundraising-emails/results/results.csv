@@ -56,17 +56,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 RICK SCOTT FOR FLORIDA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 RICK SCOTT FOR FLORIDA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 RICK SCOTT FOR FLORIDA
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-RICKSCOTT FOR FLORIDA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -99,15 +101,17 @@ RUDYGIULIANI FREEDOM FUND LEGAL DEFENSE TRUST CONSERVATIVE LIBERTY WIRE
 
 Fail Reason: Levenshtein distance 27 is greater than threshold 5","[FAIL] (0.00)
 
+Levenshtein distance 55 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 55 is greater than threshold 5","[FAIL] (0.00)
+
 Levenshtein distance 20 is greater than threshold 5
 ---
 RUDY GIULIANI FREEDOM FUND
 
 Fail Reason: Levenshtein distance 20 is greater than threshold 5","[PASS] (1.00)
-
-RUDY GIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
-
-Pass Reason: All assertions passed","[PASS] (1.00)
 
 RUDY GIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
 
@@ -140,21 +144,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-THE COLLECTIVE PAC
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 61 is greater than threshold 5
+Levenshtein distance 62 is greater than threshold 5
 ---
-THE COLLECTIVE PAC; NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE
+THE COLLECTIVE PAC; NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
 
-Fail Reason: Levenshtein distance 61 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 62 is greater than threshold 5","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
@@ -179,11 +185,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NELLA FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NELLA FOR SENATE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 NELLA FOR SENATE
 
@@ -218,11 +226,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF MARK WARNER
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF MARK WARNER
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF MARK WARNER
 
@@ -257,11 +267,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HARRIS FOR PRESIDENT
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HARRIS FOR PRESIDENT
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 HARRIS FOR PRESIDENT
 
@@ -294,11 +306,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BLACKBURN TENNESSEE VICTORY FUND
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BLACKBURN TENNESSEE VICTORY FUND
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 BLACKBURN TENNESSEE VICTORY FUND
 
@@ -335,11 +349,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 LATEEFAH FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-LATEEFAH FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 LATEEFAH FOR CONGRESS
 
@@ -374,19 +390,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE NRCC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 60 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
 
 NRCC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NRCC
+Levenshtein distance 74 is greater than threshold 5
+---
+THE NRCC AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE. NRCC.ORG
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-THE NRCC
-
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 74 is greater than threshold 5","[PASS] (1.00)
 
 NRCC
 
@@ -415,21 +435,23 @@ Levenshtein distance 106 is greater than threshold 5
 ---
 TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC
 
-Fail Reason: Levenshtein distance 106 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 106 is greater than threshold 5","[FAIL] (0.00)
 
-TEAM SCALISE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 TEAM SCALISE
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 107 is greater than threshold 5
+Levenshtein distance 106 is greater than threshold 5
 ---
-TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC.
+TEAM SCALISE, A JOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND TO BENEFIT SCALISE FOR CONGRESS AND EYE OF THE TIGER PAC
 
-Fail Reason: Levenshtein distance 107 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 106 is greater than threshold 5","[PASS] (1.00)
 
 TEAM SCALISE
 
@@ -456,11 +478,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 JUDGE JOE MCGRAW FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-JUDGE JOE MCGRAW FOR CONGRESS
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 JUDGE JOE MCGRAW FOR CONGRESS
 
@@ -495,11 +519,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF TINA KOTEK
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF TINA KOTEK
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF TINA KOTEK
 
@@ -534,11 +560,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 PRAMILA FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-PRAMILA FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 PRAMILA FOR CONGRESS
 
@@ -573,11 +601,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MAGAZINER FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-MAGAZINER FOR CONGRESS
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 MAGAZINER FOR CONGRESS
 
@@ -612,11 +642,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 SHARICE FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-SHARICE FOR CONGRESS
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 SHARICE FOR CONGRESS
 
@@ -651,11 +683,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF JAHANA HAYES
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF JAHANA HAYES
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF JAHANA HAYES
 
@@ -688,17 +722,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DAVIDPAN FOR CONGRESS 2024
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DAVID PAN FOR CONGRESS 2024
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 DAVID PAN FOR CONGRESS 2024
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-DAVIDPAN FOR CONGRESS 2024
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -727,11 +763,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 SHARICE FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-SHARICE FOR CONGRESS
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 SHARICE FOR CONGRESS
 
@@ -766,11 +804,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THERESA4TEXAS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-THERESA4TEXAS
+Levenshtein distance 59 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 59 is greater than threshold 5","[PASS] (1.00)
 
 THERESA4TEXAS
 
@@ -803,11 +843,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 LISA BLUNT ROCHESTER FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-LISA BLUNT ROCHESTER FOR SENATE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 LISA BLUNT ROCHESTER FOR SENATE
 
@@ -842,11 +884,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF JEREMY SHAFFER
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF JEREMY SHAFFER
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF JEREMY SHAFFER
 
@@ -879,17 +923,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DAVIDPAN FOR CONGRESS 2024
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DAVIDPAN FOR CONGRESS 2024
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DAVID PAN FOR CONGRESS 2024
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
-DAVIDPAN FOR CONGRESS 2024
+DAVID PAN FOR CONGRESS 2024
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -918,11 +964,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NANCY PELOSI FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NANCY PELOSI FOR CONGRESS
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 NANCY PELOSI FOR CONGRESS
 
@@ -957,11 +1005,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BLUE AMP ACTION PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BLUE AMP ACTION PAC
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 BLUE AMP ACTION PAC
 
@@ -994,11 +1044,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HUNG CAO FOR VIRGINIA
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
@@ -1035,11 +1087,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TEAM SCALISE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TEAM SCALISE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 TEAM SCALISE
 
@@ -1076,11 +1130,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRCC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NRCC
+Levenshtein distance 60 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
 
 NRCC
 
@@ -1117,11 +1173,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HARRIS FORPRESIDENT
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HARRIS FOR PRESIDENT
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 HARRIS FOR PRESIDENT
 
@@ -1156,11 +1214,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HUNG CAO FOR VIRGINIA
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
@@ -1195,11 +1255,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DONALD J. TRUMP FOR PRESIDENT 2024, INC.
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DONALD J. TRUMP FOR PRESIDENT 2024, INC.
+Levenshtein distance 53 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 53 is greater than threshold 5","[PASS] (1.00)
 
 DONALD J. TRUMP FOR PRESIDENT 2024, INC.
 
@@ -1234,11 +1296,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ADAM FOR COLORADO
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
@@ -1273,13 +1337,15 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TRUMP NATIONAL COMMITTEE JFC, INC.
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 54 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 54 is greater than threshold 5","[PASS] (1.00)
 
 TRUMP NATIONAL COMMITTEE JFC
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-TRUMP NATIONAL COMMITTEE JFC, INC.
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
@@ -1316,19 +1382,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 UNITEDEMOCRATS PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 UNITEDEMOCRATS PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-UNITEDEMOCRATS PAC
+Levenshtein distance 58 is greater than threshold 5
+---
+UNITEDEMOCRATS PAC NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-UNITEDEMOCRATS PAC
-
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 UNITEDEMOCRATS PAC
 
@@ -1355,11 +1425,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TRISHA 4 COLORADO
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TRISHA 4 COLORADO
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 TRISHA 4 COLORADO
 
@@ -1429,11 +1501,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 STEVE DAINES FOR MONTANA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-STEVE DAINES FOR MONTANA
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 STEVE DAINES FOR MONTANA
 
@@ -1468,11 +1542,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TEAM KENNEDY
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TEAM KENNEDY
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 TEAM KENNEDY
 
@@ -1507,11 +1583,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
@@ -1620,21 +1698,21 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE NRSC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-NRSC
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-NRSC
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 76 is greater than threshold 5
+Levenshtein distance 60 is greater than threshold 5
 ---
-THE NRSC. NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. WWW.NRSC.ORG
+{""error"":""The model is overloaded. Please try again later.""}
 
-Fail Reason: Levenshtein distance 76 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
+
+NRSC
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+THE NRSC
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRSC
 
@@ -1659,11 +1737,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS
 
@@ -1698,15 +1778,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TRISHA 4 COLORADO
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TRISHA 4 COLORADO
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[FAIL] (0.00)
 
-TRISHA 4 COLORADO
+Levenshtein distance 43 is greater than threshold 5
+---
+{""error"":""[Errno 54] Connection reset by peer""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 43 is greater than threshold 5","[PASS] (1.00)
 
 TRISHA 4 COLORADO
 
@@ -1737,11 +1821,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 COOKE FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-COOKE FOR CONGRESS
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 COOKE FOR CONGRESS
 
@@ -1774,11 +1860,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ROSENFOR NEVADA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ROSEN FOR NEVADA
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 ROSEN FOR NEVADA
 
@@ -1811,11 +1899,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF SHERROD BROWN
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
@@ -1848,11 +1938,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRSC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NRSC
+Levenshtein distance 60 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
 
 NRSC
 
@@ -1885,11 +1977,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ERIC SORENSEN FOR ILLINOIS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ERIC SORENSEN FOR ILLINOIS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 ERIC SORENSEN FOR ILLINOIS
 
@@ -1924,11 +2018,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TINA SMITH FOR MINNESOTA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TINA SMITH FOR MINNESOTA
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TINA SMITH FOR MINNESOTA
 
@@ -1963,11 +2059,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
@@ -2002,21 +2100,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BLACKBURN TENNESSEE VICTORY FUND
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BLACKBURN TENNESSEE VICTORY FUND
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 BLACKBURN TENNESSEE VICTORY FUND
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 147 is greater than threshold 5
+Levenshtein distance 146 is greater than threshold 5
 ---
-BLACKBURN TENNESSEE VICTORY FUND, AJOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND COMPOSED OF MARSHA FOR SENATE,MARSHA PAC, AND TENNESSEE REPUBLICAN PARTY FEDERAL ELECTION ACCOUNT.
+BLACKBURN TENNESSEE VICTORY FUND, AJOINT FUNDRAISING COMMITTEE AUTHORIZED BY AND COMPOSED OF MARSHA FOR SENATE,MARSHA PAC, AND TENNESSEE REPUBLICAN PARTY FEDERAL ELECTION ACCOUNT
 
-Fail Reason: Levenshtein distance 147 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 146 is greater than threshold 5","[PASS] (1.00)
 
 BLACKBURN TENNESSEE VICTORY FUND
 
@@ -2041,11 +2141,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HOVDE FOR WISCONSIN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HOVDE FOR WISCONSIN
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 HOVDE FOR WISCONSIN
 
@@ -2080,11 +2182,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TROY DOWNING FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TROY DOWNING FOR CONGRESS
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TROY DOWNING FOR CONGRESS
 
@@ -2158,21 +2262,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TURNING POINT ACTION
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TURNING POINT ACTION
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TURNING POINT ACTION
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 75 is greater than threshold 5
+Levenshtein distance 15 is greater than threshold 5
 ---
-TURNING POINT ACTION (TPACTION.COM)AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
+TURNING POINT ACTION (TPACTION.COM)
 
-Fail Reason: Levenshtein distance 75 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 15 is greater than threshold 5","[PASS] (1.00)
 
 TURNING POINT ACTION
 
@@ -2197,11 +2303,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BERNIE MORENO FOR SENATE
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
 
@@ -2234,11 +2342,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 SUSAN WILD FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-SUSAN WILD FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 SUSAN WILD FOR CONGRESS
 
@@ -2273,11 +2383,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BOB CASEY FOR SENATE INC.
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BOB CASEY FOR SENATE INC.
+Levenshtein distance 55 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 55 is greater than threshold 5","[PASS] (1.00)
 
 BOB CASEY FOR SENATE INC.
 
@@ -2310,11 +2422,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TIM SCOTT FOR AMERICA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TIM SCOTT FOR AMERICA
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TIM SCOTT FOR AMERICA
 
@@ -2351,13 +2465,15 @@ Levenshtein distance 26 is greater than threshold 5
 ---
 EMILYRANDALL FOR CONGRESS EMILY RANDALL FOR CONGRESS
 
-Fail Reason: Levenshtein distance 26 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 26 is greater than threshold 5","[FAIL] (0.00)
 
-EMILY RANDALL FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
-EMILY RANDALL FOR CONGRESS
+EMILYRANDALL FOR CONGRESS
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -2390,21 +2506,21 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-THE COLLECTIVE PAC
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-THE COLLECTIVE PAC
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 58 is greater than threshold 5
+Levenshtein distance 56 is greater than threshold 5
 ---
-THE COLLECTIVE PAC; NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
+{""error"":""The model is overloaded. Please try again later.""}
 
-Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
+
+THE COLLECTIVE PAC
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+THE COLLECTIVE PAC
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE COLLECTIVE PAC
 
@@ -2431,11 +2547,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BERNIE MORENO FOR SENATE
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 BERNIE MORENO FOR SENATE
 
@@ -2480,11 +2598,11 @@ TRUMP NATIONAL COMMITTEE JFC INC.
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 138 is greater than threshold 5
+Levenshtein distance 139 is greater than threshold 5
 ---
-TRUMP NATIONAL COMMITTEE JFC INC., A JOINT FUNDRAISING COMMITTEECOMPOSED OF AND AUTHORIZED BY DONALD J. TRUMP FOR PRESIDENT 2024, INC. AND THEREPUBLICAN NATIONAL COMMITTEE
+TRUMP NATIONAL COMMITTEE JFC INC., A JOINT FUNDRAISING COMMITTEECOMPOSED OF AND AUTHORIZED BY DONALD J. TRUMP FOR PRESIDENT 2024, INC. AND THEREPUBLICAN NATIONAL COMMITTEE.
 
-Fail Reason: Levenshtein distance 138 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 139 is greater than threshold 5","[PASS] (1.00)
 
 TRUMP NATIONAL COMMITTEE JFC INC.
 
@@ -2511,11 +2629,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TED CRUZ FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TED CRUZ FOR SENATE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TED CRUZ FOR SENATE
 
@@ -2550,11 +2670,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 SCHIFF FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-SCHIFF FOR SENATE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 SCHIFF FOR SENATE
 
@@ -2589,19 +2711,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 EMILYSLIST
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-EMILYSLIST
+Levenshtein distance 59 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 59 is greater than threshold 5","[PASS] (1.00)
 
 EMILYS LIST
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-EMILYSLIST
+Levenshtein distance 78 is greater than threshold 5
+---
+EMILYSLIST WWW.EMILYSLIST.ORG AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 78 is greater than threshold 5","[PASS] (1.00)
 
 EMILYSLIST
 
@@ -2667,11 +2793,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 GILLIBRAND FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-GILLIBRAND FOR SENATE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 GILLIBRAND FOR SENATE
 
@@ -2706,11 +2834,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEBBIE FOR FLORIDA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DEBBIE FOR FLORIDA
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 DEBBIE FOR FLORIDA
 
@@ -2743,11 +2873,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ADAM FOR COLORADO
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 ADAM FOR COLORADO
 
@@ -2782,11 +2914,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NEVADA STATE DEMOCRATIC PARTY
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NEVADA STATE DEMOCRATIC PARTY
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 NEVADA STATE DEMOCRATIC PARTY
 
@@ -2821,11 +2955,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 GLORIA FOR TENNESSEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-GLORIA FOR TENNESSEE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 GLORIA FOR TENNESSEE
 
@@ -2858,21 +2994,21 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TURNING POINT ACTION
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-TURNING POINT ACTION
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-TURNING POINT ACTION
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 76 is greater than threshold 5
+Levenshtein distance 56 is greater than threshold 5
 ---
-TURNING POINT ACTION (TPACTION.COM) AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE
+{""error"":""The model is overloaded. Please try again later.""}
 
-Fail Reason: Levenshtein distance 76 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
+
+TURNING POINT ACTION
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+TURNING POINT ACTION
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 TURNING POINT ACTION
 
@@ -2897,11 +3033,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 JESSICA MORSE FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-JESSICA MORSE FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 JESSICA MORSE FOR CONGRESS
 
@@ -2936,11 +3074,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TED CRUZ FORSENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TED CRUZ FOR SENATE
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 TED CRUZ FOR SENATE
 
@@ -2975,11 +3115,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 ALSOBROOKS FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-ALSOBROOKS FOR SENATE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 ALSOBROOKS FOR SENATE
 
@@ -3014,11 +3156,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 KAINE FOR VIRGINIA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-KAINE FOR VIRGINIA
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 KAINE FOR VIRGINIA
 
@@ -3053,11 +3197,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DEMOCRATIC LEGISLATIVE CAMPAIGN COMMITTEE
 
@@ -3092,21 +3238,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE NRCC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NRCC
+Levenshtein distance 60 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
 
 NRCC
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 73 is greater than threshold 5
+Levenshtein distance 74 is greater than threshold 5
 ---
-THE NRCC AND NOT AUTHORIZED BY ANY CANDIDATEOR CANDIDATE'S COMMITTEE.NRCC.ORG
+THE NRCC AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE.NRCC.ORG
 
-Fail Reason: Levenshtein distance 73 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 74 is greater than threshold 5","[PASS] (1.00)
 
 NRCC
 
@@ -3133,17 +3281,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MICHAEL B. MOORE FOR SOUTH CAROLINA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 54 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 54 is greater than threshold 5","[PASS] (1.00)
 
 MICHAEL B. MOORE FOR SOUTH CAROLINA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 MICHAEL B. MOORE FOR SOUTH CAROLINA
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-MICHAEL B. MOORE FOR SOUTHCAROLINA
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -3172,11 +3322,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-HUNG CAO FOR VIRGINIA
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 HUNG CAO FOR VIRGINIA
 
@@ -3211,11 +3363,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 BOB CASEY FOR SENATE INC.
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-BOB CASEY FOR SENATE INC
+Levenshtein distance 55 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 55 is greater than threshold 5","[PASS] (1.00)
 
 BOB CASEY FOR SENATE INC.
 
@@ -3248,11 +3402,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NANCY PELOSI FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NANCY PELOSI FOR CONGRESS
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 NANCY PELOSI FOR CONGRESS
 
@@ -3287,11 +3443,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MISSOURIANS FOR CONSTITUTIONAL FREEDOM
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-MISSOURIANS FOR CONSTITUTIONAL FREEDOM
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 MISSOURIANS FOR CONSTITUTIONAL FREEDOM
 
@@ -3326,11 +3484,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF DICK DURBIN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF DICK DURBIN
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF DICK DURBIN
 
@@ -3365,11 +3525,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 KEAN FORCONGRESS INC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-KEAN FOR CONGRESS INC
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 KEAN FOR CONGRESS INC
 
@@ -3404,11 +3566,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 STEVE GARVEY FOR U.S. SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-STEVE GARVEY FOR U.S. SENATE
+Levenshtein distance 55 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 55 is greater than threshold 5","[PASS] (1.00)
 
 STEVE GARVEY FOR U.S. SENATE
 
@@ -3443,11 +3607,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NRSC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-NRSC
+Levenshtein distance 60 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 60 is greater than threshold 5","[PASS] (1.00)
 
 NRSC
 
@@ -3480,11 +3646,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 THE INDIANA REPUBLICAN STATE COMMITTEE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-INDIANA REPUBLICAN STATE COMMITTEE
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 INDIANA REPUBLICAN STATE COMMITTEE
 
@@ -3519,21 +3687,23 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 OHIO DEMOCRATIC PARTY
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-OHIO DEMOCRATIC PARTY
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 OHIO DEMOCRATIC PARTY
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Levenshtein distance 64 is greater than threshold 5
+Levenshtein distance 63 is greater than threshold 5
 ---
-THEOHIO DEMOCRATIC PARTY AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE.
+THEOHIO DEMOCRATIC PARTY AND NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'SCOMMITTEE
 
-Fail Reason: Levenshtein distance 64 is greater than threshold 5","[PASS] (1.00)
+Fail Reason: Levenshtein distance 63 is greater than threshold 5","[PASS] (1.00)
 
 OHIO DEMOCRATIC PARTY
 
@@ -3560,11 +3730,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 TED CRUZ FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-TED CRUZ FOR SENATE
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 TED CRUZ FOR SENATE
 
@@ -3599,11 +3771,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 JARED MOSKOWITZ FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-JARED MOSKOWITZ FOR CONGRESS
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 JARED MOSKOWITZ FOR CONGRESS
 
@@ -3638,11 +3812,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF SHERROD BROWN
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
@@ -3677,11 +3853,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEFEATBOEBERT PAC
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-DEFEATBOEBERT PAC
+Levenshtein distance 56 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 56 is greater than threshold 5","[PASS] (1.00)
 
 DEFEAT BOEBERT PAC
 
@@ -3716,17 +3894,19 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 MARK TAKANO FORCONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
+
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 MARK TAKANO FOR CONGRESS
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 MARK TAKANO FOR CONGRESS
-
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-MARK TAKANO FORCONGRESS
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -3753,11 +3933,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 JOHN JAMES FOR MICHIGAN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-JOHN JAMES FOR MICHIGAN
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 JOHN JAMES FOR MICHIGAN
 
@@ -3792,11 +3974,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-FRIENDS OF SHERROD BROWN
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 FRIENDS OF SHERROD BROWN
 
@@ -3829,11 +4013,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 CARAVEO FOR CONGRESS
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-CARAVEO FOR CONGRESS
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 CARAVEO FOR CONGRESS
 
@@ -3868,11 +4054,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 GILLIBRAND FOR SENATE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-GILLIBRAND FOR SENATE
+Levenshtein distance 58 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 58 is greater than threshold 5","[PASS] (1.00)
 
 GILLIBRAND FOR SENATE
 
@@ -3907,11 +4095,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 POWERED BY PEOPLE
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
-POWERED BY PEOPLE
+Levenshtein distance 57 is greater than threshold 5
+---
+{""error"":""The model is overloaded. Please try again later.""}
 
-Pass Reason: All assertions passed","[PASS] (1.00)
+Fail Reason: Levenshtein distance 57 is greater than threshold 5","[PASS] (1.00)
 
 POWERED BY PEOPLE
 
