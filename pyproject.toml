@@ -13,6 +13,7 @@ dependencies = [
     "flask>=3.1.1",
     "llm-ollama>=0.10.0",
     "llm-anthropic==0.16",
+    "llm-openrouter>=0.4.1",
 ]
 
 [tool.pyright]

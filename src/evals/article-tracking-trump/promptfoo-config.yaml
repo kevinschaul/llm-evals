@@ -74,4 +74,34 @@ providers:
             model: "anthropic/claude-opus-4-0"
             transform_func: parse_boolean
 
+  - id: "http://127.0.0.1:4242/eval"
+    label: "qwen3-235b-a22b-2507"
+    config:
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/qwen/qwen3-235b-a22b-2507"
+            options:
+              provider:
+                quantizations:
+                  - "fp8"
+            transform_func: parse_boolean
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "deepseek-v3-0324"
+    config:
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/deepseek/deepseek-chat-v3-0324"
+            options:
+              provider:
+                quantizations:
+                  - "fp8"
+            transform_func: parse_boolean
+
 tests: file://tests.csv

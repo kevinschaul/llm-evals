@@ -11,7 +11,7 @@ from typing import Optional, Union, Dict, List, Any
 import json
 from pydantic import ValidationError
 import llm
-from llm.cli import logs_db_path
+from llm.cli import logs_db_path, migrate
 from llm.utils import make_schema_id, sqlite_utils
 from flask import Flask, request, jsonify
 import logging
@@ -20,6 +20,10 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+db_path_main = "raw_responses.db"
+# db_paths_search = [db_path_main, logs_db_path()]
+db_paths_search = [db_path_main]
 
 
 def parse_boolean(text: str) -> bool:
@@ -75,6 +79,18 @@ def strip_think_tags(text):
     return re.sub(pattern, "", text, flags=re.DOTALL).strip()
 
 
+class RawResponse:
+    def __init__(self, db, response_row) -> None:
+        self.db = db
+        self.response_row = response_row
+
+    def to_response(self):
+        return llm.Response.from_row(self.db, self.response_row)
+
+    def text(self):
+        return self.response_row["response"]
+
+
 def find_cached_response(
     db: sqlite_utils.Database,
     prompt_text: str,
@@ -85,9 +101,9 @@ def find_cached_response(
     system_fragments: Optional[List[str]] = None,
     attachments: Optional[List[llm.Attachment]] = None,
     **options: Any,
-) -> Optional[str]:
+) -> Optional[RawResponse]:
     """
-    Searches the LLM database for an exact cached query and returns the Response object if found.
+    Searches the LLM database for an exact cached query and returns the response row if found.
 
     This function attempts to match based on the core components of a prompt:
     - The main prompt text.
@@ -110,7 +126,7 @@ def find_cached_response(
         **options: Keyword arguments representing model-specific options.
 
     Returns:
-        An llm.Response object if an exact match is found, otherwise None.
+        A RawResponse object if an exact match is found, otherwise None.
     """
     try:
         model_obj = llm.get_model(model_id_or_alias)
@@ -239,7 +255,7 @@ def find_cached_response(
         # If all checks pass, this is our match
         full_response_row = db["responses"].get(response_id)
         if full_response_row:
-            return full_response_row["response"]
+            return RawResponse(db, full_response_row)
 
     return None
 
@@ -277,25 +293,38 @@ def call_llm(prompt, options, attachments=[], schema={}):
     attachments_raw = attachments
     attachments = [llm.Attachment(**a) for a in attachments_raw]
 
-    db = sqlite_utils.Database(logs_db_path())
-    response = find_cached_response(
-        db,
-        prompt_text=prompt,
-        model_id_or_alias=model_name,
-        schema=schema,
-        attachments=attachments,
-        **model_options,
-    )
-    if not response:
+    db_main = sqlite_utils.Database(db_path_main)
+
+    # Search our databases for this response
+    raw_response = None
+    for db_path in db_paths_search:
+        db = sqlite_utils.Database(db_path)
+        raw_response = find_cached_response(
+            db,
+            prompt_text=prompt,
+            model_id_or_alias=model_name,
+            schema=schema,
+            attachments=attachments,
+            **model_options,
+        )
+        if raw_response:
+            # If we found the response
+            if db_path != db_path_main:
+                # If we found it in a db that is not the main db, replicate it
+                # to the main db
+                raw_response.to_response().log_to_db(db_main)
+            break
+
+    else:
         model = llm.get_model(model_name)
         output = model.prompt(
             prompt, schema=schema, attachments=attachments, **model_options
         )
-        output.log_to_db(db)
-        response = output.text()
+        output.log_to_db(db_main)
+        raw_response = output
 
     try:
-        parsed = response.strip()
+        parsed = raw_response.text().strip()
         for func in transform_funcs:
             parsed = func(parsed)
     except ValueError:
@@ -316,7 +345,12 @@ def evaluate():
         logger.info(f"Available models: {llm.get_models()}")
 
         # Get the raw result
-        response = call_llm(data["prompt"], data["options"], data.get("attachments", []), data.get("schema", {}))
+        response = call_llm(
+            data["prompt"],
+            data["options"],
+            data.get("attachments", []),
+            data.get("schema", {}),
+        )
 
         # Ensure we return a proper JSON response
         output = response["output"]
@@ -333,5 +367,6 @@ def evaluate():
 
 
 if __name__ == "__main__":
+    migrate(sqlite_utils.Database(db_path_main))
     logger.info("Starting fast evaluation server on port 4242")
     app.run(host="127.0.0.1", port=4242, threaded=True, debug=False)

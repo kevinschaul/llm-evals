@@ -4,3 +4,5 @@ qwen3:14b:IQ4_XS,"Is this article primarily about a new action or announcement b
 gemma3:12b:Q4_0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,144,0.72
 anthropic/claude-sonnet-4-0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,145,0.72
 anthropic/claude-opus-4-0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,162,0.81
+qwen3-235b-a22b-2507,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,149,0.74
+deepseek-v3-0324,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,148,0.74

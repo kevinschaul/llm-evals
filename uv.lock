@@ -566,6 +566,7 @@ dependencies = [
     { name = "llm-mlx" },
     { name = "llm-ollama" },
     { name = "llm-openai-plugin" },
+    { name = "llm-openrouter" },
 ]
 
 [package.metadata]
@@ -578,6 +579,7 @@ requires-dist = [
     { name = "llm-mlx", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
     { name = "llm-openai-plugin", specifier = ">=0.3" },
+    { name = "llm-openrouter", specifier = ">=0.4.1" },
 ]
 
 [[package]]
@@ -632,6 +634,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/3b/5c/6ad47246d8e811f17597ed01877c56121b37f74577ca7c6dd6bda51a2ecc/llm_openai_plugin-0.3.tar.gz", hash = "sha256:b67e032ac31516e7aad3ed23d0540ee19ec5798e4da85fd48b7965ef6ba1db88", size = 10584 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/79/c0/2e9150706a458f6ea735b1b384c06f537e42373079425e048703ca0a5545/llm_openai_plugin-0.3-py3-none-any.whl", hash = "sha256:5aed314cc890b70e24c00479e1dc26978e0c987e17d819f835d78ec129e8c4fe", size = 10527 },
+]
+
+[[package]]
+name = "llm-openrouter"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "llm" },
+    { name = "openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8c/f2/87955102c1ce53e70043ec43f2736cea3c5064cc6209058504e8ce6daf75/llm_openrouter-0.4.1.tar.gz", hash = "sha256:21855a85cee3bc2bf61aacc0b25a2f695be855d672d38b94cb7ef762b5fce5fe", size = 11962 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/45/f24107b02118632836af2ca18dcd2aaa816b698fcdad2b0f16c2c20554f2/llm_openrouter-0.4.1-py3-none-any.whl", hash = "sha256:d9dff9f6cdb5a95f9547a9c2eab854035478ed86e9f3fcae836673954b73ac80", size = 11608 },
 ]
 
 [[package]]

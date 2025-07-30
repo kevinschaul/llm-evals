@@ -755,13 +755,11 @@ Expected output ""Health agencies' communications pause"" to equal ""Health care
 ---
 Health agencies' communications pause
 
-Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[FAIL] (0.00)
+Fail Reason: Expected output ""Health agencies' communications pause"" to equal ""Health care""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Health care""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Health care
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Health care""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Health care
 
@@ -793,13 +791,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Foreign aid""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Foreign aid
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Foreign aid""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Foreign aid
 
@@ -825,13 +821,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Kennedy Center
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
@@ -891,13 +885,11 @@ Expected output ""Foreign policy"" to equal ""Gaza""
 ---
 Foreign policy
 
-Fail Reason: Expected output ""Foreign policy"" to equal ""Gaza""","[FAIL] (0.00)
+Fail Reason: Expected output ""Foreign policy"" to equal ""Gaza""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Gaza""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Gaza
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Gaza""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Gaza
 
@@ -926,13 +918,11 @@ Fail Reason: Expected output ""Immigration policy"" to equal ""U.S.-Mexico borde
 
 U.S.-Mexico border
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""U.S.-Mexico border""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+U.S.-Mexico border
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""U.S.-Mexico border""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 U.S.-Mexico border
 
@@ -961,13 +951,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Kennedy Center
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
@@ -1001,11 +989,11 @@ Expanding executive power
 
 Fail Reason: Expected output ""Expanding executive power"" to equal ""DOGE""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""
+Expected output ""Other"" to equal ""DOGE""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Other
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""","[PASS] (1.00)
+Fail Reason: Expected output ""Other"" to equal ""DOGE""","[PASS] (1.00)
 
 DOGE
 
@@ -1042,11 +1030,11 @@ Federal funding
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal funding""
+Expected output ""Federal grant pause"" to equal ""Federal funding""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal grant pause
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal funding""","[FAIL] (0.00)
+Fail Reason: Expected output ""Federal grant pause"" to equal ""Federal funding""","[FAIL] (0.00)
 
 Expected output ""Federal grant pause"" to equal ""Federal funding""
 ---
@@ -1106,11 +1094,11 @@ Expanding executive power
 
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""
+Expected output ""Federal funding"" to equal ""Other""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal funding
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""","[FAIL] (0.00)
+Fail Reason: Expected output ""Federal funding"" to equal ""Other""","[FAIL] (0.00)
 
 Expected output ""DOGE"" to equal ""Other""
 ---
@@ -1144,13 +1132,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Immigration policy""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Immigration policy
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Immigration policy""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Immigration policy
 
@@ -1182,13 +1168,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+Deportations
+
 Pass Reason: All assertions passed","[FAIL] (0.00)
-
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Deportations""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
-
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Deportations""","[FAIL] (0.00)
 
 Expected output ""Other"" to equal ""Deportations""
 ---
@@ -1219,13 +1203,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+DEI in the federal government
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
@@ -1259,11 +1241,11 @@ War in Ukraine
 
 Pass Reason: All assertions passed","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""War in Ukraine""
+Expected output ""Foreign policy"" to equal ""War in Ukraine""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Foreign policy
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""War in Ukraine""","[PASS] (1.00)
+Fail Reason: Expected output ""Foreign policy"" to equal ""War in Ukraine""","[PASS] (1.00)
 
 War in Ukraine
 
@@ -1298,11 +1280,11 @@ Deportations
 
 Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Guantánamo Bay""
+Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Deportations
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Guantánamo Bay""","[PASS] (1.00)
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[PASS] (1.00)
 
 Guantánamo Bay
 
@@ -1331,13 +1313,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 NIH
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""NIH""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+NIH
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""NIH""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 NIH
 
@@ -1366,13 +1346,11 @@ Expected output ""D.C."" to equal ""Kennedy Center""
 ---
 D.C.
 
-Fail Reason: Expected output ""D.C."" to equal ""Kennedy Center""","[FAIL] (0.00)
+Fail Reason: Expected output ""D.C."" to equal ""Kennedy Center""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Kennedy Center
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Kennedy Center""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Kennedy Center
 
@@ -1407,13 +1385,11 @@ Expected output ""Foreign aid"" to equal ""USAID""
 ---
 Foreign aid
 
-Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+USAID
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 USAID
 
@@ -2164,13 +2140,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+DEI in the federal government
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
@@ -2199,13 +2173,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Crypto
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Crypto""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Crypto
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Crypto""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Crypto
 
@@ -2232,13 +2204,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Gaza
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Gaza""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Gaza
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Gaza""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Gaza
 
@@ -2282,13 +2252,11 @@ Expected output ""Foreign aid"" to equal ""USAID""
 ---
 Foreign aid
 
-Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+USAID
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 USAID
 
@@ -2318,13 +2286,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Deportations""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Deportations
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Deportations""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Deportations
 
@@ -2359,11 +2325,11 @@ Federal workforce reductions
 
 Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Reclassifying federal jobs""
+Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal workforce reductions
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Reclassifying federal jobs""","[PASS] (1.00)
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""Reclassifying federal jobs""","[PASS] (1.00)
 
 Reclassifying federal jobs
 
@@ -2404,13 +2370,11 @@ Expected output ""Federal worker buyout"" to equal ""Federal workforce reduction
 ---
 Federal worker buyout
 
-Fail Reason: Expected output ""Federal worker buyout"" to equal ""Federal workforce reductions""","[FAIL] (0.00)
+Fail Reason: Expected output ""Federal worker buyout"" to equal ""Federal workforce reductions""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal workforce reductions
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -2481,13 +2445,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal workforce reductions
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -2537,11 +2499,11 @@ Deportations
 
 Fail Reason: Expected output ""Deportations"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Senior government officials ousted""
+Expected output ""Immigration policy"" to equal ""Senior government officials ousted""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Immigration policy
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
+Fail Reason: Expected output ""Immigration policy"" to equal ""Senior government officials ousted""","[FAIL] (0.00)
 
 Expected output ""Deportations"" to equal ""Senior government officials ousted""
 ---
@@ -2576,11 +2538,11 @@ Senior government officials ousted
 
 Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""
+Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Senior government officials ousted
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""","[FAIL] (0.00)
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
@@ -2624,13 +2586,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+DEI in the federal government
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DEI in the federal government""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DEI in the federal government
 
@@ -2663,13 +2623,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal grant pause""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal grant pause
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal grant pause""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal grant pause
 
@@ -3350,11 +3308,11 @@ Expanding executive power
 
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Firing government watchdogs""
+Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Expanding executive power
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""","[FAIL] (0.00)
 
 Expected output ""Expanding executive power"" to equal ""Firing government watchdogs""
 ---
@@ -3441,13 +3399,11 @@ Expected output ""Pardons"" to equal ""Other""
 ---
 Pardons
 
-Fail Reason: Expected output ""Pardons"" to equal ""Other""","[FAIL] (0.00)
+Fail Reason: Expected output ""Pardons"" to equal ""Other""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Other
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""","[FAIL] (0.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Expanding executive power"" to equal ""Other""
 ---
@@ -3514,13 +3470,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal workforce reductions
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Federal workforce reductions""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Federal workforce reductions
 
@@ -3564,13 +3518,11 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Transgender policy""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Transgender policy
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Transgender policy""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Transgender policy
 
@@ -3600,13 +3552,11 @@ Expected output ""Deportations"" to equal ""Guantánamo Bay""
 ---
 Deportations
 
-Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[FAIL] (0.00)
+Fail Reason: Expected output ""Deportations"" to equal ""Guantánamo Bay""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Guantánamo Bay""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Guantánamo Bay
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Guantánamo Bay""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Guantánamo Bay
 
@@ -3661,11 +3611,11 @@ U.S.-Mexico border
 
 Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Tariffs""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Tariffs""
+Expected output ""U.S.-Mexico border"" to equal ""Tariffs""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+U.S.-Mexico border
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Tariffs""","[FAIL] (0.00)
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Tariffs""","[FAIL] (0.00)
 
 Expected output ""Sanctions"" to equal ""Tariffs""
 ---
@@ -3706,11 +3656,11 @@ Expanding executive power
 
 Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""
+Expected output ""Expanding executive power"" to equal ""Other""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Expanding executive power
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""","[FAIL] (0.00)
+Fail Reason: Expected output ""Expanding executive power"" to equal ""Other""","[FAIL] (0.00)
 
 Expected output ""DOGE"" to equal ""Other""
 ---
@@ -3744,13 +3694,11 @@ Fail Reason: Expected output ""Other"" to equal ""Targeting political enemies"""
 
 Targeting political enemies
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Targeting political enemies""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Targeting political enemies
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Targeting political enemies""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Targeting political enemies
 
@@ -3828,11 +3776,11 @@ Federal worker buyout
 
 Fail Reason: Expected output ""Federal worker buyout"" to equal ""DOGE""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""
+Expected output ""Federal workforce reductions"" to equal ""DOGE""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Federal workforce reductions
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""","[PASS] (1.00)
+Fail Reason: Expected output ""Federal workforce reductions"" to equal ""DOGE""","[PASS] (1.00)
 
 DOGE
 
@@ -3868,13 +3816,11 @@ Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
 U.S.-Mexico border
 
-Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[FAIL] (0.00)
+Fail Reason: Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Immigration policy""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Immigration policy
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Immigration policy""","[FAIL] (0.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""U.S.-Mexico border"" to equal ""Immigration policy""
 ---
@@ -3911,13 +3857,11 @@ Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
 Senior government officials ousted
 
-Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[FAIL] (0.00)
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Other""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Other
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Other""","[FAIL] (0.00)
+Pass Reason: All assertions passed","[FAIL] (0.00)
 
 Expected output ""Senior government officials ousted"" to equal ""Other""
 ---
@@ -3970,11 +3914,11 @@ Foreign aid
 
 Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[FAIL] (0.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""
+Expected output ""Foreign aid"" to equal ""USAID""
 ---
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Foreign aid
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""USAID""","[PASS] (1.00)
+Fail Reason: Expected output ""Foreign aid"" to equal ""USAID""","[PASS] (1.00)
 
 USAID
 
@@ -4007,13 +3951,11 @@ Expected output ""Senior government officials ousted"" to equal ""Targeting poli
 ---
 Senior government officials ousted
 
-Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""","[FAIL] (0.00)
+Fail Reason: Expected output ""Senior government officials ousted"" to equal ""Targeting political enemies""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Targeting political enemies""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+Targeting political enemies
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""Targeting political enemies""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 Targeting political enemies
 
@@ -4047,13 +3989,11 @@ Expected output ""Crypto"" to equal ""DOGE""
 ---
 Crypto
 
-Fail Reason: Expected output ""Crypto"" to equal ""DOGE""","[FAIL] (0.00)
+Fail Reason: Expected output ""Crypto"" to equal ""DOGE""","[PASS] (1.00)
 
-Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""
----
-{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}
+DOGE
 
-Fail Reason: Expected output ""{""error"":""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.""}"" to equal ""DOGE""","[PASS] (1.00)
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 DOGE
 
