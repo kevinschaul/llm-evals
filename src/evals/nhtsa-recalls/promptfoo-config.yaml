@@ -13,6 +13,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"

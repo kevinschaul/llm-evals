@@ -15,6 +15,7 @@ from llm.cli import logs_db_path, migrate
 from llm.utils import make_schema_id, sqlite_utils
 from flask import Flask, request, jsonify
 import logging
+import time
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -261,10 +262,14 @@ def find_cached_response(
 
 
 def call_llm(prompt, options, attachments=[], schema={}):
+    start_time = time.time()
+    
     config = options.get("config", {})
     model_name = config.get("model")
     model_options = config.get("options", {})
 
+    # Setup phase
+    setup_start = time.time()
     transform_funcs_raw = config.get("transform_funcs")
     if not transform_funcs_raw:
         transform_funcs_raw = [config.get("transform_func", "nop")]
@@ -292,10 +297,14 @@ def call_llm(prompt, options, attachments=[], schema={}):
 
     attachments_raw = attachments
     attachments = [llm.Attachment(**a) for a in attachments_raw]
+    
+    setup_duration = time.time() - setup_start
+    logger.info(f"Setup phase took: {setup_duration:.3f}s")
 
     db_main = sqlite_utils.Database(db_path_main)
 
-    # Search our databases for this response
+    # Cache lookup phase
+    cache_start = time.time()
     raw_response = None
     for db_path in db_paths_search:
         db = sqlite_utils.Database(db_path)
@@ -312,23 +321,52 @@ def call_llm(prompt, options, attachments=[], schema={}):
             if db_path != db_path_main:
                 # If we found it in a db that is not the main db, replicate it
                 # to the main db
+                replication_start = time.time()
                 raw_response.to_response().log_to_db(db_main)
+                replication_duration = time.time() - replication_start
+                logger.info(f"Cache replication took: {replication_duration:.3f}s")
             break
+    
+    cache_duration = time.time() - cache_start
+    logger.info(f"Cache lookup took: {cache_duration:.3f}s")
 
-    else:
+    if not raw_response:
+        # LLM call phase
+        llm_start = time.time()
         model = llm.get_model(model_name)
+        logger.info(f"Loaded model {model}")
         output = model.prompt(
             prompt, schema=schema, attachments=attachments, **model_options
         )
-        output.log_to_db(db_main)
-        raw_response = output
 
+        # Gather text so that timing is accurate
+        output.text()
+        llm_duration = time.time() - llm_start
+        logger.info(f"LLM API call took: {llm_duration:.3f}s")
+        
+        # DB write phase
+        db_write_start = time.time()
+        output.log_to_db(db_main)
+        db_write_duration = time.time() - db_write_start
+        logger.info(f"DB write took: {db_write_duration:.3f}s")
+        
+        raw_response = output
+    else:
+        logger.info("Cache hit - skipped LLM call")
+
+    # Transform phase
+    transform_start = time.time()
     try:
         parsed = raw_response.text().strip()
         for func in transform_funcs:
             parsed = func(parsed)
     except ValueError:
         parsed = None
+    transform_duration = time.time() - transform_start
+    logger.info(f"Transform phase took: {transform_duration:.3f}s")
+
+    total_duration = time.time() - start_time
+    logger.info(f"Total call_llm took: {total_duration:.3f}s")
 
     result = {
         "output": parsed,
@@ -339,22 +377,30 @@ def call_llm(prompt, options, attachments=[], schema={}):
 
 @app.route("/eval", methods=["POST"])
 def evaluate():
+    start_time = time.time()
     try:
         data = request.json
         logger.info(f"Request received: {data}")
-        logger.info(f"Available models: {llm.get_models()}")
+        # logger.info(f"Available models: {llm.get_models()}")
 
         # Get the raw result
+        call_start = time.time()
         response = call_llm(
             data["prompt"],
             data["options"],
             data.get("attachments", []),
             data.get("schema", {}),
         )
+        call_duration = time.time() - call_start
+        logger.info(f"call_llm took: {call_duration:.3f}s")
 
         # Ensure we return a proper JSON response
         output = response["output"]
         logger.info(f"Raw output: {output}")
+        
+        total_duration = time.time() - start_time
+        logger.info(f"Total /eval request took: {total_duration:.3f}s")
+        
         if isinstance(output, bool):
             return "true" if output else "false"
         else:

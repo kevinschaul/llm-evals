@@ -563,6 +563,7 @@ dependencies = [
     { name = "llm" },
     { name = "llm-anthropic" },
     { name = "llm-gemini" },
+    { name = "llm-lmstudio" },
     { name = "llm-mlx" },
     { name = "llm-ollama" },
     { name = "llm-openai-plugin" },
@@ -576,6 +577,7 @@ requires-dist = [
     { name = "llm", specifier = ">=0.24" },
     { name = "llm-anthropic", specifier = "==0.16" },
     { name = "llm-gemini", specifier = ">=0.24" },
+    { name = "llm-lmstudio", git = "https://github.com/kevinschaul/llm-lmstudio?branch=fix%2Fhost" },
     { name = "llm-mlx", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
     { name = "llm-openai-plugin", specifier = ">=0.3" },
@@ -594,6 +596,16 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/01/15/9486773117b39c9516fc754699e3d43bad7f0625363ad8d8065b7d28a399/llm_gemini-0.24.tar.gz", hash = "sha256:8283784f5e4cd0239ae0bd40e631ab3595f9a5145b2c5ab170e49cf5a1d28aff", size = 16266 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/20/b3f5c0605dc69c80e8fe39503e5d6f45da6c23d1fc90ae295230a65fcb69/llm_gemini-0.24-py3-none-any.whl", hash = "sha256:197d9d0b1e1c4a2af0b0cc170b0dce4b94fd405c15ac4782bba6f2921973c57f", size = 14800 },
+]
+
+[[package]]
+name = "llm-lmstudio"
+version = "0.1.0"
+source = { git = "https://github.com/kevinschaul/llm-lmstudio?branch=fix%2Fhost#d91479498361ec2ad8142031e463d28bb9d73555" }
+dependencies = [
+    { name = "httpx" },
+    { name = "llm" },
+    { name = "requests" },
 ]
 
 [[package]]

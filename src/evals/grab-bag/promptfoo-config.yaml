@@ -8,6 +8,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -18,6 +19,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -28,6 +30,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "gemini-2.5-pro-preview-03-25"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -36,28 +39,31 @@ providers:
             model: "gemini-2.5-pro-preview-03-25"
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "qwen3:14b:IQ4_XS"
+    label: "qwen/qwen3-14b"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
+            model: "qwen/qwen3-14b"
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "gemma3:12b:Q4_0"
+    label: "google/gemma-3-12b"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+            model: "google/gemma-3-12b"
 
   - id: "http://127.0.0.1:4242/eval"
     label: "gemma-3-27b-it"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -68,6 +74,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-3-opus-20240229"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -78,6 +85,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-3-5-sonnet-20241022"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -88,6 +96,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-3-7-sonnet-20250219"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -98,6 +107,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-sonnet-4-0"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -108,11 +118,53 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-opus-4-0"
     config:
+      transformResponse: 'file://../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
             model: "anthropic/claude-opus-4-0"
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "lmstudio/openai/gpt-oss-20b"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-oss-20b"
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-oss-20b"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/openai/gpt-oss-20b"
+            options:
+              provider:
+                quantizations:
+                  - "fp4"
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-oss-120b"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/openai/gpt-oss-120b"
+            options:
+              provider:
+                quantizations:
+                  - "fp4"
 
 tests: https://docs.google.com/spreadsheets/d/1mr8K_IP4yJP_cAHGm_OsQXwJg_7WpqchgMbvMpAuCdM/edit?gid=0

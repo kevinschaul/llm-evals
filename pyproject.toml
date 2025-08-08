@@ -14,9 +14,13 @@ dependencies = [
     "llm-ollama>=0.10.0",
     "llm-anthropic==0.16",
     "llm-openrouter>=0.4.1",
+    "llm-lmstudio",
 ]
 
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
 extraPaths = ["."]
+
+[tool.uv.sources]
+llm-lmstudio = { git = "https://github.com/kevinschaul/llm-lmstudio", branch = "fix/host" }

@@ -4609,28 +4609,27 @@ Fail Reason: Expected output ""true"" to equal ""false""","[PASS] (1.00)
 
 false
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[ERROR] (0.00)
 
-Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""
+  Error: Server error
+
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17
 ---
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+Error: Server error
 
-
-Fail Reason: Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false"""
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17"
 "https://dailycaller.com/2024/09/10/trump-kamala-harris-policy-debate-maga-hat/
 https://links.truthsocial.com/link/113117655488321877
 ‘Send Her A MAGA Hat’: Trump Says Kamala Harris Adopted His Philosophy Because She ‘Has No Policy’
@@ -11231,28 +11230,27 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 false
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[ERROR] (0.00)
 
-Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""
+  Error: Server error
+
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17
 ---
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+Error: Server error
 
-
-Fail Reason: Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false"""
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17"
 RT @JeffNTnProbably the best Trump ad is a Harris rally.,"[PASS] (1.00)
 
 false
@@ -11982,53 +11980,51 @@ Pass Reason: All assertions passed"
 "https://youtu.be/FQyGYKsw9Ro?si=gp0OMyMeQh9I4hdY
 https://www.youtube.com/watch?v=FQyGYKsw9Ro&si=gp0OMyMeQh9I4hdY
 'PALACE COUP': Trump reacts to Biden's 'terrible' Oval Office address
-Former President Donald Trump spoke with the 'Fox & Friends' co-hosts about President Biden's Oval Office address and his plan to take on VP Kamala Harris. #...","[FAIL] (0.00)
+Former President Donald Trump spoke with the 'Fox & Friends' co-hosts about President Biden's Oval Office address and his plan to take on VP Kamala Harris. #...","[ERROR] (0.00)
 
-Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""
+  Error: Server error
+
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17
 ---
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+Error: Server error
 
-
-Fail Reason: Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""","[PASS] (1.00)
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17","[PASS] (1.00)
 
 false
 
-Pass Reason: All assertions passed","[FAIL] (0.00)
+Pass Reason: All assertions passed","[ERROR] (0.00)
 
-Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""
+  Error: Server error
+
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17
 ---
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+Error: Server error
 
-
-Fail Reason: Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false"""
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17"
 "Why didn’t Gavin Newscum do this a long time ago? He’s only doing it because, just like Crooked Joe Biden, his Radical Left Democrat Presidential Candidate, Lyin’ Kamala Harris, is losing BIG in the Polls. They just did it for Political Reasons, because she comes from California, and looks terrible. Right after the Election, it will go back to SLUM LIKE condition, unless we WIN — THEN, AMERICA WILL BE GREAT AGAIN!","[FAIL] (0.00)
 
 Expected output ""true"" to equal ""false""
@@ -12051,28 +12047,27 @@ Fail Reason: Expected output ""true"" to equal ""false"""
 "https://www.foxnews.com/video/6359153284112
 https://links.truthsocial.com/link/112844672207567206
  Sean Hannity: This is Kamala in her own words | Fox News Video
-Fox News host Sean Hannity unpacks Vice President Kamala Harris' record as she seeks the presidency on 'Hannity.'","[FAIL] (0.00)
+Fox News host Sean Hannity unpacks Vice President Kamala Harris' record as she seeks the presidency on 'Hannity.'","[ERROR] (0.00)
 
-Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""
+  Error: Server error
+
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17
 ---
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+Error: Server error
 
-
-Fail Reason: Expected output ""<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-"" to equal ""false""","[PASS] (1.00)
+Error: Server error
+at default (file:///Users/schaulka/dev/llm-evals/catchErrors.js:7:11)
+at HttpProvider.callApi (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/providers/http.js:951:60)
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+at async runEval (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:267:24)
+at async processEvalStep (/Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:871:26)
+at async /Users/schaulka/.nvm/versions/node/v20.19.0/lib/node_modules/promptfoo/dist/src/evaluator.js:1228:17","[PASS] (1.00)
 
 false
 

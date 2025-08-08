@@ -17,6 +17,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -27,6 +28,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "openai/gpt-4o-mini"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -35,29 +37,31 @@ providers:
             model: "openai/gpt-4o-mini"
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "qwen3:14b:IQ4_XS"
+    label: "qwen/qwen3-14b"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
-            transform_func: strip_think_tags
+            model: "qwen/qwen3-14b"
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "gemma3:12b:Q4_0"
+    label: "google/gemma-3-12b"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+            model: "google/gemma-3-12b"
 
   - id: "http://127.0.0.1:4242/eval"
     label: "gemma-3-27b-it"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -68,6 +72,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-sonnet-4-0"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"
@@ -78,6 +83,7 @@ providers:
   - id: "http://127.0.0.1:4242/eval"
     label: "anthropic/claude-opus-4-0"
     config:
+      transformResponse: 'file://../../../../catchErrors.js'
       method: POST
       body:
         prompt: "{{prompt}}"

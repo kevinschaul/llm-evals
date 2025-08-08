@@ -17,17 +17,6 @@ providers:
             model: "openai/gpt-4o-mini"
             transform_func: parse_boolean
 
-  # - id: "http://127.0.0.1:4242/eval"
-  #   label: "wapo"
-  #   config:
-  #     method: POST
-  #     body:
-  #       prompt: "{{prompt}}"
-  #       options:
-  #         config:
-  #           model: "wapo"
-  #           transform_func: parse_boolean
-
   - id: "http://127.0.0.1:4242/eval"
     label: "qwen3:14b:IQ4_XS"
     config:
@@ -102,6 +91,38 @@ providers:
               provider:
                 quantizations:
                   - "fp8"
+            transform_func: parse_boolean
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-oss-20b"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/openai/gpt-oss-20b"
+            options:
+              provider:
+                only:
+                  - "nebius/fp4"
+            transform_func: parse_boolean
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-oss-120b"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openrouter/openai/gpt-oss-120b"
+            options:
+              provider:
+                only:
+                  - "nebius/fp4"
             transform_func: parse_boolean
 
 tests: file://tests.csv

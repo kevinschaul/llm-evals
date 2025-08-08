@@ -10,6 +10,7 @@ eval-all:
   @just eval social-media-insults
   @just eval nhtsa-recalls
   @just eval political-fundraising-emails
+  @just eval grab-bag
 
 # Last line here ignore errors code 100, which means at least one eval failed
 eval config *ARGS:
@@ -41,4 +42,7 @@ stop-llm-provider:
     @echo "Stopping llm provider..."
     @pkill -f llm_provider.py || true
     @echo "llm provider stopped"
+
+search-errors:
+    python search_errors.py
 
