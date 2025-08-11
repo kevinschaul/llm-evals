@@ -18,27 +18,25 @@ providers:
             transform_func: parse_boolean
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "qwen3:14b:IQ4_XS"
+    label: "qwen/qwen3-14b"
     config:
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/Qwen3-14B-GGUF:IQ4_XS"
-            transform_funcs:
-              - strip_think_tags
-              - parse_boolean
+            model: "qwen/qwen3-14b"
+            transform_func: parse_boolean
 
   - id: "http://127.0.0.1:4242/eval"
-    label: "gemma3:12b:Q4_0"
+    label: "google/gemma-3-12b"
     config:
       method: POST
       body:
         prompt: "{{prompt}}"
         options:
           config:
-            model: "hf.co/unsloth/gemma-3-12b-it-GGUF:Q4_0"
+            model: "google/gemma-3-12b"
             transform_func: parse_boolean
 
   - id: "http://127.0.0.1:4242/eval"
@@ -123,6 +121,7 @@ providers:
               provider:
                 only:
                   - "nebius/fp4"
+                  - "fp4"
             transform_func: parse_boolean
 
 tests: file://tests.csv

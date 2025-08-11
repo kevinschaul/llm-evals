@@ -1,10 +1,10 @@
 model,prompt,count,n_correct,share_correct
 openai/gpt-4o-mini,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,149,0.74
-qwen3:14b:IQ4_XS,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,0,0.00
-gemma3:12b:Q4_0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,0,0.00
+qwen/qwen3-14b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,132,0.66
+google/gemma-3-12b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,0,0.00
 anthropic/claude-sonnet-4-0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,145,0.72
 anthropic/claude-opus-4-0,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,162,0.81
 qwen3-235b-a22b-2507,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,149,0.74
 deepseek-v3-0324,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,148,0.74
 openai/gpt-oss-20b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,140,0.70
-openai/gpt-oss-120b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,139,0.69
+openai/gpt-oss-120b,"Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with ""true"" or ""false"".",200,141,0.70
