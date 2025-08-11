@@ -167,4 +167,37 @@ providers:
                 quantizations:
                   - "fp4"
 
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-5"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-5-2025-08-07"
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-5-mini"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-5-mini-2025-08-07"
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-5-nano"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-5-nano-2025-08-07"
+
 tests: https://docs.google.com/spreadsheets/d/1mr8K_IP4yJP_cAHGm_OsQXwJg_7WpqchgMbvMpAuCdM/edit?gid=0

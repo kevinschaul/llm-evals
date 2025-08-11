@@ -1,4 +1,4 @@
-prompt,[openai/gpt-4o-mini] {{prompt}},[openai/gpt-4o] {{prompt}},[gemini-2.5-pro-preview-03-25] {{prompt}},[qwen/qwen3-14b] {{prompt}},[google/gemma-3-12b] {{prompt}},[gemma-3-27b-it] {{prompt}},[anthropic/claude-3-opus-20240229] {{prompt}},[anthropic/claude-3-5-sonnet-20241022] {{prompt}},[anthropic/claude-3-7-sonnet-20250219] {{prompt}},[anthropic/claude-sonnet-4-0] {{prompt}},[anthropic/claude-opus-4-0] {{prompt}},[lmstudio/openai/gpt-oss-20b] {{prompt}},[openai/gpt-oss-20b] {{prompt}},[openai/gpt-oss-120b] {{prompt}}
+prompt,[openai/gpt-4o-mini] {{prompt}},[openai/gpt-4o] {{prompt}},[gemini-2.5-pro-preview-03-25] {{prompt}},[qwen/qwen3-14b] {{prompt}},[google/gemma-3-12b] {{prompt}},[gemma-3-27b-it] {{prompt}},[anthropic/claude-3-opus-20240229] {{prompt}},[anthropic/claude-3-5-sonnet-20241022] {{prompt}},[anthropic/claude-3-7-sonnet-20250219] {{prompt}},[anthropic/claude-sonnet-4-0] {{prompt}},[anthropic/claude-opus-4-0] {{prompt}},[lmstudio/openai/gpt-oss-20b] {{prompt}},[openai/gpt-oss-20b] {{prompt}},[openai/gpt-oss-120b] {{prompt}},[openai/gpt-5] {{prompt}},[openai/gpt-5-mini] {{prompt}},[openai/gpt-5-nano] {{prompt}}
 Who is Kevin Schaul?,"[PASS] (1.00)
 
 Kevin Schaul is a journalist known for his work in data visualization and reporting. He has contributed to various publications, notably at The Washington Post, where he focuses on political and business news, often using data-driven insights to tell stories. Schaul's work typically involves analyzing complex data sets to provide context and clarity on important issues. If you're looking for more specific aspects of his career or recent work, feel free to ask!
@@ -251,7 +251,25 @@ Fail Reason: Expected output to contain ""journalist""","[FAIL] (0.00)
 
 **Bottom line:** Kevin Schaul is a former Dutch‑Curaçaoan professional baseball pitcher who reached the MLB in the early‑2000s, represented the Netherlands in high‑profile international tournaments (most memorably the 2009 World Baseball Classic), and now devotes his time to coaching and promoting baseball in the Netherlands and Curaçao.
 
-   Fail Reason: Expected output to contain ""journalist"""
+   Fail Reason: Expected output to contain ""journalist""","[PASS] (1.00)
+
+Kevin Schaul is a data journalist and senior graphics editor at The Washington Post, known for building interactive graphics and data-driven stories, especially on politics and elections. If you meant a different Kevin Schaul, let me know any context (field, company, location) and I’ll zero in.
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output to contain ""journalist""
+---
+I’m missing context — there are likely multiple people named Kevin Schaul. Where did you see the name (news article, LinkedIn, a sports roster, a legal case, etc.) and what kind of information do you want (biography, job, contact, accomplishments)? 
+
+If you want, I can:
+- Try to look up and summarize public information about a particular Kevin Schaul if you tell me which one or where you found the name, or
+- Suggest search queries you can run to find the right person.
+
+Fail Reason: Expected output to contain ""journalist""","[PASS] (1.00)
+
+Kevin Schaul is an American journalist known for his work in data journalism. He was a reporter and graphics editor at The Washington Post, where he covered politics, elections, and produced data visualizations and interactive graphics. If you’re thinking of a different Kevin Schaul, please share more context and I can narrow it down.
+
+Pass Reason: All assertions passed"
 How many Rs are in Washington Post? Respond ONLY with the answer.,"[FAIL] (0.00)
 
 Expected output to contain one of ""0, zero""
@@ -307,6 +325,18 @@ Expected output to contain one of ""0, zero""
 1
 
 Fail Reason: Expected output to contain one of ""0, zero""","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 0
 
@@ -1601,6 +1631,142 @@ list:
 
 > **Note:** The rule assumes the JPEG and PNG files share the same base name (e.g., `photo.jpg → photo.png`). If you need a different naming scheme, adjust the pattern rules accordingly.
 
+     Pass Reason: No assertions","[PASS] (1.00)
+
+     Here’s a simple Makefile that converts all JPEGs in the current directory to PNGs using ImageMagick. Save as Makefile and run: make
+
+IMAGEMAGICK ?= magick
+RM ?= rm -f
+
+JPG  := $(wildcard *.jpg)
+JPEG := $(wildcard *.jpeg)
+JPGU := $(wildcard *.JPG)
+JPEJU:= $(wildcard *.JPEG)
+
+PNGS := $(JPG:.jpg=.png) \
+       $(JPEG:.jpeg=.png) \
+       $(JPGU:.JPG=.png) \
+       $(JPEJU:.JPEG=.png)
+
+.PHONY: all clean
+all: $(PNGS)
+
+%.png: %.jpg
+$(IMAGEMAGICK) ""$<"" ""$@""
+
+%.png: %.jpeg
+$(IMAGEMAGICK) ""$<"" ""$@""
+
+%.png: %.JPG
+$(IMAGEMAGICK) ""$<"" ""$@""
+
+%.png: %.JPEG
+$(IMAGEMAGICK) ""$<"" ""$@""
+
+clean:
+$(RM) $(PNGS)
+
+Notes:
+- Requires ImageMagick. On IM v7 the command is magick; on older versions use convert by running: make IMAGEMAGICK=convert
+
+     Pass Reason: No assertions","[PASS] (1.00)
+
+     Here is a simple, portable Makefile that finds .jpg and .jpeg files in the current directory and converts them to .png using ImageMagick (either magick or convert). Save this as ""Makefile"" in the directory with your JPEGs and run ""make"" or ""make all"".
+
+Makefile:
+```
+SHELL := /bin/bash
+
+# Find JPEG files and compute corresponding PNG names
+JPEG_FILES := $(wildcard *.jpg *.jpeg)
+PNG_FILES  := $(patsubst %.jpg,%.png,$(patsubst %.jpeg,%.png,$(JPEG_FILES)))
+
+# Choose ImageMagick command: prefer ""magick"" (IM v7), else fall back to ""convert""
+ifeq ($(shell command -v magick 2>/dev/null),)
+CONVERT ?= convert
+else
+CONVERT ?= magick
+endif
+
+.PHONY: all clean
+
+all: $(PNG_FILES)
+@echo ""Converted $(words $(PNG_FILES)) file(s).""
+
+# Pattern rules for .jpg and .jpeg -> .png
+%.png: %.jpg
+@echo ""Converting $< -> $@""
+$(CONVERT) ""$<"" ""$@""
+
+%.png: %.jpeg
+@echo ""Converting $< -> $@""
+$(CONVERT) ""$<"" ""$@""
+
+clean:
+@rm -f $(PNG_FILES)
+@echo ""Removed generated PNG files.""
+```
+
+Notes:
+- Requires ImageMagick installed (magick or convert).
+- Filenames containing newlines or leading/trailing whitespace may break simple Makefile wildcard handling; for typical filenames this works fine.
+- You can override the converter by running make like: CONVERT=magick make.
+
+     Pass Reason: No assertions","[PASS] (1.00)
+
+     Here's a simple Makefile that converts JPEG images in the current directory to PNGs using ImageMagick. It handles .jpg/.jpeg (both lower and upper case variants) and creates corresponding .png files with the same base name.
+
+Prerequisites: ImageMagick (convert or magick) installed.
+
+Makefile:
+
+# Collect all JPEG sources (case variants)
+SOURCES := $(wildcard *.jpg) $(wildcard *.jpeg) $(wildcard *.JPG) $(wildcard *.JPEG)
+
+# Map to corresponding PNG targets
+PNG := $(SOURCES:.jpg=.png)
+PNG := $(PNG:.jpeg=.png)
+PNG := $(PNG:.JPG=.png)
+PNG := $(PNG:.JPEG=.png)
+
+# Choose ImageMagick command (prefer 'magick' if available)
+ifeq (, $(shell command -v magick 2>/dev/null))
+CONVERT := convert
+else
+CONVERT := magick convert
+endif
+
+.PHONY: all clean
+.DEFAULT_GOAL := all
+
+# Default target: build all PNGs
+all: $(PNG)
+
+# Conversion rules (one per possible source extension)
+%.png: %.jpg
+@mkdir -p $(@D)
+$(CONVERT) ""$<"" ""$@""
+
+%.png: %.jpeg
+@mkdir -p $(@D)
+$(CONVERT) ""$<"" ""$@""
+
+%.png: %.JPG
+@mkdir -p $(@D)
+$(CONVERT) ""$<"" ""$@""
+
+%.png: %.JPEG
+@mkdir -p $(@D)
+$(CONVERT) ""$<"" ""$@""
+
+# Clean generated PNGs
+clean:
+@rm -f $(PNG)
+
+Usage:
+- Run make to generate PNGs from all JPEGs in the directory.
+- Run make clean to remove the generated PNGs.
+
      Pass Reason: No assertions"
 Sally is a girl. She has three brothers. Each of her brothers has the same two sisters. How many sisters does Sally have? Respond ONLY with the answer.,"[PASS] (1.00)
 
@@ -1613,6 +1779,18 @@ Expected output to contain one of ""1, one""
 Two sisters.
 
 Fail Reason: Expected output to contain one of ""1, one""","[PASS] (1.00)
+
+1
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+1
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+1
+
+Pass Reason: All assertions passed","[PASS] (1.00)
 
 1
 
@@ -1722,6 +1900,18 @@ three
 Pass Reason: All assertions passed","[PASS] (1.00)
 
 Three
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+three
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+three
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+three
 
 Pass Reason: All assertions passed","[PASS] (1.00)
 
@@ -1845,6 +2035,18 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 It’s simply **Christmas morning**.  
 
 The “tree” in the living‑room is the Christmas tree, and the “boxes” around it are the wrapped presents. The boy has woken up, rushed down the stairs and is staring in awe at the tree and all his gifts waiting for him.
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+It’s Christmas morning. The “tree” is a Christmas tree, and the boxes are wrapped presents around it.
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+It's Christmas morning — the ""tree"" is the family's Christmas tree and the boxes are presents around it.
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+It’s Christmas morning. The family has a Christmas tree in the living room and there are presents (boxes) around it, and the boy is running downstairs excited to see them.
 
 Pass Reason: All assertions passed"
 how can I use shuf to randomize the output of ls,"[PASS] (1.00)
@@ -2800,4 +3002,72 @@ If you know your filenames are “well‑behaved” (no new‑lines, no leading 
 
 Happy shuffling! 🚀
 
-Pass Reason: All assertions passed"
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+    Expected output to contain ""ls | shuf""
+---
+Simplest
+- ls -1 | shuf
+- To pick one random entry: ls -1 | shuf -n 1
+- Include hidden (but not . and ..): ls -A1 | shuf
+
+Notes and safer options
+- Parsing ls can be fragile if filenames contain spaces/newlines. Prefer one of these:
+- Use shell globbing with shuf’s -e (safe for spaces/newlines):
+  shuf -e -- *
+  Add hidden files too (bash):
+  shopt -s dotglob; shuf -e -- *; shopt -u dotglob
+- Use find with NUL separators:
+  find . -maxdepth 1 -mindepth 1 -print0 | shuf -z | xargs -0 -n1 printf '%s
+'
+
+Tips
+- Disable colors if you see escape codes: ls -1 --color=never | shuf
+- Limit the number of randomized results: shuf -n N (after any of the above)
+
+    Fail Reason: Expected output to contain ""ls | shuf""","[PASS] (1.00)
+
+    Short answer:
+- Quick & simple: ls | shuf
+- One-per-line explicitly: ls -1 | shuf
+
+Notes and safer alternatives (to handle spaces/newlines in filenames):
+- If you need a random long-format (ls -l) listing and must handle arbitrary filenames, use NUL-separated streams:
+
+find . -maxdepth 1 -mindepth 1 -print0 | shuf -z | xargs -0 ls -ld --
+
+Explanation: find prints NUL-terminated names, shuf -z randomizes NUL-terminated records, xargs -0 passes safe filenames to ls -ld.
+
+- If you prefer to randomize the glob (*) without the leading ./ produced by find:
+
+printf '%s\0' * | shuf -z | xargs -0 ls -ld --
+
+Other useful shuf flags:
+- shuf -n 5 — pick only 5 random lines
+- shuf -o file — write randomized output to file
+
+Why be careful:
+- Plain ls output can be columnized, sorted, and may mangle filenames with newlines or weird characters. Using -1 or using NUL-separated streams avoids those pitfalls.
+
+If you tell me exactly what output you want (names only, long listing, top N, ignore directories, etc.), I can give the exact command.
+
+    Pass Reason: All assertions passed","[FAIL] (0.00)
+
+    Expected output to contain ""ls | shuf""
+---
+You can just pipe ls into shuf. shuf shuffles lines, so one per line output from ls is ideal.
+
+- Randomize entries in the current directory (one per line):
+- ls -1 | shuf
+
+- Take only a random subset (e.g., 5 items):
+- ls -1 | shuf -n 5
+
+- Include hidden files (dotfiles), but not . and ..:
+- ls -A -1 | shuf
+
+Notes:
+- If you use ls -l, you’ll get long-format lines that aren’t great to shuffle. Use -1 to output one entry per line.
+- If your filenames contain newlines, shuf may mis-handle them. For robust handling of arbitrary names, use a null-delimited approach (example with find and shuf -z) rather than ls.
+
+    Fail Reason: Expected output to contain ""ls | shuf"""

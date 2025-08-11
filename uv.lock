@@ -580,7 +580,7 @@ requires-dist = [
     { name = "llm-lmstudio", git = "https://github.com/kevinschaul/llm-lmstudio?branch=fix%2Fhost" },
     { name = "llm-mlx", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
-    { name = "llm-openai-plugin", specifier = ">=0.3" },
+    { name = "llm-openai-plugin", git = "https://github.com/simonw/llm-openai-plugin?branch=main" },
     { name = "llm-openrouter", specifier = ">=0.4.1" },
 ]
 
@@ -637,15 +637,11 @@ wheels = [
 
 [[package]]
 name = "llm-openai-plugin"
-version = "0.3"
-source = { registry = "https://pypi.org/simple" }
+version = "0.5"
+source = { git = "https://github.com/simonw/llm-openai-plugin?branch=main#667cfa3251f0dd11b6bd181a7773907ef7b31a64" }
 dependencies = [
     { name = "llm" },
     { name = "openai" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/3b/5c/6ad47246d8e811f17597ed01877c56121b37f74577ca7c6dd6bda51a2ecc/llm_openai_plugin-0.3.tar.gz", hash = "sha256:b67e032ac31516e7aad3ed23d0540ee19ec5798e4da85fd48b7965ef6ba1db88", size = 10584 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/79/c0/2e9150706a458f6ea735b1b384c06f537e42373079425e048703ca0a5545/llm_openai_plugin-0.3-py3-none-any.whl", hash = "sha256:5aed314cc890b70e24c00479e1dc26978e0c987e17d819f835d78ec129e8c4fe", size = 10527 },
 ]
 
 [[package]]
