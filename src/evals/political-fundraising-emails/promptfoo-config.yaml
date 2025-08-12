@@ -150,4 +150,28 @@ providers:
                   - "fp4"
             transform_func: to_uppercase
 
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-5-mini"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-5-mini-2025-08-07"
+            transform_func: to_uppercase
+
+  - id: "http://127.0.0.1:4242/eval"
+    label: "openai/gpt-5-nano"
+    config:
+      transformResponse: 'file://../../../catchErrors.js'
+      method: POST
+      body:
+        prompt: "{{prompt}}"
+        options:
+          config:
+            model: "openai/gpt-5-nano-2025-08-07"
+            transform_func: to_uppercase
+
 tests: file://tests.csv
