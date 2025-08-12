@@ -27,6 +27,10 @@ export default {
       name: "Extract FEMA indcidents",
       path: "/evals/extract-fema-incidents/",
     },
+    {
+      name: "Grab bag",
+      path: "/evals/grab-bag/",
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
