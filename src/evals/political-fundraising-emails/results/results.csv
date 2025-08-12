@@ -155,11 +155,13 @@ Pass Reason: All assertions passed","[PASS] (1.00)
 
 RUDY GIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
 
-Pass Reason: All assertions passed","[PASS] (1.00)
-
-RUDYGIULIANI FREEDOM FUND LEGAL DEFENSE TRUST
-
 Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Levenshtein distance 21 is greater than threshold 5
+---
+RUDYGIULIANI FREEDOM FUND
+
+Fail Reason: Levenshtein distance 21 is greater than threshold 5","[FAIL] (0.00)
 
 Levenshtein distance 33 is greater than threshold 5
 ---
