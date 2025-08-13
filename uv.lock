@@ -517,7 +517,7 @@ wheels = [
 
 [[package]]
 name = "llm"
-version = "0.26"
+version = "0.27.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -535,9 +535,9 @@ dependencies = [
     { name = "sqlite-migrate" },
     { name = "sqlite-utils" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4e/88/1acdae8cc6122d3ab2d3d30477d3273608f92177a6bb17ab98881af65627/llm-0.26.tar.gz", hash = "sha256:c2e9ddbc582da10c61112c0f983383fa0dc7bee3ca7d6f2ade1a2d003771eb1b", size = 82037 }
+sdist = { url = "https://files.pythonhosted.org/packages/05/7f/f2fe103b8fa6c5a96ba117fef46af15c766d4c28640893c2c7feb79c0df3/llm-0.27.1.tar.gz", hash = "sha256:02b0b393e31cf0e0ee1f2a6006c451c74ec18c7ec3973218de56e76fd72baa80", size = 85109 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/da/5f/ed9d5c47c46632f2c3a844c14412f434bc1263faa4890306b5f911cd3aaf/llm-0.26-py3-none-any.whl", hash = "sha256:93dc331facbfb909f946df8812fb1d627ec9ce764aab2ebd29f9011ed647339c", size = 79376 },
+    { url = "https://files.pythonhosted.org/packages/6c/67/47585c961ff2299749e519891681025c2685b75801e3f784ee232853c5b0/llm-0.27.1-py3-none-any.whl", hash = "sha256:a884a575062fbea8c2b129708a80e146fa9682bd1c444d8d7b028196107de727", size = 82500 },
 ]
 
 [[package]]
@@ -566,7 +566,6 @@ dependencies = [
     { name = "llm-lmstudio" },
     { name = "llm-mlx" },
     { name = "llm-ollama" },
-    { name = "llm-openai-plugin" },
     { name = "llm-openrouter" },
 ]
 
@@ -574,13 +573,12 @@ dependencies = [
 requires-dist = [
     { name = "ai-yardstick" },
     { name = "flask", specifier = ">=3.1.1" },
-    { name = "llm", specifier = ">=0.24" },
+    { name = "llm", specifier = ">=0.27" },
     { name = "llm-anthropic", specifier = "==0.16" },
     { name = "llm-gemini", specifier = ">=0.24" },
     { name = "llm-lmstudio", git = "https://github.com/kevinschaul/llm-lmstudio?branch=fix%2Fhost" },
     { name = "llm-mlx", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
-    { name = "llm-openai-plugin", git = "https://github.com/simonw/llm-openai-plugin?branch=main" },
     { name = "llm-openrouter", specifier = ">=0.4.1" },
 ]
 
@@ -633,15 +631,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/16/17/6621614a6470db488399025347d075f541b3f945d34bf784e024d209e12c/llm_ollama-0.10.0.tar.gz", hash = "sha256:2cf47b8a289e47ab663c9581fca93c348874af4825defce88e159d2bf36b400f", size = 20155 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/47/e6/332b1242856f21e4bca743397bee44a0c6a430b3e9169af88ee231c9c821/llm_ollama-0.10.0-py3-none-any.whl", hash = "sha256:4ce06e72c9bbc6e192cc27d6d3babbcd12a300b73987ccea06f3f0037186cc39", size = 14568 },
-]
-
-[[package]]
-name = "llm-openai-plugin"
-version = "0.5"
-source = { git = "https://github.com/simonw/llm-openai-plugin?branch=main#667cfa3251f0dd11b6bd181a7773907ef7b31a64" }
-dependencies = [
-    { name = "llm" },
-    { name = "openai" },
 ]
 
 [[package]]

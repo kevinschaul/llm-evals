@@ -7,9 +7,8 @@ requires-python = ">=3.9"
 dependencies = [
     "ai-yardstick",
     "llm-gemini>=0.24",
-    "llm>=0.24",
+    "llm>=0.27.1",
     "llm-mlx>=0.3",
-    "llm-openai-plugin",
     "flask>=3.1.1",
     "llm-ollama>=0.10.0",
     "llm-anthropic==0.16",
@@ -24,4 +23,3 @@ extraPaths = ["."]
 
 [tool.uv.sources]
 llm-lmstudio = { git = "https://github.com/kevinschaul/llm-lmstudio", branch = "fix/host" }
-llm-openai-plugin = { git = "https://github.com/simonw/llm-openai-plugin", branch = "main" }
