@@ -1,8 +1,8 @@
-# Social media insults
+# NHTSA recalls 
 
-Whether the given social media post contains an insult. Contributed by [Jeremy B. Merill](https://jeremybmerrill.com/).
+Whether an NHTSA investigation is newsworthy. 
 
-[View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/social-media-insults)
+[View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/nhtsa-recalls)
 
 ```js
 import sparkBar from "../../components/sparkBar.js"
