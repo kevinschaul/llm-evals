@@ -1,0 +1,18 @@
+description: "Implement a feature in rust"
+
+prompts:
+  - |
+    Implement the mode=git feature for the "use" subcommand.
+
+providers:
+  - id: gpt-oss-20b
+    label: gpt-oss-20b + codex
+    command: |
+      codex exec --skip-git-repo-check -c provider="llama-server" -c model="gpt-oss-20b" '{{prompt}}'
+
+tests:
+  - id: jump-start-tools-pr
+    type: command
+    setup: "git clone https://github.com/kevinschaul/jump-start-tools.git ."
+    result: "git diff"
+

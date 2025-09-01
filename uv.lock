@@ -522,6 +522,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "flask" },
+    { name = "jinja2" },
     { name = "llm" },
     { name = "llm-anthropic" },
     { name = "llm-gemini" },
@@ -529,11 +530,13 @@ dependencies = [
     { name = "llm-mlx", marker = "platform_system == 'Darwin'" },
     { name = "llm-ollama" },
     { name = "llm-openrouter" },
+    { name = "pyyaml" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "flask", specifier = ">=3.1.1" },
+    { name = "jinja2", specifier = ">=3.1.6" },
     { name = "llm", specifier = ">=0.27.1" },
     { name = "llm-anthropic", specifier = "==0.16" },
     { name = "llm-gemini", specifier = ">=0.24" },
@@ -541,6 +544,7 @@ requires-dist = [
     { name = "llm-mlx", marker = "platform_system == 'Darwin'", specifier = ">=0.3" },
     { name = "llm-ollama", specifier = ">=0.10.0" },
     { name = "llm-openrouter", specifier = ">=0.4.1" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
 ]
 
 [[package]]

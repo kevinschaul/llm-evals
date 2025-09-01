@@ -13,6 +13,8 @@ dependencies = [
     "llm-anthropic==0.16",
     "llm-openrouter>=0.4.1",
     "llm-lmstudio",
+    "pyyaml>=6.0.2",
+    "jinja2>=3.1.6",
 ]
 
 [tool.pyright]
