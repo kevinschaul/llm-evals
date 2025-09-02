@@ -1,3 +1,0 @@
-provider_id,test,prompt,result,error
-gpt-oss-20b,jump-start-tools-pr,"Implement the mode=git feature for the ""use"" subcommand.
-",b'',

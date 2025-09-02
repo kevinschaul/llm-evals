@@ -20,3 +20,4 @@ yarn-error.log
 promptfoo-errors.log
 server.log
 raw_responses.db
+eval.log
