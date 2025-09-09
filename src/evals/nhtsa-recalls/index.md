@@ -1,6 +1,6 @@
 # NHTSA recalls 
 
-Whether an NHTSA investigation is newsworthy. 
+Whether an NHTSA investigation is newsworthy. Contributed by [Jeremy B. Merill](https://jeremybmerrill.com/).
 
 [View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/nhtsa-recalls)
 
