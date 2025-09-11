@@ -1,0 +1,55 @@
+description: "Trump storylines"
+
+providers:
+  - id: gpt-4o-mini
+    model: openai/gpt-4o-mini
+    transforms: ["parse_boolean"]
+  - id: qwen3-14b
+    model: qwen/qwen3-14b
+    transforms: ["parse_boolean"]
+  - id: gemma-3-12b
+    model: google/gemma-3-12b
+    transforms: ["parse_boolean"]
+  - id: claude-sonnet-4-0
+    model: anthropic/claude-sonnet-4-0
+    transforms: ["parse_boolean"]
+  - id: claude-opus-4-0
+    model: anthropic/claude-opus-4-0
+    transforms: ["parse_boolean"]
+  - id: qwen3-235b-a22b-2507
+    model: openrouter/qwen/qwen3-235b-a22b-2507
+    transforms: ["parse_boolean"]
+    options:
+      provider:
+        quantizations:
+          - "fp8"
+  - id: deepseek-v3-0324
+    model: openrouter/deepseek/deepseek-chat-v3-0324
+    transforms: ["parse_boolean"]
+    options:
+      provider:
+        quantizations:
+          - "fp8"
+  - id: gpt-oss-20b
+    model: openrouter/openai/gpt-oss-20b
+    transforms: ["parse_boolean"]
+    options:
+      provider:
+        only:
+          - "nebius/fp4"
+  - id: gpt-oss-120b
+    model: openrouter/openai/gpt-oss-120b
+    transforms: ["parse_boolean"]
+    options:
+      provider:
+        only:
+          - "nebius/fp4"
+          - "fp4"
+
+prompts:
+  - |
+    Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with "true" or "false".
+    {{headline}}
+    {{content}}
+
+tests: file://tests.csv
