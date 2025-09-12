@@ -1,0 +1,8 @@
+prompt,__expected
+Who is Kevin Schaul?,icontains: journalist
+How many Rs are in Washington Post? Respond ONLY with the answer.,"icontains-any: 0, zero"
+Write a Makefile to convert JPEG images to PNG,
+Sally is a girl. She has three brothers. Each of her brothers has the same two sisters. How many sisters does Sally have? Respond ONLY with the answer.,"icontains-any:1, one"
+What is the number that rhymes with the word we use to describe a tall plant? Respond ONLY with the answer.,"icontains-any: 3, three"
+"A boy runs down the stairs in the morning and sees a tree in his living room, and some boxes around. What's going on?",icontains: christmas
+how can I use shuf to randomize the output of ls,contains: ls | shuf
