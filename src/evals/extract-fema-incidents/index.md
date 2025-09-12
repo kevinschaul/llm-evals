@@ -10,6 +10,8 @@ The table is on page 9 of <a href="fema-daily-operation-brief.pdf" download>this
 
 ```js
 import AggregateTable from "../../components/AggregateTable.js"
+import ResultsTable from "../../components/ResultsTable.js"
+import getSelectionDetailsConfig from "../../components/SelectionDetails.js"
 import jsonDiff from "../../components/jsonDiff.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
@@ -24,116 +26,67 @@ Inputs.table(aggregate, AggregateTable())
 ## Results
 
 ```js
-const extractJSONStrings = (text) => {
-  const jsonRegex = /Expected output "(.*)" to equal "(.*)"/
-  const matches = text.match(jsonRegex)
-
-  if (matches.length < 3) {
-    throw new Error("Could not find two JSON arrays in the input")
-  }
-
+const extractAndSortJSON = (jsonStr) => {
   try {
-    return [
-      _.sortBy(JSON.parse(matches[1]), [
+    const parsed = JSON.parse(jsonStr)
+    if (parsed.items) {
+      return _.sortBy(parsed.items, [
         "state_or_tribe_or_territory",
         "requested",
-      ]),
-      _.sortBy(JSON.parse(matches[2]), [
-        "state_or_tribe_or_territory",
-        "requested",
-      ]),
-    ]
+      ])
+    }
+    return _.sortBy(parsed, ["state_or_tribe_or_territory", "requested"])
   } catch (err) {
-    throw new Error("Failed to parse one of the JSON arrays: " + err.message)
+    throw new Error("Failed to parse JSON: " + err.message)
   }
 }
 
-const resultToDiff = (text) => {
+const createJSONDiff = (actualStr, expectedStr) => {
   try {
-    const [actual, expected] = extractJSONStrings(text)
+    const actual = extractAndSortJSON(actualStr)
+    const expected = extractAndSortJSON(expectedStr)
     return jsonDiff(expected, actual)
   } catch (err) {
-    return htl.html`<i>Error parsing results</i>`
+    return htl.html`<i>Error creating diff: ${err.message}</i>`
   }
 }
-
-const resultsTransposed = results
-  .map((row) => {
-    const modelKeys = Object.keys(row).filter((d) => d.startsWith("["))
-
-    return modelKeys.map((d) => {
-      let output
-      try {
-        output = JSON.stringify(extractJSONStrings(row[d])[1])
-      } catch (err) {
-        output = "Pass"
-      }
-
-      return {
-        model: d.match(/\[(.*)\]/)[1],
-        attachments: row.attachments,
-        raw: row[d],
-        correct: row[d].includes("PASS"),
-      }
-    })
-  })
-  .flat()
 ```
 
 ```js
-const selection = view(
-  Inputs.table(resultsTransposed, {
-    format: {
-      correct: (x) =>
-        x
-          ? htl.html`<div style="background: #d5edca;">✔</div>`
-          : htl.html`<div style="background: #f9dddb;">✗</div>`,
-    },
-    align: { correct: "center" },
-    required: false,
-    multiple: false,
-  }),
-)
+const selection = view(Inputs.table(results, ResultsTable()))
 ```
 
 ```js
 if (selection) {
-  display(htl.html`<h3>${selection.model}</h3>`)
-  const keys = Object.keys(selection).filter((d) =>
-    ["attachments", "raw"].includes(d),
+  display(htl.html`<h3>Selection details</h3>`)
+  const config = getSelectionDetailsConfig()
+  const allKeys = Object.keys(selection)
+  const testVarKeys = allKeys.filter(
+    (k) => !config.coreKeys.includes(k) && k !== "prompt",
   )
-  for (const key of keys) {
-    display(
-      Inputs.textarea({ label: key, value: selection[key], readonly: true }),
-    )
-    display(htl.html`<br/>`)
-  }
+  const orderedKeys = config.coreKeys.concat(testVarKeys)
 
-  if (!selection.correct) {
-    const [actual, expected] = extractJSONStrings(selection.raw)
-    display(
-      Inputs.textarea({
-        label: "actual",
-        value: JSON.stringify(actual),
-        readonly: true,
-        monospace: true,
-      }),
-    )
-    display(htl.html`<br/>`)
-    display(
-      Inputs.textarea({
-        label: "expected",
-        value: JSON.stringify(expected),
-        readonly: true,
-        monospace: true,
-      }),
-    )
-    display(htl.html`<br/>`)
+  for (const key of orderedKeys) {
+    if (
+      selection[key] !== undefined &&
+      selection[key] !== null &&
+      selection[key] !== ""
+    ) {
+      display(
+        Inputs.textarea({
+          label: key,
+          value: String(selection[key]),
+          readonly: true,
+          rows: config.getRows(key, selection[key]),
+        }),
+      )
+      display(htl.html`<br/>`)
+    }
   }
 
   display(htl.html`<h4>JSON diff</h4>`)
   display(htl.html`<p>Red is expected; Green is actual</p>`)
-  display(resultToDiff(selection.raw))
+  display(createJSONDiff(selection.result, selection.expected))
 } else {
   display(htl.html`<i>Click a row above to see all details</i>`)
 }

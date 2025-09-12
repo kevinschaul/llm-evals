@@ -42,20 +42,13 @@ npm install               # Install Node dependencies
 ```bash
 just eval [config-name]   # Run specific eval (e.g., just eval social-media-insults)
 just eval-all            # Run all evaluations
-uv run eval.py src/evals/[name]/eval.yaml --limit N  # Run with limit for testing
+uv run eval.py src/evals/[name]/eval.yaml --max-per-provider N  # Run with limit for testing
+uv run eval.py src/evals/[name]/eval.yaml --provider NAME  # Run for just one provider
 ```
 
 **Dashboard Development:**
 ```bash
-npm run dev              # Start dev server with live reload
-just view-dashboard      # Alias for npm run dev
-npm run build           # Build static site
-npm run deploy          # Deploy to Observable
-```
-
-**Dashboard Viewing:**
-```bash
-just view               # View with promptfoo (legacy)
+just view-dashboard      # Start dev server with live reload
 ```
 
 ## Working with Evaluations

@@ -319,6 +319,35 @@ def strip_think_tags(text: str) -> str:
     return re.sub(pattern, "", text, flags=re.DOTALL).strip()
 
 
+def extract_items_array(text: str) -> str:
+    """Extract array from JSON, handling both top-level arrays and {items: []} structure."""
+    try:
+        data = json.loads(text)
+        # If it's already an array, return as-is
+        if isinstance(data, list):
+            return json.dumps(data)
+        # If it's an object with 'items' key, extract the items array
+        elif isinstance(data, dict) and 'items' in data:
+            return json.dumps(data['items'])
+        # Otherwise return original
+        else:
+            return text
+    except json.JSONDecodeError:
+        # If it's not valid JSON, return original
+        return text
+
+
+def normalize_json(text: str) -> str:
+    """Normalize JSON formatting by parsing and re-serializing with consistent formatting."""
+    try:
+        data = json.loads(text)
+        # Re-serialize with consistent formatting: sorted keys, no extra whitespace
+        return json.dumps(data, sort_keys=True, separators=(',', ':'))
+    except json.JSONDecodeError:
+        # If it's not valid JSON, return original
+        return text
+
+
 def to_uppercase(text: str) -> str:
     """Convert text to uppercase."""
     return text.upper()
@@ -332,6 +361,10 @@ def apply_transforms(text: str, transforms: List[str]) -> Any:
             result = strip_think_tags(result)
         elif transform_name == "parse_boolean":
             result = parse_boolean(result)
+        elif transform_name == "extract_items_array":
+            result = extract_items_array(result)
+        elif transform_name == "normalize_json":
+            result = normalize_json(result)
         elif transform_name == "to_uppercase":
             result = to_uppercase(result)
         else:
@@ -461,6 +494,8 @@ def load_config(eval_config):
                     if expected_file_path.exists():
                         with open(expected_file_path) as f:
                             expected_value = f.read().strip()
+                        # Apply same normalization to expected values as we do to results
+                        expected_value = normalize_json(expected_value)
                         test["expected"] = expected_value
 
     # Process prompts to ensure they have IDs
@@ -908,7 +943,7 @@ def main():
             "error": None,
             "duration_ms": None,
             "passed": None,
-            "expected": test_vars.get("__expected", ""),
+            "expected": test.get("expected", test_vars.get("__expected", "")),
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
         # Add all test variables to the result
