@@ -1,2 +1,2 @@
-provider_id,total_tests,passed,failed,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
-gpt-4o-mini,3,3,0,100.0,0,1201.0,1097,1409.1
+provider_id,prompt_id,total_tests,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
+gpt-4o-mini,prompt-1,2,1,1,0,50.0,0,1523.8,1472.0,1575.7

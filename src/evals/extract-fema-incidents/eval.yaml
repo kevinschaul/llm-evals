@@ -1,4 +1,4 @@
-description: "Extract FEMA indicents"
+description: "Extract FEMA incidents"
 
 providers:
   - id: gpt-4o-mini
@@ -44,35 +44,30 @@ providers:
     model: gemini-1.5-flash-latest
 
   - id: qwen-3-14b
-    model: qwen/qwen3-14b
+    model: lmstudio/qwen/qwen3-14b
 
   - id: gpt-oss-20b
-    model: openai/gpt-oss-20b
+    model: lmstudio/openai/gpt-oss-20b
 
-  - id: gpt-oss-120b
-    model: openrouter/openai/gpt-oss-120b
-    options:
-      provider:
-        quantizations:
-          - "fp4"
+  # - id: gpt-oss-120b
+  #   model: lmstudio/openai/gpt-oss-120b
 
   - id: gpt-5
-    model: openai/gpt-5-2025-08-07
+    model: gpt-5-2025-08-07
 
   - id: gpt-5-mini
-    model: openai/gpt-5-mini-2025-08-07
+    model: gpt-5-mini-2025-08-07
 
   - id: gpt-5-nano
-    model: openai/gpt-5-nano-2025-08-07
+    model: gpt-5-nano-2025-08-07
 
 prompts:
   - Extract all declaration requests
 
 tests:
   - vars:
-      test: false
       attachments:
-        - path: src/evals/extract-fema-incidents/fema-daily-operation-brief-p9.jpg
+        - path: fema-daily-operation-brief-p9.jpg
       schema:
         syntax: dsl
         multi: true
@@ -84,13 +79,11 @@ tests:
           PA bool
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
-    assert:
-      - type: equals
-        value: file://expected.json
+    expected: file://expected.json
 
   - vars:
       attachments:
-        - path: src/evals/extract-fema-incidents/fema-daily-operation-brief.pdf
+        - path: fema-daily-operation-brief.pdf
       schema:
         syntax: dsl
         multi: true
@@ -102,6 +95,4 @@ tests:
           PA bool
           HM bool
           requested str: YYYY-MM-DD, current year is 2025
-    assert:
-      - type: equals
-        value: file://expected.json
+    expected: file://expected.json

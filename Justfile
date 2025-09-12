@@ -10,6 +10,7 @@ eval-all:
   @just eval social-media-insults
   @just eval nhtsa-recalls
   @just eval political-fundraising-emails
+  @just eval extract-fema-incidents
   @just eval grab-bag
 
 eval config *ARGS:

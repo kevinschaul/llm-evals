@@ -1,2 +1,9 @@
-provider_id,total_tests,passed,failed,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
-gpt-4o-mini,5,5,0,100.0,0,1147.8,0,3126
+provider_id,prompt_id,total_tests,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
+gpt-4o-mini,prompt-1,200,149,51,0,74.5,0,28.7,0,3126
+qwen3-14b,prompt-1,200,145,55,0,72.5,0,1072.8,0,38592
+gemma-3-12b,prompt-1,200,141,59,0,70.5,0,1954.0,525,6513
+claude-sonnet-4-0,prompt-1,200,145,55,0,72.5,0,0.0,0,0
+claude-opus-4-0,prompt-1,200,162,38,0,81.0,0,0.0,0,0
+qwen3-235b-a22b-2507,prompt-1,200,149,51,0,74.5,0,0.0,0,0
+deepseek-v3-0324,prompt-1,200,148,52,0,74.0,0,0.0,0,0
+gpt-oss-20b,prompt-1,200,143,57,0,71.5,1,3801.8,1631,9910

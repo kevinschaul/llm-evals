@@ -4,6 +4,7 @@ How well do the llm categories match up with mine?
 
 ```js
 import sparkBar from "../../../components/sparkBar.js"
+import getSelectionDetailsConfig from "../../../components/SelectionDetails.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
 ```
@@ -58,12 +59,23 @@ const selection = view(
 ```js
 if (selection) {
   display(htl.html`<h3>Selection details</h3>`)
-  const keys = Object.keys(selection)
-  for (const key of keys) {
-    display(
-      Inputs.textarea({ label: key, value: selection[key], readonly: true }),
-    )
-    display(htl.html`<br/>`)
+  const config = getSelectionDetailsConfig()
+  const allKeys = Object.keys(selection)
+  const testVarKeys = allKeys.filter(k => !config.coreKeys.includes(k) && k !== "prompt")
+  const orderedKeys = config.coreKeys.concat(testVarKeys)
+  
+  for (const key of orderedKeys) {
+    if (selection[key] !== undefined && selection[key] !== null && selection[key] !== "") {
+      display(
+        Inputs.textarea({ 
+          label: key, 
+          value: String(selection[key]), 
+          readonly: true,
+          rows: config.getRows(key, selection[key])
+        }),
+      )
+      display(htl.html`<br/>`)
+    }
   }
 } else {
   display(htl.html`<i>Click a row above to see all details</i>`)

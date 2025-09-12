@@ -9,13 +9,73 @@ prompts:
     body: {{body}}
 
 providers:
-  - id: qwen3-30b-a3b-2507
-    model: qwen/qwen3-30b-a3b-2507
+  - id: gpt-4o-mini
+    model: openai/gpt-4o-mini
     transforms:
       - to_uppercase
 
-  - id: gpt-4o-mini
-    model: openai/gpt-4o-mini
+  - id: gpt-4.1-mini
+    model: openai/gpt-4.1-mini-2025-04-14
+    transforms:
+      - to_uppercase
+
+  - id: o4-mini
+    model: openai/o4-mini-2025-04-16
+    transforms:
+      - to_uppercase
+
+  - id: gemini-1.5-flash-002
+    model: gemini-1.5-flash-002
+    transforms:
+      - to_uppercase
+
+  - id: gemini-2.0-flash-lite
+    model: gemini-2.0-flash-lite
+    transforms:
+      - to_uppercase
+
+  - id: gemini-2.0-flash
+    model: gemini-2.0-flash
+    transforms:
+      - to_uppercase
+
+  - id: qwen3-14b
+    model: lmstudio/qwen/qwen3-14b
+    transforms:
+      - to_uppercase
+
+  - id: qwen3-30b-a3b-2507
+    model: lmstudio/qwen/qwen3-30b-a3b-2507
+    transforms:
+      - to_uppercase
+
+  - id: gemma-3-12b
+    model: lmstudio/google/gemma-3-12b
+    transforms:
+      - to_uppercase
+
+  # - id: ministral-8b
+  #   model: lmstudio/ministral-8b-instruct-2410
+  #   transforms:
+  #     - to_uppercase
+
+  - id: gpt-oss-20b
+    model: lmstudio/openai/gpt-oss-20b
+    transforms:
+      - to_uppercase
+
+  # - id: gpt-oss-120b
+  #   model: openrouter/openai/gpt-oss-120b
+  #   transforms:
+  #     - to_uppercase
+
+  - id: gpt-5-mini
+    model: gpt-5-mini-2025-08-07
+    transforms:
+      - to_uppercase
+
+  - id: gpt-5-nano
+    model: gpt-5-nano-2025-08-07
     transforms:
       - to_uppercase
 

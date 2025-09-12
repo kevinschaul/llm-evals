@@ -9,7 +9,7 @@ The table is on page 9 of <a href="fema-daily-operation-brief.pdf" download>this
 ![Screenshot of the table to parse](fema-daily-operation-brief-p9.jpg)
 
 ```js
-import sparkBar from "../../components/sparkBar.js"
+import AggregateTable from "../../components/AggregateTable.js"
 import jsonDiff from "../../components/jsonDiff.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
@@ -18,16 +18,7 @@ const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
 ## Aggregate
 
 ```js
-Inputs.table(aggregate, {
-  sort: "share_correct",
-  reverse: true,
-  format: {
-    share_correct: sparkBar(1),
-  },
-  align: {
-    share_correct: "right",
-  },
-})
+Inputs.table(aggregate, AggregateTable())
 ```
 
 ## Results

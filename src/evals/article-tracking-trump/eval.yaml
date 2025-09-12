@@ -5,10 +5,10 @@ providers:
     model: openai/gpt-4o-mini
     transforms: ["parse_boolean"]
   - id: qwen3-14b
-    model: qwen/qwen3-14b
+    model: lmstudio/qwen/qwen3-14b
     transforms: ["parse_boolean"]
   - id: gemma-3-12b
-    model: google/gemma-3-12b
+    model: lmstudio/google/gemma-3-12b
     transforms: ["parse_boolean"]
   - id: claude-sonnet-4-0
     model: anthropic/claude-sonnet-4-0
@@ -31,25 +31,17 @@ providers:
         quantizations:
           - "fp8"
   - id: gpt-oss-20b
-    model: openrouter/openai/gpt-oss-20b
+    model: lmstudio/openai/gpt-oss-20b
     transforms: ["parse_boolean"]
-    options:
-      provider:
-        only:
-          - "nebius/fp4"
-  - id: gpt-oss-120b
-    model: openrouter/openai/gpt-oss-120b
-    transforms: ["parse_boolean"]
-    options:
-      provider:
-        only:
-          - "nebius/fp4"
-          - "fp4"
+  # - id: gpt-oss-120b
+  #   model: lmstudio/openai/gpt-oss-120b
+  #   transforms: ["parse_boolean"]
 
 prompts:
   - |
     Is this article primarily about a new action or announcement by the Trump administration/White House/Executive? Respond simply with "true" or "false".
     {{headline}}
     {{content}}
+  # - Is this about Trump? "true" or "false" .\n{{headline}}\n{{content}}
 
 tests: file://tests.csv

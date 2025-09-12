@@ -1,2 +1,13 @@
-provider_id,total_tests,passed,failed,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
-gpt-4o-mini,3,3,0,100.0,0,1004.7,880,1084
+provider_id,prompt_id,total_tests,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
+gpt-4o-mini,prompt-1,100,99,1,0,99.0,0,1204.4,580,4916
+gpt-4.1-mini,prompt-1,100,97,3,0,97.0,0,1228.9,590,4997
+o4-mini,prompt-1,100,99,1,0,99.0,0,4359.1,2219,10841
+gemini-1.5-flash-002,prompt-1,100,100,0,0,100.0,0,763.4,363,2426
+gemini-2.0-flash-lite,prompt-1,100,98,2,0,98.0,0,589.8,339,1385
+gemini-2.0-flash,prompt-1,100,91,9,0,91.0,0,713.9,373,1169
+qwen3-14b,prompt-1,100,99,1,0,99.0,0,33894.7,9979,140503
+qwen3-30b-a3b-2507,prompt-1,100,100,0,0,100.0,0,3762.0,112,12221
+gemma-3-12b,prompt-1,100,100,0,0,100.0,0,2349.6,284,10041
+gpt-oss-20b,prompt-1,100,96,4,0,96.0,0,4435.5,2002,14988
+gpt-5-mini,prompt-1,100,100,0,0,100.0,0,5484.2,2151,48281
+gpt-5-nano,prompt-1,100,98,2,0,98.0,0,5650.2,2033,17740
