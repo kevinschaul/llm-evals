@@ -3,7 +3,8 @@
 How well do the llm categories match up with mine?
 
 ```js
-import sparkBar from "../../../components/sparkBar.js"
+import AggregateTable from "../../../components/AggregateTable.js"
+import ResultsTable from "../../../components/ResultsTable.js"
 import getSelectionDetailsConfig from "../../../components/SelectionDetails.js"
 const results = FileAttachment("results/results.csv").csv({ typed: true })
 const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
@@ -12,48 +13,13 @@ const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
 ## Aggregate
 
 ```js
-Inputs.table(aggregate, {
-  sort: "share_correct",
-  reverse: true,
-  format: {
-    share_correct: sparkBar(1),
-  },
-  align: {
-    share_correct: "right",
-  },
-})
+Inputs.table(aggregate, AggregateTable(aggregate))
 ```
 
 ## Results
 
 ```js
-const resultColumns = Object.keys(results[0]).filter((d) => d.startsWith("["))
-const resultsFormatters = resultColumns.reduce((p, v) => {
-  p[v] = (x) =>
-    x.includes("PASS")
-      ? htl.html`<div style="background: #d5edca;">✔</div>`
-      : htl.html`<div style="background: #f9dddb;">✗</div>`
-  return p
-}, {})
-const resultsAligns = resultColumns.reduce((p, v) => {
-  p[v] = "center"
-  return p
-}, {})
-```
-
-```js
-const selection = view(
-  Inputs.table(results, {
-    widths: {
-      "input.body": 80,
-    },
-    format: resultsFormatters,
-    align: resultsAligns,
-    layout: "fixed",
-    required: false,
-    multiple: false,
-  }),
-)
+const selection = view(Inputs.table(results, ResultsTable(results)))
 ```
 
 ```js
