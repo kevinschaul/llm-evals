@@ -9,10 +9,20 @@ dependencies = [
     "llm>=0.27.1",
     "llm-mlx>=0.3 ; platform_system == 'Darwin'",
     "flask>=3.1.1",
-    "llm-ollama>=0.10.0",
     "llm-anthropic==0.16",
     "llm-openrouter>=0.4.1",
-    "llm-lmstudio",
+    "llm-lmstudio>=0.2.0",
+    "pyyaml>=6.0.2",
+    "jinja2>=3.1.6",
+    "dotenv>=0.9.9",
+    "llm-openai-plugin>=0.5",
+    "pytest>=7.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
 ]
 
 [tool.pyright]
@@ -21,4 +31,4 @@ venv = ".venv"
 extraPaths = ["."]
 
 [tool.uv.sources]
-llm-lmstudio = { git = "https://github.com/kevinschaul/llm-lmstudio", branch = "fix/host" }
+llm-lmstudio = { git = "https://github.com/kevinschaul/llm-lmstudio", branch = "fix/all" }

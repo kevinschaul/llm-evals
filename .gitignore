@@ -14,9 +14,8 @@ wheels/
 node_modules/
 yarn-error.log
 
-# passwords and api keys and stuff
 .env 
 
-promptfoo-errors.log
-server.log
 raw_responses.db
+eval_cache.db
+eval.log

@@ -24,7 +24,7 @@ export default {
       path: "/evals/nhtsa-recalls/",
     },
     {
-      name: "Extract FEMA indcidents",
+      name: "Extract FEMA incidents",
       path: "/evals/extract-fema-incidents/",
     },
     {

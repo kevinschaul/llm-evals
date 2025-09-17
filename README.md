@@ -34,13 +34,8 @@ just eval CONFIG
 ```
 where CONFIG is "social-media-insults" for example.
 
-To view all evals:
-```
-just view
-```
-
 To view the dashboard (the version published at [https://kschaul.com/llm-evals/](https://kschaul.com/llm-evals/)):
 ```
-just view-dashboard
+just dev
 ```
 
