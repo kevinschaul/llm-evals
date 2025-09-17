@@ -33,9 +33,13 @@ providers:
   - id: gpt-oss-20b
     model: lmstudio/openai/gpt-oss-20b
     transforms: ["parse_boolean"]
-  # - id: gpt-oss-120b
-  #   model: lmstudio/openai/gpt-oss-120b
-  #   transforms: ["parse_boolean"]
+  - id: gpt-oss-120b
+    model: openrouter/openai/gpt-oss-120b
+    transforms: ["parse_boolean"]
+    options:
+      provider:
+        only:
+          - "deepinfra"
 
 prompts:
   - |

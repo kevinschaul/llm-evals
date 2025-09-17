@@ -37,8 +37,12 @@ providers:
   - id: gpt-oss-20b
     model: lmstudio/openai/gpt-oss-20b
 
-  # - id: gpt-oss-120b
-  #   model: lmstudio/openai/gpt-oss-120b
+  - id: gpt-oss-120b
+    model: openrouter/openai/gpt-oss-120b
+    options:
+      provider:
+        only:
+          - "deepinfra"
 
   - id: gpt-5
     model: gpt-5-2025-08-07

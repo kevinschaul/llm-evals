@@ -407,6 +407,14 @@ def check_assertion(actual, expected):
         expected_value = expected_str.replace("icontains:", "").strip()
         return expected_value.lower() in str(actual).lower()
     
+    elif expected_str.startswith("icontains-any:"):
+        # icontains-any: VALUE1, VALUE2 (case-insensitive contains any)
+        expected_values = expected_str.replace("icontains-any:", "").split(',')
+        for expected_value in expected_values:
+            if expected_value.lower().strip() in str(actual).lower():
+                return True
+        return False
+    
     elif expected_str.startswith("contains:"):
         # contains: VALUE (case-sensitive contains)
         expected_value = expected_str.replace("contains:", "").strip()
@@ -781,6 +789,7 @@ def aggregate_results(results: List[CompletedResult]) -> List[Dict[str, Any]]:
                 "provider_id": provider_id,
                 "prompt_id": prompt_id,
                 "total_tests": total_tests,
+                "assertions": total_tests - no_assertions_tests,
                 "passed": passed_tests,
                 "failed": failed_tests,
                 "no_assertions": no_assertions_tests,
@@ -850,6 +859,7 @@ def write_results(results: List[CompletedResult], out_file: str, format: str = "
             "provider_id",
             "prompt_id",
             "total_tests",
+            "assertions",
             "passed",
             "failed",
             "no_assertions",

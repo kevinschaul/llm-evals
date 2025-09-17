@@ -48,7 +48,7 @@ uv run eval.py src/evals/[name]/eval.yaml --provider NAME  # Run for just one pr
 
 **Dashboard Development:**
 ```bash
-just view-dashboard      # Start dev server with live reload
+just dev      # Start dev server with live reload
 ```
 
 ## Working with Evaluations

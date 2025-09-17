@@ -64,10 +64,14 @@ providers:
     transforms:
       - to_uppercase
 
-  # - id: gpt-oss-120b
-  #   model: openrouter/openai/gpt-oss-120b
-  #   transforms:
-  #     - to_uppercase
+  - id: gpt-oss-120b
+    model: openrouter/openai/gpt-oss-120b
+    transforms:
+      - to_uppercase
+    options:
+      provider:
+        only:
+          - "deepinfra"
 
   - id: gpt-5-mini
     model: gpt-5-mini-2025-08-07

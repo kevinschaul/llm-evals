@@ -1,8 +1,8 @@
 default:
     @just --list
 
-view:
-  promptfoo view --yes
+dev:
+  npm run dev
 
 eval-all:
   @just eval article-tracking-trump
@@ -14,8 +14,5 @@ eval-all:
   @just eval grab-bag
 
 eval config *ARGS:
-    @echo "Running promptfoo eval for {{config}}..."
+    @echo "Running eval.py for {{config}}..."
     uv run eval.py src/evals/{{config}}/eval.yaml
-
-view-dashboard:
-  npm run dev
