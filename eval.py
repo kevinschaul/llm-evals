@@ -663,7 +663,7 @@ def run_llm_test(
         duration_ms = raw_response._response.duration_ms
 
     # Get text and apply transforms
-    result_text = raw_response.text()
+    result_text = raw_response.text().strip()
     # Apply transforms from test config first, then provider config
     test_transforms = test.get("vars", {}).get("transforms", [])
     transforms = test_transforms + provider.get("transforms", [])

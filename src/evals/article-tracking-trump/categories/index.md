@@ -13,15 +13,15 @@ const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
 ## Aggregate
 
 ```js
-Inputs.table(aggregate, AggregateTable(aggregate))
+AggregateTable(aggregate)
 ```
 
 ## Results
 
 ```js
-const selection = view(Inputs.table(results, ResultsTable(results)))
+const selection = view(ResultsTable(results))
 ```
 
 ```js
-SelectionDetails(selection, display, Inputs)
+SelectionDetails(selection, display)
 ```
