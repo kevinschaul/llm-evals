@@ -16,3 +16,6 @@ eval-all:
 eval config *ARGS:
     @echo "Running eval.py for {{config}}..."
     uv run eval.py src/evals/{{config}}/eval.yaml
+
+test:
+  uv run pytest

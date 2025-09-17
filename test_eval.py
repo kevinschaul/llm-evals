@@ -12,7 +12,7 @@ from argparse import ArgumentParser
 
 # Import the modules we're testing
 from eval import (
-    cli, load_config, parse_boolean, strip_think_tags, to_uppercase,
+    cli, load_config, normalize_json, parse_boolean, strip_think_tags, to_uppercase,
     apply_transforms, levenshtein_distance, run_assertions, aggregate_results,
     CompletedResult, check_assertion
 )
@@ -183,7 +183,7 @@ class TestConfigLoading:
             config = load_config(str(config_path))
             
             # Check that file:// reference was resolved
-            assert config['tests'][0]['expected'] == json.dumps(expected_content)
+            assert config['tests'][0]['expected'] == normalize_json(json.dumps(expected_content))
             assert config['tests'][0]['vars']['input'] == 'test_data'
             assert config['tests'][0]['vars']['transforms'] == ['parse_boolean']
 
