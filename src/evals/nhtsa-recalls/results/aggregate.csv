@@ -1,3 +1,2 @@
-model,prompt,count,n_correct,share_correct
-openai/gpt-4o-mini,"Determine whether this NHTSA investigation summary is relevant to the Washington Post. Return `{""result"": true}` or `{""result"": false}`",149,20,0.13
-openai/gpt-4o-mini,"You are a helpful newspaper reporter who is very knowledgeable about US motor vehicle regulation and the NHTSA recall process, as well as the sorts of things that the Washington Post writes about.",298,257,0.86
+provider_id,prompt_id,total_tests,assertions,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
+gpt-4o-mini,prompt-1,149,149,1,148,0,0.7,147,1355.5,1308,1403

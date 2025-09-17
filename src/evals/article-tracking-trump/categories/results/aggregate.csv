@@ -1,43 +1,7 @@
-model,prompt,count,n_correct,share_correct
-openai/gpt-4o,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,68,0.70
-openai/gpt-4o-mini,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,66,0.68
-qwen/qwen3-14b,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,66,0.68
-google/gemma-3-12b,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,57,0.59
-gemma-3-27b-it,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,73,0.75
-anthropic/claude-sonnet-4-0,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,75,0.77
-anthropic/claude-opus-4-0,"Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
-
-The allowed categories are:
-Abortion, AI, Associated Press, Birthright citizenship, CFPB, Climate, Crypto, D.C., Debt ceiling, DEI in schools, DEI in the federal government, Department of Education, Deportations, DOGE, End birthright citizenship, Eric Adams case, Expanding executive power, Federal funding, Federal grant pause, Federal office space, Federal worker buyout, Federal workers return to office, Federal workforce reductions, FEMA, Firing government watchdogs, Food safety, Foreign aid, Foreign policy, Gaza, Government shutdown, Guantánamo Bay, Health agencies' communications pause, Health care, Immigration policy, Interest rates, Iran, Islamic State, Israel, Jan. 6, Kennedy Center, NIH, NYC congestion toll, Other, Panama Canal, Pardons, Reclassifying federal jobs, Sanctions, Senior government officials ousted, Taiwan, Targeting political enemies, Targeting protesters, Tariffs, The media, TikTok ban, Transgender policy, U.S.-Mexico border, USAID, USPS, War in Ukraine, World Health Organization
-
-Respond ONLY with the category.",97,83,0.86
+provider_id,prompt_id,total_tests,assertions,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
+gpt-4o,prompt-1,97,97,69,28,0,71.1,0,1424.8,610,3510
+gpt-4o-mini,prompt-1,97,97,64,33,0,66.0,0,1532.1,522,5424
+qwen-3-14b,prompt-1,97,97,69,28,0,71.1,0,71250.1,15058,332044
+gemma-3-12b,prompt-1,97,97,60,37,0,61.9,0,2327.8,948,8611
+claude-sonnet-4,prompt-1,97,97,75,22,0,77.3,0,1726.9,1107,3129
+claude-opus-4,prompt-1,97,97,78,19,0,80.4,0,2160.4,1433,3757
