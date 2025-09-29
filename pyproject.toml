@@ -9,7 +9,7 @@ dependencies = [
     "llm>=0.27.1",
     "llm-mlx>=0.3 ; platform_system == 'Darwin'",
     "flask>=3.1.1",
-    "llm-anthropic==0.16",
+    "llm-anthropic>=0.19",
     "llm-openrouter>=0.4.1",
     "llm-lmstudio>=0.2.0",
     "pyyaml>=6.0.2",

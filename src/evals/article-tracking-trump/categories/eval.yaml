@@ -22,6 +22,9 @@ providers:
   - id: claude-opus-4
     model: anthropic/claude-opus-4-0
 
+  - id: claude-sonnet-4-5
+    model: anthropic/claude-sonnet-4-5
+
 prompts:
   - |
     Put this article into one of the following categories. Use the most specific category that makes sense. If you are unsure, respond Other.
