@@ -41,6 +41,10 @@ providers:
     model: anthropic/claude-opus-4-0
     transforms: ["extract_items_array", "normalize_json"]
 
+  - id: claude-sonnet-4-5
+    model: anthropic/claude-sonnet-4-5
+    transforms: ["extract_items_array", "normalize_json"]
+
   - id: gemini-2-5-pro-03-25
     model: gemini-2.5-pro-preview-03-25
     transforms: ["extract_items_array", "normalize_json"]

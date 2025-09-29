@@ -43,7 +43,7 @@ logger = logging.getLogger(__name__)
 
 # Cache database paths
 db_path_main = "eval_cache.db"
-db_paths_search = [db_path_main, logs_db_path()]
+db_paths_search = [db_path_main, "raw_responses.db", logs_db_path()]
 
 
 class RawResponse:

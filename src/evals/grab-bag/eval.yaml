@@ -34,6 +34,9 @@ providers:
   - id: claude-opus-4
     model: anthropic/claude-opus-4-0
 
+  - id: claude-sonnet-4-5
+    model: anthropic/claude-sonnet-4-5
+
   - id: gpt-oss-20b
     model: lmstudio/openai/gpt-oss-20b
 
