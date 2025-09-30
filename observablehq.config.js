@@ -31,6 +31,10 @@ export default {
       name: "Grab bag",
       path: "/evals/grab-bag/",
     },
+    {
+      name: "Code: Rust feature",
+      path: "/evals/code-rust-feature/",
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:

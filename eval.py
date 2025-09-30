@@ -25,12 +25,6 @@ from pydantic import ValidationError
 
 """
 Run the LLM eval suite specified in the passed-in config file.
-
-TODO:
-- P0
-    - validate config
-- P1
-    - store version of command tool?
 """
 
 logging.basicConfig(
@@ -43,7 +37,7 @@ logger = logging.getLogger(__name__)
 
 # Cache database paths
 db_path_main = "eval_cache.db"
-db_paths_search = [db_path_main, "raw_responses.db", logs_db_path()]
+db_paths_search = [db_path_main, logs_db_path()]
 
 
 class RawResponse:
@@ -386,6 +380,11 @@ def cli():
         "--provider", type=str, help="Run tests only for the specified provider ID"
     )
 
+    # Debug mode for command tests
+    parser.add_argument(
+        "--debug-tempdir", action="store_true", help="Pause after command tests to inspect temp directory"
+    )
+
     return parser.parse_args()
 
 
@@ -680,22 +679,62 @@ def run_llm_test(
 
 
 def run_command_test(
-    provider: Dict[str, Any], test: Dict[str, Any], prompt: str
+    provider: Dict[str, Any], test: Dict[str, Any], prompt: str, config_dir: Path, server_process: Optional[subprocess.Popen] = None, debug_tempdir: bool = False
 ) -> str:
-    """Run a command-based test (existing functionality)."""
+    """Run a command-based test."""
+    # Render prompt with test variables
+    test_vars = test.get("vars", {})
+    template_vars = {k: v for k, v in test_vars.items()
+                    if k not in ["attachments", "schema", "transforms"]}
+    rendered_prompt = Template(prompt).render(**template_vars)
+
+    # Setup log file
+    log_dir = config_dir / "results"
+    os.makedirs(log_dir, exist_ok=True)
+    # Slugify IDs for safe filenames
+    provider_slug = re.sub(r'[^\w\-]', '_', provider['id'])
+    test_slug = re.sub(r'[^\w\-]', '_', test['id'])
+    log_file = log_dir / f"{provider_slug}_{test_slug}.log"
+
     with tempfile.TemporaryDirectory() as temp_dir:
         logger.debug(f"Running test in temp dir {temp_dir}")
+        print(Color.colored(f"Temp dir: {temp_dir}", Color.GRAY))
 
-        setup_command = test.get("setup_command")
+        all_output = []
+
+        # Setup command from provider
+        setup_command = provider.get("setup_command")
         if setup_command:
-            run_command(setup_command, temp_dir)
+            setup_rendered = Template(setup_command).render(**template_vars)
+            all_output.append(f"=== Setup Command ===\n{setup_rendered}\n\n")
+            output = run_command(setup_rendered, temp_dir)
+            all_output.append(f"{output}\n\n")
 
+        # Eval command from provider
         eval_command_raw = Template(provider.get("command"))
-        eval_command = eval_command_raw.render(prompt=prompt)
-        run_command(eval_command, temp_dir)
+        eval_command = eval_command_raw.render(prompt=rendered_prompt, **template_vars)
+        all_output.append(f"=== Eval Command ===\n{eval_command}\n\n")
+        output = run_command(eval_command, temp_dir)
+        all_output.append(f"{output}\n\n")
 
-        result_command = test.get("result_command")
-        result = run_command(result_command, temp_dir)
+        # Result command from provider
+        result_command = provider.get("result_command")
+        result_rendered = Template(result_command).render(**template_vars)
+        all_output.append(f"=== Result Command ===\n{result_rendered}\n\n")
+        result = run_command(result_rendered, temp_dir)
+        all_output.append(f"{result}\n\n")
+
+        # Write all output to log file
+        with open(log_file, "w") as f:
+            f.write("".join(all_output))
+        print(Color.colored(f"Command log written to {log_file}", Color.BLUE))
+
+        if debug_tempdir:
+            print(Color.colored(f"\n🔍 Debug mode: Paused for inspection", Color.YELLOW + Color.BOLD))
+            print(Color.colored(f"Temp directory: {temp_dir}", Color.YELLOW))
+            print(Color.colored("Press Enter to continue and clean up temp dir...", Color.YELLOW))
+            input()
+
         return result
 
 
@@ -716,7 +755,7 @@ def run_assertions(result: Any, expected: str) -> Optional[bool]:
 
 
 def run_test(
-    provider: Dict[str, Any], test: Dict[str, Any], prompt: str, config_dir: Path
+    provider: Dict[str, Any], test: Dict[str, Any], prompt: str, config_dir: Path, debug_tempdir: bool = False
 ) -> tuple[Any, bool, float, bool]:
     """Run a single test and return (result, passed, duration_ms, was_cached)."""
     start_time = time.time()
@@ -742,7 +781,7 @@ def run_test(
         )
     elif "command" in provider:
         # Command provider
-        result = run_command_test(provider, test, prompt)
+        result = run_command_test(provider, test, prompt, config_dir, debug_tempdir=debug_tempdir)
         duration_ms = (time.time() - start_time) * 1000
     else:
         raise EvalException(
@@ -816,6 +855,8 @@ def aggregate_results(results: List[CompletedResult]) -> List[Dict[str, Any]]:
 
 def write_results(results: List[CompletedResult], out_file: str, format: str = "csv"):
     """Write results to file in CSV or JSON format."""
+    os.makedirs(os.path.dirname(out_file), exist_ok=True)
+
     if format == "json":
         with open(out_file.replace(".csv", ".json"), "w") as f:
             json.dump(results, f, indent=2)
@@ -937,66 +978,99 @@ def main():
     results: List[CompletedResult] = []
     test_count = 0
 
-    for provider, prompt, test in limited_combinations:
-        test_count += 1
-        print(Color.colored(f"Running {test_count} of {total_tests}", Color.BLUE))
+    # Track servers by provider ID
+    provider_servers = {}
 
-        test_vars = test.get("vars", {})
-        from datetime import datetime, timezone
+    try:
+        for provider, prompt, test in limited_combinations:
+            test_count += 1
+            print(Color.colored(f"Running {test_count} of {total_tests}", Color.BLUE))
 
-        result: CompletedResult = {
-            "provider_id": provider["id"],
-            "prompt_id": prompt["id"],
-            "test": test["id"],
-            "prompt": prompt["text"],
-            "result": None,
-            "error": None,
-            "duration_ms": None,
-            "passed": None,
-            "expected": test.get("expected", test_vars.get("__expected", "")),
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-        }
-        # Add all test variables to the result
-        result.update(test_vars)
-
-        try:
-            test_result, passed, duration_ms, was_cached = run_test(
-                provider, test, prompt["text"], config_dir
-            )
-            result["result"] = str(test_result)
-            result["passed"] = passed
-            result["duration_ms"] = duration_ms
-
-            if passed is True:
-                status = "✅ PASSED"
-                color = Color.GREEN
-            elif passed is False:
-                status = "❌ FAILED"
-                color = Color.YELLOW
-            else:  # passed is None
-                status = "❓ NO ASSERTIONS"
-                color = Color.BLUE
-            cache_indicator = " (cached)" if was_cached else ""
-            print(
-                Color.colored(
-                    f"{status} - Completed {test_count} of {total_tests} ({duration_ms:.1f}ms{cache_indicator})",
-                    color,
+            # Start server if needed for this provider
+            provider_id = provider["id"]
+            if provider_id not in provider_servers and "server_command" in provider:
+                server_cmd = provider["server_command"]
+                print(Color.colored(f"Starting server: {server_cmd}", Color.BLUE))
+                logger.info(f"Starting server for {provider_id}: {server_cmd}")
+                server_process = subprocess.Popen(
+                    server_cmd,
+                    shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    universal_newlines=True
                 )
-            )
+                provider_servers[provider_id] = server_process
+                # Give server time to start
+                time.sleep(2)
+                print(Color.colored(f"Server started (PID {server_process.pid})", Color.GREEN))
 
-        except EvalException as e:
-            print(Color.colored(f"❌ Test case failed", Color.YELLOW))
-            logger.warning(f"Test case failed: {e}")
-            result["error"] = str(e)
-            result["passed"] = False
-        except Exception as e:
-            error_msg = str(e).split("\n")[0][:100]  # First line, max 100 chars
-            print(Color.colored(f"❌ Unexpected error: {error_msg}", Color.RED))
-            logger.error(f"Unexpected error: {e}")
-            result["error"] = str(e)
-            result["passed"] = False
+            test_vars = test.get("vars", {})
+            from datetime import datetime, timezone
 
-        results.append(result)
+            result: CompletedResult = {
+                "provider_id": provider["id"],
+                "prompt_id": prompt["id"],
+                "test": test["id"],
+                "prompt": prompt["text"],
+                "result": None,
+                "error": None,
+                "duration_ms": None,
+                "passed": None,
+                "expected": test.get("expected", test_vars.get("__expected", "")),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            }
+            # Add all test variables to the result
+            result.update(test_vars)
+
+            try:
+                test_result, passed, duration_ms, was_cached = run_test(
+                    provider, test, prompt["text"], config_dir, args.debug_tempdir
+                )
+                result["result"] = str(test_result)
+                result["passed"] = passed
+                result["duration_ms"] = duration_ms
+
+                if passed is True:
+                    status = "✅ PASSED"
+                    color = Color.GREEN
+                elif passed is False:
+                    status = "❌ FAILED"
+                    color = Color.YELLOW
+                else:  # passed is None
+                    status = "❓ NO ASSERTIONS"
+                    color = Color.BLUE
+                cache_indicator = " (cached)" if was_cached else ""
+                print(
+                    Color.colored(
+                        f"{status} - Completed {test_count} of {total_tests} ({duration_ms:.1f}ms{cache_indicator})",
+                        color,
+                    )
+                )
+
+            except EvalException as e:
+                print(Color.colored(f"❌ Test case failed", Color.YELLOW))
+                logger.warning(f"Test case failed: {e}")
+                result["error"] = str(e)
+                result["passed"] = False
+            except Exception as e:
+                error_msg = str(e).split("\n")[0][:100]  # First line, max 100 chars
+                print(Color.colored(f"❌ Unexpected error: {error_msg}", Color.RED))
+                logger.error(f"Unexpected error: {e}")
+                result["error"] = str(e)
+                result["passed"] = False
+
+            results.append(result)
+    finally:
+        # Kill all servers
+        for provider_id, server_process in provider_servers.items():
+            print(Color.colored(f"Stopping server for {provider_id} (PID {server_process.pid})", Color.BLUE))
+            logger.info(f"Stopping server for {provider_id}")
+            server_process.terminate()
+            try:
+                server_process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                print(Color.colored(f"Force killing server (PID {server_process.pid})", Color.YELLOW))
+                server_process.kill()
 
     # Write results
     output_file = config_dir / "results" / "results.csv"

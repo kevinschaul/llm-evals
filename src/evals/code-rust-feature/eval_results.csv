@@ -1,4 +1,0 @@
-provider_id,test,prompt,result,error,duration_ms,passed
-gpt-oss-20b,jump-start-tools-pr,"Implement the mode=git feature for the ""use"" subcommand.",,"Error running codex exec --skip-git-repo-check --sandbox workspace-write -c provider=""llama-server"" -c model=""gpt-oss-20b"" ""Implement the mode=git feature for the ""use"" subcommand.""
-Output: /bin/sh: 1: codex: not found
-",,False

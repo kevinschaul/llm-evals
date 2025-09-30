@@ -1,12 +1,23 @@
 providers:
-  - id: gpt-oss-20b
-    label: gpt-oss-20b + codex
+  - id: claude-code/sonnet-4-5
+    command: 'claude --print --dangerously-skip-permissions "{{prompt}}"'
+    setup_command: "git clone https://github.com/kevinschaul/jump-start-tools.git ."
+    result_command: "git diff"
+
+  - id: codex/gpt-oss-20b
     command: 'codex exec --skip-git-repo-check --sandbox workspace-write -c provider="llama-server" -c model="gpt-oss-20b" "{{prompt}}"'
+    server_command: 'llama-server -m ~/.lmstudio/models/lmstudio-community/gpt-oss-20b-GGUF/gpt-oss-20b-MXFP4.gguf --ctx-size 32768 --jinja -ub 2048 -b 2048 -ngl 99 -fa --n-cpu-moe 16 --host 0.0.0.0'
+    setup_command: "git clone https://github.com/kevinschaul/jump-start-tools.git ."
+    result_command: "git diff"
+
+  - id: codex/gpt-5-codex
+    command: 'codex exec --skip-git-repo-check --sandbox workspace-write -c model="gpt-5-codex" "{{prompt}}"'
+    setup_command: "git clone https://github.com/kevinschaul/jump-start-tools.git ."
+    result_command: "git diff"
+
+prompts:
+  - 'Implement the mode=git feature for the "use" subcommand.'
 
 tests:
   - id: jump-start-tools-pr
-    type: command
-    setup_command: "git clone https://github.com/kevinschaul/jump-start-tools.git ."
-    prompt: 'Implement the mode=git feature for the "use" subcommand.'
-    result_command: "git diff"
 

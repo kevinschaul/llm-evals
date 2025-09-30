@@ -18,4 +18,4 @@ yarn-error.log
 
 raw_responses.db
 eval_cache.db
-eval.log
+*.log
