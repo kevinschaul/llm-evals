@@ -719,10 +719,14 @@ def run_command_test(
 
         # Result command from provider
         result_command = provider.get("result_command")
-        result_rendered = Template(result_command).render(**template_vars)
-        all_output.append(f"=== Result Command ===\n{result_rendered}\n\n")
-        result = run_command(result_rendered, temp_dir)
-        all_output.append(f"{result}\n\n")
+        if result_command:
+            result_rendered = Template(result_command).render(**template_vars)
+            all_output.append(f"=== Result Command ===\n{result_rendered}\n\n")
+            result = run_command(result_rendered, temp_dir)
+            all_output.append(f"{result}\n\n")
+        else:
+            # If no result_command, use the output from the eval command
+            result = output
 
         # Write all output to log file
         with open(log_file, "w") as f:
@@ -978,6 +982,10 @@ def main():
     results: List[CompletedResult] = []
     test_count = 0
 
+    # Setup output file and prepare for incremental writes
+    output_file = config_dir / "results" / "results.csv"
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
     # Track servers by provider ID
     provider_servers = {}
 
@@ -1060,6 +1068,9 @@ def main():
                 result["passed"] = False
 
             results.append(result)
+
+            # Write results incrementally after each test
+            write_results(results, str(output_file))
     finally:
         # Kill all servers
         for provider_id, server_process in provider_servers.items():
@@ -1072,9 +1083,9 @@ def main():
                 print(Color.colored(f"Force killing server (PID {server_process.pid})", Color.YELLOW))
                 server_process.kill()
 
-    # Write results
-    output_file = config_dir / "results" / "results.csv"
-    write_results(results, str(output_file))
+    # Final write (in case loop didn't complete)
+    if results:
+        write_results(results, str(output_file))
 
     # Print summary
     passed_count = sum(1 for r in results if r["passed"] is True)

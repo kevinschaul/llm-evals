@@ -25,7 +25,7 @@ export default function ResultsTable(results) {
           return htl.html`<div style="background: #e3f2fd; padding: 2px 6px; text-align: center;">?</div>`
         }
       },
-      duration_ms: (d) => `${d}ms`,
+      duration_ms: (d) => d != null ? `${Math.round(d)}ms` : "",
       result: (d) =>
         d && d.length > 0
           ? d.substring(0, 50) + (d.length > 50 ? "..." : "")
