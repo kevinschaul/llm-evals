@@ -1,0 +1,234 @@
+id,input,target,response,score,input_tokens,output_tokens,duration_ms
+1,"Noem: Guantánamo Bay on the table to house deportees
+Homeland Security Secretary Kristi L. Noem sign...",Guantánamo Bay,Guantánamo Bay,1.0,,,60499
+2,"Supreme Court delays decision on Trump’s firing of watchdog agency leader
+A divided Supreme Court on...",Firing government watchdogs,Firing government watchdogs,1.0,,,64498
+3,"Hegseth to visit Guantanamo Bay as migrant detention takes shape
+Defense Secretary Pete Hegseth is e...",Guantánamo Bay,Guantánamo Bay,1.0,,,54671
+4,"Musk throws cold water on funding for Trump AI initiative
+Elon Musk, the Tesla CEO and top ally of P...",AI,AI,1.0,,,56609
+5,"Trans health, research programs ordered to stop by Trump administration
+The Trump administration is ...",Transgender policy,Transgender policy,1.0,,,43304
+6,"N.Y. Mayor Eric Adams pushes for permanent dismissal of his corruption case
+NEW YORK — Mayor Eric Ad...",Eric Adams case,Eric Adams case,1.0,,,45995
+9,"HHS in process of firing 5,200 workers, according to internal memo
+In an extraordinary move, the Dep...",Federal workforce reductions,Federal workforce reductions,1.0,,,46509
+11,"Trump administration seeking access to database of immigrant minors
+The Trump administration is seek...",Immigration policy,Immigration policy,1.0,,,46984
+13,President Donald Trump just signed executive orders declaring a “national energy emergency” and “unl...,Climate,Other,0.0,,,76863
+15,"More than 40,000 workers said to accept deferred resignation offer
+More than 40,000 people have acce...",Federal worker buyout,Federal worker buyout,1.0,,,58946
+16,"Trump set to pull funding from schools based on race, gender teaching
+The White House is preparing t...",DEI in schools,DEI in schools,1.0,,,332044
+17,"Vaccine safety panel long criticized by RFK Jr. told to postpone meeting
+The Trump administration ha...",Health care,Health care,1.0,,,51325
+19,"Trump says he will fire Kennedy Center board members, appoint himself chairman
+President Donald Trum...",Kennedy Center,Kennedy Center,1.0,,,55151
+21,"Trump shuts off access to asylum, plans to send 10,000 troops to border
+President <a href=""https://w...",U.S.-Mexico border,Immigration policy,0.0,,,46451
+22,"Trump appoints loyalists to Kennedy Center board
+President Donald Trump was officially elected chair...",Kennedy Center,Kennedy Center,1.0,,,52715
+23,President Donald Trump signed an executive order Monday creating the “Department of Government Effic...,DOGE,Expanding executive power,0.0,,,102869
+24,"HUD moves to cancel $1.1 billion in already-awarded housing upgrades
+The Department of Housing and U...",Federal funding,Federal funding,1.0,,,69017
+26,"Trump: Government will sell $5 million ‘gold card’ to wealthy immigrants
+President Donald Trump said...",Immigration policy,Immigration policy,1.0,,,87853
+27,"Trump says administration looking at sending criminals out of country
+“Numerous countries” have offe...",Deportations,Deportations,1.0,,,111760
+28,"Pentagon says ‘identity months’  like Black History Month are ‘dead’
+Shortly after President Donald ...",DEI in the federal government,DEI in the federal government,1.0,,,97976
+29,"U.S., Ukraine near deal to grant mineral rights to Washington
+The Trump administration and the Ukrai...",War in Ukraine,Foreign policy,0.0,,,67541
+30,"Trump to build mass detention camp for deportees at Guantánamo Bay
+President <a href=""https://www.wa...",Guantánamo Bay,Deportations,0.0,,,78105
+31,"Federal judge blocks Trump from slashing NIH funding in 22 states that sued
+A federal district judge...",NIH,NIH,1.0,,,31667
+32,"New Kennedy Center board elects Trump as chair. Rutter departs as president.
+The Kennedy Center boar...",Kennedy Center,Kennedy Center,1.0,,,63036
+33,"In new order, Trump administration places more USAID staff on leave
+The Trump administration put sco...",USAID,USAID,1.0,,,37678
+34,"Dept. of Homeland Security wants IRS to help with immigration enforcement
+Homeland Security Secretar...",Immigration policy,Immigration policy,1.0,,,36396
+35,"Trump administration orders Pentagon to plan for sweeping budget cuts
+Defense Secretary Pete Hegseth...",Federal funding,Federal funding,1.0,,,79364
+36,"Trump threatens to cut U.S. aid to South Africa over land law
+NAIROBI — President <a href=""https://w...",Foreign aid,Foreign aid,1.0,,,69985
+37,"Trump announces 25% tariffs on steel and aluminum, including for Canada and Mexico
+President Donald ...",Tariffs,Tariffs,1.0,,,53603
+40,"CFPB prepares to end lease on headquarters building, ahead of expected cuts
+The Trump administration...",CFPB,Federal office space,0.0,,,93514
+42,"Trump says he ordered Treasury Department to stop producing new pennies
+President <a href=""https://w...",Other,Other,1.0,,,155959
+43,"Federal agencies must revise telework policies by Friday, White House says
+Heads of federal agencies...",Federal workers return to office,Federal workers return to office,1.0,,,63277
+45,"Trump, Maine Gov. Mills spar over executive order on transgender athletes
+President Donald Trump and...",Transgender policy,Transgender policy,1.0,,,49489
+46,"Lawsuit filed over Trump’s order targeting transgender service members
+President Donald Trump’s <a h...",Transgender policy,Transgender policy,1.0,,,39698
+47,"National Science Foundation halts reviews of research proposals
+The National Science Foundation has ...",Health agencies' communications pause,DEI in the federal government,0.0,,,50383
+50,"Trump plans emerge to use U.S. military bases for immigrant detention
+A Space Force military base in...",Immigration policy,Deportations,0.0,,,85316
+51,"Some agency heads mandate that employees report efforts to ‘disguise’ DEI programs
+President Donald ...",DEI in the federal government,DEI in the federal government,1.0,,,53805
+52,"Trump signs executive order to create crypto council, reduce regulation
+President Donald Trump on Th...",Crypto,Crypto,1.0,,,50868
+55,"Trump says he wants to send ‘repeat offenders’ in U.S. legally to foreign countries
+DORAL, Fla. — Pr...",Deportations,Immigration policy,0.0,,,105859
+56,"Trump reinstates plan to strip protections from federal workers
+President <a href=""https://www.washi...",Reclassifying federal jobs,Federal workforce reductions,0.0,,,232738
+58,President Donald Trump signed an executive order on Monday requiring the federal government to retur...,Climate,Other,0.0,,,128534
+59,"Trump freezes hiring for many federal jobs
+The White House issued a freeze on the hiring of civilian...",Federal workforce reductions,Federal workforce reductions,1.0,,,39460
+61,"Trump appoints leader of his Secret Service detail to head agency
+President Donald Trump said Wednes...",Other,Other,1.0,,,66542
+63,"Native leaders warn that freezing of federal funds could imperil some services
+Native American leade...",Federal grant pause,Federal grant pause,1.0,,,71867
+65,"Judge briefly extends order barring Trump from firing watchdog leader
+A federal judge on Wednesday e...",Firing government watchdogs,Firing government watchdogs,1.0,,,64594
+67,"Education Dept. launches investigation into Maine over transgender policies
+The Education Department...",Transgender policy,Department of Education,0.0,,,47041
+68,"Judge forces lawyers for fired inspectors general to withdraw TRO request
+Lawyers for eight inspecto...",Firing government watchdogs,Firing government watchdogs,1.0,,,69944
+69,"White House, in reversal, rescinds freeze on federal grants
+The White House budget office on Wednesd...",Federal grant pause,Federal grant pause,1.0,,,53172
+70,"EPA puts 168 environmental justice staffers on administrative leave
+Trump appointees at the Environm...",DEI in the federal government,DEI in the federal government,1.0,,,57281
+71,"Layoffs loom as Trump administration orders federal DEI workers on leave
+President Donald Trump’s ad...",DEI in the federal government,DEI in the federal government,1.0,,,51982
+75,"Acting IRS commissioner to step down amid DOGE blitz on agency
+The acting commissioner of the IRS wi...",DOGE,DOGE,1.0,,,51866
+76,"Trump directs agency heads to review funding for NGOs
+President Donald Trump sent a memorandum Frida...",Foreign aid,Foreign aid,1.0,,,62688
+77,"Early education programs can’t access federal funding to pay bills
+Providers of the national program...",Federal grant pause,Federal grant pause,1.0,,,63284
+78,"Prosecutor quits after order to drop corruption case against N.Y. Mayor Eric Adams
+NEW YORK — Hagan ...",Eric Adams case,Eric Adams case,1.0,,,47194
+81,"Ed Dept DOGE team cancels $900 million in research contracts
+The Education Department on Monday shut...",DOGE,Department of Education,0.0,,,45365
+82,"Trump signs executive order seeking more death sentences
+President Donald Trump on Monday signed an ...",Other,Expanding executive power,0.0,,,130434
+83,"Trump says new tariffs on computer chips are coming
+President Donald Trump said he would soon announ...",Tariffs,Tariffs,1.0,,,73482
+84,"Trump signing executive order intended to reduce federal workforce
+President Donald Trump on Tuesday...",Federal workforce reductions,Federal workforce reductions,1.0,,,46815
+86,"U.S. troops arrive at Guantánamo Bay in Trump migrant crackdown
+Infantry Marines and other U.S. troo...",Guantánamo Bay,Guantánamo Bay,1.0,,,55646
+88,"Trump orders sweeping review of federal regulations
+President Donald Trump ordered federal agencies ...",Other,Expanding executive power,0.0,,,135042
+89,"Trump revokes security clearances for dozens of former national security officials
+Trump in an execu...",Targeting political enemies,Other,0.0,,,110327
+91,"Migrants at border get message saying CBP One appointments ‘no longer valid’
+CIUDAD JUÁREZ, Mexico —...",Immigration policy,Immigration policy,1.0,,,57711
+94,"Hegseth takes action against Trump foe Mark Milley
+Defense Secretary Pete Hegseth has decided to rem...",Targeting political enemies,Other,0.0,,,102972
+95,"Treasury agrees to block DOGE’s access to personal taxpayer data at IRS
+The Trump White House<b> </b...",DOGE,DOGE,1.0,,,78179
+96,"Trump fires Federal Labor Relations Authority member
+President <a href=""https://www.washingtonpost.c...",Firing government watchdogs,Expanding executive power,0.0,,,172919
+97,"Trump backs off trade threats after Colombia agrees to deportation flights
+The United States and Col...",Deportations,Immigration policy,0.0,,,40074
+7,"GOP lawmakers scramble to protect foreign aid as food relief languishes
+As GOP lawmakers in Washingt...",USAID,Foreign aid,0.0,,,76029
+8,"DOGE rips through Education Department, cutting contracts, staff and grants
+The notices popped into ...",Department of Education,Department of Education,1.0,,,85770
+10,"Trump plans to further restrict undocumented immigrants from public benefits
+President Donald Trump ...",Immigration policy,Immigration policy,1.0,,,49325
+12,"Judge denies temporary ban on DOGE access to private data
+A federal judge on Friday denied a request...",DOGE,DOGE,1.0,,,77850
+14,"Judge adds one-week pause on Trump plan to put 2,100 USAID workers on leave
+A federal judge on Thurs...",USAID,USAID,1.0,,,66198
+18,"Judge says Trump officials have not complied with order to restart foreign aid
+A federal judge in D....",Foreign aid,Foreign aid,1.0,,,75232
+20,"Arab leaders scramble for alternative to Trump’s Gaza proposal
+President Donald Trump’s plan to remo...",Gaza,Gaza,1.0,,,75363
+25,"FAA targeting Verizon contract in favor of Musk’s Starlink, sources say
+The Federal Aviation Adminis...",Other,Other,1.0,,,203063
+38,"Trump moves to narrow independence of Fed, along with other Wall Street overseers
+The Trump administ...",Expanding executive power,Expanding executive power,1.0,,,48997
+39,"Trump, Modi aim to cut U.S. trade gap with India amid global tariff concerns
+The United States and I...",Tariffs,Tariffs,1.0,,,86128
+41,"Justice Dept. hires for court battles as Trump slashes other agencies
+The Justice Department is recr...",Other,Immigration policy,0.0,,,66670
+44,"Trump administration freezes funds to Palestinian security forces
+JERICHO, West Bank — The Trump adm...",Foreign aid,Foreign aid,1.0,,,42046
+48,"Labor Department blocked from sharing data with DOGE, email says
+The U.S. Labor Department has been ...",DOGE,DOGE,1.0,,,108275
+49,"Vaccine meeting to prepare for coming winter’s flu season canceled
+Trump officials have canceled a f...",Health care,Health care,1.0,,,91322
+53,"Trump proposes permanent displacement of Gazans as he welcomes Netanyahu to White House
+President <a...",Gaza,Gaza,1.0,,,49590
+54,"Judge orders Trump administration to pay millions in USAID funds
+A federal judge on Tuesday ordered ...",USAID,USAID,1.0,,,38270
+57,"Federal board halts firings of six probationary employees amid Trump cuts
+An independent federal boa...",Federal workforce reductions,Federal workforce reductions,1.0,,,124880
+60,"Acting ICE director removed amid White House pressure to boost arrests
+The Trump administration has ...",Senior government officials ousted,Immigration policy,0.0,,,86602
+62,"Judge allows intelligence agencies to fire officers in DEI roles
+A federal judge on Thursday refused...",DEI in the federal government,DEI in the federal government,1.0,,,73343
+64,"Suit charges violation of Privacy Act as DOGE accesses personal data
+A coalition of labor unions and...",DOGE,DOGE,1.0,,,54356
+66,"Layoffs to hit IRS as DOGE targets tax collections
+The Trump administration is expected to begin lay...",DOGE,Federal workforce reductions,0.0,,,46217
+72,"Pentagon to fire 5,400 civilian employees in ‘initial’ purge
+The Pentagon said Friday that it will f...",Federal workforce reductions,Federal workforce reductions,1.0,,,41686
+73,"Judge temporarily blocks DOGE access to sensitive information at two agencies
+A federal judge on Mon...",DOGE,,0.0,,,36267
+74,"Farmers sue USDA after agency deletes climate change data
+A group of farmers and environmental nonpr...",Climate,Climate,1.0,,,27595
+79,"State attorneys general say they will sue to block pause on federal grants
+At least 20 states have b...",Federal grant pause,Federal grant pause,1.0,,,15058
+80,"Trump administration seeks more power to fire independent regulators
+The Trump administration has to...",Firing government watchdogs,Expanding executive power,0.0,,,17626
+85,"Transgender troops will be removed from U.S. military, Pentagon says
+Openly transgender service memb...",Transgender policy,Transgender policy,1.0,,,17797
+87,"Mexico extradites 29 drug suspects to U.S. as Trump threatens sanctions
+MEXICO CITY — Mexico extradi...",Tariffs,"线条
+
+Okay, let's see. The user wants me to categorize this article into one of the given categories.
+
+The article is about Mexico extraditing 29 drug suspects to the U.S., including Rafael Caro Quintero and leaders of the Zetas cartel. It mentions Trump threatening sanctions on Mexico over drugs and tariffs. 
+
+Looking at the allowed categories, I need to find the most specific one. Let's check the list. The main topics here are drug trafficking, extradition, and sanctions. The closest categories might be ""Sanctions"" or ""Immigration policy"". However, the article focuses more on the extradition of drug traffickers in response to potential sanctions, not directly about immigration policies. 
+
+Wait, there's also a mention of Trump's tariffs related to drugs crossing the border. But the primary event here is the extradition of drug suspects. The category ""Sanctions"" might fit because Trump threatened sanctions, but the main content is about extraditions. Alternatively, ""U.S.-Mexico border"" could be relevant since it's about cross-border issues. However, looking at the categories again, there's no specific ""Drug trafficking"" category. The closest would be ""Immigration policy"" if the focus was on immigration, but this is more about drug enforcement and extradition. 
+
+Wait, another angle: ""Foreign policy"" might fit because it involves international relations between the U.S. and Mexico. But the article is specifically about extraditions and sanctions related to drugs. Hmm. The category ""Sanctions"" is there, and Trump's threat of tariffs (which are a type of sanction) is part of the story. However, the main action is the extradition. 
+
+Alternatively, maybe ""Immigration policy"" isn't right because it's not about immigration laws but drug trafficking. Looking again at the categories, ""Drug trafficking"" isn't listed. The closest might be ""Foreign aid"" or ""Foreign policy"", but neither seems precise. Wait, there's a category called ""U.S.-Mexico border"", which could be relevant here since the article discusses the flow of drugs across the border and the resulting sanctions. But the main event is extradition, not directly about the border itself. 
+
+Wait, maybe ""Sanctions"" is still the best fit because Trump's threat of tariffs (sanctions) is a key part of the article's context, even though the primary action is extradition. However, if there's no exact category for drug-related extraditions, then ""Other"" might be necessary. But I need to check again.
+
+Looking at the list: ""Sanctions"" is an option. The article mentions Trump threatening sanctions on Mexico. The Mexican government's response with extraditions is a reaction to those sanctions. So, the main event is the extradition, but the category that relates to the reason (sanctions) might be ""Sanctions"". Alternatively, if there's no better fit, maybe ""Other"".
+
+Wait, the allowed categories include ""Immigration policy"" and ""U.S.-Mexico border"". Since the article is about drug trafficking between the U.S. and Mexico leading to sanctions and extraditions, perhaps ""U.S.-Mexico border"" is more specific. However, the primary focus isn't on the border itself but on the extradition in response to sanctions. Alternatively, ""Sanctions"" might be the best fit here because the article's main context is Trump's threats of tariffs (sanctions) leading to Mexico's actions.
+
+But I'm a bit torn between ""U.S.-Mexico border"" and ""Sanctions"". Let me re-read the article. The key points are: Mexico extraditing drug suspects to the U.S., Trump threatening sanctions, and discussions about tariffs. The main event is extradition, but the reason is to avoid sanctions. However, the category needs to be the most specific one that makes sense. Since ""Sanctions"" is a direct mention in the article (tariffs as part of sanctions), maybe that's the right category. Alternatively, if there's no exact fit, then ""Other"".
+
+But looking again at the categories, ""Foreign policy"" could also be considered because it involves international relations and actions between countries. However, I think ""Sanctions"" is more precise here since the article directly discusses the threat of tariffs (sanctions) by Trump and Mexico's response.
+
+
+Sanctions",1.0,,,56497
+90,"Several administration officials tell workers not to reply to Musk email
+Elon Musk’s demand that all...",DOGE,"聚类
+
+Okay, let me try to figure out the right category for this article. The main topic here is about Elon Musk sending an email to federal workers asking them to summarize their accomplishments, and various government agencies instructing their staff not to reply. There's mention of different departments like the FBI, DHS, and others, as well as reactions from officials and lawmakers.
+
+Looking at the allowed categories, I need to see which one fits best. The options include things like Federal workforce reductions, Federal office space, or maybe something related to government operations. Wait, there's ""Federal worker buyout"" but that doesn't seem right here. The article isn't about buying out workers, but rather about a directive from Musk and the agencies' responses.
+
+Another category is ""Government shutdown,"" but this isn't about a shutdown either. It's more about an email directive and resistance to it. There's also ""Federal grant pause"" or ""Federal funding,"" but again, not directly related. 
+
+Wait, there's ""Reclassifying federal jobs"" or ""Expanding executive power."" Maybe ""Expanding executive power"" because Musk is a private individual (though he has influence) making demands on federal workers. But I'm not sure if that's the best fit.
+
+Looking at other categories like ""Deportations,"" ""Immigration policy,"" none of those apply here. How about ""Federal workforce reductions""? No, it's not about reducing the workforce but about how they're being managed or directed. 
+
+Wait, there's a category called ""Other."" Since none of the specific categories seem to fit perfectly, maybe ""Other"" is the right choice here. The article is more about an unusual directive from Musk and the response from agencies, which might not be covered by any of the listed categories. But let me check again.
+
+Is there a category related to government operations or executive orders? There's ""Expanding executive power,"" but the article isn't about expanding powers per se; it's about a specific email and resistance. The main issue is Musk's demand and agencies' instructions, which might not be directly covered by any of the categories. Therefore, ""Other"" seems appropriate.
+
+
+Other",0.0,,,31046
+92,"Trump allies rejoice, Democrats sound alarm over latest FBI appointment
+President Donald Trump <a hr...",Other,Other,1.0,,,33988
+93,"Supreme Court grants Trump request to pause USAID payments order
+Chief Justice John G. Roberts Jr. g...",USAID,Foreign aid,0.0,,,23435

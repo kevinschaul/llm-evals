@@ -22,8 +22,12 @@ eval name model *ARGS:
 extract name:
     uv run python extract_results.py {{name}}
 
+# Remove outdated log files, keeping only the most recent per model
+cleanup-logs:
+    uv run python cleanup_old_logs.py --delete
+
 # View Inspect logs in web interface
-view:
+inspect:
     uv run inspect view start --log-dir logs
 
 # Start Observable Framework dashboard

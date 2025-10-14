@@ -81,7 +81,14 @@ def generate_results_csv(log_files, output_path):
                 # Get model output
                 result = ""
                 if sample.output and sample.output.choices:
-                    result = sample.output.choices[0].message.content or ""
+                    content = sample.output.choices[0].message.content
+                    if isinstance(content, str):
+                        result = content
+                    elif isinstance(content, list):
+                        # Handle list of ContentText objects
+                        result = "".join([item.text for item in content if hasattr(item, 'text')])
+                    else:
+                        result = str(content) if content else ""
 
                 # Get error if any
                 error = ""

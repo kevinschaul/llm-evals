@@ -6,8 +6,6 @@ Determine whether an article is describing a new action/policy by the Trump admi
 
 [View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/article-tracking-trump)
 
-See also: [categories/](categories/)
-
 ```js
 import AggregateTable from "../../components/AggregateTable.js"
 import ResultsTable from "../../components/ResultsTable.js"

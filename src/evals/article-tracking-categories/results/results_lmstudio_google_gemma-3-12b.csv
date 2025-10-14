@@ -1,0 +1,192 @@
+id,input,target,response,score,input_tokens,output_tokens,duration_ms
+1,"Noem: Guantánamo Bay on the table to house deportees
+Homeland Security Secretary Kristi L. Noem sign...",Guantánamo Bay,Deportations,0.0,,,2260
+2,"Supreme Court delays decision on Trump’s firing of watchdog agency leader
+A divided Supreme Court on...",Firing government watchdogs,Firing government watchdogs,1.0,,,1643
+3,"Hegseth to visit Guantanamo Bay as migrant detention takes shape
+Defense Secretary Pete Hegseth is e...",Guantánamo Bay,Guantánamo Bay,1.0,,,1910
+4,"Musk throws cold water on funding for Trump AI initiative
+Elon Musk, the Tesla CEO and top ally of P...",AI,AI,1.0,,,2324
+5,"Trans health, research programs ordered to stop by Trump administration
+The Trump administration is ...",Transgender policy,Transgender policy,1.0,,,1489
+6,"N.Y. Mayor Eric Adams pushes for permanent dismissal of his corruption case
+NEW YORK — Mayor Eric Ad...",Eric Adams case,Eric Adams case,1.0,,,2313
+9,"HHS in process of firing 5,200 workers, according to internal memo
+In an extraordinary move, the Dep...",Federal workforce reductions,Federal workforce reductions,1.0,,,2984
+10,"Trump plans to further restrict undocumented immigrants from public benefits
+President Donald Trump ...",Immigration policy,Immigration policy,1.0,,,3037
+11,"Trump administration seeking access to database of immigrant minors
+The Trump administration is seek...",Immigration policy,Immigration policy,1.0,,,1350
+12,"Judge denies temporary ban on DOGE access to private data
+A federal judge on Friday denied a request...",DOGE,Other,0.0,,,3820
+13,President Donald Trump just signed executive orders declaring a “national energy emergency” and “unl...,Climate,Climate,1.0,,,948
+15,"More than 40,000 workers said to accept deferred resignation offer
+More than 40,000 people have acce...",Federal worker buyout,Federal worker buyout,1.0,,,2379
+16,"Trump set to pull funding from schools based on race, gender teaching
+The White House is preparing t...",DEI in schools,DEI in schools,1.0,,,2630
+17,"Vaccine safety panel long criticized by RFK Jr. told to postpone meeting
+The Trump administration ha...",Health care,Health agencies' communications pause,0.0,,,1893
+18,"Judge says Trump officials have not complied with order to restart foreign aid
+A federal judge in D....",Foreign aid,Foreign aid,1.0,,,3443
+19,"Trump says he will fire Kennedy Center board members, appoint himself chairman
+President Donald Trum...",Kennedy Center,Kennedy Center,1.0,,,1250
+21,"Trump shuts off access to asylum, plans to send 10,000 troops to border
+President <a href=""https://w...",U.S.-Mexico border,U.S.-Mexico border,1.0,,,2943
+22,"Trump appoints loyalists to Kennedy Center board
+President Donald Trump was officially elected chair...",Kennedy Center,Kennedy Center,1.0,,,2108
+23,President Donald Trump signed an executive order Monday creating the “Department of Government Effic...,DOGE,DOGE,1.0,,,1349
+24,"HUD moves to cancel $1.1 billion in already-awarded housing upgrades
+The Department of Housing and U...",Federal funding,Federal funding,1.0,,,2147
+26,"Trump: Government will sell $5 million ‘gold card’ to wealthy immigrants
+President Donald Trump said...",Immigration policy,Immigration policy,1.0,,,2997
+27,"Trump says administration looking at sending criminals out of country
+“Numerous countries” have offe...",Deportations,Deportations,1.0,,,1522
+28,"Pentagon says ‘identity months’  like Black History Month are ‘dead’
+Shortly after President Donald ...",DEI in the federal government,DEI in the federal government,1.0,,,2792
+29,"U.S., Ukraine near deal to grant mineral rights to Washington
+The Trump administration and the Ukrai...",War in Ukraine,War in Ukraine,1.0,,,1349
+30,"Trump to build mass detention camp for deportees at Guantánamo Bay
+President <a href=""https://www.wa...",Guantánamo Bay,Deportations,0.0,,,1534
+31,"Federal judge blocks Trump from slashing NIH funding in 22 states that sued
+A federal district judge...",NIH,NIH,1.0,,,1106
+32,"New Kennedy Center board elects Trump as chair. Rutter departs as president.
+The Kennedy Center boar...",Kennedy Center,Kennedy Center,1.0,,,2053
+33,"In new order, Trump administration places more USAID staff on leave
+The Trump administration put sco...",USAID,USAID,1.0,,,2329
+34,"Dept. of Homeland Security wants IRS to help with immigration enforcement
+Homeland Security Secretar...",Immigration policy,Immigration policy,1.0,,,1397
+35,"Trump administration orders Pentagon to plan for sweeping budget cuts
+Defense Secretary Pete Hegseth...",Federal funding,Federal workforce reductions,0.0,,,1492
+36,"Trump threatens to cut U.S. aid to South Africa over land law
+NAIROBI — President <a href=""https://w...",Foreign aid,Foreign aid,1.0,,,1310
+37,"Trump announces 25% tariffs on steel and aluminum, including for Canada and Mexico
+President Donald ...",Tariffs,Tariffs,1.0,,,1343
+40,"CFPB prepares to end lease on headquarters building, ahead of expected cuts
+The Trump administration...",CFPB,CFPB,1.0,,,1301
+42,"Trump says he ordered Treasury Department to stop producing new pennies
+President <a href=""https://w...",Other,Federal workforce reductions,0.0,,,1846
+43,"Federal agencies must revise telework policies by Friday, White House says
+Heads of federal agencies...",Federal workers return to office,Federal workers return to office,1.0,,,1904
+44,"Trump administration freezes funds to Palestinian security forces
+JERICHO, West Bank — The Trump adm...",Foreign aid,Foreign aid,1.0,,,3645
+45,"Trump, Maine Gov. Mills spar over executive order on transgender athletes
+President Donald Trump and...",Transgender policy,Transgender policy,1.0,,,2366
+46,"Lawsuit filed over Trump’s order targeting transgender service members
+President Donald Trump’s <a h...",Transgender policy,Transgender policy,1.0,,,2544
+47,"National Science Foundation halts reviews of research proposals
+The National Science Foundation has ...",Health agencies' communications pause,Federal workforce reductions,0.0,,,2336
+48,"Labor Department blocked from sharing data with DOGE, email says
+The U.S. Labor Department has been ...",DOGE,DOGE,1.0,,,2229
+49,"Vaccine meeting to prepare for coming winter’s flu season canceled
+Trump officials have canceled a f...",Health care,Health agencies' communications pause,0.0,,,4064
+50,"Trump plans emerge to use U.S. military bases for immigrant detention
+A Space Force military base in...",Immigration policy,Deportations,0.0,,,2321
+51,"Some agency heads mandate that employees report efforts to ‘disguise’ DEI programs
+President Donald ...",DEI in the federal government,DEI in the federal government,1.0,,,2855
+52,"Trump signs executive order to create crypto council, reduce regulation
+President Donald Trump on Th...",Crypto,Crypto,1.0,,,1959
+53,"Trump proposes permanent displacement of Gazans as he welcomes Netanyahu to White House
+President <a...",Gaza,Gaza,1.0,,,3738
+55,"Trump says he wants to send ‘repeat offenders’ in U.S. legally to foreign countries
+DORAL, Fla. — Pr...",Deportations,Immigration policy,0.0,,,1521
+56,"Trump reinstates plan to strip protections from federal workers
+President <a href=""https://www.washi...",Reclassifying federal jobs,Federal worker buyout,0.0,,,1464
+58,President Donald Trump signed an executive order on Monday requiring the federal government to retur...,Climate,Federal worker buyout,0.0,,,1394
+59,"Trump freezes hiring for many federal jobs
+The White House issued a freeze on the hiring of civilian...",Federal workforce reductions,Federal workforce reductions,1.0,,,1437
+61,"Trump appoints leader of his Secret Service detail to head agency
+President Donald Trump said Wednes...",Other,Senior government officials ousted,0.0,,,3407
+63,"Native leaders warn that freezing of federal funds could imperil some services
+Native American leade...",Federal grant pause,Federal grant pause,1.0,,,2416
+64,"Suit charges violation of Privacy Act as DOGE accesses personal data
+A coalition of labor unions and...",DOGE,Privacy Act,0.0,,,2379
+65,"Judge briefly extends order barring Trump from firing watchdog leader
+A federal judge on Wednesday e...",Firing government watchdogs,Firing government watchdogs,1.0,,,2868
+66,"Layoffs to hit IRS as DOGE targets tax collections
+The Trump administration is expected to begin lay...",DOGE,Federal workforce reductions,0.0,,,3724
+67,"Education Dept. launches investigation into Maine over transgender policies
+The Education Department...",Transgender policy,Department of Education,0.0,,,2514
+68,"Judge forces lawyers for fired inspectors general to withdraw TRO request
+Lawyers for eight inspecto...",Firing government watchdogs,Senior government officials ousted,0.0,,,2712
+69,"White House, in reversal, rescinds freeze on federal grants
+The White House budget office on Wednesd...",Federal grant pause,Federal grant pause,1.0,,,1428
+70,"EPA puts 168 environmental justice staffers on administrative leave
+Trump appointees at the Environm...",DEI in the federal government,DEI in the federal government,1.0,,,2859
+71,"Layoffs loom as Trump administration orders federal DEI workers on leave
+President Donald Trump’s ad...",DEI in the federal government,DEI in the federal government,1.0,,,2146
+75,"Acting IRS commissioner to step down amid DOGE blitz on agency
+The acting commissioner of the IRS wi...",DOGE,DOGE,1.0,,,3365
+76,"Trump directs agency heads to review funding for NGOs
+President Donald Trump sent a memorandum Frida...",Foreign aid,Foreign aid,1.0,,,2325
+77,"Early education programs can’t access federal funding to pay bills
+Providers of the national program...",Federal grant pause,Federal grant pause,1.0,,,2270
+78,"Prosecutor quits after order to drop corruption case against N.Y. Mayor Eric Adams
+NEW YORK — Hagan ...",Eric Adams case,Eric Adams case,1.0,,,1473
+79,"State attorneys general say they will sue to block pause on federal grants
+At least 20 states have b...",Federal grant pause,Federal grant pause,1.0,,,2835
+81,"Ed Dept DOGE team cancels $900 million in research contracts
+The Education Department on Monday shut...",DOGE,Department of Education,0.0,,,3378
+82,"Trump signs executive order seeking more death sentences
+President Donald Trump on Monday signed an ...",Other,Sanctions,0.0,,,2479
+83,"Trump says new tariffs on computer chips are coming
+President Donald Trump said he would soon announ...",Tariffs,Tariffs,1.0,,,2316
+84,"Trump signing executive order intended to reduce federal workforce
+President Donald Trump on Tuesday...",Federal workforce reductions,Federal workforce reductions,1.0,,,2485
+86,"U.S. troops arrive at Guantánamo Bay in Trump migrant crackdown
+Infantry Marines and other U.S. troo...",Guantánamo Bay,Deportations,0.0,,,3173
+88,"Trump orders sweeping review of federal regulations
+President Donald Trump ordered federal agencies ...",Other,Expanding executive power,0.0,,,2843
+89,"Trump revokes security clearances for dozens of former national security officials
+Trump in an execu...",Targeting political enemies,Targeting political enemies,1.0,,,2441
+91,"Migrants at border get message saying CBP One appointments ‘no longer valid’
+CIUDAD JUÁREZ, Mexico —...",Immigration policy,Immigration policy,1.0,,,3069
+92,"Trump allies rejoice, Democrats sound alarm over latest FBI appointment
+President Donald Trump <a hr...",Other,Senior government officials ousted,0.0,,,3050
+94,"Hegseth takes action against Trump foe Mark Milley
+Defense Secretary Pete Hegseth has decided to rem...",Targeting political enemies,Senior government officials ousted,0.0,,,1666
+95,"Treasury agrees to block DOGE’s access to personal taxpayer data at IRS
+The Trump White House<b> </b...",DOGE,Crypto,0.0,,,2232
+96,"Trump fires Federal Labor Relations Authority member
+President <a href=""https://www.washingtonpost.c...",Firing government watchdogs,Federal worker buyout,0.0,,,2261
+97,"Trump backs off trade threats after Colombia agrees to deportation flights
+The United States and Col...",Deportations,Deportations,1.0,,,1423
+7,"GOP lawmakers scramble to protect foreign aid as food relief languishes
+As GOP lawmakers in Washingt...",USAID,Foreign aid,0.0,,,8611
+8,"DOGE rips through Education Department, cutting contracts, staff and grants
+The notices popped into ...",Department of Education,Federal workforce reductions,0.0,,,3536
+14,"Judge adds one-week pause on Trump plan to put 2,100 USAID workers on leave
+A federal judge on Thurs...",USAID,Foreign aid,0.0,,,2414
+20,"Arab leaders scramble for alternative to Trump’s Gaza proposal
+President Donald Trump’s plan to remo...",Gaza,Gaza,1.0,,,2409
+25,"FAA targeting Verizon contract in favor of Musk’s Starlink, sources say
+The Federal Aviation Adminis...",Other,Expanding executive power,0.0,,,2095
+38,"Trump moves to narrow independence of Fed, along with other Wall Street overseers
+The Trump administ...",Expanding executive power,Expanding executive power,1.0,,,2104
+39,"Trump, Modi aim to cut U.S. trade gap with India amid global tariff concerns
+The United States and I...",Tariffs,Tariffs,1.0,,,2866
+41,"Justice Dept. hires for court battles as Trump slashes other agencies
+The Justice Department is recr...",Other,Immigration policy,0.0,,,1848
+54,"Judge orders Trump administration to pay millions in USAID funds
+A federal judge on Tuesday ordered ...",USAID,Foreign aid,0.0,,,1570
+57,"Federal board halts firings of six probationary employees amid Trump cuts
+An independent federal boa...",Federal workforce reductions,Federal workforce reductions,1.0,,,1670
+60,"Acting ICE director removed amid White House pressure to boost arrests
+The Trump administration has ...",Senior government officials ousted,Deportations,0.0,,,2222
+62,"Judge allows intelligence agencies to fire officers in DEI roles
+A federal judge on Thursday refused...",DEI in the federal government,DEI in the federal government,1.0,,,1774
+72,"Pentagon to fire 5,400 civilian employees in ‘initial’ purge
+The Pentagon said Friday that it will f...",Federal workforce reductions,Federal workforce reductions,1.0,,,2417
+73,"Judge temporarily blocks DOGE access to sensitive information at two agencies
+A federal judge on Mon...",DOGE,Federal workforce reductions,0.0,,,1187
+74,"Farmers sue USDA after agency deletes climate change data
+A group of farmers and environmental nonpr...",Climate,Climate,1.0,,,1928
+80,"Trump administration seeks more power to fire independent regulators
+The Trump administration has to...",Firing government watchdogs,Expanding executive power,0.0,,,2423
+85,"Transgender troops will be removed from U.S. military, Pentagon says
+Openly transgender service memb...",Transgender policy,Transgender policy,1.0,,,2358
+87,"Mexico extradites 29 drug suspects to U.S. as Trump threatens sanctions
+MEXICO CITY — Mexico extradi...",Tariffs,U.S.-Mexico border,0.0,,,2026
+90,"Several administration officials tell workers not to reply to Musk email
+Elon Musk’s demand that all...",DOGE,Federal workforce reductions,0.0,,,2794
+93,"Supreme Court grants Trump request to pause USAID payments order
+Chief Justice John G. Roberts Jr. g...",USAID,Foreign aid,0.0,,,1635

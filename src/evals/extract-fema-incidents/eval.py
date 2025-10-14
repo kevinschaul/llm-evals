@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, MemoryDataset
-from inspect_ai.model import GenerateConfig, Model
+from inspect_ai.model import GenerateConfig, Model, ChatMessageUser, ContentText, ContentImage
 from inspect_ai.scorer import scorer, Score, Target, mean
 from inspect_ai.solver import generate, system_message
 
@@ -25,15 +25,47 @@ PA bool
 HM bool
 requested str: YYYY-MM-DD, current year is 2025"""
 
+    # JSON-serialize expected_data for storage in Sample.target
+    expected_json = json.dumps(expected_data)
+
+    # Get file paths
+    eval_dir = Path(__file__).parent
+    jpg_path = eval_dir / "fema-daily-operation-brief-p9.jpg"
+    pdf_path = eval_dir / "fema-daily-operation-brief.pdf"
+
+    # Create samples with image/PDF attachments
+    prompt_text = f"""Extract all declaration requests from the provided document.
+
+Return ONLY a valid JSON array (starting with [ and ending with ]) with no additional text or explanation.
+
+Each object in the array should have these fields based on the following schema:
+{schema_text}
+
+Example format:
+[{{"state_or_tribe_or_territory": "KY", "incident_description": "Severe Winter Storms", "incident_type": "DR", "IA": false, "PA": true, "HM": true, "requested": "2025-01-30"}}]"""
+
     samples = [
         Sample(
-            input=f"Document: fema-daily-operation-brief-p9.jpg\nSchema: {schema_text}",
-            target=expected_data
+            input=[
+                ChatMessageUser(content=[
+                    ContentImage(image=str(jpg_path)),
+                    ContentText(text=prompt_text)
+                ])
+            ],
+            target=expected_json,
+            id="jpg"
         ),
-        Sample(
-            input=f"Document: fema-daily-operation-brief.pdf\nSchema: {schema_text}",
-            target=expected_data
-        )
+        # Note: PDF support requires different handling - skipping for now
+        # Sample(
+        #     input=[
+        #         ChatMessageUser(content=[
+        #             ContentImage(image=str(pdf_path)),
+        #             ContentText(text=prompt_text)
+        #         ])
+        #     ],
+        #     target=expected_json,
+        #     id="pdf"
+        # )
     ]
 
     return MemoryDataset(samples)
@@ -73,20 +105,37 @@ def fema_extraction_scorer():
             # Parse JSON response
             response = state.output.message.content
 
+            # Extract text from content (handle both string and list formats)
+            if isinstance(response, list):
+                # Content is a list of content blocks, extract text from first block
+                response_text = response[0].text if hasattr(response[0], 'text') else str(response[0])
+            else:
+                response_text = response
+
             # Try to extract JSON from response
-            if isinstance(response, str):
+            if isinstance(response_text, str):
                 # Look for JSON array in the response
-                start_idx = response.find('[')
-                end_idx = response.rfind(']') + 1
-                if start_idx != -1 and end_idx != 0:
-                    json_str = response[start_idx:end_idx]
+                start_idx = response_text.find('[')
+                end_idx = response_text.rfind(']') + 1
+                if start_idx != -1 and end_idx > 0:
+                    json_str = response_text[start_idx:end_idx]
                     predicted = json.loads(json_str)
                 else:
-                    predicted = json.loads(response)
-            else:
-                predicted = response
+                    predicted = json.loads(response_text)
 
-            expected = target
+                # Ensure predicted is a list
+                if not isinstance(predicted, list):
+                    predicted = [predicted] if predicted else []
+            else:
+                predicted = []
+
+            # Parse expected from JSON string
+            # target is a Target object, get the actual text value
+            target_text = target.text if hasattr(target, 'text') else str(target)
+            if isinstance(target_text, str):
+                expected = json.loads(target_text)
+            else:
+                expected = target_text
 
             # Calculate extraction accuracy
             accuracy = calculate_extraction_accuracy(predicted, expected)
@@ -107,36 +156,9 @@ def fema_extraction_scorer():
 def extract_fema_incidents():
     """Extract FEMA incidents task"""
 
-    prompt = """Extract all declaration requests from the provided FEMA document(s).
-
-For each declaration request, extract the following information in JSON format:
-- state_or_tribe_or_territory: The state, tribe, or territory name
-- incident_description: Description of the incident
-- incident_type: Type of incident (DR, EM, etc.)
-- IA: Individual Assistance (boolean)
-- PA: Public Assistance (boolean)
-- HM: Hazard Mitigation (boolean)
-- requested: Date requested in YYYY-MM-DD format (current year is 2025)
-
-Return the results as a JSON array of objects. For example:
-[
-  {
-    "state_or_tribe_or_territory": "KY",
-    "incident_description": "Severe Winter Storms and Snowstorms",
-    "incident_type": "DR",
-    "IA": false,
-    "PA": true,
-    "HM": true,
-    "requested": "2025-01-30"
-  }
-]
-
-{input}"""
-
     return Task(
         dataset=create_fema_dataset(),
         solver=[
-            system_message(prompt),
             generate(cache=True)
         ],
         scorer=fema_extraction_scorer(),
