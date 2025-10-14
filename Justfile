@@ -1,21 +1,31 @@
+# openai-api/llmstudio/XX
+export LMSTUDIO_BASE_URL := "http://127.0.0.1:1234/v1"
+export LMSTUDIO_API_KEY := "KEY"
+
 default:
     @just --list
 
+# Run all evals against a model. Example: just eval-all anthropic/claude-3-5-sonnet-20241022
+eval-all model *ARGS:
+    # just eval grab-bag {{model}} {{ARGS}}
+    # TODO errors out
+    # just eval extract-fema-incidents {{model}} {{ARGS}}
+    just eval article-tracking-trump {{model}} {{ARGS}}
+    just eval political-fundraising-emails {{model}} {{ARGS}}
+
+# Run a single eval against a model. Example: just eval grab-bag anthropic/claude-3-5-sonnet-20241022
+eval name model *ARGS:
+    uv run inspect eval src/evals/{{name}}/eval.py --model {{model}} --log-dir logs {{ARGS}}
+    just extract {{name}}
+
+# Export results from a single eval to CSVs for Observable dashboard
+extract name:
+    uv run python extract_results.py {{name}}
+
+# View Inspect logs in web interface
+view:
+    uv run inspect view start --log-dir logs
+
+# Start Observable Framework dashboard
 dev:
-  npm run dev
-
-eval-all:
-  @just eval article-tracking-trump
-  @just eval article-tracking-trump/categories
-  @just eval social-media-insults
-  @just eval nhtsa-recalls
-  @just eval political-fundraising-emails
-  @just eval extract-fema-incidents
-  @just eval grab-bag
-
-eval config *ARGS:
-    @echo "Running eval.py for {{config}}..."
-    uv run eval.py src/evals/{{config}}/eval.yaml
-
-test:
-  uv run pytest
+    npm run dev
