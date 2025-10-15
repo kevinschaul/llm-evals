@@ -6,7 +6,7 @@ from pathlib import Path
 from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, MemoryDataset
 from inspect_ai.model import GenerateConfig
-from inspect_ai.scorer import pattern
+from inspect_ai.scorer import includes
 from inspect_ai.solver import generate, system_message
 
 def read_csv_dataset(csv_path: str) -> MemoryDataset:
@@ -36,6 +36,6 @@ def grab_bag():
             system_message(prompt),
             generate(cache=True)
         ],
-        scorer=pattern(),
+        scorer=includes(),
         config=GenerateConfig(temperature=0.0)
     )

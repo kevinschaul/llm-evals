@@ -1,5 +1,6 @@
 # openai-api/llmstudio/XX
-export LMSTUDIO_BASE_URL := "http://127.0.0.1:1234/v1"
+#export LMSTUDIO_BASE_URL := "http://127.0.0.1:1234/v1"
+export LMSTUDIO_BASE_URL := env_var("LMSTUDIO_API_BASE") + "/v1"
 export LMSTUDIO_API_KEY := "KEY"
 
 default:
@@ -7,9 +8,8 @@ default:
 
 # Run all evals against a model. Example: just eval-all anthropic/claude-3-5-sonnet-20241022
 eval-all model *ARGS:
-    # just eval grab-bag {{model}} {{ARGS}}
-    # TODO errors out
-    # just eval extract-fema-incidents {{model}} {{ARGS}}
+    just eval grab-bag {{model}} {{ARGS}}
+    just eval extract-fema-incidents {{model}} {{ARGS}}
     just eval article-tracking-trump {{model}} {{ARGS}}
     just eval political-fundraising-emails {{model}} {{ARGS}}
 
@@ -22,7 +22,7 @@ eval name model *ARGS:
 extract name:
     uv run python extract_results.py {{name}}
 
-# Remove outdated log files, keeping only the most recent per model
+# Remove outdated log files, keeping only the most recent per eval+model combination
 cleanup-logs:
     uv run python cleanup_old_logs.py --delete
 
