@@ -19,3 +19,7 @@ yarn-error.log
 raw_responses.db
 eval_cache.db
 *.log
+
+# Keep .eval files for re-scoring without API calls
+# Only ignore the Inspect cache directory
+.inspect/

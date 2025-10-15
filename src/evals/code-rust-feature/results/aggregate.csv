@@ -1,4 +1,4 @@
 provider_id,prompt_id,total_tests,assertions,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
-claude-code/sonnet-4-5,prompt-1,1,0,0,0,1,0.0,0,183539.9,183539.9,183539.9
-codex/gpt-oss-20b,prompt-1,1,0,0,0,1,0.0,0,236241.7,236241.7,236241.7
-codex/gpt-5-codex,prompt-1,1,0,0,0,1,0.0,0,442408.3,442408.3,442408.3
+gpt-5-codex,prompt-1,1,0,0,0,1,0,1,0.0,0,0
+gpt-oss-20b,prompt-1,1,0,0,0,1,0,1,0.0,0,0
+sonnet-4-5,prompt-1,1,0,0,0,1,0,1,0.0,0,0

@@ -12,16 +12,12 @@ export default {
       path: "/evals/article-tracking-trump/",
     },
     {
+      name: "Article tracking: Trump categories",
+      path: "/evals/article-tracking-categories/",
+    },
+    {
       name: "Political fundraising emails",
       path: "/evals/political-fundraising-emails/",
-    },
-    {
-      name: "Social media insults",
-      path: "/evals/social-media-insults/",
-    },
-    {
-      name: "NHTSA Recalls",
-      path: "/evals/nhtsa-recalls/",
     },
     {
       name: "Extract FEMA incidents",
@@ -34,6 +30,20 @@ export default {
     {
       name: "Code: Rust feature",
       path: "/evals/code-rust-feature/",
+    },
+    {
+      name: "Archived",
+      open: false,
+      pages: [
+        {
+          name: "Social media insults",
+          path: "/evals/social-media-insults/",
+        },
+        {
+          name: "NHTSA Recalls",
+          path: "/evals/nhtsa-recalls/",
+        },
+      ],
     },
   ],
 
