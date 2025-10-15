@@ -83,30 +83,29 @@ def create_eval_sample(
 
     response_text = response['response'].strip()
 
-    # Parse both response and expected as JSON for comparison
+    # Apply solver transformations to response text
+    response_text_transformed = response_text
+
+    # Solver 1: extract_json_from_markdown
+    if '```' in response_text_transformed:
+        start = response_text_transformed.find('[')
+        end = response_text_transformed.rfind(']') + 1
+        if start != -1 and end > 0:
+            response_text_transformed = response_text_transformed[start:end]
+
+    # Solver 2: unwrap_items
     try:
-        # Try to extract JSON from response text (may have markdown code blocks)
-        if '```' in response_text:
-            # Extract JSON from code block
-            start = response_text.find('[')
-            end = response_text.rfind(']') + 1
-            if start != -1 and end > 0:
-                response_text_clean = response_text[start:end]
-            else:
-                response_text_clean = response_text
-        else:
-            response_text_clean = response_text
+        parsed = json.loads(response_text_transformed)
+        if isinstance(parsed, dict) and 'items' in parsed:
+            response_text_transformed = json.dumps(parsed['items'])
+    except (json.JSONDecodeError, Exception):
+        pass
 
-        response_json = json.loads(response_text_clean)
+    # Score the transformed response
+    try:
+        response_json = json.loads(response_text_transformed)
         expected_json_obj = json.loads(expected_json)
-
-        # Check if response has top-level "items" key and extract it
-        if isinstance(response_json, dict) and 'items' in response_json:
-            response_json = response_json['items']
-
-        # Simple JSON equality comparison
         score_value = 1.0 if response_json == expected_json_obj else 0.0
-
     except (json.JSONDecodeError, TypeError, AttributeError) as e:
         score_value = 0.0
 
@@ -115,19 +114,19 @@ def create_eval_sample(
         ChatMessageUser(content=input_text, source="input")
     ]
 
-    # Create output
+    # Create output (use transformed text for completion)
     output = ModelOutput(
         model=response['model'],
         choices=[
             ChatCompletionChoice(
                 message=ChatMessageAssistant(
-                    content=[ContentText(type='text', text=response_text)],
+                    content=[ContentText(type='text', text=response_text_transformed)],
                     source="generate"
                 ),
                 stop_reason="stop"
             )
         ],
-        completion=response_text,
+        completion=response_text_transformed,
         usage=ModelUsage(
             input_tokens=response['input_tokens'],
             output_tokens=response['output_tokens'],

@@ -7,7 +7,45 @@ from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, MemoryDataset
 from inspect_ai.model import GenerateConfig, ChatMessageUser, ContentText, ContentImage
 from inspect_ai.scorer import scorer, Score, Target, mean
-from inspect_ai.solver import generate
+from inspect_ai.solver import generate, solver, TaskState
+
+
+@solver
+def extract_json_from_markdown():
+    """Extract JSON from markdown code blocks if present"""
+    async def solve(state: TaskState, generate):
+        state = await generate(state)
+        response = state.output.completion
+
+        if '```' in response:
+            start = response.find('[')
+            end = response.rfind(']') + 1
+            if start != -1 and end > 0:
+                state.output.completion = response[start:end]
+
+        return state
+
+    return solve
+
+
+@solver
+def unwrap_items():
+    """Extract array from {"items": [...]} wrapper if present"""
+    async def solve(state: TaskState, generate):
+        state = await generate(state)
+
+        try:
+            response = state.output.completion
+            parsed = json.loads(response)
+
+            if isinstance(parsed, dict) and 'items' in parsed:
+                state.output.completion = json.dumps(parsed['items'])
+        except (json.JSONDecodeError, Exception):
+            pass
+
+        return state
+
+    return solve
 
 
 @scorer(metrics=[mean()])
@@ -15,25 +53,9 @@ def json_equal():
     """Score by comparing JSON output to expected JSON"""
     async def score(state, target: Target):
         try:
-            # Extract response text
             response = state.output.completion
-
-            # Try to extract JSON from response (handle markdown code blocks)
-            if '```' in response:
-                start = response.find('[')
-                end = response.rfind(']') + 1
-                if start != -1 and end > 0:
-                    response = response[start:end]
-
-            # Parse both as JSON
             output_json = json.loads(response)
             expected_json = json.loads(target.text)
-
-            # Handle {"items": [...]} wrapper
-            if isinstance(output_json, dict) and 'items' in output_json:
-                output_json = output_json['items']
-
-            # Compare as JSON (order-independent)
             match = output_json == expected_json
 
             return Score(
@@ -105,7 +127,7 @@ Example format:
 
     return Task(
         dataset=MemoryDataset(samples),
-        solver=generate(cache=True),
+        solver=[generate(cache=True), extract_json_from_markdown(), unwrap_items()],
         scorer=json_equal(),
         config=GenerateConfig(temperature=0.0)
     )
