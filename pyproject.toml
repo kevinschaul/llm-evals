@@ -10,6 +10,7 @@ dependencies = [
     "anthropic>=0.25.0",
     "google-genai>=0.2.0",
     "pytest>=7.0.0",
+    "inspect-swe>=0.2.20",
 ]
 
 [project.optional-dependencies]
