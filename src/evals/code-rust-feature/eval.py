@@ -1,158 +1,150 @@
-"""
-Code Rust feature implementation evaluation using inspect_ai
-"""
+from inspect_ai import task, Task
+from inspect_ai.dataset import MemoryDataset, Sample
+from inspect_ai.solver import solver, Solver, TaskState, Generate, generate
 import subprocess
 import tempfile
 import os
-from pathlib import Path
-from inspect_ai import Task, task
-from inspect_ai.dataset import Sample, MemoryDataset
-from inspect_ai.model import GenerateConfig, Model
-from inspect_ai.scorer import scorer, Score, Target, mean
-from inspect_ai.solver import generate, system_message, Solver
-from inspect_ai.tool import Tool, ToolError, tool
+import shutil
 
-@tool
-def git_repo_setup():
-    """Set up the git repository for code evaluation"""
-    async def setup(state):
-        # Clone the repository
-        try:
-            result = subprocess.run(
-                ["git", "clone", "https://github.com/kevinschaul/jump-start-tools.git", "."],
-                cwd=state.working_directory,
-                capture_output=True,
-                text=True,
-                check=True
-            )
-            return f"Repository cloned successfully"
-        except subprocess.CalledProcessError as e:
-            raise ToolError(f"Failed to clone repository: {e}")
+from inspect_ai.model import get_model
 
-    return setup
 
-@tool
-def get_git_diff():
-    """Get git diff to see changes made"""
-    async def diff(state):
-        try:
-            result = subprocess.run(
-                ["git", "diff"],
-                cwd=state.working_directory,
-                capture_output=True,
-                text=True,
-                check=True
-            )
-            return result.stdout
-        except subprocess.CalledProcessError as e:
-            return f"Git diff failed: {e}"
+@solver
+def claude_code() -> Solver:
+    """Run Claude Code agent without sandbox"""
 
-    return diff
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        # Get the current model being evaluated
+        model = get_model()
 
-def create_code_dataset() -> MemoryDataset:
-    """Create a simple dataset for the code generation task"""
-    samples = [
-        Sample(
-            input='Implement the mode=git feature for the "use" subcommand.',
-            target="git_feature_implemented"  # We'll check for specific implementation markers
+        work_dir = state.store.get("work_dir")
+
+        # base options
+        cmd = [
+            "claude",
+            "--print",  # run without interactions
+            "--dangerously-skip-permissions",
+            "--model",
+            model.name,  # Use the model name from the eval
+        ]
+
+        # system message
+        system_message = "\n\n".join(
+            [m.content for m in state.messages if m.role == "system"]
         )
-    ]
-    return MemoryDataset(samples)
+        if system_message:
+            cmd.extend(["--append-system-prompt", system_message])
 
-@scorer(metrics=[mean()])
-def code_implementation_scorer():
-    """Score code implementation based on git diff and functionality"""
-    async def score(state, target):
-        try:
-            # Get the git diff to see what was implemented
-            diff_result = subprocess.run(
-                ["git", "diff"],
-                cwd=state.working_directory or ".",
-                capture_output=True,
-                text=True
+        # user prompt from input
+        prompt = state.input_text
+        cmd.append(prompt)
+
+        # Run Claude Code in the cloned repository
+        # Copy environment but strip ANTHROPIC_API_KEY
+        env = os.environ.copy()
+        env.pop("ANTHROPIC_API_KEY", None)
+
+        result = subprocess.run(
+            cmd, cwd=work_dir, capture_output=True, text=True, env=env
+        )
+
+        if result.returncode == 0:
+            # Store the output
+            state.output.completion = result.stdout
+        else:
+            raise RuntimeError(
+                f"Error executing claude code agent: {result.stdout}\n{result.stderr}"
             )
 
-            diff_output = diff_result.stdout
+        return state
 
-            # Check for key implementation indicators
-            implementation_score = 0.0
-            explanations = []
+    return solve
 
-            # Look for git-related changes
-            if "git" in diff_output.lower():
-                implementation_score += 0.3
-                explanations.append("Git-related changes detected")
 
-            # Look for mode parameter handling
-            if "mode" in diff_output.lower():
-                implementation_score += 0.3
-                explanations.append("Mode parameter handling detected")
-
-            # Look for use subcommand modifications
-            if "use" in diff_output.lower():
-                implementation_score += 0.2
-                explanations.append("Use subcommand modifications detected")
-
-            # Check if there are any actual code changes
-            if len(diff_output.strip()) > 0:
-                implementation_score += 0.2
-                explanations.append("Code changes present")
-
-            return Score(
-                value=implementation_score,
-                explanation=f"Implementation indicators: {'; '.join(explanations)}\nDiff length: {len(diff_output)} chars"
+def create_dataset() -> MemoryDataset:
+    return MemoryDataset(
+        [
+            Sample(
+                # input="Implement the mode=git feature for the 'use' subcommand in the jump-start-tools Rust CLI.",
+                input="Add a joke to the readme file"
             )
-        except Exception as e:
-            return Score(
-                value=0.0,
-                explanation=f"Failed to evaluate implementation: {e}"
+        ]
+    )
+
+
+@solver
+def clone_repo():
+    async def solve(state, generate):
+        # Create a persistent temporary directory
+        tmpdir = tempfile.mkdtemp()
+
+        repo_url = "https://github.com/kevinschaul/jump-start-tools.git"
+        clone_result = subprocess.run(
+            ["git", "clone", repo_url, "jump-start-tools"],
+            cwd=tmpdir,
+            capture_output=True,
+            text=True,
+        )
+
+        if clone_result.returncode != 0:
+            raise RuntimeError(
+                f"Error cloning repository: {clone_result.stdout}\n{clone_result.stderr}"
             )
 
-    return score
+        state.output.completion = clone_result.stdout
 
-class CodeGenerationSolver(Solver):
-    """Custom solver for code generation tasks"""
+        # Set working directory to the cloned repo
+        state.store.set("work_dir", os.path.join(tmpdir, "jump-start-tools"))
 
-    async def __call__(self, state, generate):
-        # Set up the repository first
-        try:
-            subprocess.run(
-                ["git", "clone", "https://github.com/kevinschaul/jump-start-tools.git", "."],
-                cwd=state.working_directory or ".",
-                capture_output=True,
-                text=True,
-                check=True
+        return state
+
+    return solve
+
+
+@solver
+def git_diff():
+    async def solve(state, generate):
+        work_dir = state.store.get("work_dir")
+        git_diff_result = subprocess.run(
+            ["git", "diff"],
+            cwd=work_dir,
+            capture_output=True,
+            text=True,
+        )
+
+        if git_diff_result.returncode != 0:
+            raise RuntimeError(
+                f"Error running git diff: {git_diff_result.stdout}\n{git_diff_result.stderr}"
             )
-        except subprocess.CalledProcessError:
-            # Repository might already exist, continue
-            pass
 
-        # Generate the code
-        return await generate(state)
+        state.output.completion = git_diff_result.stdout
+
+        return state
+
+    return solve
+
+
+def cleanup_repo():
+    async def cleanup(state):
+        # Delete the temporary work directory if it exists
+        if hasattr(state.metadata, "work_dir") and state.metadata.work_dir:
+            work_dir = state.metadata.work_dir
+            # Get the parent directory (the tmpdir)
+            tmpdir = os.path.dirname(work_dir)
+            if os.path.exists(tmpdir):
+                shutil.rmtree(tmpdir)
+
+    return cleanup
+
 
 @task
-def code_rust_feature():
-    """Code Rust feature implementation task"""
-
-    prompt = """You are a skilled Rust developer. Implement the mode=git feature for the "use" subcommand in this codebase.
-
-Look at the existing code structure and implement the feature according to the patterns you see. Focus on:
-1. Adding git mode support to the use subcommand
-2. Following existing code patterns and conventions
-3. Making the implementation robust and well-integrated
-
-The task is: {input}
-
-Please implement this feature by modifying the appropriate files."""
-
+def rust_feature() -> Task:
     return Task(
-        dataset=create_code_dataset(),
+        dataset=create_dataset(),
+        setup=clone_repo(),
+        cleanup=cleanup_repo(),
         solver=[
-            CodeGenerationSolver(),
-            system_message(prompt),
-            generate(cache=True)
+            claude_code(),
+            git_diff(),
         ],
-        scorer=code_implementation_scorer(),
-        config=GenerateConfig(temperature=0.1),
-        sandbox="docker"  # Use sandboxing for code execution
     )

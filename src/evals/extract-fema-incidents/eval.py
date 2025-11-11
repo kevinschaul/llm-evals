@@ -128,6 +128,7 @@ Example format:
     return Task(
         dataset=MemoryDataset(samples),
         solver=[generate(cache=True), extract_json_from_markdown(), unwrap_items()],
+        fail_on_error=0.9,
         scorer=json_equal(),
         config=GenerateConfig(temperature=0.0)
     )

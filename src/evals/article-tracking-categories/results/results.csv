@@ -1668,3 +1668,197 @@ qwen3-30b-a3b-2507,prompt-1,test-96,"Trump fires Federal Labor Relations Authori
 President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> fired Susan Tsui Grundmann, who until Tuesday serve",Federal workforce reductions,,,False,Firing government watchdogs,2025-10-15T11:30:29-05:00
 qwen3-30b-a3b-2507,prompt-1,test-97,"Trump backs off trade threats after Colombia agrees to deportation flights
 The United States and Colombia averted a trade war, for now, after the White House said late Sunday that Bogotá agreed to acc",Immigration policy,,,False,Deportations,2025-10-15T11:30:29-05:00
+kimi-k2-thinking,prompt-1,test-1,"Noem: Guantánamo Bay on the table to house deportees
+Homeland Security Secretary Kristi L. Noem signaled Wednesday morning that the Trump administration is considering using the Guantánamo Bay detenti",Guantánamo Bay,,,True,Guantánamo Bay,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-2,"Supreme Court delays decision on Trump’s firing of watchdog agency leader
+A divided Supreme Court on Friday <a href=""https://www.supremecourt.gov/opinions/24pdf/24a790_6i79.pdf"" target=_blank>put off ",Firing government watchdogs,,,True,Firing government watchdogs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-3,"Hegseth to visit Guantanamo Bay as migrant detention takes shape
+Defense Secretary Pete Hegseth is expected to visit the naval base at Guantánamo Bay as soon as Wednesday as the Trump administration’s",Guantánamo Bay,,,True,Guantánamo Bay,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-4,"Musk throws cold water on funding for Trump AI initiative
+Elon Musk, the Tesla CEO and top ally of President Donald Trump, is casting doubt on the funding source for a massive artificial intelligence ",AI,,,True,AI,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-5,"Trans health, research programs ordered to stop by Trump administration
+The Trump administration is moving forward with its campaign to eradicate federal funding intended to improve the lives and heal",Transgender policy,,,True,Transgender policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-6,"N.Y. Mayor Eric Adams pushes for permanent dismissal of his corruption case
+NEW YORK — Mayor Eric Adams’s attorney argued Wednesday that the case against him should be dismissed permanently, alleging ",Eric Adams case,,,True,Eric Adams case,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-7,"GOP lawmakers scramble to protect foreign aid as food relief languishes
+As GOP lawmakers in Washington try to protect a key food aid program from the Trump administration’s cutbacks, international hum",USAID,,,True,USAID,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-8,"DOGE rips through Education Department, cutting contracts, staff and grants
+The notices popped into email boxes all over the country Monday afternoon, notifying researchers who collect, analyze and st",DOGE,,,False,Department of Education,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-9,"HHS in process of firing 5,200 workers, according to internal memo
+In an extraordinary move, the Department of Health and Human Services is in the process of firing about 5,200 health workers, part of",Federal workforce reductions,,,True,Federal workforce reductions,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-10,"Trump plans to further restrict undocumented immigrants from public benefits
+President Donald Trump plans to sign an executive order Wednesday evening aimed at restricting undocumented immigrants’ acc",Immigration policy,,,True,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-11,"Trump administration seeking access to database of immigrant minors
+The Trump administration is seeking to grant U.S. immigration officers access to a database that contains information on hundreds of",U.S.-Mexico border,,,False,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-12,"Judge denies temporary ban on DOGE access to private data
+A federal judge on Friday denied a request to temporarily ban employees working with the U.S. DOGE Service from accessing closely guarded syst",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-13,"President Donald Trump just signed executive orders declaring a “national energy emergency” and “unleashing” domestic fossil...
+President Donald Trump just signed executive orders declaring a “nationa",Climate,,,True,Climate,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-14,"Judge adds one-week pause on Trump plan to put 2,100 USAID workers on leave
+A federal judge on Thursday extended for seven days <a href=""https://www.washingtonpost.com/national-security/2025/02/07/fed",USAID,,,True,USAID,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-15,"More than 40,000 workers said to accept deferred resignation offer
+More than 40,000 people have accepted the Trump administration’s deferred resignation offer, according to a person familiar with the ",Federal worker buyout,,,True,Federal worker buyout,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-16,"Trump set to pull funding from schools based on race, gender teaching
+The White House is preparing to issue a trio of executive orders on education, including one directing the Education Department to",DEI in schools,,,True,DEI in schools,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-17,"Vaccine safety panel long criticized by RFK Jr. told to postpone meeting
+The Trump administration has directed the Centers for Disease Control and Prevention to indefinitely postpone a public <a href=",Health agencies' communications pause,,,False,Health care,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-18,"Judge says Trump officials have not complied with order to restart foreign aid
+A federal judge in D.C. on Thursday told the Trump administration it had failed to comply with his order to restart billi",Foreign aid,,,True,Foreign aid,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-19,"Trump says he will fire Kennedy Center board members, appoint himself chairman
+President Donald Trump on Friday announced plans to overhaul the Kennedy Center for the Performing Arts, writing that he ",Kennedy Center,,,True,Kennedy Center,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-20,"Arab leaders scramble for alternative to Trump’s Gaza proposal
+President Donald Trump’s plan to remove Palestinians from the Gaza Strip and create a real estate “riviera” on the eastern Mediterranean ",Gaza,,,True,Gaza,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-21,"Trump shuts off access to asylum, plans to send 10,000 troops to border
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> is preparing to send 10,000 troo",U.S.-Mexico border,,,True,U.S.-Mexico border,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-22,"Trump appoints loyalists to Kennedy Center board
+President Donald Trump was officially elected chair of the John F. Kennedy Center for the Performing Arts in Washington on Wednesday, installing a new ",Kennedy Center,,,True,Kennedy Center,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-23,"President Donald Trump signed an executive order Monday creating the “Department of Government Efficiency” led by...
+President Donald Trump signed an executive order Monday creating the “Department of",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-24,"HUD moves to cancel $1.1 billion in already-awarded housing upgrades
+The Department of Housing and Urban Development, acting on a directive from DOGE, is moving to terminate more than $1.1 billion in ",Climate,,,False,Federal funding,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-25,"FAA targeting Verizon contract in favor of Musk’s Starlink, sources say
+The Federal Aviation Administration is close to canceling a $2.4 billion contract to overhaul a communications system that serve",DOGE,,,False,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-26,"Trump: Government will sell $5 million ‘gold card’ to wealthy immigrants
+President Donald Trump said on Tuesday that the United States will soon sell a $5 million “gold card” to give foreign nationals",Immigration policy,,,True,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-27,"Trump says administration looking at sending criminals out of country
+“Numerous countries” have offered to imprison U.S. citizen criminals, President Donald Trump said Tuesday, and “if we have the leg",Deportations,,,True,Deportations,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-28,"Pentagon says ‘identity months’  like Black History Month are ‘dead’
+Shortly after President Donald Trump signed a proclamation celebrating National Black History Month on Friday, the Pentagon issued ",DEI in the federal government,,,True,DEI in the federal government,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-29,"U.S., Ukraine near deal to grant mineral rights to Washington
+The Trump administration and the Ukrainian government were nearing a deal Friday to hand Ukrainian mineral resources over to the United St",War in Ukraine,,,True,War in Ukraine,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-30,"Trump to build mass detention camp for deportees at Guantánamo Bay
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> said he will order the construction o",Guantánamo Bay,,,True,Guantánamo Bay,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-31,"Federal judge blocks Trump from slashing NIH funding in 22 states that sued
+A federal district judge granted a temporary restraining order Monday that blocks the Trump administration from making<b> </",NIH,,,True,NIH,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-32,"New Kennedy Center board elects Trump as chair. Rutter departs as president.
+The Kennedy Center board of trustees voted Wednesday afternoon to install President Donald Trump as chairman of the board, ",Kennedy Center,,,True,Kennedy Center,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-33,"In new order, Trump administration places more USAID staff on leave
+The Trump administration put scores of additional employees of the U.S. Agency for International Development on leave Tuesday, deali",USAID,,,True,USAID,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-34,"Dept. of Homeland Security wants IRS to help with immigration enforcement
+Homeland Security Secretary Kristi L. Noem has requested that the Treasury Department provide IRS personnel to assist with imm",Deportations,,,False,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-35,"Trump administration orders Pentagon to plan for sweeping budget cuts
+Defense Secretary Pete Hegseth has ordered senior leaders at the Pentagon and throughout the U.S. military to develop plans for cu",Federal funding,,,True,Federal funding,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-36,"Trump threatens to cut U.S. aid to South Africa over land law
+NAIROBI — President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> has threatened to cut all U.S. a",Foreign aid,,,True,Foreign aid,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-37,"Trump announces 25% tariffs on steel and aluminum, including for Canada and Mexico
+President Donald Trump signed executive orders Monday imposing 25 percent tariffs on imported steel and aluminum, the",Tariffs,,,True,Tariffs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-38,"Trump moves to narrow independence of Fed, along with other Wall Street overseers
+The Trump administration took another swing at the Federal Reserve’s independence late Tuesday with a new executive or",Expanding executive power,,,True,Expanding executive power,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-39,"Trump, Modi aim to cut U.S. trade gap with India amid global tariff concerns
+The United States and India are working toward a deal that aims to cut America’s sizable trade gap with India as New Delhi ",Tariffs,,,True,Tariffs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-40,"CFPB prepares to end lease on headquarters building, ahead of expected cuts
+The Trump administration is laying the groundwork to close the headquarters building for the Consumer Financial Protection B",CFPB,,,True,CFPB,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-41,"Justice Dept. hires for court battles as Trump slashes other agencies
+The Justice Department is recruiting new attorneys to help defend President Donald Trump’s immigration and other policies in court",Immigration policy,,,False,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-42,"Trump says he ordered Treasury Department to stop producing new pennies
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> says he has ordered the U.S. Tre",Other,,,True,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-43,"Federal agencies must revise telework policies by Friday, White House says
+Heads of federal agencies have until 5 p.m. Friday to revise their telework policies, according to <a href=""https://chcoc.gov",Federal workers return to office,,,True,Federal workers return to office,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-44,"Trump administration freezes funds to Palestinian security forces
+JERICHO, West Bank — The Trump administration has stopped all funding to the Palestinian Authority security forces as part of the glob",Foreign aid,,,True,Foreign aid,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-45,"Trump, Maine Gov. Mills spar over executive order on transgender athletes
+President Donald Trump and Maine Gov. Janet Mills (D) briefly sparred Friday over the president’s threat to withhold federal f",Transgender policy,,,True,Transgender policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-46,"Lawsuit filed over Trump’s order targeting transgender service members
+President Donald Trump’s <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/prioritizing-military-excellence-and-re",Transgender policy,,,True,Transgender policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-47,"National Science Foundation halts reviews of research proposals
+The National Science Foundation has halted for at least the rest of the week <a href=""https://www.washingtonpost.com/politics/2025/01/27",Federal grant pause,,,False,Health agencies' communications pause,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-48,"Labor Department blocked from sharing data with DOGE, email says
+The U.S. Labor Department has been temporarily blocked by court order from sharing data with Elon Musk’s U.S. DOGE Service, according t",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-49,"Vaccine meeting to prepare for coming winter’s flu season canceled
+Trump officials have canceled a federal vaccine advisory committee meeting expected to be held<b> </b>next month that was intended to",Health care,,,True,Health care,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-50,"Trump plans emerge to use U.S. military bases for immigrant detention
+A Space Force military base in Colorado will serve as a detention center for immigrant detainees facing deportation, Defense Depar",Deportations,,,False,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-51,"Some agency heads mandate that employees report efforts to ‘disguise’ DEI programs
+President Donald Trump on Tuesday ordered all employees focused on diversity, equity and inclusion initiatives<a href",DEI in the federal government,,,True,DEI in the federal government,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-52,"Trump signs executive order to create crypto council, reduce regulation
+President Donald Trump on Thursday signed an executive order that aims to ease regulation on cryptocurrency, seeking to fulfill ",Crypto,,,True,Crypto,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-53,"Trump proposes permanent displacement of Gazans as he welcomes Netanyahu to White House
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> on Tuesday propo",Gaza,,,True,Gaza,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-54,"Judge orders Trump administration to pay millions in USAID funds
+A federal judge on Tuesday ordered the Trump administration to pay hundreds of millions in foreign assistance funds that have been in l",USAID,,,True,USAID,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-55,"Trump says he wants to send ‘repeat offenders’ in U.S. legally to foreign countries
+DORAL, Fla. — President Donald Trump said Monday that he doesn’t just want to deport undocumented immigrants with cr",Deportations,,,True,Deportations,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-56,"Trump reinstates plan to strip protections from federal workers
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> on Monday reinstated a policy to strip e",Reclassifying federal jobs,,,True,Reclassifying federal jobs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-57,"Federal board halts firings of six probationary employees amid Trump cuts
+An independent federal board on Tuesday <a href=""https://democracyforward.org/updates/breaking-merit-systems-protection-board-",Federal workforce reductions,,,True,Federal workforce reductions,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-58,"President Donald Trump signed an executive order on Monday requiring the federal government to return to...
+President Donald Trump signed <a href=""https://x.com/Scavino47/status/1889083008331972688"" t",Climate,,,True,Climate,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-59,"Trump freezes hiring for many federal jobs
+The White House issued a freeze on the hiring of civilian employees across the government Monday night, exempting active-duty military personnel and position",Federal workforce reductions,,,True,Federal workforce reductions,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-60,"Acting ICE director removed amid White House pressure to boost arrests
+The Trump administration has removed the top official at Immigration and Customs Enforcement one month into his tenure, as White ",Deportations,,,False,Senior government officials ousted,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-61,"Trump appoints leader of his Secret Service detail to head agency
+President Donald Trump said Wednesday that he is appointing Sean Curran — the special agent in charge of Trump’s security detail who s",Other,,,True,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-62,"Judge allows intelligence agencies to fire officers in DEI roles
+A federal judge on Thursday refused to stop the CIA and director of national intelligence from firing 51 officers who had been assigned",DEI in the federal government,,,True,DEI in the federal government,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-63,"Native leaders warn that freezing of federal funds could imperil some services
+Native American leaders said they’re worried about the impact of a freeze on federal grants and loans that could affect d",Federal grant pause,,,True,Federal grant pause,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-64,"Suit charges violation of Privacy Act as DOGE accesses personal data
+A coalition of labor unions and individuals filed suit in federal court Monday alleging that Elon Musk and the U.S. DOGE Service ha",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-65,"Judge briefly extends order barring Trump from firing watchdog leader
+A federal judge on Wednesday extended for three days an order preventing the Trump administration from firing the head of an indep",Firing government watchdogs,,,True,Firing government watchdogs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-66,"Layoffs to hit IRS as DOGE targets tax collections
+The Trump administration is expected to begin laying off thousands of employees at the Internal Revenue Service, six people briefed on the matter sai",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-67,"Education Dept. launches investigation into Maine over transgender policies
+The Education Department announced Friday that it was launching an investigation into a Maine high school and the state’s ed",Transgender policy,,,True,Transgender policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-68,"Judge forces lawyers for fired inspectors general to withdraw TRO request
+Lawyers for eight inspectors general suing the Trump administration over their firings last month were forced by an angry fede",Firing government watchdogs,,,True,Firing government watchdogs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-69,"White House, in reversal, rescinds freeze on federal grants
+The White House budget office on Wednesday rescinded an order freezing federal grants, according to a copy of a new memo obtained by The Was",Federal grant pause,,,True,Federal grant pause,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-70,"EPA puts 168 environmental justice staffers on administrative leave
+Trump appointees at the Environmental Protection Agency notified staff members Thursday that they plan to close the Office of Enviro",DEI in the federal government,,,True,DEI in the federal government,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-71,"Layoffs loom as Trump administration orders federal DEI workers on leave
+President Donald Trump’s administration took aim at government DEI programs, ordering federal diversity, equity and inclusion e",DEI in the federal government,,,True,DEI in the federal government,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-72,"Pentagon to fire 5,400 civilian employees in ‘initial’ purge
+The Pentagon said Friday that it will fire about 5,400 civilian employees beginning next week in an “initial” purge of its workforce, as Pr",Federal workforce reductions,,,True,Federal workforce reductions,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-73,"Judge temporarily blocks DOGE access to sensitive information at two agencies
+A federal judge on Monday blocked Elon Musk’s U.S. DOGE Service from using private information collected by<b> </b>the Edu",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-74,"Farmers sue USDA after agency deletes climate change data
+A group of farmers and environmental nonprofits <a href=""https://earthjustice.org/brief/2025/were-suing-to-stop-the-trump-admins-climate-censo",Climate,,,True,Climate,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-75,"Acting IRS commissioner to step down amid DOGE blitz on agency
+The acting commissioner of the IRS will announce he is stepping down as early as Tuesday, according to four people familiar with the matt",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-76,"Trump directs agency heads to review funding for NGOs
+President Donald Trump sent a memorandum Friday directing agency and department heads across the federal government to review all funding that age",Foreign aid,,,True,Foreign aid,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-77,"Early education programs can’t access federal funding to pay bills
+Providers of the national program Head Start, which provides early-childhood education to children from ­low-income families, say tha",Federal grant pause,,,True,Federal grant pause,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-78,"Prosecutor quits after order to drop corruption case against N.Y. Mayor Eric Adams
+NEW YORK — Hagan Scotten, the lead prosecutor in Mayor Eric Adams’s federal corruption case, has quit over the Justic",Eric Adams case,,,True,Eric Adams case,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-79,"State attorneys general say they will sue to block pause on federal grants
+At least 20 states have been <a href=""https://www.washingtonpost.com/dc-md-va/2025/01/28/trump-funding-freeze-dmv-vance/"" tar",Federal grant pause,,,True,Federal grant pause,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-80,"Trump administration seeks more power to fire independent regulators
+The Trump administration has told Congress it is prepared to disavow a long-standing Supreme Court ruling that has preserved the in",Expanding executive power,,,False,Firing government watchdogs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-81,"Ed Dept DOGE team cancels $900 million in research contracts
+The Education Department on Monday shut down a large swath of work at the Institute of Educational Sciences, the arm of the department resp",Department of Education,,,False,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-82,"Trump signs executive order seeking more death sentences
+President Donald Trump on Monday signed an <a href=""https://www.whitehouse.gov/presidential-actions/2025/01/restoring-the-death-penalty-and-pro",Other,,,True,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-83,"Trump says new tariffs on computer chips are coming
+President Donald Trump said he would soon announce new tariffs on computer chips, <a href=""https://www.washingtonpost.com/technology/2024/12/07/raim",Tariffs,,,True,Tariffs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-84,"Trump signing executive order intended to reduce federal workforce
+President Donald Trump on Tuesday is signing an executive order that calls on federal agencies to work with the U.S. DOGE Service in ",Federal workforce reductions,,,True,Federal workforce reductions,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-85,"Transgender troops will be removed from U.S. military, Pentagon says
+Openly transgender service members will be disqualified from serving in the U.S. military and will soon be removed from<b> </b>the ",Transgender policy,,,True,Transgender policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-86,"U.S. troops arrive at Guantánamo Bay in Trump migrant crackdown
+Infantry Marines and other U.S. troops have begun arriving at the U.S. naval base at Guantánamo Bay, Cuba, U.S. military officials said ",Guantánamo Bay,,,True,Guantánamo Bay,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-87,"Mexico extradites 29 drug suspects to U.S. as Trump threatens sanctions
+MEXICO CITY — Mexico extradited 29 alleged drug traffickers to the United States on Thursday, including Rafael Caro Quintero, a ",Tariffs,,,True,Tariffs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-88,"Trump orders sweeping review of federal regulations
+President Donald Trump ordered federal agencies Wednesday to review all of their regulations and cease enforcing those that do not conform to his po",DOGE,,,False,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-89,"Trump revokes security clearances for dozens of former national security officials
+Trump in an executive order on Monday directed the revocation of any active security clearances held by John Bolton, ",Senior government officials ousted,,,False,Targeting political enemies,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-90,"Several administration officials tell workers not to reply to Musk email
+Elon Musk’s demand that all 2.3 million government workers<b> </b>justify their work prompted confusion and resistance on Sunda",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-91,"Migrants at border get message saying CBP One appointments ‘no longer valid’
+CIUDAD JUÁREZ, Mexico — Ridel Jiménez arrived at the border bridge leading into Texas before dawn Monday with his wife and ",U.S.-Mexico border,,,False,Immigration policy,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-92,"Trump allies rejoice, Democrats sound alarm over latest FBI appointment
+President Donald Trump <a href=""https://www.washingtonpost.com/national-security/2025/02/23/dan-bongino-fbi-deputy-director-trum",Expanding executive power,,,False,Other,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-93,"Supreme Court grants Trump request to pause USAID payments order
+Chief Justice John G. Roberts Jr. granted the Trump administration’s request late Wednesday to pause a lower court’s midnight deadline ",USAID,,,True,USAID,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-94,"Hegseth takes action against Trump foe Mark Milley
+Defense Secretary Pete Hegseth has decided to remove<b> </b>retired Gen. Mark A. Milley’s security detail, suspend his security clearance,<b> </b>and",Targeting political enemies,,,True,Targeting political enemies,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-95,"Treasury agrees to block DOGE’s access to personal taxpayer data at IRS
+The Trump White House<b> </b>and Treasury Department officials have agreed to prohibit the U.S. DOGE Service from accessing pers",DOGE,,,True,DOGE,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-96,"Trump fires Federal Labor Relations Authority member
+President <a href=""https://www.washingtonpost.com/donald-trump/"" target=_blank>Donald Trump</a> fired Susan Tsui Grundmann, who until Tuesday serve",Senior government officials ousted,,,False,Firing government watchdogs,2025-11-10T19:12:41-06:00
+kimi-k2-thinking,prompt-1,test-97,"Trump backs off trade threats after Colombia agrees to deportation flights
+The United States and Colombia averted a trade war, for now, after the White House said late Sunday that Bogotá agreed to acc",Deportations,,,True,Deportations,2025-11-10T19:12:41-06:00

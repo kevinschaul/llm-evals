@@ -3,6 +3,9 @@
 export LMSTUDIO_BASE_URL := env_var("LMSTUDIO_API_BASE") + "/v1"
 export LMSTUDIO_API_KEY := "KEY"
 
+# To specify a specific openrouter provider:
+# openrouter/moonshotai/kimi-k2-thinking -M "provider={'order':['moonshotai']}"
+
 default:
     @just --list
 
@@ -11,6 +14,7 @@ eval-all model *ARGS:
     just eval grab-bag {{model}} {{ARGS}}
     just eval extract-fema-incidents {{model}} {{ARGS}}
     just eval article-tracking-trump {{model}} {{ARGS}}
+    just eval article-tracking-categories {{model}} {{ARGS}}
     just eval political-fundraising-emails {{model}} {{ARGS}}
 
 # Run a single eval against a model. Example: just eval grab-bag anthropic/claude-3-5-sonnet-20241022
