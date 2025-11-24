@@ -72,6 +72,7 @@ def generate_results_csv(log_files, output_path):
                 continue
 
             provider_id = extract_provider_id_from_log(log)
+            solver = getattr(log.eval, 'solver', None) or ""
 
             for sample in log.samples:
                 # Extract basic info
@@ -116,8 +117,10 @@ def generate_results_csv(log_files, output_path):
                     if score.explanation and len(score.explanation) > len(result):
                         result = score.explanation
 
-                # Duration (not available in migrated logs)
+                # Duration - convert from seconds to milliseconds
                 duration_ms = None
+                if hasattr(sample, 'total_time') and sample.total_time is not None:
+                    duration_ms = round(sample.total_time * 1000, 1)
 
                 # Timestamp
                 timestamp = log.eval.created
@@ -133,6 +136,7 @@ def generate_results_csv(log_files, output_path):
                     'passed': passed,
                     'expected': expected,
                     'timestamp': timestamp,
+                    'solver': solver,
                 })
 
         except Exception as e:
@@ -143,7 +147,7 @@ def generate_results_csv(log_files, output_path):
     if results:
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
             fieldnames = ['provider_id', 'prompt_id', 'test', 'prompt', 'result',
-                         'error', 'duration_ms', 'passed', 'expected', 'timestamp']
+                         'error', 'duration_ms', 'passed', 'expected', 'timestamp', 'solver']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(results)

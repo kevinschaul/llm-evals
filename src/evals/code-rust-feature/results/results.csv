@@ -1,4 +1,4 @@
-provider_id,prompt_id,test,prompt,result,error,duration_ms,passed,expected,timestamp
+provider_id,prompt_id,test,prompt,result,error,duration_ms,passed,expected,timestamp,solver,total_tokens,input_tokens,output_tokens
 gpt-5-codex,prompt-1,test-1,Implement the mode=git feature for the 'use' subcommand in the jump-start-tools Rust CLI.,"diff --git a/README.md b/README.md
 index ad49e3c..8d7a7f7 100644
 --- a/README.md
@@ -403,7 +403,7 @@ index 1eac213..ced6efa 100644
  
      // Test project directory should be created based on the config
      let project_dir = temp_dir.join(""test-project"");
-",,,True,,2025-11-11T12:33:28-06:00
+",,1066197.0,True,,2025-11-11T12:33:28-06:00,codex,,,
 claude-haiku-4-5,prompt-1,test-1,Implement the mode=git feature for the 'use' subcommand in the jump-start-tools Rust CLI.,"diff --git a/Cargo.lock b/Cargo.lock
 index 2d6b731..1dc600c 100644
 --- a/Cargo.lock
@@ -876,4 +876,4 @@ index 1eac213..b24a91c 100644
  
      // Test project directory should be created based on the config
      let project_dir = temp_dir.join(""test-project"");
-",,,True,,2025-11-23T19:09:14-06:00
+",,226209.0,True,,2025-11-23T19:09:14-06:00,claude_code,,,
