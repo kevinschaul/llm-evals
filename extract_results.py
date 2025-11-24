@@ -111,6 +111,11 @@ def generate_results_csv(log_files, output_path):
                         else:
                             passed = "False"
 
+                    # For evals where the score explanation contains the actual result (e.g., git diffs),
+                    # use that as the result instead of the model output
+                    if score.explanation and len(score.explanation) > len(result):
+                        result = score.explanation
+
                 # Duration (not available in migrated logs)
                 duration_ms = None
 
