@@ -28,6 +28,10 @@ export default {
       path: "/evals/grab-bag/",
     },
     {
+      name: "OCR translation",
+      path: "/evals/ocr-translation/",
+    },
+    {
       name: "Code: Rust feature",
       path: "/evals/code-rust-feature/",
     },
