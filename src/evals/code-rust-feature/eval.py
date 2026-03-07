@@ -58,9 +58,13 @@ def claude_code() -> Solver:
         prompt = state.input_text
         cmd.append(prompt)
 
-        # Copy environment but strip ANTHROPIC_API_KEY
+        # Copy environment but strip ANTHROPIC_API_KEY and Claude Code session
+        # env vars that would prevent nested claude CLI execution
         env = os.environ.copy()
         env.pop("ANTHROPIC_API_KEY", None)
+        for key in list(env.keys()):
+            if key == "CLAUDECODE" or key.startswith("CLAUDE_CODE_"):
+                del env[key]
 
         process = await asyncio.create_subprocess_exec(
             *cmd,
