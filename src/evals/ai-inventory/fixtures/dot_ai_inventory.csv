@@ -1,0 +1,6 @@
+use_case_name,description,bureau,development_stage,topic_area
+Traffic Signal Optimization,"ML-based system that adjusts traffic signal timing using real-time sensor data to reduce congestion","Federal Highway Administration",Production,Transportation Safety
+Pavement Condition Prediction,"Computer vision model analyzing road imagery to predict pavement degradation and prioritize maintenance","Federal Highway Administration",Testing,Infrastructure Maintenance
+Bridge Structural Monitoring,"Anomaly detection monitoring sensor data from bridge infrastructure to identify structural issues","Federal Highway Administration",Development,Safety
+Automated Vehicle Inspection,"AI-powered system assisting safety inspectors in identifying vehicle defects","National Highway Traffic Safety Administration",Production,Vehicle Safety
+Aviation Weather Prediction,"Enhanced weather forecasting models for aviation safety using ML","Federal Aviation Administration",Production,Aviation Safety

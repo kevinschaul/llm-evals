@@ -1,0 +1,6 @@
+AI_USE_CASE_NAME,DESCRIPTION,OFFICE,STATUS,SUBJECT_AREA
+Crop Yield Forecasting,"Satellite imagery and weather data analysis to predict crop yields at county and national levels","National Agricultural Statistics Service",Active,Agriculture
+Crop Disease Detection,"Computer vision model for early detection of crop diseases from drone imagery","Agricultural Research Service",Active,Plant Health
+Forest Fire Risk Assessment,"Predictive model combining weather terrain and vegetation data to assess wildfire risk","Forest Service",Active,Forest Management
+Livestock Disease Surveillance,"NLP and ML system monitoring reports for early detection of livestock disease outbreaks","Animal and Plant Health Inspection Service",In Development,Animal Health
+Soil Health Analysis,"ML model analyzing soil sample data to provide farmers with actionable recommendations","Natural Resources Conservation Service",Active,Soil Science

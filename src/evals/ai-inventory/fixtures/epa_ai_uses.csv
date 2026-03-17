@@ -1,0 +1,6 @@
+Name,Summary,Division,Phase,Category
+Air Quality Prediction,"Machine learning models predicting air quality index values 48 hours in advance","Office of Air Quality Planning and Standards",Operational,Environmental Monitoring
+Water Quality Monitoring,"Automated analysis of water quality sensor data to detect contamination events","Office of Water",Operational,Water Safety
+Chemical Exposure Assessment,"AI system assessing potential human health risks from chemical exposures","Office of Research and Development",Testing,Public Health
+Environmental Justice Mapping,"Geospatial AI tool identifying communities with disproportionate environmental burdens","Office of Environmental Justice",Operational,Environmental Justice
+Toxic Release Inventory Analysis,"NLP system processing industry reports to improve data quality of toxic release submissions","Office of Pollution Prevention and Toxics",Operational,Pollution Control
