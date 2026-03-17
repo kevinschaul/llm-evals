@@ -36,6 +36,10 @@ export default {
       path: "/evals/code-rust-feature/",
     },
     {
+      name: "Code: D3 chart",
+      path: "/evals/code-d3-chart/",
+    },
+    {
       name: "Archived",
       open: false,
       pages: [
