@@ -36,6 +36,18 @@ export default {
       path: "/evals/code-rust-feature/",
     },
     {
+      name: "Code: D3 chart",
+      path: "/evals/code-d3-chart/",
+    },
+    {
+      name: "Code: AI inventory consolidation",
+      path: "/evals/ai-inventory/",
+    },
+    {
+      name: "Code: AI inventory search",
+      path: "/evals/ai-inventory-search/",
+    },
+    {
       name: "Archived",
       open: false,
       pages: [

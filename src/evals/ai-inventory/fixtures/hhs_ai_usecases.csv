@@ -1,0 +1,6 @@
+Use Case Title,Use Case Summary,Agency Component,Stage of Development,Domain
+Disease Surveillance System,"Monitors public health data streams for early detection of disease outbreaks","Centers for Disease Control and Prevention",Production,Public Health
+Drug Adverse Event Detection,"NLP system analyzing FDA adverse event reports to identify safety signals","Food and Drug Administration",Production,Drug Safety
+Medicare Fraud Detection,"Machine learning model identifying potentially fraudulent Medicare claims","Centers for Medicare & Medicaid Services",Production,Program Integrity
+Clinical Trial Matching,"AI tool matching patients to clinical trials based on eligibility criteria","National Institutes of Health",Testing,Medical Research
+Mental Health Crisis Prediction,"Predictive model identifying individuals at risk of mental health crises","Substance Abuse and Mental Health Services Administration",Development,Mental Health
