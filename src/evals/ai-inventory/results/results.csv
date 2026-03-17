@@ -1,0 +1,59 @@
+provider_id,prompt_id,test,prompt,result,error,duration_ms,passed,expected,timestamp,solver
+gpt-5.2,prompt-1,test-1,"I have downloaded AI use case inventory spreadsheets from several federal agencies. They are in the current directory with different formats and inconsistent column names.
+
+Write a Python script to:
+1",No consolidated.csv was created,,6461.0,False,,2026-03-11T21:26:12-05:00,codex
+claude-sonnet-4-6,prompt-1,test-1,"I have downloaded AI use case inventory spreadsheets from several federal agencies. They are in the current directory with different formats and inconsistent column names.
+
+Write a Python script to:
+1","agency,use_case_name,description,development_stage,topic_area
+Department of Transportation,Traffic Signal Optimization,ML-based system that adjusts traffic signal timing using real-time sensor data to reduce congestion,Production,Transportation Safety
+Department of Transportation,Pavement Condition Prediction,Computer vision model analyzing road imagery to predict pavement degradation and prioritize maintenance,Testing,Infrastructure Maintenance
+Department of Transportation,Bridge Structural Monitoring,Anomaly detection monitoring sensor data from bridge infrastructure to identify structural issues,Development,Safety
+Department of Transportation,Automated Vehicle Inspection,AI-powered system assisting safety inspectors in identifying vehicle defects,Production,Vehicle Safety
+Department of Transportation,Aviation Weather Prediction,Enhanced weather forecasting models for aviation safety using ML,Production,Aviation Safety
+Environmental Protection Agency,Air Quality Prediction,Machine learning models predicting air quality index values 48 hours in advance,Operational,Environmental Monitoring
+Environmental Protection Agency,Water Quality Monitoring,Automated analysis of water quality sensor data to detect contamination events,Operational,Water Safety
+Environmental Protection Agency,Chemical Exposure Assessment,AI system assessing potential human health risks from chemical exposures,Testing,Public Health
+Environmental Protection Agency,Environmental Justice Mapping,Geospatial AI tool identifying communities with disproportionate environmental burdens,Operational,Environmental Justice
+Environmental Protection Agency,Toxic Release Inventory Analysis,NLP system processing industry reports to improve data quality of toxic release submissions,Operational,Pollution Control
+Department of Health and Human Services,Disease Surveillance System,Monitors public health data streams for early detection of disease outbreaks,Production,Public Health
+Department of Health and Human Services,Drug Adverse Event Detection,NLP system analyzing FDA adverse event reports to identify safety signals,Production,Drug Safety
+Department of Health and Human Services,Medicare Fraud Detection,Machine learning model identifying potentially fraudulent Medicare claims,Production,Program Integrity
+Department of Health and Human Services,Clinical Trial Matching,AI tool matching patients to clinical trials based on eligibility criteria,Testing,Medical Research
+Department of Health and Human Services,Mental Health Crisis Prediction,Predictive model identifying individuals at risk of mental health crises,Development,Mental Health
+Department of Agriculture,Crop Yield Forecasting,Satellite imagery and weather data analysis to predict crop yields at county and national levels,Active,Agriculture
+Department of Agriculture,Crop Disease Detection,Computer vision model for early detection of crop diseases from drone imagery,Active,Plant Health
+Department of Agriculture,Forest Fire Risk Assessment,Predictive model combining weather terrain and vegetation data to assess wildfire risk,Active,Forest Management
+Department of Agriculture,Livestock Disease Surveillance,NLP and ML system monitoring reports for early detection of livestock disease outbreaks,In Development,Animal Health
+Department of Agriculture,Soil Health Analysis,ML model analyzing soil sample data to provide farmers with actionable recommendations,Active,Soil Science
+",,41743.0,True,,2026-03-11T21:40:29-05:00,claude_code
+qwen3.5-35b-a3b,prompt-1,test-1,"I have downloaded AI use case inventory spreadsheets from several federal agencies. They are in the current directory with different formats and inconsistent column names.
+
+Write a Python script to:
+1",No consolidated.csv was created,,32115.0,False,,2026-03-11T21:41:52-05:00,codex
+gpt-oss-20b,prompt-1,test-1,"I have downloaded AI use case inventory spreadsheets from several federal agencies. They are in the current directory with different formats and inconsistent column names.
+
+Write a Python script to:
+1","agency,use_case_name,description,development_stage,topic_area
+usda_inventory,,Satellite imagery and weather data analysis to predict crop yields at county and national levels,,
+usda_inventory,,Computer vision model for early detection of crop diseases from drone imagery,,
+usda_inventory,,Predictive model combining weather terrain and vegetation data to assess wildfire risk,,
+usda_inventory,,NLP and ML system monitoring reports for early detection of livestock disease outbreaks,,
+usda_inventory,,ML model analyzing soil sample data to provide farmers with actionable recommendations,,
+dot_ai_inventory,Traffic Signal Optimization,ML-based system that adjusts traffic signal timing using real-time sensor data to reduce congestion,Production,Transportation Safety
+dot_ai_inventory,Pavement Condition Prediction,Computer vision model analyzing road imagery to predict pavement degradation and prioritize maintenance,Testing,Infrastructure Maintenance
+dot_ai_inventory,Bridge Structural Monitoring,Anomaly detection monitoring sensor data from bridge infrastructure to identify structural issues,Development,Safety
+dot_ai_inventory,Automated Vehicle Inspection,AI-powered system assisting safety inspectors in identifying vehicle defects,Production,Vehicle Safety
+dot_ai_inventory,Aviation Weather Prediction,Enhanced weather forecasting models for aviation safety using ML,Production,Aviation Safety
+hhs_ai_usecases,,,,
+hhs_ai_usecases,,,,
+hhs_ai_usecases,,,,
+hhs_ai_usecases,,,,
+hhs_ai_usecases,,,,
+epa_ai_uses,,,,
+epa_ai_uses,,,,
+epa_ai_uses,,,,
+epa_ai_uses,,,,
+epa_ai_uses,,,,
+",,266493.0,True,,2026-03-11T21:43:11-05:00,codex

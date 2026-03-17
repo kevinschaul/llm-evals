@@ -14,17 +14,28 @@ import tempfile
 import os
 import shutil
 import json
+from pathlib import Path
 
 
-REPO_URL = "https://github.com/kevinschaul/jump-start-tools.git"
-COMMIT_ID = "de15260b46318c29f6b2435ff068fb9c42fc2806"
+FIXTURES_DIR = Path(__file__).parent / "fixtures"
+
+PROMPT = """I have downloaded AI use case inventory spreadsheets from several federal agencies. They are in the current directory with different formats and inconsistent column names.
+
+Write a Python script to:
+1. Read each CSV file in the current directory
+2. Examine the column names in each file
+3. Map them to these standardized columns: agency, use_case_name, description, development_stage, topic_area
+4. Add an 'agency' column identifying which agency the data came from (infer from the filename if not in the data)
+5. Consolidate all rows into a single file called consolidated.csv
+
+Then run the script and print a summary of how many rows came from each file."""
 
 
 def create_dataset() -> MemoryDataset:
     return MemoryDataset(
         [
             Sample(
-                input="Implement the mode=git feature for the 'use' subcommand in the jump-start-tools Rust CLI.",
+                input=PROMPT,
             )
         ]
     )
@@ -123,14 +134,16 @@ def claude_code() -> Solver:
                         for item in message.get("content", []):
                             item_type = item.get("type")
                             if item_type == "tool_result":
-                                tool_use_item = tool_use_lookup[item.get("tool_use_id")]
+                                tool_use_item = tool_use_lookup.get(item.get("tool_use_id"), {})
                                 transcript().info(
                                     "User event!" + json.dumps(tool_use_item)
                                 )
-
+                                content = item.get("content", "a tool call")
+                                if not isinstance(content, str):
+                                    content = json.dumps(content)
                                 state.messages.append(
                                     ChatMessageTool(
-                                        content=item.get("content", "a toll call"),
+                                        content=content,
                                         function=tool_use_item.get("name"),
                                         metadata={
                                             "tool_use": tool_use_item,
@@ -151,6 +164,13 @@ def claude_code() -> Solver:
                 f"Error executing claude code agent (exit code: {process.returncode})\n{stderr_text}"
             )
 
+        # Stash output file content before cleanup can delete it
+        work_dir = state.store.get("work_dir")
+        consolidated_path = os.path.join(work_dir, "consolidated.csv") if work_dir else None
+        if consolidated_path and os.path.exists(consolidated_path):
+            with open(consolidated_path) as f:
+                state.store.set("consolidated_csv", f.read())
+
         return state
 
     return solve
@@ -166,8 +186,9 @@ def codex() -> Solver:
         cmd = [
             "codex",
             "exec",
-            "--json",
+            "--experimental-json",
             "--dangerously-bypass-approvals-and-sandbox",
+            "--skip-git-repo-check",
             "--model",
             model.name,
         ]
@@ -176,9 +197,7 @@ def codex() -> Solver:
         prompt = state.input_text
         cmd.append(prompt)
 
-        # Copy environment but strip OPENAI_API_KEY
         env = os.environ.copy()
-        env.pop("OPENAI_API_KEY", None)
 
         process = await asyncio.create_subprocess_exec(
             *cmd,
@@ -188,12 +207,16 @@ def codex() -> Solver:
             env=env,
         )
 
+        stderr_lines = []
+
         async def read_stderr():
             while True:
                 line = await process.stderr.readline()
                 if not line:
                     break
-                transcript().info(line.decode().rstrip(), source="stderr")
+                decoded = line.decode().rstrip()
+                stderr_lines.append(decoded)
+                transcript().info(decoded, source="stderr")
 
         async def read_stdout():
             while True:
@@ -234,9 +257,17 @@ def codex() -> Solver:
         await process.wait()
 
         if process.returncode != 0:
+            stderr_text = "\n".join(stderr_lines)
             raise RuntimeError(
-                f"Error executing codex agent (exit code: {process.returncode})"
+                f"Error executing codex agent (exit code: {process.returncode})\n{stderr_text}"
             )
+
+        # Stash output file content before cleanup can delete it
+        work_dir = state.store.get("work_dir")
+        consolidated_path = os.path.join(work_dir, "consolidated.csv") if work_dir else None
+        if consolidated_path and os.path.exists(consolidated_path):
+            with open(consolidated_path) as f:
+                state.store.set("consolidated_csv", f.read())
 
         return state
 
@@ -244,56 +275,22 @@ def codex() -> Solver:
 
 
 @solver
-def clone_repo():
+def setup_workspace():
     async def solve(state, generate):
         # Create a persistent temporary directory
         tmpdir = tempfile.mkdtemp()
-        repo_path = os.path.join(tmpdir, "repo")
 
-        async with span("clone_repo"):
-            # Clone the repository
-            transcript().info(f"Cloning repository: {REPO_URL}")
-            process = await asyncio.create_subprocess_exec(
-                "git",
-                "clone",
-                REPO_URL,
-                "repo",
-                cwd=tmpdir,
-                stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE,
-            )
-            stdout, stderr = await process.communicate()
+        async with span("setup_workspace"):
+            # Copy all fixture files into the temp directory
+            for fixture_file in FIXTURES_DIR.iterdir():
+                if fixture_file.is_file():
+                    dest = os.path.join(tmpdir, fixture_file.name)
+                    shutil.copy(fixture_file, dest)
+                    transcript().info(f"Copied fixture: {fixture_file.name} -> {dest}")
 
-            if process.returncode != 0:
-                raise RuntimeError(
-                    f"Error cloning repository: {stdout.decode()}\n{stderr.decode()}"
-                )
-
-            transcript().info(f"✓ Repository cloned to {repo_path}")
-
-            # If a specific commit is requested, check it out
-            if COMMIT_ID:
-                transcript().info(f"Checking out commit: {COMMIT_ID}")
-                process = await asyncio.create_subprocess_exec(
-                    "git",
-                    "checkout",
-                    COMMIT_ID,
-                    cwd=repo_path,
-                    stdout=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE,
-                )
-                stdout, stderr = await process.communicate()
-
-                if process.returncode != 0:
-                    raise RuntimeError(
-                        f"Error checking out commit {COMMIT_ID}: {stdout.decode()}\n{stderr.decode()}"
-                    )
-
-                transcript().info(f"✓ Checked out commit {COMMIT_ID}")
-
-            # Set working directory to the cloned repo
-            state.store.set("work_dir", repo_path)
-            transcript().info({"work_dir": repo_path})
+            # Set working directory to the temp dir with fixture files
+            state.store.set("work_dir", tmpdir)
+            transcript().info({"work_dir": tmpdir})
 
         return state
 
@@ -301,55 +298,37 @@ def clone_repo():
 
 
 @scorer(metrics=[])
-def git_diff() -> Scorer:
+def output_csv() -> Scorer:
     async def score(state: TaskState, target: Target):
-        work_dir = state.store.get("work_dir")
-
-        process = await asyncio.create_subprocess_exec(
-            "git",
-            "diff",
-            cwd=work_dir,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-        )
-
-        stdout, stderr = await process.communicate()
-
-        if process.returncode != 0:
-            raise RuntimeError(
-                f"Error running git diff: {stdout.decode()}\n{stderr.decode()}"
-            )
-
-        return Score(value="C", explanation=stdout.decode())
+        content = state.store.get("consolidated_csv")
+        if not content:
+            return Score(value="I", explanation="No consolidated.csv was created")
+        return Score(value="C", explanation=content)
 
     return score
 
 
-def cleanup_repo():
+def cleanup_workspace():
     async def cleanup(state):
         # Delete the temporary work directory if it exists
-        if hasattr(state.metadata, "work_dir") and state.metadata.work_dir:
-            work_dir = state.metadata.work_dir
-            # Get the parent directory (the tmpdir)
-            tmpdir = os.path.dirname(work_dir)
-            if os.path.exists(tmpdir):
-                # Run in executor to avoid blocking
-                await asyncio.get_event_loop().run_in_executor(
-                    None, shutil.rmtree, tmpdir
-                )
+        work_dir = state.store.get("work_dir")
+        if work_dir and os.path.exists(work_dir):
+            await asyncio.get_event_loop().run_in_executor(
+                None, shutil.rmtree, work_dir
+            )
 
     return cleanup
 
 
 @task
-def code_rust_feature() -> Task:
+def ai_inventory() -> Task:
     """
     User must specify a solver in the CLI
-    e.g. just eval code-rust-feature openai/gpt-oss-20b --solver codex
+    e.g. just eval ai-inventory anthropic/claude-sonnet-4-5 --solver claude_code
     """
     return Task(
         dataset=create_dataset(),
-        setup=clone_repo(),
-        cleanup=cleanup_repo(),
-        scorer=git_diff(),
+        setup=setup_workspace(),
+        cleanup=cleanup_workspace(),
+        scorer=output_csv(),
     )
