@@ -4,15 +4,24 @@ User must specify a solver via the CLI, e.g.:
 
     just eval code-rust-feature anthropic/claude-sonnet-4-5 --solver claude_code
     just eval code-rust-feature openai/gpt-5-codex          --solver codex
+    just eval code-rust-feature openrouter/openai/gpt-4o-mini --solver pi
 """
 
 from inspect_ai import Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
 
-from agentic import claude_code, cleanup_workdir, clone_git_repo, codex, git_diff
+from agentic import (
+    claude_code,
+    cleanup_workdir,
+    clone_git_repo,
+    codex,
+    git_diff,
+    pi,
+)
 
-# Re-exported so `--solver claude_code` / `--solver codex` resolves them.
-__all__ = ["claude_code", "codex", "code_rust_feature"]
+# Re-exported so `--solver claude_code` / `--solver codex` / `--solver pi`
+# resolves them.
+__all__ = ["claude_code", "codex", "pi", "code_rust_feature"]
 
 REPO_URL = "https://github.com/kevinschaul/jump-start-tools.git"
 COMMIT_ID = "de15260b46318c29f6b2435ff068fb9c42fc2806"

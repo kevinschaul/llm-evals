@@ -70,10 +70,10 @@ just dev      # Start dev server with live reload
 
 ## Agentic Evals
 
-Agentic evals run an external coding agent (Claude Code, Codex, ...) inside a
-temporary work directory, then capture `git diff` of whatever the agent changed.
-A diff is usually enough to eyeball how well the agent did, so there's no
-golden-output assertion.
+Agentic evals run an external coding agent (Claude Code, Codex, pi, ...)
+inside a temporary work directory, then capture `git diff` of whatever the
+agent changed. A diff is usually enough to eyeball how well the agent did, so
+there's no golden-output assertion.
 
 The shared building blocks live in `agentic.py` at the project root. The
 Justfile exports `PYTHONPATH=justfile_directory()` so eval files can
@@ -87,6 +87,9 @@ Justfile exports `PYTHONPATH=justfile_directory()` so eval files can
 - **Solvers** (agent harnesses, run inside `work_dir`, forward `--model`):
   - `claude_code()` — runs the `claude` CLI with `stream-json` output
   - `codex()` — runs `codex exec --json`
+  - `pi()` — runs the `pi` CLI (https://github.com/badlogic/pi-mono) with
+    `--mode json`. Pi has first-class OpenRouter support out of the box, so
+    any `openrouter/<vendor>/<model>` from inspect's `--model` flag works.
 - **Scorer:** `git_diff()` — returns the diff in the score `explanation`,
   which `extract_results.py` surfaces as the `result` column.
 - **Cleanup:** `cleanup_workdir()` — removes the temp dir.
@@ -97,10 +100,13 @@ To add a new agentic eval, create `src/evals/<name>/eval.py`:
 from pathlib import Path
 from inspect_ai import task, Task
 from inspect_ai.dataset import MemoryDataset, Sample
-from agentic import claude_code, codex, copy_fixture, cleanup_workdir, git_diff
+from agentic import (
+    claude_code, codex, pi, copy_fixture, cleanup_workdir, git_diff,
+)
 
-# Re-export so `--solver claude_code` / `--solver codex` resolves them.
-__all__ = ["claude_code", "codex", "my_eval"]
+# Re-export so `--solver claude_code` / `--solver codex` / `--solver pi`
+# resolves them.
+__all__ = ["claude_code", "codex", "pi", "my_eval"]
 
 @task
 def my_eval() -> Task:
@@ -115,13 +121,17 @@ def my_eval() -> Task:
 Then run it against any model + harness:
 
 ```bash
-just eval my-eval anthropic/claude-sonnet-4-5 --solver claude_code
-just eval my-eval openai/gpt-5-codex          --solver codex
+just eval my-eval anthropic/claude-sonnet-4-5    --solver claude_code
+just eval my-eval openai/gpt-5-codex             --solver codex
+just eval my-eval openrouter/openai/gpt-4o-mini  --solver pi
 ```
 
 The `codex` solver auto-detects when `--model` is an `openrouter/...` model and
 configures the `codex` CLI to route through OpenRouter (requires
-`OPENROUTER_API_KEY`). See `agentic.py` for details.
+`OPENROUTER_API_KEY`). The `pi` solver derives pi's `provider/model-id` form
+from inspect's `Model.api` class name, so it works with any provider pi
+supports (Anthropic, OpenAI, OpenRouter, Google, ...) — just set the
+matching `*_API_KEY`. See `agentic.py` for details.
 
 ## File Patterns
 

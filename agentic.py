@@ -447,3 +447,129 @@ def _parse_codex_event(event: dict, state: TaskState, lookup: dict) -> None:
                 metadata=event,
             )
         )
+
+
+@solver
+def pi() -> Solver:
+    """Run the `pi` coding agent CLI inside `state.store['work_dir']`.
+
+    https://github.com/badlogic/pi-mono — pi has first-class OpenRouter
+    support out of the box (no provider config gymnastics needed) and a
+    `--mode json` event stream we can hook into. The inspect model spec is
+    forwarded as `pi --model <provider>/<model-id>`, where `<provider>` is
+    derived from the inspect API class name (`OpenRouterAPI` → `openrouter`,
+    `AnthropicAPI` → `anthropic`, `OpenAIAPI` → `openai`, ...).
+
+    Example:
+
+        export OPENROUTER_API_KEY=...
+        just eval my-eval openrouter/openai/gpt-4o-mini --solver pi
+        just eval my-eval anthropic/claude-haiku-4-5    --solver pi
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        model = get_model()
+        work_dir = state.store.get("work_dir")
+        if not work_dir:
+            raise RuntimeError("pi() requires a setup that sets work_dir")
+
+        cmd = [
+            "pi",
+            "-p",                # non-interactive: process prompt and exit
+            "--mode", "json",    # JSONL events on stdout
+            "--no-session",      # ephemeral, don't write ~/.pi/agent/sessions/
+            "--model", _pi_model_arg(model),
+        ]
+
+        system_message = "\n\n".join(
+            m.content for m in state.messages if m.role == "system"
+        )
+        if system_message:
+            cmd.extend(["--append-system-prompt", system_message])
+
+        cmd.append(state.input_text)
+
+        env = os.environ.copy()
+
+        await _run_agent_cli(
+            cmd, env=env, cwd=work_dir, state=state, parser=_parse_pi_event
+        )
+        return state
+
+    return solve
+
+
+def _pi_model_arg(model) -> str:
+    """Compose the `provider/model-id` string that pi's `--model` flag expects.
+
+    Inspect's `Model.api` is a provider-specific class (e.g. `OpenRouterAPI`,
+    `AnthropicAPI`). We strip the trailing `API` and lowercase to get pi's
+    provider name. `model.name` is already the bare model id within that
+    provider, so concatenating gives the right `vendor/id` form.
+    """
+    api = getattr(model, "api", None)
+    api_name = type(api).__name__.removesuffix("API").lower() if api else ""
+    if not api_name:
+        return model.name
+    return f"{api_name}/{model.name}"
+
+
+def _parse_pi_event(event: dict, state: TaskState, lookup: dict) -> None:
+    """Translate a pi `--mode json` event into inspect chat messages.
+
+    pi event types we care about:
+
+      message_end          — emitted once for the user message and once for
+                             each assistant message. Assistant messages have
+                             a `content` array of `text` / `thinking` /
+                             `toolCall` blocks.
+      tool_execution_start — fires before a tool runs (`toolCallId`,
+                             `toolName`, `args`).
+      tool_execution_end   — fires after a tool finishes (`toolCallId`,
+                             `toolName`, `result`, `isError`). We emit the
+                             `ChatMessageTool` here so the result is captured.
+    """
+    event_type = event.get("type")
+
+    if event_type == "message_end":
+        message = event.get("message", {})
+        if message.get("role") != "assistant":
+            return
+        for item in message.get("content", []) or []:
+            item_type = item.get("type")
+            if item_type == "text":
+                text = item.get("text") or ""
+                if text:
+                    state.messages.append(
+                        ChatMessageAssistant(content=text, metadata=message)
+                    )
+            elif item_type == "thinking":
+                thinking = item.get("thinking") or ""
+                if thinking:
+                    state.messages.append(
+                        ChatMessageAssistant(
+                            content=f"<thinking>{thinking}</thinking>",
+                            metadata=message,
+                        )
+                    )
+            # toolCall blocks are surfaced via tool_execution_end below,
+            # which has both the call args and the result in one place.
+
+    elif event_type == "tool_execution_start":
+        lookup[event.get("toolCallId")] = event
+
+    elif event_type == "tool_execution_end":
+        start = lookup.pop(event.get("toolCallId"), {})
+        result = event.get("result")
+        if not isinstance(result, str):
+            try:
+                result = json.dumps(result)
+            except (TypeError, ValueError):
+                result = str(result) if result is not None else ""
+        state.messages.append(
+            ChatMessageTool(
+                content=result,
+                function=event.get("toolName"),
+                metadata={"start": start, "end": event},
+            )
+        )

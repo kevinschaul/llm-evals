@@ -11,6 +11,7 @@ User must specify a solver via the CLI, e.g.:
 
     just eval data-journalism-ai-spreadsheets anthropic/claude-sonnet-4-5 --solver claude_code
     just eval data-journalism-ai-spreadsheets openai/gpt-5-codex          --solver codex
+    just eval data-journalism-ai-spreadsheets openrouter/openai/gpt-4o-mini --solver pi
 """
 
 from pathlib import Path
@@ -18,10 +19,18 @@ from pathlib import Path
 from inspect_ai import Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
 
-from agentic import claude_code, cleanup_workdir, codex, copy_fixture, git_diff
+from agentic import (
+    claude_code,
+    cleanup_workdir,
+    codex,
+    copy_fixture,
+    git_diff,
+    pi,
+)
 
-# Re-exported so `--solver claude_code` / `--solver codex` resolves them.
-__all__ = ["claude_code", "codex", "data_journalism_ai_spreadsheets"]
+# Re-exported so `--solver claude_code` / `--solver codex` / `--solver pi`
+# resolves them.
+__all__ = ["claude_code", "codex", "pi", "data_journalism_ai_spreadsheets"]
 
 PROMPT = """\
 The directory `inventories/` contains AI use case inventories that several
