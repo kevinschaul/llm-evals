@@ -3,6 +3,9 @@
 export LMSTUDIO_BASE_URL := env_var("LMSTUDIO_API_BASE") + "/v1"
 export LMSTUDIO_API_KEY := "KEY"
 
+# Make the project root importable so evals can `from agentic import ...`
+export PYTHONPATH := justfile_directory()
+
 # To specify a specific openrouter provider:
 # openrouter/moonshotai/kimi-k2-thinking -M "provider={'order':['moonshotai']}"
 

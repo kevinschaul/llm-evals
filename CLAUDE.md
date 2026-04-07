@@ -68,6 +68,61 @@ just dev      # Start dev server with live reload
 - Components return configuration objects, not rendered elements (Observable Framework limitation)
 - Keep display logic inline in `.md` files where `Inputs` and `display()` are available
 
+## Agentic Evals
+
+Agentic evals run an external coding agent (Claude Code, Codex, ...) inside a
+temporary work directory, then capture `git diff` of whatever the agent changed.
+A diff is usually enough to eyeball how well the agent did, so there's no
+golden-output assertion.
+
+The shared building blocks live in `agentic.py` at the project root. The
+Justfile exports `PYTHONPATH=justfile_directory()` so eval files can
+`from agentic import ...` directly.
+
+`agentic.py` exports:
+
+- **Setups** (prepare a `work_dir` and stash it in `state.store`):
+  - `clone_git_repo(url, commit=None)` — clone+checkout a remote git repo
+  - `copy_fixture(src_dir)` — copy a local fixture directory and `git init` it
+- **Solvers** (agent harnesses, run inside `work_dir`, forward `--model`):
+  - `claude_code()` — runs the `claude` CLI with `stream-json` output
+  - `codex()` — runs `codex exec --json`
+- **Scorer:** `git_diff()` — returns the diff in the score `explanation`,
+  which `extract_results.py` surfaces as the `result` column.
+- **Cleanup:** `cleanup_workdir()` — removes the temp dir.
+
+To add a new agentic eval, create `src/evals/<name>/eval.py`:
+
+```python
+from pathlib import Path
+from inspect_ai import task, Task
+from inspect_ai.dataset import MemoryDataset, Sample
+from agentic import claude_code, codex, copy_fixture, cleanup_workdir, git_diff
+
+# Re-export so `--solver claude_code` / `--solver codex` resolves them.
+__all__ = ["claude_code", "codex", "my_eval"]
+
+@task
+def my_eval() -> Task:
+    return Task(
+        dataset=MemoryDataset([Sample(input="Do the thing.")]),
+        setup=copy_fixture(Path(__file__).parent / "fixture"),
+        cleanup=cleanup_workdir(),
+        scorer=git_diff(),
+    )
+```
+
+Then run it against any model + harness:
+
+```bash
+just eval my-eval anthropic/claude-sonnet-4-5 --solver claude_code
+just eval my-eval openai/gpt-5-codex          --solver codex
+```
+
+The `codex` solver auto-detects when `--model` is an `openrouter/...` model and
+configures the `codex` CLI to route through OpenRouter (requires
+`OPENROUTER_API_KEY`). See `agentic.py` for details.
+
 ## File Patterns
 
 **Eval Configuration (`eval.yaml`):**

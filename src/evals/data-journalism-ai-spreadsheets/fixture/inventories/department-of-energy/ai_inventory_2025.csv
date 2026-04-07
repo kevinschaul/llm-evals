@@ -1,0 +1,6 @@
+use_case_id,name,description,status,contact_email,deployment_year
+DOE-001,Wildfire Risk Forecasting,"Predicts grid-impacting wildfire risk for the Western Interconnection using satellite imagery and weather data.",In Production,wildfire-ai@doe.example.gov,2023
+DOE-002,Substation Anomaly Detection,"Detects anomalies in substation telemetry to flag possible equipment failure before outage.",In Production,grid-ai@doe.example.gov,2022
+DOE-003,Reactor Cooling Optimizer,"Reinforcement-learning controller that tunes cooling water flow rates at research reactors.",Pilot,reactor-ml@doe.example.gov,2024
+DOE-004,FOIA Response Drafter,"Drafts initial responses to FOIA requests using a fine-tuned LLM, reviewed by staff before release.",Pilot,foia-ai@doe.example.gov,2025
+DOE-005,Loan Application Triage,"Triage tool that ranks Loan Programs Office applications by readiness for technical review.",Retired,lpo-ai@doe.example.gov,2021
