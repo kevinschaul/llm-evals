@@ -268,17 +268,11 @@ def claude_code() -> Solver:
 def codex() -> Solver:
     """Run the OpenAI Codex CLI inside `state.store['work_dir']`.
 
-    Auto-detects when the inspect model is an OpenRouter model and rewrites
-    the `codex` invocation to route through `https://openrouter.ai/api/v1`
-    using `OPENROUTER_API_KEY`. This makes it possible to test arbitrary
-    OpenRouter-hosted models against the codex harness:
-
-        export OPENROUTER_API_KEY=...
-        just eval my-eval openrouter/anthropic/claude-3.5-sonnet --solver codex
-        just eval my-eval openrouter/qwen/qwen3-coder            --solver codex
-
-    The model name is passed through to codex unchanged, so it must be in the
-    `vendor/model` form that OpenRouter uses.
+    The model name is forwarded as `codex --model …` and must be one that
+    the local `codex` install knows how to talk to (i.e. an OpenAI model with
+    `OPENAI_API_KEY` set, or whatever provider you've configured in
+    `~/.codex/config.toml`). For OpenRouter-hosted models, use the `pi`
+    solver instead — pi has first-class OpenRouter support out of the box.
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
@@ -292,63 +286,17 @@ def codex() -> Solver:
             "exec",
             "--json",
             "--dangerously-bypass-approvals-and-sandbox",
+            "--model", model.name,
+            state.input_text,
         ]
 
-        env = os.environ.copy()
-        env.pop("OPENAI_API_KEY", None)
-
-        if _is_openrouter(model):
-            if not env.get("OPENROUTER_API_KEY"):
-                raise RuntimeError(
-                    "codex() detected an OpenRouter model but OPENROUTER_API_KEY"
-                    " is not set in the environment."
-                )
-            cmd.extend(_codex_openrouter_overrides())
-
-        cmd.extend(["--model", model.name, state.input_text])
-
         await _run_agent_cli(
-            cmd, env=env, cwd=work_dir, state=state, parser=_parse_codex_event
+            cmd, env=os.environ.copy(), cwd=work_dir, state=state,
+            parser=_parse_codex_event,
         )
         return state
 
     return solve
-
-
-def _is_openrouter(model) -> bool:
-    """True if the inspect model is routed through OpenRouter.
-
-    Checks both the API class name (`type(model.api).__name__`) and the
-    `INSPECT_EVAL_MODEL` env var that inspect-ai sets when running an eval.
-    """
-    api = getattr(model, "api", None)
-    if api is not None and "openrouter" in type(api).__name__.lower():
-        return True
-    full = os.environ.get("INSPECT_EVAL_MODEL", "")
-    return full.startswith("openrouter/")
-
-
-def _codex_openrouter_overrides() -> list[str]:
-    """Return `-c key=value` codex flags that route through OpenRouter.
-
-    Codex's `-c` flag accepts TOML key/value pairs, so string values must be
-    quoted. These flags are equivalent to a `~/.codex/config.toml` containing:
-
-        model_provider = "openrouter"
-
-        [model_providers.openrouter]
-        name     = "OpenRouter"
-        base_url = "https://openrouter.ai/api/v1"
-        env_key  = "OPENROUTER_API_KEY"
-        wire_api = "chat"
-    """
-    return [
-        "-c", 'model_provider="openrouter"',
-        "-c", 'model_providers.openrouter.name="OpenRouter"',
-        "-c", 'model_providers.openrouter.base_url="https://openrouter.ai/api/v1"',
-        "-c", 'model_providers.openrouter.env_key="OPENROUTER_API_KEY"',
-        "-c", 'model_providers.openrouter.wire_api="chat"',
-    ]
 
 
 # ---------------------------------------------------------------------------

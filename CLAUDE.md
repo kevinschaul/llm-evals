@@ -126,12 +126,11 @@ just eval my-eval openai/gpt-5-codex             --solver codex
 just eval my-eval openrouter/openai/gpt-4o-mini  --solver pi
 ```
 
-The `codex` solver auto-detects when `--model` is an `openrouter/...` model and
-configures the `codex` CLI to route through OpenRouter (requires
-`OPENROUTER_API_KEY`). The `pi` solver derives pi's `provider/model-id` form
-from inspect's `Model.api` class name, so it works with any provider pi
-supports (Anthropic, OpenAI, OpenRouter, Google, ...) — just set the
-matching `*_API_KEY`. See `agentic.py` for details.
+The `pi` solver derives pi's `provider/model-id` form from inspect's
+`Model.api` class name, so it works with any provider pi supports
+(Anthropic, OpenAI, OpenRouter, Google, ...) — just set the matching
+`*_API_KEY`. For OpenRouter-hosted models, prefer `pi` over `codex`. See
+`agentic.py` for details.
 
 ## File Patterns
 
