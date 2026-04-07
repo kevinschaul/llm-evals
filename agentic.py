@@ -85,13 +85,23 @@ async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]
 
 
 async def _git_init_commit(work_dir: str) -> None:
-    """Initialize a git repo so `git diff` works after the agent runs."""
+    """Initialize a git repo so `git diff` works after the agent runs.
+
+    `commit.gpgsign=false` is forced because the eval's git history is
+    throwaway — we don't want to depend on (or interact with) the host's
+    commit-signing setup.
+    """
+    git_id = (
+        "-c", "user.email=eval@example.com",
+        "-c", "user.name=eval",
+        "-c", "commit.gpgsign=false",
+        "-c", "tag.gpgsign=false",
+    )
     for cmd in (
         ("git", "init", "-q", "-b", "main"),
-        ("git", "-c", "user.email=eval@example.com", "-c", "user.name=eval",
-         "add", "."),
-        ("git", "-c", "user.email=eval@example.com", "-c", "user.name=eval",
-         "commit", "-q", "--allow-empty", "-m", "initial"),
+        ("git", *git_id, "add", "."),
+        ("git", *git_id, "commit", "-q", "--allow-empty", "--no-gpg-sign",
+         "-m", "initial"),
     ):
         rc, out, err = await _run(*cmd, cwd=work_dir)
         if rc != 0:
