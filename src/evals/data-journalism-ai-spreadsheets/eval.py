@@ -33,30 +33,33 @@ from agentic import (
 __all__ = ["claude_code", "codex", "pi", "data_journalism_ai_spreadsheets"]
 
 PROMPT = """\
-The directory `inventories/` contains AI use case inventories that several
-(fictional) federal agencies have published. The agencies do not coordinate, so
-the files are in different formats (CSV, TSV, JSON) and use different column
-names for the same concepts.
+The directory `data/raw/` contains AI use case inventories that several
+(fictional) federal agencies have published. The agencies do not coordinate,
+so each agency's file is in a different format (CSV, TSV, JSON) and uses
+different column names for the same concepts.
 
-Your job is to consolidate them into a single CSV file at the root of this
-working directory called `consolidated_use_cases.csv` with these normalized
-columns, in this exact order:
+Write a Python script at `scripts/consolidate_inventories.py` that reads
+every raw agency file and writes a single consolidated CSV. Requirements:
 
-    agency,name,description,status,contact,year_deployed
-
-Notes:
-  * `agency` should be a short human-readable agency name inferred from the
-    inventory's directory (e.g. "Department of Energy", "HHS", "DOD",
-    "Treasury").
-  * `status` should be normalized to one of: Pilot, Production, Retired.
-    Map equivalent terms (Operational, Deployed, In Production, etc.) onto
-    these three values.
-  * `year_deployed` should be a 4-digit integer.
-  * Sort the output rows by agency, then by name.
-  * Read every file under `inventories/` — do not skip any rows.
-
-Write any helper code you need, run it, and verify the output is well-formed
-before finishing.
+  * The script should discover agency files under `data/raw/` on its own —
+    don't hard-code the list of agencies.
+  * All output rows should share a consistent set of columns. The columns
+    should contain the same information across agencies even though the
+    raw files name them differently. Pick sensible column names.
+  * Normalize equivalent status values (e.g. "Operational", "Deployed",
+    "In Production") to a consistent vocabulary so the column is
+    comparable across agencies.
+  * Keep the script easy for a human to audit. The Python standard library
+    is fine — don't reach for heavy dependencies.
+  * The script must be safe to rerun. Running it twice in a row should
+    leave the workspace in the same state, not error out or duplicate
+    rows.
+  * While processing, keep a log of any questions or potentially confusing
+    situations (ambiguous status values, missing fields, rows you had to
+    guess on, etc.) so a human can double-check them later. Write the log
+    to a file under `data/` that a reviewer can read.
+  * Run the script once and verify the output CSV looks well-formed
+    before finishing.
 """
 
 

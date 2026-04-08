@@ -1,6 +1,6 @@
 # Federal AI Use Case Inventories (synthetic fixture)
 
-Each subdirectory under `inventories/` contains the AI use case inventory that
+Each subdirectory under `data/raw/` contains the AI use case inventory that
 one (fictional) federal agency has published. The agencies do not coordinate,
 so the files are in different formats and use different column names for the
 same concepts.
