@@ -24,5 +24,9 @@ venvPath = "."
 venv = ".venv"
 extraPaths = ["."]
 
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
 [tool.uv.sources]
 llm-lmstudio = { git = "https://github.com/kevinschaul/llm-lmstudio", branch = "fix/all" }
