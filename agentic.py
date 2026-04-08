@@ -173,16 +173,28 @@ def copy_fixture(src_dir: str | Path) -> Solver:
 
 
 def cleanup_workdir():
-    """Cleanup: remove the temporary work directory created by a setup helper."""
+    """Cleanup: remove the temporary work directory + any solver-owned tmp dirs.
+
+    Solvers may stash auxiliary tmp dirs in `state.store` (e.g. the `pi()`
+    solver writes a temp `models.json` and stashes the dir under
+    `pi_cfg_dir` so this cleanup hook can remove it).
+    """
+
+    def _rm(path: Optional[str]) -> None:
+        if path and os.path.exists(path):
+            shutil.rmtree(path, ignore_errors=True)
 
     async def cleanup(state: TaskState) -> None:
+        loop = asyncio.get_event_loop()
+
         work_dir = state.store.get("work_dir")
-        if not work_dir or not os.path.exists(work_dir):
-            return
-        tmpdir = os.path.dirname(work_dir)
-        await asyncio.get_event_loop().run_in_executor(
-            None, shutil.rmtree, tmpdir, True
-        )
+        if work_dir and os.path.exists(work_dir):
+            tmpdir = os.path.dirname(work_dir)
+            await loop.run_in_executor(None, _rm, tmpdir)
+
+        pi_cfg_dir = state.store.get("pi_cfg_dir")
+        if pi_cfg_dir:
+            await loop.run_in_executor(None, _rm, pi_cfg_dir)
 
     return cleanup
 
@@ -398,21 +410,44 @@ def _parse_codex_event(event: dict, state: TaskState, lookup: dict) -> None:
 
 
 @solver
-def pi() -> Solver:
+def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
     """Run the `pi` coding agent CLI inside `state.store['work_dir']`.
 
     https://github.com/badlogic/pi-mono — pi has first-class OpenRouter
     support out of the box (no provider config gymnastics needed) and a
-    `--mode json` event stream we can hook into. The inspect model spec is
-    forwarded as `pi --model <provider>/<model-id>`, where `<provider>` is
-    derived from the inspect API class name (`OpenRouterAPI` → `openrouter`,
-    `AnthropicAPI` → `anthropic`, `OpenAIAPI` → `openai`, ...).
+    `--mode json` event stream we can hook into.
 
-    Example:
+    Two modes:
 
-        export OPENROUTER_API_KEY=...
-        just eval my-eval openrouter/openai/gpt-4o-mini --solver pi
-        just eval my-eval anthropic/claude-haiku-4-5    --solver pi
+    1. **Cloud / built-in provider** (default). The inspect model spec is
+       forwarded as `pi --model <provider>/<model-id>`, where `<provider>`
+       is derived from the inspect API class name (`OpenRouterAPI` →
+       `openrouter`, `AnthropicAPI` → `anthropic`, ...).
+
+           export OPENROUTER_API_KEY=...
+           just eval my-eval openrouter/openai/gpt-4o-mini --solver pi
+           just eval my-eval anthropic/claude-haiku-4-5    --solver pi
+
+    2. **Custom OpenAI-compatible base URL** (llama-swap, llama-server,
+       Ollama, vLLM, LM Studio, ...). When `base_url` is set (or the
+       `PI_BASE_URL` env var is set at run time), the solver writes a
+       throwaway `models.json` to a temp `pi-cfg-XXXX` directory and
+       points pi at it via `PI_CODING_AGENT_DIR`, so we never touch the
+       user's real `~/.pi/agent/`. The synthesized config has one
+       provider (`provider`, default `llama-swap`) with one model entry
+       whose id is the bare inspect model name. The compat block disables
+       `developer` role and `reasoning_effort` because llama.cpp's server
+       (the common llama-swap backend) supports neither.
+
+           # in the eval:
+           solver=pi(base_url="http://localhost:8080/v1")
+
+           # at run time, --model picks which model llama-swap should swap to:
+           just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
+
+           # or override the URL without editing the eval:
+           PI_BASE_URL=http://other-host:8080/v1 \\
+             just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
@@ -421,12 +456,41 @@ def pi() -> Solver:
         if not work_dir:
             raise RuntimeError("pi() requires a setup that sets work_dir")
 
+        env = os.environ.copy()
+
+        effective_base_url = os.environ.get("PI_BASE_URL", base_url)
+        if effective_base_url:
+            # Custom base URL: synthesize a one-off models.json in a
+            # throwaway PI_CODING_AGENT_DIR so we never touch ~/.pi/.
+            model_id = model.name
+            cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-")
+            models_json = {
+                "providers": {
+                    provider: {
+                        "baseUrl": effective_base_url,
+                        "api": "openai-completions",
+                        "apiKey": "dummy",
+                        "compat": {
+                            "supportsDeveloperRole": False,
+                            "supportsReasoningEffort": False,
+                        },
+                        "models": [{"id": model_id}],
+                    }
+                }
+            }
+            Path(cfg_dir, "models.json").write_text(json.dumps(models_json))
+            env["PI_CODING_AGENT_DIR"] = cfg_dir
+            state.store.set("pi_cfg_dir", cfg_dir)
+            model_arg = f"{provider}/{model_id}"
+        else:
+            model_arg = _pi_model_arg(model)
+
         cmd = [
             "pi",
             "-p",                # non-interactive: process prompt and exit
             "--mode", "json",    # JSONL events on stdout
-            "--no-session",      # ephemeral, don't write ~/.pi/agent/sessions/
-            "--model", _pi_model_arg(model),
+            "--no-session",      # ephemeral, don't write sessions/
+            "--model", model_arg,
         ]
 
         system_message = "\n\n".join(
@@ -436,8 +500,6 @@ def pi() -> Solver:
             cmd.extend(["--append-system-prompt", system_message])
 
         cmd.append(state.input_text)
-
-        env = os.environ.copy()
 
         await _run_agent_cli(
             cmd, env=env, cwd=work_dir, state=state, parser=_parse_pi_event

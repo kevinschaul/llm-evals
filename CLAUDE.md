@@ -87,12 +87,16 @@ Justfile exports `PYTHONPATH=justfile_directory()` so eval files can
 - **Solvers** (agent harnesses, run inside `work_dir`, forward `--model`):
   - `claude_code()` — runs the `claude` CLI with `stream-json` output
   - `codex()` — runs `codex exec --json`
-  - `pi()` — runs the `pi` CLI (https://github.com/badlogic/pi-mono) with
-    `--mode json`. Pi has first-class OpenRouter support out of the box, so
-    any `openrouter/<vendor>/<model>` from inspect's `--model` flag works.
+  - `pi(base_url=None, provider="llama-swap")` — runs the `pi` CLI
+    (https://github.com/badlogic/pi-mono) with `--mode json`. Pi has
+    first-class OpenRouter support out of the box, so any
+    `openrouter/<vendor>/<model>` from inspect's `--model` flag works.
+    Set `base_url` (or `PI_BASE_URL`) to point at a local OpenAI-compatible
+    server like llama-swap, llama-server, Ollama, vLLM, etc. — see below.
 - **Scorer:** `git_diff()` — returns the diff in the score `explanation`,
   which `extract_results.py` surfaces as the `result` column.
-- **Cleanup:** `cleanup_workdir()` — removes the temp dir.
+- **Cleanup:** `cleanup_workdir()` — removes the temp work dir and any
+  per-solver temp dirs (e.g. the synthesized pi config dir).
 
 To add a new agentic eval, create `src/evals/<name>/eval.py`:
 
@@ -131,6 +135,41 @@ The `pi` solver derives pi's `provider/model-id` form from inspect's
 (Anthropic, OpenAI, OpenRouter, Google, ...) — just set the matching
 `*_API_KEY`. For OpenRouter-hosted models, prefer `pi` over `codex`. See
 `agentic.py` for details.
+
+### Local models via llama-swap (or any OpenAI-compatible server)
+
+Pass `base_url` to `pi()` and the solver synthesizes a throwaway
+`models.json` in a temp `pi-cfg-XXXX` dir, points pi at it via
+`PI_CODING_AGENT_DIR`, and forces the `--model` arg to
+`<provider>/<inspect-model-name>`. Nothing in `~/.pi/agent/` is touched.
+The synthesized config sets `compat.supportsDeveloperRole=false` and
+`compat.supportsReasoningEffort=false` because llama.cpp's HTTP server
+(the common llama-swap backend) doesn't recognize the OpenAI `developer`
+role or the `reasoning_effort` field.
+
+```python
+# in the eval, point at your local llama-swap:
+@task
+def my_eval() -> Task:
+    return Task(
+        dataset=MemoryDataset([Sample(input="Do the thing.")]),
+        setup=copy_fixture(Path(__file__).parent / "fixture"),
+        solver=pi(base_url="http://localhost:8080/v1"),
+        cleanup=cleanup_workdir(),
+        scorer=git_diff(),
+    )
+```
+
+```bash
+# pick the model at run time — inspect just needs *some* model spec, so
+# `mockllm/<id>` works as a placeholder. The bare `<id>` is what gets
+# forwarded to pi (and through llama-swap to the underlying server).
+just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
+
+# override the URL without editing the eval:
+PI_BASE_URL=http://other-host:8080/v1 \
+  just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
+```
 
 ## File Patterns
 
