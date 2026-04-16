@@ -1,7 +1,0 @@
-Title	Summary	Stage	Owner	Year Deployed
-Medicare Claims Fraud Detection	Gradient-boosted classifier that flags suspicious Medicare Part B claims for human review by program integrity contractors.	Operational	cms-fraud-ai@hhs.example.gov	2021
-Health Document Translation	Neural machine translation pipeline for translating CDC public health communications into 14 languages.	Operational	cdc-translate@hhs.example.gov	2022
-Clinical Trial Eligibility Matching	NLH model that matches patient records to NIH clinical trial inclusion criteria for recruitment.	Pilot	nih-trials-ai@hhs.example.gov	2024
-Hospital Readmission Risk Score	Predicts 30-day readmission risk to inform discharge planning at VA partner hospitals.	Operational	cms-quality@hhs.example.gov	2020
-Opioid Prescribing Outlier Detection	Flags providers whose opioid prescribing patterns are statistical outliers vs. peer cohorts.	Operational	samhsa-ai@hhs.example.gov	2022
-Grants.gov Application Summarizer	Summarizes long grant applications into one-page briefs for program officers.	Pilot	grants-ai@hhs.example.gov	2025

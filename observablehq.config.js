@@ -8,6 +8,14 @@ export default {
   // lets you organize them into sections and have unlisted pages.
   pages: [
     {
+      name: "Code: Consolidate spreadsheets",
+      path: "/evals/code-consolidate-spreadsheets/",
+    },
+    {
+      name: "Code: Rust feature",
+      path: "/evals/code-rust-feature/",
+    },
+    {
       name: "Article tracking: Trump",
       path: "/evals/article-tracking-trump/",
     },
@@ -30,10 +38,6 @@ export default {
     {
       name: "OCR translation",
       path: "/evals/ocr-translation/",
-    },
-    {
-      name: "Code: Rust feature",
-      path: "/evals/code-rust-feature/",
     },
     {
       name: "Archived",

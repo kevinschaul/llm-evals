@@ -344,6 +344,7 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
 
     lookup: dict = {}
     stderr_lines: list[str] = []
+    event_error_lines: list[str] = []
 
     async def read_stderr():
         while True:
@@ -362,6 +363,15 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
             try:
                 event = json.loads(line.decode())
                 transcript().info(event)
+                if event.get("type") == "error":
+                    message = event.get("message")
+                    if message:
+                        event_error_lines.append(str(message))
+                elif event.get("type") == "turn.failed":
+                    error = event.get("error", {})
+                    message = error.get("message")
+                    if message:
+                        event_error_lines.append(str(message))
                 parser(event, state, lookup)
             except json.JSONDecodeError:
                 transcript().info(line.decode().rstrip())
@@ -370,9 +380,10 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
     await process.wait()
 
     if process.returncode != 0:
+        error_lines = stderr_lines + event_error_lines
         raise RuntimeError(
             f"Agent CLI failed (exit {process.returncode}, cmd={cmd[0]}):\n"
-            + "\n".join(stderr_lines)
+            + "\n".join(error_lines)
         )
 
 

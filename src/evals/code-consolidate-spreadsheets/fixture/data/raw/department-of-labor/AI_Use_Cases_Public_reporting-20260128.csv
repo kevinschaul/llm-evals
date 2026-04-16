@@ -1,0 +1,44 @@
+Use Case ID,Use Case Name,Description,Status
+DOL-02,Language Translation,"Uses natural language processing to quickly and accurately translate documents and communications across multiple languages, eliminating language barriers and improving equitable access to DOL services and information for non-English-speaking stakeholders.",Pre-deployment
+DOL-03,Audio Transcription,"Automatically transcribes voicemails and audio recordings into text to ensure accurate records and enable efficient tracking and follow-up on claims. This allows claims examiners to spend more time on critical adjudication tasks, improving customer service outcomes.",Deployed
+DOL-04,Text to Speech Conversion,"Converts text into realistic, human-sounding speech using neural text-to-speech technology, enhancing accessibility and improving user experience for applications that deliver spoken information for effective training.",Pre-deployment
+DOL-11,Electronic Records Management,"Applies AI and natural language processing to identify metadata, classify, and summarize federal records in compliance with National Archives and Records Administration (NARA) standards, improving efficiency, accuracy, and overall mission effectiveness in records management.",Pre-deployment
+DOL-12,Call Recording Analysis,"Transcribes recorded calls from the DOL Interactive Voice Response center into text, providing accessible transcripts for recordkeeping and trend analysis.",Pre-deployment
+DOL-13,Automatic Document Processing,"Automates the processing of high-volume benefit continuation forms by extracting predefined data elements and identifying cases requiring human review. This reduces examiner workload, shortens adjudication timelines, and improves service delivery for claimants.",Deployed
+DOL-15,Generative AI Assistant (AI Center),"Provides a private, secure in-house generative AI solution that supports tasks such as text summarization, analysis, semantic search, and document comparison, accelerating business processes and improving decision support.",Deployed
+DOL-19,Occupational Employment and Wage Statistics (OEWS) Occupation Autocoder,"Automatically recommends Standard Occupational Classification codes based on job titles and descriptions, improving data accuracy and significantly reducing the time required for human occupational coders.",Deployed
+DOL-20,Scanner Data Product Classification,"Uses machine learning to classify large-scale retail scanner data into Consumer Price Index item categories, enabling real-time processing, improving productivity, and reducing costs while maintaining data quality.",Deployed
+DOL-21,Expenditure Classification Autocoder,"Automatically assigns expense classification categories to Consumer Expenditure Diary Survey responses, improving efficiency and consistency in expenditure data processing.",Deployed
+DOL-22,PII Redaction,"Uses automated personally identifiable information (PII) detection and redaction to remove sensitive data from text fields, dramatically reducing manual effort, processing time, and staffing costs while protecting privacy.",Deployed
+DOL-23,Workforce Recruitment Program Website Chatbot Assistant,"Provides fast, automated responses to common Workforce Recruitment Program inquiries, reducing email volume for staff and delivering quicker support to applicants and stakeholders.",Deployed
+DOL-27,Worker Paid Leave Usage Simulation (Worker PLUS) Microsimulation Program,"An open-source simulation tool that helps policymakers and researchers estimate worker paid leave usage, benefit costs, and administrative impacts under different policy scenarios.",Deployed
+DOL-28,Computer-Assisted Coding: Survey of Occupational Injuries and Illnesses (SOII) Autocoder,"Automatically assigns injury and illness classifications from narrative reports, improving efficiency and data quality while allowing staff to focus on complex or uncertain cases.",Deployed
+DOL-29,Census of Fatal Occupational Injuries (CFOI) Record Matching,"Matches and reconciles records from multiple data sources to identify missing or inconsistent information in fatal occupational injury data, improving efficiency and data quality.",Deployed
+DOL-32,Note Taking Bot,"Automatically summarizes meeting transcripts into concise, searchable notes, reducing manual documentation effort and improving productivity and information sharing.",Deployed
+DOL-35,Current Population Survey Off-the Clock (CPS OTC) Prediction,"Uses machine learning to impute missing off-the-clock work data in survey responses, improving statistical accuracy and efficiency in labor productivity calculations.",Deployed
+DOL-36,Sample Refinement: Frame API,"Uses machine learning techniques to compare and update establishment data for survey samples, significantly improving efficiency and data quality during sample refinement.",Deployed
+DOL-37,Consumer Expenditure (CE) Interview Item Code Estimation,"Recommends expense classification categories and flags potential misclassifications for human review, improving overall data quality in consumer expenditure surveys.",Deployed
+DOL-38,Consumer Expenditure (CE) Interview Imputations,"Applies advanced statistical techniques to estimate missing expenditure values, improving completeness and reliability of consumer expenditure data.",Deployed
+DOL-39,Quarterly Census of Employment and Wages (QCEW) North American Industry Classification System (NAICS) Autocoder,"Recommends likely industry classification codes for records missing NAICS data, reducing reviewer burden, lowering administrative costs, and improving data completeness.",Pilot
+DOL-40,Comment Actionability Likelihood Score,"Automatically scores public feedback comments based on their likelihood of being actionable, helping staff prioritize review efforts and reduce administrative burden.",Deployed
+DOL-41,Computer-Assisted Review: Occupational Requirements Survey (ORS) Autocoder,"Automatically reviews and clears certain survey data flags, allowing staff to focus on records most-likely-to-contain errors while improving efficiency and data quality.",Pre-deployment
+DOL-42,Producer Price Index (PPI) Price Tolerance Prediction,"Uses historical and seasonal trends to recommend price tolerance boundaries, improving the statistical quality of outlier detection in producer price data.",Deployed
+DOL-43,Employee Benefits Security Administration (EBSA) Case File Summarization,"Automatically summarizes and describes investigation documents, reducing manual review time and accelerating the early stages of EBSA investigations.",Pre-deployment
+DOL-45,Natural Language Processing (NLP) Tool for Bureau of International Labor Affairs (ILAB),"Uses retrieval-augmented generation to summarize and synthesize large volumes of evaluation reports and public comments, increasing efficiency and improving access to insights.",Pre-deployment
+DOL-46,DAISI (DOL AI Search Insights),"Retrieves and summarizes information from internal DOL sources, enabling faster and more effective information discovery.",Deployed
+DOL-47,Employment and Training Administration (ETA) Grants Monitoring Tool through Doc Explorer,"Automates grant document review to identify anomalies, delays, and compliance issues, saving time during site visits and improving monitoring accuracy and efficiency.",Deployed
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,

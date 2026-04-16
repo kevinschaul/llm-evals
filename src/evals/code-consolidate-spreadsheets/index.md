@@ -1,12 +1,6 @@
-# Data journalism: consolidate federal AI use case spreadsheets
+# Code: consolidate spreadsheets
 
-Inspired by [How I used Claude Code in a real data journalism project](https://kschaul.com/post/2026/02/09/2026-02-09-ai-data-journalism/). The agent gets a directory of (synthetic) federal-agency AI use case inventories in different formats and column names, and is asked to consolidate them into a single normalized CSV.
-
-**Starting state:** [`fixture/`](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/data-journalism-ai-spreadsheets/fixture) — four inventories from four (fictional) agencies, in CSV, TSV, and JSON.
-
-**Expected output:** `consolidated_use_cases.csv` at the root of the working directory with columns `agency,name,description,status,contact,year_deployed`, status normalized to `Pilot`/`Production`/`Retired`, sorted by agency then name.
-
-[View on GitHub](https://github.com/kevinschaul/llm-evals/tree/main/src/evals/data-journalism-ai-spreadsheets)
+A subset of a real data journalism task described in the blog post [How I used Claude Code in a real data journalism project](https://kschaul.com/post/2026/02/09/2026-02-09-ai-data-journalism/). The agent gets a directory of federal-agency AI use case inventories in different formats and column names, and is asked to consolidate them into a single normalized CSV.
 
 ```js
 import { table } from "npm:@observablehq/inputs"

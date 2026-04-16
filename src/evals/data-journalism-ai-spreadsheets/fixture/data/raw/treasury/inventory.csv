@@ -1,7 +1,0 @@
-"Use Case Name","Description","Phase","Office Contact","Year"
-"Tax Return Anomaly Scoring","Scores individual tax returns for anomaly likelihood, used to prioritize examiner workload at the IRS.","Production","irs-anomaly-ai@treasury.example.gov","2019"
-"Sanctions Name Matching","Fuzzy-matches transaction parties against OFAC sanctions lists, with an LLM-based disambiguation step.","Production","ofac-ai@treasury.example.gov","2023"
-"Currency Counterfeit Detection","Computer vision model running on Bureau of Engraving and Printing inspection lines to flag suspect notes.","Production","bep-ai@treasury.example.gov","2022"
-"Public Comment Summarization","Summarizes public comments on Treasury rulemakings into themed clusters for staff review.","Pilot","public-comment-ai@treasury.example.gov","2024"
-"Customer Service Chatbot","LLM-powered chatbot answering general TreasuryDirect savings bond questions, with handoff to a human agent.","Pilot","treasurydirect-ai@treasury.example.gov","2025"
-"Foreign Investment Risk Triage","Triage tool that ranks CFIUS filings by national-security review priority.","Pilot","cfius-ai@treasury.example.gov","2024"

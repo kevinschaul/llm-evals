@@ -1,7 +1,6 @@
-# openai-api/llmstudio/XX
-#export LMSTUDIO_BASE_URL := "http://127.0.0.1:1234/v1"
-export LMSTUDIO_BASE_URL := env_var("LMSTUDIO_API_BASE") + "/v1"
-export LMSTUDIO_API_KEY := "KEY"
+# openai-api/llama-cpp/XX
+export LLAMA_CPP_API_KEY := env_var_or_default("LLAMA_CPP_API_KEY", "KEY")
+export LLAMA_CPP_BASE_URL := env_var_or_default("LLAMA_CPP_BASE_URL", "http://box.local:1112/v1")
 
 # Make the project root importable so evals can `from agentic import ...`
 export PYTHONPATH := justfile_directory()
