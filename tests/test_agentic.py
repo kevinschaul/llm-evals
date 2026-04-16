@@ -575,18 +575,20 @@ def test_copy_fixture_and_git_diff_capture_modifications(tmp_path):
     Path(work_dir, "hello.txt").write_text("modified\n")
     Path(work_dir, "new.txt").write_text("created by agent\n")
 
+    # cleanup_workdir() captures the diff into state.store before deleting,
+    # because inspect_ai's Plan.cleanup runs *before* scoring.
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(work_dir), "cleanup should remove the work_dir"
+
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "C"
     assert "modified" in score.explanation
     assert "new.txt" in score.explanation
     assert "hello.txt" in score.explanation
 
-    # Cleanup the temp dir the fixture setup created
-    asyncio.run(agentic.cleanup_workdir()(state))
 
-
-def test_git_diff_returns_incorrect_when_no_workdir():
+def test_git_diff_returns_incorrect_when_no_diff_in_store():
     state = make_task_state(work_dir=None)
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "I"
-    assert "no work_dir" in score.explanation
+    assert "no diff" in score.explanation

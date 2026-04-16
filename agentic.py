@@ -173,10 +173,17 @@ def copy_fixture(src_dir: str | Path) -> Solver:
 
 
 def cleanup_workdir():
-    """Cleanup: remove the temporary work directory + any solver-owned tmp dirs.
+    """Cleanup: capture the work-dir diff, then remove temp dirs.
 
-    Solvers may stash auxiliary tmp dirs in `state.store` (e.g. the `pi()`
-    solver writes a temp `models.json` and stashes the dir under
+    inspect_ai runs Plan cleanup *before* the scorer (see
+    `inspect_ai.solver._plan.Plan.__call__`'s `finally:` block), so a scorer
+    that tries to read `work_dir` after cleanup will get FileNotFoundError.
+    To work around that we capture `git diff` here while the dir still
+    exists and stash it on `state.store["diff"]`. The `git_diff()` scorer
+    just reads from the store.
+
+    Solvers may also stash auxiliary tmp dirs in `state.store` (e.g. the
+    `pi()` solver writes a temp `models.json` and stashes the dir under
     `pi_cfg_dir` so this cleanup hook can remove it).
     """
 
@@ -189,6 +196,16 @@ def cleanup_workdir():
 
         work_dir = state.store.get("work_dir")
         if work_dir and os.path.exists(work_dir):
+            # Capture diff before we wipe the dir.
+            await _run("git", "add", "-N", ".", cwd=work_dir)
+            rc, out, err = await _run("git", "diff", cwd=work_dir)
+            if rc == 0:
+                state.store.set("diff", out.decode(errors="replace"))
+            else:
+                state.store.set(
+                    "diff",
+                    f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
+                )
             tmpdir = os.path.dirname(work_dir)
             await loop.run_in_executor(None, _rm, tmpdir)
 
@@ -206,22 +223,16 @@ def cleanup_workdir():
 
 @scorer(metrics=[])
 def git_diff() -> Scorer:
-    """Score by capturing `git diff` of the work directory."""
+    """Score by surfacing the `git diff` captured by `cleanup_workdir()`."""
 
     async def score(state: TaskState, target: Target) -> Score:
-        work_dir = state.store.get("work_dir")
-        if not work_dir:
-            return Score(value="I", explanation="(no work_dir set)")
-
-        rc, out, err = await _run("git", "add", "-N", ".", cwd=work_dir)
-        if rc != 0:
-            raise RuntimeError(f"git add -N failed:\n{out.decode()}\n{err.decode()}")
-
-        rc, out, err = await _run("git", "diff", cwd=work_dir)
-        if rc != 0:
-            raise RuntimeError(f"git diff failed:\n{out.decode()}\n{err.decode()}")
-
-        return Score(value="C", explanation=out.decode(errors="replace"))
+        diff = state.store.get("diff")
+        if diff is None:
+            return Score(
+                value="I",
+                explanation="(no diff in state.store — did cleanup_workdir() run?)",
+            )
+        return Score(value="C", explanation=diff)
 
     return score
 
