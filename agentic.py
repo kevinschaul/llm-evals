@@ -30,13 +30,14 @@ To add a new agentic eval, create `src/evals/<name>/eval.py`:
     from pathlib import Path
     from inspect_ai import task, Task
     from inspect_ai.dataset import MemoryDataset, Sample
-    from agentic import copy_fixture, cleanup_workdir, git_diff
+    from agentic import claude_code, codex, pi, copy_fixture, cleanup_workdir, git_diff, require_solver
 
     @task
     def my_eval() -> Task:
         return Task(
             dataset=MemoryDataset([Sample(input="Do the thing.")]),
             setup=copy_fixture(Path(__file__).parent / "fixture"),
+            solver=require_solver(),
             cleanup=cleanup_workdir(),
             scorer=git_diff(),
         )
@@ -243,6 +244,28 @@ def git_diff() -> Scorer:
 
 
 @solver
+def require_solver() -> Solver:
+    """Placeholder solver that raises an error asking the user to pick one.
+
+    Set this as the default solver in agentic Tasks so that forgetting
+    ``--solver`` produces a clear error instead of a silent no-op.
+
+        solver=require_solver()
+
+    When the user passes ``--solver claude_code`` (or codex/pi) on the CLI,
+    inspect_ai replaces this with the chosen solver before running.
+    """
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        raise RuntimeError(
+            "No solver specified. Re-run with --solver claude_code, "
+            "--solver codex, or --solver pi."
+        )
+
+    return solve
+
+
+@solver
 def claude_code() -> Solver:
     """Run the Claude Code CLI inside `state.store['work_dir']`.
 
@@ -340,6 +363,7 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
         env=env,
+        limit=10 * 1024 * 1024,  # 10MB — claude events can be large
     )
 
     lookup: dict = {}
@@ -370,6 +394,10 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
                 elif event.get("type") == "turn.failed":
                     error = event.get("error", {})
                     message = error.get("message")
+                    if message:
+                        event_error_lines.append(str(message))
+                elif event.get("type") == "result" and event.get("is_error"):
+                    message = event.get("result")
                     if message:
                         event_error_lines.append(str(message))
                 parser(event, state, lookup)

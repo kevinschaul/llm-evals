@@ -10,12 +10,8 @@ from agentic import (
     copy_fixture,
     git_diff,
     pi,
+    require_solver,
 )
-
-# Re-exported so `--solver claude_code` / `--solver codex` / `--solver pi`
-# resolves them.
-# TODO what?
-__all__ = ["claude_code", "codex", "pi", "code_consolidate_spreadsheets"]
 
 PROMPT = """\
 The directory `data/raw/` contains AI use case inventories that several
@@ -33,6 +29,7 @@ def code_consolidate_spreadsheets() -> Task:
     return Task(
         dataset=MemoryDataset([Sample(input=PROMPT)]),
         setup=copy_fixture(Path(__file__).parent / "fixture"),
+        solver=require_solver(),
         cleanup=cleanup_workdir(),
         scorer=git_diff(),
     )

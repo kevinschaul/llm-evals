@@ -17,11 +17,8 @@ from agentic import (
     codex,
     git_diff,
     pi,
+    require_solver,
 )
-
-# Re-exported so `--solver claude_code` / `--solver codex` / `--solver pi`
-# resolves them.
-__all__ = ["claude_code", "codex", "pi", "code_rust_feature"]
 
 REPO_URL = "https://github.com/kevinschaul/jump-start-tools.git"
 COMMIT_ID = "de15260b46318c29f6b2435ff068fb9c42fc2806"
@@ -41,6 +38,7 @@ def code_rust_feature() -> Task:
             ]
         ),
         setup=clone_git_repo(REPO_URL, COMMIT_ID),
+        solver=require_solver(),
         cleanup=cleanup_workdir(),
         scorer=git_diff(),
     )
