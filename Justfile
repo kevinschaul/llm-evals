@@ -11,6 +11,12 @@ export PYTHONPATH := justfile_directory()
 default:
     @just --list
 
+# Install dependencies and git hooks
+install:
+    uv sync
+    npm install
+    uv run pre-commit install
+
 # Run all evals against a model. Example: just eval-all anthropic/claude-3-5-sonnet-20241022
 eval-all model *ARGS:
     just eval grab-bag {{model}} {{ARGS}}
@@ -39,3 +45,15 @@ inspect:
 # Start Observable Framework dashboard
 dev:
     npm run dev
+
+# Scan repo for secrets, including inside .eval zip archives
+scan-secrets:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    gitleaks -v dir
+    tmpdir=$(mktemp -d)
+    trap "rm -rf $tmpdir" EXIT
+    for f in logs/*.eval; do
+        cp "$f" "$tmpdir/$(basename $f .eval).zip"
+    done
+    gitleaks -v dir --max-archive-depth 1 "$tmpdir"

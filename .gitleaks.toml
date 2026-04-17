@@ -1,0 +1,17 @@
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+  regexTarget = "line"
+  regexes = [
+    '''checksum = ''',
+  ]
+  paths = [
+    '''.venv''',
+    '''node_modules''',
+    '''dist''',
+    '''.pytest_cache''',
+    '''.observablehq''',
+  ]

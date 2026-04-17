@@ -6,19 +6,9 @@ Because we should all have our own set of LLM evals. [Blog post](https://kschaul
 
 ## Installation
 
-Python stuff:
 ```
-uv sync
-```
-
-Node stuff:
-```
-npm install
-```
-
-just:
-```
-brew install just
+brew install just gitleaks
+just install
 ```
 
 ## Running the evals
