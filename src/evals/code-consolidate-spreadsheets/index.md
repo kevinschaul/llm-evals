@@ -13,7 +13,7 @@ const results = FileAttachment("results/results.csv").csv({ typed: false })
 ```js
 const selection = view(
   table(results, {
-    columns: ["provider_id", "solver", "score_check_output", "result", "duration_ms"],
+    columns: ["model", "solver", "score_check_output", "result", "duration_ms"],
     header: {
       score_check_output: "checks",
     },
@@ -32,6 +32,13 @@ const selection = view(
 ```
 
 ## Checks
+
+```js
+if (selection) {
+  const parts = [selection.full_model, selection.openrouter_provider].filter(Boolean)
+  display(html`<p style="font-size:13px;color:#666;margin-bottom:8px">${parts.join(" · ")}</p>`)
+}
+```
 
 ```js
 if (selection) {

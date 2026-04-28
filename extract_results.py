@@ -13,15 +13,20 @@ from collections import defaultdict
 from inspect_ai.log import read_eval_log
 
 
+def extract_openrouter_provider(log):
+    """Return the OpenRouter sub-provider if one was specified, else empty string."""
+    args = getattr(log.eval, 'model_args', None) or {}
+    order = (args.get('provider') or {}).get('order') or []
+    return order[0] if order else ""
+
+
 def extract_provider_id_from_log(log):
-    """Extract provider ID from the model name"""
+    """Return a dedup key that includes the model leaf name and, for OpenRouter
+    runs with an explicit provider, a disambiguating suffix."""
     model = log.eval.model
-    # Try to extract a clean provider ID
-    # Examples: "openai/gpt-4o-mini" -> "gpt-4o-mini"
-    #          "anthropic/claude-opus-4-0" -> "claude-opus-4-0"
-    if '/' in model:
-        return model.split('/')[-1]
-    return model
+    leaf = model.split('/')[-1] if '/' in model else model
+    sub = extract_openrouter_provider(log)
+    return f"{leaf} ({sub})" if sub else leaf
 
 
 def get_latest_logs_per_model(log_files):
@@ -131,8 +136,12 @@ def generate_results_csv(log_files, output_path):
                 # Timestamp
                 timestamp = log.eval.created
 
+                leaf = log.eval.model.split('/')[-1] if '/' in log.eval.model else log.eval.model
                 results.append({
                     'provider_id': provider_id,
+                    'model': leaf,
+                    'full_model': log.eval.model,
+                    'openrouter_provider': extract_openrouter_provider(log),
                     'prompt_id': 'prompt-1',
                     'test': test_id,
                     'prompt': prompt,
@@ -153,8 +162,9 @@ def generate_results_csv(log_files, output_path):
     # Write results.csv
     if results:
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
-            base_fields = ['provider_id', 'prompt_id', 'test', 'prompt', 'result',
-                           'error', 'duration_ms', 'passed', 'expected', 'timestamp', 'solver']
+            base_fields = ['provider_id', 'model', 'full_model', 'openrouter_provider', 'prompt_id',
+                           'test', 'prompt', 'result', 'error', 'duration_ms', 'passed',
+                           'expected', 'timestamp', 'solver']
             extra_fields = [k for k in results[0] if k not in base_fields]
             fieldnames = base_fields + extra_fields
             writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')

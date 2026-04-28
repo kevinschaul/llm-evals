@@ -320,11 +320,10 @@ def claude_code() -> Solver:
 def codex() -> Solver:
     """Run the OpenAI Codex CLI inside `state.store['work_dir']`.
 
-    The model name is forwarded as `codex --model …` and must be one that
-    the local `codex` install knows how to talk to (i.e. an OpenAI model with
-    `OPENAI_API_KEY` set, or whatever provider you've configured in
-    `~/.codex/config.toml`). For OpenRouter-hosted models, use the `pi`
-    solver instead — pi has first-class OpenRouter support out of the box.
+    The model name is forwarded as `codex --model …`. OpenRouter models
+    (``openrouter/<vendor>/<model>``) are supported automatically — the solver
+    passes ``-c model_provider=openrouter`` so codex routes through OpenRouter
+    using ``OPENROUTER_API_KEY``.
     """
 
     async def solve(state: TaskState, generate: Generate) -> TaskState:
@@ -333,14 +332,17 @@ def codex() -> Solver:
         if not work_dir:
             raise RuntimeError("codex() requires a setup that sets work_dir")
 
+        is_openrouter = type(model.api).__name__ == "OpenRouterAPI"
         cmd = [
             "codex",
             "exec",
             "--json",
             "--dangerously-bypass-approvals-and-sandbox",
             "--model", model.name,
-            state.input_text,
         ]
+        if is_openrouter:
+            cmd += ["-c", "model_provider=openrouter"]
+        cmd.append(state.input_text)
 
         await _run_agent_cli(
             cmd, env=os.environ.copy(), cwd=work_dir, state=state,
@@ -469,7 +471,7 @@ def _parse_codex_event(event: dict, state: TaskState, lookup: dict) -> None:
 def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
     """Run the `pi` coding agent CLI inside `state.store['work_dir']`.
 
-    https://github.com/badlogic/pi-mono — pi has first-class OpenRouter
+    https://pi.dev — pi has first-class OpenRouter
     support out of the box (no provider config gymnastics needed) and a
     `--mode json` event stream we can hook into.
 

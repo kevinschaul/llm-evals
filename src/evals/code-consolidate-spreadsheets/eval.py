@@ -39,9 +39,9 @@ async def _capture(state: TaskState, work_dir: str) -> None:
     state.store.set("py_files", [str(p.relative_to(root)) for p in py_files])
     csv_path = root / "data" / "clean" / "consolidated.csv"
     if csv_path.exists():
-        text = csv_path.read_text(errors="replace")
-        # subtract 1 for the header row
-        state.store.set("consolidated_csv_rows", len(text.splitlines()) - 1)
+        import csv
+        with csv_path.open(newline="", errors="replace") as f:
+            state.store.set("consolidated_csv_rows", sum(1 for _ in csv.reader(f)) - 1)
     else:
         state.store.set("consolidated_csv_rows", None)
 
