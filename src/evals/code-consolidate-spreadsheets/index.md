@@ -13,18 +13,35 @@ const results = FileAttachment("results/results.csv").csv({ typed: false })
 ```js
 const selection = view(
   table(results, {
-    columns: ["provider_id", "solver", "prompt", "result", "duration_ms"],
+    columns: ["provider_id", "solver", "score_check_output", "result", "duration_ms"],
+    header: {
+      score_check_output: "checks",
+    },
     format: {
       duration_ms: (d) => (d != null ? `${Math.round(d)}ms` : ""),
     },
     align: {
       duration_ms: "right",
+      score_check_output: "center",
     },
     layout: "fixed",
     required: false,
     multiple: false,
   }),
 )
+```
+
+## Checks
+
+```js
+if (selection) {
+  const explanation = selection.score_check_output_explanation
+  if (explanation) {
+    display(html`<pre style="font-size: 13px">${explanation}</pre>`)
+  }
+} else {
+  display(html`<p><em>Select a row above to see check details</em></p>`)
+}
 ```
 
 ## Git diff

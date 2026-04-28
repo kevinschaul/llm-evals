@@ -173,7 +173,7 @@ def copy_fixture(src_dir: str | Path) -> Solver:
 # ---------------------------------------------------------------------------
 
 
-def cleanup_workdir():
+def cleanup_workdir(on_finish=None):
     """Cleanup: capture the work-dir diff, then remove temp dirs.
 
     inspect_ai runs Plan cleanup *before* the scorer (see
@@ -186,6 +186,10 @@ def cleanup_workdir():
     Solvers may also stash auxiliary tmp dirs in `state.store` (e.g. the
     `pi()` solver writes a temp `models.json` and stashes the dir under
     `pi_cfg_dir` so this cleanup hook can remove it).
+
+    `on_finish`, if provided, is called as `await on_finish(state, work_dir)`
+    before the directory is deleted. Use it to capture additional state for
+    eval-specific scorers.
     """
 
     def _rm(path: Optional[str]) -> None:
@@ -207,6 +211,8 @@ def cleanup_workdir():
                     "diff",
                     f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
                 )
+            if on_finish:
+                await on_finish(state, work_dir)
             tmpdir = os.path.dirname(work_dir)
             await loop.run_in_executor(None, _rm, tmpdir)
 

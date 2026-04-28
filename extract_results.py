@@ -98,6 +98,7 @@ def generate_results_csv(log_files, output_path):
                 passed = ""
                 expected = sample.target or ""
 
+                extra_scores: dict[str, Any] = {}
                 if sample.scores:
                     # Get the first score
                     score = list(sample.scores.values())[0]
@@ -116,6 +117,11 @@ def generate_results_csv(log_files, output_path):
                     # use that as the result instead of the model output
                     if score.explanation and len(score.explanation) > len(result):
                         result = score.explanation
+
+                    # Extract additional scorer values as extra columns
+                    for name, s in list(sample.scores.items())[1:]:
+                        extra_scores[f"score_{name}"] = s.value
+                        extra_scores[f"score_{name}_explanation"] = s.explanation or ""
 
                 # Duration - convert from seconds to milliseconds
                 duration_ms = None
@@ -137,6 +143,7 @@ def generate_results_csv(log_files, output_path):
                     'expected': expected,
                     'timestamp': timestamp,
                     'solver': solver,
+                    **extra_scores,
                 })
 
         except Exception as e:
@@ -146,9 +153,11 @@ def generate_results_csv(log_files, output_path):
     # Write results.csv
     if results:
         with open(output_path, 'w', newline='', encoding='utf-8') as f:
-            fieldnames = ['provider_id', 'prompt_id', 'test', 'prompt', 'result',
-                         'error', 'duration_ms', 'passed', 'expected', 'timestamp', 'solver']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            base_fields = ['provider_id', 'prompt_id', 'test', 'prompt', 'result',
+                           'error', 'duration_ms', 'passed', 'expected', 'timestamp', 'solver']
+            extra_fields = [k for k in results[0] if k not in base_fields]
+            fieldnames = base_fields + extra_fields
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
             writer.writeheader()
             writer.writerows(results)
 
