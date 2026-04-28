@@ -105,26 +105,33 @@ def generate_results_csv(log_files, output_path):
 
                 extra_scores: dict[str, Any] = {}
                 if sample.scores:
-                    # Get the first score
-                    score = list(sample.scores.values())[0]
-                    if score.value is not None:
-                        # Handle different score formats:
-                        # - String: 'C' (correct) or 'I' (incorrect)
-                        # - Numeric: 1.0 (pass) or 0.0 (fail)
-                        if isinstance(score.value, str):
-                            passed = "True" if score.value == 'C' else "False"
-                        elif isinstance(score.value, (int, float)):
-                            passed = "True" if score.value == 1.0 else "False"
+                    # Use git_diff explanation as the result if present; it holds
+                    # the patch that the agent produced. Fall back to whichever
+                    # scorer has the longest explanation.
+                    git_diff_score = sample.scores.get("git_diff")
+                    if git_diff_score and git_diff_score.explanation:
+                        result = git_diff_score.explanation
+                    else:
+                        for s in sample.scores.values():
+                            if s.explanation and len(s.explanation) > len(result):
+                                result = s.explanation
+
+                    # Derive passed from the first non-git_diff score if available,
+                    # otherwise fall back to the first score.
+                    primary = next(
+                        (s for name, s in sample.scores.items() if name != "git_diff"),
+                        list(sample.scores.values())[0],
+                    )
+                    if primary.value is not None:
+                        if isinstance(primary.value, str):
+                            passed = "True" if primary.value == "C" else "False"
+                        elif isinstance(primary.value, (int, float)):
+                            passed = "True" if primary.value == 1.0 else "False"
                         else:
                             passed = "False"
 
-                    # For evals where the score explanation contains the actual result (e.g., git diffs),
-                    # use that as the result instead of the model output
-                    if score.explanation and len(score.explanation) > len(result):
-                        result = score.explanation
-
-                    # Extract additional scorer values as extra columns
-                    for name, s in list(sample.scores.items())[1:]:
+                    # Extract ALL scorers as named extra columns.
+                    for name, s in sample.scores.items():
                         extra_scores[f"score_{name}"] = s.value
                         extra_scores[f"score_{name}_explanation"] = s.explanation or ""
 
@@ -188,7 +195,9 @@ def generate_aggregate_csv(log_files, output_path):
         'failed': 0,
         'no_assertions': 0,
         'errors': 0,
-        'durations': []
+        'durations': [],
+        'metric_sum': 0.0,
+        'metric_count': 0,
     })
 
     # Deduplicate: keep only the most recent log file per model
@@ -206,18 +215,28 @@ def generate_aggregate_csv(log_files, output_path):
 
             agg = aggregates[key]
 
-            # Get stats from results
+            # Get stats from results — prefer whichever scorer has metrics
             if log.results.scores:
-                score_data = log.results.scores[0]
+                score_data = next(
+                    (s for s in log.results.scores if s.metrics),
+                    log.results.scores[0],
+                )
                 agg['total_tests'] += log.results.total_samples
                 agg['assertions'] += score_data.scored_samples
 
-                # Calculate passed/failed from accuracy
-                if score_data.metrics and 'accuracy' in score_data.metrics:
-                    accuracy = score_data.metrics['accuracy'].value
-                    passed_count = int(accuracy * score_data.scored_samples)
+                # Support both accuracy (binary C/I scorers) and mean (float scorers)
+                metric_value = None
+                if score_data.metrics:
+                    for key_name in ('accuracy', 'mean'):
+                        if key_name in score_data.metrics:
+                            metric_value = score_data.metrics[key_name].value
+                            break
+                if metric_value is not None:
+                    passed_count = round(metric_value * score_data.scored_samples)
                     agg['passed'] += passed_count
                     agg['failed'] += score_data.scored_samples - passed_count
+                    agg['metric_sum'] += metric_value
+                    agg['metric_count'] += 1
 
                 agg['no_assertions'] += score_data.unscored_samples or 0
 
@@ -228,7 +247,12 @@ def generate_aggregate_csv(log_files, output_path):
     # Convert to list and calculate rates
     aggregate_rows = []
     for (provider_id, prompt_id), agg in sorted(aggregates.items()):
-        pass_rate = round(agg['passed'] / agg['assertions'] * 100, 1) if agg['assertions'] > 0 else 0
+        if agg['metric_count'] > 0:
+            pass_rate = round(agg['metric_sum'] / agg['metric_count'] * 100, 1)
+        elif agg['assertions'] > 0:
+            pass_rate = round(agg['passed'] / agg['assertions'] * 100, 1)
+        else:
+            pass_rate = 0
         avg_duration = round(sum(agg['durations']) / len(agg['durations']), 1) if agg['durations'] else None
         min_duration = min(agg['durations']) if agg['durations'] else None
         max_duration = max(agg['durations']) if agg['durations'] else None

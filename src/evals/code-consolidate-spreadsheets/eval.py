@@ -2,7 +2,7 @@ from pathlib import Path
 
 from inspect_ai import Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
-from inspect_ai.scorer import Score, Scorer, Target, scorer
+from inspect_ai.scorer import Score, Scorer, Target, mean, scorer
 from inspect_ai.solver import TaskState
 
 from agentic import (
@@ -46,7 +46,7 @@ async def _capture(state: TaskState, work_dir: str) -> None:
         state.store.set("consolidated_csv_rows", None)
 
 
-@scorer(metrics=[])
+@scorer(metrics=[mean()])
 def check_output() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
         py_files = state.store.get("py_files", [])
@@ -66,7 +66,7 @@ def check_output() -> Scorer:
         if py_files:
             explanation += f"\n  py files: {', '.join(py_files)}"
 
-        return Score(value=f"{passed}/{len(checks)}", explanation=explanation)
+        return Score(value=float(passed) / len(checks), explanation=explanation)
 
     return score
 

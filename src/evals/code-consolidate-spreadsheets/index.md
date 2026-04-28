@@ -11,18 +11,39 @@ const results = FileAttachment("results/results.csv").csv({ typed: false })
 ## Results
 
 ```js
+function parseChecks(explanation) {
+  if (!explanation) return { passed: 0, failed: 0, total: 0 }
+  const lines = explanation.split("\n")
+  const passed = lines.filter((l) => l.startsWith("✓")).length
+  const failed = lines.filter((l) => l.startsWith("✗")).length
+  return { passed, failed, total: passed + failed }
+}
+
+const rows = results.map((r) => {
+  const checks = parseChecks(r.score_check_output_explanation)
+  return {
+    ...r,
+    assertions: checks.total || null,
+    passed: checks.passed || null,
+    failed: checks.failed || null,
+    pass_rate: checks.total > 0 ? checks.passed / checks.total : null,
+  }
+})
+
 const selection = view(
-  table(results, {
-    columns: ["model", "solver", "score_check_output", "result", "duration_ms"],
-    header: {
-      score_check_output: "checks",
-    },
+  table(rows, {
+    columns: ["model", "solver", "assertions", "passed", "failed", "pass_rate", "duration_ms"],
+    header: { pass_rate: "pass rate" },
     format: {
+      pass_rate: (d) => (d != null ? `${Math.round(d * 100)}%` : ""),
       duration_ms: (d) => (d != null ? `${Math.round(d)}ms` : ""),
     },
     align: {
+      assertions: "right",
+      passed: "right",
+      failed: "right",
+      pass_rate: "right",
       duration_ms: "right",
-      score_check_output: "center",
     },
     layout: "fixed",
     required: false,
