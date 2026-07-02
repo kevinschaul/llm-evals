@@ -14,7 +14,7 @@ from agentic import (
     git_diff,
     pi,
     require_solver,
-    serve_site,
+    serve_site_archive,
 )
 
 # Re-export so `--solver claude_code` / `--solver codex` / `--solver pi` resolves.
@@ -74,7 +74,7 @@ def check_output() -> Scorer:
 def code_atom_cumulative_downloads() -> Task:
     return Task(
         dataset=MemoryDataset([Sample(input=PROMPT)]),
-        setup=serve_site(HERE / "site"),
+        setup=serve_site_archive(HERE / "site.tar.gz"),
         solver=require_solver(),
         cleanup=cleanup_workdir(capture=[OUTPUT]),
         scorer=[git_diff(), check_output()],

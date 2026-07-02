@@ -13,6 +13,7 @@ import asyncio
 import json
 import os
 import shutil
+import tarfile
 import tempfile
 import urllib.request
 from pathlib import Path
@@ -675,3 +676,32 @@ def test_serve_site_sets_live_url_and_cleanup_stops_server(tmp_path):
     assert not os.path.exists(os.path.dirname(work_dir))
     with pytest.raises(ProcessLookupError):
         os.kill(pid, 0)
+
+
+def test_serve_site_archive_unpacks_and_serves(tmp_path):
+    site = tmp_path / "site"
+    site.mkdir()
+    (site / "index.html").write_text("hello from archive\n")
+    archive = tmp_path / "site.tar.gz"
+    with tarfile.open(archive, "w:gz") as tar:
+        tar.add(site, arcname="site")
+
+    state = TaskState(
+        model="mockllm/test-model",
+        sample_id="test",
+        epoch=0,
+        input="visit {url}",
+        messages=[],
+    )
+    setup = agentic.serve_site_archive(archive)
+    asyncio.run(setup(state, generate=lambda *a, **kw: None))
+
+    url = state.input_text.removeprefix("visit ")
+    work_dir = state.store.get("work_dir")
+    assert url.startswith("http://127.0.0.1:")
+    assert os.path.exists(work_dir)
+    with urllib.request.urlopen(url, timeout=1) as response:
+        assert response.read().decode() == "hello from archive\n"
+
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(os.path.dirname(work_dir))

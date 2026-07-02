@@ -9,6 +9,7 @@ import shutil
 import socket
 import subprocess
 import sys
+import tarfile
 import tempfile
 import time
 import urllib.request
@@ -117,55 +118,80 @@ def serve_site(site_dir: str | Path) -> Solver:
         async def solve(state: TaskState, generate: Generate) -> TaskState:
             if not site_path.exists():
                 raise RuntimeError(f"site dir not found: {site_path}")
-            tmpdir = tempfile.mkdtemp(prefix="agentic-eval-")
-            work_dir = os.path.join(tmpdir, "work")
-            os.makedirs(work_dir)
-            async with span("serve_site"):
-                await git_init_commit(work_dir)
-                with socket.socket() as s:
-                    s.bind(("127.0.0.1", 0))
-                    port = s.getsockname()[1]
-                url = f"http://127.0.0.1:{port}/"
-                proc = subprocess.Popen(
-                    [
-                        sys.executable,
-                        "-m",
-                        "http.server",
-                        str(port),
-                        "--bind",
-                        "127.0.0.1",
-                        "--directory",
-                        str(site_path),
-                    ],
-                    stdout=subprocess.DEVNULL,
-                    stderr=subprocess.DEVNULL,
-                )
-                deadline = time.monotonic() + 5
-                while True:
-                    if proc.poll() is not None:
-                        raise RuntimeError(
-                            f"HTTP server exited before serving {site_path}"
-                        )
-                    try:
-                        with urllib.request.urlopen(url, timeout=0.2):
-                            break
-                    except OSError:
-                        if time.monotonic() >= deadline:
-                            proc.kill()
-                            proc.wait(timeout=1)
-                            raise RuntimeError(
-                                f"Timed out waiting for HTTP server at {url}"
-                            )
-                        await asyncio.sleep(0.05)
-                transcript().info(f"Serving {site_path} at {url} (pid {proc.pid})")
-            state.store.set("work_dir", work_dir)
-            state.store.set("server_pid", proc.pid)
-            state._input = state.input_text.replace("{url}", url)
-            return state
+            return await _serve_site_dir(state, site_path)
 
         return solve
 
     return setup()
+
+
+def serve_site_archive(archive_path: str | Path, site_dir: str = "site") -> Solver:
+    archive = Path(archive_path)
+
+    @solver
+    def setup() -> Solver:
+        async def solve(state: TaskState, generate: Generate) -> TaskState:
+            if not archive.exists():
+                raise RuntimeError(f"site archive not found: {archive}")
+            tmpdir = tempfile.mkdtemp(prefix="agentic-eval-")
+            with tarfile.open(archive) as tar:
+                if sys.version_info >= (3, 12):
+                    tar.extractall(tmpdir, filter="data")
+                else:
+                    tar.extractall(tmpdir)
+            return await _serve_site_dir(state, Path(tmpdir, site_dir), tmpdir)
+
+        return solve
+
+    return setup()
+
+
+async def _serve_site_dir(
+    state: TaskState,
+    site_path: Path,
+    tmpdir: str | None = None,
+) -> TaskState:
+    tmpdir = tmpdir or tempfile.mkdtemp(prefix="agentic-eval-")
+    work_dir = os.path.join(tmpdir, "work")
+    os.makedirs(work_dir)
+    async with span("serve_site"):
+        await git_init_commit(work_dir)
+        with socket.socket() as s:
+            s.bind(("127.0.0.1", 0))
+            port = s.getsockname()[1]
+        url = f"http://127.0.0.1:{port}/"
+        proc = subprocess.Popen(
+            [
+                sys.executable,
+                "-m",
+                "http.server",
+                str(port),
+                "--bind",
+                "127.0.0.1",
+                "--directory",
+                str(site_path),
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        deadline = time.monotonic() + 5
+        while True:
+            if proc.poll() is not None:
+                raise RuntimeError(f"HTTP server exited before serving {site_path}")
+            try:
+                with urllib.request.urlopen(url, timeout=0.2):
+                    break
+            except OSError:
+                if time.monotonic() >= deadline:
+                    proc.kill()
+                    proc.wait(timeout=1)
+                    raise RuntimeError(f"Timed out waiting for HTTP server at {url}")
+                await asyncio.sleep(0.05)
+        transcript().info(f"Serving {site_path} at {url} (pid {proc.pid})")
+    state.store.set("work_dir", work_dir)
+    state.store.set("server_pid", proc.pid)
+    state._input = state.input_text.replace("{url}", url)
+    return state
 
 
 async def _stop_pid(pid: int) -> None:
