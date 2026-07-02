@@ -1,52 +1,4 @@
-"""Shared building blocks for agentic evals.
-
-An agentic eval is one where an external coding agent (Claude Code, Codex, ...)
-runs in a temporary work directory and makes file changes. We capture those
-changes by `git diff`'ing the work directory at the end. A `git diff` is
-usually enough to eyeball how well the agent did.
-
-This module provides four pieces that compose into a Task:
-
-  setup     prepare a fresh work directory and store its path in
-            `state.store["work_dir"]`. Two flavors:
-              * `clone_git_repo(url, commit)` — clone+checkout a remote repo
-              * `copy_fixture(src_dir)`        — copy a local fixture directory
-
-  solver    run an agent CLI inside `work_dir`. Two flavors:
-              * `claude_code()` — runs `claude --print --output-format stream-json`
-              * `codex()`        — runs `codex exec --json`
-            The current model from `--model` is forwarded to the agent CLI,
-            so the same task can be run against any model the agent supports.
-
-  scorer    `git_diff()` — runs `git diff` in `work_dir` and stores the
-            patch as the score explanation. `extract_results.py` already knows
-            to surface the score explanation as the row's `result`, so the
-            diff shows up in the dashboard for free.
-
-  cleanup   `cleanup_workdir()` — recursively delete the temp dir.
-
-To add a new agentic eval, create `src/evals/<name>/eval.py`:
-
-    from pathlib import Path
-    from inspect_ai import task, Task
-    from inspect_ai.dataset import MemoryDataset, Sample
-    from agentic import claude_code, codex, pi, copy_fixture, cleanup_workdir, git_diff, require_solver
-
-    @task
-    def my_eval() -> Task:
-        return Task(
-            dataset=MemoryDataset([Sample(input="Do the thing.")]),
-            setup=copy_fixture(Path(__file__).parent / "fixture"),
-            solver=require_solver(),
-            cleanup=cleanup_workdir(),
-            scorer=git_diff(),
-        )
-
-Then run it against any model + harness:
-
-    just eval my-eval anthropic/claude-sonnet-4-5 --solver claude_code
-    just eval my-eval openai/gpt-5-codex          --solver codex
-"""
+"""Helpers for evals that run external coding-agent CLIs in temp work dirs."""
 
 from __future__ import annotations
 
@@ -74,11 +26,6 @@ from inspect_ai.solver import Solver, TaskState, Generate, solver
 from inspect_ai.util import span
 
 
-# ---------------------------------------------------------------------------
-# Setup helpers — prepare a work directory and stash its path in state.store
-# ---------------------------------------------------------------------------
-
-
 async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]:
     process = await asyncio.create_subprocess_exec(
         *cmd,
@@ -91,16 +38,7 @@ async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]
 
 
 async def git_init_commit(work_dir: str) -> None:
-    """Initialize a git repo so `git diff` works after the agent runs.
-
-    Public so custom setup solvers (e.g. one that serves a static site into a
-    fresh work dir) can prepare a diffable work directory without reaching for
-    a private helper.
-
-    `commit.gpgsign=false` is forced because the eval's git history is
-    throwaway — we don't want to depend on (or interact with) the host's
-    commit-signing setup.
-    """
+    """Initialize a throwaway git repo so cleanup can capture a diff."""
     git_id = (
         "-c", "user.email=eval@example.com",
         "-c", "user.name=eval",
@@ -121,8 +59,6 @@ async def git_init_commit(work_dir: str) -> None:
 
 
 def clone_git_repo(url: str, commit: Optional[str] = None) -> Solver:
-    """Setup: clone `url` (optionally checking out `commit`) into a fresh tmpdir."""
-
     @solver
     def setup() -> Solver:
         async def solve(state: TaskState, generate: Generate) -> TaskState:
@@ -152,11 +88,6 @@ def clone_git_repo(url: str, commit: Optional[str] = None) -> Solver:
 
 
 def copy_fixture(src_dir: str | Path) -> Solver:
-    """Setup: copy a local fixture directory into a fresh tmpdir and `git init` it.
-
-    The git init lets the `git_diff()` scorer capture whatever the agent
-    creates or modifies, even when the starting state isn't a real repo.
-    """
     src_path = Path(src_dir)
 
     @solver
@@ -178,13 +109,7 @@ def copy_fixture(src_dir: str | Path) -> Solver:
 
 
 def serve_site(site_dir: str | Path) -> Solver:
-    """Setup: serve a static site over HTTP and prepare an empty work dir.
-
-    Starts `python -m http.server` on a free port serving `site_dir`, creates a
-    fresh git-init'd work directory for the agent's output, and substitutes the
-    live URL into the prompt wherever `{url}` appears. The server pid is stashed
-    so `cleanup_workdir()` stops it when the task ends.
-    """
+    """Serve a static site and substitute its local URL into the prompt."""
     site_path = Path(site_dir)
 
     @solver
@@ -235,7 +160,6 @@ def serve_site(site_dir: str | Path) -> Solver:
                 transcript().info(f"Serving {site_path} at {url} (pid {proc.pid})")
             state.store.set("work_dir", work_dir)
             state.store.set("server_pid", proc.pid)
-            state.store.set("server_url", url)
             state._input = state.input_text.replace("{url}", url)
             return state
 
@@ -244,73 +168,58 @@ def serve_site(site_dir: str | Path) -> Solver:
     return setup()
 
 
-# ---------------------------------------------------------------------------
-# Cleanup
-# ---------------------------------------------------------------------------
+async def _stop_pid(pid: int) -> None:
+    try:
+        os.kill(pid, 15)
+    except ProcessLookupError:
+        return
+
+    deadline = time.monotonic() + 1
+    while True:
+        try:
+            waited_pid, _ = os.waitpid(pid, os.WNOHANG)
+        except ChildProcessError:
+            return
+        if waited_pid:
+            return
+        if time.monotonic() >= deadline:
+            try:
+                os.kill(pid, 9)
+            except ProcessLookupError:
+                return
+            try:
+                os.waitpid(pid, 0)
+            except ChildProcessError:
+                pass
+            return
+        await asyncio.sleep(0.05)
+
+
+def _rm_tree(path: Optional[str]) -> None:
+    if path and os.path.exists(path):
+        shutil.rmtree(path, ignore_errors=True)
+
+
+def _capture_files(work_dir: str, names: list[str]) -> dict[str, str | None]:
+    captured = {}
+    for name in names:
+        path = Path(work_dir, name)
+        captured[name] = path.read_text(errors="replace") if path.exists() else None
+    return captured
 
 
 def cleanup_workdir(on_finish=None, capture=None):
-    """Cleanup: capture the work-dir diff, then remove temp dirs.
-
-    inspect_ai runs Plan cleanup *before* the scorer (see
-    `inspect_ai.solver._plan.Plan.__call__`'s `finally:` block), so a scorer
-    that tries to read `work_dir` after cleanup will get FileNotFoundError.
-    To work around that we capture `git diff` here while the dir still
-    exists and stash it on `state.store["diff"]`. The `git_diff()` scorer
-    just reads from the store.
-
-    If a setup solver started a server (e.g. `serve_site()` stashes its pid
-    under `server_pid`), it is stopped here. Solvers may also stash auxiliary
-    tmp dirs in `state.store` (e.g. the `pi()` solver writes a temp
-    `models.json` and stashes the dir under `pi_cfg_dir`), which are removed
-    too.
-
-    `capture`, a list of file names, reads each `work_dir/<name>` (if present)
-    into `state.store["captured_files"]` before the dir is wiped, so scorers
-    can compare the agent's output files after cleanup.
-
-    `on_finish`, if provided, is called as `await on_finish(state, work_dir)`
-    before the directory is deleted. Use it to capture additional state for
-    eval-specific scorers.
-    """
-
-    def _rm(path: Optional[str]) -> None:
-        if path and os.path.exists(path):
-            shutil.rmtree(path, ignore_errors=True)
+    """Capture eval artifacts and remove temp dirs before scoring runs."""
 
     async def cleanup(state: TaskState) -> None:
         loop = asyncio.get_event_loop()
 
         pid = state.store.get("server_pid")
         if pid:
-            try:
-                os.kill(pid, 15)
-            except ProcessLookupError:
-                pass
-            else:
-                deadline = time.monotonic() + 1
-                while True:
-                    try:
-                        waited_pid, _ = os.waitpid(pid, os.WNOHANG)
-                    except ChildProcessError:
-                        break
-                    if waited_pid:
-                        break
-                    if time.monotonic() >= deadline:
-                        try:
-                            os.kill(pid, 9)
-                        except ProcessLookupError:
-                            pass
-                        try:
-                            os.waitpid(pid, 0)
-                        except ChildProcessError:
-                            pass
-                        break
-                    await asyncio.sleep(0.05)
+            await _stop_pid(pid)
 
         work_dir = state.store.get("work_dir")
         if work_dir and os.path.exists(work_dir):
-            # Capture diff before we wipe the dir.
             await _run("git", "add", "-N", ".", cwd=work_dir)
             rc, out, err = await _run("git", "diff", cwd=work_dir)
             if rc == 0:
@@ -321,36 +230,21 @@ def cleanup_workdir(on_finish=None, capture=None):
                     f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
                 )
             if capture:
-                captured = {}
-                for name in capture:
-                    path = os.path.join(work_dir, name)
-                    captured[name] = (
-                        Path(path).read_text(errors="replace")
-                        if os.path.exists(path)
-                        else None
-                    )
-                state.store.set("captured_files", captured)
+                state.store.set("captured_files", _capture_files(work_dir, capture))
             if on_finish:
                 await on_finish(state, work_dir)
             tmpdir = os.path.dirname(work_dir)
-            await loop.run_in_executor(None, _rm, tmpdir)
+            await loop.run_in_executor(None, _rm_tree, tmpdir)
 
         pi_cfg_dir = state.store.get("pi_cfg_dir")
         if pi_cfg_dir:
-            await loop.run_in_executor(None, _rm, pi_cfg_dir)
+            await loop.run_in_executor(None, _rm_tree, pi_cfg_dir)
 
     return cleanup
 
 
-# ---------------------------------------------------------------------------
-# Scorer
-# ---------------------------------------------------------------------------
-
-
 @scorer(metrics=[])
 def git_diff() -> Scorer:
-    """Score by surfacing the `git diff` captured by `cleanup_workdir()`."""
-
     async def score(state: TaskState, target: Target) -> Score:
         diff = state.store.get("diff")
         if diff is None:
@@ -363,24 +257,8 @@ def git_diff() -> Scorer:
     return score
 
 
-# ---------------------------------------------------------------------------
-# Solvers — agent CLI harnesses
-# ---------------------------------------------------------------------------
-
-
 @solver
 def require_solver() -> Solver:
-    """Placeholder solver that raises an error asking the user to pick one.
-
-    Set this as the default solver in agentic Tasks so that forgetting
-    ``--solver`` produces a clear error instead of a silent no-op.
-
-        solver=require_solver()
-
-    When the user passes ``--solver claude_code`` (or codex/pi) on the CLI,
-    inspect_ai replaces this with the chosen solver before running.
-    """
-
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         raise RuntimeError(
             "No solver specified. Re-run with --solver claude_code, "
@@ -392,11 +270,6 @@ def require_solver() -> Solver:
 
 @solver
 def claude_code() -> Solver:
-    """Run the Claude Code CLI inside `state.store['work_dir']`.
-
-    The model name from `--model` is forwarded as `claude --model …`.
-    """
-
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         model = get_model()
         work_dir = state.store.get("work_dir")
@@ -417,10 +290,8 @@ def claude_code() -> Solver:
         )
         if system_message:
             cmd.extend(["--append-system-prompt", system_message])
-
         cmd.append(state.input_text)
 
-        # Strip env vars that would confuse a nested Claude Code session.
         env = os.environ.copy()
         env.pop("ANTHROPIC_API_KEY", None)
         for key in list(env.keys()):
@@ -437,14 +308,6 @@ def claude_code() -> Solver:
 
 @solver
 def codex() -> Solver:
-    """Run the OpenAI Codex CLI inside `state.store['work_dir']`.
-
-    The model name is forwarded as `codex --model …`. OpenRouter models
-    (``openrouter/<vendor>/<model>``) are supported automatically — the solver
-    passes ``-c model_provider=openrouter`` so codex routes through OpenRouter
-    using ``OPENROUTER_API_KEY``.
-    """
-
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         model = get_model()
         work_dir = state.store.get("work_dir")
@@ -472,25 +335,14 @@ def codex() -> Solver:
     return solve
 
 
-# ---------------------------------------------------------------------------
-# Agent CLI plumbing — shared between claude_code() and codex()
-# ---------------------------------------------------------------------------
-
-
 async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
-    """Run an agent CLI subprocess, streaming stdout/stderr into the transcript.
-
-    `parser(event_dict, state, lookup)` translates each JSON event into chat
-    messages appended to `state.messages`. `lookup` is a dict the parser may
-    use to thread tool_use_id -> tool_use across events.
-    """
     process = await asyncio.create_subprocess_exec(
         *cmd,
         cwd=cwd,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE,
         env=env,
-        limit=10 * 1024 * 1024,  # 10MB — claude events can be large
+        limit=10 * 1024 * 1024,
     )
 
     lookup: dict = {}
@@ -569,14 +421,7 @@ def _parse_claude_event(event: dict, state: TaskState, lookup: dict) -> None:
 
 
 def _coerce_tool_content(content):
-    """Reduce a claude tool_result `content` to something inspect accepts.
-
-    Newer Claude Code builds emit content blocks that inspect_ai's
-    `ChatMessageTool.content` union doesn't recognize (e.g. `tool_reference`
-    blocks from tools like WebFetch), which makes pydantic reject the whole
-    message. Keep plain `text` blocks as text and JSON-encode anything else so
-    the transcript still captures it without blowing up validation.
-    """
+    """Convert Claude tool_result content blocks to inspect-safe text."""
     if isinstance(content, str):
         return content
     if isinstance(content, list):
@@ -613,45 +458,6 @@ def _parse_codex_event(event: dict, state: TaskState, lookup: dict) -> None:
 
 @solver
 def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
-    """Run the `pi` coding agent CLI inside `state.store['work_dir']`.
-
-    https://pi.dev — pi has first-class OpenRouter
-    support out of the box (no provider config gymnastics needed) and a
-    `--mode json` event stream we can hook into.
-
-    Two modes:
-
-    1. **Cloud / built-in provider** (default). The inspect model spec is
-       forwarded as `pi --model <provider>/<model-id>`, where `<provider>`
-       is derived from the inspect API class name (`OpenRouterAPI` →
-       `openrouter`, `AnthropicAPI` → `anthropic`, ...).
-
-           export OPENROUTER_API_KEY=...
-           just eval my-eval openrouter/openai/gpt-4o-mini --solver pi
-           just eval my-eval anthropic/claude-haiku-4-5    --solver pi
-
-    2. **Custom OpenAI-compatible base URL** (llama-swap, llama-server,
-       Ollama, vLLM, LM Studio, ...). When `base_url` is set (or the
-       `PI_BASE_URL` env var is set at run time), the solver writes a
-       throwaway `models.json` to a temp `pi-cfg-XXXX` directory and
-       points pi at it via `PI_CODING_AGENT_DIR`, so we never touch the
-       user's real `~/.pi/agent/`. The synthesized config has one
-       provider (`provider`, default `llama-swap`) with one model entry
-       whose id is the bare inspect model name. The compat block disables
-       `developer` role and `reasoning_effort` because llama.cpp's server
-       (the common llama-swap backend) supports neither.
-
-           # in the eval:
-           solver=pi(base_url="http://localhost:8080/v1")
-
-           # at run time, --model picks which model llama-swap should swap to:
-           just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
-
-           # or override the URL without editing the eval:
-           PI_BASE_URL=http://other-host:8080/v1 \\
-             just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
-    """
-
     async def solve(state: TaskState, generate: Generate) -> TaskState:
         model = get_model()
         work_dir = state.store.get("work_dir")
@@ -662,8 +468,6 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
 
         effective_base_url = os.environ.get("PI_BASE_URL", base_url)
         if effective_base_url:
-            # Custom base URL: synthesize a one-off models.json in a
-            # throwaway PI_CODING_AGENT_DIR so we never touch ~/.pi/.
             model_id = model.name
             cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-")
             models_json = {
@@ -689,9 +493,9 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
 
         cmd = [
             "pi",
-            "-p",                # non-interactive: process prompt and exit
-            "--mode", "json",    # JSONL events on stdout
-            "--no-session",      # ephemeral, don't write sessions/
+            "-p",
+            "--mode", "json",
+            "--no-session",
             "--model", model_arg,
         ]
 
@@ -712,13 +516,6 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
 
 
 def _pi_model_arg(model) -> str:
-    """Compose the `provider/model-id` string that pi's `--model` flag expects.
-
-    Inspect's `Model.api` is a provider-specific class (e.g. `OpenRouterAPI`,
-    `AnthropicAPI`). We strip the trailing `API` and lowercase to get pi's
-    provider name. `model.name` is already the bare model id within that
-    provider, so concatenating gives the right `vendor/id` form.
-    """
     api = getattr(model, "api", None)
     api_name = type(api).__name__.removesuffix("API").lower() if api else ""
     if not api_name:
@@ -727,20 +524,6 @@ def _pi_model_arg(model) -> str:
 
 
 def _parse_pi_event(event: dict, state: TaskState, lookup: dict) -> None:
-    """Translate a pi `--mode json` event into inspect chat messages.
-
-    pi event types we care about:
-
-      message_end          — emitted once for the user message and once for
-                             each assistant message. Assistant messages have
-                             a `content` array of `text` / `thinking` /
-                             `toolCall` blocks.
-      tool_execution_start — fires before a tool runs (`toolCallId`,
-                             `toolName`, `args`).
-      tool_execution_end   — fires after a tool finishes (`toolCallId`,
-                             `toolName`, `result`, `isError`). We emit the
-                             `ChatMessageTool` here so the result is captured.
-    """
     event_type = event.get("type")
 
     if event_type == "message_end":
@@ -764,9 +547,6 @@ def _parse_pi_event(event: dict, state: TaskState, lookup: dict) -> None:
                             metadata=message,
                         )
                     )
-            # toolCall blocks are surfaced via tool_execution_end below,
-            # which has both the call args and the result in one place.
-
     elif event_type == "tool_execution_start":
         lookup[event.get("toolCallId")] = event
 

@@ -660,10 +660,10 @@ def test_serve_site_sets_live_url_and_cleanup_stops_server(tmp_path):
     setup = agentic.serve_site(site)
     asyncio.run(setup(state, generate=lambda *a, **kw: None))
 
-    url = state.store.get("server_url")
     pid = state.store.get("server_pid")
     work_dir = state.store.get("work_dir")
-    assert url and state.input_text == f"visit {url}"
+    url = state.input_text.removeprefix("visit ")
+    assert url.startswith("http://127.0.0.1:")
     assert "{url}" not in state.input_text
     assert os.path.exists(work_dir)
     assert os.path.exists(os.path.join(work_dir, ".git"))
