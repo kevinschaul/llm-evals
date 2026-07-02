@@ -16,6 +16,10 @@ export default {
       path: "/evals/code-rust-feature/",
     },
     {
+      name: "Code: ATOM cumulative downloads",
+      path: "/evals/code-atom-cumulative-downloads/",
+    },
+    {
       name: "Article tracking: Trump",
       path: "/evals/article-tracking-trump/",
     },

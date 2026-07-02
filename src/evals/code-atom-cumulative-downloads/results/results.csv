@@ -1,0 +1,48 @@
+provider_id,model,full_model,openrouter_provider,prompt_id,test,prompt,result,error,duration_ms,passed,expected,timestamp,solver,score_git_diff,score_git_diff_explanation,score__scorer,score__scorer_explanation
+claude-sonnet-4-5,claude-sonnet-4-5,anthropic/claude-sonnet-4-5,,prompt-1,test-1,"Visit the site {url}
+
+Find the line chart titled ""Models Worldwide"" (subtitle ""Cumulative Downloads,
+2023-present""), which plots cumulative model downloads in millions for three
+series: USA, China, an","diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv
+new file mode 100644
+index 0000000..c57d2d0
+--- /dev/null
++++ b/cumulative_downloads.csv
+@@ -0,0 +1,11 @@
++period,usa,china,eu
++Nov 23,7,0,1
++Feb 24,14,1,6
++May 24,27,3,21
++Aug 24,49,9,32
++Nov 24,92,25,42
++Feb 25,157,67,59
++May 25,227,164,78
++Aug 25,312,335,96
++Nov 25,495,612,121
++Mar 26,663,971,150
+",,87210.0,False,,2026-07-02T13:30:57-05:00,claude_code,C,"diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv
+new file mode 100644
+index 0000000..c57d2d0
+--- /dev/null
++++ b/cumulative_downloads.csv
+@@ -0,0 +1,11 @@
++period,usa,china,eu
++Nov 23,7,0,1
++Feb 24,14,1,6
++May 24,27,3,21
++Aug 24,49,9,32
++Nov 24,92,25,42
++Feb 25,157,67,59
++May 25,227,164,78
++Aug 25,312,335,96
++Nov 25,495,612,121
++Mar 26,663,971,150
+",0.0,"✗ cumulative_downloads.csv does not match expected
+  expected 30 rows, got 11
+  row 2: expected ['Dec 23', '9', '0', '1'], got ['Feb 24', '14', '1', '6']
+  row 3: expected ['Jan 24', '11', '1', '3'], got ['May 24', '27', '3', '21']
+  row 4: expected ['Feb 24', '14', '1', '6'], got ['Aug 24', '49', '9', '32']
+  row 5: expected ['Mar 24', '17', '2', '9'], got ['Nov 24', '92', '25', '42']
+  row 6: expected ['Apr 24', '22', '2', '15'], got ['Feb 25', '157', '67', '59']
+  row 7: expected ['May 24', '27', '3', '21'], got ['May 25', '227', '164', '78']
+  ..."

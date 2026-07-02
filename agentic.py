@@ -54,7 +54,12 @@ import asyncio
 import json
 import os
 import shutil
+import socket
+import subprocess
+import sys
 import tempfile
+import time
+import urllib.request
 from pathlib import Path
 from typing import Optional
 
@@ -85,8 +90,12 @@ async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]
     return process.returncode or 0, stdout, stderr
 
 
-async def _git_init_commit(work_dir: str) -> None:
+async def git_init_commit(work_dir: str) -> None:
     """Initialize a git repo so `git diff` works after the agent runs.
+
+    Public so custom setup solvers (e.g. one that serves a static site into a
+    fresh work dir) can prepare a diffable work directory without reaching for
+    a private helper.
 
     `commit.gpgsign=false` is forced because the eval's git history is
     throwaway — we don't want to depend on (or interact with) the host's
@@ -158,9 +167,76 @@ def copy_fixture(src_dir: str | Path) -> Solver:
             async with span("copy_fixture"):
                 transcript().info(f"Copying fixture {src_path} -> {work_dir}")
                 shutil.copytree(src_path, work_dir)
-                await _git_init_commit(work_dir)
+                await git_init_commit(work_dir)
             state.store.set("work_dir", work_dir)
             transcript().info({"work_dir": work_dir})
+            return state
+
+        return solve
+
+    return setup()
+
+
+def serve_site(site_dir: str | Path) -> Solver:
+    """Setup: serve a static site over HTTP and prepare an empty work dir.
+
+    Starts `python -m http.server` on a free port serving `site_dir`, creates a
+    fresh git-init'd work directory for the agent's output, and substitutes the
+    live URL into the prompt wherever `{url}` appears. The server pid is stashed
+    so `cleanup_workdir()` stops it when the task ends.
+    """
+    site_path = Path(site_dir)
+
+    @solver
+    def setup() -> Solver:
+        async def solve(state: TaskState, generate: Generate) -> TaskState:
+            if not site_path.exists():
+                raise RuntimeError(f"site dir not found: {site_path}")
+            tmpdir = tempfile.mkdtemp(prefix="agentic-eval-")
+            work_dir = os.path.join(tmpdir, "work")
+            os.makedirs(work_dir)
+            async with span("serve_site"):
+                await git_init_commit(work_dir)
+                with socket.socket() as s:
+                    s.bind(("127.0.0.1", 0))
+                    port = s.getsockname()[1]
+                url = f"http://127.0.0.1:{port}/"
+                proc = subprocess.Popen(
+                    [
+                        sys.executable,
+                        "-m",
+                        "http.server",
+                        str(port),
+                        "--bind",
+                        "127.0.0.1",
+                        "--directory",
+                        str(site_path),
+                    ],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
+                deadline = time.monotonic() + 5
+                while True:
+                    if proc.poll() is not None:
+                        raise RuntimeError(
+                            f"HTTP server exited before serving {site_path}"
+                        )
+                    try:
+                        with urllib.request.urlopen(url, timeout=0.2):
+                            break
+                    except OSError:
+                        if time.monotonic() >= deadline:
+                            proc.kill()
+                            proc.wait(timeout=1)
+                            raise RuntimeError(
+                                f"Timed out waiting for HTTP server at {url}"
+                            )
+                        await asyncio.sleep(0.05)
+                transcript().info(f"Serving {site_path} at {url} (pid {proc.pid})")
+            state.store.set("work_dir", work_dir)
+            state.store.set("server_pid", proc.pid)
+            state.store.set("server_url", url)
+            state._input = state.input_text.replace("{url}", url)
             return state
 
         return solve
@@ -173,7 +249,7 @@ def copy_fixture(src_dir: str | Path) -> Solver:
 # ---------------------------------------------------------------------------
 
 
-def cleanup_workdir(on_finish=None):
+def cleanup_workdir(on_finish=None, capture=None):
     """Cleanup: capture the work-dir diff, then remove temp dirs.
 
     inspect_ai runs Plan cleanup *before* the scorer (see
@@ -183,9 +259,15 @@ def cleanup_workdir(on_finish=None):
     exists and stash it on `state.store["diff"]`. The `git_diff()` scorer
     just reads from the store.
 
-    Solvers may also stash auxiliary tmp dirs in `state.store` (e.g. the
-    `pi()` solver writes a temp `models.json` and stashes the dir under
-    `pi_cfg_dir` so this cleanup hook can remove it).
+    If a setup solver started a server (e.g. `serve_site()` stashes its pid
+    under `server_pid`), it is stopped here. Solvers may also stash auxiliary
+    tmp dirs in `state.store` (e.g. the `pi()` solver writes a temp
+    `models.json` and stashes the dir under `pi_cfg_dir`), which are removed
+    too.
+
+    `capture`, a list of file names, reads each `work_dir/<name>` (if present)
+    into `state.store["captured_files"]` before the dir is wiped, so scorers
+    can compare the agent's output files after cleanup.
 
     `on_finish`, if provided, is called as `await on_finish(state, work_dir)`
     before the directory is deleted. Use it to capture additional state for
@@ -199,6 +281,33 @@ def cleanup_workdir(on_finish=None):
     async def cleanup(state: TaskState) -> None:
         loop = asyncio.get_event_loop()
 
+        pid = state.store.get("server_pid")
+        if pid:
+            try:
+                os.kill(pid, 15)
+            except ProcessLookupError:
+                pass
+            else:
+                deadline = time.monotonic() + 1
+                while True:
+                    try:
+                        waited_pid, _ = os.waitpid(pid, os.WNOHANG)
+                    except ChildProcessError:
+                        break
+                    if waited_pid:
+                        break
+                    if time.monotonic() >= deadline:
+                        try:
+                            os.kill(pid, 9)
+                        except ProcessLookupError:
+                            pass
+                        try:
+                            os.waitpid(pid, 0)
+                        except ChildProcessError:
+                            pass
+                        break
+                    await asyncio.sleep(0.05)
+
         work_dir = state.store.get("work_dir")
         if work_dir and os.path.exists(work_dir):
             # Capture diff before we wipe the dir.
@@ -211,6 +320,16 @@ def cleanup_workdir(on_finish=None):
                     "diff",
                     f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
                 )
+            if capture:
+                captured = {}
+                for name in capture:
+                    path = os.path.join(work_dir, name)
+                    captured[name] = (
+                        Path(path).read_text(errors="replace")
+                        if os.path.exists(path)
+                        else None
+                    )
+                state.store.set("captured_files", captured)
             if on_finish:
                 await on_finish(state, work_dir)
             tmpdir = os.path.dirname(work_dir)
@@ -442,11 +561,36 @@ def _parse_claude_event(event: dict, state: TaskState, lookup: dict) -> None:
                 tool_use = lookup.get(item.get("tool_use_id"), {})
                 state.messages.append(
                     ChatMessageTool(
-                        content=item.get("content", ""),
+                        content=_coerce_tool_content(item.get("content", "")),
                         function=tool_use.get("name"),
                         metadata={"tool_use": tool_use, "tool_result": item},
                     )
                 )
+
+
+def _coerce_tool_content(content):
+    """Reduce a claude tool_result `content` to something inspect accepts.
+
+    Newer Claude Code builds emit content blocks that inspect_ai's
+    `ChatMessageTool.content` union doesn't recognize (e.g. `tool_reference`
+    blocks from tools like WebFetch), which makes pydantic reject the whole
+    message. Keep plain `text` blocks as text and JSON-encode anything else so
+    the transcript still captures it without blowing up validation.
+    """
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for block in content:
+            if isinstance(block, dict) and block.get("type") == "text":
+                parts.append(block.get("text", ""))
+            else:
+                try:
+                    parts.append(json.dumps(block))
+                except (TypeError, ValueError):
+                    parts.append(str(block))
+        return "\n".join(parts)
+    return str(content)
 
 
 def _parse_codex_event(event: dict, state: TaskState, lookup: dict) -> None:
