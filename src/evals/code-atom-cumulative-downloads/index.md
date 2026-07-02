@@ -1,12 +1,6 @@
 # Code: ATOM cumulative downloads
 
-An agentic scraping task. The eval starts a local HTTP server serving a full
-offline copy of [The ATOM Project](https://atomproject.ai) website (all assets
-included), then asks the coding agent to extract the data behind the "Models
-Worldwide — Cumulative Downloads, 2023-present" chart (USA, China, and EU
-series) into a CSV. The chart is rendered client-side with Recharts, so the
-numbers aren't in the static HTML — the agent has to dig them out of the site's
-JavaScript bundles. Scored by comparing the CSV against the known series values.
+Agentic scraping chart data from a local copy of [The ATOM Project](https://atomproject.ai) website. The data is in a JS file packaged up somewhere.
 
 ```js
 import { table } from "npm:@observablehq/inputs"
