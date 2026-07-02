@@ -13,7 +13,9 @@ import asyncio
 import json
 import os
 import shutil
+import tarfile
 import tempfile
+import urllib.request
 from pathlib import Path
 from unittest.mock import patch
 
@@ -308,6 +310,40 @@ def test_parse_claude_event_tool_use_then_result_links_function_name():
     assert state.messages[0].text == "ok"
 
 
+def test_parse_claude_event_tool_result_blocks_are_coerced_to_text():
+    state = StubState()
+    lookup: dict = {"tu-1": {"name": "WebFetch"}}
+    agentic._parse_claude_event(
+        {
+            "type": "user",
+            "message": {
+                "content": [
+                    {
+                        "type": "tool_result",
+                        "tool_use_id": "tu-1",
+                        "content": [
+                            {"type": "text", "text": "visible text"},
+                            {
+                                "type": "tool_reference",
+                                "tool_use_id": "tu-nested",
+                                "name": "fetch",
+                            },
+                        ],
+                    }
+                ],
+            },
+        },
+        state,
+        lookup,
+    )
+
+    msg = state.messages[0]
+    assert isinstance(msg, ChatMessageTool)
+    assert msg.function == "WebFetch"
+    assert "visible text" in msg.text
+    assert '"type": "tool_reference"' in msg.text
+
+
 # ---------------------------------------------------------------------------
 # pi() solver — cloud mode
 # ---------------------------------------------------------------------------
@@ -551,6 +587,22 @@ def test_cleanup_workdir_no_pi_cfg_dir_only_removes_workdir():
     assert not os.path.exists(parent)
 
 
+def test_cleanup_workdir_captures_requested_files(tmp_path):
+    parent = tmp_path / "eval"
+    work_dir = parent / "work"
+    work_dir.mkdir(parents=True)
+    asyncio.run(agentic.git_init_commit(str(work_dir)))
+    (work_dir / "answer.csv").write_text("period,value\nJan,1\n")
+
+    state = make_task_state(work_dir=str(work_dir))
+    asyncio.run(agentic.cleanup_workdir(capture=["answer.csv", "missing.csv"])(state))
+
+    captured = state.store.get("captured_files")
+    assert captured["answer.csv"] == "period,value\nJan,1\n"
+    assert captured["missing.csv"] is None
+    assert not parent.exists()
+
+
 # ---------------------------------------------------------------------------
 # copy_fixture() + git_diff() integration
 # ---------------------------------------------------------------------------
@@ -592,3 +644,64 @@ def test_git_diff_returns_incorrect_when_no_diff_in_store():
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "I"
     assert "no diff" in score.explanation
+
+
+def test_serve_site_sets_live_url_and_cleanup_stops_server(tmp_path):
+    site = tmp_path / "site"
+    site.mkdir()
+    (site / "index.html").write_text("hello from fixture\n")
+
+    state = TaskState(
+        model="mockllm/test-model",
+        sample_id="test",
+        epoch=0,
+        input="visit {url}",
+        messages=[],
+    )
+    setup = agentic.serve_site(site)
+    asyncio.run(setup(state, generate=lambda *a, **kw: None))
+
+    pid = state.store.get("server_pid")
+    work_dir = state.store.get("work_dir")
+    url = state.input_text.removeprefix("visit ")
+    assert url.startswith("http://127.0.0.1:")
+    assert "{url}" not in state.input_text
+    assert os.path.exists(work_dir)
+    assert os.path.exists(os.path.join(work_dir, ".git"))
+    with urllib.request.urlopen(url, timeout=1) as response:
+        assert response.read().decode() == "hello from fixture\n"
+
+    asyncio.run(agentic.cleanup_workdir()(state))
+
+    assert not os.path.exists(os.path.dirname(work_dir))
+    with pytest.raises(ProcessLookupError):
+        os.kill(pid, 0)
+
+
+def test_serve_site_archive_unpacks_and_serves(tmp_path):
+    site = tmp_path / "site"
+    site.mkdir()
+    (site / "index.html").write_text("hello from archive\n")
+    archive = tmp_path / "site.tar.gz"
+    with tarfile.open(archive, "w:gz") as tar:
+        tar.add(site, arcname="site")
+
+    state = TaskState(
+        model="mockllm/test-model",
+        sample_id="test",
+        epoch=0,
+        input="visit {url}",
+        messages=[],
+    )
+    setup = agentic.serve_site_archive(archive)
+    asyncio.run(setup(state, generate=lambda *a, **kw: None))
+
+    url = state.input_text.removeprefix("visit ")
+    work_dir = state.store.get("work_dir")
+    assert url.startswith("http://127.0.0.1:")
+    assert os.path.exists(work_dir)
+    with urllib.request.urlopen(url, timeout=1) as response:
+        assert response.read().decode() == "hello from archive\n"
+
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(os.path.dirname(work_dir))
