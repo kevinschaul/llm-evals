@@ -123,6 +123,16 @@
 }
 
 /* Results by test */
+.test-browse {
+  margin: 2rem 0;
+}
+
+.test-browse > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
 .test-blocks {
   margin: 1.5rem 0;
 }

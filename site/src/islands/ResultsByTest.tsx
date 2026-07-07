@@ -173,15 +173,15 @@ export default function ResultsByTest({ url }: { url: string }) {
   if (error) return <p>Failed to load results: {error}</p>
   if (!data) return <p>Loading results…</p>
 
-  // Start with something readable: the hardest test open (all of them
-  // when there are only a few)
+  // Small evals are meant to be read with your eyes — open everything.
+  // Larger ones start with just the hardest test open.
   return (
     <div className="test-blocks">
       {rows.map((row, i) => (
         <TestBlock
           key={row.test.id}
           row={row}
-          defaultOpen={i === 0 || rows.length <= 3}
+          defaultOpen={i === 0 || rows.length <= 8}
         />
       ))}
     </div>
