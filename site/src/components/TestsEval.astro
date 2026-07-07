@@ -3,6 +3,7 @@ import {
   aggregateRun,
   formatDuration,
   formatPercent,
+  formatTokens,
   sortRunsByPassRate,
   type EvalResults,
 } from "../lib/types"
@@ -24,6 +25,7 @@ const runs = sortRunsByPassRate(results.runs)
       <th>Model</th>
       <th>Pass rate</th>
       <th class="num">Tests</th>
+      <th class="num">Avg tokens</th>
       <th class="num">Avg time</th>
     </tr>
   </thead>
@@ -46,6 +48,7 @@ const runs = sortRunsByPassRate(results.runs)
               </span>
             </td>
             <td class="num">{agg.total}</td>
+            <td class="num">{formatTokens(agg.avgOutputTokens)}</td>
             <td class="num">{formatDuration(agg.avgDurationMs)}</td>
           </tr>
         )

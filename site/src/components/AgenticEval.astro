@@ -1,5 +1,5 @@
 ---
-import { formatDuration, type EvalResults } from "../lib/types"
+import { formatDuration, formatTokens, type EvalResults } from "../lib/types"
 import AgenticResults from "../islands/AgenticResults"
 
 interface Props {
@@ -20,6 +20,7 @@ const rows = results.runs
       files: sample.diff
         ? (sample.diff.match(/^diff --git /gm) || []).length
         : null,
+      tokens: sample.output_tokens,
       duration: sample.duration_ms,
     })),
   )
@@ -39,6 +40,7 @@ const rows = results.runs
       <th>Harness</th>
       <th class="num">Checks</th>
       <th class="num">Files changed</th>
+      <th class="num">Tokens</th>
       <th class="num">Time</th>
     </tr>
   </thead>
@@ -60,6 +62,7 @@ const rows = results.runs
             )}
           </td>
           <td class="num">{row.files ?? "–"}</td>
+          <td class="num">{formatTokens(row.tokens)}</td>
           <td class="num">{formatDuration(row.duration)}</td>
         </tr>
       ))

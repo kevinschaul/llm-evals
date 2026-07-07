@@ -13,6 +13,8 @@ export interface SampleResult {
   output: string
   passed: boolean | null
   duration_ms: number | null
+  input_tokens: number | null
+  output_tokens: number | null
   scores: Record<string, ScoreEntry>
   diff: string | null
   checks: CheckResult[]
@@ -48,19 +50,22 @@ export interface RunAggregate {
   total: number
   passRate: number | null
   avgDurationMs: number | null
+  avgOutputTokens: number | null
+}
+
+function mean(values: (number | null)[]): number | null {
+  const present = values.filter((v): v is number => v !== null)
+  return present.length
+    ? present.reduce((a, b) => a + b, 0) / present.length
+    : null
 }
 
 export function aggregateRun(run: Run): RunAggregate {
-  const durations = run.samples
-    .map((s) => s.duration_ms)
-    .filter((d): d is number => d !== null)
-
   return {
     total: run.samples.length,
     passRate: run.pass_rate,
-    avgDurationMs: durations.length
-      ? durations.reduce((a, b) => a + b, 0) / durations.length
-      : null,
+    avgDurationMs: mean(run.samples.map((s) => s.duration_ms)),
+    avgOutputTokens: mean(run.samples.map((s) => s.output_tokens)),
   }
 }
 
@@ -82,4 +87,12 @@ export function formatDuration(ms: number | null): string {
 
 export function formatPercent(rate: number | null): string {
   return rate === null ? "–" : `${Math.round(rate * 100)}%`
+}
+
+export function formatTokens(tokens: number | null): string {
+  if (tokens === null) return "–"
+  if (tokens >= 1000000) return `${(tokens / 1000000).toFixed(1)}M`
+  if (tokens >= 10000) return `${Math.round(tokens / 1000)}k`
+  if (tokens >= 1000) return `${(tokens / 1000).toFixed(1)}k`
+  return `${Math.round(tokens)}`
 }

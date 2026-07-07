@@ -1,6 +1,6 @@
 {
  "eval": "code-consolidate-spreadsheets",
- "generated": "2026-07-07T20:22:01+00:00",
+ "generated": "2026-07-07T21:42:47+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -23,6 +23,8 @@
      "output": "",
      "passed": false,
      "duration_ms": 224212.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 0.6666666666666666,
@@ -61,6 +63,8 @@
      "output": "",
      "passed": true,
      "duration_ms": 298791.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 1.0,
@@ -99,6 +103,8 @@
      "output": "",
      "passed": false,
      "duration_ms": 247147.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 0.6666666666666666,
@@ -137,6 +143,8 @@
      "output": "",
      "passed": false,
      "duration_ms": 14459.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 0.6666666666666666,

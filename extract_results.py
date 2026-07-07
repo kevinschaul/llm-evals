@@ -22,6 +22,8 @@ model, and writes results/results.json with this shape:
       "output": "...",
       "passed": true,
       "duration_ms": 1234.0,
+      "input_tokens": 512,
+      "output_tokens": 128,
       "scores": {"includes": {"value": "C", "explanation": null}},
       "diff": null,
       "checks": [{"name": "has_py_file", "passed": true}]
@@ -157,6 +159,21 @@ def json_safe(value) -> Any:
     return str(value)
 
 
+def extract_tokens(sample) -> tuple[int | None, int | None]:
+    """Return (input_tokens, output_tokens) for a sample, None when the log
+    didn't record usage (older logs, cached generations, external harnesses)."""
+    inp = out = 0
+    for usage in (getattr(sample, "model_usage", None) or {}).values():
+        inp += usage.input_tokens or 0
+        out += usage.output_tokens or 0
+    if not (inp or out):
+        usage = sample.output.usage if sample.output else None
+        if usage:
+            inp = usage.input_tokens or 0
+            out = usage.output_tokens or 0
+    return (inp or None, out or None)
+
+
 def primary_scorer_name(log) -> str | None:
     """The scorer whose results count: first non-diff scorer declared in the
     run's results (deterministic, unlike sample dict order)."""
@@ -283,11 +300,15 @@ def generate_results_json(log_files, eval_name, output_path):
             if getattr(sample, "total_time", None) is not None:
                 duration_ms = round(sample.total_time * 1000, 1)
 
+            input_tokens, output_tokens = extract_tokens(sample)
+
             samples.append({
                 "id": test_id,
                 "output": extract_output(sample),
                 "passed": derive_passed(sample_scores, primary),
                 "duration_ms": duration_ms,
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
                 "scores": scores,
                 "diff": diff or None,
                 "checks": extract_checks(sample_scores),

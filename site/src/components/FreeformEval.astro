@@ -1,5 +1,10 @@
 ---
-import { aggregateRun, formatDuration, type EvalResults } from "../lib/types"
+import {
+  aggregateRun,
+  formatDuration,
+  formatTokens,
+  type EvalResults,
+} from "../lib/types"
 import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
@@ -21,18 +26,23 @@ const runs = [...results.runs].sort((a, b) =>
     <tr>
       <th>Model</th>
       <th class="num">Prompts</th>
+      <th class="num">Avg tokens</th>
       <th class="num">Avg time</th>
     </tr>
   </thead>
   <tbody>
     {
-      runs.map((run) => (
-        <tr>
-          <td>{run.provider_id}</td>
-          <td class="num">{run.samples.length}</td>
-          <td class="num">{formatDuration(aggregateRun(run).avgDurationMs)}</td>
-        </tr>
-      ))
+      runs.map((run) => {
+        const agg = aggregateRun(run)
+        return (
+          <tr>
+            <td>{run.provider_id}</td>
+            <td class="num">{run.samples.length}</td>
+            <td class="num">{formatTokens(agg.avgOutputTokens)}</td>
+            <td class="num">{formatDuration(agg.avgDurationMs)}</td>
+          </tr>
+        )
+      })
     }
   </tbody>
 </table>

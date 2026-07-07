@@ -1,6 +1,6 @@
 {
  "eval": "code-atom-cumulative-downloads",
- "generated": "2026-07-07T20:21:58+00:00",
+ "generated": "2026-07-07T21:42:45+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -23,6 +23,8 @@
      "output": "",
      "passed": true,
      "duration_ms": 150575.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 1.0,
@@ -53,6 +55,8 @@
      "output": "",
      "passed": false,
      "duration_ms": 87210.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "_scorer": {
        "value": 0.0,
@@ -83,6 +87,8 @@
      "output": "",
      "passed": true,
      "duration_ms": 49032.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 1.0,
@@ -113,6 +119,8 @@
      "output": "",
      "passed": true,
      "duration_ms": 55113.0,
+     "input_tokens": null,
+     "output_tokens": null,
      "scores": {
       "check_output": {
        "value": 1.0,

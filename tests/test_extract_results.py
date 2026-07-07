@@ -6,6 +6,7 @@ import pytest
 from extract_results import (
     derive_passed,
     extract_checks,
+    extract_tokens,
     json_safe,
     normalize_text,
     primary_scorer_name,
@@ -114,6 +115,43 @@ class TestPrimaryScorerName:
 
     def test_none_without_results(self):
         assert primary_scorer_name(SimpleNamespace(results=None)) is None
+
+
+class TestExtractTokens:
+    def _usage(self, inp, out):
+        return SimpleNamespace(input_tokens=inp, output_tokens=out)
+
+    def test_prefers_model_usage(self):
+        sample = SimpleNamespace(
+            model_usage={"anthropic/claude": self._usage(500, 100)},
+            output=SimpleNamespace(usage=self._usage(1, 1)),
+        )
+        assert extract_tokens(sample) == (500, 100)
+
+    def test_sums_multiple_models(self):
+        sample = SimpleNamespace(
+            model_usage={"a": self._usage(500, 100), "b": self._usage(200, 50)},
+            output=None,
+        )
+        assert extract_tokens(sample) == (700, 150)
+
+    def test_falls_back_to_output_usage(self):
+        sample = SimpleNamespace(
+            model_usage={},
+            output=SimpleNamespace(usage=self._usage(300, 40)),
+        )
+        assert extract_tokens(sample) == (300, 40)
+
+    def test_zero_usage_is_missing(self):
+        sample = SimpleNamespace(
+            model_usage={"a": self._usage(0, 0)},
+            output=SimpleNamespace(usage=self._usage(0, 0)),
+        )
+        assert extract_tokens(sample) == (None, None)
+
+    def test_no_usage_recorded(self):
+        sample = SimpleNamespace(model_usage=None, output=None)
+        assert extract_tokens(sample) == (None, None)
 
 
 class TestNormalizeText:
