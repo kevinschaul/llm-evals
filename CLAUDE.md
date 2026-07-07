@@ -54,8 +54,7 @@ npm run build # Production build to site/dist (set GITHUB_PAGES_BASE_PATH for su
 ## Working with the Dashboard
 
 - All rate logic lives in `extract_results.py`; the frontend displays what it's given. Each run has one authoritative `pass_rate` (the primary scorer's accuracy/mean metric, falling back to the scored samples' pass ratio); each sample has `passed` (`"C"` or `1.0` → passed), a `diff` (agentic git diff, lifted out of scores), and structured `checks` (`[{name, passed}]`, from `Score.metadata["checks"]` or parsed from older logs' explanations).
-- Never widen the `sync-assets.mjs` allowlist casually — eval dirs contain caches, logs, and fixtures that must not be published.
-- `npm run build` wipes and recreates `site/public/evals/`; a dev server running at the time will 404 on results.json afterward — restart it.
+- Never widen the `sync-assets.mjs` allowlist casually — eval dirs contain caches, logs, and fixtures that must not be published. The script overwrites in place rather than wiping `site/public/evals/`, so builds don't break a running dev server.
 - To change the site's look, edit the [kschaul-astro-theme](https://github.com/kevinschaul/kschaul-astro-theme) repo (tokens first) and reinstall; eval-specific styles live in `site/src/styles/site.css`.
 
 ## Agentic Evals
