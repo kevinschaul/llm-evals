@@ -1,0 +1,16 @@
+---
+import AgenticResults from "../islands/AgenticResults"
+
+interface Props {
+  dataUrl: string
+}
+
+const { dataUrl } = Astro.props
+---
+
+<h2>Runs</h2>
+<p style="font-size: 0.85em; color: var(--muted)">
+  Each row is one agent run. Select a row to read the diff it produced — the
+  diff is the real result here; automated checks only catch the basics.
+</p>
+<AgenticResults client:load url={dataUrl} />

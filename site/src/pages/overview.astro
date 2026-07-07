@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../layouts/Layout.astro"
+import OverviewTable from "../components/OverviewTable.astro"
+import { loadResults } from "../lib/results"
+import { buildOverviewRows, splitByRelevance } from "../lib/overview"
+
+const typeOrder = { tests: 0, freeform: 1, agentic: 2 } as const
+
+const entries = (await getCollection("evals")).sort((a, b) => {
+  if (a.data.type !== b.data.type)
+    return typeOrder[a.data.type] - typeOrder[b.data.type]
+  return Number(a.data.archived) - Number(b.data.archived) ||
+    a.data.title.localeCompare(b.data.title)
+})
+
+const resultsByEval = new Map()
+for (const entry of entries) {
+  const results = loadResults(entry.id)
+  if (results) resultsByEval.set(entry.id, results.runs)
+}
+
+const rows = buildOverviewRows(resultsByEval)
+const { main, older } = splitByRelevance(rows)
+---
+
+<Layout
+  title="Overview"
+  description="How each model performs across all of Kevin Schaul's LLM evals."
+>
+  <h1>Overview</h1>
+  <p>
+    Pass rates for every model across every eval, one row per model. Models
+    tested on the most evals are listed first — a blank cell just means I
+    haven't run that combination. Rates aren't comparable <em>between</em>
+    columns (each eval has its own difficulty), so read this row-wise: how does
+    a model hold up across different kinds of work?
+  </p>
+  <p style="font-size: 0.85em; color: var(--muted)">
+    "ran" marks agentic runs judged only by their diff, which have no automated
+    pass rate. Runs of the same model on different hosts or harnesses are
+    averaged. Click any cell to see the details on the eval's page.
+  </p>
+
+  <OverviewTable entries={entries} rows={main} />
+
+  {
+    older.length > 0 && (
+      <details class="ov-older">
+        <summary>
+          Older &amp; one-off models ({older.length}) — not run recently and
+          tested on fewer than 3 evals
+        </summary>
+        <OverviewTable entries={entries} rows={older} />
+      </details>
+    )
+  }
+</Layout>

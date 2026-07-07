@@ -1,0 +1,117 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../layouts/Layout.astro"
+import { loadResults } from "../lib/results"
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "")
+
+const sections = [
+  {
+    type: "tests",
+    title: "Test batteries",
+    blurb: "Batches of pass/fail assertions run against many models.",
+  },
+  {
+    type: "agentic",
+    title: "Agentic coding",
+    blurb:
+      "Coding agents turned loose on real tasks. The result is a diff you have to read.",
+  },
+  {
+    type: "freeform",
+    title: "Freeform",
+    blurb: "No single right answer — judge the outputs side by side.",
+  },
+] as const
+
+const entries = await getCollection("evals")
+
+function cardData(entry: (typeof entries)[number]) {
+  const results = loadResults(entry.id)
+  const latest = results?.runs
+    .map((r) => r.timestamp)
+    .sort()
+    .at(-1)
+  return {
+    entry,
+    models: results?.runs.length ?? 0,
+    updated: latest
+      ? new Date(latest).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : null,
+  }
+}
+
+const byType = (type: string) =>
+  entries
+    .filter((e) => e.data.type === type)
+    .sort((a, b) => Number(a.data.archived) - Number(b.data.archived))
+    .map(cardData)
+---
+
+<Layout
+  title="LLM evals"
+  description="Personal LLM evaluations: real tasks, real prompts, actual results across models."
+>
+  <h1>LLM evals</h1>
+  <p>
+    Every week some company releases another LLM that blows the previous models
+    out of the water, according to the benchmarks. The charts only go up. The
+    benchmarks are useful on some level. But honestly, they are pretty weird.
+  </p>
+  <p>
+    If you're doing anything at all interesting with large language models, you
+    need to set up your own evals. Whether you're trying to <a
+      href="https://thescoop.org/archives/2025/01/27/llm-extraction-challenge-fundraising-emails/index.html"
+      >extract committee names from political emails</a
+    >, <a href="https://palewi.re/docs/first-llm-classifier/"
+      >classify campaign expenditures</a
+    > or <a
+      href="https://kschaul.com/post/2025/03/05/2025-03-05-use-llm-to-keep-trackers-updated/"
+      >keep a tracker updated</a
+    >, I promise that your use cases are much more useful than the benchmarks.
+    Only setting up your own evals will tell you what combination of models and
+    prompts work best for you. After all, you will be directly testing how you
+    use them!
+  </p>
+  <p>
+    <a
+      href="https://kschaul.com/post/2025/04/10/2025-04-10-your-own-llm-evals/"
+      >Read the full blog post</a
+    > · <a href="https://github.com/kevinschaul/llm-evals">View on GitHub</a> ·
+    <a href={`${base}/overview/`}>Model × eval overview</a>
+  </p>
+
+  {
+    sections.map((section) => {
+      const cards = byType(section.type)
+      if (cards.length === 0) return null
+      return (
+        <>
+          <h2>{section.title}</h2>
+          <p class="eval-section-blurb">{section.blurb}</p>
+          <ul class="eval-cards">
+            {cards.map(({ entry, models, updated }) => (
+              <li class="eval-card">
+                <h3>
+                  <a href={`${base}/evals/${entry.id}/`}>{entry.data.title}</a>
+                  {entry.data.archived && <span class="badge"> archived</span>}
+                </h3>
+                {entry.data.blurb && (
+                  <p class="eval-card-blurb">{entry.data.blurb}</p>
+                )}
+                <p class="eval-card-meta">
+                  {models} model{models === 1 ? "" : "s"}
+                  {updated && ` · updated ${updated}`}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    })
+  }
+</Layout>

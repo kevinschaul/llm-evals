@@ -30,7 +30,7 @@ eval name model *ARGS:
     uv run inspect eval src/evals/{{name}}/eval.py --model {{model}} --log-dir logs {{ARGS}}
     just extract {{name}}
 
-# Export results from a single eval to CSVs for Observable dashboard
+# Export results from a single eval to results.json for the dashboard
 extract name:
     uv run python extract_results.py {{name}}
 
@@ -42,7 +42,7 @@ cleanup-logs:
 inspect:
     uv run inspect view start --log-dir logs
 
-# Start Observable Framework dashboard
+# Start Astro dashboard dev server
 dev:
     npm run dev
 

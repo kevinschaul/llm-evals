@@ -1,0 +1,519 @@
+/* Eval dashboard styles, built on @kevinschaul/theme tokens */
+
+.eval-kicker {
+  font-size: 0.8em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0.1em 0.6em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.badge-pass {
+  background: var(--pass);
+  color: var(--pass-fg);
+  border-color: transparent;
+}
+
+.badge-fail {
+  background: var(--fail);
+  color: var(--fail-fg);
+  border-color: transparent;
+}
+
+.badge-none {
+  background: var(--none);
+  color: var(--none-fg);
+  border-color: transparent;
+}
+
+/* Eval cards (home page) */
+.eval-section-blurb {
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-top: -0.5em;
+}
+
+.eval-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.eval-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.eval-card h3 {
+  margin: 0;
+  font-size: 1.05em;
+}
+
+.eval-card h3 a {
+  text-decoration: none;
+}
+
+.eval-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.eval-card-blurb {
+  color: var(--muted);
+  margin: 0;
+}
+
+.eval-card-meta {
+  color: var(--muted);
+  font-size: 0.85em;
+  margin: 0;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+/* Leaderboard */
+.leaderboard {
+  font-variant-numeric: tabular-nums;
+}
+
+.leaderboard td.num,
+.leaderboard th.num {
+  text-align: right;
+}
+
+.rate-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  min-width: 9em;
+}
+
+.rate-bar-track {
+  flex: 1;
+  height: 0.6em;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.rate-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--pass-fg);
+  opacity: 0.75;
+}
+
+/* Overview table */
+
+/* Let wide tables escape the prose column on large screens */
+.breakout {
+  width: min(1100px, calc(100vw - 3rem));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overview {
+  border-collapse: collapse;
+  font-size: 0.72em;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+
+.overview th {
+  border: none;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 0.3em 0.4em;
+}
+
+.overview th a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.overview th a:hover {
+  color: var(--fg);
+}
+
+.overview td {
+  border: none;
+  padding: 2px;
+}
+
+.overview td.num,
+.overview th.num {
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+.ov-model {
+  color: var(--text);
+  white-space: nowrap;
+  padding-right: 0.75em !important;
+  position: sticky;
+  left: 0;
+  background: var(--bg);
+}
+
+.ov-cell {
+  display: block;
+  min-width: 3em;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.15em 0.35em;
+  color: var(--fg);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.ov-cell:hover {
+  border-color: var(--fg);
+}
+
+.ov-ran {
+  background: var(--surface);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.ov-empty {
+  min-width: 3.4em;
+}
+
+.ov-mean {
+  color: var(--muted);
+}
+
+.ov-older {
+  margin-top: 2rem;
+}
+
+.ov-older summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+/* Results matrix */
+.matrix-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.matrix {
+  border-collapse: collapse;
+  font-size: 0.75em;
+  line-height: 1.3;
+}
+
+.matrix th {
+  border: none;
+  padding: 0.3em 0.4em;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+th.matrix-col {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: left;
+  vertical-align: bottom;
+  max-height: 14em;
+  white-space: nowrap;
+}
+
+.matrix td {
+  border: none;
+  padding: 1px;
+}
+
+.matrix td.matrix-test {
+  color: var(--muted);
+  max-width: 22em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 0.75em;
+}
+
+.matrix-cell {
+  display: block;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.matrix-cell.pass {
+  background: var(--pass);
+}
+
+.matrix-cell.fail {
+  background: var(--fail);
+}
+
+.matrix-cell.none {
+  background: var(--none);
+}
+
+.matrix-cell.empty {
+  background: transparent;
+  border-color: var(--border);
+  cursor: default;
+}
+
+.matrix-cell.selected {
+  border-color: var(--fg);
+}
+
+.matrix-cell:not(.empty):hover {
+  border-color: var(--muted);
+}
+
+/* Detail drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(560px, 100vw);
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  overflow-y: auto;
+  z-index: 100;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.drawer-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75em;
+  margin-bottom: 1rem;
+}
+
+.drawer-head h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.drawer-close {
+  margin-left: auto;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 0.1em 0.6em;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.drawer-field {
+  margin-bottom: 1rem;
+}
+
+.drawer-field-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.drawer-field pre {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 20em;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* Diff viewer */
+.diff-file {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+
+.diff-file summary {
+  cursor: pointer;
+  padding: 0.5em 0.9em;
+  background: var(--surface);
+  font-family: var(--font-mono);
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+
+.diff-file summary::-webkit-details-marker {
+  display: none;
+}
+
+.diff-stat-add {
+  color: var(--pass-fg);
+}
+
+.diff-stat-del {
+  color: var(--fail-fg);
+}
+
+.diff-lines {
+  margin: 0;
+  padding: 0.5em 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.45;
+  background: none;
+}
+
+.diff-line {
+  display: block;
+  padding: 0 0.9em;
+  white-space: pre;
+}
+
+.diff-line.add {
+  background: var(--pass);
+  color: var(--pass-fg);
+}
+
+.diff-line.del {
+  background: var(--fail);
+  color: var(--fail-fg);
+}
+
+.diff-line.hunk {
+  color: var(--none-fg);
+  background: var(--none);
+}
+
+.diff-truncated {
+  padding: 0.5em 0.9em;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Freeform output comparison */
+.compare-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1rem 0;
+}
+
+.compare-picker button {
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.15em 0.9em;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.compare-picker button.active {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.compare-context {
+  font-size: 0.85em;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.compare-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.55;
+}
+
+.compare-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.5em 1em;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-card-head strong {
+  font-weight: 600;
+}
+
+.compare-card-head .meta {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.compare-card-body {
+  padding: 0.75em 1em;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 28em;
+  overflow-y: auto;
+}
+
+/* Runs table (agentic) */
+.runs-table tr.selectable {
+  cursor: pointer;
+}
+
+.runs-table tr.selectable:hover td {
+  background: var(--surface);
+}
+
+.runs-table tr.selected td {
+  background: var(--surface);
+}
+
+.checks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+}

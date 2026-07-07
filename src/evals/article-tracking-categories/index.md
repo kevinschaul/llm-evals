@@ -1,27 +1,7 @@
-# Article tracking: Trump - categories
+---
+title: "Article tracking: Trump categories"
+type: tests
+blurb: Do the LLM's article categories match mine?
+---
 
 How well do the llm categories match up with mine?
-
-```js
-import AggregateTable from "../../components/AggregateTable.js"
-import ResultsTable from "../../components/ResultsTable.js"
-import SelectionDetails from "../../components/SelectionDetails.js"
-const results = FileAttachment("results/results.csv").csv({ typed: false })
-const aggregate = FileAttachment("results/aggregate.csv").csv({ typed: true })
-```
-
-## Aggregate
-
-```js
-AggregateTable(aggregate)
-```
-
-## Results
-
-```js
-const selection = view(ResultsTable(results))
-```
-
-```js
-SelectionDetails(selection, display)
-```

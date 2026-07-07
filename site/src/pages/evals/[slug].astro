@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from "astro:content"
+import Layout from "../../layouts/Layout.astro"
+import TestsEval from "../../components/TestsEval.astro"
+import AgenticEval from "../../components/AgenticEval.astro"
+import FreeformEval from "../../components/FreeformEval.astro"
+import { loadResults } from "../../lib/results"
+
+export async function getStaticPaths() {
+  const entries = await getCollection("evals")
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "")
+const dataUrl = `${base}/evals/${entry.id}/results.json`
+const results = loadResults(entry.id)
+const githubUrl = `https://github.com/kevinschaul/llm-evals/tree/main/src/evals/${entry.id}`
+---
+
+<Layout title={entry.data.title} description={entry.data.blurb}>
+  <p class="eval-kicker">
+    <a href={`${base}/`}>← All evals</a>
+    {entry.data.archived && <span class="badge">archived</span>}
+    <a href={githubUrl} style="margin-left: auto">View on GitHub</a>
+  </p>
+  <h1>{entry.data.title}</h1>
+  <Content />
+  {
+    results ? (
+      entry.data.type === "tests" ? (
+        <TestsEval results={results} dataUrl={dataUrl} />
+      ) : entry.data.type === "agentic" ? (
+        <AgenticEval dataUrl={dataUrl} />
+      ) : (
+        <FreeformEval dataUrl={dataUrl} />
+      )
+    ) : (
+      <p>
+        <em>No results yet.</em>
+      </p>
+    )
+  }
+</Layout>

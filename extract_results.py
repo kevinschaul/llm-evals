@@ -1,14 +1,42 @@
 #!/usr/bin/env python3
 """
-Export Inspect evaluation logs to CSVs for Observable Framework dashboard.
+Export Inspect evaluation logs to results.json for the Astro dashboard.
 
-Reads all .eval logs for the given eval, keeping the most recent version per model, and writes results.csv and aggregate.csv
+Reads all .eval logs for the given eval, keeping the most recent version per
+model, and writes results/results.json with this shape:
+
+{
+  "eval": "grab-bag",
+  "generated": "2026-07-06T...",
+  "tests": [{"id": "test-1", "input": "...", "expected": "..."}],
+  "runs": [{
+    "provider_id": "claude-sonnet-4-0",
+    "model": "claude-sonnet-4-0",
+    "full_model": "anthropic/claude-sonnet-4-0",
+    "solver": "",
+    "openrouter_provider": "",
+    "timestamp": "...",
+    "metrics": {"includes": {"accuracy": 0.9}},
+    "samples": [{
+      "id": "test-1",
+      "output": "...",
+      "passed": true,
+      "duration_ms": 1234.0,
+      "scores": {"includes": {"value": "C", "explanation": null}}
+    }]
+  }]
+}
+
+Tests (input/expected) are stored once and referenced by sample id, so large
+inputs aren't duplicated across model runs. Aggregates are computed by the
+frontend from samples.
 """
 import argparse
-import csv
+import json
+from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from collections import defaultdict
 
 from inspect_ai.log import read_eval_log
 
@@ -29,267 +57,191 @@ def extract_provider_id_from_log(log):
     return f"{leaf} ({sub})" if sub else leaf
 
 
-def get_latest_logs_per_model(log_files):
-    """Keep only the most recent log file per model
+def read_latest_logs_per_model(log_files):
+    """Read all logs, keeping only the most recent per provider_id.
 
-    Args:
-        log_files: List of Path objects pointing to .eval log files
-
-    Returns:
-        List of Path objects for the most recent log per model
+    Returns a list of EvalLog objects sorted by provider_id.
     """
-    # Group log files by model
-    logs_by_model = defaultdict(list)
+    logs_by_provider = defaultdict(list)
 
     for log_file in log_files:
         try:
             log = read_eval_log(str(log_file))
-            provider_id = extract_provider_id_from_log(log)
-            timestamp = log.eval.created
-            logs_by_model[provider_id].append((timestamp, log_file))
         except Exception as e:
             print(f"Warning: Could not read {log_file}: {e}")
             continue
+        provider_id = extract_provider_id_from_log(log)
+        logs_by_provider[provider_id].append((log.eval.created, log))
 
-    # Keep only the most recent log per model
-    latest_logs = []
-    for provider_id, logs in logs_by_model.items():
-        # Sort by timestamp (most recent first) and take the first one
+    latest = []
+    for provider_id, logs in sorted(logs_by_provider.items()):
         logs.sort(reverse=True, key=lambda x: x[0])
-        latest_logs.append(logs[0][1])
+        latest.append(logs[0][1])
 
-    return latest_logs
+    return latest
 
 
-def generate_results_csv(log_files, output_path):
-    """Generate detailed results.csv from eval logs"""
+def normalize_text(value) -> str:
+    """Normalize a sample input/target to plain text.
 
-    results = []
-
-    # Deduplicate: keep only the most recent log file per model
-    log_files = get_latest_logs_per_model(log_files)
-
-    for log_file in sorted(log_files):
-        try:
-            log = read_eval_log(str(log_file))
-
-            if not log.samples or not log.results:
+    Inputs may be a string or a list of chat messages whose content mixes
+    text and images; images become an "[image]" marker.
+    """
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, list):
+        parts = []
+        for item in value:
+            if isinstance(item, str):
+                parts.append(item)
                 continue
+            content = getattr(item, "content", item)
+            if isinstance(content, str):
+                parts.append(content)
+            elif isinstance(content, list):
+                for c in content:
+                    text = getattr(c, "text", None)
+                    if text is not None:
+                        parts.append(text)
+                    elif getattr(c, "type", "") == "image":
+                        parts.append("[image]")
+        return "\n".join(p for p in parts if p)
+    return str(value)
 
-            provider_id = extract_provider_id_from_log(log)
-            solver = getattr(log.eval, 'solver', None) or ""
 
-            for sample in log.samples:
-                # Extract basic info
-                test_id = f"test-{sample.id}"
-                prompt = sample.input[:200] if sample.input else ""  # Truncate long prompts
+def extract_output(sample) -> str:
+    """Return the model's text output for a sample."""
+    if not (sample.output and sample.output.choices):
+        return ""
+    content = sample.output.choices[0].message.content
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        return "".join(item.text for item in content if hasattr(item, "text"))
+    return str(content) if content else ""
 
-                # Get model output
-                result = ""
-                if sample.output and sample.output.choices:
-                    content = sample.output.choices[0].message.content
-                    if isinstance(content, str):
-                        result = content
-                    elif isinstance(content, list):
-                        # Handle list of ContentText objects
-                        result = "".join([item.text for item in content if hasattr(item, 'text')])
-                    else:
-                        result = str(content) if content else ""
 
-                # Get error if any
-                error = ""
+def json_safe(value) -> Any:
+    """Coerce a score value to something JSON-serializable."""
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, (list, tuple)):
+        return [json_safe(v) for v in value]
+    if isinstance(value, dict):
+        return {str(k): json_safe(v) for k, v in value.items()}
+    return str(value)
 
-                # Get score/passed status
-                passed = ""
-                expected = sample.target or ""
 
-                extra_scores: dict[str, Any] = {}
-                if sample.scores:
-                    # Use git_diff explanation as the result if present; it holds
-                    # the patch that the agent produced. Fall back to whichever
-                    # scorer has the longest explanation.
-                    git_diff_score = sample.scores.get("git_diff")
-                    if git_diff_score and git_diff_score.explanation:
-                        result = git_diff_score.explanation
-                    else:
-                        for s in sample.scores.values():
-                            if s.explanation and len(s.explanation) > len(result):
-                                result = s.explanation
+def derive_passed(scores) -> bool | None:
+    """Derive a pass/fail bool from a sample's scores, or None if unscored.
 
-                    # Derive passed from the first non-git_diff score if available,
-                    # otherwise fall back to the first score.
-                    primary = next(
-                        (s for name, s in sample.scores.items() if name != "git_diff"),
-                        list(sample.scores.values())[0],
-                    )
-                    if primary.value is not None:
-                        if isinstance(primary.value, str):
-                            passed = "True" if primary.value == "C" else "False"
-                        elif isinstance(primary.value, (int, float)):
-                            passed = "True" if primary.value == 1.0 else "False"
-                        else:
-                            passed = "False"
+    Uses the first non-git_diff score ("C" or 1.0 means pass), matching the
+    old CSV extraction behavior.
+    """
+    if not scores:
+        return None
+    primary = next(
+        (s for name, s in scores.items() if name != "git_diff"),
+        next(iter(scores.values())),
+    )
+    if primary.value is None:
+        return None
+    if isinstance(primary.value, str):
+        return primary.value == "C"
+    if isinstance(primary.value, (int, float)):
+        return primary.value == 1.0
+    return False
 
-                    # Extract ALL scorers as named extra columns.
-                    for name, s in sample.scores.items():
-                        extra_scores[f"score_{name}"] = s.value
-                        extra_scores[f"score_{name}_explanation"] = s.explanation or ""
 
-                # Duration - convert from seconds to milliseconds
-                duration_ms = None
-                if hasattr(sample, 'total_time') and sample.total_time is not None:
-                    duration_ms = round(sample.total_time * 1000, 1)
+def extract_run_metrics(log) -> dict:
+    """Return {scorer_name: {metric_name: value}} from run-level results."""
+    metrics = {}
+    if log.results and log.results.scores:
+        for score_data in log.results.scores:
+            if score_data.metrics:
+                metrics[score_data.name] = {
+                    name: m.value for name, m in score_data.metrics.items()
+                }
+    return metrics
 
-                # Timestamp
-                timestamp = log.eval.created
 
-                leaf = log.eval.model.split('/')[-1] if '/' in log.eval.model else log.eval.model
-                results.append({
-                    'provider_id': provider_id,
-                    'model': leaf,
-                    'full_model': log.eval.model,
-                    'openrouter_provider': extract_openrouter_provider(log),
-                    'prompt_id': 'prompt-1',
-                    'test': test_id,
-                    'prompt': prompt,
-                    'result': result,
-                    'error': error,
-                    'duration_ms': duration_ms,
-                    'passed': passed,
-                    'expected': expected,
-                    'timestamp': timestamp,
-                    'solver': solver,
-                    **extra_scores,
-                })
+def generate_results_json(log_files, output_path):
+    """Build results.json from the most recent log per model."""
+    logs = read_latest_logs_per_model(log_files)
 
-        except Exception as e:
-            print(f"Warning: Could not process {log_file}: {e}")
+    tests: dict[str, dict] = {}
+    runs = []
+
+    for log in logs:
+        if not log.samples:
             continue
 
-    # Write results.csv
-    if results:
-        with open(output_path, 'w', newline='', encoding='utf-8') as f:
-            base_fields = ['provider_id', 'model', 'full_model', 'openrouter_provider', 'prompt_id',
-                           'test', 'prompt', 'result', 'error', 'duration_ms', 'passed',
-                           'expected', 'timestamp', 'solver']
-            extra_fields = [k for k in results[0] if k not in base_fields]
-            fieldnames = base_fields + extra_fields
-            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
-            writer.writeheader()
-            writer.writerows(results)
+        provider_id = extract_provider_id_from_log(log)
+        leaf = log.eval.model.split('/')[-1] if '/' in log.eval.model else log.eval.model
 
-        print(f"✅ Generated {output_path} with {len(results)} results")
-    else:
-        print(f"⚠️  No results found")
+        samples = []
+        for sample in log.samples:
+            test_id = f"test-{sample.id}"
 
-    return results
+            if test_id not in tests:
+                tests[test_id] = {
+                    "id": test_id,
+                    "input": normalize_text(sample.input),
+                    "expected": normalize_text(sample.target),
+                }
 
+            scores = {}
+            if sample.scores:
+                for name, s in sample.scores.items():
+                    scores[name] = {
+                        "value": json_safe(s.value),
+                        "explanation": s.explanation or None,
+                    }
 
-def generate_aggregate_csv(log_files, output_path):
-    """Generate aggregated aggregate.csv from eval logs"""
+            duration_ms = None
+            if getattr(sample, "total_time", None) is not None:
+                duration_ms = round(sample.total_time * 1000, 1)
 
-    aggregates = defaultdict(lambda: {
-        'total_tests': 0,
-        'assertions': 0,
-        'passed': 0,
-        'failed': 0,
-        'no_assertions': 0,
-        'errors': 0,
-        'durations': [],
-        'metric_sum': 0.0,
-        'metric_count': 0,
-    })
+            samples.append({
+                "id": test_id,
+                "output": extract_output(sample),
+                "passed": derive_passed(sample.scores),
+                "duration_ms": duration_ms,
+                "scores": scores,
+            })
 
-    # Deduplicate: keep only the most recent log file per model
-    log_files = get_latest_logs_per_model(log_files)
-
-    for log_file in sorted(log_files):
-        try:
-            log = read_eval_log(str(log_file))
-
-            if not log.results:
-                continue
-
-            provider_id = extract_provider_id_from_log(log)
-            key = (provider_id, 'prompt-1')
-
-            agg = aggregates[key]
-
-            # Get stats from results — prefer whichever scorer has metrics
-            if log.results.scores:
-                score_data = next(
-                    (s for s in log.results.scores if s.metrics),
-                    log.results.scores[0],
-                )
-                agg['total_tests'] += log.results.total_samples
-                agg['assertions'] += score_data.scored_samples
-
-                # Support both accuracy (binary C/I scorers) and mean (float scorers)
-                metric_value = None
-                if score_data.metrics:
-                    for key_name in ('accuracy', 'mean'):
-                        if key_name in score_data.metrics:
-                            metric_value = score_data.metrics[key_name].value
-                            break
-                if metric_value is not None:
-                    passed_count = round(metric_value * score_data.scored_samples)
-                    agg['passed'] += passed_count
-                    agg['failed'] += score_data.scored_samples - passed_count
-                    agg['metric_sum'] += metric_value
-                    agg['metric_count'] += 1
-
-                agg['no_assertions'] += score_data.unscored_samples or 0
-
-        except Exception as e:
-            print(f"Warning: Could not aggregate {log_file}: {e}")
-            continue
-
-    # Convert to list and calculate rates
-    aggregate_rows = []
-    for (provider_id, prompt_id), agg in sorted(aggregates.items()):
-        if agg['metric_count'] > 0:
-            pass_rate = round(agg['metric_sum'] / agg['metric_count'] * 100, 1)
-        elif agg['assertions'] > 0:
-            pass_rate = round(agg['passed'] / agg['assertions'] * 100, 1)
-        else:
-            pass_rate = 0
-        avg_duration = round(sum(agg['durations']) / len(agg['durations']), 1) if agg['durations'] else None
-        min_duration = min(agg['durations']) if agg['durations'] else None
-        max_duration = max(agg['durations']) if agg['durations'] else None
-
-        aggregate_rows.append({
-            'provider_id': provider_id,
-            'prompt_id': prompt_id,
-            'total_tests': agg['total_tests'],
-            'assertions': agg['assertions'],
-            'passed': agg['passed'],
-            'failed': agg['failed'],
-            'no_assertions': agg['no_assertions'],
-            'pass_rate': pass_rate,
-            'errors': agg['errors'],
-            'avg_duration_ms': avg_duration,
-            'min_duration_ms': min_duration,
-            'max_duration_ms': max_duration,
+        runs.append({
+            "provider_id": provider_id,
+            "model": leaf,
+            "full_model": log.eval.model,
+            "solver": getattr(log.eval, "solver", None) or "",
+            "openrouter_provider": extract_openrouter_provider(log),
+            "timestamp": log.eval.created,
+            "metrics": extract_run_metrics(log),
+            "samples": samples,
         })
 
-    # Write aggregate.csv
-    if aggregate_rows:
-        with open(output_path, 'w', newline='', encoding='utf-8') as f:
-            fieldnames = ['provider_id', 'prompt_id', 'total_tests', 'assertions',
-                         'passed', 'failed', 'no_assertions', 'pass_rate', 'errors',
-                         'avg_duration_ms', 'min_duration_ms', 'max_duration_ms']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(aggregate_rows)
+    data = {
+        "eval": output_path.parent.parent.name,
+        "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "tests": list(tests.values()),
+        "runs": runs,
+    }
 
-        print(f"✅ Generated {output_path} with {len(aggregate_rows)} aggregate rows")
-    else:
-        print(f"⚠️  No aggregate data found")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+
+    n_samples = sum(len(r["samples"]) for r in runs)
+    print(f"✅ Generated {output_path} with {len(runs)} runs, {n_samples} samples")
+    return data
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Export Inspect log results to CSV"
+        description="Export Inspect log results to results.json"
     )
     parser.add_argument(
         "eval_name",
@@ -301,47 +253,35 @@ def main():
     )
     args = parser.parse_args()
 
-    # Find eval directory
     eval_dir = Path("src/evals") / args.eval_name
     if not eval_dir.exists():
         print(f"❌ Error: Eval directory not found: {eval_dir}")
         return 1
 
-    # Create results directory
     results_dir = eval_dir / "results"
     results_dir.mkdir(exist_ok=True)
 
-    # Find log files
     logs_dir = Path("logs")
-    eval_task_name = args.eval_name
-
     if args.log_file:
         log_files = [Path(args.log_file)]
     else:
-        log_files = list(logs_dir.glob(f"*{eval_task_name}*.eval"))
+        log_files = list(logs_dir.glob(f"*{args.eval_name}*.eval"))
 
     if not log_files:
-        print(f"❌ Error: No log files found for eval '{args.eval_name}' (task: {eval_task_name})")
+        print(f"❌ Error: No log files found for eval '{args.eval_name}'")
         print(f"    Looked in: {logs_dir}")
         return 1
 
-    print(f"🔄 Extracting results for {args.eval_name}...")
-    print(f"   Found {len(log_files)} log files")
-    print("=" * 70)
+    print(f"🔄 Extracting results for {args.eval_name} ({len(log_files)} log files)")
 
-    # Generate results.csv
-    results_path = results_dir / "results.csv"
-    generate_results_csv(log_files, results_path)
+    generate_results_json(log_files, results_dir / "results.json")
 
-    # Generate aggregate.csv
-    aggregate_path = results_dir / "aggregate.csv"
-    generate_aggregate_csv(log_files, aggregate_path)
-
-    print("=" * 70)
-    print("✨ Extraction complete!")
-    print(f"\n💡 Files generated:")
-    print(f"   {results_path}")
-    print(f"   {aggregate_path}")
+    # results.json replaces the old CSV outputs
+    for stale in ("results.csv", "aggregate.csv"):
+        stale_path = results_dir / stale
+        if stale_path.exists():
+            stale_path.unlink()
+            print(f"🗑  Removed {stale_path}")
 
     return 0
 

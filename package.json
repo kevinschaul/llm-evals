@@ -1,21 +1,17 @@
 {
+  "name": "llm-evals",
   "type": "module",
   "private": true,
+  "workspaces": [
+    "site"
+  ],
   "scripts": {
-    "clean": "rimraf src/.observablehq/cache",
-    "build": "observable build",
-    "dev": "observable preview --host 0.0.0.0",
-    "deploy": "observable deploy",
-    "observable": "observable"
-  },
-  "dependencies": {
-    "@observablehq/framework": "^1.13.3"
-  },
-  "devDependencies": {
-    "rimraf": "^5.0.5"
+    "dev": "npm run dev -w site",
+    "build": "npm run build -w site",
+    "preview": "npm run preview -w site"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "prettier": {
     "semi": false

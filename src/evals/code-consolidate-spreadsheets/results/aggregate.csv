@@ -1,6 +1,0 @@
-provider_id,prompt_id,total_tests,assertions,passed,failed,no_assertions,pass_rate,errors,avg_duration_ms,min_duration_ms,max_duration_ms
-claude-sonnet-4-5,prompt-1,1,1,1,0,0,66.7,0,,,
-gpt-5.4,prompt-1,1,1,1,0,0,100.0,0,,,
-gpt-5.4 (deepinfra),prompt-1,1,1,1,0,0,100.0,0,,,
-gpt-oss-120b (deepinfra),prompt-1,1,1,1,0,0,66.7,0,,,
-gpt-oss-20b (deepinfra),prompt-1,1,1,1,0,0,66.7,0,,,

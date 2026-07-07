@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from "astro:content"
+import type { OverviewRow } from "../lib/overview"
+import { formatPercent } from "../lib/types"
+
+interface Props {
+  entries: CollectionEntry<"evals">[]
+  rows: OverviewRow[]
+}
+
+const { entries, rows } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, "")
+---
+
+<div class="matrix-wrap breakout">
+  <table class="overview">
+    <thead>
+      <tr>
+        <th></th>
+        {
+          entries.map((entry) => (
+            <th class="matrix-col">
+              <a href={`${base}/evals/${entry.id}/`}>{entry.data.title}</a>
+            </th>
+          ))
+        }
+        <th class="num">Mean</th>
+        <th class="num">Evals</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <td class="ov-model">{row.model}</td>
+            {entries.map((entry) => {
+              const cell = row.cells.get(entry.id)
+              if (!cell) return <td class="ov-empty" />
+              if (cell.rate === null) {
+                const agentic = entry.data.type === "agentic"
+                return (
+                  <td>
+                    <a
+                      class="ov-cell ov-ran"
+                      href={`${base}/evals/${entry.id}/`}
+                      title={`${row.model} ran ${entry.data.title} ${agentic ? "(judged by diff only)" : "(no automated score)"}`}
+                    >
+                      {agentic ? "ran" : "–"}
+                    </a>
+                  </td>
+                )
+              }
+              return (
+                <td>
+                  <a
+                    class="ov-cell"
+                    href={`${base}/evals/${entry.id}/`}
+                    style={`background: color-mix(in oklab, var(--pass) ${Math.round(cell.rate * 100)}%, var(--fail))`}
+                    title={`${row.model} · ${entry.data.title}: ${formatPercent(cell.rate)}${cell.runs > 1 ? ` (avg of ${cell.runs} runs)` : ""}`}
+                  >
+                    {formatPercent(cell.rate)}
+                  </a>
+                </td>
+              )
+            })}
+            <td class="num ov-mean">{formatPercent(row.mean)}</td>
+            <td class="num ov-mean">{row.covered}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

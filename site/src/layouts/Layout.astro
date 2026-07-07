@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@kevinschaul/theme/components/BaseLayout.astro"
+import "../styles/site.css"
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+---
+
+<BaseLayout
+  title={title}
+  description={description ?? "Personal LLM evaluations: real tasks, real prompts, actual results across models."}
+  siteTitle="Kevin Schaul"
+>
+  <slot />
+</BaseLayout>

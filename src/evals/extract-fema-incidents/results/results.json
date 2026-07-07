@@ -1,0 +1,792 @@
+{
+ "eval": "extract-fema-incidents",
+ "generated": "2026-07-06T21:51:40+00:00",
+ "tests": [
+  {
+   "id": "test-jpg",
+   "input": "Extract all declaration requests (from cached response)",
+   "expected": "[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": false,\n    \"HM\": true,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": false,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]"
+  },
+  {
+   "id": "test-pdf",
+   "input": "Extract all declaration requests (from cached response)",
+   "expected": "[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": false,\n    \"HM\": true,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": false,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]"
+  }
+ ],
+ "runs": [
+  {
+   "provider_id": "claude-3-5-sonnet-20241022",
+   "model": "claude-3-5-sonnet-20241022",
+   "full_model": "anthropic/claude-3-5-sonnet-20241022",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.497095+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.5
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-3-7-sonnet-20250219",
+   "model": "claude-3-7-sonnet-20250219",
+   "full_model": "anthropic/claude-3-7-sonnet-20250219",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.505528+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-3-opus-20240229",
+   "model": "claude-3-opus-20240229",
+   "full_model": "anthropic/claude-3-opus-20240229",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.508219+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY - Severe Winter Storms and Snowstorms\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Jan 30\"}, {\"state_or_tribe_or_territory\": \"OK - Wildfires and Straight-line Winds\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"\", \"HM\": \"X\", \"requested\": \"Mar 21\"}, {\"state_or_tribe_or_territory\": \"HI - Flooding\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Mar 27\"}, {\"state_or_tribe_or_territory\": \"MS - Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 1\"}, {\"state_or_tribe_or_territory\": \"MO - Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 2\"}, {\"state_or_tribe_or_territory\": \"MI - Severe Winter Storm\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"\", \"requested\": \"Apr 11\"}, {\"state_or_tribe_or_territory\": \"NE - Severe Winter Storm and Straight-line Winds\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 14\"}, {\"state_or_tribe_or_territory\": \"KS - Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 14\"}, {\"state_or_tribe_or_territory\": \"IA - Severe Winter Storm\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 15\"}, {\"state_or_tribe_or_territory\": \"TX - Severe Weather and Flooding\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 17\"}, {\"state_or_tribe_or_territory\": \"TN - Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 17\"}, {\"state_or_tribe_or_territory\": \"AR - Severe Storms and Tornadoes (Appeal) \\u2013 APPROVED\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) \\u2013 APPROVED\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation \\u2013 Severe Winter Storm\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": \"\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 21\"}, {\"state_or_tribe_or_territory\": \"MO - Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"Apr 30\"}, {\"state_or_tribe_or_territory\": \"AR - Severe Storms, Tornadoes, and Flooding\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": \"X\", \"PA\": \"X\", \"HM\": \"X\", \"requested\": \"May 3\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-opus-4-0",
+   "model": "claude-opus-4-0",
+   "full_model": "anthropic/claude-opus-4-0",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.510570+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-sonnet-4-0",
+   "model": "claude-sonnet-4-0",
+   "full_model": "anthropic/claude-sonnet-4-0",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.513442+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"Kentucky\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"Oklahoma\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"Wildfire\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"Hawaii\", \"incident_description\": \"Flooding\", \"incident_type\": \"Flooding\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"Mississippi\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"Missouri\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"Michigan\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"Nebraska\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"Kansas\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"Iowa\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"Texas\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"Severe Weather\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"Tennessee\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"Arkansas\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"Severe Winter Storm\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"Missouri\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"Arkansas\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"Severe Storm\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "deepseek-ocr",
+   "model": "deepseek-ocr",
+   "full_model": "openrouter/deepseek/deepseek-ocr",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-22T16:24:30-05:00",
+   "metrics": {},
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "",
+     "passed": null,
+     "duration_ms": 873.0,
+     "scores": {}
+    }
+   ]
+  },
+  {
+   "provider_id": "gemini-1.5-flash-latest",
+   "model": "gemini-1.5-flash-latest",
+   "full_model": "gemini/gemini-1.5-flash-latest",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.516610+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.5
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gemini-1.5-pro-latest",
+   "model": "gemini-1.5-pro-latest",
+   "full_model": "gemini/gemini-1.5-pro-latest",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.519107+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gemini-2.5-pro-preview-03-25",
+   "model": "gemini-2.5-pro-preview-03-25",
+   "full_model": "gemini/gemini-2.5-pro-preview-03-25",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.521609+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gemini-2.5-pro-preview-05-06",
+   "model": "gemini-2.5-pro-preview-05-06",
+   "full_model": "gemini/gemini-2.5-pro-preview-05-06",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.524259+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.5
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": true,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 1.0,
+       "explanation": "Matched 15 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-4o",
+   "model": "gpt-4o",
+   "full_model": "openai/gpt-4o",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.533591+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-07\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-20\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"ID\", \"incident_description\": \"Severe Storm, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Storm and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"NH\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Storm and Tornadoes\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-25\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-28\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Flooding - Approved\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-29\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-4o-mini",
+   "model": "gpt-4o-mini",
+   "full_model": "openai/gpt-4o-mini",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.536184+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Storms and Snovstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-31\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Storm, Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Storm, Straight-line Winds, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Storms, Straight-line Winds, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) \\u2013 APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-5-2025-08-07",
+   "model": "gpt-5-2025-08-07",
+   "full_model": "gpt-5-2025-08-07",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.527027+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) \\u2013 APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-oss-20b",
+   "model": "gpt-oss-20b",
+   "full_model": "lmstudio/openai/gpt-oss-20b",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.529418+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"A\", \"incident_description\": \"\", \"incident_type\": \"...\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \",..??\\u2026\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "kimi-k2-thinking (moonshotai)",
+   "model": "kimi-k2-thinking",
+   "full_model": "openrouter/moonshotai/kimi-k2-thinking",
+   "solver": "",
+   "openrouter_provider": "moonshotai",
+   "timestamp": "2025-11-10T16:33:29-06:00",
+   "metrics": {},
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "",
+     "passed": null,
+     "duration_ms": 631.0,
+     "scores": {}
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 2439.0,
+     "scores": {}
+    }
+   ]
+  },
+  {
+   "provider_id": "o1",
+   "model": "o1",
+   "full_model": "openai/o1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.538559+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"NY\", \"incident_description\": \"Severe Winter Storm and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-10\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-20\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-29\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storm, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Storm, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"WY\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": false, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Storm and Tornadoes\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"NM\", \"incident_description\": \"Severe Storm, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-28\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-29\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-28\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) \\u2013 APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "o3",
+   "model": "o3",
+   "full_model": "openai/o3",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.541421+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-05\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-22\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storms and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storms, Straight-line Winds, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"VA\", \"incident_description\": \"Severe Storms and Tornadoes\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (April) \\u2013 APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IN\", \"incident_description\": \"Severe Storms and Tornadoes (March)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Severe Storms and Flooding (April)\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}, {\"state_or_tribe_or_territory\": \"DE\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"Kentucky\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"Oklahoma\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"Hawaii\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"Mississippi\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"Missouri (Incident: Severe Storms, Straight-line Winds, Tornadoes, and Wildfires)\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"Michigan\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"Nebraska\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"Kansas\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"Iowa\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"Texas\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"Tennessee\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"Arkansas (Appeal \\u2013 Approved)\", \"incident_description\": \"Severe Storms and Tornadoes\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"Missouri (Incident: Severe Storms, Straight-line Winds, Tornadoes, and Flooding)\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"Arkansas\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "o4-mini-2025-04-16",
+   "model": "o4-mini-2025-04-16",
+   "full_model": "openai/o4-mini-2025-04-16",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.544064+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": true, \"PA\": false, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3-14b",
+   "model": "qwen3-14b",
+   "full_model": "lmstudio/qwen/qwen3-14b",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T15:47:39.531348+00:00",
+   "metrics": {
+    "fema_extraction": {
+     "accuracy": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"Alaska\", \"incident_description\": \"The applicant is requesting a permit to use the land for mining activities. The request includes an assessment of environmental impacts and mitigation measures.\", \"incident_type\": \"Declaration Request\", \"IA\": false, \"PA\": false, \"HM\": true, \"requested\": \"Yeah!\"}, {\"state_or_tribe_or_territory\": \"Alaska\", \"incident_description\": \"The applicant is requesting a permit to use the land for recreational purposes. The request includes an assessment of environmental impacts and mitigation measures.\", \"incident_type\": \"Declaration Request\", \"IA\": false, \"PA\": false, \"HM\": true, \"requested\": \"Yeah!\"}, {\"state_or_tribe_or_territory\": \"Alaska\", \"incident_description\": \"The applicant is requesting a permit to use the land for oil and gas development. The request includes an assessment of environmental impacts and mitigation measures.\", \"incident_type\": \"Declaration Request\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"Yeah!\"}]",
+     "passed": false,
+     "duration_ms": null,
+     "scores": {
+      "fema_extraction": {
+       "value": 0.0,
+       "explanation": "Matched 0 of 15 incidents"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3-30b-a3b-2507",
+   "model": "qwen3-30b-a3b-2507",
+   "full_model": "openai-api/lmstudio/qwen/qwen3-30b-a3b-2507",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T13:37:22-05:00",
+   "metrics": {},
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "",
+     "passed": null,
+     "duration_ms": 848.0,
+     "scores": {}
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3-VL-30b-a3b-2507",
+   "model": "qwen3-VL-30b-a3b-2507",
+   "full_model": "openai-api/lmstudio/qwen/qwen3-VL-30b-a3b-2507",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-15T13:38:29-05:00",
+   "metrics": {},
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "",
+     "passed": null,
+     "duration_ms": 350.0,
+     "scores": {}
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3-vl-8b-instruct",
+   "model": "qwen3-vl-8b-instruct",
+   "full_model": "openrouter/qwen/qwen3-vl-8b-instruct",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-22T16:33:55-05:00",
+   "metrics": {
+    "json_equal": {
+     "mean": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": false,
+     "duration_ms": 31238.0,
+     "scores": {
+      "json_equal": {
+       "value": 0.0,
+       "explanation": "JSON match: False"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 2144.0,
+     "scores": {}
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3-vl-8b-thinking",
+   "model": "qwen3-vl-8b-thinking",
+   "full_model": "openrouter/qwen/qwen3-vl-8b-thinking",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2025-10-22T16:34:59-05:00",
+   "metrics": {
+    "json_equal": {
+     "mean": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": true,\n    \"PA\": false,\n    \"HM\": true,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) – APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MuscoGo (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]",
+     "passed": false,
+     "duration_ms": 407181.0,
+     "scores": {
+      "json_equal": {
+       "value": 0.0,
+       "explanation": "JSON match: False"
+      }
+     }
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 4309.0,
+     "scores": {}
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+---
+import {
+  aggregateRun,
+  formatDuration,
+  formatPercent,
+  sortRunsByPassRate,
+  type EvalResults,
+} from "../lib/types"
+import ResultsMatrix from "../islands/ResultsMatrix"
+
+interface Props {
+  results: EvalResults
+  dataUrl: string
+}
+
+const { results, dataUrl } = Astro.props
+const runs = sortRunsByPassRate(results.runs)
+---
+
+<h2>Leaderboard</h2>
+<table class="leaderboard">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Pass rate</th>
+      <th class="num">Passed</th>
+      <th class="num">Tests</th>
+      <th class="num">Avg time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      runs.map((run) => {
+        const agg = aggregateRun(run)
+        return (
+          <tr>
+            <td>{run.provider_id}</td>
+            <td>
+              <span class="rate-bar">
+                <span class="rate-bar-track">
+                  <span
+                    class="rate-bar-fill"
+                    style={`width: ${(agg.passRate ?? 0) * 100}%`}
+                  />
+                </span>
+                {formatPercent(agg.passRate)}
+              </span>
+            </td>
+            <td class="num">{agg.passed}</td>
+            <td class="num">{agg.total}</td>
+            <td class="num">{formatDuration(agg.avgDurationMs)}</td>
+          </tr>
+        )
+      })
+    }
+  </tbody>
+</table>
+
+<h2>Results by test</h2>
+<p style="font-size: 0.85em; color: var(--muted)">
+  One column per model, one row per test. Click a cell to inspect the model's
+  output.
+</p>
+<ResultsMatrix client:load url={dataUrl} />

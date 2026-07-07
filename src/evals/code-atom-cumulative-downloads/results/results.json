@@ -1,0 +1,137 @@
+{
+ "eval": "code-atom-cumulative-downloads",
+ "generated": "2026-07-06T21:51:51+00:00",
+ "tests": [
+  {
+   "id": "test-1",
+   "input": "Visit the site {url}\n\nFind the line chart titled \"Models Worldwide\" (subtitle \"Cumulative Downloads,\n2023-present\"), which plots cumulative model downloads in millions for three\nseries: USA, China, and EU. Extract that chart's data to a CSV file named\n`cumulative_downloads.csv` in the current directory, with exactly this header:\n\n    period,usa,china,eu\n",
+   "expected": ""
+  }
+ ],
+ "runs": [
+  {
+   "provider_id": "claude-opus-4-8",
+   "model": "claude-opus-4-8",
+   "full_model": "anthropic/claude-opus-4-8",
+   "solver": "claude_code",
+   "openrouter_provider": "",
+   "timestamp": "2026-07-02T14:15:33-05:00",
+   "metrics": {
+    "check_output": {
+     "mean": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 150575.0,
+     "scores": {
+      "git_diff": {
+       "value": "C",
+       "explanation": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..67c0a03\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Dec 23,9,0,1\n+Jan 24,11,1,3\n+Feb 24,14,1,6\n+Mar 24,17,2,9\n+Apr 24,22,2,15\n+May 24,27,3,21\n+Jun 24,33,5,25\n+Jul 24,39,6,28\n+Aug 24,49,9,32\n+Sep 24,60,12,35\n+Oct 24,71,17,38\n+Nov 24,92,25,42\n+Dec 24,115,38,45\n+Jan 25,134,50,52\n+Feb 25,157,67,59\n+Mar 25,177,97,65\n+Apr 25,203,129,72\n+May 25,227,164,78\n+Jun 25,251,203,83\n+Jul 25,273,249,88\n+Aug 25,312,335,96\n+Sep 25,377,424,103\n+Oct 25,443,521,111\n+Nov 25,495,612,121\n+Dec 25,547,716,131\n+Jan 26,610,844,142\n+Feb 26,663,971,150\n+Mar 26,723,1151,163\n"
+      },
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-sonnet-4-5",
+   "model": "claude-sonnet-4-5",
+   "full_model": "anthropic/claude-sonnet-4-5",
+   "solver": "claude_code",
+   "openrouter_provider": "",
+   "timestamp": "2026-07-02T13:30:57-05:00",
+   "metrics": {
+    "_scorer": {
+     "mean": 0.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": false,
+     "duration_ms": 87210.0,
+     "scores": {
+      "git_diff": {
+       "value": "C",
+       "explanation": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..c57d2d0\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,11 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Feb 24,14,1,6\n+May 24,27,3,21\n+Aug 24,49,9,32\n+Nov 24,92,25,42\n+Feb 25,157,67,59\n+May 25,227,164,78\n+Aug 25,312,335,96\n+Nov 25,495,612,121\n+Mar 26,663,971,150\n"
+      },
+      "_scorer": {
+       "value": 0.0,
+       "explanation": "✗ cumulative_downloads.csv does not match expected\n  expected 30 rows, got 11\n  row 2: expected ['Dec 23', '9', '0', '1'], got ['Feb 24', '14', '1', '6']\n  row 3: expected ['Jan 24', '11', '1', '3'], got ['May 24', '27', '3', '21']\n  row 4: expected ['Feb 24', '14', '1', '6'], got ['Aug 24', '49', '9', '32']\n  row 5: expected ['Mar 24', '17', '2', '9'], got ['Nov 24', '92', '25', '42']\n  row 6: expected ['Apr 24', '22', '2', '15'], got ['Feb 25', '157', '67', '59']\n  row 7: expected ['May 24', '27', '3', '21'], got ['May 25', '227', '164', '78']\n  ..."
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-5.4-mini",
+   "model": "gpt-5.4-mini",
+   "full_model": "openai/gpt-5.4-mini",
+   "solver": "codex",
+   "openrouter_provider": "",
+   "timestamp": "2026-07-02T14:20:28-05:00",
+   "metrics": {
+    "check_output": {
+     "mean": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 49032.0,
+     "scores": {
+      "git_diff": {
+       "value": "C",
+       "explanation": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..67c0a03\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Dec 23,9,0,1\n+Jan 24,11,1,3\n+Feb 24,14,1,6\n+Mar 24,17,2,9\n+Apr 24,22,2,15\n+May 24,27,3,21\n+Jun 24,33,5,25\n+Jul 24,39,6,28\n+Aug 24,49,9,32\n+Sep 24,60,12,35\n+Oct 24,71,17,38\n+Nov 24,92,25,42\n+Dec 24,115,38,45\n+Jan 25,134,50,52\n+Feb 25,157,67,59\n+Mar 25,177,97,65\n+Apr 25,203,129,72\n+May 25,227,164,78\n+Jun 25,251,203,83\n+Jul 25,273,249,88\n+Aug 25,312,335,96\n+Sep 25,377,424,103\n+Oct 25,443,521,111\n+Nov 25,495,612,121\n+Dec 25,547,716,131\n+Jan 26,610,844,142\n+Feb 26,663,971,150\n+Mar 26,723,1151,163\n"
+      },
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-5.5",
+   "model": "gpt-5.5",
+   "full_model": "openai/gpt-5.5",
+   "solver": "codex",
+   "openrouter_provider": "",
+   "timestamp": "2026-07-02T14:12:45-05:00",
+   "metrics": {
+    "check_output": {
+     "mean": 1.0
+    }
+   },
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 55113.0,
+     "scores": {
+      "git_diff": {
+       "value": "C",
+       "explanation": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..67c0a03\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Dec 23,9,0,1\n+Jan 24,11,1,3\n+Feb 24,14,1,6\n+Mar 24,17,2,9\n+Apr 24,22,2,15\n+May 24,27,3,21\n+Jun 24,33,5,25\n+Jul 24,39,6,28\n+Aug 24,49,9,32\n+Sep 24,60,12,35\n+Oct 24,71,17,38\n+Nov 24,92,25,42\n+Dec 24,115,38,45\n+Jan 25,134,50,52\n+Feb 25,157,67,59\n+Mar 25,177,97,65\n+Apr 25,203,129,72\n+May 25,227,164,78\n+Jun 25,251,203,83\n+Jul 25,273,249,88\n+Aug 25,312,335,96\n+Sep 25,377,424,103\n+Oct 25,443,521,111\n+Nov 25,495,612,121\n+Dec 25,547,716,131\n+Jan 26,610,844,142\n+Feb 26,663,971,150\n+Mar 26,723,1151,163\n"
+      },
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
