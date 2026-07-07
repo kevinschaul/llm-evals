@@ -1,12 +1,41 @@
 ---
+import { aggregateRun, formatDuration, type EvalResults } from "../lib/types"
 import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
+  results: EvalResults
   dataUrl: string
 }
 
-const { dataUrl } = Astro.props
+const { results, dataUrl } = Astro.props
+
+// No trustworthy score here, so no ranking — just who ran, alphabetically
+const runs = [...results.runs].sort((a, b) =>
+  a.provider_id.localeCompare(b.provider_id),
+)
 ---
+
+<h2>Models</h2>
+<table class="leaderboard">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th class="num">Prompts</th>
+      <th class="num">Avg time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      runs.map((run) => (
+        <tr>
+          <td>{run.provider_id}</td>
+          <td class="num">{run.samples.length}</td>
+          <td class="num">{formatDuration(aggregateRun(run).avgDurationMs)}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
 
 <h2>Outputs</h2>
 <p style="font-size: 0.85em; color: var(--muted)">

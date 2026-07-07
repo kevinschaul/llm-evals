@@ -142,8 +142,11 @@ function TestBlock({ row, defaultOpen }: { row: TestRow; defaultOpen: boolean })
   )
 }
 
+const INITIAL_BLOCKS = 12
+
 export default function ResultsByTest({ url }: { url: string }) {
   const { data, error } = useResults(url)
+  const [showAll, setShowAll] = useState(false)
 
   const rows = useMemo(() => {
     if (!data) return []
@@ -174,16 +177,23 @@ export default function ResultsByTest({ url }: { url: string }) {
   if (!data) return <p>Loading results…</p>
 
   // Small evals are meant to be read with your eyes — open everything.
-  // Larger ones start with just the hardest test open.
+  // Larger ones start with just the hardest test open, longest ones
+  // truncated behind a show-all button.
+  const visible = showAll ? rows : rows.slice(0, INITIAL_BLOCKS)
   return (
     <div className="test-blocks">
-      {rows.map((row, i) => (
+      {visible.map((row, i) => (
         <TestBlock
           key={row.test.id}
           row={row}
           defaultOpen={i === 0 || rows.length <= 8}
         />
       ))}
+      {rows.length > visible.length && (
+        <button className="show-all-tests" onClick={() => setShowAll(true)}>
+          Show all {rows.length} tests
+        </button>
+      )}
     </div>
   )
 }

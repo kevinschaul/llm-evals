@@ -36,9 +36,9 @@ const githubUrl = `https://github.com/kevinschaul/llm-evals/tree/main/src/evals/
       entry.data.type === "tests" ? (
         <TestsEval results={results} dataUrl={dataUrl} />
       ) : entry.data.type === "agentic" ? (
-        <AgenticEval dataUrl={dataUrl} />
+        <AgenticEval results={results} dataUrl={dataUrl} />
       ) : (
-        <FreeformEval dataUrl={dataUrl} />
+        <FreeformEval results={results} dataUrl={dataUrl} />
       )
     ) : (
       <p>

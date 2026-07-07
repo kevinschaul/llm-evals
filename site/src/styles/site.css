@@ -122,17 +122,7 @@
   opacity: 0.75;
 }
 
-/* Results by test */
-.test-browse {
-  margin: 2rem 0;
-}
-
-.test-browse > summary {
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 0.9em;
-}
-
+/* Result blocks (tests, prompts, agentic runs) */
 .test-blocks {
   margin: 1.5rem 0;
 }
@@ -155,6 +145,23 @@
 
 .test-block > summary::-webkit-details-marker {
   display: none;
+}
+
+/* The one clickable affordance: blocks carry a caret, tables never do */
+.test-block > summary::before {
+  content: "▸";
+  color: var(--muted);
+  flex: none;
+}
+
+.test-block[open] > summary::before {
+  content: "▾";
+}
+
+.test-block-meta {
+  flex: none;
+  color: var(--muted);
+  font-size: 0.9em;
 }
 
 .test-block > summary:hover {
@@ -341,17 +348,20 @@
   overflow-y: auto;
 }
 
-/* Runs table (agentic) */
-.runs-table tr.selectable {
+.show-all-tests {
+  display: block;
+  width: 100%;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: none;
+  color: var(--muted);
+  padding: 0.5em;
+  margin: 0.5rem 0;
   cursor: pointer;
+  font-size: 0.85em;
 }
 
-.runs-table tr.selectable:hover td,
-.runs-table tr.selectable:focus-visible td {
-  background: var(--surface);
-}
-
-.runs-table tr.selected td {
+.show-all-tests:hover {
   background: var(--surface);
 }
 

@@ -1,16 +1,75 @@
 ---
+import { formatDuration, type EvalResults } from "../lib/types"
 import AgenticResults from "../islands/AgenticResults"
 
 interface Props {
+  results: EvalResults
   dataUrl: string
 }
 
-const { dataUrl } = Astro.props
+const { results, dataUrl } = Astro.props
+
+// One row per run; agentic evals run each task once per model+harness
+const rows = results.runs
+  .flatMap((run) =>
+    run.samples.map((sample) => ({
+      model: run.provider_id,
+      solver: run.solver,
+      passed: sample.checks.filter((c) => c.passed).length,
+      total: sample.checks.length,
+      files: sample.diff
+        ? (sample.diff.match(/^diff --git /gm) || []).length
+        : null,
+      duration: sample.duration_ms,
+    })),
+  )
+  .sort((a, b) => {
+    const ra = a.total ? a.passed / a.total : -1
+    const rb = b.total ? b.passed / b.total : -1
+    if (rb !== ra) return rb - ra
+    return (a.duration ?? Infinity) - (b.duration ?? Infinity)
+  })
 ---
+
+<h2>Leaderboard</h2>
+<table class="leaderboard">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Harness</th>
+      <th class="num">Checks</th>
+      <th class="num">Files changed</th>
+      <th class="num">Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      rows.map((row) => (
+        <tr>
+          <td>{row.model}</td>
+          <td>{row.solver}</td>
+          <td class="num">
+            {row.total > 0 ? (
+              <span
+                class={`badge ${row.passed === row.total ? "badge-pass" : "badge-fail"}`}
+              >
+                {row.passed}/{row.total}
+              </span>
+            ) : (
+              "–"
+            )}
+          </td>
+          <td class="num">{row.files ?? "–"}</td>
+          <td class="num">{formatDuration(row.duration)}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
 
 <h2>Runs</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
-  Each row is one agent run. Select a row to read the diff it produced — the
-  diff is the real result here; automated checks only catch the basics.
+  Open a run to read the diff it produced — the diff is the real result here;
+  automated checks only catch the basics.
 </p>
 <AgenticResults client:visible url={dataUrl} />
