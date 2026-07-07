@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react"
 import {
-  aggregateRun,
   formatDuration,
   formatPercent,
   sortRunsByPassRate,
@@ -17,8 +16,13 @@ interface Selection {
   sample: SampleResult
 }
 
-function cellClass(sample: SampleResult | undefined): string {
-  if (!sample) return "empty"
+function cellGlyph(sample: SampleResult): string {
+  if (sample.passed === true) return "✓"
+  if (sample.passed === false) return "✗"
+  return "·"
+}
+
+function cellClass(sample: SampleResult): string {
   if (sample.passed === true) return "pass"
   if (sample.passed === false) return "fail"
   return "none"
@@ -31,7 +35,6 @@ function selectionFields(sel: Selection): DrawerField[] {
     { label: "Output", value: sel.sample.output },
   ]
   for (const [name, score] of Object.entries(sel.sample.scores)) {
-    if (name === "git_diff") continue
     fields.push({
       label: `Score: ${name}`,
       value: [`value: ${JSON.stringify(score.value)}`, score.explanation]
@@ -48,7 +51,7 @@ function selectionFields(sel: Selection): DrawerField[] {
   return fields
 }
 
-export default function ResultsMatrix({ url }: { url: string }) {
+export default function ResultsTable({ url }: { url: string }) {
   const { data, error } = useResults(url)
   const [selected, setSelected] = useState<Selection | null>(null)
 
@@ -69,16 +72,16 @@ export default function ResultsMatrix({ url }: { url: string }) {
 
   return (
     <>
-      <div className="matrix-wrap">
-        <table className="matrix">
+      <div className="results-wrap breakout">
+        <table className="results-grid">
           <thead>
             <tr>
               <th></th>
               {runs.map((run) => (
                 <th
                   key={run.provider_id}
-                  className="matrix-col"
-                  title={`${run.provider_id} — ${formatPercent(aggregateRun(run).passRate)}`}
+                  className="results-model"
+                  title={`${run.provider_id} — ${formatPercent(run.pass_rate)}`}
                 >
                   {run.provider_id}
                 </th>
@@ -88,7 +91,7 @@ export default function ResultsMatrix({ url }: { url: string }) {
           <tbody>
             {data.tests.map((test) => (
               <tr key={test.id}>
-                <td className="matrix-test" title={test.input}>
+                <td className="results-test" title={test.input}>
                   {test.input || test.id}
                 </td>
                 {runs.map((run) => {
@@ -97,14 +100,19 @@ export default function ResultsMatrix({ url }: { url: string }) {
                     selected?.run === run && selected?.test === test
                   return (
                     <td key={run.provider_id}>
-                      <button
-                        className={`matrix-cell ${cellClass(sample)} ${isSelected ? "selected" : ""}`}
-                        disabled={!sample}
-                        aria-label={`${run.provider_id} on ${test.id}`}
-                        onClick={() =>
-                          sample && setSelected({ run, test, sample })
-                        }
-                      />
+                      {sample ? (
+                        <button
+                          className={`results-cell ${cellClass(sample)} ${isSelected ? "selected" : ""}`}
+                          aria-label={`${run.provider_id} on ${test.id}: ${sample.passed === null ? "unscored" : sample.passed ? "pass" : "fail"}`}
+                          onClick={() =>
+                            setSelected(
+                              isSelected ? null : { run, test, sample },
+                            )
+                          }
+                        >
+                          {cellGlyph(sample)}
+                        </button>
+                      ) : null}
                     </td>
                   )
                 })}

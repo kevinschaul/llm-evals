@@ -6,7 +6,7 @@ import {
   sortRunsByPassRate,
   type EvalResults,
 } from "../lib/types"
-import ResultsMatrix from "../islands/ResultsMatrix"
+import ResultsTable from "../islands/ResultsTable"
 
 interface Props {
   results: EvalResults
@@ -23,7 +23,6 @@ const runs = sortRunsByPassRate(results.runs)
     <tr>
       <th>Model</th>
       <th>Pass rate</th>
-      <th class="num">Passed</th>
       <th class="num">Tests</th>
       <th class="num">Avg time</th>
     </tr>
@@ -46,7 +45,6 @@ const runs = sortRunsByPassRate(results.runs)
                 {formatPercent(agg.passRate)}
               </span>
             </td>
-            <td class="num">{agg.passed}</td>
             <td class="num">{agg.total}</td>
             <td class="num">{formatDuration(agg.avgDurationMs)}</td>
           </tr>
@@ -58,7 +56,7 @@ const runs = sortRunsByPassRate(results.runs)
 
 <h2>Results by test</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
-  One column per model, one row per test. Click a cell to inspect the model's
+  One row per test, one column per model. Click a cell to inspect the model's
   output.
 </p>
-<ResultsMatrix client:load url={dataUrl} />
+<ResultsTable client:visible url={dataUrl} />

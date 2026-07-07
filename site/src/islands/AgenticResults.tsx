@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import {
   formatDuration,
+  type CheckResult,
   type Run,
   type SampleResult,
 } from "../lib/types"
@@ -12,23 +13,9 @@ interface AgenticRow {
   sample: SampleResult
   key: string
   diff: string
-  checks: { passed: number; failed: number; lines: string[] }
+  checks: CheckResult[]
+  passed: number
   filesChanged: number
-}
-
-function parseChecks(sample: SampleResult) {
-  const lines: string[] = []
-  for (const [name, score] of Object.entries(sample.scores)) {
-    if (name === "git_diff" || !score.explanation) continue
-    lines.push(
-      ...score.explanation.split("\n").filter((l) => /^[✓✗]/.test(l.trim())),
-    )
-  }
-  return {
-    passed: lines.filter((l) => l.trim().startsWith("✓")).length,
-    failed: lines.filter((l) => l.trim().startsWith("✗")).length,
-    lines,
-  }
 }
 
 export default function AgenticResults({ url }: { url: string }) {
@@ -40,25 +27,22 @@ export default function AgenticResults({ url }: { url: string }) {
     const out: AgenticRow[] = []
     for (const run of data.runs) {
       for (const sample of run.samples) {
-        const diff = (sample.scores.git_diff?.explanation as string) || ""
+        const diff = sample.diff ?? ""
         out.push({
           run,
           sample,
           key: `${run.provider_id}|${run.solver}|${sample.id}`,
           diff,
-          checks: parseChecks(sample),
+          checks: sample.checks,
+          passed: sample.checks.filter((c) => c.passed).length,
           filesChanged: diff ? parseDiff(diff).length : 0,
         })
       }
     }
     // Most checks passed first, then fastest
     return out.sort((a, b) => {
-      const ra = a.checks.passed + a.checks.failed
-        ? a.checks.passed / (a.checks.passed + a.checks.failed)
-        : -1
-      const rb = b.checks.passed + b.checks.failed
-        ? b.checks.passed / (b.checks.passed + b.checks.failed)
-        : -1
+      const ra = a.checks.length ? a.passed / a.checks.length : -1
+      const rb = b.checks.length ? b.passed / b.checks.length : -1
       if (rb !== ra) return rb - ra
       return (a.sample.duration_ms ?? Infinity) - (b.sample.duration_ms ?? Infinity)
     })
@@ -68,7 +52,10 @@ export default function AgenticResults({ url }: { url: string }) {
   if (!data) return <p>Loading results…</p>
 
   const selected = rows.find((r) => r.key === selectedKey) ?? null
-  const hasChecks = rows.some((r) => r.checks.passed + r.checks.failed > 0)
+  const hasChecks = rows.some((r) => r.checks.length > 0)
+
+  const toggle = (key: string) =>
+    setSelectedKey(selectedKey === key ? null : key)
 
   return (
     <>
@@ -87,19 +74,26 @@ export default function AgenticResults({ url }: { url: string }) {
             <tr
               key={row.key}
               className={`selectable ${selectedKey === row.key ? "selected" : ""}`}
-              onClick={() =>
-                setSelectedKey(selectedKey === row.key ? null : row.key)
-              }
+              role="button"
+              tabIndex={0}
+              aria-expanded={selectedKey === row.key}
+              onClick={() => toggle(row.key)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault()
+                  toggle(row.key)
+                }
+              }}
             >
               <td>{row.run.provider_id}</td>
               <td>{row.run.solver}</td>
               {hasChecks && (
                 <td className="num">
-                  {row.checks.passed + row.checks.failed > 0 ? (
+                  {row.checks.length > 0 ? (
                     <span
-                      className={`badge ${row.checks.failed === 0 ? "badge-pass" : "badge-fail"}`}
+                      className={`badge ${row.passed === row.checks.length ? "badge-pass" : "badge-fail"}`}
                     >
-                      {row.checks.passed}/{row.checks.passed + row.checks.failed}
+                      {row.passed}/{row.checks.length}
                     </span>
                   ) : (
                     "–"
@@ -120,10 +114,12 @@ export default function AgenticResults({ url }: { url: string }) {
               via {selected.run.solver || "unknown harness"}
             </span>
           </h3>
-          {selected.checks.lines.length > 0 && (
+          {selected.checks.length > 0 && (
             <ul className="checks-list">
-              {selected.checks.lines.map((line, i) => (
-                <li key={i}>{line}</li>
+              {selected.checks.map((check) => (
+                <li key={check.name}>
+                  {check.passed ? "✓" : "✗"} {check.name}
+                </li>
               ))}
             </ul>
           )}

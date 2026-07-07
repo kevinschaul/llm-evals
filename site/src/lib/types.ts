@@ -3,12 +3,19 @@ export interface ScoreEntry {
   explanation: string | null
 }
 
+export interface CheckResult {
+  name: string
+  passed: boolean
+}
+
 export interface SampleResult {
   id: string
   output: string
   passed: boolean | null
   duration_ms: number | null
   scores: Record<string, ScoreEntry>
+  diff: string | null
+  checks: CheckResult[]
 }
 
 export interface TestCase {
@@ -24,7 +31,9 @@ export interface Run {
   solver: string
   openrouter_provider: string
   timestamp: string
-  metrics: Record<string, Record<string, number>>
+  // The single authoritative rate for this run, computed at extraction
+  // from the primary scorer (null for diff-only agentic runs)
+  pass_rate: number | null
   samples: SampleResult[]
 }
 
@@ -37,43 +46,18 @@ export interface EvalResults {
 
 export interface RunAggregate {
   total: number
-  scored: number
-  passed: number
-  failed: number
   passRate: number | null
   avgDurationMs: number | null
 }
 
 export function aggregateRun(run: Run): RunAggregate {
-  const scoredSamples = run.samples.filter((s) => s.passed !== null)
-  const passed = scoredSamples.filter((s) => s.passed).length
-
-  // Prefer the run-level accuracy/mean metric (handles partial-credit
-  // scorers); fall back to counting per-sample pass/fail.
-  let passRate: number | null = null
-  for (const metrics of Object.values(run.metrics || {})) {
-    for (const key of ["accuracy", "mean"]) {
-      if (metrics[key] !== undefined) {
-        passRate = metrics[key]
-        break
-      }
-    }
-    if (passRate !== null) break
-  }
-  if (passRate === null && scoredSamples.length > 0) {
-    passRate = passed / scoredSamples.length
-  }
-
   const durations = run.samples
     .map((s) => s.duration_ms)
     .filter((d): d is number => d !== null)
 
   return {
     total: run.samples.length,
-    scored: scoredSamples.length,
-    passed,
-    failed: scoredSamples.length - passed,
-    passRate,
+    passRate: run.pass_rate,
     avgDurationMs: durations.length
       ? durations.reduce((a, b) => a + b, 0) / durations.length
       : null,
@@ -82,8 +66,8 @@ export function aggregateRun(run: Run): RunAggregate {
 
 export function sortRunsByPassRate(runs: Run[]): Run[] {
   return [...runs].sort((a, b) => {
-    const ra = aggregateRun(a).passRate ?? -1
-    const rb = aggregateRun(b).passRate ?? -1
+    const ra = a.pass_rate ?? -1
+    const rb = b.pass_rate ?? -1
     if (rb !== ra) return rb - ra
     return a.provider_id.localeCompare(b.provider_id)
   })
