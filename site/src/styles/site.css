@@ -122,159 +122,96 @@
   opacity: 0.75;
 }
 
-/* Results-by-test table */
-
-/* Let wide tables escape the prose column on large screens */
-.breakout {
-  width: min(1100px, calc(100vw - 3rem));
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.results-wrap {
-  overflow-x: auto;
+/* Results by test */
+.test-blocks {
   margin: 1.5rem 0;
 }
 
-.results-grid {
-  border-collapse: collapse;
-  font-size: 0.75em;
-  line-height: 1.3;
+.test-block {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  font-size: 0.85em;
 }
 
-.results-grid th {
-  border: none;
-  padding: 0.3em 0.5em;
-  font-weight: 500;
-  color: var(--muted);
-  vertical-align: bottom;
+.test-block > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  padding: 0.5em 0.9em;
+  cursor: pointer;
+  list-style: none;
 }
 
-th.results-model {
-  max-width: 9em;
-  overflow-wrap: break-word;
-  text-align: center;
+.test-block > summary::-webkit-details-marker {
+  display: none;
 }
 
-.results-grid td {
-  border: none;
-  padding: 1px;
-  text-align: center;
+.test-block > summary:hover {
+  background: var(--surface);
 }
 
-.results-grid td.results-test {
-  color: var(--muted);
-  max-width: 22em;
+.test-block[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.test-block-input {
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-right: 0.75em;
-  text-align: left;
-  position: sticky;
-  left: 0;
-  background: var(--bg);
+  color: var(--text);
 }
 
-.results-cell {
-  display: block;
-  width: 100%;
-  min-width: 1.9em;
-  height: 1.9em;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  padding: 0;
-  font-size: inherit;
-  line-height: 1;
+.test-block-body {
+  padding: 0.25em 0.9em 0.9em;
 }
 
-.results-cell.pass {
+.dot-strip {
+  display: inline-flex;
+  gap: 2px;
+  flex: none;
+}
+
+.dot {
+  width: 0.65em;
+  height: 0.95em;
+  border-radius: 2px;
+}
+
+.dot.pass {
   background: var(--pass);
-  color: var(--pass-fg);
 }
 
-.results-cell.fail {
-  background: var(--fail);
-  color: var(--fail-fg);
+.dot.fail {
+  background: var(--fail-fg);
 }
 
-.results-cell.none {
+.dot.none {
   background: var(--none);
-  color: var(--none-fg);
 }
 
-.results-cell.selected {
-  border-color: var(--fg);
-}
-
-.results-cell:hover {
-  border-color: var(--muted);
-}
-
-/* Detail drawer */
-.drawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(560px, 100vw);
-  background: var(--bg);
-  border-left: 1px solid var(--border);
-  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
-  padding: 1.5rem;
-  overflow-y: auto;
-  z-index: 100;
-  font-size: 0.85em;
-  line-height: 1.6;
-}
-
-.drawer-head {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75em;
-  margin-bottom: 1rem;
-}
-
-.drawer-head h3 {
-  margin: 0;
-  font-size: 1.1em;
-}
-
-.drawer-close {
-  margin-left: auto;
-  border: 1px solid var(--border);
-  background: none;
-  color: var(--fg);
-  border-radius: 6px;
-  padding: 0.1em 0.6em;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.drawer-field {
-  margin-bottom: 1rem;
-}
-
-.drawer-field-label {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.score-note {
+  border-top: 1px solid var(--border);
+  padding: 0.4em 1em;
   color: var(--muted);
-  margin-bottom: 0.25rem;
 }
 
-.drawer-field pre {
-  margin: 0;
+.score-note summary {
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.score-note pre {
+  margin: 0.5em 0;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.75rem;
+  border-radius: 6px;
+  padding: 0.6em 0.8em;
   white-space: pre-wrap;
   word-break: break-word;
-  max-height: 20em;
+  max-height: 16em;
   overflow-y: auto;
-  font-family: var(--font-mono);
   font-size: 0.9em;
   line-height: 1.5;
 }
@@ -347,30 +284,7 @@ th.results-model {
   font-style: italic;
 }
 
-/* Freeform output comparison */
-.compare-picker {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 1rem 0;
-}
-
-.compare-picker button {
-  border: 1px solid var(--border);
-  background: none;
-  color: var(--text);
-  border-radius: 999px;
-  padding: 0.15em 0.9em;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-.compare-picker button.active {
-  background: var(--fg);
-  color: var(--bg);
-  border-color: var(--fg);
-}
-
+/* Model output cards (inside test blocks) */
 .compare-context {
   font-size: 0.85em;
 }

@@ -6,7 +6,7 @@ import {
   sortRunsByPassRate,
   type EvalResults,
 } from "../lib/types"
-import ResultsTable from "../islands/ResultsTable"
+import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
   results: EvalResults
@@ -56,7 +56,7 @@ const runs = sortRunsByPassRate(results.runs)
 
 <h2>Results by test</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
-  One row per test, one column per model. Click a cell to inspect the model's
-  output.
+  Hardest tests first. Each dot is one model, in leaderboard order — open a
+  test to read every model's output, failures up top.
 </p>
-<ResultsTable client:visible url={dataUrl} />
+<ResultsByTest client:visible url={dataUrl} />

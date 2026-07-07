@@ -1,5 +1,5 @@
 ---
-import OutputCompare from "../islands/OutputCompare"
+import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
   dataUrl: string
@@ -10,6 +10,6 @@ const { dataUrl } = Astro.props
 
 <h2>Outputs</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
-  These outputs need human eyes — read them side by side.
+  These outputs need human eyes — open a prompt to read them side by side.
 </p>
-<OutputCompare client:visible url={dataUrl} />
+<ResultsByTest client:visible url={dataUrl} />
