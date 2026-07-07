@@ -66,7 +66,11 @@ def check_output() -> Scorer:
         if py_files:
             explanation += f"\n  py files: {', '.join(py_files)}"
 
-        return Score(value=float(passed) / len(checks), explanation=explanation)
+        return Score(
+            value=float(passed) / len(checks),
+            explanation=explanation,
+            metadata={"checks": checks},
+        )
 
     return score
 

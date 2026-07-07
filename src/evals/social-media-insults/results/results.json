@@ -1,6 +1,6 @@
 {
  "eval": "social-media-insults",
- "generated": "2026-07-06T21:51:47+00:00",
+ "generated": "2026-07-07T20:22:08+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -4081,11 +4081,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-09-17T17:49:47+00:00",
-   "metrics": {
-    "match": {
-     "accuracy": 0.800982800982801
-    }
-   },
+   "pass_rate": 0.800982800982801,
    "samples": [
     {
      "id": "test-1",
@@ -4097,7 +4093,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -4109,7 +4107,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -4121,7 +4121,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -4133,7 +4135,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-5",
@@ -4145,7 +4149,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-6",
@@ -4157,7 +4163,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-7",
@@ -4169,7 +4177,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-8",
@@ -4181,7 +4191,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-9",
@@ -4193,7 +4205,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-10",
@@ -4205,7 +4219,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-11",
@@ -4217,7 +4233,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-12",
@@ -4229,7 +4247,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-13",
@@ -4241,7 +4261,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-14",
@@ -4253,7 +4275,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-15",
@@ -4265,7 +4289,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-16",
@@ -4277,7 +4303,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-17",
@@ -4289,7 +4317,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-18",
@@ -4301,7 +4331,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-19",
@@ -4313,7 +4345,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-20",
@@ -4325,7 +4359,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-21",
@@ -4337,7 +4373,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-22",
@@ -4349,7 +4387,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-23",
@@ -4361,7 +4401,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-24",
@@ -4373,7 +4415,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-25",
@@ -4385,7 +4429,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-26",
@@ -4397,7 +4443,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-27",
@@ -4409,7 +4457,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-28",
@@ -4421,7 +4471,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-29",
@@ -4433,7 +4485,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-30",
@@ -4445,7 +4499,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-31",
@@ -4457,7 +4513,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-32",
@@ -4469,7 +4527,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-33",
@@ -4481,7 +4541,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-34",
@@ -4493,7 +4555,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-35",
@@ -4505,7 +4569,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-36",
@@ -4517,7 +4583,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-37",
@@ -4529,7 +4597,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-38",
@@ -4541,7 +4611,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-39",
@@ -4553,7 +4625,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-40",
@@ -4565,7 +4639,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-41",
@@ -4577,7 +4653,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-42",
@@ -4589,7 +4667,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-43",
@@ -4601,7 +4681,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-44",
@@ -4613,7 +4695,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-45",
@@ -4625,7 +4709,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-46",
@@ -4637,7 +4723,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-47",
@@ -4649,7 +4737,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-48",
@@ -4661,7 +4751,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-49",
@@ -4673,7 +4765,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-50",
@@ -4685,7 +4779,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-51",
@@ -4697,7 +4793,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-52",
@@ -4709,7 +4807,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-53",
@@ -4721,7 +4821,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-54",
@@ -4733,7 +4835,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-55",
@@ -4745,7 +4849,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-56",
@@ -4757,7 +4863,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-57",
@@ -4769,7 +4877,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-58",
@@ -4781,7 +4891,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-59",
@@ -4793,7 +4905,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-60",
@@ -4805,7 +4919,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-61",
@@ -4817,7 +4933,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-62",
@@ -4829,7 +4947,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-63",
@@ -4841,7 +4961,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-64",
@@ -4853,7 +4975,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-65",
@@ -4865,7 +4989,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-66",
@@ -4877,7 +5003,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-67",
@@ -4889,7 +5017,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-68",
@@ -4901,7 +5031,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-69",
@@ -4913,7 +5045,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-70",
@@ -4925,7 +5059,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-71",
@@ -4937,7 +5073,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-72",
@@ -4949,7 +5087,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-73",
@@ -4961,7 +5101,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-74",
@@ -4973,7 +5115,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-75",
@@ -4985,7 +5129,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-76",
@@ -4997,7 +5143,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-77",
@@ -5009,7 +5157,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-78",
@@ -5021,7 +5171,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-79",
@@ -5033,7 +5185,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-80",
@@ -5045,7 +5199,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-81",
@@ -5057,7 +5213,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-82",
@@ -5069,7 +5227,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-83",
@@ -5081,7 +5241,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-84",
@@ -5093,7 +5255,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-85",
@@ -5105,7 +5269,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-86",
@@ -5117,7 +5283,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-87",
@@ -5129,7 +5297,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-88",
@@ -5141,7 +5311,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-89",
@@ -5153,7 +5325,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-90",
@@ -5165,7 +5339,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-91",
@@ -5177,7 +5353,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-92",
@@ -5189,7 +5367,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-93",
@@ -5201,7 +5381,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-94",
@@ -5213,7 +5395,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-95",
@@ -5225,7 +5409,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-96",
@@ -5237,7 +5423,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-97",
@@ -5249,7 +5437,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-98",
@@ -5261,7 +5451,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-99",
@@ -5273,7 +5465,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-100",
@@ -5285,7 +5479,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-101",
@@ -5297,7 +5493,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-102",
@@ -5309,7 +5507,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-103",
@@ -5321,7 +5521,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-104",
@@ -5333,7 +5535,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-105",
@@ -5345,7 +5549,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-106",
@@ -5357,7 +5563,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-107",
@@ -5369,7 +5577,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-108",
@@ -5381,7 +5591,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-109",
@@ -5393,7 +5605,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-110",
@@ -5405,7 +5619,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-111",
@@ -5417,7 +5633,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-112",
@@ -5429,7 +5647,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-113",
@@ -5441,7 +5661,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-114",
@@ -5453,7 +5675,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-115",
@@ -5465,7 +5689,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-116",
@@ -5477,7 +5703,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-117",
@@ -5489,7 +5717,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-118",
@@ -5501,7 +5731,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-119",
@@ -5513,7 +5745,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-120",
@@ -5525,7 +5759,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-121",
@@ -5537,7 +5773,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-122",
@@ -5549,7 +5787,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-123",
@@ -5561,7 +5801,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-124",
@@ -5573,7 +5815,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-125",
@@ -5585,7 +5829,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-126",
@@ -5597,7 +5843,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-127",
@@ -5609,7 +5857,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-128",
@@ -5621,7 +5871,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-129",
@@ -5633,7 +5885,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-130",
@@ -5645,7 +5899,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-131",
@@ -5657,7 +5913,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-132",
@@ -5669,7 +5927,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-133",
@@ -5681,7 +5941,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-134",
@@ -5693,7 +5955,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-135",
@@ -5705,7 +5969,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-136",
@@ -5717,7 +5983,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-137",
@@ -5729,7 +5997,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-138",
@@ -5741,7 +6011,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-139",
@@ -5753,7 +6025,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-140",
@@ -5765,7 +6039,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-141",
@@ -5777,7 +6053,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-142",
@@ -5789,7 +6067,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-143",
@@ -5801,7 +6081,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-144",
@@ -5813,7 +6095,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-145",
@@ -5825,7 +6109,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-146",
@@ -5837,7 +6123,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-147",
@@ -5849,7 +6137,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-148",
@@ -5861,7 +6151,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-149",
@@ -5873,7 +6165,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-150",
@@ -5885,7 +6179,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-151",
@@ -5897,7 +6193,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-152",
@@ -5909,7 +6207,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-153",
@@ -5921,7 +6221,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-154",
@@ -5933,7 +6235,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-155",
@@ -5945,7 +6249,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-156",
@@ -5957,7 +6263,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-157",
@@ -5969,7 +6277,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-158",
@@ -5981,7 +6291,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-159",
@@ -5993,7 +6305,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-160",
@@ -6005,7 +6319,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-161",
@@ -6017,7 +6333,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-162",
@@ -6029,7 +6347,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-163",
@@ -6041,7 +6361,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-164",
@@ -6053,7 +6375,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-165",
@@ -6065,7 +6389,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-166",
@@ -6077,7 +6403,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-167",
@@ -6089,7 +6417,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-168",
@@ -6101,7 +6431,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-169",
@@ -6113,7 +6445,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-170",
@@ -6125,7 +6459,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-171",
@@ -6137,7 +6473,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-172",
@@ -6149,7 +6487,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-173",
@@ -6161,7 +6501,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-174",
@@ -6173,7 +6515,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-175",
@@ -6185,7 +6529,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-176",
@@ -6197,7 +6543,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-177",
@@ -6209,7 +6557,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-178",
@@ -6221,7 +6571,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-179",
@@ -6233,7 +6585,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-180",
@@ -6245,7 +6599,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-181",
@@ -6257,7 +6613,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-182",
@@ -6269,7 +6627,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-183",
@@ -6281,7 +6641,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-184",
@@ -6293,7 +6655,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-185",
@@ -6305,7 +6669,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-186",
@@ -6317,7 +6683,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-187",
@@ -6329,7 +6697,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-188",
@@ -6341,7 +6711,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-189",
@@ -6353,7 +6725,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-190",
@@ -6365,7 +6739,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-191",
@@ -6377,7 +6753,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-192",
@@ -6389,7 +6767,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-193",
@@ -6401,7 +6781,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-194",
@@ -6413,7 +6795,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-195",
@@ -6425,7 +6809,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-196",
@@ -6437,7 +6823,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-197",
@@ -6449,7 +6837,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-198",
@@ -6461,7 +6851,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-199",
@@ -6473,7 +6865,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-200",
@@ -6485,7 +6879,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-201",
@@ -6497,7 +6893,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-202",
@@ -6509,7 +6907,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-203",
@@ -6521,7 +6921,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-204",
@@ -6533,7 +6935,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-205",
@@ -6545,7 +6949,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-206",
@@ -6557,7 +6963,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-207",
@@ -6569,7 +6977,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-208",
@@ -6581,7 +6991,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-209",
@@ -6593,7 +7005,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-210",
@@ -6605,7 +7019,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-211",
@@ -6617,7 +7033,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-212",
@@ -6629,7 +7047,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-213",
@@ -6641,7 +7061,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-214",
@@ -6653,7 +7075,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-215",
@@ -6665,7 +7089,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-216",
@@ -6677,7 +7103,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-217",
@@ -6689,7 +7117,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-218",
@@ -6701,7 +7131,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-219",
@@ -6713,7 +7145,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-220",
@@ -6725,7 +7159,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-221",
@@ -6737,7 +7173,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-222",
@@ -6749,7 +7187,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-223",
@@ -6761,7 +7201,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-224",
@@ -6773,7 +7215,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-225",
@@ -6785,7 +7229,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-226",
@@ -6797,7 +7243,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-227",
@@ -6809,7 +7257,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-228",
@@ -6821,7 +7271,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-229",
@@ -6833,7 +7285,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-230",
@@ -6845,7 +7299,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-231",
@@ -6857,7 +7313,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-232",
@@ -6869,7 +7327,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-233",
@@ -6881,7 +7341,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-234",
@@ -6893,7 +7355,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-235",
@@ -6905,7 +7369,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-236",
@@ -6917,7 +7383,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-237",
@@ -6929,7 +7397,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-238",
@@ -6941,7 +7411,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-239",
@@ -6953,7 +7425,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-240",
@@ -6965,7 +7439,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-241",
@@ -6977,7 +7453,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-242",
@@ -6989,7 +7467,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-243",
@@ -7001,7 +7481,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-244",
@@ -7013,7 +7495,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-245",
@@ -7025,7 +7509,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-246",
@@ -7037,7 +7523,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-247",
@@ -7049,7 +7537,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-248",
@@ -7061,7 +7551,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-249",
@@ -7073,7 +7565,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-250",
@@ -7085,7 +7579,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-251",
@@ -7097,7 +7593,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-252",
@@ -7109,7 +7607,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-253",
@@ -7121,7 +7621,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-254",
@@ -7133,7 +7635,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-255",
@@ -7145,7 +7649,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-256",
@@ -7157,7 +7663,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-257",
@@ -7169,7 +7677,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-258",
@@ -7181,7 +7691,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-259",
@@ -7193,7 +7705,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-260",
@@ -7205,7 +7719,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-261",
@@ -7217,7 +7733,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-262",
@@ -7229,7 +7747,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-263",
@@ -7241,7 +7761,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-264",
@@ -7253,7 +7775,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-265",
@@ -7265,7 +7789,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-266",
@@ -7277,7 +7803,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-267",
@@ -7289,7 +7817,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-268",
@@ -7301,7 +7831,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-269",
@@ -7313,7 +7845,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-270",
@@ -7325,7 +7859,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-271",
@@ -7337,7 +7873,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-272",
@@ -7349,7 +7887,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-273",
@@ -7361,7 +7901,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-274",
@@ -7373,7 +7915,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-275",
@@ -7385,7 +7929,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-276",
@@ -7397,7 +7943,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-277",
@@ -7409,7 +7957,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-278",
@@ -7421,7 +7971,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-279",
@@ -7433,7 +7985,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-280",
@@ -7445,7 +7999,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-281",
@@ -7457,7 +8013,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-282",
@@ -7469,7 +8027,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-283",
@@ -7481,7 +8041,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-284",
@@ -7493,7 +8055,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-285",
@@ -7505,7 +8069,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-286",
@@ -7517,7 +8083,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-287",
@@ -7529,7 +8097,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-288",
@@ -7541,7 +8111,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-289",
@@ -7553,7 +8125,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-290",
@@ -7565,7 +8139,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-291",
@@ -7577,7 +8153,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-292",
@@ -7589,7 +8167,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-293",
@@ -7601,7 +8181,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-294",
@@ -7613,7 +8195,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-295",
@@ -7625,7 +8209,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-296",
@@ -7637,7 +8223,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-297",
@@ -7649,7 +8237,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-298",
@@ -7661,7 +8251,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-299",
@@ -7673,7 +8265,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-300",
@@ -7685,7 +8279,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-301",
@@ -7697,7 +8293,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-302",
@@ -7709,7 +8307,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-303",
@@ -7721,7 +8321,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-304",
@@ -7733,7 +8335,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-305",
@@ -7745,7 +8349,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-306",
@@ -7757,7 +8363,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-307",
@@ -7769,7 +8377,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-308",
@@ -7781,7 +8391,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-309",
@@ -7793,7 +8405,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-310",
@@ -7805,7 +8419,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-311",
@@ -7817,7 +8433,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-312",
@@ -7829,7 +8447,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-313",
@@ -7841,7 +8461,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-314",
@@ -7853,7 +8475,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-315",
@@ -7865,7 +8489,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-316",
@@ -7877,7 +8503,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-317",
@@ -7889,7 +8517,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-318",
@@ -7901,7 +8531,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-319",
@@ -7913,7 +8545,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-320",
@@ -7925,7 +8559,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-321",
@@ -7937,7 +8573,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-322",
@@ -7949,7 +8587,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-323",
@@ -7961,7 +8601,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-324",
@@ -7973,7 +8615,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-325",
@@ -7985,7 +8629,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-326",
@@ -7997,7 +8643,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-327",
@@ -8009,7 +8657,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-328",
@@ -8021,7 +8671,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-329",
@@ -8033,7 +8685,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-330",
@@ -8045,7 +8699,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-331",
@@ -8057,7 +8713,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-332",
@@ -8069,7 +8727,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-333",
@@ -8081,7 +8741,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-334",
@@ -8093,7 +8755,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-335",
@@ -8105,7 +8769,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-336",
@@ -8117,7 +8783,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-337",
@@ -8129,7 +8797,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-338",
@@ -8141,7 +8811,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-339",
@@ -8153,7 +8825,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-340",
@@ -8165,7 +8839,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-341",
@@ -8177,7 +8853,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-342",
@@ -8189,7 +8867,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-343",
@@ -8201,7 +8881,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-344",
@@ -8213,7 +8895,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-345",
@@ -8225,7 +8909,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-346",
@@ -8237,7 +8923,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-347",
@@ -8249,7 +8937,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-348",
@@ -8261,7 +8951,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-349",
@@ -8273,7 +8965,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-350",
@@ -8285,7 +8979,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-351",
@@ -8297,7 +8993,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-352",
@@ -8309,7 +9007,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-353",
@@ -8321,7 +9021,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-354",
@@ -8333,7 +9035,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-355",
@@ -8345,7 +9049,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-356",
@@ -8357,7 +9063,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-357",
@@ -8369,7 +9077,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-358",
@@ -8381,7 +9091,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-359",
@@ -8393,7 +9105,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-360",
@@ -8405,7 +9119,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-361",
@@ -8417,7 +9133,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-362",
@@ -8429,7 +9147,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-363",
@@ -8441,7 +9161,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-364",
@@ -8453,7 +9175,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-365",
@@ -8465,7 +9189,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-366",
@@ -8477,7 +9203,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-367",
@@ -8489,7 +9217,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-368",
@@ -8501,7 +9231,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-369",
@@ -8513,7 +9245,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-370",
@@ -8525,7 +9259,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-371",
@@ -8537,7 +9273,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-372",
@@ -8549,7 +9287,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-373",
@@ -8561,7 +9301,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-374",
@@ -8573,7 +9315,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-375",
@@ -8585,7 +9329,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-376",
@@ -8597,7 +9343,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-377",
@@ -8609,7 +9357,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-378",
@@ -8621,7 +9371,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-379",
@@ -8633,7 +9385,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-380",
@@ -8645,7 +9399,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-381",
@@ -8657,7 +9413,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-382",
@@ -8669,7 +9427,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-383",
@@ -8681,7 +9441,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-384",
@@ -8693,7 +9455,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-385",
@@ -8705,7 +9469,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-386",
@@ -8717,7 +9483,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-387",
@@ -8729,7 +9497,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-388",
@@ -8741,7 +9511,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-389",
@@ -8753,7 +9525,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-390",
@@ -8765,7 +9539,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-391",
@@ -8777,7 +9553,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-392",
@@ -8789,7 +9567,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-393",
@@ -8801,7 +9581,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-394",
@@ -8813,7 +9595,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-395",
@@ -8825,7 +9609,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-396",
@@ -8837,7 +9623,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-397",
@@ -8849,7 +9637,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-398",
@@ -8861,7 +9651,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-399",
@@ -8873,7 +9665,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-400",
@@ -8885,7 +9679,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-401",
@@ -8897,7 +9693,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-402",
@@ -8909,7 +9707,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-403",
@@ -8921,7 +9721,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-404",
@@ -8933,7 +9735,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-405",
@@ -8945,7 +9749,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-406",
@@ -8957,7 +9763,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-407",
@@ -8969,7 +9777,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-408",
@@ -8981,7 +9791,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-409",
@@ -8993,7 +9805,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-410",
@@ -9005,7 +9819,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-411",
@@ -9017,7 +9833,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-412",
@@ -9029,7 +9847,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-413",
@@ -9041,7 +9861,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-414",
@@ -9053,7 +9875,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-415",
@@ -9065,7 +9889,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-416",
@@ -9077,7 +9903,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-417",
@@ -9089,7 +9917,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-418",
@@ -9101,7 +9931,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-419",
@@ -9113,7 +9945,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-420",
@@ -9125,7 +9959,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-421",
@@ -9137,7 +9973,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-422",
@@ -9149,7 +9987,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-423",
@@ -9161,7 +10001,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-424",
@@ -9173,7 +10015,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-425",
@@ -9185,7 +10029,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-426",
@@ -9197,7 +10043,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-427",
@@ -9209,7 +10057,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-428",
@@ -9221,7 +10071,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-429",
@@ -9233,7 +10085,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-430",
@@ -9245,7 +10099,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-431",
@@ -9257,7 +10113,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-432",
@@ -9269,7 +10127,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-433",
@@ -9281,7 +10141,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-434",
@@ -9293,7 +10155,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-435",
@@ -9305,7 +10169,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-436",
@@ -9317,7 +10183,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-437",
@@ -9329,7 +10197,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-438",
@@ -9341,7 +10211,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-439",
@@ -9353,7 +10225,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-440",
@@ -9365,7 +10239,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-441",
@@ -9377,7 +10253,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-442",
@@ -9389,7 +10267,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-443",
@@ -9401,7 +10281,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-444",
@@ -9413,7 +10295,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-445",
@@ -9425,7 +10309,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-446",
@@ -9437,7 +10323,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-447",
@@ -9449,7 +10337,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-448",
@@ -9461,7 +10351,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-449",
@@ -9473,7 +10365,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-450",
@@ -9485,7 +10379,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-451",
@@ -9497,7 +10393,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-452",
@@ -9509,7 +10407,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-453",
@@ -9521,7 +10421,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-454",
@@ -9533,7 +10435,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-455",
@@ -9545,7 +10449,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-456",
@@ -9557,7 +10463,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-457",
@@ -9569,7 +10477,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-458",
@@ -9581,7 +10491,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-459",
@@ -9593,7 +10505,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-460",
@@ -9605,7 +10519,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-461",
@@ -9617,7 +10533,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-462",
@@ -9629,7 +10547,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-463",
@@ -9641,7 +10561,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-464",
@@ -9653,7 +10575,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-465",
@@ -9665,7 +10589,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-466",
@@ -9677,7 +10603,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-467",
@@ -9689,7 +10617,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-468",
@@ -9701,7 +10631,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-469",
@@ -9713,7 +10645,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-470",
@@ -9725,7 +10659,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-471",
@@ -9737,7 +10673,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-472",
@@ -9749,7 +10687,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-473",
@@ -9761,7 +10701,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-474",
@@ -9773,7 +10715,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-475",
@@ -9785,7 +10729,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-476",
@@ -9797,7 +10743,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-477",
@@ -9809,7 +10757,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-478",
@@ -9821,7 +10771,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-479",
@@ -9833,7 +10785,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-480",
@@ -9845,7 +10799,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-481",
@@ -9857,7 +10813,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-482",
@@ -9869,7 +10827,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-483",
@@ -9881,7 +10841,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-484",
@@ -9893,7 +10855,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-485",
@@ -9905,7 +10869,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-486",
@@ -9917,7 +10883,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-487",
@@ -9929,7 +10897,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-488",
@@ -9941,7 +10911,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-489",
@@ -9953,7 +10925,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-490",
@@ -9965,7 +10939,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-491",
@@ -9977,7 +10953,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-492",
@@ -9989,7 +10967,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-493",
@@ -10001,7 +10981,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-494",
@@ -10013,7 +10995,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-495",
@@ -10025,7 +11009,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-496",
@@ -10037,7 +11023,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-497",
@@ -10049,7 +11037,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-498",
@@ -10061,7 +11051,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-499",
@@ -10073,7 +11065,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-500",
@@ -10085,7 +11079,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-501",
@@ -10097,7 +11093,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-502",
@@ -10109,7 +11107,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-503",
@@ -10121,7 +11121,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-504",
@@ -10133,7 +11135,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-505",
@@ -10145,7 +11149,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-506",
@@ -10157,7 +11163,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-507",
@@ -10169,7 +11177,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-508",
@@ -10181,7 +11191,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-509",
@@ -10193,7 +11205,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-510",
@@ -10205,7 +11219,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-511",
@@ -10217,7 +11233,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-512",
@@ -10229,7 +11247,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-513",
@@ -10241,7 +11261,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-514",
@@ -10253,7 +11275,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-515",
@@ -10265,7 +11289,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-516",
@@ -10277,7 +11303,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-517",
@@ -10289,7 +11317,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-518",
@@ -10301,7 +11331,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-519",
@@ -10313,7 +11345,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-520",
@@ -10325,7 +11359,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-521",
@@ -10337,7 +11373,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-522",
@@ -10349,7 +11387,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-523",
@@ -10361,7 +11401,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-524",
@@ -10373,7 +11415,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-525",
@@ -10385,7 +11429,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-526",
@@ -10397,7 +11443,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-527",
@@ -10409,7 +11457,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-528",
@@ -10421,7 +11471,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-529",
@@ -10433,7 +11485,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-530",
@@ -10445,7 +11499,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-531",
@@ -10457,7 +11513,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-532",
@@ -10469,7 +11527,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-533",
@@ -10481,7 +11541,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-534",
@@ -10493,7 +11555,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-535",
@@ -10505,7 +11569,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-536",
@@ -10517,7 +11583,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-537",
@@ -10529,7 +11597,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-538",
@@ -10541,7 +11611,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-539",
@@ -10553,7 +11625,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-540",
@@ -10565,7 +11639,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-541",
@@ -10577,7 +11653,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-542",
@@ -10589,7 +11667,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-543",
@@ -10601,7 +11681,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-544",
@@ -10613,7 +11695,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-545",
@@ -10625,7 +11709,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-546",
@@ -10637,7 +11723,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-547",
@@ -10649,7 +11737,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-548",
@@ -10661,7 +11751,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-549",
@@ -10673,7 +11765,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-550",
@@ -10685,7 +11779,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-551",
@@ -10697,7 +11793,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-552",
@@ -10709,7 +11807,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-553",
@@ -10721,7 +11821,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-554",
@@ -10733,7 +11835,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-555",
@@ -10745,7 +11849,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-556",
@@ -10757,7 +11863,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-557",
@@ -10769,7 +11877,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-558",
@@ -10781,7 +11891,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-559",
@@ -10793,7 +11905,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-560",
@@ -10805,7 +11919,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-561",
@@ -10817,7 +11933,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-562",
@@ -10829,7 +11947,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-563",
@@ -10841,7 +11961,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-564",
@@ -10853,7 +11975,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-565",
@@ -10865,7 +11989,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-566",
@@ -10877,7 +12003,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-567",
@@ -10889,7 +12017,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-568",
@@ -10901,7 +12031,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-569",
@@ -10913,7 +12045,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-570",
@@ -10925,7 +12059,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-571",
@@ -10937,7 +12073,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-572",
@@ -10949,7 +12087,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-573",
@@ -10961,7 +12101,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-574",
@@ -10973,7 +12115,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-575",
@@ -10985,7 +12129,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-576",
@@ -10997,7 +12143,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-577",
@@ -11009,7 +12157,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-578",
@@ -11021,7 +12171,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-579",
@@ -11033,7 +12185,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-580",
@@ -11045,7 +12199,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-581",
@@ -11057,7 +12213,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-582",
@@ -11069,7 +12227,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-583",
@@ -11081,7 +12241,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-584",
@@ -11093,7 +12255,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-585",
@@ -11105,7 +12269,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-586",
@@ -11117,7 +12283,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-587",
@@ -11129,7 +12297,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-588",
@@ -11141,7 +12311,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-589",
@@ -11153,7 +12325,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-590",
@@ -11165,7 +12339,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-591",
@@ -11177,7 +12353,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-592",
@@ -11189,7 +12367,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-593",
@@ -11201,7 +12381,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-594",
@@ -11213,7 +12395,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-595",
@@ -11225,7 +12409,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-596",
@@ -11237,7 +12423,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-597",
@@ -11249,7 +12437,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-598",
@@ -11261,7 +12451,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-599",
@@ -11273,7 +12465,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-600",
@@ -11285,7 +12479,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-601",
@@ -11297,7 +12493,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-602",
@@ -11309,7 +12507,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-603",
@@ -11321,7 +12521,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-604",
@@ -11333,7 +12535,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-605",
@@ -11345,7 +12549,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-606",
@@ -11357,7 +12563,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-607",
@@ -11369,7 +12577,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-608",
@@ -11381,7 +12591,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-609",
@@ -11393,7 +12605,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-610",
@@ -11405,7 +12619,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-611",
@@ -11417,7 +12633,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-612",
@@ -11429,7 +12647,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-613",
@@ -11441,7 +12661,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-614",
@@ -11453,7 +12675,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-615",
@@ -11465,7 +12689,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-616",
@@ -11477,7 +12703,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-617",
@@ -11489,7 +12717,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-618",
@@ -11501,7 +12731,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-619",
@@ -11513,7 +12745,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-620",
@@ -11525,7 +12759,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-621",
@@ -11537,7 +12773,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-622",
@@ -11549,7 +12787,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-623",
@@ -11561,7 +12801,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-624",
@@ -11573,7 +12815,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-625",
@@ -11585,7 +12829,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-626",
@@ -11597,7 +12843,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-627",
@@ -11609,7 +12857,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-628",
@@ -11621,7 +12871,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-629",
@@ -11633,7 +12885,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-630",
@@ -11645,7 +12899,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-631",
@@ -11657,7 +12913,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-632",
@@ -11669,7 +12927,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-633",
@@ -11681,7 +12941,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-634",
@@ -11693,7 +12955,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-635",
@@ -11705,7 +12969,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-636",
@@ -11717,7 +12983,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-637",
@@ -11729,7 +12997,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-638",
@@ -11741,7 +13011,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-639",
@@ -11753,7 +13025,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-640",
@@ -11765,7 +13039,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-641",
@@ -11777,7 +13053,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-642",
@@ -11789,7 +13067,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-643",
@@ -11801,7 +13081,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-644",
@@ -11813,7 +13095,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-645",
@@ -11825,7 +13109,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-646",
@@ -11837,7 +13123,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-647",
@@ -11849,7 +13137,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-648",
@@ -11861,7 +13151,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-649",
@@ -11873,7 +13165,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-650",
@@ -11885,7 +13179,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-651",
@@ -11897,7 +13193,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-652",
@@ -11909,7 +13207,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-653",
@@ -11921,7 +13221,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-654",
@@ -11933,7 +13235,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-655",
@@ -11945,7 +13249,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-656",
@@ -11957,7 +13263,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-657",
@@ -11969,7 +13277,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-658",
@@ -11981,7 +13291,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-659",
@@ -11993,7 +13305,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-660",
@@ -12005,7 +13319,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-661",
@@ -12017,7 +13333,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-662",
@@ -12029,7 +13347,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-663",
@@ -12041,7 +13361,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-664",
@@ -12053,7 +13375,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-665",
@@ -12065,7 +13389,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-666",
@@ -12077,7 +13403,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-667",
@@ -12089,7 +13417,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-668",
@@ -12101,7 +13431,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-669",
@@ -12113,7 +13445,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-670",
@@ -12125,7 +13459,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-671",
@@ -12137,7 +13473,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-672",
@@ -12149,7 +13487,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-673",
@@ -12161,7 +13501,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-674",
@@ -12173,7 +13515,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-675",
@@ -12185,7 +13529,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-676",
@@ -12197,7 +13543,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-677",
@@ -12209,7 +13557,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-678",
@@ -12221,7 +13571,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-679",
@@ -12233,7 +13585,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-680",
@@ -12245,7 +13599,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-681",
@@ -12257,7 +13613,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-682",
@@ -12269,7 +13627,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-683",
@@ -12281,7 +13641,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-684",
@@ -12293,7 +13655,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-685",
@@ -12305,7 +13669,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-686",
@@ -12317,7 +13683,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-687",
@@ -12329,7 +13697,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-688",
@@ -12341,7 +13711,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-689",
@@ -12353,7 +13725,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-690",
@@ -12365,7 +13739,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-691",
@@ -12377,7 +13753,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-692",
@@ -12389,7 +13767,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-693",
@@ -12401,7 +13781,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-694",
@@ -12413,7 +13795,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-695",
@@ -12425,7 +13809,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-696",
@@ -12437,7 +13823,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-697",
@@ -12449,7 +13837,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-698",
@@ -12461,7 +13851,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-699",
@@ -12473,7 +13865,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-700",
@@ -12485,7 +13879,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-701",
@@ -12497,7 +13893,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-702",
@@ -12509,7 +13907,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-703",
@@ -12521,7 +13921,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-704",
@@ -12533,7 +13935,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-705",
@@ -12545,7 +13949,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-706",
@@ -12557,7 +13963,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-707",
@@ -12569,7 +13977,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-708",
@@ -12581,7 +13991,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-709",
@@ -12593,7 +14005,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-710",
@@ -12605,7 +14019,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-711",
@@ -12617,7 +14033,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-712",
@@ -12629,7 +14047,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-713",
@@ -12641,7 +14061,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-714",
@@ -12653,7 +14075,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-715",
@@ -12665,7 +14089,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-716",
@@ -12677,7 +14103,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-717",
@@ -12689,7 +14117,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-718",
@@ -12701,7 +14131,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-719",
@@ -12713,7 +14145,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-720",
@@ -12725,7 +14159,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-721",
@@ -12737,7 +14173,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-722",
@@ -12749,7 +14187,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-723",
@@ -12761,7 +14201,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-724",
@@ -12773,7 +14215,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-725",
@@ -12785,7 +14229,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-726",
@@ -12797,7 +14243,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-727",
@@ -12809,7 +14257,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-728",
@@ -12821,7 +14271,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-729",
@@ -12833,7 +14285,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-730",
@@ -12845,7 +14299,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-731",
@@ -12857,7 +14313,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-732",
@@ -12869,7 +14327,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-733",
@@ -12881,7 +14341,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-734",
@@ -12893,7 +14355,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-735",
@@ -12905,7 +14369,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-736",
@@ -12917,7 +14383,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-737",
@@ -12929,7 +14397,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-738",
@@ -12941,7 +14411,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-739",
@@ -12953,7 +14425,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-740",
@@ -12965,7 +14439,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-741",
@@ -12977,7 +14453,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-742",
@@ -12989,7 +14467,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-743",
@@ -13001,7 +14481,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-744",
@@ -13013,7 +14495,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-745",
@@ -13025,7 +14509,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-746",
@@ -13037,7 +14523,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-747",
@@ -13049,7 +14537,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-748",
@@ -13061,7 +14551,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-749",
@@ -13073,7 +14565,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-750",
@@ -13085,7 +14579,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-751",
@@ -13097,7 +14593,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-752",
@@ -13109,7 +14607,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-753",
@@ -13121,7 +14621,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-754",
@@ -13133,7 +14635,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-755",
@@ -13145,7 +14649,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-756",
@@ -13157,7 +14663,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-757",
@@ -13169,7 +14677,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-758",
@@ -13181,7 +14691,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-759",
@@ -13193,7 +14705,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-760",
@@ -13205,7 +14719,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-761",
@@ -13217,7 +14733,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-762",
@@ -13229,7 +14747,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-763",
@@ -13241,7 +14761,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-764",
@@ -13253,7 +14775,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-765",
@@ -13265,7 +14789,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-766",
@@ -13277,7 +14803,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-767",
@@ -13289,7 +14817,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-768",
@@ -13301,7 +14831,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-769",
@@ -13313,7 +14845,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-770",
@@ -13325,7 +14859,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-771",
@@ -13337,7 +14873,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-772",
@@ -13349,7 +14887,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-773",
@@ -13361,7 +14901,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-774",
@@ -13373,7 +14915,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-775",
@@ -13385,7 +14929,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-776",
@@ -13397,7 +14943,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-777",
@@ -13409,7 +14957,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-778",
@@ -13421,7 +14971,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-779",
@@ -13433,7 +14985,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-780",
@@ -13445,7 +14999,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-781",
@@ -13457,7 +15013,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-782",
@@ -13469,7 +15027,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-783",
@@ -13481,7 +15041,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-784",
@@ -13493,7 +15055,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-785",
@@ -13505,7 +15069,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-786",
@@ -13517,7 +15083,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-787",
@@ -13529,7 +15097,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-788",
@@ -13541,7 +15111,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-789",
@@ -13553,7 +15125,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-790",
@@ -13565,7 +15139,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-791",
@@ -13577,7 +15153,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: I'm unable to access external content, including YouTube links. However, if you can provide the text of the social media post or a summary of its content, I can help categorize it based on whether it includes a personal insult about Kamala Harris's intelligence. Please share the relevant text!"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-792",
@@ -13589,7 +15167,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-793",
@@ -13601,7 +15181,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-794",
@@ -13613,7 +15195,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-795",
@@ -13625,7 +15209,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-796",
@@ -13637,7 +15223,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-797",
@@ -13649,7 +15237,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-798",
@@ -13661,7 +15251,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-799",
@@ -13673,7 +15265,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-800",
@@ -13685,7 +15279,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-801",
@@ -13697,7 +15293,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-802",
@@ -13709,7 +15307,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-803",
@@ -13721,7 +15321,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-804",
@@ -13733,7 +15335,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-805",
@@ -13745,7 +15349,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-806",
@@ -13757,7 +15363,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-807",
@@ -13769,7 +15377,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-808",
@@ -13781,7 +15391,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-809",
@@ -13793,7 +15405,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-810",
@@ -13805,7 +15419,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-811",
@@ -13817,7 +15433,9 @@
        "value": 1.0,
        "explanation": "Expected: true, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-812",
@@ -13829,7 +15447,9 @@
        "value": 0.0,
        "explanation": "Expected: false, Got: True"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-813",
@@ -13841,7 +15461,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-814",
@@ -13853,7 +15475,9 @@
        "value": 1.0,
        "explanation": "Expected: false, Got: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   }

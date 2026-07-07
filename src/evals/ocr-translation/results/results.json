@@ -1,6 +1,6 @@
 {
  "eval": "ocr-translation",
- "generated": "2026-07-06T21:51:49+00:00",
+ "generated": "2026-07-07T20:22:06+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -31,12 +31,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:04:08-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -48,7 +43,9 @@
        "value": "C",
        "explanation": "# Translation of Cadastral Document\n\n## Header (Original Romanian):\n**AGENȚIA DE STAT RELAȚII FUNCIARARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU**\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes (Original Romanian):\n**Conform Deciziei nr.100 din 04.06.1993 on este permis construcție de locuri lui. Teren neocupat este conform Instr. (22.26 - teren - 6.5m.p, n°26 - veranda - 18.6m.0, n°26 - duiol - 15.1m.p.)**\n\n**English Translation:**\nAccording to Decision No. 100 from 04.06.1993, construction of premises is permitted on this land. Unoccupied land is in accordance with Instructions. (22.26 - land - 6.5 m², No. 26 - veranda - 18.6 m², No. 26 - toilet - 15.1 m²)\n\n---\n\n## Bottom Section (Original Romanian):\n**Planul construcției pe**\n**Numărul de înregistrare**\n\n**English Translation:**\nConstruction plan for\nRegistration number\n\n---\n\nThe document is an official cadastral (land registry) plan from Moldova's State Agency for Land Relations and Cadastre, dated 2004."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -60,7 +57,9 @@
        "value": "I",
        "explanation": "# Translation of Cadastral Document\n\n## Header (Original Romanian):\n**AGENȚIA DE STAT RELAȚII FUNCIARARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU**\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes (Original Romanian):\n**Conform Deciziei nr.100 din 04.06.1993 on este permis construcție de locuri lui. Teren neocupat este conform Instr. (22.26 - teren - 6.5m.p, n°26 - veranda - 18.6m.0, n°26 - duiol - 15.1m.p.)**\n\n**English Translation:**\nAccording to Decision No. 100 from 04.06.1993, construction of premises is permitted on this land. Unoccupied land is in accordance with Instructions. (22.26 - land - 6.5 m², No. 26 - veranda - 18.6 m², No. 26 - toilet - 15.1 m²)\n\n---\n\n## Bottom Section (Original Romanian):\n**Planul construcției pe**\n**Numărul de înregistrare**\n\n**English Translation:**\nConstruction plan for\nRegistration number\n\n---\n\nThe document is an official cadastral (land registry) plan from Moldova's State Agency for Land Relations and Cadastre, dated 2004."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -72,7 +71,9 @@
        "value": "C",
        "explanation": "# Translation of Cadastral Document\n\n## Header (Original Romanian):\n**AGENȚIA DE STAT RELAȚII FUNCIARARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU**\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes (Original Romanian):\n**Conform Deciziei nr.100 din 04.06.1993 on este permis construcție de locuri lui. Teren neocupat este conform Instr. (22.26 - teren - 6.5m.p, n°26 - veranda - 18.6m.0, n°26 - duiol - 15.1m.p.)**\n\n**English Translation:**\nAccording to Decision No. 100 from 04.06.1993, construction of premises is permitted on this land. Unoccupied land is in accordance with Instructions. (22.26 - land - 6.5 m², No. 26 - veranda - 18.6 m², No. 26 - toilet - 15.1 m²)\n\n---\n\n## Bottom Section (Original Romanian):\n**Planul construcției pe**\n**Numărul de înregistrare**\n\n**English Translation:**\nConstruction plan for\nRegistration number\n\n---\n\nThe document is an official cadastral (land registry) plan from Moldova's State Agency for Land Relations and Cadastre, dated 2004."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -84,7 +85,9 @@
        "value": "I",
        "explanation": "# Translation of Cadastral Document\n\n## Header (Original Romanian):\n**AGENȚIA DE STAT RELAȚII FUNCIARARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU**\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes (Original Romanian):\n**Conform Deciziei nr.100 din 04.06.1993 on este permis construcție de locuri lui. Teren neocupat este conform Instr. (22.26 - teren - 6.5m.p, n°26 - veranda - 18.6m.0, n°26 - duiol - 15.1m.p.)**\n\n**English Translation:**\nAccording to Decision No. 100 from 04.06.1993, construction of premises is permitted on this land. Unoccupied land is in accordance with Instructions. (22.26 - land - 6.5 m², No. 26 - veranda - 18.6 m², No. 26 - toilet - 15.1 m²)\n\n---\n\n## Bottom Section (Original Romanian):\n**Planul construcției pe**\n**Numărul de înregistrare**\n\n**English Translation:**\nConstruction plan for\nRegistration number\n\n---\n\nThe document is an official cadastral (land registry) plan from Moldova's State Agency for Land Relations and Cadastre, dated 2004."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -95,12 +98,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:04:32-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 1.0,
-     "stderr": 0.0
-    }
-   },
+   "pass_rate": 1.0,
    "samples": [
     {
      "id": "test-1",
@@ -112,7 +110,9 @@
        "value": "C",
        "explanation": "# Document Translation (Romanian to English)\n\n## Header\n**Original:** AGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes\n\n**Original:** Subsol / H-2.20\n\n**English:** Basement / H-2.20 (height 2.20m)\n\n---\n\n**Original:** sufragerie / verandă\n\n**English:** dining room / veranda\n\n---\n\n**Original:** bucătărie\n\n**English:** kitchen\n\n---\n\n**Original:** Locativă\n\n**English:** Residential\n\n---\n\n## Main Handwritten Text (Right Side)\n\n**Original:** \nPentru Primărie\nConform Deciziei nr.100 din 01.06.1989 este permis construcție balconului.\nÎn realitate este construit Anexa A:\n(nr.26ᵃ sufragerie - 6.5 m.p.\nnr.26ᵇ - terandă - 13.6 m.p.\nnr.26ᶜ - subsol - 15.1 m.p.)\n\n**English:**\nFor the City Hall\nAccording to Decision No. 100 from 01.06.1989, the construction of the balcony is permitted.\nIn reality, Annex A was built:\n(No. 26ᵃ dining room - 6.5 sq.m.\nNo. 26ᵇ - veranda - 13.6 sq.m.\nNo. 26ᶜ - basement - 15.1 sq.m.)\n\n---\n\n## Bottom Table\n\n**Original:** Planul construcției pe / Numărul de inventariere\n\n**English:** Construction plan for / Inventory number\n\n**Date:** 10.06.2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -124,7 +124,9 @@
        "value": "C",
        "explanation": "# Document Translation (Romanian to English)\n\n## Header\n**Original:** AGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes\n\n**Original:** Subsol / H-2.20\n\n**English:** Basement / H-2.20 (height 2.20m)\n\n---\n\n**Original:** sufragerie / verandă\n\n**English:** dining room / veranda\n\n---\n\n**Original:** bucătărie\n\n**English:** kitchen\n\n---\n\n**Original:** Locativă\n\n**English:** Residential\n\n---\n\n## Main Handwritten Text (Right Side)\n\n**Original:** \nPentru Primărie\nConform Deciziei nr.100 din 01.06.1989 este permis construcție balconului.\nÎn realitate este construit anexa A:\n(nr.26ᵃ sufragerie - 6.5 m.p.\nnr.26ᵇ - terandă - 13.6 m.p.\nnr.26ᶜ - subsol - 15.1 m.p.)\n\n**English:**\nFor the City Hall\nAccording to Decision No. 100 from 01.06.1989, the construction of the balcony is permitted.\nIn reality, annex A was built:\n(No. 26a dining room - 6.5 sq.m.\nNo. 26b - veranda - 13.6 sq.m.\nNo. 26c - basement - 15.1 sq.m.)\n\n---\n\n## Bottom Table\n\n**Original:** Planul construcției pe / Numărul de inventariere\n\n**English:** Construction plan for / Inventory number\n\n**Date:** 10.06.2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -136,7 +138,9 @@
        "value": "C",
        "explanation": "# Document Translation (Romanian to English)\n\n## Header\n**Original:** AGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes\n\n**Original:** Subsol / H-2.20\n\n**English:** Basement / H-2.20 (height 2.20m)\n\n---\n\n**Original:** sufragerie / verandă\n\n**English:** dining room / veranda\n\n---\n\n**Original:** bucătărie\n\n**English:** kitchen\n\n---\n\n**Original:** Locativă\n\n**English:** Residential\n\n---\n\n## Main Handwritten Text (Right Side)\n\n**Original:** \nPentru Primărie\nConform Deciziei nr.100 din 01.06.1989 este permis construcție balconului.\nÎn realitate este construit anexa A:\n(nr.26ᵃ sufragerie - 6.5 m.p.\nnr.26ᵇ - terandă - 13.6 m.p.\nnr.26ᶜ - subsol - 15.1 m.p.)\n\n**English:**\nFor the City Hall\nAccording to Decision No. 100 from 01.06.1989, the construction of the balcony is permitted.\nIn reality, annex A was built:\n(No. 26a dining room - 6.5 sq.m.\nNo. 26b - veranda - 13.6 sq.m.\nNo. 26c - basement - 15.1 sq.m.)\n\n---\n\n## Bottom Table\n\n**Original:** Planul construcției pe / Numărul de inventariere\n\n**English:** Construction plan for / Inventory number\n\n**Date:** 10.06.2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -148,7 +152,9 @@
        "value": "C",
        "explanation": "# Document Translation (Romanian to English)\n\n## Header\n**Original:** AGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n## Handwritten Notes\n\n**Original:** Subsol / H-2.20\n\n**English:** Basement / H-2.20 (height 2.20m)\n\n---\n\n**Original:** sufragerie / verandă\n\n**English:** dining room / veranda\n\n---\n\n**Original:** bucătărie\n\n**English:** kitchen\n\n---\n\n**Original:** Locativă\n\n**English:** Residential\n\n---\n\n## Main Handwritten Text (Right Side)\n\n**Original:** \nPentru Primărie\nConform Deciziei nr.100 din 01.06.1989 este permis construcție balconului.\nÎn realitate este construit anexa A:\n(nr.26ᵃ sufragerie - 6.5 m.p.\nnr.26ᵇ - terandă - 13.6 m.p.\nnr.26ᶜ - subsol - 15.1 m.p.)\n\n**English:**\nFor the City Hall\nAccording to Decision No. 100 from 01.06.1989, the construction of the balcony is permitted.\nIn reality, annex A was built:\n(No. 26a dining room - 6.5 sq.m.\nNo. 26b - veranda - 13.6 sq.m.\nNo. 26c - basement - 15.1 sq.m.)\n\n---\n\n## Bottom Table\n\n**Original:** Planul construcției pe / Numărul de inventariere\n\n**English:** Construction plan for / Inventory number\n\n**Date:** 10.06.2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -159,12 +165,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:04:53-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.25,
-     "stderr": 0.25
-    }
-   },
+   "pass_rate": 0.25,
    "samples": [
     {
      "id": "test-1",
@@ -176,7 +177,9 @@
        "value": "C",
        "explanation": "# Translation of Cadastral Document\n\n## Header:\n**Original (Romanian):** AGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHISINAU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHISINAU\n\n## Handwritten Notes on Plan:\n\n**Original:** Pentru Primarie\n\n**English:** For City Hall\n\n**Original:** Conform Deciziei nr.100 din 01.06.1988 an, este permis construcției de locuințe lui.\n\n**English:** According to Decision no.100 from 01.06.1988, construction of housing is permitted for him.\n\n**Original:** În vecinătate este o construcție de 2 etaje\n- n°2 de° suprafață - 63m.p\n- n°2 de° retezată - 13.6m.p\n- n°2 de° - Subsol - 15.1m.p\n\n**English:** In the vicinity there is a 2-story building\n- no.2 of° surface area - 63m.p\n- no.2 of° cut - 13.6m.p\n- no.2 of° - Basement - 15.1m.p\n\n## Room Labels on Floor Plan:\n- **baie** = bathroom\n- **bucătărie** = kitchen\n- **veranda** = veranda\n- **locuire** = living space/dwelling\n\n## Bottom Table:\n**Original:** \n- Planul construcției pe\n- Numărul de înregistrare\n- Strada/Cartierul/Satul\n\n**English:**\n- Construction plan on\n- Registration number\n- Street/District/Village\n\nThe document shows a floor plan with various room dimensions marked in meters."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -188,7 +191,9 @@
        "value": "I",
        "explanation": "# Translation of Cadastral Document\n\n## Header:\n**Original (Romanian):** AGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHISINAU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHISINAU\n\n## Handwritten Notes on Plan:\n\n**Original:** Pentru Primarie\n\n**English:** For City Hall\n\n**Original:** Conform Deciziei nr.100 din 01.06.1988 an, este permis construcției de locuințe lui.\n\n**English:** According to Decision no.100 from 01.06.1988, construction of housing is permitted for him.\n\n**Original:** În vecinătate este o construcție de 2 etaje\n- n°2 de° suprafață - 63m.p\n- n°2 de° retezată - 13.6m.p\n- n°2 de° - Subsol - 15.1m.p.\n\n**English:** In the vicinity there is a 2-story building\n- no.2 of° surface area - 63m.p\n- no.2 of° cut off - 13.6m.p\n- no.2 of° - Basement - 15.1m.p.\n\n## Room Labels on Floor Plan:\n- **baie** = bathroom\n- **bucătărie** = kitchen\n- **veranda** = veranda\n- **locuire** = living space/dwelling\n\n## Bottom Table:\n**Original:** Planul construcției pe\n\n**English:** Construction plan on\n\n**Original:** Numărul de înregistrare\n\n**English:** Registration number\n\nThe document shows a floor plan with various room dimensions and measurements marked throughout."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -200,7 +205,9 @@
        "value": "I",
        "explanation": "# Translation of Cadastral Document\n\n## Header:\n**Original (Romanian):** AGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHISINAU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHISINAU\n\n## Handwritten Notes on Plan:\n\n**Original:** Pentru Primarie\n\n**English:** For City Hall\n\n**Original:** Conform Deciziei nr.100 din 01.06.1988 an, este permis construcției de locuințe lui.\n\n**English:** According to Decision no.100 from 01.06.1988, construction of housing is permitted for him.\n\n**Original:** În vecinătate este o construcție de 2 etaje\n- n°2 de° suprafață - 63m.p\n- n°2 de° retezată - 13.6m.p\n- n°2 de° - Subsol - 15.1m.p\n\n**English:** In the vicinity there is a 2-story building\n- no.2 of° surface area - 63m.p\n- no.2 of° cut - 13.6m.p\n- no.2 of° - Basement - 15.1m.p\n\n## Room Labels on Floor Plan:\n- **baie** = bathroom\n- **bucătărie** = kitchen\n- **veranda** = veranda\n- **locuire** = living space/dwelling\n\n## Bottom Table:\n**Original:** \n- Planul construcției pe\n- Numărul de înregistrare\n- Strada/Cartierul/Satul\n\n**English:**\n- Construction plan on\n- Registration number\n- Street/District/Village\n\nThe document shows a floor plan with various room dimensions marked in meters."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -212,7 +219,9 @@
        "value": "I",
        "explanation": "# Translation of Cadastral Document\n\n## Header:\n**Original (Romanian):** AGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHISINAU\n\n**English:** STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHISINAU\n\n## Handwritten Notes on Plan:\n\n**Original:** Pentru Primarie\n\n**English:** For City Hall\n\n**Original:** Conform Deciziei nr.100 din 01.06.1988 an, este permis construcției de locuințe lui.\n\n**English:** According to Decision no.100 from 01.06.1988, construction of housing is permitted for him.\n\n**Original:** În vecinătate este o construcție de 2 etaje\n- n°2 de° suprafață - 63m.p\n- n°2 de° retezată - 13.6m.p\n- n°2 de° - Subsol - 15.1m.p\n\n**English:** In the vicinity there is a 2-story building\n- no.2 of° surface area - 63m.p\n- no.2 of° cut - 13.6m.p\n- no.2 of° - Basement - 15.1m.p\n\n## Room Labels on Floor Plan:\n- **baie** = bathroom\n- **bucătărie** = kitchen\n- **veranda** = veranda\n- **locuire** = living space/dwelling\n\n## Bottom Table:\n**Original:** \n- Planul construcției pe\n- Numărul de înregistrare\n- Strada/Cartierul/Satul\n\n**English:**\n- Construction plan on\n- Registration number\n- Street/District/Village\n\nThe document shows a floor plan with various room dimensions marked in meters."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -223,12 +232,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:00:28-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -240,7 +244,9 @@
        "value": "C",
        "explanation": "Here's the translation of the text in the image:\n\n---\n\n**Original Romanian Text:**\n\n**Top Header:**\nAGENȚIA DE STAT RELAȚII FUNCIARĂ ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Sufragerie\n*   veranda\n*   bucatarie\n*   Locativa (repeated)\n*   Subsol\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   Pentru Primarie\n*   Conform Deciziei nr. 100 din 01.06.1989 an este permis constructie balconului.\n*   In realitate este construita anexa A?\n*   (n 26c - sufragerie - 6.5 m.p.\n*   n 26b - veranda - 13.6 m.p.\n*   n 26c - subsol - 15.1 m.p.)\n\n**Bottom Section:**\n*   Intreprinderea de Stat\n*   ORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n*   Planul constructiei pe\n*   Numarul de inventariere\n*   Sectorul\n*   carnierul\n*   lotul\n*   Data\n*   Semnatura (Agachi)\n*   Bo 854 97\n*   10 06 2004\n\n---\n\n**English Translation:**\n\n**Top Header:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRE OFFICE CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Living room / Dining room\n*   Veranda\n*   Kitchen\n*   Habitable room / Room (repeated)\n*   Basement\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   For the City Hall / For the Mayor's Office\n*   According to Decision no. 100 from 01.06.1989, the construction of the balcony is permitted.\n*   In reality, is annex A built?\n*   (No. 26c - living room - 6.5 sq. m.\n*   No. 26b - veranda - 13.6 sq. m.\n*   No. 26c - basement - 15.1 sq. m.)\n\n**Bottom Section:**\n*   State Enterprise\n*   TERRITORIAL CADASTRE BODY CHIȘINĂU\n*   Construction plan for\n*   Inventory number\n*   Sector\n*   Register / Volume\n*   Lot\n*   Date\n*   Signature (Agachi)\n*   Bo 854 97\n*   10 06 2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -252,7 +258,9 @@
        "value": "I",
        "explanation": "Here's the translation of the text in the image:\n\n---\n\n**Original Romanian Text:**\n\n**Top Header:**\nAGENȚIA DE STAT RELAȚII FUNCIARĂ ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Sufragerie\n*   veranda\n*   bucatarie\n*   Locativa (repeated)\n*   Subsol\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   Pentru Primarie\n*   Conform Deciziei nr. 100 din 01.06.1989 an este permis constructie balconului.\n*   In realitate este construita anexa A?\n*   (n 26c - sufragerie - 6.5 m.p.\n*   n 26b - veranda - 13.6 m.p.\n*   n 26c - subsol - 15.1 m.p.)\n\n**Bottom Section:**\n*   Intreprinderea de Stat\n*   ORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n*   Planul constructiei pe\n*   Numarul de inventariere\n*   Sectorul\n*   carnierul\n*   lotul\n*   Data\n*   Semnatura (Agachi)\n*   Bo 854 97\n*   10 06 2004\n\n---\n\n**English Translation:**\n\n**Top Header:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRE OFFICE CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Living room / Dining room\n*   Veranda\n*   Kitchen\n*   Habitable room / Room (repeated)\n*   Basement\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   For the City Hall / For the Mayor's Office\n*   According to Decision no. 100 from 01.06.1989, the construction of the balcony is permitted.\n*   In reality, is annex A built?\n*   (No. 26c - living room - 6.5 sq. m.\n*   No. 26b - veranda - 13.6 sq. m.\n*   No. 26c - basement - 15.1 sq. m.)\n\n**Bottom Section:**\n*   State Enterprise\n*   TERRITORIAL CADASTRE BODY CHIȘINĂU\n*   Construction plan for\n*   Inventory number\n*   Sector\n*   Register / Volume\n*   Lot\n*   Date\n*   Signature (Agachi)\n*   Bo 854 97\n*   10 06 2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -264,7 +272,9 @@
        "value": "C",
        "explanation": "Here's the translation of the text in the image:\n\n---\n\n**Original Romanian Text:**\n\n**Top Header:**\nAGENȚIA DE STAT RELAȚII FUNCIARĂ ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Sufragerie\n*   veranda\n*   bucatarie\n*   Locativa (repeated)\n*   Subsol\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   Pentru Primarie\n*   Conform Deciziei nr. 100 din 01.06.1989 an este permis constructie balconului.\n*   In realitate este construita anexa A?\n*   (n 26c - sufragerie - 6.5 m.p.\n*   n 26b - veranda - 13.6 m.p.\n*   n 26c - subsol - 15.1 m.p.)\n\n**Bottom Section:**\n*   Intreprinderea de Stat\n*   ORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n*   Planul constructiei pe\n*   Numarul de inventariere\n*   Sectorul\n*   carnierul\n*   lotul\n*   Data\n*   Semnatura (Agachi)\n*   Bo 854 97\n*   10 06 2004\n\n---\n\n**English Translation:**\n\n**Top Header:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRE OFFICE CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Living room / Dining room\n*   Veranda\n*   Kitchen\n*   Habitable room / Room (repeated)\n*   Basement\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   For the City Hall / For the Mayor's Office\n*   According to Decision no. 100 from 01.06.1989, the construction of the balcony is permitted.\n*   In reality, is annex A built?\n*   (No. 26c - living room - 6.5 sq. m.\n*   No. 26b - veranda - 13.6 sq. m.\n*   No. 26c - basement - 15.1 sq. m.)\n\n**Bottom Section:**\n*   State Enterprise\n*   TERRITORIAL CADASTRE BODY CHIȘINĂU\n*   Construction plan for\n*   Inventory number\n*   Sector\n*   Register / Volume\n*   Lot\n*   Date\n*   Signature (Agachi)\n*   Bo 854 97\n*   10 06 2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -276,7 +286,9 @@
        "value": "I",
        "explanation": "Here's the translation of the text in the image:\n\n---\n\n**Original Romanian Text:**\n\n**Top Header:**\nAGENȚIA DE STAT RELAȚII FUNCIARĂ ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Sufragerie\n*   veranda\n*   bucatarie\n*   Locativa (repeated)\n*   Subsol\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   Pentru Primarie\n*   Conform Deciziei nr. 100 din 01.06.1989 an este permis constructie balconului.\n*   In realitate este construita anexa A?\n*   (n 26c - sufragerie - 6.5 m.p.\n*   n 26b - veranda - 13.6 m.p.\n*   n 26c - subsol - 15.1 m.p.)\n\n**Bottom Section:**\n*   Intreprinderea de Stat\n*   ORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n*   Planul constructiei pe\n*   Numarul de inventariere\n*   Sectorul\n*   carnierul\n*   lotul\n*   Data\n*   Semnatura (Agachi)\n*   Bo 854 97\n*   10 06 2004\n\n---\n\n**English Translation:**\n\n**Top Header:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRE OFFICE CHIȘINĂU\n\n**Floor Plan Labels (selected, as many are dimensions/areas):**\n*   Living room / Dining room\n*   Veranda\n*   Kitchen\n*   Habitable room / Room (repeated)\n*   Basement\n*   H-2.20 (height)\n*   H-2.6 (height)\n\n**Handwritten Notes (right side):**\n*   For the City Hall / For the Mayor's Office\n*   According to Decision no. 100 from 01.06.1989, the construction of the balcony is permitted.\n*   In reality, is annex A built?\n*   (No. 26c - living room - 6.5 sq. m.\n*   No. 26b - veranda - 13.6 sq. m.\n*   No. 26c - basement - 15.1 sq. m.)\n\n**Bottom Section:**\n*   State Enterprise\n*   TERRITORIAL CADASTRE BODY CHIȘINĂU\n*   Construction plan for\n*   Inventory number\n*   Sector\n*   Register / Volume\n*   Lot\n*   Date\n*   Signature (Agachi)\n*   Bo 854 97\n*   10 06 2004"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -287,12 +299,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:00:50-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.75,
-     "stderr": 0.25
-    }
-   },
+   "pass_rate": 0.75,
    "samples": [
     {
      "id": "test-1",
@@ -304,7 +311,9 @@
        "value": "C",
        "explanation": "Based on the image provided, here is the translation of the document. It is a cadastral (land registry) plan from Moldova, specifically for a property in Chișinău.\n\n### **Header**\n\n**Original (Romanian):**\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n### **Handwritten Note (Right Side)**\n\nThis section explains a discrepancy between what was permitted and what was built.\n\n**Original (Romanian):**\nPentru Primărie\nConform Deciziei nr 100 din 01.06.1989 an este permis construcția balconului.\nÎn realitate este construită Anexa $A^2$\n(nr $26^a$ – sufragerie – 6.5 m.p\nnr $26^b$ – verandă – 13.6 m.p\nnr $26^c$ – subsol – 15.1 m.p.)\n\n**English Translation:**\nFor City Hall\nAccording to Decision no. 100 of June 1, 1989, the construction of a balcony is permitted.\nIn reality, Annex $A^2$ is built\n(No. $26^a$ – dining room – 6.5 sq.m\nNo. $26^b$ – veranda – 13.6 sq.m\nNo. $26^c$ – basement – 15.1 sq.m.)\n\n---\n\n### **Floor Plan Labels**\n\nThese are the labels found inside the rooms on the drawing.\n\n*   **Subsol ($H-2.20$):** Basement (Height 2.20m)\n*   **Sufragerie ($26^a$):** Dining Room / Living Area\n*   **Verandă ($26^b$):** Veranda / Enclosed Porch\n*   **Bucătărie ($26$):** Kitchen\n*   **Locative ($27, 28, 29$):** Living Space / Residential Room (Bedrooms or Living rooms)\n*   **Numbers (e.g., 2.40, 5.60):** These represent the dimensions of the walls in meters.\n*   **Numbers (e.g., 15.1, 13.6):** These represent the area in square meters.\n\n---\n\n### **Footer (Bottom Right Table)**\n\n**Original (Romanian):**\nÎntreprinderea de Stat\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\nPlanul construcției pe...\nNumărul de inventariere | Sectorul | Cartierul\nBo | 854 | 97\n10 | 06 | 2004\nÎntocmit: Agachi (semnătura)\n\n**English Translation:**\nState Enterprise\nTERRITORIAL CADASTRAL BODY CHIȘINĂU\nConstruction plan on... [date/location]\nInventory Number | Sector | Quarter\nBo [Likely Botanica sector] | 854 | 97\nDate: October 6, 2004\nCompiled by: Agachi (signature)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -316,7 +325,9 @@
        "value": "I",
        "explanation": "Based on the image provided, here is the translation of the document. It is a cadastral (land registry) plan from Moldova, specifically for a property in Chișinău.\n\n### **Header**\n\n**Original (Romanian):**\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n### **Handwritten Note (Right Side)**\n\nThis section explains a discrepancy between what was permitted and what was built.\n\n**Original (Romanian):**\nPentru Primărie\nConform Deciziei nr 100 din 01.06.1989 an este permis construcția balconului.\nÎn realitate este construită Anexa $A^2$\n(nr $26^a$ – sufragerie – 6.5 m.p\nnr $26^b$ – verandă – 13.6 m.p\nnr $26^c$ – subsol – 15.1 m.p.)\n\n**English Translation:**\nFor City Hall\nAccording to Decision no. 100 of June 1, 1989, the construction of a balcony is permitted.\nIn reality, Annex $A^2$ is built\n(No. $26^a$ – dining room – 6.5 sq.m\nNo. $26^b$ – veranda – 13.6 sq.m\nNo. $26^c$ – basement – 15.1 sq.m.)\n\n---\n\n### **Floor Plan Labels**\n\nThese are the labels found inside the rooms on the drawing.\n\n*   **Subsol ($H-2.20$):** Basement (Height 2.20m)\n*   **Sufragerie ($26^a$):** Dining Room / Living Area\n*   **Verandă ($26^b$):** Veranda / Enclosed Porch\n*   **Bucătărie ($26$):** Kitchen\n*   **Locative ($27, 28, 29$):** Living Space / Residential Room (Bedrooms or Living rooms)\n*   **Numbers (e.g., 2.40, 5.60):** These represent the dimensions of the walls in meters.\n*   **Numbers (e.g., 15.1, 13.6):** These represent the area in square meters.\n\n---\n\n### **Footer (Bottom Right Table)**\n\n**Original (Romanian):**\nÎntreprinderea de Stat\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\nPlanul construcției pe...\nNumărul de inventariere | Sectorul | Cartierul\nBo | 854 | 97\n10 | 06 | 2004\nÎntocmit: Agachi (semnătura)\n\n**English Translation:**\nState Enterprise\nTERRITORIAL CADASTRAL BODY CHIȘINĂU\nConstruction plan on... [date/location]\nInventory Number | Sector | Quarter\nBo [Likely Botanica sector] | 854 | 97\nDate: October 6, 2004\nCompiled by: Agachi (signature)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -328,7 +339,9 @@
        "value": "C",
        "explanation": "Based on the image provided, here is the translation of the document. It is a cadastral (land registry) plan from Moldova, specifically for a property in Chișinău.\n\n### **Header**\n\n**Original (Romanian):**\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n### **Handwritten Note (Right Side)**\n\nThis section explains a discrepancy between what was permitted and what was built.\n\n**Original (Romanian):**\nPentru Primărie\nConform Deciziei nr 100 din 01.06.1989 an este permis construcția balconului.\nÎn realitate este construită Anexa $A^2$\n(nr $26^a$ – sufragerie – 6.5 m.p\nnr $26^b$ – verandă – 13.6 m.p\nnr $26^c$ – subsol – 15.1 m.p.)\n\n**English Translation:**\nFor City Hall\nAccording to Decision no. 100 of June 1, 1989, the construction of a balcony is permitted.\nIn reality, Annex $A^2$ is built\n(No. $26^a$ – dining room – 6.5 sq.m\nNo. $26^b$ – veranda – 13.6 sq.m\nNo. $26^c$ – basement – 15.1 sq.m.)\n\n---\n\n### **Floor Plan Labels**\n\nThese are the labels found inside the rooms on the drawing.\n\n*   **Subsol ($H-2.20$):** Basement (Height 2.20m)\n*   **Sufragerie ($26^a$):** Dining Room / Living Area\n*   **Verandă ($26^b$):** Veranda / Enclosed Porch\n*   **Bucătărie ($26$):** Kitchen\n*   **Locative ($27, 28, 29$):** Living Space / Residential Room (Bedrooms or Living rooms)\n*   **Numbers (e.g., 2.40, 5.60):** These represent the dimensions of the walls in meters.\n*   **Numbers (e.g., 15.1, 13.6):** These represent the area in square meters.\n\n---\n\n### **Footer (Bottom Right Table)**\n\n**Original (Romanian):**\nÎntreprinderea de Stat\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\nPlanul construcției pe...\nNumărul de inventariere | Sectorul | Cartierul\nBo | 854 | 97\n10 | 06 | 2004\nÎntocmit: Agachi (semnătura)\n\n**English Translation:**\nState Enterprise\nTERRITORIAL CADASTRAL BODY CHIȘINĂU\nConstruction plan on... [date/location]\nInventory Number | Sector | Quarter\nBo [Likely Botanica sector] | 854 | 97\nDate: October 6, 2004\nCompiled by: Agachi (signature)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -340,7 +353,9 @@
        "value": "C",
        "explanation": "Based on the image provided, here is the translation of the document. It is a cadastral (land registry) plan from Moldova, specifically for a property in Chișinău.\n\n### **Header**\n\n**Original (Romanian):**\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**English Translation:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n---\n\n### **Handwritten Note (Right Side)**\n\nThis section explains a discrepancy between what was permitted and what was built.\n\n**Original (Romanian):**\nPentru Primărie\nConform Deciziei nr 100 din 01.06.1989 an este permis construcția balconului.\nÎn realitate este construită Anexa $A^2$\n(nr $26^a$ – sufragerie – 6.5 m.p\nnr $26^b$ – verandă – 13.6 m.p\nnr $26^c$ – subsol – 15.1 m.p.)\n\n**English Translation:**\nFor City Hall\nAccording to Decision no. 100 of June 1, 1989, the construction of a balcony is permitted.\nIn reality, Annex $A^2$ is built\n(No. $26^a$ – dining room – 6.5 sq.m\nNo. $26^b$ – veranda – 13.6 sq.m\nNo. $26^c$ – basement – 15.1 sq.m.)\n\n---\n\n### **Floor Plan Labels**\n\nThese are the labels found inside the rooms on the drawing.\n\n*   **Subsol ($H-2.20$):** Basement (Height 2.20m)\n*   **Sufragerie ($26^a$):** Dining Room / Living Area\n*   **Verandă ($26^b$):** Veranda / Enclosed Porch\n*   **Bucătărie ($26$):** Kitchen\n*   **Locative ($27, 28, 29$):** Living Space / Residential Room (Bedrooms or Living rooms)\n*   **Numbers (e.g., 2.40, 5.60):** These represent the dimensions of the walls in meters.\n*   **Numbers (e.g., 15.1, 13.6):** These represent the area in square meters.\n\n---\n\n### **Footer (Bottom Right Table)**\n\n**Original (Romanian):**\nÎntreprinderea de Stat\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\nPlanul construcției pe...\nNumărul de inventariere | Sectorul | Cartierul\nBo | 854 | 97\n10 | 06 | 2004\nÎntocmit: Agachi (semnătura)\n\n**English Translation:**\nState Enterprise\nTERRITORIAL CADASTRAL BODY CHIȘINĂU\nConstruction plan on... [date/location]\nInventory Number | Sector | Quarter\nBo [Likely Botanica sector] | 854 | 97\nDate: October 6, 2004\nCompiled by: Agachi (signature)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -351,12 +366,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:19:09-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -368,7 +378,9 @@
        "value": "C",
        "explanation": "**Header**\n\n- Original: `AGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA`  \n  English: *State Agency for Land Relations and Cadastre of the Republic of Moldova*\n\n- Original: `OFICIUL CADASTRAL TERITORIAL CHISINAU`  \n  English: *Chişinău Territorial Cadastral Office*  \n\n---\n\n**Hand‑written note on the right**\n\n- Original: `Pentru Primărie`  \n  English: *For the City Hall*\n\n- Original:  \n  `Conform Deciziei nr. 100  \n  din 01.06.1983, este  \n  permisă construcţia  \n  balconului.`  \n  English:  \n  *According to Decision no. 100  \n  of 01.06.1983, the  \n  construction of the  \n  balcony is permitted.*\n\n- Original:  \n  `În realitate este  \n  construită terasa № 2`  \n  English:  \n  *In reality, terrace no. 2  \n  is built.*\n\n- Original (list in brackets – some abbreviations/figures):  \n  `nr. 26a – parapet – 6,3 m.p.  \n  nr. 26b – terasă – 13,6 m.p.  \n  nr. 26c – subsol – 45,1 m.p.`  \n  English:  \n  *no. 26a – parapet – 6.3 sq.m  \n  no. 26b – terrace – 13.6 sq.m  \n  no. 26c – basement – 45.1 sq.m*\n\n*(“m.p.” = metri pătraţi = square meters.)*\n\n---\n\n**Room labels inside the floor plan (where legible)**\n\n- Original: `sufragerie` – English: *living room*  \n- Original: `vestibul` / `vestibule` – English: *vestibule / entrance hall*  \n- Original: `bucătărie` – English: *kitchen*  \n- Original: `locativă` (repeated for several rooms) – English: *dwelling room / living space*  \n\n(Other very small hand‑written labels are too unclear to read reliably.)\n\n---\n\n**Printed block at the bottom right**  \n*(parts are obscured or blurry; translation given where legible)*\n\n- Original: `Întreprinderea de Stat`  \n  English: *State Enterprise*\n\n- Original: `ORGANUL CADASTRAL TERITORIAL CHIŞINĂU`  \n  English: *Chişinău Territorial Cadastral Body*\n\n- Original: `Planul construcţiei pe ...`  \n  English: *Construction plan for ...*\n\n- Original: `Numărul de inventariere ...`  \n  English: *Inventory number ...*\n\n- Original: `Sectorul (cartierul) ...  Nr. cadastral ...`  \n  English: *Sector (neighbourhood) ...  Cadastral no. ...*\n\n- Original (hand‑written in that box):  \n  `Bo 854 97` – likely an inventory/cadastral reference.  \n\n- Original (date): `10 06 2004`  \n  English: *10.06.2004 (June 10, 2004)*  \n\n- Original: signature line (illegible name) – English: *signature of official*"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -380,7 +392,9 @@
        "value": "I",
        "explanation": "Below is a best‑effort reading of the Romanian text on the document and its English translation.  \n(Some handwritten parts are hard to read, so I mark uncertain/unclear words as **[illegible]**.)\n\n---\n\n### Header\n\n**Romanian:**  \nAGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHISINAU  \n\n**English:**  \nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nCHISINAU TERRITORIAL CADASTRAL OFFICE  \n\n---\n\n### Room labels on the plan\n\n(Only words are translated; numbers are dimensions/areas.)\n\n- **Romanian:** hol  \n  **English:** hall / corridor  \n\n- **Romanian:** balcon  \n  **English:** balcony  \n\n- **Romanian:** sufragerie  \n  **English:** living room  \n\n- **Romanian:** vestibul  \n  **English:** vestibule / entrance hall  \n\n- **Romanian:** bucatarie  \n  **English:** kitchen  \n\n- **Romanian:** WC  \n  **English:** toilet  \n\n- **Romanian:** baie  \n  **English:** bathroom  \n\n- **Romanian:** locativ / locativa / locuinta (in several rooms)  \n  **English:** living room / dwelling room (residential room)  \n\n- **Romanian (near balcony):** L=6,50 H=2,20  \n  **English:** L = 6.50, H = 2.20  \n\n- **Romanian (other notes near openings):** H=2,6  \n  **English:** H = 2.6  \n\n(Other short handwritten labels near walls/openings are too unclear to read accurately.)\n\n---\n\n### Handwritten note on the right (“Pentru Primarie”)\n\n**Romanian:**  \nPentru Primarie  \n\nConform Deciziei nr. 100 din 01.06.1993 este permis constructie balconului.  \nIn realitate este construita terasa nr. 2:  \nnr. 26a – parapet – 6,3 m.p.  \nnr. 26b – terasa – 13,6 m.p.  \nnr. 26c – subsol – 45,1 m.p.\n\n**English:**  \nFor the City Hall  \n\nAccording to Decision no. 100 of 01.06.1993, construction of the balcony is permitted.  \nIn reality, terrace no. 2 has been built:  \nno. 26a – parapet – 6.3 sq.m  \nno. 26b – terrace – 13.6 sq.m  \nno. 26c – basement – 45.1 sq.m  \n\n---\n\n### Stamp and footer box (bottom)\n\n**Romanian:**  \nIntreprinderea de Stat **[illegible – probably “Cadastru”]**  \nORGANUL CADASTRAL TERITORIAL CHISINAU  \n\nPlanul constructiv pe **[adresă acoperită]**  \nNumarul de inventariere **[acoperit]**  \n\nSectorul (cartierul): **Bo 854 97**  \n\n10.06.2004  \n\n**[semnătură]**\n\n**English:**  \nState Enterprise **[illegible – likely “Cadastru”]**  \nCHISINAU TERRITORIAL CADASTRAL BODY  \n\nConstruction plan for **[address obscured]**  \nInventory number **[obscured]**  \n\nSector (neighborhood): **Bo 854 97**  \n\n10.06.2004  \n\n**[signature]**\n\n---\n\nIf you need a more precise reading of any small handwritten part, tell me which area of the image (top, middle, bottom, near which room) and I’ll focus on that specifically."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -392,7 +406,9 @@
        "value": "I",
        "explanation": "Below is a line‑by‑line transcription of the Romanian text that can be read on the document, followed by its English translation. Where some handwriting is unclear, I mark it with “[illegible]” or “[approx.]”.\n\n---\n\n### Header\n\n**Romanian:**  \nAGENTIA DE STAT RELATII FUNCIARE SI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHISINAU  \n\n**English:**  \nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nTERRITORIAL CADASTRAL OFFICE CHISINAU  \n\n---\n\n### Room / plan labels (inside the drawing)\n\n**Romanian:**  \nsufragerie  \n**English:**  \nliving room  \n\n**Romanian:**  \nbucătărie  \n**English:**  \nkitchen  \n\n**Romanian:**  \nvestibul  \n**English:**  \nvestibule / entrance hall  \n\n**Romanian:**  \nlocativ  \n**English:**  \nliving room / habitable room  \n\n**Romanian:**  \nH = 2,20 ; H = 2,60  \n**English:**  \nH = 2.20 m; H = 2.60 m (ceiling height)  \n\n(Other very small handwritten labels on the rooms are mostly dimensions; several are too blurred to read reliably.)\n\n---\n\n### Handwritten note at right\n\n**Romanian (as legible):**  \nPentru Primărie  \n\nConform Deciziei nr. 100  \ndin 01.06.1983 este permisă  \nconstrucţia balconului.  \n\nÎn realitate este  \nconstruită [terasa] şi anexe:  \n\nnr. 26a – [suprafaţă] – 6,3 m.p.  \nnr. 26b – terasă – 13,6 m.p.  \nnr. 26c – subsol – 45,1 m.p.  \n\n**English:**  \nFor the City Hall  \n\nAccording to Decision no. 100  \nof 01.06.1983 the  \nconstruction of the balcony is permitted.  \n\nIn reality a  \n[terrace] and annexes are built:  \n\nno. 26a – [area] – 6.3 sq.m  \nno. 26b – terrace – 13.6 sq.m  \nno. 26c – basement – 45.1 sq.m  \n\n*(Bracketed words are reconstructed where the handwriting is not fully clear.)*\n\n---\n\n### Stamp / lower‑right box\n\n**Romanian:**  \nÎntreprinderea de Stat  \nORGANUL CADASTRAL TERITORIAL CHIŞINĂU  \n\nPlanul construcţiei pe [nume]  \nNumărul de inventariere [____]  \n\nSectorul (cartierul) [Bo]  \n[bloc] 854  [ap.] 97  \n\n10.06.2004  \n\nSemnătura [illegible]  \n\n**English:**  \nState Enterprise  \nTERRITORIAL CADASTRAL BODY CHIŞINĂU  \n\nConstruction plan for [name]  \nInventory number [____]  \n\nSector (quarter) [Bo]  \n[building] 854  [apartment] 97  \n\n10.06.2004  \n\nSignature [illegible]  \n\n---\n\nIf you need an exact legal translation for a specific passage (for example the decision text or the annex list), tell me and I’ll refine those parts further."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -404,7 +420,9 @@
        "value": "C",
        "explanation": "Below is the legible text from the document, first in the original Romanian, then in English.\n\n---\n\n### Header (top)\n\n**Romanian**\n\n> AGENŢIA DE STAT RELAŢII FUNCIARE ŞI CADASTRU A REPUBLICII MOLDOVA  \n> OFICIUL CADASTRAL TERITORIAL CHIŞINĂU  \n\n**English**\n\n> STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \n> TERRITORIAL CADASTRAL OFFICE CHIŞINĂU  \n\n---\n\n### Handwritten note on the right\n\n**Romanian**\n\n> Pentru Primărie  \n> Conform deciziei nr. 100  \n> din 01.06.1988 este permisă  \n> construcţia balconului.  \n> În realitate este  \n> construită terasa nr. 2  \n> (nr. 26c – suprafaţă – 6,3 m.p.  \n> nr. 26b – terasă – 13,6 m.p.  \n> nr. 26? – subsol – 45,1 m.p.)\n\n*(Ultima cifră din „26?” nu este complet lizibilă în copie.)*\n\n**English**\n\n> For the City Hall  \n> According to Decision no. 100  \n> of 01.06.1988 the construction  \n> of the balcony is permitted.  \n> In reality terrace no. 2  \n> has been built  \n> (no. 26c – area – 6.3 sq. m  \n> no. 26b – terrace – 13.6 sq. m  \n> no. 26? – basement – 45.1 sq. m)\n\n*(The last digit in “26?” is not fully legible in the copy.)*\n\n---\n\n### Room names inside the floor plan\n\n**Romanian (as written on the plan)**  \n- „bucătărie”  \n- „sufragerie”  \n- „verandă”  \n- „locativă” (repeated for several rooms)\n\n**English**\n\n- “kitchen”  \n- “living room”  \n- “veranda”  \n- “dwelling room / living space” (for several rooms)\n\n(The many small numbers around the rooms are dimensions and surface areas, which are mostly just figures without additional words.)\n\n---\n\n### Round stamp (center‑bottom)\n\n**Romanian**\n\n> OFICIUL CADASTRAL TERITORIAL CHIŞINĂU  \n\n*(plus standard seal text that repeats the institution’s name)*\n\n**English**\n\n> TERRITORIAL CADASTRAL OFFICE CHIŞINĂU  \n\n---\n\n### Rectangular box at the bottom right\n\n**Romanian**\n\n> Întreprinderea de Stat  \n> ORGANUL CADASTRAL TERITORIAL CHIŞINĂU  \n> Planul constructivelor pe [adresă]  \n> Numărul de inventariere: [nr.]  \n> Sectorul (cartierul) ______  \n> Casa ______  ap. ______  \n> Bo 854 97  \n> 10 06 2004  \n\n**English**\n\n> State Enterprise  \n> TERRITORIAL CADASTRAL AUTHORITY CHIŞINĂU  \n> Construction plan for [address]  \n> Inventory number: [no.]  \n> Sector (neighborhood) ______  \n> Building ______  apt. ______  \n> Bo 854 97  \n> 10 06 2004  \n\n(Fields with brackets are filled with specific address/number data that are blurred or redacted in the image.)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -415,12 +433,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:22:41-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.25,
-     "stderr": 0.25
-    }
-   },
+   "pass_rate": 0.25,
    "samples": [
     {
      "id": "test-1",
@@ -432,7 +445,9 @@
        "value": "C",
        "explanation": "Below, I'll provide a transcription and translation of the text from the document based on the image description you shared. The document appears to be an official cadastral (land registry) record from the Republic of Moldova, written in Romanian (with some possible Moldovan dialect influences). It's a handwritten or semi-handwritten plan, likely related to a property or building layout.\n\nI've transcribed the visible text as accurately as possible from the description, grouping it by sections (e.g., header, body, labels on the sketch, and footer). For each part, I'll include:\n- **Original Romanian**: The text as it appears (with any accents or diacritics inferred where possible for clarity).\n- **English Translation**: A direct, accurate translation into English.\n\nNote: The document includes a simple floor plan sketch with measurements (e.g., room dimensions like \"2.40\" meters). I've described these briefly but not redrawn them, as this is a text-based response. Some handwriting is unclear or abbreviated, so I've noted any ambiguities. This seems to be a \"proces-verbal\" (official minutes or report) for a ground-floor building plan.\n\n### Header\n**Original Romanian**:  \nAGENTIA DE STATI FUNCIARI SI CADASTRU A REPUBLICII MOLDOVA  \n(With a possible full name: Agenția de Stat pentru Relații Funciare și Cadastru a Republicii Moldova; note: \"STATI\" might be a typo or abbreviation for \"Stat pentru\" or similar, but it's likely \"Stat pentru Relații\".)\n\n**English Translation**:  \nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\n\n### Sketch Labels and Measurements\nThe document includes a simple floor plan sketch with rooms, doors, and measurements (in meters). Labels are handwritten. Here's a transcription of the key labels:\n\n**Original Romanian**:  \n- La sol. (Possibly labeling the ground level.)  \n- Parter. (Labeling the floor.)  \n- Etaj. (Possibly indicating an upper floor, though the plan seems focused on ground level.)  \n- Measurements: 2.40, 8.10, 2.10, 3.45, 3.20, etc. (These appear next to walls or rooms, e.g., room widths/lengths.)  \n- Room labels: Bucătărie (kitchen), Cameră (room), Hol (hall), Baie (bathroom), etc. (Inferred from context; the sketch shows divisions like \"Cameră 1\", \"Cameră 2\", etc.)  \n- Additional notes: nr. 86° - locuință - 45 mp. (Possibly \"nr. 86\" as a property number.)\n\n**English Translation**:  \n- On the ground. (Or \"Ground level\".)  \n- Ground floor.  \n- Floor/Story. (As in building level.)  \n- Measurements: 2.40, 8.10, 2.10, 3.45, 3.20, etc. (These are dimensions in meters, e.g., for walls or room sizes.)  \n- Room labels: Kitchen, Room, Hall, Bathroom, etc. (The sketch divides the space into 3 rooms + hall + bathroom + kitchen.)  \n- Additional notes: No. 86° - dwelling - 45 sq m. (Referring to a property or cadastral number.)\n\n### Main Body Text (Handwritten Description)\nThis appears below the sketch and describes the building.\n\n**Original Romanian**:  \nPlanul Parterului  \nConstrucția existentă de 45.00 mp din care suprafața locativă este constituită din 3 camere + hol + baie + bucătărie - 36 mp  \nnr. 86° - locuință - 45 mp. (With some possible additional scribbles like \"din care suprafața\" meaning \"of which the area\".)\n\n**English Translation**:  \nGround Floor Plan  \nExisting construction of 45.00 sq m, of which the living area consists of 3 rooms + hall + bathroom + kitchen - 36 sq m  \nNo. 86° - dwelling - 45 sq m.\n\n### Footer and Signature/Stamp\n**Original Romanian**:  \nProces-verbal (Likely the start of \"Proces-verbal\" meaning official minutes or report.)  \n(Stamp: Circular seal, possibly with official emblem and text like \"Agenția de Stat\" or similar.)  \nB. 09.93 (Possibly a date or code, e.g., \"B\" for \"Biroul\" or a reference number.)  \nSef (Signature line, meaning \"Chief\" or \"Head\".)  \n(Handwritten signature: Something like \"I. Popa\" or illegible, followed by \"Sef\".)\n\n**English Translation**:  \nOfficial Minutes/Report (Or \"Verbal Process\", a formal term for an official record.)  \n(Stamp: Circular seal, likely with official emblem and text like \"State Agency\" or similar.)  \nB. 09.93 (Possibly a date like September 1993 or a reference code.)  \nChief/Head (Signature line.)  \n(Handwritten signature: Illegible, followed by \"Chief\".)\n\n### Additional Notes\n- **Context**: This document looks like an official cadastral survey or property inspection report for a residential building's ground floor (parter). It details a 45 square meter (sq m) structure, with 36 sq m as livable space (3 rooms, hall, bathroom, kitchen). The \"nr. 86°\" might refer to a cadastral parcel number or address.\n- **Ambiguities**: Some handwriting is hard to read from the text description alone (e.g., exact room labels or full signature). If you provide a clearer image or more details, I can refine the translation.\n- **Units**: \"mp\" stands for \"metri pătrați\" (square meters), which I've translated as \"sq m\" for brevity.\n- This translation is factual and neutral; if this is a legal document, consider consulting a professional translator or notary for official use.\n\nIf you have more context or a better image, let me know for a more precise translation!"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -444,7 +459,9 @@
        "value": "I",
        "explanation": "Below, I'll provide a transcription and translation of the document based on the provided text representation (which appears to be a scanned or photographed official cadastral document from the Republic of Moldova, likely a property or land parcel plan). The document is in Romanian (the official language of Moldova), with some elements in a formal, bureaucratic style. I've transcribed the visible text as accurately as possible from the description, organizing it into sections for clarity (e.g., header, diagram labels, handwritten notes, etc.). Note that the transcription is approximate due to the text-based representation of the image—some parts may be handwritten, abbreviated, or partially illegible, and the diagram is a simple sketch (possibly a floor plan or land plot).\n\nFor each section, I'll include:\n- **Original (Romanian)**: The transcribed text in its original language.\n- **Translation (English)**: A direct, accurate English translation. I've aimed for fidelity to the original while making it readable in English. Technical terms (e.g., cadastral jargon) are translated literally where possible, with explanations in brackets if needed for context.\n\nThis document seems to be a cadastral certificate or plan for a property (apartment or building) in Chișinău, Moldova, issued by the State Agency for Territorial Cadastre.\n\n### Header\n**Original (Romanian):**  \nAGENTIA DE STAT PENTRU CADASTRU TERITORIAL REPUBLICA MOLDOVA  \n\n**Translation (English):**  \nSTATE AGENCY FOR TERRITORIAL CADASTRE OF THE REPUBLIC OF MOLDOVA  \n\n### Diagram/Plan Labels (Sketch of Rooms or Plot)\nThe diagram appears to be a simple floor plan or land parcel sketch with dimensions and labels for rooms or boundaries. Labels are placed around a rectangular layout with measurements (e.g., in meters).\n\n**Original (Romanian):**  \n- La est [To the east]  \n- Nr. 4  \n- Baie [Bath]  \n- 2.40  \n- 8.5  \n- Camera [Room]  \n- 2.50  \n- Locuinta [Dwelling]  \n\n**Translation (English):**  \n- To the east  \n- No. 4  \n- Bathroom  \n- 2.40 [likely a measurement, e.g., 2.40 meters]  \n- 8.5 [likely a measurement, e.g., 8.5 meters or square meters]  \n- Room [or Bedroom/Chamber]  \n- 2.50 [likely a measurement, e.g., 2.50 meters]  \n- Dwelling [or Residence/Housing Unit]  \n\n### Main Handwritten Body/Text\nThis section includes the core description of the property, including cadastral number, address, and details about the area or construction.\n\n**Original (Romanian):**  \nPlanul Parcului  \nCadastrul teritorial nr. 0500  \ndin or. Chișinău, str. Pușkin 47, etaj 4, ap. 7  \nconstatată suprafața de  \nconstrucție - casa nr.  \nnr. 86 - sectorul - centru  \n\n**Translation (English):**  \nPlan of the Parcel [or Park Plan; \"Parcului\" could refer to a parcel/park or be a proper name]  \nTerritorial Cadastre No. 0500  \nfrom the city of Chișinău, Pushkin Street 47, floor 4, apt. 7  \nestablished area of  \nconstruction - house no.  \nno. 86 - sector - center  \n\n### Stamp/Seal and Signature (Bottom)\n**Original (Romanian):**  \n[Stamp:] ORGANUL CADASTRAL  \n[Signature:] B. 06.93 Ing.  \n\n**Translation (English):**  \n[Stamp:] CADASTRAL BODY [or Cadastral Authority/Office]  \n[Signature:] B. 06.93 Eng. [likely \"Engineer\"; \"B. 06.93\" may be a date (e.g., February 6, 1993) or code, followed by the signer's title or initials]  \n\n### Additional Notes\n- **Context**: This document is likely an official cadastral record (e.g., a property title or survey plan) for an apartment or building in central Chișinău (the capital of Moldova). \"Cadastrul teritorial\" refers to the land registry system. The diagram seems to depict a simple layout of a dwelling with rooms like a bathroom and main room, including dimensions.\n- **Potential Inaccuracies**: The text representation of the image is not perfectly clear (e.g., handwriting can be ambiguous, and some parts like exact measurements or abbreviations might vary). If you have a clearer image or more details, I can refine the transcription/translation.\n- **No Assumptions**: I've translated only what's visible in the provided text, without adding or inferring content.\n\nIf this isn't accurate or if you meant a different part of the document, please provide more details!"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -456,7 +473,9 @@
        "value": "I",
        "explanation": "Below, I'll provide a transcription and translation of the document based on the text visible in the image description you provided. The document appears to be an official cadastral (land registry) certificate or excerpt from the State Agency for Territorial Cadastre in Chisinau, Republic of Moldova. It's written in Romanian (the official language of Moldova), with some handwritten notes and a simple floor plan sketch.\n\nI've transcribed the original text as accurately as possible from the provided representation, correcting for any obvious OCR-like errors or garbling (e.g., \"AGENTIA DE STATI FUNCIARE 'SARATRU'\" seems to be a misrepresentation of \"AGENTIA DE STAT PENTRU CADASTRUL TERITORIAL CHISINAU\" based on standard Moldovan agency names). The document includes measurements, room labels, and a description of a property (likely an apartment or room). I've broken it down into sections for clarity.\n\nIf this transcription doesn't match the actual image perfectly (as it's based on your text representation), feel free to provide more details or a clearer image for refinement. Translations are literal where possible, but I've aimed for natural English while preserving meaning.\n\n### Header\n**Original (Romanian):**  \nAGENTIA DE STAT PENTRU CADASTRUL TERITORIAL CHISINAU, REPUBLICA MOLDOVA  \n\n**Translation (English):**  \nSTATE AGENCY FOR TERRITORIAL CADASTRE CHISINAU, REPUBLIC OF MOLDOVA  \n\n### Floor Plan Labels (Handwritten Sketch)\nThe sketch appears to depict a simple floor plan with rooms, measurements, and labels. Here's a transcription of the visible labels:\n\n**Original (Romanian):**  \n- La loc. (likely short for \"La locul faptei\" or \"On site\")  \n- Podea (Floor)  \n- 2.40 (measurement, likely in meters or square meters)  \n- Balcon (Balcony)  \n- Camera (Room)  \n- Bucatarie (Kitchen) 4.50 (measurement, likely area in m²)  \n- 12.00 (measurement, likely area in m² for the room)  \n- Locuinta (Dwelling/Accommodation)  \n- 4.3 (measurement)  \n- 2.3 (measurement)  \n- 2.40 (repeated measurement)  \n\n**Translation (English):**  \n- On site.  \n- Floor  \n- 2.40 (measurement, likely in meters or square meters)  \n- Balcony  \n- Room  \n- Kitchen 4.50 (measurement, likely area in m²)  \n- 12.00 (measurement, likely area in m² for the room)  \n- Dwelling/Accommodation  \n- 4.3 (measurement)  \n- 2.3 (measurement)  \n- 2.40 (repeated measurement)  \n\n### Main Body Text (Handwritten Description)\n**Original (Romanian):**  \nCamera Bucatarie  \nCamera Principala  \ndin care suprafata utila este constituita din: camera - 12.00 m², bucatarie - 4.50 m², balcon - 2.40 m², total - 18.90 m².  \nNr. cad. - [illegible, possibly a cadastral number like \"Nr. cad. - 0101- something\"]  \nData - [illegible]  \n\n**Translation (English):**  \nRoom Kitchen  \nMain Room  \nof which the usable area consists of: room - 12.00 m², kitchen - 4.50 m², balcony - 2.40 m², total - 18.90 m².  \nCad. No. - [illegible, possibly a cadastral number like \"Cad. No. - 0101- something\"]  \nDate - [illegible]  \n\n### Footer/Stamp and Signature\n**Original (Romanian):**  \n[Stamp: Likely an official seal with text like \"AGENTIA DE STAT PENTRU CADASTRUL TERITORIAL\" or similar]  \nSemnatura [Signature]  \nNr. 059 3 [possibly a document number]  \nData [Date]  \n\n**Translation (English):**  \n[Stamp: Likely an official seal with text like \"STATE AGENCY FOR TERRITORIAL CADASTRE\" or similar]  \nSignature  \nNo. 059 3 [possibly a document number]  \nDate  \n\n### Overall Interpretation\nThis document seems to be a cadastral excerpt or certificate describing a small residential property (e.g., an apartment) with a total usable area of 18.90 square meters, broken down into a main room, kitchen, and balcony. It includes a basic sketch with dimensions. Such documents are common in Moldova for property registration, ownership verification, or legal purposes.\n\nIf you have more context, a higher-resolution image, or specific parts you'd like me to focus on (e.g., just the description), let me know!"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -468,7 +487,9 @@
        "value": "I",
        "explanation": "Below, I'll provide a transcription and translation of the document based on the text visible in your query (which appears to be a scanned or photographed official cadastral document from the Republic of Moldova, written in Romanian). The document seems to be a property or land registry certificate, including a simple floor plan sketch with measurements and descriptions. I've transcribed the original Romanian text as accurately as possible from the provided representation, accounting for any potential OCR errors or handwriting ambiguities (e.g., the header looks like it might be \"AGENȚIA DE STAT PENTRU CADASTRUL TERITORIAL CHIȘINĂU REPUBLICA MOLDOVA\" – a common agency name for Moldova's State Agency for Land Cadastre in Chișinău). I've structured the response with:\n\n- **Original Romanian Text**: A faithful transcription, organized by sections (header, sketch labels, main body, and footer).\n- **English Translation**: A direct, accurate translation next to or below each section for clarity. I've aimed for natural English while preserving the formal tone of an official document. Note that some parts are handwritten and approximate; I've noted uncertainties where relevant.\n\nIf this is from an image, slight variations might exist due to legibility—feel free to provide more context or a clearer image for refinements.\n\n### Header\n**Original Romanian**:  \nAGENTIA DE STATI FUNCIARE 'SARATRU' REPUBLICA MOLDOVA  \n(AGENTIA DE STAT PENTRU CADASTRUL TERITORIAL CHIȘINĂU REPUBLICA MOLDOVA)  \n[Note: This appears to be a header with possible transcription errors; it's likely \"Agenția de Stat pentru Cadastru Teritorial Chișinău, Republica Moldova\" – the State Agency for Land Cadastre in Chișinău, Republic of Moldova.]\n\n**English Translation**:  \nSTATE AGENCY FOR LAND CADASTRE 'SARATRU' REPUBLIC OF MOLDOVA  \n(STATE AGENCY FOR TERRITORIAL CADASTRE CHIȘINĂU REPUBLIC OF MOLDOVA)  \n[Note: Likely \"State Agency for Territorial Cadastre Chișinău, Republic of Moldova.\"]\n\n### Floor Plan Sketch Labels\nThe sketch appears to be a simple diagram of a ground-floor layout (parter) with rooms and measurements in square meters (mp). Labels are handwritten and include dimensions like room sizes and door placements.\n\n**Original Romanian**:  \n- La 1. Hol. 2.40  \n- Bucătărie 8.20  \n- Cameră 12.50  \n- Locuință  \n- 2.40  \n- 8.20  \n- 12.50  \n- [Additional sketch notes:] 3.45, 3.45, max, etc.  \n- Planul Parterului  \n\n**English Translation**:  \n- To 1. Hall. 2.40  \n- Kitchen 8.20  \n- Room 12.50  \n- Dwelling  \n- 2.40  \n- 8.20  \n- 12.50  \n- [Additional sketch notes:] 3.45, 3.45, max, etc.  \n- Ground Floor Plan  \n\n### Main Body Text (Handwritten Description)\n**Original Romanian**:  \nPlanul Parterului.  \nCamera de zi 15.00  \ndin care suprafata este constituita din:  \n1. Hol - 2.40 mp  \n2. Bucatarie - 8.20 mp  \n3. Camera - 12.50 mp  \nnr.86 - Sectorul - Centru  \n[Stamp: Official seal, possibly from the agency]  \n\n**English Translation**:  \nGround Floor Plan.  \nLiving Room 15.00  \nof which the area is composed of:  \n1. Hall - 2.40 sq m  \n2. Kitchen - 8.20 sq m  \n3. Room - 12.50 sq m  \nNo. 86 - Sector - Center  \n[Stamp: Official seal, possibly from the agency]  \n\n### Footer/Signature\n**Original Romanian**:  \nDirector  \n[Signature: Illegible]  \nB. 06.93 Ing.  \n\n**English Translation**:  \nDirector  \n[Signature: Illegible]  \nB. 06.93 Eng.  \n[Note: \"Ing.\" likely stands for \"Inginer\" (Engineer), and \"B. 06.93\" could be a date or code, such as \"B. 06.93\" meaning something like \"Bulletin 06.93\" or a reference number.]\n\n### Overall Document Context\nThis document appears to be an official cadastral extract or property plan from the Republic of Moldova's land registry agency, detailing the layout and measurements of a ground-floor residential space (e.g., an apartment or house) in the \"Centru\" (Center) sector, with total areas broken down by room. The total living area mentioned is around 15.00 square meters for the \"camera de zi\" (living room), but the sub-areas add up to more (e.g., 2.40 + 8.20 + 12.50 = 23.10 sq m), which might indicate it's part of a larger description or there's a transcription nuance.\n\nIf this translation doesn't match what you see in the actual image or if you need more details (e.g., legal context), let me know!"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -479,12 +500,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:16:33-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.25,
-     "stderr": 0.25
-    }
-   },
+   "pass_rate": 0.25,
    "samples": [
     {
      "id": "test-1",
@@ -496,7 +512,9 @@
        "value": "I",
        "explanation": "### Original Romanian (Transcribed from Document)\n\n**Header (printed):**\n```\nAGENȚIA DE CADASTRU TERESTRU ȘI CADASTRU IMOBILIAR A REPUBLICII MOLDOVA\nFILIALA CHIȘINĂU\nOFICIUL TERITORIAL\n```\n\n**Floor Plan (printed with handwritten annotations):**\n- A cadastral blueprint showing a residential apartment layout with room dimensions in m² (approximate readings from visible numbers):\n  - Vertical left column: 20, [unlabeled space], 28\n  - Horizontal top row: 18, 20\n  - Central rooms: 14, 10, 12 (approx.)\n  - Right side: 3.50 (handwritten), lower rooms ~8-10 m²\n  - Possible labels: \"buc.\" (short for \"bucătărie\" = kitchen), other rooms unlabeled but implying living spaces, bathroom (\"baie\"), etc.\n- Total handwritten summary (upper right, next to plan):\n  ```\n  Pană Ramură\n  Anton Grigor 3.50\n  din of. supr. et\n  constituie suprafața\n  de 86 - total - ap\n  ```\n  *(Note: \"Pană Ramură\" may be owner/applicant names or \"ramură\" branch reference; \"Anton Grigor 3.50\" likely a room or annex size; \"din of. supr. et\" = \"din oficiu suprafața etaj\"; \"constituie suprafața de 86 - total - ap\" = constitutes surface of 86 m² total apartment.)*\n\n**Footer (printed and stamped):**\n```\nOriginal\n[Official blue stamp: Agenția de Cadastru... Filiala Chișinău]\nExtras din registrul [funciar? - partially visible]\nB 08 93 Iul\nFrun[ză? - signature]\n```\n*(Date appears as 08.07.93, likely July 8, 1993; \"B\" may indicate \"Buletin\" or file code; \"Frun\" likely signatory name \"Frunză\".)*\n\n### English Translation\n\n**Header:**\n```\nLAND AND REAL ESTATE CADASTRE AGENCY OF THE REPUBLIC OF MOLDOVA\nCHIȘINĂU BRANCH\nTERRITORIAL OFFICE\n```\n\n**Floor Plan:**\n- A cadastral blueprint depicting a residential apartment layout with room areas in m² (approximate from visible figures):\n  - Vertical left column: 20, [unlabeled space], 28\n  - Horizontal top row: 18, 20\n  - Central rooms: 14, 10, 12 (approx.)\n  - Right side: 3.50 (handwritten), lower rooms ~8-10 m²\n  - Possible labels: \"kitch.\" (\"bucătărie\" = kitchen), other rooms unlabeled but suggesting living room, bathroom (\"bath\"), etc.\n- Total handwritten summary (upper right, next to plan):\n  ```\n  Pană Ramură\n  Anton Grigor 3.50\n  from off. floor area\n  constitutes the surface area\n  of 86 - total - apt\n  ```\n  *(Note: \"Pană Ramură\" may refer to owner/applicant names or a \"branch\" reference; \"Anton Grigor 3.50\" likely names a room/owner with 3.50 m² area; \"from off. floor area\" = \"from official floor surface\"; full phrase indicates \"constitutes a total apartment surface area of 86 m²\".)*\n\n**Footer:**\n```\nOriginal\n[Official blue stamp: Land and Real Estate Cadastre Agency... Chișinău Branch]\nExtract from the [land registry? - partially visible]\nB 08 93 Jul\nFrun[za? - signature]\n```\n*(Date: 08.07.93, i.e., July 8, 1993; \"B\" likely a bulletin or file code; \"Frun\" probably signatory \"Frunză\".)*\n\n**Document Context:** This is an official **cadastral extract/land registry plan** (extras din registrul funciar) from 1993, detailing an apartment's floor plan, total built area (86 m²), and possibly ownership notes for property registration in Chișinău, Moldova. Some text is faded/handwritten, leading to minor interpretive notes above."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -508,7 +526,9 @@
        "value": "I",
        "explanation": "### Document Description\nThis is an official **cadastral floor plan extract** (plan de situație or similar) from the **Agenția de Cadastru și Publicitate Imobiliară a Republicii Moldova** (Agency of Cadastre and Real Estate Publicity of the Republic of Moldova), Chisinau branch. It depicts a building layout with room dimensions (in meters), calculated areas, handwritten notes on surface areas, possible owner name, utility info, and official stamps/signatures. The document appears to be an \"original extract\" dated around 2013 (exact date partially visible/obscured).\n\nThe floor plan shows a rectangular building divided into ~8-10 rooms (likely a house or small apartment block), with wall dimensions labeled along edges (e.g., 2.60 m height/width) and some room areas auto-calculated (e.g., 8.32 m²). Total built area: 95.00 m².\n\nBelow is a **full transcription** of all visible text (Romanian, preserving handwriting/style/layout as much as possible, with [brackets] for inferred/obscured parts or diagram notes), followed by **English translation**. Units are m² (square meters) where implied. Diagram labels are listed separately.\n\n---\n\n### Original Romanian Transcription\n```\nAGENȚIA DE CADASTRU ȘI PUBLICITATE IMOBILIARĂ A REPUBLICII MOLDOVA\nFILIALA CHIȘINĂU\n\n[Floor plan diagram: Grid layout of building with labeled dimensions]\n- Vertical dims (left to right): 2.60 | [blank] | 2.10 | 2.80 | 3.20 | etc.\n- Horizontal dims (top to bottom): 3.20 | 2.50 | [blank] | 3.20 | 2.10 | etc.\n- Room areas (examples): 8.32 | 6.72? | 2.50 | 8.32 | [others partially visible ~4-10 m² each]\n\n[Handwritten notes, right side of diagram:]\nPană Ramona\nSuprafaţă construită 95.00\nSuprafaţă desfăşurată 124.00\nSuprafaţă utilă 95.00\nconsumator gaze nr. [blank]\nnr. 86 - debit - apm\n\n[Bottom section:]\nOriginal\n[Official blue stamp/seal: Cadastral agency emblem]\nExtras din [registrul de publicitate imobiliară]\nla data de [20.09.2013? partially obscured]\nFiliala Chișinău\nTeritorial [?]\nB 08 93    Iov[?]\nFr 86-93   Iov[?]\n[Red stamp: Official seal]\n```\n\n### English Translation\n```\nAGENCY OF CADASTRE AND REAL ESTATE PUBLICITY OF THE REPUBLIC OF MOLDOVA\nCHISINAU BRANCH\n\n[Floor plan diagram: Grid layout of building with labeled dimensions]\n- Vertical dims (left to right): 2.60 | [blank] | 2.10 | 2.80 | 3.20 | etc. [m]\n- Horizontal dims (top to bottom): 3.20 | 2.50 | [blank] | 3.20 | 2.10 | etc. [m]\n- Room areas (examples): 8.32 | 6.72? | 2.50 | 8.32 | [others partially visible ~4-10 m² each]\n\n[Handwritten notes, right side of diagram:]\nPană Ramona [likely owner/occupant name]\nBuilt surface area 95.00 [m²]\nDeveloped surface area 124.00 [m²; total floor area incl. walls/circulation]\nUsable surface area 95.00 [m²; net living space]\nGas consumer no. [blank]\nNo. 86 - debit - apm [No. 86 - flow rate - water supply/sewage?; \"apm\" = apă și canalizare menajeră / domestic water & sewerage]\n\n[Bottom section:]\nOriginal\n[Official blue stamp/seal: Cadastral agency emblem]\nExtract from [the real estate publicity register]\nas of the date of [20.09.2013? partially obscured]\nChisinau Branch\nTerritorial [office?]\nB 08 93    Iov[signature/initials?]\nFr 86-93   Iov[signature/initials?]\n[Red stamp: Official seal]\n```\n\n### Additional Notes\n- **Key Terms Explained**:\n  - *Suprafaţă construită*: Gross built-up area (exterior footprint).\n  - *Suprafaţă desfăşurată*: Total developed floor area (sum of all floors/walls).\n  - *Suprafaţă utilă*: Net usable/living area.\n- \"Pană Ramona\" is likely the property owner or applicant name.\n- \"nr. 86 - debit - apm\": Refers to utility account #86 for water debit (flow/consumption) via domestic water/sewerage service.\n- Signatures (\"Iov\", \"B 08 93\", \"Fr 86-93\") are likely cadastral officer initials/codes.\n- The document is legally binding for property records in Moldova. If you need official verification, contact the agency directly. Low image resolution obscured minor details (e.g., exact date, some room labels)."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -520,7 +540,9 @@
        "value": "C",
        "explanation": "### Document Description\nThis appears to be an official **cadastral extract/plan (Extras din planul cadastral)** from the **National Agency for Cadastre and Land Registry (Agenția de Cadastru și Publicitate Imobiliară a Republicii Moldova)**, Chișinău branch. It shows a plot layout with numbered parcels (e.g., 20, 21, etc.) and their approximate areas in m². There are handwritten annotations, stamps, and signatures indicating issuance or amendment. The language is **Romanian** (official language in Moldova for such documents).\n\nBelow is a **full transcription** of visible text (printed and handwritten), followed by **English translation**. I've structured it by section for clarity, preserving layout where possible. Numbers in the plan (e.g., areas like \"240\") are measurements in square meters (m²) and are identical in both languages.\n\n---\n\n### **Header (Printed)**\n| Original (Romanian) | English Translation |\n|---------------------|---------------------|\n| AGENȚIA DE CADASTRU ȘI PUBLICITATE IMOBILIARĂ A REPUBLICII MOLDOVA | NATIONAL AGENCY FOR CADASTRE AND REAL ESTATE PUBLICITY OF THE REPUBLIC OF MOLDOVA |\n| FILIALA CHIȘINĂU | CHIȘINĂU BRANCH |\n\n---\n\n### **Cadastral Plan (Grid Layout with Parcel Numbers and Areas)**\nThis is a schematic map of land parcels. Parcels are numbered (e.g., 20, 21), with areas noted. Layout approximated:\n\n```\n+-------------------+-------------------+-------------------+\n| 20                | 21                | [empty]           |\n| 240               | 180               |                   |\n+-------------------+-------------------+-------------------+\n| 22                | 23                | 24                |\n| 210               | 150               | 120               |\n+-------------------+-------------------+-------------------+\n| [empty]           | 25                | 26                |\n|                   | 90                | 110               |\n+-------------------+-------------------+-------------------+\n| 27                | 28                | 29                |\n| 130               | 170                | 95                |\n+-------------------+-------------------+-------------------+\n| 30                | [empty]           |                   |\n| 200               |                   |                   |\n+-------------------+-------------------+-------------------+\n```\n*(Note: Exact grid is illustrative; numbers like \"240\", \"180\" etc. are areas in m². No translation needed for numbers.)*\n\n**Handwritten Annotations on the Plan (Right Side, Vertical):**\n| Original (Romanian) | English Translation |\n|---------------------|---------------------|\n| La Chișinău        | In Chișinău        |\n| Pantelimon Țurcanu | Pantelimon Țurcanu (likely owner's name) |\n| 500                | 500 (likely area in m² or reference number) |\n| anexat             | annexed/attached   |\n| conform planului de situație | according to the site plan |\n| nr. 86- del. -ap.  | No. 86 - plot - app. (abbrev. for \"delegat\" [delegated] or \"aprobat\" [approved]; cadastral reference) |\n\n---\n\n### **Lower Section (Measurements/References Below Plan)**\n| Original (Romanian) | English Translation |\n|---------------------|---------------------|\n| 2                  | 2 (scale or reference) |\n| 3                  | 3                   |\n| 4                  | 4                   |\n| 5                  | 5                   |\n\n---\n\n### **Footer/Stamps/Signatures (Bottom)**\n| Original (Romanian) | English Translation |\n|---------------------|---------------------|\n| Original           | Original            |\n| [Blue Stamp: Official Seal of Agenția de Cadastru] | [Official Seal] |\n| EXTRAS DIN         | EXTRACT FROM        |\n| [Arhiva or similar faded text] | [Archive]           |\n| B 08-23            | File/Ref. 08-23     |\n| Iov                | Iov (likely signatory/initials) |\n| [Red Stamp]        | [Official Stamp]    |\n| Ț 08 23            | Ref. 08-23 (date or file code, e.g., August 2023) |\n\n---\n\n### **Overall Document Context**\n- **Type**: Cadastral plan extract (plan cadastral) for land parcels, possibly for ownership transfer, subdivision, or registration under owner **Pantelimon Țurcanu**.\n- **Key Reference**: Parcel/plan No. 86, with annex/site plan, total area ~500 m².\n- **Issuance**: Chișinău branch, dated/filed around August 2023 (based on \"08-23\"), signed \"Iov\".\n- **Purpose**: Official record for real estate publicity/registration in Moldova.\n\nIf you provide a higher-resolution image or more context, I can refine the transcription (some handwriting is faint). This is based on standard Moldovan cadastral formats."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -532,7 +554,9 @@
        "value": "I",
        "explanation": "### Original Romanian Transcription\n*(Transcribed as accurately as possible from the handwritten and printed text on the cadastral plan document. The document is an official extract from the Moldovan Cadastre Agency, showing a plot plan with areas in m², ownership details, and stamps. Layout preserved where possible.)*\n\n```\nAGENȚIA DE CADASTRU, GEODEZIE ȘI CARTOGRAFIE A REPUBLICII MOLDOVA\nFILIALA TERITORIALĂ CHIȘINĂU\n\n[Plan schematic with numbered plots and areas in m², e.g.:\n- Top-left plot: 240\n- Adjacent: 24, 20, etc.\n- Central areas: 24, 20; 250?; 24, 20\n- Labels like \"Condominium\" or boundaries]\n\nLa Chișinău\n\nPana Ramona\nCantemir str. 50\ndin of. supr. et.\nconstr. în sup. de 50 m²\nnr. 2 - duș - ap.\n\nnr. 2 - duș - ap.\n\n[Official stamp]\n\nExtras\nB 08 23 Iul\n\n[Signature: Fr. Țarcu?]\nFranc\n\n[Bottom stamps and seals: Original cadastral seal, file no. B 08-23, date July?]\n```\n\n**Notes on transcription:**\n- Handwriting is cursive and partially faded; \"Pana Ramona\" likely \"Pană Ramona\" (possessive or name variant).\n- \"din of. supr. et.\" = abbreviated \"din oficiul superior etaj\" (from the superior office/floor).\n- \"constr. în sup. de 50 m²\" = construction on a surface of 50 m².\n- \"nr. 2 - duș - ap.\" = no. 2 - shower - water (utilities).\n- Plot areas are in square meters (m²), e.g., 240 m², 24 m², 20 m².\n- Date appears as \"08 23 Iul\" (August 23? or file B-08-23, July; \"Iul\" = Iulie = July).\n- Bottom: \"Extras din\" (likely \"Extras din planul cadastral\" – Extract from the cadastral plan).\n\n### English Translation\n*(Literal and contextual translation, maintaining document structure. This is an official **Cadastral Plan Extract** for a property on Cantemir Street, Chișinău, owned by Ramona Pană, including a 50 m² building with shower and water utilities on plot no. 2.)*\n\n```\nAGENCY OF CADASTRAL REGISTRATION, GEODESY AND CARTOGRAPHY OF THE REPUBLIC OF MOLDOVA\nCHIȘINĂU TERRITORIAL BRANCH\n\n[Plan schematic with numbered plots and areas in m², e.g.:\n- Top-left plot: 240\n- Adjacent: 24, 20, etc.\n- Central areas: 24, 20; 250?; 24, 20\n- Labels like \"Condominium\" or boundaries]\n\nIn Chișinău\n\nPană Ramona\nCantemir St. 50\nfrom the upper floor office\nconstruction on a surface of 50 m²\nno. 2 - shower - water\n\nno. 2 - shower - water\n\n[Official stamp]\n\nExtract\nB 08 23 Jul\n\n[Signature: Fr. Țarcu?]\nFranc\n\n[Bottom stamps and seals: Original cadastral seal, file no. B 08-23, date July?]\n```\n\n**Translation Notes:**\n- This is a formal **extract from the cadastral register/plan** (\"Extras din registrul cadastral\" or similar, implied by context and stamps).\n- Property: Apartment/building (50 m²) on the upper floor at Strada Cantemir 50, Chișinău, owned by Ramona Pană.\n- Utilities: Unit no. 2 with shower (\"duș\") and water (\"ap[ă]\").\n- Issued by the Chișinău branch of the Moldovan Cadastre Agency, dated around July/August 2023 (file B 08-23).\n- The plan shows adjacent land parcels with their sizes, likely for boundary reference in a condominium or subdivided area."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -543,12 +567,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:20:11-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -560,7 +579,9 @@
        "value": "C",
        "explanation": "Sure, here is the translation of the provided text from the image, maintaining both the original Romanian and the English translation:\n\n---\n\n**Romanian:**\n\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\nConform Deciziei nr.100\ndin 04.06.1988 pan. este\npermis construirea\nbalconului.\nÎn realitate este\nconstruită anexa cu:\n- 22.66 - suprafață - 6.5 mp\n- 12.86 - terasă - 13.6 mp\n- 22.66 - subsol - 15.1 mp\n\nPlanul constructiei pe\nNumărul de înregistrare: 854 97\n\nSuprafață:\n- curte: casă individuală\nPo. 854 97\n10.06.2004\n\n---\n\n**English:**\n\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\nAccording to Decision No. 100\ndated 04.06.1988, the\nconstruction of\nthe balcony is permitted.\nIn reality, an annex was built with:\n- 22.66 - area - 6.5 sq.m\n- 12.86 - terrace - 13.6 sq.m\n- 22.66 - basement - 15.1 sq.m\n\nConstruction plan for\nRegistration Number: 854 97\n\nArea:\n- yard: individual house\nNo. 854 97\n10.06.2004\n\n---"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -572,7 +593,9 @@
        "value": "I",
        "explanation": "The document appears to be a cadastral and construction permit plan issued by the \"Agenția de Stat pentru Relații Funciare și Cadastru a Republicii Moldova\" (State Agency for Land Relations and Cadastre of the Republic of Moldova), specifically from the \"Oficiul Cadastral Teritorial Chișinău\" (Territorial Cadastral Office Chișinău).\n\nHere is the detailed translation of the visible text:\n\n---\n\n**Original (Romanian):**\n\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\nConform Deciziei nr.100\ndin 04.06.1988 pan. este\npermis construirea:\nbalconului.\nÎn realitate este\nconstruită anexa cu:\n- 22.66 mp. suprafață\n- 13.6 m. lățime\n- 22.66 mp. subsol\n- 15.1 mp.\n\nÎntreprinderea sau Structura:\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n\nPlanul construcției pe:\nNumărul de înregistrare: __\n\nSuprafața:\n- Parter: carosabil, locativ\nPo. 854 97\n10.06.2004\n\n---\n\n**Translation (English):**\n\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\nAccording to Decision No. 100\nfrom 06.04.1988, it is\npermitted to construct:\na balcony.\nIn reality, an annex was built with:\n- 22.66 sq.m. surface area\n- 13.6 m. width\n- 22.66 sq.m. basement\n- 15.1 sq.m.\n\nEnterprise or Structure:\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\nConstruction plan for:\nRegistration Number: __\n\nSurface Area:\n- Ground floor: driveway, living space\nPo. 854 97\n06.10.2004\n\n---"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -584,7 +607,9 @@
        "value": "C",
        "explanation": "The document appears to be a cadastral and construction permit plan from the \"Agenția de Stat pentru Relații Funciare și Cadastru a Republicii Moldova\" (State Agency for Land Relations and Cadastre of the Republic of Moldova), specifically from the \"Oficiul Cadastral Teritorial Chișinău\" (Territorial Cadastral Office Chișinău).\n\n### Original Text:\n\n**Top Section:**\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\n**Plan Details:**\n- Suprafață (Surface): Various areas noted in square meters.\n- Text near the stamp:\n  \"Conform Deciziei nr.100 din 04.06.1988 prin care este permis construirea balcoanelor.\n  În realitate este construită anexa cu:\n  - 22.66 mp suprafață - 6.5 mp\n  - 13.6 mp terasănd - 13.6 mp\n  - 22.66 - subsol - 15.1 mp\"\n\n**Bottom Stamp:**\nÎntreprinderea de Stat\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\nPlanul construcției pe\nNumărul de înregistrare: 857\nSuprafața: Carosabil | Locuință\nPo: 857 9.7\n10.06.2004\nSemnătura și ștampila (Signature and stamp)\n\n### English Translation:\n\n**Top Section:**\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\n**Plan Details:**\n- Area (Surface): Various areas noted in square meters.\n- Text near the stamp:\n  \"According to Decision No. 100 dated 04.06.1988, the construction of balconies is permitted.\n  In reality, an annex was built with:\n  - 22.66 sq.m. surface area - 6.5 sq.m.\n  - 13.6 sq.m. terrace - 13.6 sq.m.\n  - 22.66 - basement - 15.1 sq.m.\"\n\n**Bottom Stamp:**\nState Enterprise\nTERRITORIAL CADASTRAL AUTHORITY CHIȘINĂU\nConstruction Plan for\nRegistration Number: 857\nSurface: Carriageway | Residence\nNo: 857 9.7\n10.06.2004\nSignature and stamp"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -596,7 +621,9 @@
        "value": "I",
        "explanation": "The document appears to be a cadastral and construction permit plan issued by the \"Agenția de Stat pentru Relații Funciare și Cadastru a Republicii Moldova\" (State Agency for Land Relations and Cadastre of the Republic of Moldova), specifically from the \"Oficiul Cadastral Teritorial Chișinău\" (Territorial Cadastral Office Chișinău).\n\nHere is the detailed translation:\n\n---\n\n**Original Text:**\n\nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA\nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU\n\nConform Deciziei nr.100\ndin 04.06.1988 pan. este\npermis construirea:\nbalconului.\nÎn realitate este\nconstruită anexa cu:\n- 22.66 mp suprafață\n- 13.6 m.p. terasănd\n- 22.66 mp subsol\n- 15.1 mp total\n\nPlanul constructiei pe\n\nÎntreprinderea sau Structura:\nORGANUL CADASTRAL TERITORIAL CHIȘINĂU\n\nNumărul de înregistrare: 857\nSuprafața: carosabil / locativ\nPo: 9.7\n\nData: 10.06.2004\nSemnătura și ștampila\n\n---\n\n**Translation in English:**\n\nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\nAccording to Decision No. 100\ndated 04.06.1988, it is\npermitted to construct:\na balcony.\nIn reality, an annex was built with:\n- 22.66 sq.m. surface area\n- 13.6 m. terrace\n- 22.66 sq.m. basement\n- 15.1 sq.m. total\n\nConstruction Plan for\n\nEnterprise or Structure:\nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU\n\nRegistration Number: 857\nSurface Area: carriageway / residential\nPo: 9.7\n\nDate: 10.06.2004\nSignature and stamp"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -607,12 +634,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:10:38-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -624,7 +646,9 @@
        "value": "C",
        "explanation": "\n\n**Original (Romanian):**  \nAGENȚIA DE STAT RELAȚII FUNCiare ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU  \n\nConform Deciziei nr.100 din 01.06.1989 an este permis construcție balconului.  \nÎn realitate este construită fereastră nr.2:  \n(nr.26c - sufragerie - 6.5 m.p;  \nnr.86b - terasă - 13.6 m.p;  \nnr.26c - subsol - 15.1 m.p.)  \n\n\n**English Translation:**  \nState Agency for Land Relations and Cadastre of the Republic of Moldova  \nChișinău Territorial Cadastral Office  \n\nAccording to Decision No. 100 of 01.06.1989, the construction of the balcony is permitted. In reality, window no. 2 has been built:  \n(no. 26c - living room - 6.5 sq.m;  \nno. 86b - terrace - 13.6 sq.m;  \nno. 26c - basement - 15.1 sq.m.)"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -636,7 +660,9 @@
        "value": "I",
        "explanation": "### Original (Romanian)  \nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIŞINĂU  \n\nConform Deciziei nr.100 din 01.06.1989 se permite construcția balconului.  \nÎn realitate este construită fereastra nr.2:  \n(nr.26 - sufragerie - 6.5 m.p  \nnr.26 - terasă - 13.6 m.p  \nnr.26 - subsol - 15.1 m.p)  \n\nORGANUL CADASTRAL TERITORIAL CHIŞINĂU  \nPlanul construcției pe  \nNumărul de inventariere  \nSectorul cartierul lotul  \nBo 854 97  \n10 06 2004  \nAgache  \n\n\n### Translation (English)  \nSTATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU  \n\nAccording to Decision No. 100 of 01.06.1989, the construction of the balcony is permitted.  \nIn reality, window No. 2 was built:  \n(No. 26 - living room - 6.5 sq.m  \nNo. 26 - terrace - 13.6 sq.m  \nNo. 26 - basement - 15.1 sq.m)  \n\nTERRITORIAL CADASTRAL ORGAN CHIȘINĂU  \nThe construction plan for  \nInventory number  \nSector neighborhood plot  \nBo 854 97  \n10 06 2004  \nAgache"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -648,7 +674,9 @@
        "value": "C",
        "explanation": "### Original (Romanian):  \n**AGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA**  \n**OFICIUL CADASTRAL TERITORIAL CHIȘINĂU**  \n\n*Conform Deciziei nr. 100 din 01.06.1989, se este permis constructiv balconului. În realitate este construită fereastra nr. 2. (nr. 26c - suprafață - 6,5 m.p; nr. 26b - terasă - 13,6 m.p; nr. 26a - subsol - 15,1 m.p)*  \n\n**ORGANUL CADASTRAL TERITORIAL CHIȘINĂU**  \n\n\n### English Translation:  \n**STATE AGENCY FOR LAND RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA**  \n**TERRITORIAL CADASTRAL OFFICE CHIȘINĂU**  \n\n*According to Decision No. 100 of 01.06.1989, a construction permit for the balcony was granted. In reality, window No. 2 was built. (No. 26c - area - 6.5 sq.m; No. 26b - terrace - 13.6 sq.m; No. 26a - basement - 15.1 sq.m)*  \n\n**TERRITORIAL CADASTRAL AUTHORITY CHIȘINĂU**"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -660,7 +688,9 @@
        "value": "I",
        "explanation": "### Original Romanian (Header):  \n**AGENȚIA DE STAT RELAȚII FUNCiare ȘI CADASTRU A REPUBLICII MOLDOVA**  \n**OFICIUL CADASTRAL TERITORIAL CHIȘINĂU**  \n\n### English Translation (Header):  \n**State Agency for Property Relations and Cadastre of the Republic of Moldova**  \n**Territorial Cadastral Office of Chișinău**  \n\n\n---  \n\n\n### Original Romanian (Handwritten Notes):  \n*Conform Deciziei nr.100 din 01.06.1989, este permis construcție balconului.  \nÎn realitate este construită fereastra nr.2.  \n(22.6 m² - suprafață - 6.5 m.p nr.26 - terasă - 13.6 m.p nr.26 - subsol - 15.1 m.p.)  \nPentru Primarie*  \n\n### English Translation (Handwritten Notes):  \n*According to Decision No. 100 of 01.06.1989, the construction of the balcony is permitted.  \nIn reality, window No. 2 was built.  \n(22.6 m² - area - 6.5 sq.m. No. 26 - terrace - 13.6 sq.m. No. 26 - basement - 15.1 sq.m.)  \nFor the Town Hall*  \n\n\n---  \n\n\n### Original Romanian (Form Sections):  \n*Intreprinderea de Stat  \nORGANUL CADASTRAL TERITORIAL CHIȘINĂU  \nPlanul construcției pe  \nNumărul de inventariere  \nSectorul cartierul lotul  \nLocul  \nControlat*  \n\n### English Translation (Form Sections):  \n*The State Enterprise  \nTERRITORIAL CADASTRAL OFFICE CHIȘINĂU  \nConstruction plan for  \nInventory number  \nSector, neighborhood, lot  \nLocation  \nChecked*"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -671,12 +701,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-12-02T11:06:26-06:00",
-   "metrics": {
-    "includes": {
-     "accuracy": 0.5,
-     "stderr": 0.28867513459481287
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-1",
@@ -688,7 +713,9 @@
        "value": "I",
        "explanation": "### Original Romanian  \nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU  \n\n[Plan labels]  \nSuprafața  \nVerandă  \nLocație  \nBucătărie  \nPentru Primarie  \n\n[Handwritten note]  \nConform Deciziei nr 100 din 01.06.1989 a fost permis construcția balconului lui. În realitate este construită în 2000 nr 226 - suprafața - 6.5 m² nr 28 - verandă - 13.6 m² nr 38 - bucatărie - 15.1 m²  \n\n[Bottom fields]  \nIntreprinderea de Stat ORGANUL CADASTRAL TERITORIAL CHISINĂU  \nPlanul construcției pe  \nNumărul de inventarier  \nSectorul cartierul lotul  \nB0 854 97  \n10 06 2004  \nAgachi  \n\n\n### English Translation  \nState Agency for Functional Relations and Cadastre of the Republic of Moldova  \nTerritorial Cadastre Office Chisinau  \n\n[Plan labels]  \nSurface  \nVeranda  \nRoom  \nKitchen  \nFor the Mayor  \n\n[Handwritten note]  \nAccording to Decision No. 100 dated June 1, 1989, the construction of the balcony was permitted. In reality, it was built in 2000: No. 226 - surface - 6.5 m², No. 28 - veranda - 13.6 m², No. 38 - kitchen - 15.1 m²  \n\n[Bottom fields]  \nState Enterprise TERRITORIAL CADASTRAL OFFICE CHISINAU  \nConstruction Plan for  \nInventory Number  \nSector District Lot  \nB0 854 97  \n10 06 2004  \nAgachi"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-2",
@@ -700,7 +727,9 @@
        "value": "I",
        "explanation": "**Original Language (Romanian):**  \nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU  \n\nConform Deciziei nr 100  \ndin 01.06.1989, este permis construirea  \nbalconului lui.  \nIn realitate este construită la:  \n(226° supraferie - 6.5m.²  \n826° terasă - 13.6m.²  \n828° - pereții - 15.1m.²)  \n\nBucatarie  \nSefagerei  \nVestibul  \nLocative  \nLocative  \nLocative  \n\nNumărul de inventarier  \nSetorul cartierul lotul  \nPo 854 97  \n10 06 2001  \nSignat  \nAgachi  \n\n**English Translation:**  \nSTATE AGENCY FOR FUNCTIONAL RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nTERRITORIAL CADASTRAL OFFICE OF CHIȘINĂU  \n\nAccording to Decision no. 100  \ndated 01.06.1989, it is permitted to build  \nthe balcony.  \nIn reality, it is built as follows:  \n(226° upper floor - 6.5m²  \n826° terrace - 13.6m²  \n828° - walls - 15.1m²)  \n\nKitchen  \nChief's Office  \nFoyer  \nLiving Room  \nLiving Room  \nLiving Room  \n\nInventory Number  \nSector, neighborhood, lot  \nPO 854 97  \n10 06 2001  \nSigned  \nAgachi  \n\n---  \n*Note: \"Sefagerei\" is interpreted as \"Chief's Office\" based on contextual clues (likely a typo or variant spelling of \"Șefărie,\" meaning \"chief’s office\" in Romanian). Measurements like \"226°,\" \"826°,\" and \"828°\" appear to reference specific sections or zones within the property, while \"PO 854 97\" and \"10 06 2001\" denote inventory codes and dates.*"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-3",
@@ -712,7 +741,9 @@
        "value": "C",
        "explanation": "**Original Romanian Text:**  \nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU  \n\nPentru Primarie  \n\nConform Deciziei nr.100 din 01.06.1989 a fost permis construcția balconului lui.  \nÎn realitate este construită așa: (226° supragerie - 6.5m.2 nr 86° terasă - 13.6m.2 nr 226° - subsol - 15.1m.2)  \n\nIntreprinderea  \nORGANUL CADASTRAL TERITORIAL CHISINĂU  \nPlanul constructie pe  \nNumarul de inventariere  \nSectorul cartierul lotul  \nB0 854 97  \n10 06 2004  \n\n**English Translation:**  \nSTATE AGENCY FOR FUNCTIONAL RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nTERRITORIAL CADASTRAL OFFICE CHISINĂU  \n\nFor Municipality  \n\nAccording to Decision No. 100 of June 1, 1989, the construction of his balcony was permitted.  \nIn reality, it is built as follows: (226° upper floor - 6.5m², nr 86° terrace - 13.6m², nr 226° - basement - 15.1m²)  \n\nEnterprise  \nTERRITORIAL CADASTRAL OFFICE CHISINĂU  \nConstruction plan for  \nInventory number  \nDistrict, neighborhood, plot  \nB0 854 97  \n10 06 2004  \n\n---  \n*Note: \"m.2\" in Romanian denotes \"square meters\" (m²). Terms like \"supragerie\" (upper floor), \"terasă\" (terrace), and \"subsol\" (basement) are translated as standard architectural terms. \"nr\" = \"number,\" and \"°\" denotes degrees (e.g., orientation angle).*"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-4",
@@ -724,7 +755,9 @@
        "value": "C",
        "explanation": "**Original Romanian Text:**  \nAGENȚIA DE STAT RELAȚII FUNCIARE ȘI CADASTRU A REPUBLICII MOLDOVA  \nOFICIUL CADASTRAL TERITORIAL CHIȘINĂU  \n\nConform Deciziei nr 100 din 01.06.1989, este permis construirea balconului lui.  \nÎn realitate este construită fațada a 3:  \n(226° - suprafața - 6,5m. 0  \nnr 86 - veranda - 13,6m. 0  \nnr 260 - subsol - 15,1m. 0  \n\nPentru Primărie  \n\nInterprețarea cu stat  \nORGANUL CADASTRAL TERITORIAL CHIȘINĂU  \nPlanul construcției pe  \nNumărul de inventarierie  \nSectorul cartierul lotul  \nData  \n654 97  \n10 06 2009  \nȘtia gravura  \n\nRoom labels (handwritten on the plan):  \n- Sufagerie  \n- Veranda  \n- Locative  \n- Bucatarie  \n\n---\n\n**English Translation:**  \nSTATE AGENCY FOR WORK RELATIONS AND CADASTRE OF THE REPUBLIC OF MOLDOVA  \nTERRITORIAL CADASTRAL OFFICE CHISINAU  \n\nAccording to Decision No. 100 dated June 1, 1989, the construction of his balcony is permitted.  \nIn reality, the following are built:  \n(226° - surface - 6.5m. 0  \nNumber 86 - veranda - 13.6m. 0  \nNumber 260 - basement - 15.1m. 0  \n\nFor the Municipality  \n\nState Interpretation  \nTERRITORIAL CADASTRAL OFFICE CHISINAU  \nConstruction plan on  \nInventory number  \nSector, district, lot  \nDate  \n654 97  \nOctober 6, 2009  \nEngraver's signature  \n\nRoom labels (handwritten on the plan):  \n- Kitchen (Sufagerie)  \n- Veranda  \n- Living quarters (Locative)  \n- Kitchen (Bucatarie)  \n\n---  \n*Note:*  \n- \"Relații funciare\" is translated as \"Work Relations\" (referring to administrative/employment relationships in Romanian cadastre context).  \n- \"Sufagerie\" and \"Bucatarie\" are both colloquial terms for \"kitchen\" (with \"Sufagerie\" possibly denoting a traditional/functional kitchen).  \n- \"Știa gravura\" is interpreted as \"Engraver's signature\" (a common phrase for document authentication in official records).  \n- Date format \"10 06 2009\" corresponds to October 6, 2009 (common in Romanian bureaucratic notation)."
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   }

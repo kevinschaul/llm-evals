@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-07-06T21:51:40+00:00",
+ "generated": "2026-07-07T20:22:03+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -21,11 +21,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.497095+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.5
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-jpg",
@@ -37,7 +33,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -49,7 +47,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -60,11 +60,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.505528+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 1.0
-    }
-   },
+   "pass_rate": 1.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -76,7 +72,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -88,7 +86,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -99,11 +99,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.508219+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -115,7 +111,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -126,11 +124,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.510570+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 1.0
-    }
-   },
+   "pass_rate": 1.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -142,7 +136,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -154,7 +150,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -165,11 +163,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.513442+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -181,7 +175,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -193,7 +189,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -204,14 +202,16 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-22T16:24:30-05:00",
-   "metrics": {},
+   "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
      "duration_ms": 873.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -222,11 +222,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.516610+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.5
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-jpg",
@@ -238,7 +234,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -250,7 +248,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -261,11 +261,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.519107+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -277,7 +273,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -289,7 +287,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -300,11 +300,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.521609+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 1.0
-    }
-   },
+   "pass_rate": 1.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -316,7 +312,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -328,7 +326,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -339,11 +339,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.524259+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.5
-    }
-   },
+   "pass_rate": 0.5,
    "samples": [
     {
      "id": "test-jpg",
@@ -355,7 +351,9 @@
        "value": 1.0,
        "explanation": "Matched 15 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -367,7 +365,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -378,11 +378,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.533591+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -394,7 +390,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -406,7 +404,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -417,11 +417,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.536184+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -433,7 +429,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -445,7 +443,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -456,11 +456,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.527027+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -472,7 +468,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -484,7 +482,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -495,11 +495,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.529418+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -511,7 +507,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -522,21 +520,25 @@
    "solver": "",
    "openrouter_provider": "moonshotai",
    "timestamp": "2025-11-10T16:33:29-06:00",
-   "metrics": {},
+   "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
      "duration_ms": 631.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
      "output": "",
      "passed": null,
      "duration_ms": 2439.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -547,11 +549,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.538559+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -563,7 +561,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -575,7 +575,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -586,11 +588,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.541421+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -602,7 +600,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -614,7 +614,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -625,11 +627,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.544064+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -641,7 +639,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
@@ -653,7 +653,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -664,11 +666,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T15:47:39.531348+00:00",
-   "metrics": {
-    "fema_extraction": {
-     "accuracy": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -680,7 +678,9 @@
        "value": 0.0,
        "explanation": "Matched 0 of 15 incidents"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -691,14 +691,16 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T13:37:22-05:00",
-   "metrics": {},
+   "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
      "duration_ms": 848.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -709,14 +711,16 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-15T13:38:29-05:00",
-   "metrics": {},
+   "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
      "duration_ms": 350.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -727,11 +731,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-22T16:33:55-05:00",
-   "metrics": {
-    "json_equal": {
-     "mean": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -743,14 +743,18 @@
        "value": 0.0,
        "explanation": "JSON match: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
      "output": "",
      "passed": null,
      "duration_ms": 2144.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },
@@ -761,11 +765,7 @@
    "solver": "",
    "openrouter_provider": "",
    "timestamp": "2025-10-22T16:34:59-05:00",
-   "metrics": {
-    "json_equal": {
-     "mean": 0.0
-    }
-   },
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
@@ -777,14 +777,18 @@
        "value": 0.0,
        "explanation": "JSON match: False"
       }
-     }
+     },
+     "diff": null,
+     "checks": []
     },
     {
      "id": "test-pdf",
      "output": "",
      "passed": null,
      "duration_ms": 4309.0,
-     "scores": {}
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   }

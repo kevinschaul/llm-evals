@@ -51,7 +51,11 @@ def check_output() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
         actual = _rows((state.store.get("captured_files") or {}).get(OUTPUT))
         if actual == expected:
-            return Score(value=1.0, explanation="✓ CSV matches expected")
+            return Score(
+                value=1.0,
+                explanation="✓ CSV matches expected",
+                metadata={"checks": {"CSV matches expected": True}},
+            )
 
         lines = [
             "✗ CSV does not match expected",
@@ -65,7 +69,11 @@ def check_output() -> Scorer:
             if len(lines) >= 8:
                 lines.append("  ...")
                 break
-        return Score(value=0.0, explanation="\n".join(lines))
+        return Score(
+            value=0.0,
+            explanation="\n".join(lines),
+            metadata={"checks": {"CSV matches expected": False}},
+        )
 
     return score
 

@@ -16,29 +16,43 @@ model, and writes results/results.json with this shape:
     "solver": "",
     "openrouter_provider": "",
     "timestamp": "...",
-    "metrics": {"includes": {"accuracy": 0.9}},
+    "pass_rate": 0.9,
     "samples": [{
       "id": "test-1",
       "output": "...",
       "passed": true,
       "duration_ms": 1234.0,
-      "scores": {"includes": {"value": "C", "explanation": null}}
+      "scores": {"includes": {"value": "C", "explanation": null}},
+      "diff": null,
+      "checks": [{"name": "has_py_file", "passed": true}]
     }]
   }]
 }
 
 Tests (input/expected) are stored once and referenced by sample id, so large
-inputs aren't duplicated across model runs. Aggregates are computed by the
-frontend from samples.
+inputs aren't duplicated across model runs.
+
+The frontend treats this file as ready to display: pass_rate is the single
+authoritative rate for a run (computed here, from the primary scorer), the
+agentic git diff is the sample's "diff" field, and check results are
+structured — nothing downstream needs to know scorer naming conventions.
 """
 import argparse
 import json
+import re
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from inspect_ai.log import read_eval_log
+
+# The git_diff scorer marks "a diff was captured", not "the agent succeeded".
+# It is lifted out of scores into the sample's diff field and never counts
+# toward pass/fail.
+DIFF_SCORER = "git_diff"
+
+CHECK_LINE = re.compile(r"^\s*([✓✗])\s*(.*)$")
 
 
 def extract_openrouter_provider(log):
@@ -57,10 +71,17 @@ def extract_provider_id_from_log(log):
     return f"{leaf} ({sub})" if sub else leaf
 
 
-def read_latest_logs_per_model(log_files):
-    """Read all logs, keeping only the most recent per provider_id.
+def task_matches_eval(task_name: str, eval_name: str) -> bool:
+    """Inspect task names use underscores where eval dirs use hyphens."""
+    return task_name.replace("_", "-") == eval_name
 
-    Returns a list of EvalLog objects sorted by provider_id.
+
+def read_latest_logs_per_model(log_files, eval_name):
+    """Read all logs for eval_name, keeping only the most recent per provider_id.
+
+    Returns a list of EvalLog objects sorted by provider_id. Logs whose task
+    doesn't match eval_name are skipped — the filename glob is only a
+    prefilter, and one eval's name can be a substring of another's.
     """
     logs_by_provider = defaultdict(list)
 
@@ -69,6 +90,8 @@ def read_latest_logs_per_model(log_files):
             log = read_eval_log(str(log_file))
         except Exception as e:
             print(f"Warning: Could not read {log_file}: {e}")
+            continue
+        if not task_matches_eval(log.eval.task, eval_name):
             continue
         provider_id = extract_provider_id_from_log(log)
         logs_by_provider[provider_id].append((log.eval.created, log))
@@ -134,42 +157,93 @@ def json_safe(value) -> Any:
     return str(value)
 
 
-def derive_passed(scores) -> bool | None:
-    """Derive a pass/fail bool from a sample's scores, or None if unscored.
+def primary_scorer_name(log) -> str | None:
+    """The scorer whose results count: first non-diff scorer declared in the
+    run's results (deterministic, unlike sample dict order)."""
+    if log.results and log.results.scores:
+        for score_data in log.results.scores:
+            if score_data.name != DIFF_SCORER:
+                return score_data.name
+    return None
 
-    Uses the first non-git_diff score ("C" or 1.0 means pass), matching the
-    old CSV extraction behavior.
-    """
-    if not scores:
+
+def score_to_passed(value) -> bool | None:
+    """Map a score value to pass/fail ("C" or 1.0 passes)."""
+    if value is None:
         return None
-    primary = next(
-        (s for name, s in scores.items() if name != "git_diff"),
-        next(iter(scores.values())),
-    )
-    if primary.value is None:
-        return None
-    if isinstance(primary.value, str):
-        return primary.value == "C"
-    if isinstance(primary.value, (int, float)):
-        return primary.value == 1.0
+    if isinstance(value, str):
+        return value == "C"
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value == 1.0
     return False
 
 
-def extract_run_metrics(log) -> dict:
-    """Return {scorer_name: {metric_name: value}} from run-level results."""
-    metrics = {}
-    if log.results and log.results.scores:
+def derive_passed(scores, primary: str | None) -> bool | None:
+    """Derive pass/fail for a sample from its primary score, or None if
+    unscored. Falls back to the first non-diff score when the run-level
+    primary is missing from this sample."""
+    if not scores:
+        return None
+    score = scores.get(primary) if primary else None
+    if score is None:
+        score = next(
+            (s for name, s in scores.items() if name != DIFF_SCORER), None
+        )
+    if score is None:
+        return None
+    return score_to_passed(json_safe(score.value))
+
+
+def extract_checks(scores) -> list[dict]:
+    """Return structured [{name, passed}] check results for a sample.
+
+    Prefers Score.metadata["checks"] (scorers emit this going forward);
+    falls back to parsing ✓/✗ lines from explanations for older logs.
+    """
+    checks = []
+    for name, score in scores.items():
+        if name == DIFF_SCORER:
+            continue
+        meta = getattr(score, "metadata", None) or {}
+        if isinstance(meta.get("checks"), dict):
+            checks.extend(
+                {"name": k, "passed": bool(v)} for k, v in meta["checks"].items()
+            )
+            continue
+        for line in (score.explanation or "").split("\n"):
+            m = CHECK_LINE.match(line)
+            if m and m.group(2):
+                checks.append({"name": m.group(2), "passed": m.group(1) == "✓"})
+    return checks
+
+
+def compute_pass_rate(log, samples) -> float | None:
+    """The run's single authoritative rate.
+
+    Prefers the primary scorer's run-level accuracy/mean metric (handles
+    partial credit); falls back to the scored samples' pass ratio. None when
+    nothing comparable was scored (diff-only agentic runs).
+    """
+    primary = primary_scorer_name(log)
+    if primary and log.results and log.results.scores:
         for score_data in log.results.scores:
-            if score_data.metrics:
-                metrics[score_data.name] = {
-                    name: m.value for name, m in score_data.metrics.items()
-                }
-    return metrics
+            if score_data.name != primary or not score_data.metrics:
+                continue
+            for metric in ("accuracy", "mean"):
+                if metric in score_data.metrics:
+                    return score_data.metrics[metric].value
+
+    scored = [s for s in samples if s["passed"] is not None]
+    if not scored:
+        return None
+    return sum(1 for s in scored if s["passed"]) / len(scored)
 
 
-def generate_results_json(log_files, output_path):
+def generate_results_json(log_files, eval_name, output_path):
     """Build results.json from the most recent log per model."""
-    logs = read_latest_logs_per_model(log_files)
+    logs = read_latest_logs_per_model(log_files, eval_name)
 
     tests: dict[str, dict] = {}
     runs = []
@@ -180,6 +254,7 @@ def generate_results_json(log_files, output_path):
 
         provider_id = extract_provider_id_from_log(log)
         leaf = log.eval.model.split('/')[-1] if '/' in log.eval.model else log.eval.model
+        primary = primary_scorer_name(log)
 
         samples = []
         for sample in log.samples:
@@ -192,13 +267,17 @@ def generate_results_json(log_files, output_path):
                     "expected": normalize_text(sample.target),
                 }
 
-            scores = {}
-            if sample.scores:
-                for name, s in sample.scores.items():
-                    scores[name] = {
-                        "value": json_safe(s.value),
-                        "explanation": s.explanation or None,
-                    }
+            sample_scores = dict(sample.scores or {})
+            diff_score = sample_scores.pop(DIFF_SCORER, None)
+            diff = diff_score.explanation if diff_score else None
+
+            scores = {
+                name: {
+                    "value": json_safe(s.value),
+                    "explanation": s.explanation or None,
+                }
+                for name, s in sample_scores.items()
+            }
 
             duration_ms = None
             if getattr(sample, "total_time", None) is not None:
@@ -207,9 +286,11 @@ def generate_results_json(log_files, output_path):
             samples.append({
                 "id": test_id,
                 "output": extract_output(sample),
-                "passed": derive_passed(sample.scores),
+                "passed": derive_passed(sample_scores, primary),
                 "duration_ms": duration_ms,
                 "scores": scores,
+                "diff": diff or None,
+                "checks": extract_checks(sample_scores),
             })
 
         runs.append({
@@ -219,12 +300,12 @@ def generate_results_json(log_files, output_path):
             "solver": getattr(log.eval, "solver", None) or "",
             "openrouter_provider": extract_openrouter_provider(log),
             "timestamp": log.eval.created,
-            "metrics": extract_run_metrics(log),
+            "pass_rate": compute_pass_rate(log, samples),
             "samples": samples,
         })
 
     data = {
-        "eval": output_path.parent.parent.name,
+        "eval": eval_name,
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "tests": list(tests.values()),
         "runs": runs,
@@ -274,7 +355,7 @@ def main():
 
     print(f"🔄 Extracting results for {args.eval_name} ({len(log_files)} log files)")
 
-    generate_results_json(log_files, results_dir / "results.json")
+    generate_results_json(log_files, args.eval_name, results_dir / "results.json")
 
     # results.json replaces the old CSV outputs
     for stale in ("results.csv", "aggregate.csv"):
