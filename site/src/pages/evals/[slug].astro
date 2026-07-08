@@ -27,10 +27,10 @@ const githubUrl = `https://github.com/kevinschaul/llm-evals/tree/main/src/evals/
   <p class="eval-kicker">
     <a href={`${base}/`}>← All evals</a>
     {entry.data.archived && <span class="badge">archived</span>}
-    <a href={githubUrl} style="margin-left: auto">View on GitHub</a>
   </p>
   <h1>{entry.data.title}</h1>
   <Content />
+  <p><a href={githubUrl}>View on GitHub</a></p>
   {
     results ? (
       entry.data.type === "tests" ? (

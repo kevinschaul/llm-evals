@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import {
   formatDuration,
+  formatTokens,
   type CheckResult,
   type Run,
   type SampleResult,
@@ -15,49 +16,57 @@ interface AgenticRow {
   diff: string
   checks: CheckResult[]
   passed: number
+  files: number | null
 }
 
-function RunBlock({ row, defaultOpen }: { row: AgenticRow; defaultOpen: boolean }) {
+function RunRow({ row }: { row: AgenticRow }) {
   // Render the (potentially huge) diff only once expanded
-  const [open, setOpen] = useState(defaultOpen)
+  const [open, setOpen] = useState(false)
 
   return (
-    <details
-      className="test-block"
-      open={open}
-      onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}
-    >
-      <summary>
-        {row.checks.length > 0 && (
-          <span
-            className={`badge ${row.passed === row.checks.length ? "badge-pass" : "badge-fail"}`}
-          >
-            {row.passed}/{row.checks.length}
-          </span>
-        )}
-        <span className="test-block-input">
-          <strong>{row.run.provider_id}</strong> via{" "}
+    <>
+      <tr className="results-toggle-row" onClick={() => setOpen(!open)}>
+        <td className="cell-truncate">
+          <span className="row-caret">{open ? "▾" : "▸"}</span>
+          {row.run.provider_id}
+        </td>
+        <td className="cell-truncate">
           {row.run.solver || "unknown harness"}
-        </span>
-        <span className="test-block-meta">
-          {formatDuration(row.sample.duration_ms)}
-        </span>
-      </summary>
-      {open && (
-        <div className="test-block-body">
-          {row.checks.length > 0 && (
-            <ul className="checks-list">
-              {row.checks.map((check) => (
-                <li key={check.name}>
-                  {check.passed ? "✓" : "✗"} {check.name}
-                </li>
-              ))}
-            </ul>
+        </td>
+        <td className="num">
+          {row.checks.length > 0 ? (
+            <span
+              className={`badge ${row.passed === row.checks.length ? "badge-pass" : "badge-fail"}`}
+            >
+              {row.passed}/{row.checks.length}
+            </span>
+          ) : (
+            "–"
           )}
-          <DiffViewer diff={row.diff} />
-        </div>
+        </td>
+        <td className="num">{row.files ?? "–"}</td>
+        <td className="num">{formatTokens(row.sample.output_tokens)}</td>
+        <td className="num">{formatDuration(row.sample.duration_ms)}</td>
+      </tr>
+      {open && (
+        <tr className="results-detail-row">
+          <td colSpan={6}>
+            <div className="results-detail-body">
+              {row.checks.length > 0 && (
+                <ul className="checks-list">
+                  {row.checks.map((check) => (
+                    <li key={check.name}>
+                      {check.passed ? "✓" : "✗"} {check.name}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <DiffViewer diff={row.diff} />
+            </div>
+          </td>
+        </tr>
       )}
-    </details>
+    </>
   )
 }
 
@@ -76,6 +85,9 @@ export default function AgenticResults({ url }: { url: string }) {
           diff: sample.diff ?? "",
           checks: sample.checks,
           passed: sample.checks.filter((c) => c.passed).length,
+          files: sample.diff
+            ? (sample.diff.match(/^diff --git /gm) || []).length
+            : null,
         })
       }
     }
@@ -92,10 +104,30 @@ export default function AgenticResults({ url }: { url: string }) {
   if (!data) return <p>Loading results…</p>
 
   return (
-    <div className="test-blocks">
-      {rows.map((row, i) => (
-        <RunBlock key={row.key} row={row} defaultOpen={i === 0} />
-      ))}
-    </div>
+    <table className="leaderboard results-table">
+      <colgroup>
+        <col style={{ width: "32%" }} />
+        <col style={{ width: "18%" }} />
+        <col style={{ width: "12%" }} />
+        <col style={{ width: "12%" }} />
+        <col style={{ width: "12%" }} />
+        <col style={{ width: "14%" }} />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>Harness</th>
+          <th className="num">Checks</th>
+          <th className="num">Files</th>
+          <th className="num">Tokens</th>
+          <th className="num">Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <RunRow key={row.key} row={row} />
+        ))}
+      </tbody>
+    </table>
   )
 }

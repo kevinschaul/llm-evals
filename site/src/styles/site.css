@@ -79,11 +79,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
-  min-width: 9em;
 }
 
 .rate-bar-track {
-  flex: 1;
+  width: 6em;
+  flex: none;
   height: 0.6em;
   border-radius: 999px;
   background: var(--surface);
@@ -98,66 +98,40 @@
   opacity: 0.75;
 }
 
-/* Result blocks (tests, prompts, agentic runs) */
-.test-blocks {
-  margin: 1.5rem 0;
+/* Results tables (tests, freeform, agentic), rows expand to a detail panel */
+.results-table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 1rem 0;
 }
 
-.test-block {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin: 0.5rem 0;
-}
-
-.test-block > summary {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-  padding: 0.5em 0.9em;
-  cursor: pointer;
-  list-style: none;
-}
-
-.test-block > summary::-webkit-details-marker {
-  display: none;
-}
-
-/* The one clickable affordance: blocks carry a caret, tables never do */
-.test-block > summary::before {
-  content: "▸";
-  color: var(--muted);
-  flex: none;
-}
-
-.test-block[open] > summary::before {
-  content: "▾";
-}
-
-.test-block-meta {
-  flex: none;
-  color: var(--muted);
-  font-size: 0.9em;
-}
-
-.test-block > summary:hover {
-  background: var(--surface);
-}
-
-.test-block[open] > summary {
-  border-bottom: 1px solid var(--border);
-}
-
-.test-block-input {
-  flex: 1;
-  min-width: 0;
+.cell-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--text);
 }
 
-.test-block-body {
-  padding: 0.25em 0.9em 0.9em;
+.results-table tbody tr.results-toggle-row {
+  cursor: pointer;
+}
+
+.results-table tbody tr.results-toggle-row:hover {
+  background: var(--surface);
+}
+
+.row-caret {
+  display: inline-block;
+  width: 1em;
+  color: var(--muted);
+}
+
+.results-detail-row td {
+  padding: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.results-detail-body {
+  padding: 0.25em 0 1em;
 }
 
 .score-note {
@@ -258,15 +232,15 @@
 }
 
 .compare-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   margin: 1.5rem 0;
 }
 
 .compare-card {
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   font-size: 1em;
   line-height: 1.55;
@@ -278,6 +252,18 @@
   gap: 0.6em;
   padding: 0.5em 1em;
   background: var(--surface);
+  cursor: pointer;
+}
+
+.compare-card-head::-webkit-details-marker {
+  display: none;
+}
+
+.compare-card-head:hover {
+  background: var(--surface-hover);
+}
+
+.compare-card[open] > .compare-card-head {
   border-bottom: 1px solid var(--border);
 }
 
@@ -297,23 +283,6 @@
   word-break: break-word;
   max-height: 28em;
   overflow-y: auto;
-}
-
-.show-all-tests {
-  display: block;
-  width: 100%;
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  background: none;
-  color: var(--muted);
-  padding: 0.5em;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  font-size: 0.85em;
-}
-
-.show-all-tests:hover {
-  background: var(--surface);
 }
 
 .checks-list {

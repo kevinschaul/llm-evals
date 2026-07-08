@@ -1,75 +1,11 @@
 ---
-import { formatTokens, type EvalResults } from "../lib/types"
 import AgenticResults from "../islands/AgenticResults"
 
 interface Props {
-  results: EvalResults
   dataUrl: string
 }
 
-const { results, dataUrl } = Astro.props
-
-// One row per run; agentic evals run each task once per model+harness
-const rows = results.runs
-  .flatMap((run) =>
-    run.samples.map((sample) => ({
-      model: run.provider_id,
-      solver: run.solver,
-      passed: sample.checks.filter((c) => c.passed).length,
-      total: sample.checks.length,
-      files: sample.diff
-        ? (sample.diff.match(/^diff --git /gm) || []).length
-        : null,
-      tokens: sample.output_tokens,
-      duration: sample.duration_ms,
-    })),
-  )
-  .sort((a, b) => {
-    const ra = a.total ? a.passed / a.total : -1
-    const rb = b.total ? b.passed / b.total : -1
-    if (rb !== ra) return rb - ra
-    return (a.duration ?? Infinity) - (b.duration ?? Infinity)
-  })
+const { dataUrl } = Astro.props
 ---
 
-<table class="leaderboard">
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>Harness</th>
-      <th class="num">Checks</th>
-      <th class="num">Files changed</th>
-      <th class="num">Tokens</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-      rows.map((row) => (
-        <tr>
-          <td>{row.model}</td>
-          <td>{row.solver}</td>
-          <td class="num">
-            {row.total > 0 ? (
-              <span
-                class={`badge ${row.passed === row.total ? "badge-pass" : "badge-fail"}`}
-              >
-                {row.passed}/{row.total}
-              </span>
-            ) : (
-              "–"
-            )}
-          </td>
-          <td class="num">{row.files ?? "–"}</td>
-          <td class="num">{formatTokens(row.tokens)}</td>
-        </tr>
-      ))
-    }
-  </tbody>
-</table>
-
-<h2>Full results</h2>
-<p style="font-size: 0.85em; color: var(--muted)">
-  Open a run to read the diff it produced — the diff is the real result here;
-  automated checks only catch the basics.
-</p>
 <AgenticResults client:visible url={dataUrl} />
