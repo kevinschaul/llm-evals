@@ -1,5 +1,5 @@
 ---
-import { formatDuration, formatTokens, type EvalResults } from "../lib/types"
+import { formatTokens, type EvalResults } from "../lib/types"
 import AgenticResults from "../islands/AgenticResults"
 
 interface Props {
@@ -32,7 +32,6 @@ const rows = results.runs
   })
 ---
 
-<h2>Leaderboard</h2>
 <table class="leaderboard">
   <thead>
     <tr>
@@ -41,7 +40,6 @@ const rows = results.runs
       <th class="num">Checks</th>
       <th class="num">Files changed</th>
       <th class="num">Tokens</th>
-      <th class="num">Time</th>
     </tr>
   </thead>
   <tbody>
@@ -63,14 +61,13 @@ const rows = results.runs
           </td>
           <td class="num">{row.files ?? "–"}</td>
           <td class="num">{formatTokens(row.tokens)}</td>
-          <td class="num">{formatDuration(row.duration)}</td>
         </tr>
       ))
     }
   </tbody>
 </table>
 
-<h2>Runs</h2>
+<h2>Full results</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
   Open a run to read the diff it produced — the diff is the real result here;
   automated checks only catch the basics.

@@ -1,10 +1,5 @@
 ---
-import {
-  aggregateRun,
-  formatDuration,
-  formatTokens,
-  type EvalResults,
-} from "../lib/types"
+import { aggregateRun, formatTokens, type EvalResults } from "../lib/types"
 import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
@@ -20,34 +15,28 @@ const runs = [...results.runs].sort((a, b) =>
 )
 ---
 
-<h2>Models</h2>
 <table class="leaderboard">
   <thead>
     <tr>
       <th>Model</th>
       <th class="num">Prompts</th>
       <th class="num">Avg tokens</th>
-      <th class="num">Avg time</th>
     </tr>
   </thead>
   <tbody>
     {
-      runs.map((run) => {
-        const agg = aggregateRun(run)
-        return (
-          <tr>
-            <td>{run.provider_id}</td>
-            <td class="num">{run.samples.length}</td>
-            <td class="num">{formatTokens(agg.avgOutputTokens)}</td>
-            <td class="num">{formatDuration(agg.avgDurationMs)}</td>
-          </tr>
-        )
-      })
+      runs.map((run) => (
+        <tr>
+          <td>{run.provider_id}</td>
+          <td class="num">{run.samples.length}</td>
+          <td class="num">{formatTokens(aggregateRun(run).avgOutputTokens)}</td>
+        </tr>
+      ))
     }
   </tbody>
 </table>
 
-<h2>Outputs</h2>
+<h2>Full results</h2>
 <p style="font-size: 0.85em; color: var(--muted)">
   These outputs need human eyes — open a prompt to read them side by side.
 </p>

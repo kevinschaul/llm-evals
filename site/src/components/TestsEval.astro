@@ -1,7 +1,6 @@
 ---
 import {
   aggregateRun,
-  formatDuration,
   formatPercent,
   formatTokens,
   sortRunsByPassRate,
@@ -18,7 +17,6 @@ const { results, dataUrl } = Astro.props
 const runs = sortRunsByPassRate(results.runs)
 ---
 
-<h2>Leaderboard</h2>
 <table class="leaderboard">
   <thead>
     <tr>
@@ -26,7 +24,6 @@ const runs = sortRunsByPassRate(results.runs)
       <th>Pass rate</th>
       <th class="num">Tests</th>
       <th class="num">Avg tokens</th>
-      <th class="num">Avg time</th>
     </tr>
   </thead>
   <tbody>
@@ -49,7 +46,6 @@ const runs = sortRunsByPassRate(results.runs)
             </td>
             <td class="num">{agg.total}</td>
             <td class="num">{formatTokens(agg.avgOutputTokens)}</td>
-            <td class="num">{formatDuration(agg.avgDurationMs)}</td>
           </tr>
         )
       })
@@ -57,9 +53,5 @@ const runs = sortRunsByPassRate(results.runs)
   </tbody>
 </table>
 
-<h2>Results by test</h2>
-<p style="font-size: 0.85em; color: var(--muted)">
-  Hardest tests first, failures up top. Each dot is one model, in leaderboard
-  order.
-</p>
+<h2>Full results</h2>
 <ResultsByTest client:visible url={dataUrl} />

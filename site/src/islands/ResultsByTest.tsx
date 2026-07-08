@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import {
-  formatDuration,
+  formatTokens,
   sortRunsByPassRate,
   type Run,
   type SampleResult,
@@ -23,18 +23,10 @@ interface TestRow {
 function passBadge(sample: SampleResult) {
   if (sample.passed === null) return null
   return sample.passed ? (
-    <span className="badge badge-pass">pass</span>
+    <span className="badge badge-pass">Pass</span>
   ) : (
-    <span className="badge badge-fail">fail</span>
+    <span className="badge badge-fail">Fail</span>
   )
-}
-
-// Failures first — they're what you're here to read; passing outputs
-// mostly agree with each other
-function cardOrder(a: ModelResult, b: ModelResult): number {
-  const rank = (s: SampleResult) =>
-    s.passed === false ? 0 : s.passed === null ? 1 : 2
-  return rank(a.sample) - rank(b.sample)
 }
 
 function ModelCard({ run, sample }: ModelResult) {
@@ -46,7 +38,7 @@ function ModelCard({ run, sample }: ModelResult) {
       <div className="compare-card-head">
         <strong>{run.provider_id}</strong>
         {passBadge(sample)}
-        <span className="meta">{formatDuration(sample.duration_ms)}</span>
+        <span className="meta">{formatTokens(sample.output_tokens)}</span>
       </div>
       <div className="compare-card-body">
         {sample.output || <em>(no output)</em>}
@@ -92,29 +84,6 @@ function TestBlock({ row, defaultOpen }: { row: TestRow; defaultOpen: boolean })
             {passed}/{scored}
           </span>
         )}
-        {scored > 0 && (
-          <span className="dot-strip" aria-hidden="true">
-            {results.map(({ run, sample }) => (
-              <span
-                key={run.provider_id}
-                className={`dot ${
-                  sample.passed === true
-                    ? "pass"
-                    : sample.passed === false
-                      ? "fail"
-                      : "none"
-                }`}
-                title={`${run.provider_id}: ${
-                  sample.passed === null
-                    ? "unscored"
-                    : sample.passed
-                      ? "pass"
-                      : "fail"
-                }`}
-              />
-            ))}
-          </span>
-        )}
         <span className="test-block-input" title={test.input}>
           {test.input || test.id}
         </span>
@@ -132,7 +101,7 @@ function TestBlock({ row, defaultOpen }: { row: TestRow; defaultOpen: boolean })
             )}
           </div>
           <div className="compare-grid">
-            {[...results].sort(cardOrder).map((r) => (
+            {results.map((r) => (
               <ModelCard key={r.run.provider_id} {...r} />
             ))}
           </div>
@@ -148,10 +117,11 @@ export default function ResultsByTest({ url }: { url: string }) {
   const { data, error } = useResults(url)
   const [showAll, setShowAll] = useState(false)
 
+  // Tests stay in eval order; models within a test in leaderboard order
   const rows = useMemo(() => {
     if (!data) return []
     const runs = sortRunsByPassRate(data.runs)
-    const out: TestRow[] = data.tests.map((test) => {
+    return data.tests.map((test) => {
       const results: ModelResult[] = []
       for (const run of runs) {
         const sample = run.samples.find((s) => s.id === test.id)
@@ -165,19 +135,13 @@ export default function ResultsByTest({ url }: { url: string }) {
         passed: scoredResults.filter((r) => r.sample.passed).length,
       }
     })
-    // Hardest tests first; unscored (freeform) keep dataset order
-    return out.sort((a, b) => {
-      const ra = a.scored ? a.passed / a.scored : 2
-      const rb = b.scored ? b.passed / b.scored : 2
-      return ra - rb
-    })
   }, [data])
 
   if (error) return <p>Failed to load results: {error}</p>
   if (!data) return <p>Loading results…</p>
 
   // Small evals are meant to be read with your eyes — open everything.
-  // Larger ones start with just the hardest test open, longest ones
+  // Larger ones start with just the first test open, longest ones
   // truncated behind a show-all button.
   const visible = showAll ? rows : rows.slice(0, INITIAL_BLOCKS)
   return (
