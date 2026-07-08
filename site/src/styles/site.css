@@ -35,58 +35,23 @@
   border-color: transparent;
 }
 
-/* Eval cards (home page) */
-.eval-section-blurb {
-  color: var(--muted);
-  font-size: 0.9em;
-  margin-top: -0.5em;
-}
-
-.eval-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 0;
+/* Eval table (home page) */
+.eval-table {
   margin: 1.5rem 0;
-  list-style: none;
 }
 
-.eval-card {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
-  background: var(--surface);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.85em;
-  line-height: 1.5;
-}
-
-.eval-card h3 {
-  margin: 0;
-  font-size: 1.05em;
-}
-
-.eval-card h3 a {
-  text-decoration: none;
-}
-
-.eval-card h3 a:hover {
-  text-decoration: underline;
-}
-
-.eval-card-blurb {
-  color: var(--muted);
-  margin: 0;
-}
-
-.eval-card-meta {
+.eval-table-blurb {
   color: var(--muted);
   font-size: 0.85em;
-  margin: 0;
-  margin-top: auto;
-  padding-top: 0.35rem;
+}
+
+.archived-evals {
+  margin: 2rem 0;
+}
+
+.archived-evals > summary {
+  cursor: pointer;
+  color: var(--muted);
 }
 
 /* Leaderboard */

@@ -1,39 +1,21 @@
 ---
 import { getCollection } from "astro:content"
 import Layout from "../layouts/Layout.astro"
+import EvalTable from "../components/EvalTable.astro"
 import { loadResults } from "../lib/results"
-
-const base = import.meta.env.BASE_URL.replace(/\/$/, "")
-
-const sections = [
-  {
-    type: "tests",
-    title: "Test batteries",
-    blurb: "Batches of pass/fail assertions run against many models.",
-  },
-  {
-    type: "agentic",
-    title: "Agentic coding",
-    blurb:
-      "Coding agents turned loose on real tasks. The result is a diff you have to read.",
-  },
-  {
-    type: "freeform",
-    title: "Freeform",
-    blurb: "No single right answer — judge the outputs side by side.",
-  },
-] as const
 
 const entries = await getCollection("evals")
 
 function cardData(entry: (typeof entries)[number]) {
   const results = loadResults(entry.id)
-  const latest = results?.runs
-    .map((r) => r.timestamp)
-    .sort()
-    .at(-1)
+  const latest =
+    results?.runs
+      .map((r) => r.timestamp)
+      .sort()
+      .at(-1) ?? ""
   return {
     entry,
+    latest,
     models: results?.runs.length ?? 0,
     updated: latest
       ? new Date(latest).toLocaleDateString("en-US", {
@@ -45,11 +27,11 @@ function cardData(entry: (typeof entries)[number]) {
   }
 }
 
-const byType = (type: string) =>
-  entries
-    .filter((e) => e.data.type === type)
-    .sort((a, b) => Number(a.data.archived) - Number(b.data.archived))
-    .map(cardData)
+const cards = entries
+  .map(cardData)
+  .sort((a, b) => b.latest.localeCompare(a.latest))
+const active = cards.filter((c) => !c.entry.data.archived)
+const archived = cards.filter((c) => c.entry.data.archived)
 ---
 
 <Layout
@@ -84,33 +66,14 @@ const byType = (type: string) =>
     > · <a href="https://github.com/kevinschaul/llm-evals">View on GitHub</a>
   </p>
 
+  <EvalTable cards={active} />
+
   {
-    sections.map((section) => {
-      const cards = byType(section.type)
-      if (cards.length === 0) return null
-      return (
-        <>
-          <h2>{section.title}</h2>
-          <p class="eval-section-blurb">{section.blurb}</p>
-          <ul class="eval-cards">
-            {cards.map(({ entry, models, updated }) => (
-              <li class="eval-card">
-                <h3>
-                  <a href={`${base}/evals/${entry.id}/`}>{entry.data.title}</a>
-                  {entry.data.archived && <span class="badge"> archived</span>}
-                </h3>
-                {entry.data.blurb && (
-                  <p class="eval-card-blurb">{entry.data.blurb}</p>
-                )}
-                <p class="eval-card-meta">
-                  {models} model{models === 1 ? "" : "s"}
-                  {updated && ` · updated ${updated}`}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    })
+    archived.length > 0 && (
+      <details class="archived-evals">
+        <summary>Archived ({archived.length})</summary>
+        <EvalTable cards={archived} />
+      </details>
+    )
   }
 </Layout>

@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from "astro:content"
+
+interface Props {
+  cards: {
+    entry: CollectionEntry<"evals">
+    models: number
+    updated: string | null
+  }[]
+}
+
+const { cards } = Astro.props
+const base = import.meta.env.BASE_URL.replace(/\/$/, "")
+---
+
+<table class="leaderboard eval-table">
+  <thead>
+    <tr>
+      <th>Eval</th>
+      <th class="num">Models</th>
+      <th class="num">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      cards.map(({ entry, models, updated }) => (
+        <tr>
+          <td>
+            <a href={`${base}/evals/${entry.id}/`}>{entry.data.title}</a>
+            {entry.data.blurb && (
+              <div class="eval-table-blurb">{entry.data.blurb}</div>
+            )}
+          </td>
+          <td class="num">{models}</td>
+          <td class="num">{updated ?? "–"}</td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
