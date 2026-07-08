@@ -13,7 +13,7 @@ dependencies = [
     "inspect-swe>=0.2.20",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",

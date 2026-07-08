@@ -1085,7 +1085,7 @@ dependencies = [
     { name = "pytest" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "pre-commit" },
     { name = "pytest" },
@@ -1099,12 +1099,15 @@ requires-dist = [
     { name = "inspect-ai", specifier = ">=0.3.0" },
     { name = "inspect-swe", specifier = ">=0.2.20" },
     { name = "openai", specifier = ">=1.0.0" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.0.0" },
     { name = "pytest", specifier = ">=7.0.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.0.0" },
 ]
-provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pre-commit", specifier = ">=4.0.0" },
+    { name = "pytest", specifier = ">=7.0.0" },
+    { name = "pytest-cov", specifier = ">=4.0.0" },
+]
 
 [[package]]
 name = "markdown-it-py"
