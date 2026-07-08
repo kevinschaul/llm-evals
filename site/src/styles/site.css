@@ -59,6 +59,17 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Tables align flush with the prose column */
+.leaderboard th:first-child,
+.leaderboard td:first-child {
+  padding-left: 0;
+}
+
+.leaderboard th:last-child,
+.leaderboard td:last-child {
+  padding-right: 0;
+}
+
 .leaderboard td.num,
 .leaderboard th.num {
   text-align: right;
