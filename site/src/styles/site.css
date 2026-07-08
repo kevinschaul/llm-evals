@@ -35,6 +35,12 @@
   border-color: transparent;
 }
 
+/* No border trailing the last row of any table (recalculates live as
+   expandable rows change which row is actually last) */
+.t-main table tr:last-child td {
+  border-bottom: none;
+}
+
 /* Eval table (home page) */
 .eval-table {
   margin: 1.5rem 0;
@@ -105,6 +111,36 @@
   margin: 1rem 0;
 }
 
+.results-table td,
+.results-table th {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+
+/* Nested inside a detail row of another .results-table (already 0.85em) —
+   reset so font-size doesn't compound to ~0.72em. Needs to match the
+   theme's ".t-main table" specificity (type + class) to actually win. */
+table.results-table-nested {
+  font-size: 1em;
+}
+
+.results-subhead {
+  margin: 1em 0 0.4em;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+/* border-collapse: collapse (set globally on all tables) makes browsers
+   ignore padding on the <table> element itself, so the inset+border live
+   on a wrapping div instead. */
+.results-table-nested-wrap {
+  padding-left: 1em;
+  border-left: 2px solid var(--border);
+}
+
 .cell-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -125,7 +161,7 @@
   color: var(--muted);
 }
 
-.results-detail-row td {
+.results-detail-row > td {
   padding: 0;
   border-bottom: 1px solid var(--border);
 }
@@ -226,59 +262,13 @@
   font-style: italic;
 }
 
-/* Model output cards (inside test blocks) */
+/* Model output (inside a results-detail-row) */
 .compare-context {
   font-size: 1em;
 }
 
-.compare-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
-
-.compare-card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  font-size: 1em;
-  line-height: 1.55;
-}
-
-.compare-card-head {
-  display: flex;
-  align-items: center;
-  gap: 0.6em;
-  padding: 0.5em 1em;
-  background: var(--surface);
-  cursor: pointer;
-}
-
-.compare-card-head::-webkit-details-marker {
-  display: none;
-}
-
-.compare-card-head:hover {
-  background: var(--surface-hover);
-}
-
-.compare-card[open] > .compare-card-head {
-  border-bottom: 1px solid var(--border);
-}
-
-.compare-card-head strong {
-  font-weight: 600;
-}
-
-.compare-card-head .meta {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 0.85em;
-}
-
 .compare-card-body {
-  padding: 0.75em 1em;
+  padding: 0.75em 0;
   white-space: pre-wrap;
   word-break: break-word;
   max-height: 28em;

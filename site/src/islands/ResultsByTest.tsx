@@ -21,7 +21,7 @@ interface TestRow {
 }
 
 function passBadge(sample: SampleResult) {
-  if (sample.passed === null) return null
+  if (sample.passed === null) return "–"
   return sample.passed ? (
     <span className="badge badge-pass">Pass</span>
   ) : (
@@ -29,41 +29,54 @@ function passBadge(sample: SampleResult) {
   )
 }
 
-function ModelCard({ run, sample }: ModelResult) {
+function excerpt(text: string, len = 90) {
+  const trimmed = text.trim().replace(/\s+/g, " ")
+  return trimmed.length > len ? trimmed.slice(0, len) + "…" : trimmed
+}
+
+function ModelResultRow({ run, sample }: ModelResult) {
   // Render the (potentially long) output only once expanded
   const [open, setOpen] = useState(false)
   const notes = Object.entries(sample.scores).filter(
     ([, s]) => s.explanation,
   )
   return (
-    <details
-      className="compare-card"
-      open={open}
-      onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}
-    >
-      <summary className="compare-card-head">
-        <strong>{run.provider_id}</strong>
-        {passBadge(sample)}
-        <span className="meta">{formatTokens(sample.output_tokens)}</span>
-      </summary>
+    <>
+      <tr className="results-toggle-row" onClick={() => setOpen(!open)}>
+        <td className="cell-truncate">
+          <span className="row-caret">{open ? "▾" : "▸"}</span>
+          {run.provider_id}
+        </td>
+        <td className="cell-truncate">
+          {sample.output ? excerpt(sample.output) : <em>(no output)</em>}
+        </td>
+        <td className="num">{passBadge(sample)}</td>
+        <td className="num">{formatTokens(sample.output_tokens)}</td>
+      </tr>
       {open && (
-        <div className="compare-card-body">
-          {sample.output || <em>(no output)</em>}
-          {notes.length > 0 && (
-            <details className="score-note">
-              <summary>score detail</summary>
-              {notes.map(([name, s]) => (
-                <pre key={name}>
-                  {name}: {JSON.stringify(s.value)}
-                  {"\n"}
-                  {s.explanation}
-                </pre>
-              ))}
-            </details>
-          )}
-        </div>
+        <tr className="results-detail-row">
+          <td colSpan={4}>
+            <div className="results-detail-body">
+              <div className="compare-card-body">
+                {sample.output || <em>(no output)</em>}
+              </div>
+              {notes.length > 0 && (
+                <details className="score-note">
+                  <summary>score detail</summary>
+                  {notes.map(([name, s]) => (
+                    <pre key={name}>
+                      {name}: {JSON.stringify(s.value)}
+                      {"\n"}
+                      {s.explanation}
+                    </pre>
+                  ))}
+                </details>
+              )}
+            </div>
+          </td>
+        </tr>
       )}
-    </details>
+    </>
   )
 }
 
@@ -75,7 +88,7 @@ function TestRowBlock({ row }: { row: TestRow }) {
   return (
     <>
       <tr className="results-toggle-row" onClick={() => setOpen(!open)}>
-        <td className="cell-truncate" title={test.input}>
+        <td className="cell-truncate">
           <span className="row-caret">{open ? "▾" : "▸"}</span>
           {test.input || test.id}
         </td>
@@ -103,7 +116,10 @@ function TestRowBlock({ row }: { row: TestRow }) {
             <div className="results-detail-body">
               <div className="compare-context">
                 <p>
-                  <strong>Input:</strong> {test.input.length > 500 ? test.input.slice(0, 500) + ' ...' : test.input}
+                  <strong>Input:</strong>{" "}
+                  {test.input.length > 500
+                    ? test.input.slice(0, 500) + " ..."
+                    : test.input}
                 </p>
                 {test.expected && (
                   <p>
@@ -111,10 +127,29 @@ function TestRowBlock({ row }: { row: TestRow }) {
                   </p>
                 )}
               </div>
-              <div className="compare-grid">
-                {results.map((r) => (
-                  <ModelCard key={r.run.provider_id} {...r} />
-                ))}
+              <p className="results-subhead">Results by model</p>
+              <div className="results-table-nested-wrap">
+                <table className="leaderboard results-table results-table-nested">
+                  <colgroup>
+                    <col style={{ width: "28%" }} />
+                    <col style={{ width: "37%" }} />
+                    <col style={{ width: "15%" }} />
+                    <col style={{ width: "20%" }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Result</th>
+                      <th className="num">Pass/Fail</th>
+                      <th className="num">Tokens</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {results.map((r) => (
+                      <ModelResultRow key={r.run.provider_id} {...r} />
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </td>
