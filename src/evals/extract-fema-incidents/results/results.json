@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-07-07T21:42:50+00:00",
+ "generated": "2026-07-08T17:13:57+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -219,14 +219,14 @@
    "full_model": "openrouter/deepseek/deepseek-ocr",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2025-10-22T16:24:30-05:00",
+   "timestamp": "2025-10-22T21:24:30+00:00",
    "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
-     "duration_ms": 873.0,
+     "duration_ms": 871.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},
@@ -569,14 +569,14 @@
    "full_model": "openrouter/moonshotai/kimi-k2-thinking",
    "solver": "",
    "openrouter_provider": "moonshotai",
-   "timestamp": "2025-11-10T16:33:29-06:00",
+   "timestamp": "2025-11-10T22:33:29+00:00",
    "pass_rate": null,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
      "passed": null,
-     "duration_ms": 631.0,
+     "duration_ms": 629.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},
@@ -587,7 +587,7 @@
      "id": "test-pdf",
      "output": "",
      "passed": null,
-     "duration_ms": 2439.0,
+     "duration_ms": 2301.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},
@@ -758,7 +758,7 @@
    "full_model": "openai-api/lmstudio/qwen/qwen3-30b-a3b-2507",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2025-10-15T13:37:22-05:00",
+   "timestamp": "2025-10-15T18:37:22+00:00",
    "pass_rate": null,
    "samples": [
     {
@@ -780,7 +780,7 @@
    "full_model": "openai-api/lmstudio/qwen/qwen3-VL-30b-a3b-2507",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2025-10-15T13:38:29-05:00",
+   "timestamp": "2025-10-15T18:38:29+00:00",
    "pass_rate": null,
    "samples": [
     {
@@ -802,14 +802,14 @@
    "full_model": "openrouter/qwen/qwen3-vl-8b-instruct",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2025-10-22T16:33:55-05:00",
+   "timestamp": "2025-10-22T21:33:55+00:00",
    "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
      "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"}, {\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"}, {\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"}, {\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"}, {\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"}, {\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"}, {\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"}, {\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal)\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"}, {\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"}, {\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"}, {\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
      "passed": false,
-     "duration_ms": 31238.0,
+     "duration_ms": 31032.0,
      "input_tokens": 6792,
      "output_tokens": 2908,
      "scores": {
@@ -825,7 +825,7 @@
      "id": "test-pdf",
      "output": "",
      "passed": null,
-     "duration_ms": 2144.0,
+     "duration_ms": 2008.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},
@@ -840,14 +840,14 @@
    "full_model": "openrouter/qwen/qwen3-vl-8b-thinking",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2025-10-22T16:34:59-05:00",
+   "timestamp": "2025-10-22T21:34:59+00:00",
    "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
-     "output": "[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": true,\n    \"PA\": false,\n    \"HM\": true,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) – APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MuscoGo (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]",
+     "output": "<think>Okay, let's tackle this problem. The user wants me to extract all declaration requests from the provided document and return them as a valid JSON array. The example given shows how each object should be structured, so I need to make sure I follow that schema exactly.\n\nFirst, I need to look at the table provided. The columns are: State / Tribe / Territory - Incident Description, Type, IA, PA, HM, Requested. Each row represents a declaration request.\n\nLet me parse each row one by one.\n\nStarting with the first row:\n- KY – Severe Winter Storms and Snowstorms\n- Type: DR\n- IA: X (so true)\n- PA: X (true)\n- HM: X (true)\n- Requested: Jan 30 → 2025-01-30\n\nSo the object would be:\n{\n  \"state_or_tribe_or_territory\": \"KY\",\n  \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n  \"incident_type\": \"DR\",\n  \"IA\": true,\n  \"PA\": true,\n  \"HM\": true,\n  \"requested\": \"2025-01-30\"\n}\n\nNext row:\n- OK – Wildfires and Straight-line Winds\n- Type: DR\n- IA: X, PA: X, HM: X\n- Requested: Mar 21 → 2025-03-21\n\nSimilarly, convert to JSON.\n\nContinuing this way for each row. Let's check if there are any exceptions.\n\nLooking at the MI row:\n- MI – Severe Winter Storm\n- Type: EM\n- IA: X (true)\n- PA: (empty, so false)\n- HM: X (true)\n- Requested: Apr 11 → 2025-04-11\n\nSo incident_type is \"EM\", PA is false.\n\nAnother note: the status \"APPROVED\" in the AR row. The incident_description includes that, so it should be part of the description.\n\nAlso, for the MuscoGo (Creek) Nation row, the state is \"MuscoGo (Creek) Nation\", which is the tribe.\n\nNow, check all rows to ensure no mistakes.\n\nLet's list all rows:\n\n1. KY → DR, all X, Jan 30\n2. OK → DR, all X, Mar 21\n3. HI → DR, all X, Mar 27\n4. MS → DR, all X, Apr 1\n5. MO → DR, all X, Apr 2\n6. MI → EM, IA true, PA false, HM true, Apr 11\n7. NE → DR, all X, Apr 14\n8. KS → DR, all X, Apr 14\n9. IA → DR, all X, Apr 15\n10. TX → DR, all X, Apr 17\n11. TN → DR, all X, Apr 17\n12. AR → DR, all X, Apr 18 (with APPROVED in description)\n13. MuscoGo (Creek) Nation → DR, all X, Apr 21\n14. MO → DR, all X, Apr 30\n15. AR → DR, all X, May 3\n\nEach of these needs to be converted into the JSON object with the correct fields.\n\nNow, verify each field:\n\n- state_or_tribe_or_territory: the state abbreviation or tribe name.\n- incident_description: the description, including any status like \"APPROVED\".\n- incident_type: \"DR\" or \"EM\" as per the Type column.\n- IA, PA, HM: X is true, empty is false.\n- requested: converted to YYYY-MM-DD, 2025.\n\nCheck for any possible errors:\n\n- The MI row's PA is empty, so it's false. Correct.\n- The AR row with \"APPROVED\" in the description. The example shows including it, so the incident_description should have \"Severe Storms and Tornadoes (Appeal) – APPROVED\".\n- All dates converted correctly, e.g., Jan 30 → 2025-01-30, May 3 → 2025-05-03.\n\nNow, compile all 15 objects into a JSON array. Make sure the order matches the table rows.\n\nLet me check each row again to confirm:\n\nRow 12: AR – Severe Storms and Tornadoes (Appeal) – APPROVED → incident_description includes the APPROVED status.\n\nRow 13: MuscoGo (Creek) Nation – Severe Winter Storm → state is the tribe name.\n\nRow 14: MO again with different incident description.\n\nRow 15: AR with different incident description.\n\nEverything seems to fit. Now, format the JSON array correctly, ensuring no extra spaces or syntax errors.\n\nFinally, the output should be a JSON array starting with [ and ending with ], with no additional text.\n</think>[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": true,\n    \"PA\": false,\n    \"HM\": true,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) – APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MuscoGo (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]",
      "passed": false,
-     "duration_ms": 407181.0,
+     "duration_ms": 365644.0,
      "input_tokens": 18671,
      "output_tokens": 9900,
      "scores": {
@@ -863,7 +863,7 @@
      "id": "test-pdf",
      "output": "",
      "passed": null,
-     "duration_ms": 4309.0,
+     "duration_ms": 4173.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},

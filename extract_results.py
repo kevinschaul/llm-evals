@@ -286,7 +286,13 @@ def generate_results_json(log_files, eval_name, output_path):
 
             sample_scores = dict(sample.scores or {})
             diff_score = sample_scores.pop(DIFF_SCORER, None)
-            diff = diff_score.explanation if diff_score else None
+            if diff_score:
+                diff = diff_score.explanation
+            else:
+                # git_diff() scorer wasn't part of this run (e.g. skipped via
+                # --scorer, or code was edited between commit and run) — the
+                # diff cleanup_workdir() captured is still in the store.
+                diff = (sample.store or {}).get("diff")
 
             scores = {
                 name: {
@@ -297,8 +303,11 @@ def generate_results_json(log_files, eval_name, output_path):
             }
 
             duration_ms = None
-            if getattr(sample, "total_time", None) is not None:
-                duration_ms = round(sample.total_time * 1000, 1)
+            duration_source = getattr(sample, "working_time", None)
+            if duration_source is None:
+                duration_source = getattr(sample, "total_time", None)
+            if duration_source is not None:
+                duration_ms = round(duration_source * 1000, 1)
 
             input_tokens, output_tokens = extract_tokens(sample)
 

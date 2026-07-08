@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react"
 import {
   formatDuration,
-  formatTokens,
   type CheckResult,
   type Run,
   type SampleResult,
@@ -45,12 +44,11 @@ function RunRow({ row }: { row: AgenticRow }) {
           )}
         </td>
         <td className="num">{row.files ?? "–"}</td>
-        <td className="num">{formatTokens(row.sample.output_tokens)}</td>
         <td className="num">{formatDuration(row.sample.duration_ms)}</td>
       </tr>
       {open && (
         <tr className="results-detail-row">
-          <td colSpan={6}>
+          <td colSpan={5}>
             <div className="results-detail-body">
               {row.checks.length > 0 && (
                 <ul className="checks-list">
@@ -106,12 +104,11 @@ export default function AgenticResults({ url }: { url: string }) {
   return (
     <table className="leaderboard results-table">
       <colgroup>
-        <col style={{ width: "32%" }} />
-        <col style={{ width: "18%" }} />
-        <col style={{ width: "12%" }} />
-        <col style={{ width: "12%" }} />
-        <col style={{ width: "12%" }} />
+        <col style={{ width: "36%" }} />
+        <col style={{ width: "20%" }} />
         <col style={{ width: "14%" }} />
+        <col style={{ width: "14%" }} />
+        <col style={{ width: "16%" }} />
       </colgroup>
       <thead>
         <tr>
@@ -119,7 +116,6 @@ export default function AgenticResults({ url }: { url: string }) {
           <th>Harness</th>
           <th className="num">Checks</th>
           <th className="num">Files</th>
-          <th className="num">Tokens</th>
           <th className="num">Duration</th>
         </tr>
       </thead>
