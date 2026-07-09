@@ -28,7 +28,8 @@ export function parseDiff(diff: string): DiffFile[] {
     if (!current) continue
     current.lines.push(line)
     if (line.startsWith("+") && !line.startsWith("+++")) current.additions++
-    else if (line.startsWith("-") && !line.startsWith("---")) current.deletions++
+    else if (line.startsWith("-") && !line.startsWith("---"))
+      current.deletions++
   }
   if (current) files.push(current)
   return files

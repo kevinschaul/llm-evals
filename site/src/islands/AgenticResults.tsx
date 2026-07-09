@@ -29,9 +29,7 @@ function RunRow({ row }: { row: AgenticRow }) {
           <span className="row-caret">{open ? "▾" : "▸"}</span>
           {row.run.provider_id}
         </td>
-        <td className="cell-truncate">
-          {row.run.solver || "unknown harness"}
-        </td>
+        <td className="cell-truncate">{row.run.solver || "unknown harness"}</td>
         <td className="num">
           {row.checks.length > 0 ? (
             <span
@@ -94,7 +92,9 @@ export default function AgenticResults({ url }: { url: string }) {
       const ra = a.checks.length ? a.passed / a.checks.length : -1
       const rb = b.checks.length ? b.passed / b.checks.length : -1
       if (rb !== ra) return rb - ra
-      return (a.sample.duration_ms ?? Infinity) - (b.sample.duration_ms ?? Infinity)
+      return (
+        (a.sample.duration_ms ?? Infinity) - (b.sample.duration_ms ?? Infinity)
+      )
     })
   }, [data])
 

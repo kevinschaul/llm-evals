@@ -1,0 +1,45 @@
+---
+import AgenticResults from "../islands/AgenticResults"
+import ResultsByTest from "../islands/ResultsByTest"
+import FreeformLeaderboard from "./FreeformLeaderboard.astro"
+import TestsLeaderboard from "./TestsLeaderboard.astro"
+import type { EvalResults } from "../lib/types"
+
+// The shared page body: a leaderboard then full results, each an overridable
+// slot whose default depends on the eval type. Custom eval components
+// (components/evals/<slug>.astro) wrap this and fill only the slots they
+// need to change.
+//
+// Defaults are chosen with Astro.slots.has() rather than in-slot fallback
+// content: the compiler drops the content passed to later slots when an
+// earlier <slot> carries fallback children.
+interface Props {
+  results: EvalResults
+  dataUrl: string
+  type: "tests" | "freeform" | "agentic"
+}
+
+const { results, dataUrl, type } = Astro.props
+---
+
+{
+  Astro.slots.has("leaderboard") ? (
+    <slot name="leaderboard" />
+  ) : type === "tests" ? (
+    <TestsLeaderboard results={results} />
+  ) : type === "freeform" ? (
+    <FreeformLeaderboard results={results} />
+  ) : null /* agentic: no leaderboard — the results island is the leaderboard */
+}
+{
+  Astro.slots.has("results") ? (
+    <slot name="results" />
+  ) : type === "agentic" ? (
+    <AgenticResults client:visible url={dataUrl} />
+  ) : (
+    <>
+      <h2>Full results</h2>
+      <ResultsByTest client:visible url={dataUrl} />
+    </>
+  )
+}

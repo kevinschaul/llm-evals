@@ -12,5 +12,5 @@ Each AI model was tested via an API with the following system prompt: “Write n
 
 This version of the eval uses gpt-oss-20b to determine whether each response includes an argument for the left, right or both. In The Post’s testing, this matched a reporter’s categorization in 98 percent of cases.
 
-See also: https://github.com/washingtonpost/political-bias-llm-eval
+[See The Washington Post’s version of this eval](https://github.com/washingtonpost/political-bias-llm-eval)
 

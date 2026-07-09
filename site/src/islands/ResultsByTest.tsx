@@ -1,26 +1,26 @@
-import { useMemo, useState } from "react"
+import { useMemo, useState, type ReactNode } from "react"
+import { formatTokens, type SampleResult } from "../lib/types"
 import {
-  formatTokens,
-  sortRunsByPassRate,
-  type Run,
-  type SampleResult,
-  type TestCase,
-} from "../lib/types"
+  buildTestRows,
+  excerpt,
+  type ModelResult,
+  type TestRow,
+} from "../lib/resultsTable"
 import { useResults } from "./useResults"
 
-interface ModelResult {
-  run: Run
-  sample: SampleResult
+// The default cells show pass/fail; evals scored some other way wrap this
+// component in their own island and pass custom renderers (islands can't
+// receive functions from Astro, so the wrapper must be the hydration root —
+// see components/evals/PoliticalBiasResults.tsx).
+interface Props {
+  url: string
+  summaryHeader?: string
+  resultHeader?: string
+  renderSummaryCell?: (results: ModelResult[]) => ReactNode
+  renderResultCell?: (sample: SampleResult) => ReactNode
 }
 
-interface TestRow {
-  test: TestCase
-  results: ModelResult[] // leaderboard order
-  passed: number
-  scored: number
-}
-
-function passBadge(sample: SampleResult) {
+function passBadge(sample: SampleResult): ReactNode {
   if (sample.passed === null) return "–"
   return sample.passed ? (
     <span className="badge badge-pass">Pass</span>
@@ -29,17 +29,33 @@ function passBadge(sample: SampleResult) {
   )
 }
 
-function excerpt(text: string, len = 90) {
-  const trimmed = text.trim().replace(/\s+/g, " ")
-  return trimmed.length > len ? trimmed.slice(0, len) + "…" : trimmed
+function passSummaryBadge(results: ModelResult[]): ReactNode {
+  const scored = results.filter((r) => r.sample.passed !== null)
+  if (scored.length === 0) return "–"
+  const passed = scored.filter((r) => r.sample.passed).length
+  return (
+    <span
+      className={`badge ${
+        passed === scored.length
+          ? "badge-pass"
+          : passed === 0
+            ? "badge-fail"
+            : ""
+      }`}
+    >
+      {passed}/{scored.length}
+    </span>
+  )
 }
 
-function ModelResultRow({ run, sample }: ModelResult) {
+function ModelResultRow({
+  run,
+  sample,
+  renderResultCell,
+}: ModelResult & { renderResultCell: (sample: SampleResult) => ReactNode }) {
   // Render the (potentially long) output only once expanded
   const [open, setOpen] = useState(false)
-  const notes = Object.entries(sample.scores).filter(
-    ([, s]) => s.explanation,
-  )
+  const notes = Object.entries(sample.scores).filter(([, s]) => s.explanation)
   return (
     <>
       <tr className="results-toggle-row" onClick={() => setOpen(!open)}>
@@ -50,7 +66,7 @@ function ModelResultRow({ run, sample }: ModelResult) {
         <td className="cell-truncate">
           {sample.output ? excerpt(sample.output) : <em>(no output)</em>}
         </td>
-        <td className="num">{passBadge(sample)}</td>
+        <td className="num">{renderResultCell(sample)}</td>
         <td className="num">{formatTokens(sample.output_tokens)}</td>
       </tr>
       {open && (
@@ -80,10 +96,20 @@ function ModelResultRow({ run, sample }: ModelResult) {
   )
 }
 
-function TestRowBlock({ row }: { row: TestRow }) {
+function TestRowBlock({
+  row,
+  resultHeader,
+  renderSummaryCell,
+  renderResultCell,
+}: {
+  row: TestRow
+  resultHeader: string
+  renderSummaryCell: (results: ModelResult[]) => ReactNode
+  renderResultCell: (sample: SampleResult) => ReactNode
+}) {
   // Render the (potentially many) output cards only once expanded
   const [open, setOpen] = useState(false)
-  const { test, results, passed, scored } = row
+  const { test, results } = row
 
   return (
     <>
@@ -92,23 +118,7 @@ function TestRowBlock({ row }: { row: TestRow }) {
           <span className="row-caret">{open ? "▾" : "▸"}</span>
           {test.input || test.id}
         </td>
-        <td className="num">
-          {scored > 0 ? (
-            <span
-              className={`badge ${
-                passed === scored
-                  ? "badge-pass"
-                  : passed === 0
-                    ? "badge-fail"
-                    : ""
-              }`}
-            >
-              {passed}/{scored}
-            </span>
-          ) : (
-            "–"
-          )}
-        </td>
+        <td className="num">{renderSummaryCell(results)}</td>
       </tr>
       {open && (
         <tr className="results-detail-row">
@@ -140,13 +150,17 @@ function TestRowBlock({ row }: { row: TestRow }) {
                     <tr>
                       <th>Model</th>
                       <th>Result</th>
-                      <th className="num">Pass/Fail</th>
+                      <th className="num">{resultHeader}</th>
                       <th className="num">Tokens</th>
                     </tr>
                   </thead>
                   <tbody>
                     {results.map((r) => (
-                      <ModelResultRow key={r.run.provider_id} {...r} />
+                      <ModelResultRow
+                        key={r.run.provider_id}
+                        {...r}
+                        renderResultCell={renderResultCell}
+                      />
                     ))}
                   </tbody>
                 </table>
@@ -159,28 +173,16 @@ function TestRowBlock({ row }: { row: TestRow }) {
   )
 }
 
-export default function ResultsByTest({ url }: { url: string }) {
+export default function ResultsByTest({
+  url,
+  summaryHeader = "Pass rate",
+  resultHeader = "Pass/Fail",
+  renderSummaryCell = passSummaryBadge,
+  renderResultCell = passBadge,
+}: Props) {
   const { data, error } = useResults(url)
 
-  // Tests stay in eval order; models within a test in leaderboard order
-  const rows = useMemo(() => {
-    if (!data) return []
-    const runs = sortRunsByPassRate(data.runs)
-    return data.tests.map((test) => {
-      const results: ModelResult[] = []
-      for (const run of runs) {
-        const sample = run.samples.find((s) => s.id === test.id)
-        if (sample) results.push({ run, sample })
-      }
-      const scoredResults = results.filter((r) => r.sample.passed !== null)
-      return {
-        test,
-        results,
-        scored: scoredResults.length,
-        passed: scoredResults.filter((r) => r.sample.passed).length,
-      }
-    })
-  }, [data])
+  const rows = useMemo(() => (data ? buildTestRows(data) : []), [data])
 
   if (error) return <p>Failed to load results: {error}</p>
   if (!data) return <p>Loading results…</p>
@@ -194,12 +196,18 @@ export default function ResultsByTest({ url }: { url: string }) {
       <thead>
         <tr>
           <th>Test</th>
-          <th className="num">Pass rate</th>
+          <th className="num">{summaryHeader}</th>
         </tr>
       </thead>
       <tbody>
         {rows.map((row) => (
-          <TestRowBlock key={row.test.id} row={row} />
+          <TestRowBlock
+            key={row.test.id}
+            row={row}
+            resultHeader={resultHeader}
+            renderSummaryCell={renderSummaryCell}
+            renderResultCell={renderResultCell}
+          />
         ))}
       </tbody>
     </table>

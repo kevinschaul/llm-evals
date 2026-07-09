@@ -1,13 +1,11 @@
 ---
 import { aggregateRun, formatTokens, type EvalResults } from "../lib/types"
-import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
   results: EvalResults
-  dataUrl: string
 }
 
-const { results, dataUrl } = Astro.props
+const { results } = Astro.props
 
 // No trustworthy score here, so no ranking — just who ran, alphabetically
 const runs = [...results.runs].sort((a, b) =>
@@ -35,6 +33,3 @@ const runs = [...results.runs].sort((a, b) =>
     }
   </tbody>
 </table>
-
-<h2>Full results</h2>
-<ResultsByTest client:visible url={dataUrl} />

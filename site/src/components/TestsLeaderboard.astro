@@ -6,14 +6,12 @@ import {
   sortRunsByPassRate,
   type EvalResults,
 } from "../lib/types"
-import ResultsByTest from "../islands/ResultsByTest"
 
 interface Props {
   results: EvalResults
-  dataUrl: string
 }
 
-const { results, dataUrl } = Astro.props
+const { results } = Astro.props
 const runs = sortRunsByPassRate(results.runs)
 ---
 
@@ -52,6 +50,3 @@ const runs = sortRunsByPassRate(results.runs)
     }
   </tbody>
 </table>
-
-<h2>Full results</h2>
-<ResultsByTest client:visible url={dataUrl} />

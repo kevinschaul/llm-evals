@@ -1,6 +1,5 @@
 /* Eval dashboard styles, built on @kevinschaul/theme tokens */
 
-
 .eval-kicker {
   font-size: 0.8em;
   color: var(--muted);
@@ -262,6 +261,7 @@ table.results-table-nested {
   color: var(--muted);
   font-style: italic;
 }
+
 
 /* Model output (inside a results-detail-row) */
 .compare-context {

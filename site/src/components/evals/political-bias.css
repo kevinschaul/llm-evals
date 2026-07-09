@@ -1,0 +1,57 @@
+/* Strip browser-default figure margin so the chart is flush with the content edge */
+.lean-chart figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Political bias: lean badges + stacked bar (colors match PoliticalBiasChart) */
+.badge-lean-left {
+  background: #1a5eb3;
+  color: #fff;
+  border-color: transparent;
+}
+
+.badge-lean-both {
+  background: #cccccc;
+  color: #333;
+  border-color: transparent;
+}
+
+.badge-lean-right {
+  background: #b5291c;
+  color: #fff;
+  border-color: transparent;
+}
+
+.lean-bar {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lean-bar-track {
+  display: flex;
+  width: 6em;
+  flex: none;
+  height: 0.6em;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.lean-bar-fill {
+  display: block;
+  height: 100%;
+}
+
+.lean-bar-left {
+  background: #1a5eb3;
+}
+
+.lean-bar-both {
+  background: #cccccc;
+}
+
+.lean-bar-right {
+  background: #b5291c;
+}

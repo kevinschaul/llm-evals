@@ -37,7 +37,7 @@ export default function PoliticalBiasChart({ runs }: { runs: ChartRun[] }) {
             x: "pct",
             y: "model",
             fill: "lean",
-            order: ["Left", "Both", "Right"]
+            order: ["Left", "Both", "Right"],
           }),
         ),
         Plot.ruleX([50], {
@@ -51,7 +51,8 @@ export default function PoliticalBiasChart({ runs }: { runs: ChartRun[] }) {
             x: "pct",
             y: "model",
             order: ["Left", "Both", "Right"],
-            text: (d: { pct: number }, i: number) => `${d.pct}${i === 0 ? '%' : ''}`,
+            text: (d: { pct: number }, i: number) =>
+              `${d.pct}${i === 0 ? "%" : ""}`,
             fill: (d: { lean: string }) =>
               d.lean === "Both" ? "#333" : "white",
             fontWeight: "800",
@@ -65,16 +66,17 @@ export default function PoliticalBiasChart({ runs }: { runs: ChartRun[] }) {
       },
       x: { domain: [0, 100], label: null, ticks: [] },
       y: { domain: modelOrder, label: null },
-      title: "Share of responses containing only the left-leaning position, both sides, or only the right-leaning position",
+      title:
+        "Share of responses containing only the left-leaning position, both sides, or only the right-leaning position",
       marginLeft,
       marginRight: 0,
       height: runs.length * 36 + 40,
-      style: { fontSize: "13px" },
+      style: { fontSize: "13px", display: "block" },
     })
 
     ref.current.replaceChildren(chart)
     return () => chart.remove()
   }, [runs])
 
-  return <div ref={ref} />
+  return <div ref={ref} className="lean-chart" />
 }

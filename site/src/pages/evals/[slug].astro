@@ -1,9 +1,7 @@
 ---
 import { getCollection, render } from "astro:content"
 import Layout from "../../layouts/Layout.astro"
-import TestsEval from "../../components/TestsEval.astro"
-import AgenticEval from "../../components/AgenticEval.astro"
-import FreeformEval from "../../components/FreeformEval.astro"
+import EvalShell from "../../components/EvalShell.astro"
 import { loadResults } from "../../lib/results"
 
 const customComponents = import.meta.glob<{ default: unknown }>(
@@ -43,13 +41,13 @@ const githubUrl = `https://github.com/kevinschaul/llm-evals/tree/main/src/evals/
   {
     results ? (
       CustomComponent ? (
-        <CustomComponent results={results} dataUrl={dataUrl} />
-      ) : entry.data.type === "tests" ? (
-        <TestsEval results={results} dataUrl={dataUrl} />
-      ) : entry.data.type === "agentic" ? (
-        <AgenticEval results={results} dataUrl={dataUrl} />
+        <CustomComponent
+          results={results}
+          dataUrl={dataUrl}
+          type={entry.data.type}
+        />
       ) : (
-        <FreeformEval results={results} dataUrl={dataUrl} />
+        <EvalShell results={results} dataUrl={dataUrl} type={entry.data.type} />
       )
     ) : (
       <p>

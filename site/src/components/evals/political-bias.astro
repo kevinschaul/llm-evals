@@ -1,22 +1,17 @@
 ---
-import type { EvalResults, SampleResult } from "../../lib/types"
-import FreeformEval from "../FreeformEval.astro"
+import type { EvalResults } from "../../lib/types"
+import EvalShell from "../EvalShell.astro"
 import PoliticalBiasChart from "./PoliticalBiasChart"
+import PoliticalBiasResults from "./PoliticalBiasResults"
+import { leanOf } from "./lean"
 
 interface Props {
   results: EvalResults
   dataUrl: string
+  type: "tests" | "freeform" | "agentic"
 }
 
 const { results, dataUrl } = Astro.props
-
-type Lean = "left" | "right" | "both" | ""
-
-function leanOf(sample: SampleResult): Lean {
-  const v = sample.scores?.llm_judge?.value
-  if (v === "left" || v === "right" || v === "both") return v
-  return ""
-}
 
 const chartRuns = results.runs
   .map((run) => {
@@ -34,6 +29,10 @@ const chartRuns = results.runs
   .sort((a, b) => b.leftPct - a.leftPct)
 ---
 
-<PoliticalBiasChart client:load runs={chartRuns} />
-
-<FreeformEval results={results} dataUrl={dataUrl} />
+<EvalShell results={results} dataUrl={dataUrl} type="freeform">
+  <PoliticalBiasChart slot="leaderboard" client:load runs={chartRuns} />
+  <Fragment slot="results">
+    <h2>Full results</h2>
+    <PoliticalBiasResults client:visible url={dataUrl} />
+  </Fragment>
+</EvalShell>
