@@ -1,6 +1,3 @@
-"""
-Social media insults classification evaluation using inspect_ai
-"""
 import json
 import csv
 from pathlib import Path

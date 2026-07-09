@@ -1,6 +1,3 @@
-"""
-Extract FEMA incidents evaluation using inspect_ai
-"""
 import json
 from pathlib import Path
 from inspect_ai import Task, task
@@ -132,4 +129,3 @@ Example format:
         scorer=json_equal(),
         config=GenerateConfig(temperature=0.0)
     )
-

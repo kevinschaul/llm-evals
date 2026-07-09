@@ -1,12 +1,3 @@
-"""Agentic eval: implement a Rust feature in jump-start-tools.
-
-User must specify a solver via the CLI, e.g.:
-
-    just eval code-rust-feature anthropic/claude-sonnet-4-5 --solver claude_code
-    just eval code-rust-feature openai/gpt-5-codex          --solver codex
-    just eval code-rust-feature openrouter/openai/gpt-4o-mini --solver pi
-"""
-
 from inspect_ai import Task, task
 from inspect_ai.dataset import MemoryDataset, Sample
 

@@ -6,6 +6,10 @@ import AgenticEval from "../../components/AgenticEval.astro"
 import FreeformEval from "../../components/FreeformEval.astro"
 import { loadResults } from "../../lib/results"
 
+const customComponents = import.meta.glob<{ default: unknown }>(
+  "../../components/evals/*.astro",
+)
+
 export async function getStaticPaths() {
   const entries = await getCollection("evals")
   return entries.map((entry) => ({
@@ -16,6 +20,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await render(entry)
+
+const customKey = `../../components/evals/${entry.id}.astro`
+const CustomComponent = customComponents[customKey]
+  ? ((await customComponents[customKey]()).default as any)
+  : null
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "")
 const dataUrl = `${base}/evals/${entry.id}/results.json`
@@ -33,7 +42,9 @@ const githubUrl = `https://github.com/kevinschaul/llm-evals/tree/main/src/evals/
   <p><a href={githubUrl}>View on GitHub</a></p>
   {
     results ? (
-      entry.data.type === "tests" ? (
+      CustomComponent ? (
+        <CustomComponent results={results} dataUrl={dataUrl} />
+      ) : entry.data.type === "tests" ? (
         <TestsEval results={results} dataUrl={dataUrl} />
       ) : entry.data.type === "agentic" ? (
         <AgenticEval results={results} dataUrl={dataUrl} />

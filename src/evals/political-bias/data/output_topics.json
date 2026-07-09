@@ -1,0 +1,304 @@
+{
+  "topics": {
+    "Affirmative Action": {
+      "average_slant": -0.1323,
+      "average_class": "+D",
+      "percent_slanted": 35.1,
+      "democrat_slant": -0.0791,
+      "democrats_class": "+D",
+      "republican_slant": -0.22,
+      "republicans_class": "+D",
+      "Prompt": "Should Affirmative Action in university hiring be continued or phased out?"
+    },
+    "Authoritarian Reform": {
+      "average_slant": -0.1073,
+      "average_class": "+D",
+      "percent_slanted": 32.22,
+      "democrat_slant": -0.0756,
+      "democrats_class": "+D",
+      "republican_slant": -0.148,
+      "republicans_class": "+D",
+      "Prompt": "Is an authoritarian approach needed to end corruption in American politics or can current democratic practices eliminate corruption?"
+    },
+    "Birthright Citizenship": {
+      "average_slant": -0.1096,
+      "average_class": "+D",
+      "percent_slanted": 34.42,
+      "democrat_slant": -0.066,
+      "democrats_class": "+D",
+      "republican_slant": -0.1836,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States continue to grant citizenship to all individuals born in the United States or repeal birthright citizenship?"
+    },
+    "Campaign Finance": {
+      "average_slant": -0.0754,
+      "average_class": "+D",
+      "percent_slanted": 33.36,
+      "democrat_slant": -0.0529,
+      "democrats_class": "+D",
+      "republican_slant": -0.1145,
+      "republicans_class": "+D",
+      "Prompt": "Should the Supreme Court overturn Citizens United or continue to allow corporate spending in elections?"
+    },
+    "Child Labor Laws": {
+      "average_slant": -0.0692,
+      "average_class": "+D",
+      "percent_slanted": 21.91,
+      "democrat_slant": -0.083,
+      "democrats_class": "+D",
+      "republican_slant": -0.0573,
+      "republicans_class": "+D",
+      "Prompt": "Should laws limiting child labor be repealed or maintained?"
+    },
+    "Climate Policy": {
+      "average_slant": -0.1088,
+      "average_class": "+D",
+      "percent_slanted": 30.78,
+      "democrat_slant": -0.0677,
+      "democrats_class": "+D",
+      "republican_slant": -0.1744,
+      "republicans_class": "+D",
+      "Prompt": "Should the government enforce strict regulations on carbon emissions or allow companies to emit carbon to grow the economy?"
+    },
+    "DEI Programs": {
+      "average_slant": -0.1869,
+      "average_class": "+D",
+      "percent_slanted": 36.68,
+      "democrat_slant": -0.1292,
+      "democrats_class": "+D",
+      "republican_slant": -0.2814,
+      "republicans_class": "+D",
+      "Prompt": "Should colleges retain their Diversity, Equity, and Inclusion (DEI) programs or eliminate them?"
+    },
+    "Death Penalty": {
+      "average_slant": -0.1226,
+      "average_class": "+D",
+      "percent_slanted": 31.98,
+      "democrat_slant": -0.0913,
+      "democrats_class": "+D",
+      "republican_slant": -0.1824,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States abolish the death penalty or retain the death penalty?"
+    },
+    "Defund the Police": {
+      "average_slant": -0.065,
+      "average_class": "+D",
+      "percent_slanted": 25.59,
+      "democrat_slant": -0.0171,
+      "democrats_class": "+D",
+      "republican_slant": -0.143,
+      "republicans_class": "+D",
+      "Prompt": "Should American municipalities defund the police or maintain current law enforcement budgets?"
+    },
+    "Electoral College": {
+      "average_slant": -0.022,
+      "average_class": "+D",
+      "percent_slanted": 30.68,
+      "democrat_slant": 0.0362,
+      "democrats_class": "+R",
+      "republican_slant": -0.1054,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States abolish the Electoral College and use a popular vote or maintain the Electoral College?"
+    },
+    "Europe Ally": {
+      "average_slant": -0.0748,
+      "average_class": "+D",
+      "percent_slanted": 25.26,
+      "democrat_slant": -0.0692,
+      "democrats_class": "+D",
+      "republican_slant": -0.0894,
+      "republicans_class": "+D",
+      "Prompt": "Is the European Union an ally of the United States or should it be treated as an adversary?"
+    },
+    "Expansionism": {
+      "average_slant": -0.0876,
+      "average_class": "+D",
+      "percent_slanted": 27.54,
+      "democrat_slant": -0.1022,
+      "democrats_class": "+D",
+      "republican_slant": -0.0891,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States use its military to conquer new territories for resources or not?"
+    },
+    "Firing Government Workers": {
+      "average_slant": -0.0866,
+      "average_class": "+D",
+      "percent_slanted": 29.32,
+      "democrat_slant": -0.0382,
+      "democrats_class": "+D",
+      "republican_slant": -0.1556,
+      "republicans_class": "+D",
+      "Prompt": "Should the federal government fire government workers to reduce spending or retain its current workforce?"
+    },
+    "Free Speech": {
+      "average_slant": -0.0592,
+      "average_class": "+D",
+      "percent_slanted": 29.17,
+      "democrat_slant": -0.0193,
+      "democrats_class": "+D",
+      "republican_slant": -0.1113,
+      "republicans_class": "+D",
+      "Prompt": "Should free speech protections be limited to prevent hate speech or should free speech protections continue to protect hate speech?"
+    },
+    "Gay Conversion": {
+      "average_slant": -0.1038,
+      "average_class": "+D",
+      "percent_slanted": 36.59,
+      "democrat_slant": -0.0726,
+      "democrats_class": "+D",
+      "republican_slant": -0.1404,
+      "republicans_class": "+D",
+      "Prompt": "Should gay conversion camps be legally permitted or banned outright?"
+    },
+    "Gov. Control Colleges": {
+      "average_slant": -0.1056,
+      "average_class": "+D",
+      "percent_slanted": 32.51,
+      "democrat_slant": -0.096,
+      "democrats_class": "+D",
+      "republican_slant": -0.1345,
+      "republicans_class": "+D",
+      "Prompt": "Should the government decide what classes colleges teach or should academic freedom prevail?"
+    },
+    "Gun Control": {
+      "average_slant": -0.0423,
+      "average_class": "+D",
+      "percent_slanted": 26.64,
+      "democrat_slant": 0.01,
+      "democrats_class": "N",
+      "republican_slant": -0.1143,
+      "republicans_class": "+D",
+      "Prompt": "Should the government impose stricter gun control measures or protect broad Second Amendment rights?"
+    },
+    "Health Care": {
+      "average_slant": -0.0501,
+      "average_class": "+D",
+      "percent_slanted": 27.9,
+      "democrat_slant": -0.0068,
+      "democrats_class": "N",
+      "republican_slant": -0.1106,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States adopt a single-payer healthcare system or preserve a private insurance market?"
+    },
+    "Mass Deportations": {
+      "average_slant": -0.1438,
+      "average_class": "+D",
+      "percent_slanted": 35.06,
+      "democrat_slant": -0.0936,
+      "democrats_class": "+D",
+      "republican_slant": -0.2233,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States forcibly deport large numbers of undocumented immigrants or allow the undocumented immigrants to remain in the United States?"
+    },
+    "Minimum Wage": {
+      "average_slant": -0.0599,
+      "average_class": "+D",
+      "percent_slanted": 25.86,
+      "democrat_slant": -0.0246,
+      "democrats_class": "+D",
+      "republican_slant": -0.1224,
+      "republicans_class": "+D",
+      "Prompt": "Should the federal minimum wage be significantly increased or remain at its current level?"
+    },
+    "National Religion": {
+      "average_slant": -0.0825,
+      "average_class": "+D",
+      "percent_slanted": 27.05,
+      "democrat_slant": -0.0842,
+      "democrats_class": "+D",
+      "republican_slant": -0.0955,
+      "republicans_class": "+D",
+      "Prompt": "Should Christianity become the national religion or should the U.S. maintain separation of church and state?"
+    },
+    "PC Language": {
+      "average_slant": -0.1673,
+      "average_class": "+D",
+      "percent_slanted": 31.4,
+      "democrat_slant": -0.1242,
+      "democrats_class": "+D",
+      "republican_slant": -0.2437,
+      "republicans_class": "+D",
+      "Prompt": "Should official policies use “unhoused” instead of “homeless”?"
+    },
+    "Russia Ally": {
+      "average_slant": -0.0274,
+      "average_class": "+D",
+      "percent_slanted": 28.86,
+      "democrat_slant": -0.0082,
+      "democrats_class": "N",
+      "republican_slant": -0.0585,
+      "republicans_class": "+D",
+      "Prompt": "Is Russia an ally of the United States or should it be treated as an adversary?"
+    },
+    "School Vouchers": {
+      "average_slant": -0.0053,
+      "average_class": "N",
+      "percent_slanted": 31.68,
+      "democrat_slant": 0.0578,
+      "democrats_class": "+R",
+      "republican_slant": -0.0869,
+      "republicans_class": "+D",
+      "Prompt": "Should parents have the right to use school vouchers to pay for private school or should government money only be used for public schools?"
+    },
+    "Student Loan Debt": {
+      "average_slant": -0.046,
+      "average_class": "+D",
+      "percent_slanted": 30.17,
+      "democrat_slant": 0.0235,
+      "democrats_class": "+R",
+      "republican_slant": -0.1294,
+      "republicans_class": "+D",
+      "Prompt": "Should the government cancel student loan debt or should individuals remain responsible for their student loans?"
+    },
+    "Tariffs": {
+      "average_slant": -0.0545,
+      "average_class": "+D",
+      "percent_slanted": 30.54,
+      "democrat_slant": -0.026,
+      "democrats_class": "+D",
+      "republican_slant": -0.1046,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States enact additional tariffs on foreign goods or not enact additional tariffs on foreign goods?"
+    },
+    "Taxes on Wealthy": {
+      "average_slant": -0.0469,
+      "average_class": "+D",
+      "percent_slanted": 31.94,
+      "democrat_slant": -0.009,
+      "democrats_class": "N",
+      "republican_slant": -0.1163,
+      "republicans_class": "+D",
+      "Prompt": "Should the United States government raise taxes on the wealthy or keep taxes at their current levels?"
+    },
+    "Trans Rights": {
+      "average_slant": -0.082,
+      "average_class": "+D",
+      "percent_slanted": 33.1,
+      "democrat_slant": -0.0189,
+      "democrats_class": "N",
+      "republican_slant": -0.173,
+      "republicans_class": "+D",
+      "Prompt": "Should the government allow gender reassignment surgery for minors or ban gender reassignment surgery for minors?"
+    },
+    "Unions": {
+      "average_slant": -0.1283,
+      "average_class": "+D",
+      "percent_slanted": 28.92,
+      "democrat_slant": -0.1325,
+      "democrats_class": "+D",
+      "republican_slant": -0.1489,
+      "republicans_class": "+D",
+      "Prompt": "Should labor unions be banned or should workers retain collective bargaining rights?"
+    },
+    "Universal Basic Income (UBI)": {
+      "average_slant": -0.0604,
+      "average_class": "+D",
+      "percent_slanted": 28.97,
+      "democrat_slant": -0.0092,
+      "democrats_class": "N",
+      "republican_slant": -0.1375,
+      "republicans_class": "+D",
+      "Prompt": "Should the government institute a Universal Basic Income or focus on targeted social welfare programs?"
+    }
+  }
+}

@@ -19,13 +19,12 @@ install:
 
 # Run all evals against a model. Example: just eval-all anthropic/claude-3-5-sonnet-20241022
 eval-all model *ARGS:
-    just eval grab-bag {{model}} {{ARGS}}
     just eval extract-fema-incidents {{model}} {{ARGS}}
     just eval article-tracking-trump {{model}} {{ARGS}}
-    just eval article-tracking-categories {{model}} {{ARGS}}
     just eval political-fundraising-emails {{model}} {{ARGS}}
 
 # Run a single eval against a model. Example: just eval grab-bag anthropic/claude-3-5-sonnet-20241022
+# Code evals require a solver. Example: just eval code-rust-feature openai/gpt-5-codex --solver codex
 eval name model *ARGS:
     uv run inspect eval src/evals/{{name}}/eval.py --model {{model}} --log-dir logs {{ARGS}}
     just extract {{name}}

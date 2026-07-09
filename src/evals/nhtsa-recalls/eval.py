@@ -1,6 +1,3 @@
-"""
-NHTSA recalls data extraction evaluation using inspect_ai
-"""
 import json
 import csv
 from pathlib import Path

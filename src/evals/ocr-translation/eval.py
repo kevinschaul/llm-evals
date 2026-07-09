@@ -1,7 +1,3 @@
-"""
-OCR and translation task evaluation using inspect_ai
-"""
-
 from pathlib import Path
 from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, MemoryDataset

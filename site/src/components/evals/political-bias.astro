@@ -1,0 +1,39 @@
+---
+import type { EvalResults, SampleResult } from "../../lib/types"
+import FreeformEval from "../FreeformEval.astro"
+import PoliticalBiasChart from "./PoliticalBiasChart"
+
+interface Props {
+  results: EvalResults
+  dataUrl: string
+}
+
+const { results, dataUrl } = Astro.props
+
+type Lean = "left" | "right" | "both" | ""
+
+function leanOf(sample: SampleResult): Lean {
+  const v = sample.scores?.llm_judge?.value
+  if (v === "left" || v === "right" || v === "both") return v
+  return ""
+}
+
+const chartRuns = results.runs
+  .map((run) => {
+    const total = run.samples.length
+    const c = { left: 0, right: 0, both: 0, "": 0 }
+    for (const s of run.samples) c[leanOf(s)]++
+    const pct = (n: number) => Math.round((n / total) * 100)
+    return {
+      model: run.provider_id,
+      leftPct: pct(c.left),
+      rightPct: pct(c.right),
+      bothPct: pct(c.both),
+    }
+  })
+  .sort((a, b) => b.leftPct - a.leftPct)
+---
+
+<PoliticalBiasChart client:load runs={chartRuns} />
+
+<FreeformEval results={results} dataUrl={dataUrl} />

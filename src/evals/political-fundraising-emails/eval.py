@@ -1,6 +1,3 @@
-"""
-Political fundraising emails evaluation using inspect_ai
-"""
 import csv
 from pathlib import Path
 from inspect_ai import Task, task
