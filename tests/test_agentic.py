@@ -76,9 +76,12 @@ class AnthropicAPI:
 
 
 class _StubModel:
-    def __init__(self, name: str, api: object | None) -> None:
+    def __init__(
+        self, name: str, api: object | None, model_args: dict | None = None
+    ) -> None:
         self.name = name
         self.api = api
+        self.model_args = model_args or {}
 
 
 def test_pi_model_arg_strips_api_suffix_openrouter():
@@ -392,16 +395,44 @@ def test_pi_solver_cloud_mode_forwards_provider_prefix(
     run_solver(agentic.pi(), state)
 
     cmd = captured_cli["cmd"]
-    assert cmd[0] == "pi"
+    assert cmd[:2] == ["bash", str(Path(agentic.__file__).with_name("pi_docker.sh"))]
     assert "--mode" in cmd and cmd[cmd.index("--mode") + 1] == "json"
     assert "--no-session" in cmd
     assert "--model" in cmd
     assert cmd[cmd.index("--model") + 1] == "openrouter/openai/gpt-4o-mini"
     assert cmd[-1] == "do the thing"
-    # Cloud mode never sets PI_CODING_AGENT_DIR or stashes a cfg dir
+    # Cloud mode without routing never sets PI_CODING_AGENT_DIR or stashes a cfg dir
     assert "PI_CODING_AGENT_DIR" not in captured_cli["env"]
     assert state.store.get("pi_cfg_dir") is None
     assert "models_json" not in captured_cli
+
+
+def test_pi_solver_openrouter_routing_config(monkeypatch, captured_cli, tmp_work_dir):
+    monkeypatch.delenv("PI_BASE_URL", raising=False)
+    monkeypatch.setattr(
+        agentic,
+        "get_model",
+        lambda: _StubModel(
+            "qwen/qwen3.8-27b",
+            OpenRouterAPI(),
+            {"provider": {"order": ["venice/fp8"]}},
+        ),
+    )
+    state = make_task_state(work_dir=tmp_work_dir)
+
+    try:
+        run_solver(agentic.pi(), state)
+
+        assert captured_cli["cmd"][captured_cli["cmd"].index("--model") + 1] == (
+            "openrouter/qwen/qwen3.8-27b"
+        )
+        model = captured_cli["models_json"]["providers"]["openrouter"]["models"][0]
+        assert model == {
+            "id": "qwen/qwen3.8-27b",
+            "openRouterRouting": {"order": ["venice/fp8"]},
+        }
+    finally:
+        shutil.rmtree(state.store.get("pi_cfg_dir"), ignore_errors=True)
 
 
 def test_pi_solver_appends_system_prompt(monkeypatch, captured_cli, tmp_work_dir):

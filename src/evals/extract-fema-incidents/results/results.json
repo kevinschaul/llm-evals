@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-08-18T16:52:37+00:00",
+ "generated": "2026-08-18T19:39:46+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -128,22 +128,27 @@
    ]
   },
   {
-   "provider_id": "claude-haiku-5",
-   "model": "claude-haiku-5",
-   "full_model": "anthropic/claude-haiku-5",
+   "provider_id": "claude-haiku-4-5",
+   "model": "claude-haiku-4-5",
+   "full_model": "anthropic/claude-haiku-4-5",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2026-08-18T15:33:36+00:00",
-   "pass_rate": null,
+   "timestamp": "2026-08-18T19:30:25+00:00",
+   "pass_rate": 0.0,
    "samples": [
     {
      "id": "test-jpg",
      "output": "",
-     "passed": null,
-     "duration_ms": 1869.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "passed": false,
+     "duration_ms": 9642.0,
+     "input_tokens": 4808,
+     "output_tokens": 1099,
+     "scores": {
+      "json_equal": {
+       "value": 0.0,
+       "explanation": "Error: Expecting value: line 1 column 1 (char 0)"
+      }
+     },
      "diff": null,
      "checks": []
     },
@@ -151,7 +156,7 @@
      "id": "test-pdf",
      "output": "",
      "passed": null,
-     "duration_ms": 274.0,
+     "duration_ms": 282.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},

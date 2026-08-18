@@ -36,26 +36,18 @@ ACTIVE_MODELS = {
         "extra_args": [],
         "solver": "codex",
     },
-    "google/gemini-3.1-pro-preview": {
-        "extra_args": [],
-        "solver": "pi",
-    },
-    "openrouter/x-ai/grok-4.5": {
-        "extra_args": ["-M", "provider={'order':['grok']}"],
-        "solver": "pi",
-    },
-    "openrouter/deepseek/deepseek-v4-pro": {
-        "extra_args": [],
-        "solver": "pi",
-    },
-    "openrouter/moonshotai/kimi-k2-thinking": {
-        "extra_args": ["-M", "provider={'order':['moonshotai']}"],
-        "solver": "pi",
-    },
-    "openrouter/qwen/qwen3.8-27b": {
-        "extra_args": ["-M", "provider={'order':['venice/fp8']}"],
-        "solver": "pi",
-    },
+    # "google/gemini-3.1-pro-preview": {
+    #     "extra_args": [],
+    #     "solver": "pi",
+    # },
+    # "openrouter/x-ai/grok-4.5": {
+    #     "extra_args": ["-M", "provider={'order':['grok']}"],
+    #     "solver": "pi",
+    # },
+    # "openrouter/qwen/qwen3.8-27b": {
+    #     "extra_args": ["-M", "provider={'order':['venice/fp8']}"],
+    #     "solver": "pi",
+    # },
 }
 
 ROOT = Path(__file__).parent

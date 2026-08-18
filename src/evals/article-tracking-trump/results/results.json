@@ -1,6 +1,6 @@
 {
  "eval": "article-tracking-trump",
- "generated": "2026-08-18T16:52:28+00:00",
+ "generated": "2026-08-18T19:39:45+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -4216,242 +4216,3211 @@
    ]
   },
   {
-   "provider_id": "claude-haiku-5",
-   "model": "claude-haiku-5",
-   "full_model": "anthropic/claude-haiku-5",
+   "provider_id": "claude-haiku-4-5",
+   "model": "claude-haiku-4-5",
+   "full_model": "anthropic/claude-haiku-4-5",
    "solver": "",
    "openrouter_provider": "",
-   "timestamp": "2026-08-18T15:33:13+00:00",
-   "pass_rate": null,
+   "timestamp": "2026-08-18T19:29:59+00:00",
+   "pass_rate": 0.76,
    "samples": [
     {
      "id": "test-1",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9463.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1125.0,
+     "input_tokens": 317,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-2",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9460.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "False\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's proposal to empty Gaza, the primary focus is on the humanitarian crisis of medical evacuations from Gaza being slowed due to various factors including uncertainty about the right of return, tightened security checks, and fewer countries accepting evacuees. The Trump proposal is mentioned as context for the uncertainty affecting evacuation decisions, but it is not the main subject of the article.",
+     "passed": true,
+     "duration_ms": 2905.0,
+     "input_tokens": 1853,
+     "output_tokens": 105,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "False\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's proposal to empty Gaza, the primary focus is on the humanitarian crisis of medical evacuations from Gaza being slowed due to various factors including uncertainty about the right of return, tightened security checks, and fewer countries accepting evacuees. The Trump proposal is mentioned as context for the uncertainty affecting evacuation decisions, but it is not the main subject of the article."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-3",
+     "output": "false\n\nThis article is primarily about the National Park Service's prediction of peak cherry blossom bloom dates and information about the National Cherry Blossom Festival. It is not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1708.0,
+     "input_tokens": 1278,
+     "output_tokens": 55,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the National Park Service's prediction of peak cherry blossom bloom dates and information about the National Cherry Blossom Festival. It is not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-4",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9441.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1124.0,
+     "input_tokens": 318,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-5",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9084.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1183.0,
+     "input_tokens": 215,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-6",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9412.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration - specifically, Trump's scheduled meeting with British Prime Minister Keir Starmer in the Oval Office today, which is a direct action/event involving the White House.",
+     "passed": false,
+     "duration_ms": 1686.0,
+     "input_tokens": 498,
+     "output_tokens": 55,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration - specifically, Trump's scheduled meeting with British Prime Minister Keir Starmer in the Oval Office today, which is a direct action/event involving the White House."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-7",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9415.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1227.0,
+     "input_tokens": 155,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-8",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9408.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1292.0,
+     "input_tokens": 279,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-9",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9406.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1242.0,
+     "input_tokens": 153,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-10",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9406.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThe article is primarily about the U.S. Forest Service Chief's retirement announcement and his emotional message to staff in response to layoffs. While it mentions that these layoffs occurred as part of the Trump administration's effort to downsize the federal government through DOGE, the main focus is on Randy Moore's departure and its impact on the agency, not on a new action or announcement by the Trump administration itself.",
+     "passed": true,
+     "duration_ms": 1771.0,
+     "input_tokens": 940,
+     "output_tokens": 89,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThe article is primarily about the U.S. Forest Service Chief's retirement announcement and his emotional message to staff in response to layoffs. While it mentions that these layoffs occurred as part of the Trump administration's effort to downsize the federal government through DOGE, the main focus is on Randy Moore's departure and its impact on the agency, not on a new action or announcement by the Trump administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. Specifically, it focuses on Trump's announcement of the \"Stargate\" AI initiative at the White House, which is the central news event being reported on. While the article includes Musk's critical response to the announcement, the announcement itself is the main Trump administration action being covered.",
+     "passed": true,
+     "duration_ms": 1714.0,
+     "input_tokens": 628,
+     "output_tokens": 79,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. Specifically, it focuses on Trump's announcement of the \"Stargate\" AI initiative at the White House, which is the central news event being reported on. While the article includes Musk's critical response to the announcement, the announcement itself is the main Trump administration action being covered."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-12",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9405.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1187.0,
+     "input_tokens": 223,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-13",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9403.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThis article is primarily about Mayor Eric Adams's legal motion to dismiss his corruption case, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump and the Justice Department's involvement, the main focus is on Adams's attorney's arguments and legal proceedings in New York.",
+     "passed": false,
+     "duration_ms": 1753.0,
+     "input_tokens": 404,
+     "output_tokens": 68,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false\n\nThis article is primarily about Mayor Eric Adams's legal motion to dismiss his corruption case, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump and the Justice Department's involvement, the main focus is on Adams's attorney's arguments and legal proceedings in New York."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-14",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9399.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1130.0,
+     "input_tokens": 2049,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-15",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9406.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "**true**\n\nThis article is primarily about new actions by the Trump administration/DOGE (Department of Government Efficiency), specifically the cutting of contracts, staff, and grants at the Education Department. The article details multiple announcements and actions taken by DOGE representatives, including contract terminations, employee dismissals, and planned grant cancellations.",
+     "passed": true,
+     "duration_ms": 1931.0,
+     "input_tokens": 2878,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**true**\n\nThis article is primarily about new actions by the Trump administration/DOGE (Department of Government Efficiency), specifically the cutting of contracts, staff, and grants at the Education Department. The article details multiple announcements and actions taken by DOGE representatives, including contract terminations, employee dismissals, and planned grant cancellations."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-16",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9404.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThis article is primarily about the shooting death of an Iraqi man in Sweden and its connection to his previous Quran burnings, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1367.0,
+     "input_tokens": 751,
+     "output_tokens": 48,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the shooting death of an Iraqi man in Sweden and its connection to his previous Quran burnings, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-17",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9048.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThis article is primarily about the NFL competition committee considering possible modifications to the kickoff format and other rule changes. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 2367.0,
+     "input_tokens": 1516,
+     "output_tokens": 48,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the NFL competition committee considering possible modifications to the kickoff format and other rule changes. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-18",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9402.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1130.0,
+     "input_tokens": 477,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-19",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9395.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThis article is primarily about Democratic senators calling for an investigation into Musk's access to federal systems. It is not about a new action or announcement by the Trump administration/White House/Executive, but rather about a response/criticism from Democratic senators regarding an action that was already taken.",
+     "passed": true,
+     "duration_ms": 1718.0,
+     "input_tokens": 444,
+     "output_tokens": 63,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Democratic senators calling for an investigation into Musk's access to federal systems. It is not about a new action or announcement by the Trump administration/White House/Executive, but rather about a response/criticism from Democratic senators regarding an action that was already taken."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-20",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9391.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1246.0,
+     "input_tokens": 180,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-21",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 756.0,
+     "input_tokens": 329,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-22",
+     "output": "**True**\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it focuses on President Trump posting an AI-generated video to his Truth Social account that depicts his vision for Gaza under U.S. control and development. The article details this recent posting and includes a White House statement responding to it.",
+     "passed": false,
+     "duration_ms": 1732.0,
+     "input_tokens": 1269,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "**True**\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it focuses on President Trump posting an AI-generated video to his Truth Social account that depicts his vision for Gaza under U.S. control and development. The article details this recent posting and includes a White House statement responding to it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-23",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 929.0,
+     "input_tokens": 607,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1179.0,
+     "input_tokens": 258,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-25",
-     "output": "",
-     "passed": null,
-     "duration_ms": 7608.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 5139.0,
+     "input_tokens": 158,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-26",
-     "output": "",
-     "passed": null,
-     "duration_ms": 1145.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "false\n\nThis article is primarily about court decisions regarding DOGE's data access, not about a new action or announcement by the Trump administration itself. While it discusses DOGE (which was created by Trump's executive order), the main focus is on judicial rulings denying or granting temporary bans on data access, rather than on a new Trump administration action or announcement.",
+     "passed": false,
+     "duration_ms": 4091.0,
+     "input_tokens": 1208,
+     "output_tokens": 80,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false\n\nThis article is primarily about court decisions regarding DOGE's data access, not about a new action or announcement by the Trump administration itself. While it discusses DOGE (which was created by Trump's executive order), the main focus is on judicial rulings denying or granting temporary bans on data access, rather than on a new Trump administration action or announcement."
+      }
+     },
      "diff": null,
      "checks": []
     },
     {
      "id": "test-27",
-     "output": "",
-     "passed": null,
-     "duration_ms": 1321.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
+     "output": "true",
+     "passed": true,
+     "duration_ms": 582.0,
+     "input_tokens": 243,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-28",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 802.0,
+     "input_tokens": 126,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-29",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the administration's plan to place approximately 2,100 USAID workers on paid leave as part of a broader effort to pause foreign aid spending and examine whether USAID is pursuing Trump's agenda. While the article focuses on a judge's decision to extend a temporary restraining order pausing this action, the core subject matter is the Trump administration's announcement and implementation of this USAID workforce action.",
+     "passed": true,
+     "duration_ms": 2567.0,
+     "input_tokens": 2075,
+     "output_tokens": 103,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the administration's plan to place approximately 2,100 USAID workers on paid leave as part of a broader effort to pause foreign aid spending and examine whether USAID is pursuing Trump's agenda. While the article focuses on a judge's decision to extend a temporary restraining order pausing this action, the core subject matter is the Trump administration's announcement and implementation of this USAID workforce action."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-30",
+     "output": "false\n\nThis article is primarily about Instagram's new \"reset\" button feature for users and how to use algorithm reset tools across various social media platforms. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 1623.0,
+     "input_tokens": 2097,
+     "output_tokens": 54,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Instagram's new \"reset\" button feature for users and how to use algorithm reset tools across various social media platforms. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-31",
+     "output": "false\n\nThis article is primarily about Argentina's announcement to withdraw from the WHO, following Trump's action. While Trump's executive order is mentioned as context and a catalyst for Argentina's decision, the main subject and focus of the article is Argentina's withdrawal announcement by President Milei and his administration, not a new action by the Trump administration itself.",
+     "passed": true,
+     "duration_ms": 1611.0,
+     "input_tokens": 696,
+     "output_tokens": 73,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Argentina's announcement to withdraw from the WHO, following Trump's action. While Trump's executive order is mentioned as context and a catalyst for Argentina's decision, the main subject and focus of the article is Argentina's withdrawal announcement by President Milei and his administration, not a new action by the Trump administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-32",
+     "output": "false\n\nThis article is primarily about D.C. Mayor Muriel Bowser's public forum regarding potential public funding for an NFL stadium at the RFK site. It focuses on local D.C. politics, community concerns, and the mayor's development plans—not on any action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 2181.0,
+     "input_tokens": 2179,
+     "output_tokens": 76,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about D.C. Mayor Muriel Bowser's public forum regarding potential public funding for an NFL stadium at the RFK site. It focuses on local D.C. politics, community concerns, and the mayor's development plans—not on any action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-33",
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. It reports on the Trump administration's deferred resignation offer for federal workers and provides updated figures on how many have accepted it.",
+     "passed": true,
+     "duration_ms": 1216.0,
+     "input_tokens": 283,
+     "output_tokens": 45,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. It reports on the Trump administration's deferred resignation offer for federal workers and provides updated figures on how many have accepted it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-34",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 511.0,
+     "input_tokens": 484,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-35",
+     "output": "**True**\n\nThis article is primarily about new actions/announcements by the Trump administration. It describes executive orders the White House is preparing to issue on education, including directives to withhold federal funding from schools based on how they teach about race and gender, promote school choice, combat antisemitism, and reinstate the 1776 Commission.",
+     "passed": true,
+     "duration_ms": 2074.0,
+     "input_tokens": 465,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**True**\n\nThis article is primarily about new actions/announcements by the Trump administration. It describes executive orders the White House is preparing to issue on education, including directives to withhold federal funding from schools based on how they teach about race and gender, promote school choice, combat antisemitism, and reinstate the 1776 Commission."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-36",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 748.0,
+     "input_tokens": 274,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-37",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 883.0,
+     "input_tokens": 189,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-38",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 661.0,
+     "input_tokens": 337,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-39",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 856.0,
+     "input_tokens": 198,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-40",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1259.0,
+     "input_tokens": 278,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-41",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1339.0,
+     "input_tokens": 356,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-42",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 828.0,
+     "input_tokens": 126,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-43",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, Defense Secretary Pete Hegseth's refusal to address scrutiny of Trump's choice for Joint Chiefs chairman and the broader context of Trump's recent firing of senior Pentagon leaders.",
+     "passed": false,
+     "duration_ms": 1475.0,
+     "input_tokens": 1607,
+     "output_tokens": 56,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, Defense Secretary Pete Hegseth's refusal to address scrutiny of Trump's choice for Joint Chiefs chairman and the broader context of Trump's recent firing of senior Pentagon leaders."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-44",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1124.0,
+     "input_tokens": 336,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-45",
+     "output": "false\n\nThis article is primarily about a shooting incident during a robbery attempt at a Metro station in Washington, D.C. It is not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1092.0,
+     "input_tokens": 548,
+     "output_tokens": 47,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a shooting incident during a robbery attempt at a Metro station in Washington, D.C. It is not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-46",
+     "output": "**false**\n\nThis article is primarily about a Senate confirmation hearing where lawmakers questioned Trump administration nominees about whether a president could defy court orders. While it discusses Trump nominees and their views, the article focuses on the hearing itself and the questions raised by senators—it is not primarily about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 2573.0,
+     "input_tokens": 3028,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**false**\n\nThis article is primarily about a Senate confirmation hearing where lawmakers questioned Trump administration nominees about whether a president could defy court orders. While it discusses Trump nominees and their views, the article focuses on the hearing itself and the questions raised by senators—it is not primarily about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-47",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 850.0,
+     "input_tokens": 183,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-48",
+     "output": "**False**\n\nThis article is primarily about a resignation that occurred in response to a report on past social media posts, not about a new action or announcement by the Trump administration/White House/Executive. The focus is on the staffer's resignation following media scrutiny, rather than on a new policy, action, or announcement being made by the administration itself.",
+     "passed": true,
+     "duration_ms": 1493.0,
+     "input_tokens": 310,
+     "output_tokens": 76,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**False**\n\nThis article is primarily about a resignation that occurred in response to a report on past social media posts, not about a new action or announcement by the Trump administration/White House/Executive. The focus is on the staffer's resignation following media scrutiny, rather than on a new policy, action, or announcement being made by the administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-49",
+     "output": "**False**\n\nThis article is primarily about Arab leaders' response to Trump's Gaza proposal, not about a new action or announcement by the Trump administration itself. While the article discusses Trump's earlier proposal to \"take over\" Gaza, the main focus is on Arab countries (Jordan, Egypt, Saudi Arabia, UAE, Qatar) scrambling to develop an alternative plan with reconstruction funding. The article is centered on the Arab leaders' initiative and their efforts to present a counter-proposal, not on a new Trump administration action.",
+     "passed": false,
+     "duration_ms": 2344.0,
+     "input_tokens": 2047,
+     "output_tokens": 108,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "**False**\n\nThis article is primarily about Arab leaders' response to Trump's Gaza proposal, not about a new action or announcement by the Trump administration itself. While the article discusses Trump's earlier proposal to \"take over\" Gaza, the main focus is on Arab countries (Jordan, Egypt, Saudi Arabia, UAE, Qatar) scrambling to develop an alternative plan with reconstruction funding. The article is centered on the Arab leaders' initiative and their efforts to present a counter-proposal, not on a new Trump administration action."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-50",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 790.0,
+     "input_tokens": 229,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-51",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1248.0,
+     "input_tokens": 419,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-52",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 979.0,
+     "input_tokens": 167,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-53",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1244.0,
+     "input_tokens": 153,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-54",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1022.0,
+     "input_tokens": 403,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-55",
+     "output": "**False**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it is primarily about the FAA's reported consideration of canceling a Verizon contract in favor of awarding it to Starlink, based on sources' claims. While the article discusses Trump administration involvement and Elon Musk's role in DOGE, the main focus is on the FAA's potential contract decision and the conflicts of interest concerns surrounding it, not on a formal Trump administration action or announcement.",
+     "passed": false,
+     "duration_ms": 2616.0,
+     "input_tokens": 1748,
+     "output_tokens": 118,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "**False**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it is primarily about the FAA's reported consideration of canceling a Verizon contract in favor of awarding it to Starlink, based on sources' claims. While the article discusses Trump administration involvement and Elon Musk's role in DOGE, the main focus is on the FAA's potential contract decision and the conflicts of interest concerns surrounding it, not on a formal Trump administration action or announcement."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-56",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 843.0,
+     "input_tokens": 489,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-57",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 672.0,
+     "input_tokens": 276,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-58",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1077.0,
+     "input_tokens": 333,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-59",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1397.0,
+     "input_tokens": 161,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-60",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1013.0,
+     "input_tokens": 301,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-61",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1069.0,
+     "input_tokens": 457,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-62",
+     "output": "false\n\nThis article is primarily about Pope Francis's health crisis and the Vatican's response to it, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1062.0,
+     "input_tokens": 1596,
+     "output_tokens": 40,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Pope Francis's health crisis and the Vatican's response to it, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-63",
+     "output": "false\n\nThis article is primarily about the victims and lives lost in a plane-helicopter collision near Reagan National Airport. It is not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1110.0,
+     "input_tokens": 430,
+     "output_tokens": 45,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the victims and lives lost in a plane-helicopter collision near Reagan National Airport. It is not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-64",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the Senate committee's advancement of Linda McMahon's nomination as education secretary, which is part of Trump's executive appointments.",
+     "passed": false,
+     "duration_ms": 1601.0,
+     "input_tokens": 365,
+     "output_tokens": 45,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the Senate committee's advancement of Linda McMahon's nomination as education secretary, which is part of Trump's executive appointments."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-65",
+     "output": "false\n\nThis article is primarily about polling data and public sentiment regarding democracy, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1420.0,
+     "input_tokens": 303,
+     "output_tokens": 35,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about polling data and public sentiment regarding democracy, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-66",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 782.0,
+     "input_tokens": 2597,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-67",
+     "output": "false\n\nThis article is primarily about a **judicial action** (a federal judge blocking/restraining the Trump administration's action), not about a new action or announcement by the Trump administration itself. While the article mentions the Trump administration's funding cut announcement, the main focus is on the court's response to block it.",
+     "passed": false,
+     "duration_ms": 1702.0,
+     "input_tokens": 255,
+     "output_tokens": 67,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false\n\nThis article is primarily about a **judicial action** (a federal judge blocking/restraining the Trump administration's action), not about a new action or announcement by the Trump administration itself. While the article mentions the Trump administration's funding cut announcement, the main focus is on the court's response to block it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-68",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 451.0,
+     "input_tokens": 348,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-69",
+     "output": "false\n\nThis article is primarily about a technical analysis of how a helicopter collision occurred, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1798.0,
+     "input_tokens": 2673,
+     "output_tokens": 37,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a technical analysis of how a helicopter collision occurred, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-70",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1160.0,
+     "input_tokens": 522,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-71",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1112.0,
+     "input_tokens": 187,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-72",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3702.0,
+     "input_tokens": 253,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-73",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 524.0,
+     "input_tokens": 262,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-74",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1075.0,
+     "input_tokens": 286,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-75",
+     "output": "**true**\n\nThis article is primarily about a new action by the Trump administration—specifically, a new executive order issued late Tuesday that seeks to narrow the Federal Reserve's independence and increase White House control over federal financial regulators' budgets and regulatory authority.",
+     "passed": true,
+     "duration_ms": 3912.0,
+     "input_tokens": 1712,
+     "output_tokens": 55,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**true**\n\nThis article is primarily about a new action by the Trump administration—specifically, a new executive order issued late Tuesday that seeks to narrow the Federal Reserve's independence and increase White House control over federal financial regulators' budgets and regulatory authority."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-76",
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. It focuses on President Trump's meeting with Indian Prime Minister Modi at the White House, where Trump announced new trade negotiations, military sales increases, consideration of F-35 fighter jet sales to India, and the implementation of \"reciprocal\" tariff policies. These are all current actions and announcements being made by the Trump administration during this visit.",
+     "passed": true,
+     "duration_ms": 2659.0,
+     "input_tokens": 2420,
+     "output_tokens": 91,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration. It focuses on President Trump's meeting with Indian Prime Minister Modi at the White House, where Trump announced new trade negotiations, military sales increases, consideration of F-35 fighter jet sales to India, and the implementation of \"reciprocal\" tariff policies. These are all current actions and announcements being made by the Trump administration during this visit."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-77",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 523.0,
+     "input_tokens": 259,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-78",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it details the Justice Department's hiring initiative to recruit attorneys to defend Trump administration policies in court, which is a direct action being taken by the current administration.",
+     "passed": true,
+     "duration_ms": 2003.0,
+     "input_tokens": 1489,
+     "output_tokens": 57,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it details the Justice Department's hiring initiative to recruit attorneys to defend Trump administration policies in court, which is a direct action being taken by the current administration."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-79",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 923.0,
+     "input_tokens": 249,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-80",
+     "output": "false\n\nThis article is primarily about college enrollment data and trends, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1950.0,
+     "input_tokens": 918,
+     "output_tokens": 33,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about college enrollment data and trends, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-81",
+     "output": "false\n\nThis article is primarily about an announcement by House Republicans (specifically House Speaker Mike Johnson), not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's pardon of Jan. 6 defendants, the main focus is on the House Republicans' announcement of a new select subcommittee to investigate Jan. 6.",
+     "passed": true,
+     "duration_ms": 6515.0,
+     "input_tokens": 472,
+     "output_tokens": 80,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about an announcement by House Republicans (specifically House Speaker Mike Johnson), not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's pardon of Jan. 6 defendants, the main focus is on the House Republicans' announcement of a new select subcommittee to investigate Jan. 6."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-82",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1080.0,
+     "input_tokens": 283,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-83",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 855.0,
+     "input_tokens": 1011,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-84",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 858.0,
+     "input_tokens": 422,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-85",
+     "output": "false\n\nThis article is primarily about Maryland Governor Wes Moore's criticism of the Trump administration, not about a new action or announcement by the Trump administration itself. While the article mentions some Trump administration actions (like cuts to federal jobs and spending, the transgender athletes executive order, and appointments to the Council of Governors), the main focus is on Moore's response and hardened stance toward these policies, not on the announcement of new Trump administration actions.",
+     "passed": true,
+     "duration_ms": 1811.0,
+     "input_tokens": 1322,
+     "output_tokens": 94,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Maryland Governor Wes Moore's criticism of the Trump administration, not about a new action or announcement by the Trump administration itself. While the article mentions some Trump administration actions (like cuts to federal jobs and spending, the transgender athletes executive order, and appointments to the Council of Governors), the main focus is on Moore's response and hardened stance toward these policies, not on the announcement of new Trump administration actions."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-86",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, Trump's decision to issue pardons to roughly 1,500 criminal defendants involved in the Jan. 6 Capitol attack. The article focuses on the announcement of these pardons and the resulting criticism from senators.",
+     "passed": false,
+     "duration_ms": 1555.0,
+     "input_tokens": 301,
+     "output_tokens": 64,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, Trump's decision to issue pardons to roughly 1,500 criminal defendants involved in the Jan. 6 Capitol attack. The article focuses on the announcement of these pardons and the resulting criticism from senators."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-87",
+     "output": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is about Israel's military operations and construction of outposts in Syria following the collapse of the Assad regime, reported by The Washington Post.",
+     "passed": true,
+     "duration_ms": 1343.0,
+     "input_tokens": 2845,
+     "output_tokens": 57,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is about Israel's military operations and construction of outposts in Syria following the collapse of the Assad regime, reported by The Washington Post."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-88",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 756.0,
+     "input_tokens": 514,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-89",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 1757.0,
+     "input_tokens": 177,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-90",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 960.0,
+     "input_tokens": 424,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-91",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 966.0,
+     "input_tokens": 618,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-92",
+     "output": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it is an opinion/analysis piece that critiques Trump's existing proposals and recent diplomatic moves (the Gaza plan and Putin phone call). While it discusses Trump's statements and plans, the article's primary purpose is to analyze and evaluate these positions critically, not to announce new administrative actions.",
+     "passed": true,
+     "duration_ms": 2036.0,
+     "input_tokens": 2263,
+     "output_tokens": 87,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it is an opinion/analysis piece that critiques Trump's existing proposals and recent diplomatic moves (the Gaza plan and Putin phone call). While it discusses Trump's statements and plans, the article's primary purpose is to analyze and evaluate these positions critically, not to announce new administrative actions."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-93",
+     "output": "False\n\nThis article is primarily about a court order blocking the Labor Department from sharing data with DOGE, which is a legal/judicial action, not a new action or announcement by the Trump administration/White House/Executive. While DOGE (which is associated with the Trump administration) initiated the request for data, the main news event is the court's temporary restraining order preventing the data sharing.",
+     "passed": false,
+     "duration_ms": 1528.0,
+     "input_tokens": 350,
+     "output_tokens": 85,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "False\n\nThis article is primarily about a court order blocking the Labor Department from sharing data with DOGE, which is a legal/judicial action, not a new action or announcement by the Trump administration/White House/Executive. While DOGE (which is associated with the Trump administration) initiated the request for data, the main news event is the court's temporary restraining order preventing the data sharing."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-94",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1019.0,
+     "input_tokens": 873,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-95",
+     "output": "false\n\nThis article is primarily about Congress's failure to address the looming government shutdown deadline and the political impasse between Democrats and Republicans over funding, rather than about a new action or announcement by the Trump administration/White House/Executive. While the article discusses Trump administration actions (like agency dismantling by Musk), the main focus is on Congressional inaction and the shutdown crisis.",
+     "passed": true,
+     "duration_ms": 1897.0,
+     "input_tokens": 2503,
+     "output_tokens": 82,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Congress's failure to address the looming government shutdown deadline and the political impasse between Democrats and Republicans over funding, rather than about a new action or announcement by the Trump administration/White House/Executive. While the article discusses Trump administration actions (like agency dismantling by Musk), the main focus is on Congressional inaction and the shutdown crisis."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-96",
+     "output": "false\n\nThis article is primarily about a state legislative action (Utah's potential ban on water fluoridation), not a new action or announcement by the Trump administration/White House/Executive. While the article mentions RFK Jr. and the Trump administration's position on fluoride, the main focus is on Utah's bill and Governor Cox's decision on it.",
+     "passed": true,
+     "duration_ms": 2208.0,
+     "input_tokens": 1716,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a state legislative action (Utah's potential ban on water fluoridation), not a new action or announcement by the Trump administration/White House/Executive. While the article mentions RFK Jr. and the Trump administration's position on fluoride, the main focus is on Utah's bill and Governor Cox's decision on it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-97",
+     "output": "false\n\nThis article is primarily about the D.C. plane crash incident itself—specifically the airspace conditions, safety challenges, and systemic factors that may have contributed to the collision. While it mentions some regulatory and congressional actions related to airport capacity, it is not primarily about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1945.0,
+     "input_tokens": 1380,
+     "output_tokens": 74,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the D.C. plane crash incident itself—specifically the airspace conditions, safety challenges, and systemic factors that may have contributed to the collision. While it mentions some regulatory and congressional actions related to airport capacity, it is not primarily about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-98",
+     "output": "false\n\nThis article is primarily about a statement by House Speaker Mike Johnson regarding the Department of Education. While it mentions Trump's pledge to disband the department, the main focus is on Johnson's announcement and commentary, not on a new action or announcement by the Trump administration itself.",
+     "passed": true,
+     "duration_ms": 1397.0,
+     "input_tokens": 180,
+     "output_tokens": 59,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a statement by House Speaker Mike Johnson regarding the Department of Education. While it mentions Trump's pledge to disband the department, the main focus is on Johnson's announcement and commentary, not on a new action or announcement by the Trump administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-99",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration — specifically his executive order seeking to end birthright citizenship — and the coordinated legal response by Democratic attorneys general to challenge it.",
+     "passed": false,
+     "duration_ms": 1183.0,
+     "input_tokens": 2231,
+     "output_tokens": 43,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration — specifically his executive order seeking to end birthright citizenship — and the coordinated legal response by Democratic attorneys general to challenge it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-100",
+     "output": "false\n\nThis article is primarily about Elon Musk's DOGE Service and its activities/challenges, not about a new action or announcement by the Trump administration/White House/Executive itself. While DOGE operates under the Trump administration, the article focuses on describing DOGE's operations, targets, and the concerns surrounding it, rather than announcing a specific new action or policy decision by the administration.",
+     "passed": true,
+     "duration_ms": 1835.0,
+     "input_tokens": 208,
+     "output_tokens": 88,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Elon Musk's DOGE Service and its activities/challenges, not about a new action or announcement by the Trump administration/White House/Executive itself. While DOGE operates under the Trump administration, the article focuses on describing DOGE's operations, targets, and the concerns surrounding it, rather than announcing a specific new action or policy decision by the administration."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-101",
+     "output": "false\n\nThis article is primarily about a settlement deal between Purdue Pharma/the Sackler family and state attorneys general regarding opioid litigation. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 2369.0,
+     "input_tokens": 1741,
+     "output_tokens": 58,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a settlement deal between Purdue Pharma/the Sackler family and state attorneys general regarding opioid litigation. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-102",
+     "output": "false\n\nThis article is primarily about Trump making a claim/statement about federal funding, not about a new action or announcement by the Trump administration. While it mentions that DOGE Service has eliminated foreign aid contracts, the main focus is on Trump's unsupported allegation regarding a specific program, rather than announcing a new policy action.",
+     "passed": true,
+     "duration_ms": 1939.0,
+     "input_tokens": 215,
+     "output_tokens": 71,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Trump making a claim/statement about federal funding, not about a new action or announcement by the Trump administration. While it mentions that DOGE Service has eliminated foreign aid contracts, the main focus is on Trump's unsupported allegation regarding a specific program, rather than announcing a new policy action."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-103",
+     "output": "false\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is a factual article about research and expert opinions regarding whether men or women tend to be more romantic, with no connection to the Trump administration or executive branch.",
+     "passed": true,
+     "duration_ms": 1852.0,
+     "input_tokens": 2262,
+     "output_tokens": 59,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is a factual article about research and expert opinions regarding whether men or women tend to be more romantic, with no connection to the Trump administration or executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-104",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 941.0,
+     "input_tokens": 401,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-105",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1032.0,
+     "input_tokens": 388,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-106",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 880.0,
+     "input_tokens": 407,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-107",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 9099.0,
+     "input_tokens": 162,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-108",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 998.0,
+     "input_tokens": 520,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-109",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1119.0,
+     "input_tokens": 339,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-110",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1225.0,
+     "input_tokens": 1288,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-111",
+     "output": "false\n\nThis article is primarily about a high school basketball championship game between Bullis and Georgetown Prep. It is not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1294.0,
+     "input_tokens": 735,
+     "output_tokens": 44,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a high school basketball championship game between Bullis and Georgetown Prep. It is not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-112",
+     "output": "false\n\nThis article is primarily about commentary and reactions from left-wing politicians regarding concerns about oligarchy, not about a new action or announcement by the Trump administration itself.",
+     "passed": true,
+     "duration_ms": 1473.0,
+     "input_tokens": 257,
+     "output_tokens": 37,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about commentary and reactions from left-wing politicians regarding concerns about oligarchy, not about a new action or announcement by the Trump administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-113",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1344.0,
+     "input_tokens": 280,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-114",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1307.0,
+     "input_tokens": 231,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-115",
+     "output": "false\n\nThis article is primarily about allegations against Pete Hegseth, a nominee for defense secretary. While it mentions Trump's administration in context, the main focus is on analyzing and reporting the allegations themselves, not on a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1974.0,
+     "input_tokens": 228,
+     "output_tokens": 62,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about allegations against Pete Hegseth, a nominee for defense secretary. While it mentions Trump's administration in context, the main focus is on analyzing and reporting the allegations themselves, not on a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-116",
+     "output": "false\n\nThis article is primarily about a crime incident (assault outside Union Station) and arrests made by D.C. police. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 1941.0,
+     "input_tokens": 841,
+     "output_tokens": 50,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a crime incident (assault outside Union Station) and arrests made by D.C. police. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-117",
+     "output": "true\n\nThis article is primarily about a new action by an independent federal board (the Merit Systems Protection Board) in response to the Trump administration's federal workforce cuts. The MSPB's decision to halt the firings of six probationary employees is the main news event being reported.",
+     "passed": true,
+     "duration_ms": 3906.0,
+     "input_tokens": 1408,
+     "output_tokens": 62,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by an independent federal board (the Merit Systems Protection Board) in response to the Trump administration's federal workforce cuts. The MSPB's decision to halt the firings of six probationary employees is the main news event being reported."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-118",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1168.0,
+     "input_tokens": 167,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-119",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1437.0,
+     "input_tokens": 219,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-120",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 1581.0,
+     "input_tokens": 197,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-121",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1089.0,
+     "input_tokens": 428,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-122",
+     "output": "false\n\nThis article is primarily about the Washington Wizards' poor performance and rebuilding strategy, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 2858.0,
+     "input_tokens": 1156,
+     "output_tokens": 40,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the Washington Wizards' poor performance and rebuilding strategy, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-123",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the removal of the acting ICE director due to White House pressure to increase immigration arrests.",
+     "passed": true,
+     "duration_ms": 1964.0,
+     "input_tokens": 1764,
+     "output_tokens": 42,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the removal of the acting ICE director due to White House pressure to increase immigration arrests."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-124",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 891.0,
+     "input_tokens": 255,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-125",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 8151.0,
+     "input_tokens": 484,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-126",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 1304.0,
+     "input_tokens": 248,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-127",
+     "output": "**True**\n\nThis article is primarily about a new action by the Trump administration. Specifically, it covers the Trump administration's decision to fire 51 intelligence officers assigned to DEI (diversity, equity, inclusion, and accessibility) roles, which were scrapped by President Trump's executive order last month. The article focuses on the legal ruling that allows this action to proceed.",
+     "passed": true,
+     "duration_ms": 2138.0,
+     "input_tokens": 1364,
+     "output_tokens": 80,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**True**\n\nThis article is primarily about a new action by the Trump administration. Specifically, it covers the Trump administration's decision to fire 51 intelligence officers assigned to DEI (diversity, equity, inclusion, and accessibility) roles, which were scrapped by President Trump's executive order last month. The article focuses on the legal ruling that allows this action to proceed."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-128",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1320.0,
+     "input_tokens": 449,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-129",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1315.0,
+     "input_tokens": 333,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-130",
+     "output": "**false**\n\nThis article is primarily about a lawsuit challenging actions by the Trump administration/DOGE, not about a new action or announcement by the Trump administration itself. The article reports on legal allegations filed *against* the administration, rather than describing a new policy, action, or announcement made *by* the administration.",
+     "passed": false,
+     "duration_ms": 1542.0,
+     "input_tokens": 338,
+     "output_tokens": 69,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "**false**\n\nThis article is primarily about a lawsuit challenging actions by the Trump administration/DOGE, not about a new action or announcement by the Trump administration itself. The article reports on legal allegations filed *against* the administration, rather than describing a new policy, action, or announcement made *by* the administration."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-131",
+     "output": "**True**\n\nThis article is primarily about a new action/announcement by the Trump administration. Specifically, it covers the Trump administration's attempt to fire Hampton Dellinger (the head of the Office of Special Counsel) and the legal proceedings resulting from that action. The central focus is on the administration's executive decision and the court's response to it.",
+     "passed": true,
+     "duration_ms": 4566.0,
+     "input_tokens": 632,
+     "output_tokens": 77,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**True**\n\nThis article is primarily about a new action/announcement by the Trump administration. Specifically, it covers the Trump administration's attempt to fire Hampton Dellinger (the head of the Office of Special Counsel) and the legal proceedings resulting from that action. The central focus is on the administration's executive decision and the court's response to it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-132",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 1152.0,
+     "input_tokens": 452,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-133",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2568.0,
+     "input_tokens": 101,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-134",
+     "output": "false\n\nThis article is primarily about D.C. United's offseason roster changes and their hopes for the upcoming MLS season. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 2087.0,
+     "input_tokens": 1836,
+     "output_tokens": 51,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about D.C. United's offseason roster changes and their hopes for the upcoming MLS season. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-135",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 983.0,
+     "input_tokens": 754,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-136",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 1341.0,
+     "input_tokens": 132,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-137",
+     "output": "false\n\nThis article is primarily about Trump's criticism of the current government and his statements during a speech. While Trump is a former president making these remarks, the article focuses on his commentary and criticism rather than on a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1369.0,
+     "input_tokens": 210,
+     "output_tokens": 60,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Trump's criticism of the current government and his statements during a speech. While Trump is a former president making these remarks, the article focuses on his commentary and criticism rather than on a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-138",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 934.0,
+     "input_tokens": 976,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-139",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/Executive - specifically, the Education Department's announcement of an investigation into Maine over transgender policies in sports.",
+     "passed": true,
+     "duration_ms": 1352.0,
+     "input_tokens": 465,
+     "output_tokens": 38,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/Executive - specifically, the Education Department's announcement of an investigation into Maine over transgender policies in sports."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-140",
+     "output": "**false**\n\nThis article is primarily about a court ruling and legal proceedings, not about a new action or announcement by the Trump administration/White House/Executive. While the article discusses the Trump administration's firing of inspectors general, the main focus is on a federal judge's decision to force lawyers to withdraw their motion and the judge's criticism of their legal strategy.",
+     "passed": false,
+     "duration_ms": 12131.0,
+     "input_tokens": 510,
+     "output_tokens": 77,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "**false**\n\nThis article is primarily about a court ruling and legal proceedings, not about a new action or announcement by the Trump administration/White House/Executive. While the article discusses the Trump administration's firing of inspectors general, the main focus is on a federal judge's decision to force lawyers to withdraw their motion and the judge's criticism of their legal strategy."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-141",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 792.0,
+     "input_tokens": 251,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-142",
+     "output": "false\n\nThis article is primarily about congressional dynamics and legislative strategy regarding the debt ceiling, not about a new action or announcement by the Trump administration/White House/Executive. While President Trump is mentioned in context of his agenda, the main focus is on Speaker Johnson's statements about needing Democratic votes and the Republican legislative strategy in Congress.",
+     "passed": true,
+     "duration_ms": 1420.0,
+     "input_tokens": 329,
+     "output_tokens": 70,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about congressional dynamics and legislative strategy regarding the debt ceiling, not about a new action or announcement by the Trump administration/White House/Executive. While President Trump is mentioned in context of his agenda, the main focus is on Speaker Johnson's statements about needing Democratic votes and the Republican legislative strategy in Congress."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-143",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 929.0,
+     "input_tokens": 199,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-144",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 834.0,
+     "input_tokens": 364,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-145",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 971.0,
+     "input_tokens": 298,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-146",
+     "output": "True\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it announces the Pentagon's plan to fire approximately 5,400 civilian employees as part of President Trump's orders to reshape the Defense Department, along with related budget-cutting directives from Defense Secretary Pete Hegseth.",
+     "passed": true,
+     "duration_ms": 1842.0,
+     "input_tokens": 1980,
+     "output_tokens": 72,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "True\n\nThis article is primarily about a new action by the Trump administration/White House/Executive. Specifically, it announces the Pentagon's plan to fire approximately 5,400 civilian employees as part of President Trump's orders to reshape the Defense Department, along with related budget-cutting directives from Defense Secretary Pete Hegseth."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-147",
+     "output": "false\n\nThis article is primarily about a **judicial action** (a federal judge blocking DOGE's access to sensitive information), not about a new action or announcement by the Trump administration/White House/Executive. The article reports on what a court did to restrict the administration's activities, rather than announcing a new policy or action by the administration itself.",
+     "passed": false,
+     "duration_ms": 1568.0,
+     "input_tokens": 966,
+     "output_tokens": 74,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false\n\nThis article is primarily about a **judicial action** (a federal judge blocking DOGE's access to sensitive information), not about a new action or announcement by the Trump administration/White House/Executive. The article reports on what a court did to restrict the administration's activities, rather than announcing a new policy or action by the administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-148",
+     "output": "false\n\nThis article is primarily about a Democratic Party decision to endorse a candidate for an upcoming special election. While it mentions Trump's action (appointing Stefanik as U.N. ambassador), the main focus is on the Democrats' candidate selection process, not on a new Trump administration action or announcement.",
+     "passed": true,
+     "duration_ms": 1907.0,
+     "input_tokens": 255,
+     "output_tokens": 67,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a Democratic Party decision to endorse a candidate for an upcoming special election. While it mentions Trump's action (appointing Stefanik as U.N. ambassador), the main focus is on the Democrats' candidate selection process, not on a new Trump administration action or announcement."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-149",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 797.0,
+     "input_tokens": 1637,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-150",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 972.0,
+     "input_tokens": 760,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-151",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 704.0,
+     "input_tokens": 533,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-152",
+     "output": "false\n\nThis article is primarily about the arrest of Enrique Tarrio following a confrontation outside the U.S. Capitol, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's pardons of Capitol riot defendants, that is background context rather than the main focus of the article.",
+     "passed": true,
+     "duration_ms": 1728.0,
+     "input_tokens": 1204,
+     "output_tokens": 74,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the arrest of Enrique Tarrio following a confrontation outside the U.S. Capitol, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's pardons of Capitol riot defendants, that is background context rather than the main focus of the article."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-153",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 775.0,
+     "input_tokens": 193,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-154",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 762.0,
+     "input_tokens": 371,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-155",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the Justice Department's (under the Trump administration) demand to drop the corruption case against NYC Mayor Eric Adams, which prompted the lead prosecutor to resign in protest.",
+     "passed": true,
+     "duration_ms": 1442.0,
+     "input_tokens": 218,
+     "output_tokens": 56,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the Justice Department's (under the Trump administration) demand to drop the corruption case against NYC Mayor Eric Adams, which prompted the lead prosecutor to resign in protest."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-156",
+     "output": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is about the death of Andrew Lester, an 86-year-old man who shot a Black teenager and was awaiting sentencing. While the article mentions then-President Joe Biden's response to the incident from 2023, the primary focus is on Lester's death and the case outcome, not on any current Trump administration action or announcement.",
+     "passed": true,
+     "duration_ms": 2102.0,
+     "input_tokens": 1464,
+     "output_tokens": 103,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**false**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. It is about the death of Andrew Lester, an 86-year-old man who shot a Black teenager and was awaiting sentencing. While the article mentions then-President Joe Biden's response to the incident from 2023, the primary focus is on Lester's death and the case outcome, not on any current Trump administration action or announcement."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-157",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the pause on federal grant spending ordered by the White House, which has prompted state attorneys general to announce they will sue to block it.",
+     "passed": true,
+     "duration_ms": 947.0,
+     "input_tokens": 319,
+     "output_tokens": 47,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, the pause on federal grant spending ordered by the White House, which has prompted state attorneys general to announce they will sue to block it."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-158",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1136.0,
+     "input_tokens": 2067,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-159",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/Executive. Specifically, it reports on the Education Department's cancellation of $900 million in research contracts, an action taken by a DOGE (Department of Government Efficiency) team on Monday.",
+     "passed": true,
+     "duration_ms": 1491.0,
+     "input_tokens": 492,
+     "output_tokens": 60,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/Executive. Specifically, it reports on the Education Department's cancellation of $900 million in research contracts, an action taken by a DOGE (Department of Government Efficiency) team on Monday."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-160",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 620.0,
+     "input_tokens": 618,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-161",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 862.0,
+     "input_tokens": 561,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-162",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 814.0,
+     "input_tokens": 266,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-163",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1116.0,
+     "input_tokens": 534,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-164",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, a Pentagon memo implementing an executive order signed by President Trump that removes transgender service members from the U.S. military.",
+     "passed": true,
+     "duration_ms": 1592.0,
+     "input_tokens": 1882,
+     "output_tokens": 44,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration—specifically, a Pentagon memo implementing an executive order signed by President Trump that removes transgender service members from the U.S. military."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-165",
+     "output": "false\n\nThis article is primarily about a **judicial decision** (a federal judge's ruling) that maintains a ban on DOGE's access to Treasury data. While the Trump administration created DOGE, the main focus of this article is the court's action in blocking access, not a new action or announcement by the Trump administration itself.",
+     "passed": false,
+     "duration_ms": 1595.0,
+     "input_tokens": 217,
+     "output_tokens": 72,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false\n\nThis article is primarily about a **judicial decision** (a federal judge's ruling) that maintains a ban on DOGE's access to Treasury data. While the Trump administration created DOGE, the main focus of this article is the court's action in blocking access, not a new action or announcement by the Trump administration itself."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-166",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 670.0,
+     "input_tokens": 206,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-167",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 889.0,
+     "input_tokens": 3,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-168",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 1045.0,
+     "input_tokens": 363,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-169",
+     "output": "false\n\nThis article is primarily about Linda Groskreutz and her jigsaw puzzle hobby and collection. It is not about a new action or announcement by the Trump administration, White House, or Executive branch.",
+     "passed": true,
+     "duration_ms": 1539.0,
+     "input_tokens": 2003,
+     "output_tokens": 48,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Linda Groskreutz and her jigsaw puzzle hobby and collection. It is not about a new action or announcement by the Trump administration, White House, or Executive branch."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-170",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 822.0,
+     "input_tokens": 1608,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-171",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 571.0,
+     "input_tokens": 491,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-172",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 978.0,
+     "input_tokens": 360,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-173",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1362.0,
+     "input_tokens": 247,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-174",
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration - specifically a White House meeting between President Trump and British Prime Minister Starmer, where Trump discusses potential tariffs on the U.K. and Ukraine policy.",
+     "passed": false,
+     "duration_ms": 1571.0,
+     "input_tokens": 228,
+     "output_tokens": 52,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration - specifically a White House meeting between President Trump and British Prime Minister Starmer, where Trump discusses potential tariffs on the U.K. and Ukraine policy."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-175",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration/Executive. Specifically, it covers Elon Musk's directive (sent through the Office of Personnel Management) demanding that all 2.3 million federal government workers justify their work by submitting bullet-point summaries of their accomplishments, along with the administration's and various agencies' responses to this announcement.",
+     "passed": true,
+     "duration_ms": 2430.0,
+     "input_tokens": 2338,
+     "output_tokens": 84,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration/Executive. Specifically, it covers Elon Musk's directive (sent through the Office of Personnel Management) demanding that all 2.3 million federal government workers justify their work by submitting bullet-point summaries of their accomplishments, along with the administration's and various agencies' responses to this announcement."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-176",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 787.0,
+     "input_tokens": 394,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-177",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 634.0,
+     "input_tokens": 543,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-178",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 855.0,
+     "input_tokens": 1877,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-179",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 729.0,
+     "input_tokens": 283,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-180",
+     "output": "**False**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it reports on an incident (personnel forms vanishing from a government database) that occurred and is being investigated. While the article mentions that DOGE agents gained access to OPM databases, the primary focus is on reporting what happened (forms disappearing) rather than announcing a new policy or action being taken by the administration.",
+     "passed": true,
+     "duration_ms": 1503.0,
+     "input_tokens": 413,
+     "output_tokens": 96,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "**False**\n\nThis article is not primarily about a new action or announcement by the Trump administration/White House/Executive. Rather, it reports on an incident (personnel forms vanishing from a government database) that occurred and is being investigated. While the article mentions that DOGE agents gained access to OPM databases, the primary focus is on reporting what happened (forms disappearing) rather than announcing a new policy or action being taken by the administration."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-181",
+     "output": "true\n\nThis article is primarily about a new action/announcement by the Trump administration — specifically President Trump's announcement that Dan Bongino would serve as FBI deputy director.",
+     "passed": true,
+     "duration_ms": 1414.0,
+     "input_tokens": 722,
+     "output_tokens": 38,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true\n\nThis article is primarily about a new action/announcement by the Trump administration — specifically President Trump's announcement that Dan Bongino would serve as FBI deputy director."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-182",
+     "output": "True\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the Supreme Court's decision to grant the Trump administration's request to pause a lower court's deadline for resuming foreign aid payments. The article focuses on the administration's legal efforts to halt USAID payments and the judicial response to those actions.",
+     "passed": true,
+     "duration_ms": 1747.0,
+     "input_tokens": 1301,
+     "output_tokens": 73,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "True\n\nThis article is primarily about a new action by the Trump administration/White House/Executive - specifically the Supreme Court's decision to grant the Trump administration's request to pause a lower court's deadline for resuming foreign aid payments. The article focuses on the administration's legal efforts to halt USAID payments and the judicial response to those actions."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-183",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 970.0,
+     "input_tokens": 256,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-184",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration - specifically, Trump's Mideast envoy Steve Witkoff being deployed to Capitol Hill to explain and defend the president's proposal regarding Gaza and Palestinian displacement. The article focuses on this recent diplomatic effort and the administration's attempt to clarify Trump's controversial Tuesday night remarks.",
+     "passed": false,
+     "duration_ms": 1576.0,
+     "input_tokens": 586,
+     "output_tokens": 74,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration - specifically, Trump's Mideast envoy Steve Witkoff being deployed to Capitol Hill to explain and defend the president's proposal regarding Gaza and Palestinian displacement. The article focuses on this recent diplomatic effort and the administration's attempt to clarify Trump's controversial Tuesday night remarks."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-185",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 673.0,
+     "input_tokens": 251,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-186",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 723.0,
+     "input_tokens": 590,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-187",
+     "output": "false\n\nThis article is primarily about a statement by European powers calling for security guarantees for Ukraine, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's comments about Ukraine's goals and his phone call with Putin, the main focus is on the European powers' coordinated statement and their position on Ukraine negotiations.",
+     "passed": true,
+     "duration_ms": 1367.0,
+     "input_tokens": 354,
+     "output_tokens": 77,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about a statement by European powers calling for security guarantees for Ukraine, not about a new action or announcement by the Trump administration/White House/Executive. While the article mentions Trump's comments about Ukraine's goals and his phone call with Putin, the main focus is on the European powers' coordinated statement and their position on Ukraine negotiations."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-188",
+     "output": "true\n\nThis article is primarily about a new action by the Trump administration - specifically an executive order directing the Justice Department to relax enforcement of the Foreign Corrupt Practices Act (FCPA).",
+     "passed": false,
+     "duration_ms": 2372.0,
+     "input_tokens": 541,
+     "output_tokens": 43,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true\n\nThis article is primarily about a new action by the Trump administration - specifically an executive order directing the Justice Department to relax enforcement of the Foreign Corrupt Practices Act (FCPA)."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-189",
+     "output": "false\n\nThe article is primarily about House Republicans passing a budget resolution and the political consequences Democrats are promising, along with coverage of other congressional and campaign news. While it mentions Trump and his administration (Cabinet meeting, executive orders), these are secondary items in the \"At the White House\" and \"What's Next\" sections. The main focus is on House GOP budget actions and Democratic political responses, not on a new Trump administration action or announcement.",
+     "passed": true,
+     "duration_ms": 2398.0,
+     "input_tokens": 2519,
+     "output_tokens": 92,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThe article is primarily about House Republicans passing a budget resolution and the political consequences Democrats are promising, along with coverage of other congressional and campaign news. While it mentions Trump and his administration (Cabinet meeting, executive orders), these are secondary items in the \"At the White House\" and \"What's Next\" sections. The main focus is on House GOP budget actions and Democratic political responses, not on a new Trump administration action or announcement."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-190",
+     "output": "false\n\nThis article is primarily about crowds and scenes outside Capital One Arena during a presidential parade event. While it mentions Trump and is set during what appears to be a Trump-related event, it is not reporting on a new action or announcement by the Trump administration/White House/Executive. It is descriptive reporting about public gatherings and vendor activity at an event venue.",
+     "passed": true,
+     "duration_ms": 1483.0,
+     "input_tokens": 189,
+     "output_tokens": 78,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about crowds and scenes outside Capital One Arena during a presidential parade event. While it mentions Trump and is set during what appears to be a Trump-related event, it is not reporting on a new action or announcement by the Trump administration/White House/Executive. It is descriptive reporting about public gatherings and vendor activity at an event venue."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-191",
+     "output": "false\n\nThis article is primarily about Elon Musk's speech at a far-right German political party rally and the surrounding controversy. It is not primarily about a new action or announcement by the Trump administration/White House/Executive, though it does mention President Trump's slogan in passing.",
+     "passed": true,
+     "duration_ms": 1482.0,
+     "input_tokens": 1282,
+     "output_tokens": 64,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about Elon Musk's speech at a far-right German political party rally and the surrounding controversy. It is not primarily about a new action or announcement by the Trump administration/White House/Executive, though it does mention President Trump's slogan in passing."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-192",
+     "output": "false\n\nThis article is primarily about the Palestinian Authority's military operation in Jenin and its implications for potential governance of Gaza. While it mentions President Trump's proposal regarding Gaza displacement, the article is not primarily about a new action or announcement by the Trump administration. The Trump administration's freeze on funding to Palestinian security forces is mentioned only briefly as context, not as the main focus of the article.",
+     "passed": true,
+     "duration_ms": 2955.0,
+     "input_tokens": 2612,
+     "output_tokens": 83,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThis article is primarily about the Palestinian Authority's military operation in Jenin and its implications for potential governance of Gaza. While it mentions President Trump's proposal regarding Gaza displacement, the article is not primarily about a new action or announcement by the Trump administration. The Trump administration's freeze on funding to Palestinian security forces is mentioned only briefly as context, not as the main focus of the article."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-193",
+     "output": "false\n\nThe article is primarily about a bishop's sermon and plea to Trump at a prayer service, not about a new action or announcement by the Trump administration/White House/Executive.",
+     "passed": true,
+     "duration_ms": 1334.0,
+     "input_tokens": 510,
+     "output_tokens": 40,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false\n\nThe article is primarily about a bishop's sermon and plea to Trump at a prayer service, not about a new action or announcement by the Trump administration/White House/Executive."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-194",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 600.0,
+     "input_tokens": 460,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-195",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 889.0,
+     "input_tokens": 375,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-196",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 780.0,
+     "input_tokens": 103,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-197",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 796.0,
+     "input_tokens": 240,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-198",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 657.0,
+     "input_tokens": 144,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-199",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 1010.0,
+     "input_tokens": 212,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-200",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 859.0,
+     "input_tokens": 209,
+     "output_tokens": 4,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
      "diff": null,
      "checks": []
     }
@@ -46641,6 +49610,292 @@
        "explanation": "true"
       }
      },
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3.8-27b (venice/fp8)",
+   "model": "qwen3.8-27b",
+   "full_model": "openrouter/qwen/qwen3.8-27b",
+   "solver": "",
+   "openrouter_provider": "venice/fp8",
+   "timestamp": "2026-08-18T19:39:09+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": null,
+     "duration_ms": 4439.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-2",
+     "output": "",
+     "passed": null,
+     "duration_ms": 4097.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-3",
+     "output": "",
+     "passed": null,
+     "duration_ms": 4085.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-4",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3997.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-5",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3979.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-6",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3970.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-7",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3968.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-8",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3967.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-9",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3966.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-10",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3965.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3964.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-12",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3965.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-13",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3963.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-14",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3963.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-15",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3961.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-16",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3960.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-17",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3959.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-18",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3957.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-19",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3956.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-20",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3954.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-21",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1540.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-22",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1538.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-23",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1536.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1535.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-25",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1534.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
      "diff": null,
      "checks": []
     }

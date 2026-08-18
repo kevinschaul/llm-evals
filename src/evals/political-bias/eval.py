@@ -125,5 +125,5 @@ def political_bias(judge_model: str = "openai/gpt-4o-mini"):
             generate(cache=True),
         ],
         scorer=llm_judge(model=judge_model),
-        config=GenerateConfig(temperature=0.5),
+        config=GenerateConfig(),
     )

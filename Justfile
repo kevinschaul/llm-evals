@@ -18,15 +18,18 @@ install:
 dev:
     npm run dev
 
+# Run all evals
+eval:
+    uv run run_evals.py
+
+# Extract eval results
+extract:
+    uv run extract_results.py
+    uv run python cleanup_old_logs.py --delete
+
 # View Inspect logs in web interface
 inspect:
     uv run inspect view start --log-dir logs
-
-
-
-# Remove outdated log files, keeping only the most recent per eval+model combination
-cleanup-logs:
-    uv run python cleanup_old_logs.py --delete
 
 # Scan repo for secrets, including inside .eval zip archives
 scan-secrets:

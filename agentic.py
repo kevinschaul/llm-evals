@@ -534,9 +534,27 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
             model_arg = f"{provider}/{model_id}"
         else:
             model_arg = _pi_model_arg(model)
+            routing = getattr(model, "model_args", {}).get("provider")
+            if type(model.api).__name__ == "OpenRouterAPI" and routing:
+                cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-")
+                models_json = {
+                    "providers": {
+                        "openrouter": {
+                            "models": [
+                                {
+                                    "id": model.name,
+                                    "openRouterRouting": routing,
+                                }
+                            ]
+                        }
+                    }
+                }
+                Path(cfg_dir, "models.json").write_text(json.dumps(models_json))
+                env["PI_CODING_AGENT_DIR"] = cfg_dir
+                state.store.set("pi_cfg_dir", cfg_dir)
 
         cmd = [
-            "pi",
+            "pi-docker",
             "-p",
             "--mode",
             "json",
