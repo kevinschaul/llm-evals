@@ -404,13 +404,9 @@ def test_pi_solver_cloud_mode_forwards_provider_prefix(
     assert "models_json" not in captured_cli
 
 
-def test_pi_solver_appends_system_prompt(
-    monkeypatch, captured_cli, tmp_work_dir
-):
+def test_pi_solver_appends_system_prompt(monkeypatch, captured_cli, tmp_work_dir):
     monkeypatch.delenv("PI_BASE_URL", raising=False)
-    monkeypatch.setattr(
-        agentic, "get_model", lambda: _StubModel("foo", AnthropicAPI())
-    )
+    monkeypatch.setattr(agentic, "get_model", lambda: _StubModel("foo", AnthropicAPI()))
     state = make_task_state(work_dir=tmp_work_dir)
     state.messages.append(
         # role=system message that should flow into --append-system-prompt
@@ -425,9 +421,7 @@ def test_pi_solver_appends_system_prompt(
 
 
 def test_pi_solver_raises_without_work_dir(monkeypatch, captured_cli):
-    monkeypatch.setattr(
-        agentic, "get_model", lambda: _StubModel("foo", AnthropicAPI())
-    )
+    monkeypatch.setattr(agentic, "get_model", lambda: _StubModel("foo", AnthropicAPI()))
     state = make_task_state(work_dir=None)
     with pytest.raises(RuntimeError, match="work_dir"):
         run_solver(agentic.pi(), state)
@@ -480,9 +474,7 @@ def test_pi_solver_base_url_from_env_var_overrides_default(
     monkeypatch, captured_cli, tmp_work_dir
 ):
     monkeypatch.setenv("PI_BASE_URL", "http://env-host:9000/v1")
-    monkeypatch.setattr(
-        agentic, "get_model", lambda: _StubModel("model-x", None)
-    )
+    monkeypatch.setattr(agentic, "get_model", lambda: _StubModel("model-x", None))
     state = make_task_state(work_dir=tmp_work_dir)
 
     try:
@@ -503,9 +495,7 @@ def test_pi_solver_env_var_overrides_constructor(
     monkeypatch, captured_cli, tmp_work_dir
 ):
     monkeypatch.setenv("PI_BASE_URL", "http://env-wins:9000/v1")
-    monkeypatch.setattr(
-        agentic, "get_model", lambda: _StubModel("model-x", None)
-    )
+    monkeypatch.setattr(agentic, "get_model", lambda: _StubModel("model-x", None))
     state = make_task_state(work_dir=tmp_work_dir)
 
     try:
@@ -524,20 +514,14 @@ def test_pi_solver_env_var_overrides_constructor(
             shutil.rmtree(cfg_dir, ignore_errors=True)
 
 
-def test_pi_solver_custom_provider_name(
-    monkeypatch, captured_cli, tmp_work_dir
-):
+def test_pi_solver_custom_provider_name(monkeypatch, captured_cli, tmp_work_dir):
     monkeypatch.delenv("PI_BASE_URL", raising=False)
-    monkeypatch.setattr(
-        agentic, "get_model", lambda: _StubModel("local-model", None)
-    )
+    monkeypatch.setattr(agentic, "get_model", lambda: _StubModel("local-model", None))
     state = make_task_state(work_dir=tmp_work_dir)
 
     try:
         run_solver(
-            agentic.pi(
-                base_url="http://localhost:8080/v1", provider="vllm-prod"
-            ),
+            agentic.pi(base_url="http://localhost:8080/v1", provider="vllm-prod"),
             state,
         )
         cmd = captured_cli["cmd"]
@@ -587,20 +571,15 @@ def test_cleanup_workdir_no_pi_cfg_dir_only_removes_workdir():
     assert not os.path.exists(parent)
 
 
-def test_cleanup_workdir_captures_requested_files(tmp_path):
-    parent = tmp_path / "eval"
-    work_dir = parent / "work"
+def test_capture_files_reads_requested_files(tmp_path):
+    work_dir = tmp_path / "work"
     work_dir.mkdir(parents=True)
-    asyncio.run(agentic.git_init_commit(str(work_dir)))
     (work_dir / "answer.csv").write_text("period,value\nJan,1\n")
 
-    state = make_task_state(work_dir=str(work_dir))
-    asyncio.run(agentic.cleanup_workdir(capture=["answer.csv", "missing.csv"])(state))
+    captured = agentic.capture_files(str(work_dir), ["answer.csv", "missing.csv"])
 
-    captured = state.store.get("captured_files")
     assert captured["answer.csv"] == "period,value\nJan,1\n"
     assert captured["missing.csv"] is None
-    assert not parent.exists()
 
 
 # ---------------------------------------------------------------------------
@@ -627,23 +606,23 @@ def test_copy_fixture_and_git_diff_capture_modifications(tmp_path):
     Path(work_dir, "hello.txt").write_text("modified\n")
     Path(work_dir, "new.txt").write_text("created by agent\n")
 
-    # cleanup_workdir() captures the diff into state.store before deleting,
-    # because inspect_ai's Plan.cleanup runs *before* scoring.
-    asyncio.run(agentic.cleanup_workdir()(state))
-    assert not os.path.exists(work_dir), "cleanup should remove the work_dir"
-
+    # git_diff() reads work_dir directly, so it must score before cleanup
+    # deletes it — inspect-ai runs cleanup after scoring, not before.
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "C"
     assert "modified" in score.explanation
     assert "new.txt" in score.explanation
     assert "hello.txt" in score.explanation
 
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(work_dir), "cleanup should remove the work_dir"
 
-def test_git_diff_returns_incorrect_when_no_diff_in_store():
+
+def test_git_diff_returns_incorrect_when_work_dir_missing():
     state = make_task_state(work_dir=None)
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "I"
-    assert "no diff" in score.explanation
+    assert "work_dir missing" in score.explanation
 
 
 def test_serve_site_sets_live_url_and_cleanup_stops_server(tmp_path):

@@ -2,7 +2,7 @@
 
 Spins up a tiny SSE-streaming Anthropic **Messages API** fake server on a
 local port, points the `claude` CLI at it via `ANTHROPIC_BASE_URL`, and runs
-the full solver -> claude CLI -> Bash exec -> cleanup -> git_diff loop.
+the full solver -> claude CLI -> Bash exec -> git_diff -> cleanup loop.
 
 Claude Code uses Anthropic's Messages API (`POST /v1/messages`), with SSE
 events like `message_start`, `content_block_start/delta/stop`,
@@ -36,88 +36,137 @@ import agentic
 
 def _sse(event_type: str, payload: dict) -> bytes:
     """Anthropic SSE frames carry an explicit `event:` line."""
-    return (
-        f"event: {event_type}\n"
-        f"data: {json.dumps(payload)}\n\n"
-    ).encode()
+    return (f"event: {event_type}\ndata: {json.dumps(payload)}\n\n").encode()
 
 
 def _stream_tool_use(wfile, *, tool_use_id: str, name: str, args_obj: dict) -> None:
     """Stream a single tool_use content block end-to-end."""
     args_str = json.dumps(args_obj)
 
-    wfile.write(_sse("message_start", {
-        "type": "message_start",
-        "message": {
-            "id": "msg_test",
-            "type": "message",
-            "role": "assistant",
-            "content": [],
-            "model": "fake-model",
-            "stop_reason": None,
-            "stop_sequence": None,
-            "usage": {"input_tokens": 1, "output_tokens": 1},
-        },
-    }))
-    wfile.write(_sse("content_block_start", {
-        "type": "content_block_start",
-        "index": 0,
-        "content_block": {
-            "type": "tool_use",
-            "id": tool_use_id,
-            "name": name,
-            "input": {},
-        },
-    }))
-    wfile.write(_sse("content_block_delta", {
-        "type": "content_block_delta",
-        "index": 0,
-        "delta": {"type": "input_json_delta", "partial_json": args_str},
-    }))
-    wfile.write(_sse("content_block_stop", {
-        "type": "content_block_stop", "index": 0,
-    }))
-    wfile.write(_sse("message_delta", {
-        "type": "message_delta",
-        "delta": {"stop_reason": "tool_use", "stop_sequence": None},
-        "usage": {"output_tokens": 10},
-    }))
+    wfile.write(
+        _sse(
+            "message_start",
+            {
+                "type": "message_start",
+                "message": {
+                    "id": "msg_test",
+                    "type": "message",
+                    "role": "assistant",
+                    "content": [],
+                    "model": "fake-model",
+                    "stop_reason": None,
+                    "stop_sequence": None,
+                    "usage": {"input_tokens": 1, "output_tokens": 1},
+                },
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_start",
+            {
+                "type": "content_block_start",
+                "index": 0,
+                "content_block": {
+                    "type": "tool_use",
+                    "id": tool_use_id,
+                    "name": name,
+                    "input": {},
+                },
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_delta",
+            {
+                "type": "content_block_delta",
+                "index": 0,
+                "delta": {"type": "input_json_delta", "partial_json": args_str},
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_stop",
+            {
+                "type": "content_block_stop",
+                "index": 0,
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "message_delta",
+            {
+                "type": "message_delta",
+                "delta": {"stop_reason": "tool_use", "stop_sequence": None},
+                "usage": {"output_tokens": 10},
+            },
+        )
+    )
     wfile.write(_sse("message_stop", {"type": "message_stop"}))
 
 
 def _stream_text(wfile, text: str) -> None:
     """Stream a single assistant text message end-to-end."""
-    wfile.write(_sse("message_start", {
-        "type": "message_start",
-        "message": {
-            "id": "msg_test_final",
-            "type": "message",
-            "role": "assistant",
-            "content": [],
-            "model": "fake-model",
-            "stop_reason": None,
-            "stop_sequence": None,
-            "usage": {"input_tokens": 1, "output_tokens": 1},
-        },
-    }))
-    wfile.write(_sse("content_block_start", {
-        "type": "content_block_start",
-        "index": 0,
-        "content_block": {"type": "text", "text": ""},
-    }))
-    wfile.write(_sse("content_block_delta", {
-        "type": "content_block_delta",
-        "index": 0,
-        "delta": {"type": "text_delta", "text": text},
-    }))
-    wfile.write(_sse("content_block_stop", {
-        "type": "content_block_stop", "index": 0,
-    }))
-    wfile.write(_sse("message_delta", {
-        "type": "message_delta",
-        "delta": {"stop_reason": "end_turn", "stop_sequence": None},
-        "usage": {"output_tokens": 5},
-    }))
+    wfile.write(
+        _sse(
+            "message_start",
+            {
+                "type": "message_start",
+                "message": {
+                    "id": "msg_test_final",
+                    "type": "message",
+                    "role": "assistant",
+                    "content": [],
+                    "model": "fake-model",
+                    "stop_reason": None,
+                    "stop_sequence": None,
+                    "usage": {"input_tokens": 1, "output_tokens": 1},
+                },
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_start",
+            {
+                "type": "content_block_start",
+                "index": 0,
+                "content_block": {"type": "text", "text": ""},
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_delta",
+            {
+                "type": "content_block_delta",
+                "index": 0,
+                "delta": {"type": "text_delta", "text": text},
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "content_block_stop",
+            {
+                "type": "content_block_stop",
+                "index": 0,
+            },
+        )
+    )
+    wfile.write(
+        _sse(
+            "message_delta",
+            {
+                "type": "message_delta",
+                "delta": {"stop_reason": "end_turn", "stop_sequence": None},
+                "usage": {"output_tokens": 5},
+            },
+        )
+    )
     wfile.write(_sse("message_stop", {"type": "message_stop"}))
 
 
@@ -149,18 +198,21 @@ class _MessagesHandler(BaseHTTPRequestHandler):
         except Exception:
             req = {}
 
-        type(self).script_state.append({
-            "path": self.path,
-            "messages": req.get("messages", []),
-            "tools": [t.get("name") for t in (req.get("tools") or [])],
-            "system": req.get("system"),
-            "model": req.get("model"),
-        })
+        type(self).script_state.append(
+            {
+                "path": self.path,
+                "messages": req.get("messages", []),
+                "tools": [t.get("name") for t in (req.get("tools") or [])],
+                "system": req.get("system"),
+                "model": req.get("model"),
+            }
+        )
         # Count only "real" turns: those that advertise our Bash tool.
         # Claude Code 2.x makes side-channel calls (auto-mode classifier,
         # hooks, etc.) that we want to ignore for scripting purposes.
         real_turns = [
-            s for s in type(self).script_state
+            s
+            for s in type(self).script_state
             if any(t in {"Bash", "bash"} for t in s["tools"])
         ]
         n = len(real_turns)
@@ -233,6 +285,7 @@ class _StubModel:
 
 def _make_state():
     from inspect_ai.solver import TaskState
+
     return TaskState(
         model="mockllm/fake-model",
         sample_id="test",
@@ -250,7 +303,9 @@ claude_required = pytest.mark.skipif(
 
 @claude_required
 def test_claude_code_solver_e2e_against_fake_messages_server(
-    monkeypatch, tmp_path, fake_messages_server,
+    monkeypatch,
+    tmp_path,
+    fake_messages_server,
 ):
     base_url, requests_seen = fake_messages_server
 
@@ -259,9 +314,7 @@ def test_claude_code_solver_e2e_against_fake_messages_server(
     (fixture / "README").write_text("starter\n")
 
     state = _make_state()
-    asyncio.run(
-        agentic.copy_fixture(fixture)(state, generate=lambda *a, **kw: None)
-    )
+    asyncio.run(agentic.copy_fixture(fixture)(state, generate=lambda *a, **kw: None))
     work_dir = state.store.get("work_dir")
     assert work_dir is not None and os.path.isdir(work_dir)
 
@@ -277,14 +330,11 @@ def test_claude_code_solver_e2e_against_fake_messages_server(
     marker_text = "hello from fake claude server"
     _MessagesHandler.bash_command = f"echo '{marker_text}' > marker.txt"
 
-    asyncio.run(
-        agentic.claude_code()(state, generate=lambda *a, **kw: None)
-    )
+    asyncio.run(agentic.claude_code()(state, generate=lambda *a, **kw: None))
 
     # Filter to just the "main" turns (those that advertise Bash).
     main_turns = [
-        r for r in requests_seen
-        if any(t in {"Bash", "bash"} for t in r["tools"])
+        r for r in requests_seen if any(t in {"Bash", "bash"} for t in r["tools"])
     ]
 
     marker = Path(work_dir) / "marker.txt"
@@ -310,8 +360,7 @@ def test_claude_code_solver_e2e_against_fake_messages_server(
         for msg in turn["messages"]:
             content = msg.get("content")
             if isinstance(content, list) and any(
-                isinstance(c, dict) and c.get("type") == "tool_result"
-                for c in content
+                isinstance(c, dict) and c.get("type") == "tool_result" for c in content
             ):
                 return True
         return False
@@ -321,11 +370,12 @@ def test_claude_code_solver_e2e_against_fake_messages_server(
         f"got {len(main_turns)} main turns with no tool_result"
     )
 
-    # Verify cleanup + scorer round-trip.
-    asyncio.run(agentic.cleanup_workdir()(state))
-    assert not os.path.exists(work_dir)
-
+    # Score while work_dir is still live, then clean up (inspect-ai runs
+    # cleanup after scoring, so git_diff() must read the diff itself here).
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "C"
     assert "marker.txt" in score.explanation
     assert marker_text in score.explanation
+
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(work_dir)

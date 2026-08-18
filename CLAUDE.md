@@ -16,10 +16,11 @@ This is a dual-system LLM evaluation framework that combines:
 - `extract_results.py` - Reads all `.eval` logs for an eval (most recent per model), writes `src/evals/<name>/results/results.json`
 - `agentic.py` - Shared building blocks for agentic evals (see below)
 - `cleanup_old_logs.py` - Prunes outdated logs per eval+model
+- `run_evals.py` - CLI behind the `just evals` recipe (subcommands: `eval`, `eval-all`, `eval-matrix`, `eval-all-agentic`, `list`). Derives the active (non-archived) eval list from `src/evals/*/index.md` frontmatter, split into plain evals vs. `type: agentic` ones; keeps a hand-maintained `ACTIVE_MODELS` list for matrix runs
 
 **Astro Dashboard:**
 - `@kevinschaul/theme` - The shared look (design tokens, base CSS, `BaseLayout`/`Header`/`Footer` Astro components) matching kschaul.com. Lives in its own repo, [kevinschaul/kschaul-astro-theme](https://github.com/kevinschaul/kschaul-astro-theme), and is installed from GitHub in `site/package.json`. Nothing eval-specific goes in there.
-- `site/` - The Astro app. Content collection (`site/src/content.config.ts`) globs `src/evals/*/index.md`; `site/scripts/sync-assets.mjs` copies results.json + images/PDFs (strict allowlist) into `site/public/evals/` before dev/build.
+- `site/` - The Astro app. Content collection (`site/src/content.config.ts`) globs `src/evals/*/index.md`; the `sync-evals` Astro integration (`site/integrations/sync-evals.mjs`) copies results.json + images/PDFs (strict allowlist) into `site/public/evals/` on every dev/build start, and during `dev` watches `src/evals` and re-syncs + full-reloads the browser automatically whenever a result gets re-extracted.
 - `site/src/components/EvalShell.astro` - The shared page body: a leaderboard section then a full-results section, each an overridable named slot (`leaderboard`, `results`) whose default depends on the eval `type` (`TestsLeaderboard.astro` / `FreeformLeaderboard.astro` / none for agentic; `ResultsByTest` island / `AgenticResults` island). Note: defaults are chosen via `Astro.slots.has()` rather than in-slot fallback content — the compiler drops content passed to later slots when an earlier `<slot>` has fallback children.
 - `site/src/components/evals/<slug>.astro` - Optional per-eval override, auto-picked by `[slug].astro` over the type default. It receives `{ results, dataUrl, type }`, wraps `EvalShell`, and fills only the slots it customizes (see `political-bias.astro`: a chart in the `leaderboard` slot, lean-labelled results in the `results` slot).
 - `site/src/islands/` - The client JS (React): `ResultsByTest` (full results for tests/freeform: test → per-model rows → full output + score detail), `AgenticResults`, `DiffViewer`. Islands fetch `evals/<name>/results.json` at runtime; static parts render at build from the same file via `site/src/lib/results.ts`.
@@ -41,21 +42,24 @@ just install              # uv sync + npm install + pre-commit hooks
 
 **Running Evaluations:**
 ```bash
-just eval [name] [model]  # Run one eval (e.g. just eval grab-bag anthropic/claude-sonnet-4-5)
-just eval-all [model]     # Run all evaluations
-just extract [name]       # Re-export results.json from existing logs (no API calls)
+just evals eval [name] [model]           # Run one eval (e.g. just evals eval political-bias anthropic/claude-sonnet-5)
+just evals eval-all [model]              # Run all active (non-archived, non-agentic) evals against a model
+just evals eval-all-agentic [model] [solver] # Run all active agentic evals against a model+solver
+just evals eval-matrix                   # Run every active eval against every active model (see ACTIVE_MODELS in run_evals.py)
+just evals list                          # List active evals, active agentic evals, and active models
+just extract [name]                      # Re-export results.json from existing logs (no API calls)
 ```
 
 **Dashboard Development:**
 ```bash
-just dev      # Astro dev server with live reload (runs sync-assets first)
+just dev      # Astro dev server; auto-syncs results.json/assets on start and on every change
 npm run build # Production build to site/dist (set GITHUB_PAGES_BASE_PATH for subpath deploys)
 ```
 
 ## Working with the Dashboard
 
 - All rate logic lives in `extract_results.py`; the frontend displays what it's given. Each run has one authoritative `pass_rate` (the primary scorer's accuracy/mean metric, falling back to the scored samples' pass ratio); each sample has `passed` (`"C"` or `1.0` → passed), a `diff` (agentic git diff, lifted out of scores), and structured `checks` (`[{name, passed}]`, from `Score.metadata["checks"]` or parsed from older logs' explanations).
-- Never widen the `sync-assets.mjs` allowlist casually — eval dirs contain caches, logs, and fixtures that must not be published. The script overwrites in place rather than wiping `site/public/evals/`, so builds don't break a running dev server.
+- Never widen the `sync-evals` allowlist casually — eval dirs contain caches, logs, and fixtures that must not be published. It overwrites in place rather than wiping `site/public/evals/`, so builds don't break a running dev server.
 - To change the site's look, edit the [kschaul-astro-theme](https://github.com/kevinschaul/kschaul-astro-theme) repo (tokens first) and reinstall; eval-specific styles live in `site/src/styles/site.css`.
 
 ## Agentic Evals
@@ -118,9 +122,9 @@ def my_eval() -> Task:
 Then run it against any model + harness:
 
 ```bash
-just eval my-eval anthropic/claude-sonnet-4-5    --solver claude_code
-just eval my-eval openai/gpt-5-codex             --solver codex
-just eval my-eval openrouter/openai/gpt-4o-mini  --solver pi
+just evals eval my-eval anthropic/claude-sonnet-5    --solver claude_code
+just evals eval my-eval openai/gpt-5-codex           --solver codex
+just evals eval my-eval openrouter/openai/gpt-4o-mini --solver pi
 ```
 
 The `pi` solver derives pi's `provider/model-id` form from inspect's
@@ -157,11 +161,11 @@ def my_eval() -> Task:
 # pick the model at run time — inspect just needs *some* model spec, so
 # `mockllm/<id>` works as a placeholder. The bare `<id>` is what gets
 # forwarded to pi (and through llama-swap to the underlying server).
-just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
+just evals eval my-eval mockllm/qwen2.5-coder-7b --solver pi
 
 # override the URL without editing the eval:
 PI_BASE_URL=http://other-host:8080/v1 \
-  just eval my-eval mockllm/qwen2.5-coder-7b --solver pi
+  just evals eval my-eval mockllm/qwen2.5-coder-7b --solver pi
 ```
 
 ## File Patterns
@@ -176,7 +180,7 @@ archived: true         # optional
 ---
 
 Prose shown above the results. Relative images/PDFs work — they are
-optimized by Astro (markdown images) or copied by sync-assets (other links).
+optimized by Astro (markdown images) or copied by sync-evals (other links).
 ```
 
 ## Development Notes

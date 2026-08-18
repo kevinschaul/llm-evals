@@ -8,6 +8,7 @@ from inspect_ai.scorer import Score, Scorer, Target, mean, scorer
 from inspect_ai.solver import TaskState
 
 from agentic import (
+    capture_files,
     claude_code,
     cleanup_workdir,
     codex,
@@ -49,7 +50,8 @@ def check_output() -> Scorer:
     expected = _rows((HERE / "expected.csv").read_text())
 
     async def score(state: TaskState, target: Target) -> Score:
-        actual = _rows((state.store.get("captured_files") or {}).get(OUTPUT))
+        work_dir = state.store.get("work_dir")
+        actual = _rows(capture_files(work_dir, [OUTPUT])[OUTPUT] if work_dir else None)
         if actual == expected:
             return Score(
                 value=1.0,
@@ -84,6 +86,6 @@ def code_atom_cumulative_downloads() -> Task:
         dataset=MemoryDataset([Sample(input=PROMPT)]),
         setup=serve_site_archive(HERE / "site.tar.gz"),
         solver=require_solver(),
-        cleanup=cleanup_workdir(capture=[OUTPUT]),
+        cleanup=cleanup_workdir(),
         scorer=[git_diff(), check_output()],
     )

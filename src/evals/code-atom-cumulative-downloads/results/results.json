@@ -1,6 +1,6 @@
 {
  "eval": "code-atom-cumulative-downloads",
- "generated": "2026-07-08T17:13:54+00:00",
+ "generated": "2026-08-18T16:54:11+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -23,6 +23,38 @@
      "output": "",
      "passed": true,
      "duration_ms": 150575.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     },
+     "diff": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..67c0a03\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Dec 23,9,0,1\n+Jan 24,11,1,3\n+Feb 24,14,1,6\n+Mar 24,17,2,9\n+Apr 24,22,2,15\n+May 24,27,3,21\n+Jun 24,33,5,25\n+Jul 24,39,6,28\n+Aug 24,49,9,32\n+Sep 24,60,12,35\n+Oct 24,71,17,38\n+Nov 24,92,25,42\n+Dec 24,115,38,45\n+Jan 25,134,50,52\n+Feb 25,157,67,59\n+Mar 25,177,97,65\n+Apr 25,203,129,72\n+May 25,227,164,78\n+Jun 25,251,203,83\n+Jul 25,273,249,88\n+Aug 25,312,335,96\n+Sep 25,377,424,103\n+Oct 25,443,521,111\n+Nov 25,495,612,121\n+Dec 25,547,716,131\n+Jan 26,610,844,142\n+Feb 26,663,971,150\n+Mar 26,723,1151,163\n",
+     "checks": [
+      {
+       "name": "CSV matches expected",
+       "passed": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-opus-5",
+   "model": "claude-opus-5",
+   "full_model": "anthropic/claude-opus-5",
+   "solver": "claude_code",
+   "openrouter_provider": "",
+   "timestamp": "2026-08-18T16:18:00+00:00",
+   "pass_rate": 1.0,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 73715.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {
@@ -119,6 +151,38 @@
      "output": "",
      "passed": true,
      "duration_ms": 55113.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     },
+     "diff": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..67c0a03\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\n+Nov 23,7,0,1\n+Dec 23,9,0,1\n+Jan 24,11,1,3\n+Feb 24,14,1,6\n+Mar 24,17,2,9\n+Apr 24,22,2,15\n+May 24,27,3,21\n+Jun 24,33,5,25\n+Jul 24,39,6,28\n+Aug 24,49,9,32\n+Sep 24,60,12,35\n+Oct 24,71,17,38\n+Nov 24,92,25,42\n+Dec 24,115,38,45\n+Jan 25,134,50,52\n+Feb 25,157,67,59\n+Mar 25,177,97,65\n+Apr 25,203,129,72\n+May 25,227,164,78\n+Jun 25,251,203,83\n+Jul 25,273,249,88\n+Aug 25,312,335,96\n+Sep 25,377,424,103\n+Oct 25,443,521,111\n+Nov 25,495,612,121\n+Dec 25,547,716,131\n+Jan 26,610,844,142\n+Feb 26,663,971,150\n+Mar 26,723,1151,163\n",
+     "checks": [
+      {
+       "name": "CSV matches expected",
+       "passed": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-5.6-luna",
+   "model": "gpt-5.6-luna",
+   "full_model": "openai/gpt-5.6-luna",
+   "solver": "codex",
+   "openrouter_provider": "",
+   "timestamp": "2026-08-18T16:53:09+00:00",
+   "pass_rate": 1.0,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 59778.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {

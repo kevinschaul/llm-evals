@@ -2,6 +2,7 @@
 title: "Code: Rust feature"
 type: agentic
 blurb: Implement a feature in a real Rust CLI codebase.
+archived: true
 ---
 
 Compare how different agentic coding tools and models implement a rust feature. Works on my [`jump-start-tools`](https://github.com/kevinschaul/jump-start-tools) project.

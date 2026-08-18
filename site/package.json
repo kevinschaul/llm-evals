@@ -3,9 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "sync": "node scripts/sync-assets.mjs",
-    "dev": "npm run sync && astro dev --host 0.0.0.0",
-    "build": "npm run sync && astro build",
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {

@@ -47,7 +47,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import yaml
 from inspect_ai.log import read_eval_log
+
+ROOT = Path(__file__).parent
+EVALS_DIR = ROOT / "src" / "evals"
+LOGS_DIR = ROOT / "logs"
 
 # The git_diff scorer marks "a diff was captured", not "the agent succeeded".
 # It is lifted out of scores into the sample's diff field and never counts
@@ -350,21 +355,32 @@ def generate_results_json(log_files, eval_name, output_path):
     return data
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Export Inspect log results to results.json"
-    )
-    parser.add_argument(
-        "eval_name",
-        help="Name of the eval (e.g., 'grab-bag')"
-    )
-    parser.add_argument(
-        "--log-file",
-        help="Specific log file to export (default: all logs for eval)"
-    )
-    args = parser.parse_args()
+def frontmatter(index_md: Path) -> dict:
+    """Parse YAML frontmatter from an index.md file."""
+    text = index_md.read_text()
+    if not text.startswith("---"):
+        return {}
+    _, fm, _ = text.split("---", 2)
+    return yaml.safe_load(fm) or {}
 
-    eval_dir = Path("src/evals") / args.eval_name
+
+def active_evals() -> list[str]:
+    """Non-archived eval names (both agentic and non-agentic)."""
+    names = []
+    for eval_dir in sorted(EVALS_DIR.iterdir()):
+        index_md = eval_dir / "index.md"
+        if not index_md.is_file():
+            continue
+        fm = frontmatter(index_md)
+        if fm.get("archived"):
+            continue
+        names.append(eval_dir.name)
+    return names
+
+
+def extract_eval(eval_name: str, log_file: str | None) -> int:
+    """Extract results for a single eval. Returns exit code."""
+    eval_dir = EVALS_DIR / eval_name
     if not eval_dir.exists():
         print(f"❌ Error: Eval directory not found: {eval_dir}")
         return 1
@@ -372,20 +388,20 @@ def main():
     results_dir = eval_dir / "results"
     results_dir.mkdir(exist_ok=True)
 
-    logs_dir = Path("logs")
-    if args.log_file:
-        log_files = [Path(args.log_file)]
+    logs_dir = LOGS_DIR
+    if log_file:
+        log_files = [Path(log_file)]
     else:
-        log_files = list(logs_dir.glob(f"*{args.eval_name}*.eval"))
+        log_files = list(logs_dir.glob(f"*{eval_name}*.eval"))
 
     if not log_files:
-        print(f"❌ Error: No log files found for eval '{args.eval_name}'")
+        print(f"❌ Error: No log files found for eval '{eval_name}'")
         print(f"    Looked in: {logs_dir}")
         return 1
 
-    print(f"🔄 Extracting results for {args.eval_name} ({len(log_files)} log files)")
+    print(f"🔄 Extracting results for {eval_name} ({len(log_files)} log files)")
 
-    generate_results_json(log_files, args.eval_name, results_dir / "results.json")
+    generate_results_json(log_files, eval_name, results_dir / "results.json")
 
     # results.json replaces the old CSV outputs
     for stale in ("results.csv", "aggregate.csv"):
@@ -395,6 +411,37 @@ def main():
             print(f"🗑  Removed {stale_path}")
 
     return 0
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Export Inspect log results to results.json"
+    )
+    parser.add_argument(
+        "eval_name",
+        nargs="?",
+        default=None,
+        help="Name of the eval (e.g., 'grab-bag'); omit to extract all active evals",
+    )
+    parser.add_argument(
+        "--log-file",
+        help="Specific log file to export (default: all logs for eval)"
+    )
+    args = parser.parse_args()
+
+    if args.eval_name is None:
+        # Extract all active evals
+        eval_names = active_evals()
+        if not eval_names:
+            print("❌ No active evals found")
+            return 0
+        print(f"🔄 Extracting {len(eval_names)} active eval(s)")
+        for name in eval_names:
+            code = extract_eval(name, args.log_file)
+            if code != 0:
+                return code
+    else:
+        return extract_eval(args.eval_name, args.log_file)
 
 
 if __name__ == "__main__":

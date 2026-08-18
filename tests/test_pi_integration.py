@@ -9,9 +9,8 @@ What this proves that the unit tests don't:
     pi talk to the configured base URL,
   * pi's expected wire format (SSE streaming, lowercase tool names, OpenAI
     Chat Completions tool_calls) round-trips through `_parse_pi_event`,
-  * `cleanup_workdir()` captures a real diff before deletion and
-    `git_diff()` surfaces it (i.e. the cleanup-vs-scorer ordering fix
-    from inspect_ai.solver._plan.Plan.__call__ works on a real run).
+  * `git_diff()` reads a real diff from work_dir at score time, before
+    `cleanup_workdir()` deletes it (cleanup runs after scoring).
 
 Skipped when the `pi` CLI isn't installed.
 """
@@ -43,53 +42,113 @@ def _sse(payload: dict) -> bytes:
 
 
 def _stream_text(wfile, model: str, text: str) -> None:
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}}],
-    }))
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {"content": text}}],
-    }))
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}],
-    }))
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [
+                    {"index": 0, "delta": {"role": "assistant", "content": ""}}
+                ],
+            }
+        )
+    )
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [{"index": 0, "delta": {"content": text}}],
+            }
+        )
+    )
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}],
+            }
+        )
+    )
     wfile.write(b"data: [DONE]\n\n")
 
 
 def _stream_tool_call(wfile, model: str, tool_name: str, args_obj: dict) -> None:
     args_str = json.dumps(args_obj)
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {"role": "assistant"}}],
-    }))
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {
-            "tool_calls": [{
-                "index": 0, "id": "call_marker", "type": "function",
-                "function": {"name": tool_name, "arguments": ""},
-            }],
-        }}],
-    }))
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {
-            "tool_calls": [{"index": 0, "function": {"arguments": args_str}}],
-        }}],
-    }))
-    wfile.write(_sse({
-        "id": "x", "object": "chat.completion.chunk",
-        "created": int(time.time()), "model": model,
-        "choices": [{"index": 0, "delta": {}, "finish_reason": "tool_calls"}],
-    }))
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [{"index": 0, "delta": {"role": "assistant"}}],
+            }
+        )
+    )
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [
+                    {
+                        "index": 0,
+                        "delta": {
+                            "tool_calls": [
+                                {
+                                    "index": 0,
+                                    "id": "call_marker",
+                                    "type": "function",
+                                    "function": {"name": tool_name, "arguments": ""},
+                                }
+                            ],
+                        },
+                    }
+                ],
+            }
+        )
+    )
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [
+                    {
+                        "index": 0,
+                        "delta": {
+                            "tool_calls": [
+                                {"index": 0, "function": {"arguments": args_str}}
+                            ],
+                        },
+                    }
+                ],
+            }
+        )
+    )
+    wfile.write(
+        _sse(
+            {
+                "id": "x",
+                "object": "chat.completion.chunk",
+                "created": int(time.time()),
+                "model": model,
+                "choices": [{"index": 0, "delta": {}, "finish_reason": "tool_calls"}],
+            }
+        )
+    )
     wfile.write(b"data: [DONE]\n\n")
 
 
@@ -113,7 +172,7 @@ class _ScriptedHandler(BaseHTTPRequestHandler):
     """
 
     script_state: list = []  # set per-test in the fixture
-    bash_command: str = ""   # set per-test
+    bash_command: str = ""  # set per-test
 
     def do_POST(self):
         body = self.rfile.read(int(self.headers.get("Content-Length", "0")))
@@ -121,11 +180,15 @@ class _ScriptedHandler(BaseHTTPRequestHandler):
             req = json.loads(body)
         except Exception:
             req = {}
-        type(self).script_state.append({
-            "messages": req.get("messages", []),
-            "tools": [(t.get("function") or t).get("name")
-                      for t in (req.get("tools") or [])],
-        })
+        type(self).script_state.append(
+            {
+                "messages": req.get("messages", []),
+                "tools": [
+                    (t.get("function") or t).get("name")
+                    for t in (req.get("tools") or [])
+                ],
+            }
+        )
         n = len(type(self).script_state)
         model = req.get("model", "fake-model")
 
@@ -142,7 +205,9 @@ class _ScriptedHandler(BaseHTTPRequestHandler):
                 _stream_text(self.wfile, model, "no bash tool available")
                 return
             _stream_tool_call(
-                self.wfile, model, bash_name,
+                self.wfile,
+                model,
+                bash_name,
                 {"command": type(self).bash_command},
             )
         else:
@@ -150,10 +215,12 @@ class _ScriptedHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path.endswith("/models"):
-            data = json.dumps({
-                "object": "list",
-                "data": [{"id": "fake-model", "object": "model"}],
-            }).encode()
+            data = json.dumps(
+                {
+                    "object": "list",
+                    "data": [{"id": "fake-model", "object": "model"}],
+                }
+            ).encode()
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(data)))
@@ -204,6 +271,7 @@ class _StubModel:
 
 def _make_state():
     from inspect_ai.solver import TaskState
+
     return TaskState(
         model="mockllm/fake-model",
         sample_id="test",
@@ -226,7 +294,9 @@ pi_required = pytest.mark.skipif(
 
 @pi_required
 def test_pi_solver_e2e_against_fake_sse_server(
-    monkeypatch, tmp_path, fake_sse_server,
+    monkeypatch,
+    tmp_path,
+    fake_sse_server,
 ):
     base_url, requests_seen = fake_sse_server
 
@@ -236,9 +306,7 @@ def test_pi_solver_e2e_against_fake_sse_server(
     (fixture / "README").write_text("starter file\n")
 
     state = _make_state()
-    asyncio.run(
-        agentic.copy_fixture(fixture)(state, generate=lambda *a, **kw: None)
-    )
+    asyncio.run(agentic.copy_fixture(fixture)(state, generate=lambda *a, **kw: None))
     work_dir = state.store.get("work_dir")
     assert work_dir is not None and os.path.isdir(work_dir)
 
@@ -249,9 +317,7 @@ def test_pi_solver_e2e_against_fake_sse_server(
 
     # The bash command the fake server will tell pi to execute.
     marker_text = "hello from fake server"
-    _ScriptedHandler.bash_command = (
-        f"echo '{marker_text}' > marker.txt"
-    )
+    _ScriptedHandler.bash_command = f"echo '{marker_text}' > marker.txt"
 
     # Run the solver: it should hit the fake server, get a tool_call,
     # exec the bash command in work_dir, send the result back, and exit.
@@ -273,20 +339,19 @@ def test_pi_solver_e2e_against_fake_sse_server(
     # The fake server should have seen exactly two requests:
     #   1. initial prompt -> we returned a tool_call
     #   2. tool result -> we returned 'done'
-    assert len(requests_seen) == 2, (
-        f"expected 2 turns, got {len(requests_seen)}"
-    )
+    assert len(requests_seen) == 2, f"expected 2 turns, got {len(requests_seen)}"
     last_msgs = requests_seen[-1]["messages"]
     assert last_msgs[-1]["role"] == "tool", (
         f"final turn's last message should be the tool result; "
         f"got role={last_msgs[-1]['role']}"
     )
 
-    # Now run cleanup + scorer and verify the diff round-trips.
-    asyncio.run(agentic.cleanup_workdir()(state))
-    assert not os.path.exists(work_dir), "cleanup should remove work_dir"
-
+    # Score while work_dir is still live, then clean up (inspect-ai runs
+    # cleanup after scoring, so git_diff() must read the diff itself here).
     score = asyncio.run(agentic.git_diff()(state, target=None))
     assert score.value == "C"
     assert "marker.txt" in score.explanation
     assert marker_text in score.explanation
+
+    asyncio.run(agentic.cleanup_workdir()(state))
+    assert not os.path.exists(work_dir), "cleanup should remove work_dir"

@@ -41,16 +41,28 @@ async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]
 async def git_init_commit(work_dir: str) -> None:
     """Initialize a throwaway git repo so cleanup can capture a diff."""
     git_id = (
-        "-c", "user.email=eval@example.com",
-        "-c", "user.name=eval",
-        "-c", "commit.gpgsign=false",
-        "-c", "tag.gpgsign=false",
+        "-c",
+        "user.email=eval@example.com",
+        "-c",
+        "user.name=eval",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "tag.gpgsign=false",
     )
     for cmd in (
         ("git", "init", "-q", "-b", "main"),
         ("git", *git_id, "add", "."),
-        ("git", *git_id, "commit", "-q", "--allow-empty", "--no-gpg-sign",
-         "-m", "initial"),
+        (
+            "git",
+            *git_id,
+            "commit",
+            "-q",
+            "--allow-empty",
+            "--no-gpg-sign",
+            "-m",
+            "initial",
+        ),
     ):
         rc, out, err = await _run(*cmd, cwd=work_dir)
         if rc != 0:
@@ -226,7 +238,13 @@ def _rm_tree(path: Optional[str]) -> None:
         shutil.rmtree(path, ignore_errors=True)
 
 
-def _capture_files(work_dir: str, names: list[str]) -> dict[str, str | None]:
+def capture_files(work_dir: str, names: list[str]) -> dict[str, str | None]:
+    """Read named files (relative to work_dir) for use in a scorer.
+
+    Call this from a scorer, not cleanup: cleanup runs after scoring
+    (inspect-ai calls it once all solvers and scorers have finished for the
+    sample), so work_dir is still live at score time but gone by cleanup.
+    """
     captured = {}
     for name in names:
         path = Path(work_dir, name)
@@ -234,8 +252,10 @@ def _capture_files(work_dir: str, names: list[str]) -> dict[str, str | None]:
     return captured
 
 
-def cleanup_workdir(on_finish=None, capture=None):
-    """Capture eval artifacts and remove temp dirs before scoring runs."""
+def cleanup_workdir():
+    """Stop any server and remove temp dirs. Runs after scoring, so scorers
+    that need the agent's output must read state.store["work_dir"] directly
+    (e.g. via capture_files) rather than relying on this to stash it first."""
 
     async def cleanup(state: TaskState) -> None:
         loop = asyncio.get_event_loop()
@@ -246,19 +266,6 @@ def cleanup_workdir(on_finish=None, capture=None):
 
         work_dir = state.store.get("work_dir")
         if work_dir and os.path.exists(work_dir):
-            await _run("git", "add", "-N", ".", cwd=work_dir)
-            rc, out, err = await _run("git", "diff", cwd=work_dir)
-            if rc == 0:
-                state.store.set("diff", out.decode(errors="replace"))
-            else:
-                state.store.set(
-                    "diff",
-                    f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
-                )
-            if capture:
-                state.store.set("captured_files", _capture_files(work_dir, capture))
-            if on_finish:
-                await on_finish(state, work_dir)
             tmpdir = os.path.dirname(work_dir)
             await loop.run_in_executor(None, _rm_tree, tmpdir)
 
@@ -272,13 +279,18 @@ def cleanup_workdir(on_finish=None, capture=None):
 @scorer(metrics=[])
 def git_diff() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
-        diff = state.store.get("diff")
-        if diff is None:
+        work_dir = state.store.get("work_dir")
+        if not work_dir or not os.path.exists(work_dir):
+            return Score(value="I", explanation="(work_dir missing at score time)")
+
+        await _run("git", "add", "-N", ".", cwd=work_dir)
+        rc, out, err = await _run("git", "diff", cwd=work_dir)
+        if rc != 0:
             return Score(
                 value="I",
-                explanation="(no diff in state.store — did cleanup_workdir() run?)",
+                explanation=f"(git diff failed: rc={rc}, stderr={err.decode(errors='replace')})",
             )
-        return Score(value="C", explanation=diff)
+        return Score(value="C", explanation=out.decode(errors="replace"))
 
     return score
 
@@ -305,10 +317,12 @@ def claude_code() -> Solver:
         cmd = [
             "claude",
             "--print",
-            "--output-format", "stream-json",
+            "--output-format",
+            "stream-json",
             "--verbose",
             "--dangerously-skip-permissions",
-            "--model", model.name,
+            "--model",
+            model.name,
         ]
 
         system_message = "\n\n".join(
@@ -346,14 +360,18 @@ def codex() -> Solver:
             "exec",
             "--json",
             "--dangerously-bypass-approvals-and-sandbox",
-            "--model", model.name,
+            "--model",
+            model.name,
         ]
         if is_openrouter:
             cmd += ["-c", "model_provider=openrouter"]
         cmd.append(state.input_text)
 
         await _run_agent_cli(
-            cmd, env=os.environ.copy(), cwd=work_dir, state=state,
+            cmd,
+            env=os.environ.copy(),
+            cwd=work_dir,
+            state=state,
             parser=_parse_codex_event,
         )
         return state
@@ -520,9 +538,11 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
         cmd = [
             "pi",
             "-p",
-            "--mode", "json",
+            "--mode",
+            "json",
             "--no-session",
-            "--model", model_arg,
+            "--model",
+            model_arg,
         ]
 
         system_message = "\n\n".join(

@@ -1,3 +1,4 @@
+import csv
 from pathlib import Path
 
 from inspect_ai import Task, task
@@ -32,25 +33,23 @@ every raw agency file and writes a single consolidated CSV data/clean/consolidat
 EXPECTED_ROWS = 693
 
 
-async def _capture(state: TaskState, work_dir: str) -> None:
-    """Capture output file info into state.store before the work dir is deleted."""
-    root = Path(work_dir)
-    py_files = list(root.glob("**/*.py"))
-    state.store.set("py_files", [str(p.relative_to(root)) for p in py_files])
+def _consolidated_csv_rows(root: Path) -> int | None:
     csv_path = root / "data" / "clean" / "consolidated.csv"
-    if csv_path.exists():
-        import csv
-        with csv_path.open(newline="", errors="replace") as f:
-            state.store.set("consolidated_csv_rows", sum(1 for _ in csv.reader(f)) - 1)
-    else:
-        state.store.set("consolidated_csv_rows", None)
+    if not csv_path.exists():
+        return None
+    with csv_path.open(newline="", errors="replace") as f:
+        return sum(1 for _ in csv.reader(f)) - 1
 
 
 @scorer(metrics=[mean()])
 def check_output() -> Scorer:
     async def score(state: TaskState, target: Target) -> Score:
-        py_files = state.store.get("py_files", [])
-        csv_rows = state.store.get("consolidated_csv_rows")
+        work_dir = state.store.get("work_dir")
+        root = Path(work_dir) if work_dir else None
+        py_files = (
+            [str(p.relative_to(root)) for p in root.glob("**/*.py")] if root else []
+        )
+        csv_rows = _consolidated_csv_rows(root) if root else None
 
         checks = {
             "has_py_file": len(py_files) > 0,
@@ -58,9 +57,7 @@ def check_output() -> Scorer:
             "row_count_correct": csv_rows == EXPECTED_ROWS,
         }
         passed = sum(checks.values())
-        explanation = "\n".join(
-            f"{'✓' if v else '✗'} {k}" for k, v in checks.items()
-        )
+        explanation = "\n".join(f"{'✓' if v else '✗'} {k}" for k, v in checks.items())
         if csv_rows is not None and not checks["row_count_correct"]:
             explanation += f"\n  (got {csv_rows}, expected {EXPECTED_ROWS})"
         if py_files:
@@ -81,6 +78,6 @@ def code_consolidate_spreadsheets() -> Task:
         dataset=MemoryDataset([Sample(input=PROMPT)]),
         setup=copy_fixture(Path(__file__).parent / "fixture"),
         solver=require_solver(),
-        cleanup=cleanup_workdir(on_finish=_capture),
+        cleanup=cleanup_workdir(),
         scorer=[git_diff(), check_output()],
     )

@@ -13,16 +13,19 @@ just install
 
 ## Running the evals
 
-Run them all:
+Run every active eval against every active model:
 ```
-just eval-all
+uv run python run_evals.py
 ```
 
-Run a specific one:
+Narrow to one model, one eval, or both:
 ```
-just eval CONFIG
+uv run python run_evals.py --model anthropic/claude-sonnet-5
+uv run python run_evals.py --eval political-bias
+uv run python run_evals.py --model anthropic/claude-sonnet-5 --eval political-bias
 ```
-where CONFIG is "social-media-insults" for example.
+
+Pairs that already have a result are skipped automatically; add `--force` to rerun them anyway. Add `--dry-run` to see what would run without running it. See `uv run python run_evals.py --help` for all options (including `--solver` for agentic evals, and `--list` to see the active evals/models).
 
 To view the dashboard (the version published at [https://kschaul.com/llm-evals/](https://kschaul.com/llm-evals/)):
 ```
