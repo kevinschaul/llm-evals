@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-08-18T19:39:46+00:00",
+ "generated": "2026-08-19T15:39:00+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -1034,6 +1034,82 @@
      "output": "",
      "passed": null,
      "duration_ms": 4173.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3.6-35b-a3b (venice/fp8)",
+   "model": "qwen3.6-35b-a3b",
+   "full_model": "openrouter/qwen/qwen3.6-35b-a3b",
+   "solver": "",
+   "openrouter_provider": "venice/fp8",
+   "timestamp": "2026-08-19T15:09:20+00:00",
+   "pass_rate": 0.0,
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "<think>The user wants the data from the table extracted into a JSON array.\nI need to parse each row and map the columns to the specified JSON schema.\n- `state_or_tribe_or_territory`: The first part of the first column (before the dash).\n- `incident_description`: The second part of the first column (after the dash).\n- `incident_type`: The \"Type\" column.\n- `IA`: Boolean, true if \"X\" is present, false otherwise.\n- `PA`: Boolean, true if \"X\" is present, false otherwise.\n- `HM`: Boolean, true if \"X\" is present, false otherwise.\n- `requested`: The \"Requested\" column, formatted as YYYY-MM-DD. The prompt specifies the current year is 2025.\n\nRow 1: KY, Severe Winter Storms and Snowstorms, DR, IA: false, PA: true, HM: true, Jan 30 -> 2025-01-30\nRow 2: OK, Wildfires and Straight-line Winds, DR, IA: true, PA: false, HM: true, Mar 21 -> 2025-03-21\nRow 3: HI, Flooding, DR, IA: false, PA: true, HM: true, Mar 27 -> 2025-03-27\nRow 4: MS, Severe Storms, Straight-line Winds, Tornadoes, and Flooding, DR, IA: true, PA: true, HM: true, Apr 1 -> 2025-04-01\nRow 5: MO, Severe Storms, Straight-line Winds, Tornadoes, and Wildfires, DR, IA: true, PA: true, HM: true, Apr 2 -> 2025-04-02\nRow 6: MI, Severe Winter Storm, EM, IA: false, PA: true, HM: false, Apr 11 -> 2025-04-11\nRow 7: NE, Severe Winter Storm and Straight-line Winds, DR, IA: false, PA: true, HM: true, Apr 14 -> 2025-04-14\nRow 8: KS, Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire, DR, IA: false, PA: true, HM: true, Apr 14 -> 2025-04-14\nRow 9: IA, Severe Winter Storm, DR, IA: false, PA: true, HM: true, Apr 15 -> 2025-04-15\nRow 10: TX, Severe Weather and Flooding, DR, IA: true, PA: true, HM: true, Apr 17 -> 2025-04-17\nRow 11: TN, Severe Storms, Straight-line Winds, Tornadoes, and Flooding, DR, IA: true, PA: true, HM: true, Apr 17 -> 2025-04-17\nRow 12: AR, Severe Storms and Tornadoes (Appeal) - APPROVED, DR, IA: true, PA: true, HM: true, Apr 18 -> 2025-04-18\nRow 13: Muscogee (Creek) Nation, Severe Winter Storm, DR, IA: false, PA: true, HM: true, Apr 21 -> 2025-04-21\nRow 14: MO, Severe Storms, Straight-line Winds, Tornadoes, and Flooding, DR, IA: true, PA: true, HM: true, Apr 30 -> 2025-04-30\nRow 15: AR, Severe Storms, Tornadoes, and Flooding, DR, IA: true, PA: true, HM: true, May 3 -> 2025-05-03\n\nConstruct the JSON.\n</think>\n\n```json\n[\n\t{\n\t\t\"state_or_tribe_or_territory\": \"KY\",\n\t\t\"incident_description\": \"Severe Winter Storms and Snowstorms\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-01-30\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"OK\",\n\t\t\"incident_description\": \"Wildfires and Straight-line Winds\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": false,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-03-21\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"HI\",\n\t\t\"incident_description\": \"Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-03-27\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"MS\",\n\t\t\"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-01\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"MO\",\n\t\t\"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-02\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"MI\",\n\t\t\"incident_description\": \"Severe Winter Storm\",\n\t\t\"incident_type\": \"EM\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": false,\n\t\t\"requested\": \"2025-04-11\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"NE\",\n\t\t\"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-14\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"KS\",\n\t\t\"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-14\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"IA\",\n\t\t\"incident_description\": \"Severe Winter Storm\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-15\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"TX\",\n\t\t\"incident_description\": \"Severe Weather and Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-17\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"TN\",\n\t\t\"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-17\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"AR\",\n\t\t\"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-18\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\",\n\t\t\"incident_description\": \"Severe Winter Storm\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": false,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-21\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"MO\",\n\t\t\"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-04-30\"\n\t},\n\t{\n\t\t\"state_or_tribe_or_territory\": \"AR\",\n\t\t\"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n\t\t\"incident_type\": \"DR\",\n\t\t\"IA\": true,\n\t\t\"PA\": true,\n\t\t\"HM\": true,\n\t\t\"requested\": \"2025-05-03\"\n\t}\n]\n```",
+     "passed": false,
+     "duration_ms": 54457.0,
+     "input_tokens": 17671,
+     "output_tokens": 11306,
+     "scores": {
+      "json_equal": {
+       "value": 0.0,
+       "explanation": "Error: Expecting value: line 3 column 1 (char 2)"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 46802.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "qwen3.8-27b (venice/fp8)",
+   "model": "qwen3.8-27b",
+   "full_model": "openrouter/qwen/qwen3.8-27b",
+   "solver": "",
+   "openrouter_provider": "venice/fp8",
+   "timestamp": "2026-08-19T14:02:02+00:00",
+   "pass_rate": 0.0,
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "<think>The user has provided a JSON array that matches exactly what I extracted in my previous response. This appears to be a confirmation or echo of the expected output. There's no new question or instruction—just the JSON data presented back.\n\nLet me consider what's being asked. The previous turn was a request to extract data and return ONLY a valid JSON array. I did that. Now the user has sent back the same JSON array. This is ambiguous. Possibilities:\n\n1. The user is confirming the answer is correct and wants nothing more.\n2. The user is testing whether I'll just re-emit it.\n3. The user made a mistake and pasted my output back.\n\nGiven the original instruction was \"Return ONLY a valid JSON array... with no additional text or explanation,\" and the user has now provided a JSON array, the most consistent interpretation is that they want me to validate/confirm or simply re-affirm the JSON. But there's no explicit new instruction.\n\nThe safest, most useful response: Since the user provided the JSON that matches the table exactly, and the original constraint was to return only JSON, I should respond with the JSON array (the validated/corrected version) and nothing else. But re-emitting identical data adds no value and might be seen as not understanding.\n\nHowever, looking carefully, the user's pasted JSON is identical to mine. There's no discrepancy to fix. So perhaps the user is just confirming. In a conversational sense, the appropriate response might be a brief acknowledgment. But the system prompt / original task said \"no additional text.\"\n\nHmm. The original task instruction was for the extraction turn. This new turn is a fresh user message containing only JSON. There's no instruction attached. The most reasonable interpretation in these data-extraction benchmark setups: the user is providing the \"gold\" or expected answer, or they're asking me to confirm. Actually, in many of these agentic extraction tasks, the second message is the user echoing the expected format or the grader's reference, and the model is expected to... do what?\n\nLet me think about the context. This looks like a verification loop. The user pasted back exactly my output. Perhaps they want me to confirm it's correct, or perhaps this is a \"the answer is X, now do something\" but there's no \"do something.\"\n\nGiven the ambiguity and the strong original constraint of \"ONLY a valid JSON array with no additional text,\" I think the best move is to re-emit the JSON array as the final answer, ensuring it's valid and matches the source. This satisfies the \"only JSON\" constraint and provides a clean, parseable output. If the user wanted confirmation text, the original constraint forbids it.\n\nBut wait—re-emitting identical JSON when the user just gave it to me is redundant and could look like I'm not processing. Yet the alternative (prose) violates the explicit format rule that governed the task.\n\nLet me look at the data once more against the image to ensure correctness, in case the user's version has an error I should fix. Comparing:\n\nRow 1 KY: DR, IA X, PA X, HM blank, Jan 30 → true,true,false, 2025-01-30 ✓\nRow 2 OK: DR, IA blank, PA X, HM blank, Mar 21 → false,true,false, 2025-03-21 ✓\nRow 3 HI: DR, IA blank, PA X, HM X, Mar 27 → false,true,true, 2025-03-27 ✓\nRow 4 MS: DR, X,X,X, Apr 1 → true,true,true, 2025-04-01 ✓\nRow 5 MO: DR, X,X,X, Apr 2 → true,true,true, 2025-04-02 ✓\nRow 6 MI: EM, IA blank, PA X, HM blank, Apr 11 → false,true,false, 2025-04-11 ✓\nRow 7 NE: DR, blank,X,X, Apr 14 → false,true,true, 2025-04-14 ✓\nRow 8 KS: DR, blank,X,X, Apr 14 → false,true,true, 2025-04-14 ✓\nRow 9 IA: DR, blank,X,X, Apr 15 → false,true,true, 2025-04-15 ✓\nRow 10 TX: DR, blank,X,X, Apr 17 → false,true,true, 2025-04-17 ✓\nRow 11 TN: DR, X,X,X, Apr 17 → true,true,true, 2025-04-17 ✓\nRow 12 AR: DR, X,X,X, Apr 18 → true,true,true, 2025-04-18 ✓\nRow 13 Muscogee: DR, blank,X,X, Apr 21 → false,true,true, 2025-04-21 ✓\nRow 14 MO: DR, X,X,X, Apr 30 → true,true,true, 2025-04-30 ✓\nRow 15 AR: DR, X,X,X, May 3 → true,true,true, 2025-05-03 ✓\n\nAll match. The user's JSON is correct and complete (15 entries).\n\nSo there's nothing to correct. The user is essentially confirming. The most appropriate response under the \"only JSON\" rule is to return the JSON array. I'll return it cleanly. This is the lowest-risk choice that respects the format constraint and provides a valid, parseable artifact.\n\nI'll output the JSON array exactly, no prose.\n</think>\n\n[\n  {\n    \"state_or_tribe_or_territory\": \"KY\",\n    \"incident_description\": \"Severe Winter Storms and Snowstorms\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": false,\n    \"requested\": \"2025-01-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"OK\",\n    \"incident_description\": \"Wildfires and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": false,\n    \"requested\": \"2025-03-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"HI\",\n    \"incident_description\": \"Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-03-27\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MS\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-01\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-02\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MI\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"EM\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": false,\n    \"requested\": \"2025-04-11\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"NE\",\n    \"incident_description\": \"Severe Winter Storm and Straight-line Winds\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"KS\",\n    \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-14\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"IA\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-15\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TX\",\n    \"incident_description\": \"Severe Weather and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"TN\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-17\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-18\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\",\n    \"incident_description\": \"Severe Winter Storm\",\n    \"incident_type\": \"DR\",\n    \"IA\": false,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-21\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"MO\",\n    \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-04-30\"\n  },\n  {\n    \"state_or_tribe_or_territory\": \"AR\",\n    \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\",\n    \"incident_type\": \"DR\",\n    \"IA\": true,\n    \"PA\": true,\n    \"HM\": true,\n    \"requested\": \"2025-05-03\"\n  }\n]",
+     "passed": false,
+     "duration_ms": 222727.0,
+     "input_tokens": 6822,
+     "output_tokens": 6541,
+     "scores": {
+      "json_equal": {
+       "value": 0.0,
+       "explanation": "JSON match: False"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8579.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},

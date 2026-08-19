@@ -569,7 +569,13 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
         if system_message:
             cmd.extend(["--append-system-prompt", system_message])
 
-        cmd.append(state.input_text)
+        # pi runs inside a container (via pi-docker), so a URL pointing at
+        # 127.0.0.1 on the host (e.g. from serve_site_archive) isn't
+        # reachable as-is; host.docker.internal is Docker Desktop's existing
+        # route to host-bound ports, so no extra container network access
+        # needs to be granted.
+        prompt = state.input_text.replace("://127.0.0.1:", "://host.docker.internal:")
+        cmd.append(prompt)
 
         await _run_agent_cli(
             cmd, env=env, cwd=work_dir, state=state, parser=_parse_pi_event

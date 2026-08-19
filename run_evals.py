@@ -44,10 +44,14 @@ ACTIVE_MODELS = {
     #     "extra_args": ["-M", "provider={'order':['grok']}"],
     #     "solver": "pi",
     # },
-    # "openrouter/qwen/qwen3.8-27b": {
-    #     "extra_args": ["-M", "provider={'order':['venice/fp8']}"],
-    #     "solver": "pi",
-    # },
+    "openrouter/qwen/qwen3.8-27b": {
+        "extra_args": ["-M", "provider={'order':['venice/fp8']}"],
+        "solver": "pi",
+    },
+    "openrouter/qwen/qwen3.6-35b-a3b": {
+        "extra_args": ["-M", "provider={'order':['venice/fp8']}"],
+        "solver": "pi",
+    },
 }
 
 ROOT = Path(__file__).parent
