@@ -44,15 +44,32 @@ def _rows(text: str) -> list[list[str]]:
     ]
 
 
+def _same(a: list[str] | None, b: list[str] | None) -> bool:
+    """Row equality that treats numeric cells by value ("7" == "7.0")."""
+    if a is None or b is None:
+        return a is b
+    if len(a) != len(b):
+        return False
+    for x, y in zip(a, b):
+        try:
+            if float(x) != float(y):
+                return False
+        except ValueError:
+            if x != y:
+                return False
+    return True
+
+
 @scorer(metrics=[mean()])
 def check_output() -> Scorer:
-    """Pass iff the agent's CSV matches expected.csv row-for-row."""
+    """Pass iff the agent's CSV matches expected.csv row-for-row (numeric
+    cells compared by value, so float formatting doesn't matter)."""
     expected = _rows((HERE / "expected.csv").read_text())
 
     async def score(state: TaskState, target: Target) -> Score:
         work_dir = state.store.get("work_dir")
         actual = _rows(capture_files(work_dir, [OUTPUT])[OUTPUT] if work_dir else None)
-        if actual == expected:
+        if len(actual) == len(expected) and all(map(_same, actual, expected)):
             return Score(
                 value=1.0,
                 explanation="✓ CSV matches expected",
@@ -66,7 +83,7 @@ def check_output() -> Scorer:
         for i in range(max(len(expected), len(actual))):
             exp = expected[i] if i < len(expected) else None
             act = actual[i] if i < len(actual) else None
-            if exp != act:
+            if not _same(exp, act):
                 lines.append(f"  row {i}: expected {exp}, got {act}")
             if len(lines) >= 8:
                 lines.append("  ...")

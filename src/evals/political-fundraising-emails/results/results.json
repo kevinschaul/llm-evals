@@ -1,6 +1,6 @@
 {
  "eval": "political-fundraising-emails",
- "generated": "2026-08-19T15:39:03+00:00",
+ "generated": "2026-09-20T20:09:41+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -2103,6 +2103,1617 @@
      "passed": true,
      "duration_ms": 668.0,
      "input_tokens": 762,
+     "output_tokens": 7,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Powered By People"
+      }
+     },
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-fable-5-1",
+   "model": "claude-fable-5-1",
+   "full_model": "anthropic/claude-fable-5-1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T20:09:22+00:00",
+   "pass_rate": 0.97,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "Rick Scott for Florida",
+     "passed": true,
+     "duration_ms": 3742.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Rick Scott for Florida"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-2",
+     "output": "Rudy Giuliani Freedom Fund Legal Defense Trust",
+     "passed": true,
+     "duration_ms": 3586.0,
+     "input_tokens": 4,
+     "output_tokens": 27,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Rudy Giuliani Freedom Fund Legal Defense Trust"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-3",
+     "output": "the Collective PAC",
+     "passed": true,
+     "duration_ms": 2049.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "the Collective PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-4",
+     "output": "Nella for Senate",
+     "passed": true,
+     "duration_ms": 4139.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Nella for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-5",
+     "output": "Friends of Mark Warner",
+     "passed": true,
+     "duration_ms": 4063.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Mark Warner"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-6",
+     "output": "Harris for President",
+     "passed": true,
+     "duration_ms": 3103.0,
+     "input_tokens": 4,
+     "output_tokens": 7,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Harris for President"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-7",
+     "output": "Blackburn Tennessee Victory Fund",
+     "passed": true,
+     "duration_ms": 3084.0,
+     "input_tokens": 4,
+     "output_tokens": 18,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Blackburn Tennessee Victory Fund"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-8",
+     "output": "Lateefah for Congress",
+     "passed": true,
+     "duration_ms": 3542.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Lateefah for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-9",
+     "output": "NRCC",
+     "passed": true,
+     "duration_ms": 3212.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRCC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-10",
+     "output": "TEAM SCALISE",
+     "passed": true,
+     "duration_ms": 3266.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "TEAM SCALISE"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "Judge Joe McGraw for Congress",
+     "passed": true,
+     "duration_ms": 6635.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Judge Joe McGraw for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-12",
+     "output": "Friends of Tina Kotek",
+     "passed": true,
+     "duration_ms": 3081.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Tina Kotek"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-13",
+     "output": "Pramila for Congress",
+     "passed": true,
+     "duration_ms": 3413.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Pramila for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-14",
+     "output": "Magaziner for Congress",
+     "passed": true,
+     "duration_ms": 3870.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Magaziner for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-15",
+     "output": "Sharice for Congress",
+     "passed": true,
+     "duration_ms": 2929.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Sharice for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-16",
+     "output": "Friends of Jahana Hayes",
+     "passed": true,
+     "duration_ms": 3276.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Jahana Hayes"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-17",
+     "output": "David Pan for Congress 2024",
+     "passed": true,
+     "duration_ms": 3275.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "David Pan for Congress 2024"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-18",
+     "output": "Sharice for Congress",
+     "passed": true,
+     "duration_ms": 3308.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Sharice for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-19",
+     "output": "Theresa4Texas",
+     "passed": true,
+     "duration_ms": 3084.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Theresa4Texas"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-20",
+     "output": "Lisa Blunt Rochester for Senate",
+     "passed": true,
+     "duration_ms": 3221.0,
+     "input_tokens": 4,
+     "output_tokens": 18,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Lisa Blunt Rochester for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-21",
+     "output": "Friends of Jeremy Shaffer",
+     "passed": true,
+     "duration_ms": 3247.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Jeremy Shaffer"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-22",
+     "output": "David Pan for Congress 2024",
+     "passed": true,
+     "duration_ms": 3219.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "David Pan for Congress 2024"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-23",
+     "output": "Nancy Pelosi for Congress",
+     "passed": true,
+     "duration_ms": 11294.0,
+     "input_tokens": 4,
+     "output_tokens": 15,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Nancy Pelosi for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "Blue Amp Action PAC",
+     "passed": true,
+     "duration_ms": 2219.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Blue Amp Action PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-25",
+     "output": "Hung Cao for Virginia",
+     "passed": true,
+     "duration_ms": 3386.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Hung Cao for Virginia"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-26",
+     "output": "TEAM SCALISE",
+     "passed": true,
+     "duration_ms": 3254.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "TEAM SCALISE"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-27",
+     "output": "NRCC",
+     "passed": true,
+     "duration_ms": 3936.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRCC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-28",
+     "output": "Harris for President",
+     "passed": false,
+     "duration_ms": 3278.0,
+     "input_tokens": 4,
+     "output_tokens": 7,
+     "scores": {
+      "match": {
+       "value": "I",
+       "explanation": "Harris for President"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-29",
+     "output": "Hung Cao for Virginia",
+     "passed": true,
+     "duration_ms": 2949.0,
+     "input_tokens": 515,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Hung Cao for Virginia"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-30",
+     "output": "Donald J. Trump for President 2024, Inc.",
+     "passed": true,
+     "duration_ms": 3740.0,
+     "input_tokens": 4,
+     "output_tokens": 20,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Donald J. Trump for President 2024, Inc."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-31",
+     "output": "Adam for Colorado",
+     "passed": true,
+     "duration_ms": 3877.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Adam for Colorado"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-32",
+     "output": "Trump National Committee JFC, Inc.",
+     "passed": false,
+     "duration_ms": 3351.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "I",
+       "explanation": "Trump National Committee JFC, Inc."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-33",
+     "output": "UNITEDemocrats PAC",
+     "passed": true,
+     "duration_ms": 3730.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "UNITEDemocrats PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-34",
+     "output": "Trisha 4 Colorado",
+     "passed": true,
+     "duration_ms": 2964.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Trisha 4 Colorado"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-35",
+     "output": "UPRIGHT PAC",
+     "passed": true,
+     "duration_ms": 3244.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "UPRIGHT PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-36",
+     "output": "Steve Daines for Montana",
+     "passed": true,
+     "duration_ms": 4396.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Steve Daines for Montana"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-37",
+     "output": "Team Kennedy",
+     "passed": true,
+     "duration_ms": 2959.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Team Kennedy"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-38",
+     "output": "Democratic Legislative Campaign Committee",
+     "passed": true,
+     "duration_ms": 2769.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Democratic Legislative Campaign Committee"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-39",
+     "output": "Magaziner for Congress",
+     "passed": true,
+     "duration_ms": 3021.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Magaziner for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-40",
+     "output": "NRSC",
+     "passed": true,
+     "duration_ms": 3367.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRSC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-41",
+     "output": "NRSC",
+     "passed": true,
+     "duration_ms": 4128.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRSC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-42",
+     "output": "ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS",
+     "passed": true,
+     "duration_ms": 3973.0,
+     "input_tokens": 4,
+     "output_tokens": 32,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-43",
+     "output": "Trisha 4 Colorado",
+     "passed": true,
+     "duration_ms": 3436.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Trisha 4 Colorado"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-44",
+     "output": "Cooke for Congress",
+     "passed": true,
+     "duration_ms": 4917.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Cooke for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-45",
+     "output": "Rosen for Nevada",
+     "passed": true,
+     "duration_ms": 3359.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Rosen for Nevada"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-46",
+     "output": "Friends of Sherrod Brown",
+     "passed": true,
+     "duration_ms": 3822.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Sherrod Brown"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-47",
+     "output": "the NRSC",
+     "passed": true,
+     "duration_ms": 8999.0,
+     "input_tokens": 448,
+     "output_tokens": 7,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "the NRSC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-48",
+     "output": "Eric Sorensen for Illinois",
+     "passed": true,
+     "duration_ms": 3731.0,
+     "input_tokens": 4,
+     "output_tokens": 15,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Eric Sorensen for Illinois"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-49",
+     "output": "Tina Smith for Minnesota",
+     "passed": true,
+     "duration_ms": 3493.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Tina Smith for Minnesota"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-50",
+     "output": "Democratic Legislative Campaign Committee",
+     "passed": true,
+     "duration_ms": 4391.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Democratic Legislative Campaign Committee"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-51",
+     "output": "Blackburn Tennessee Victory Fund",
+     "passed": true,
+     "duration_ms": 4527.0,
+     "input_tokens": 4,
+     "output_tokens": 18,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Blackburn Tennessee Victory Fund"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-52",
+     "output": "Hovde for Wisconsin",
+     "passed": true,
+     "duration_ms": 3851.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Hovde for Wisconsin"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-53",
+     "output": "Troy Downing for Congress",
+     "passed": true,
+     "duration_ms": 3634.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Troy Downing for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-54",
+     "output": "Mike Johnson for Louisiana",
+     "passed": true,
+     "duration_ms": 4819.0,
+     "input_tokens": 426,
+     "output_tokens": 15,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Mike Johnson for Louisiana"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-55",
+     "output": "TURNING POINT ACTION",
+     "passed": true,
+     "duration_ms": 4553.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "TURNING POINT ACTION"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-56",
+     "output": "Bernie Moreno for Senate",
+     "passed": true,
+     "duration_ms": 3455.0,
+     "input_tokens": 323,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Bernie Moreno for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-57",
+     "output": "Susan Wild for Congress",
+     "passed": true,
+     "duration_ms": 4962.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Susan Wild for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-58",
+     "output": "Bob Casey for Senate Inc.",
+     "passed": true,
+     "duration_ms": 4290.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Bob Casey for Senate Inc."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-59",
+     "output": "Tim Scott for America",
+     "passed": true,
+     "duration_ms": 3566.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Tim Scott for America"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-60",
+     "output": "Emily Randall for Congress",
+     "passed": true,
+     "duration_ms": 5114.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Emily Randall for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-61",
+     "output": "the Collective PAC",
+     "passed": true,
+     "duration_ms": 4280.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "the Collective PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-62",
+     "output": "Bernie Moreno for Senate",
+     "passed": true,
+     "duration_ms": 3563.0,
+     "input_tokens": 329,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Bernie Moreno for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-63",
+     "output": "Trump National Committee JFC Inc.",
+     "passed": true,
+     "duration_ms": 3415.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Trump National Committee JFC Inc."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-64",
+     "output": "Ted Cruz for Senate",
+     "passed": true,
+     "duration_ms": 3840.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Ted Cruz for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-65",
+     "output": "Schiff for Senate",
+     "passed": true,
+     "duration_ms": 3811.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Schiff for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-66",
+     "output": "EMILYs List",
+     "passed": true,
+     "duration_ms": 3372.0,
+     "input_tokens": 4,
+     "output_tokens": 8,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "EMILYs List"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-67",
+     "output": "Dr. Kim Schrier for Congress",
+     "passed": true,
+     "duration_ms": 2953.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Dr. Kim Schrier for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-68",
+     "output": "Gillibrand for Senate",
+     "passed": true,
+     "duration_ms": 4088.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Gillibrand for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-69",
+     "output": "Debbie for Florida",
+     "passed": true,
+     "duration_ms": 2905.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Debbie for Florida"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-70",
+     "output": "Adam for Colorado",
+     "passed": true,
+     "duration_ms": 3627.0,
+     "input_tokens": 4,
+     "output_tokens": 10,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Adam for Colorado"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-71",
+     "output": "Nevada State Democratic Party",
+     "passed": true,
+     "duration_ms": 3035.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Nevada State Democratic Party"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-72",
+     "output": "Gloria for Tennessee",
+     "passed": true,
+     "duration_ms": 4426.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Gloria for Tennessee"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-73",
+     "output": "Turning Point Action",
+     "passed": true,
+     "duration_ms": 3061.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Turning Point Action"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-74",
+     "output": "Jessica Morse for Congress",
+     "passed": true,
+     "duration_ms": 3754.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Jessica Morse for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-75",
+     "output": "Ted Cruz for Senate",
+     "passed": false,
+     "duration_ms": 3063.0,
+     "input_tokens": 208,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "I",
+       "explanation": "Ted Cruz for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-76",
+     "output": "Alsobrooks for Senate",
+     "passed": true,
+     "duration_ms": 3248.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Alsobrooks for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-77",
+     "output": "Kaine for Virginia",
+     "passed": true,
+     "duration_ms": 3143.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Kaine for Virginia"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-78",
+     "output": "Democratic Legislative Campaign Committee",
+     "passed": true,
+     "duration_ms": 6584.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Democratic Legislative Campaign Committee"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-79",
+     "output": "NRCC",
+     "passed": true,
+     "duration_ms": 2603.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRCC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-80",
+     "output": "Michael B. Moore for South Carolina",
+     "passed": true,
+     "duration_ms": 2983.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Michael B. Moore for South Carolina"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-81",
+     "output": "Hung Cao for Virginia",
+     "passed": true,
+     "duration_ms": 3002.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Hung Cao for Virginia"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-82",
+     "output": "Bob Casey for Senate Inc.",
+     "passed": true,
+     "duration_ms": 3457.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Bob Casey for Senate Inc."
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-83",
+     "output": "Nancy Pelosi for Congress",
+     "passed": true,
+     "duration_ms": 3055.0,
+     "input_tokens": 4,
+     "output_tokens": 15,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Nancy Pelosi for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-84",
+     "output": "Missourians for Constitutional Freedom",
+     "passed": true,
+     "duration_ms": 3370.0,
+     "input_tokens": 4,
+     "output_tokens": 16,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Missourians for Constitutional Freedom"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-85",
+     "output": "Friends of Dick Durbin",
+     "passed": true,
+     "duration_ms": 3305.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Dick Durbin"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-86",
+     "output": "Kean for Congress Inc",
+     "passed": true,
+     "duration_ms": 2945.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Kean for Congress Inc"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-87",
+     "output": "Steve Garvey for U.S. Senate",
+     "passed": true,
+     "duration_ms": 3039.0,
+     "input_tokens": 4,
+     "output_tokens": 17,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Steve Garvey for U.S. Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-88",
+     "output": "NRSC",
+     "passed": true,
+     "duration_ms": 3429.0,
+     "input_tokens": 4,
+     "output_tokens": 6,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "NRSC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-89",
+     "output": "The Indiana Republican State Committee",
+     "passed": true,
+     "duration_ms": 3220.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "The Indiana Republican State Committee"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-90",
+     "output": "Ohio Democratic Party",
+     "passed": true,
+     "duration_ms": 2927.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Ohio Democratic Party"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-91",
+     "output": "Ted Cruz for Senate",
+     "passed": true,
+     "duration_ms": 3593.0,
+     "input_tokens": 265,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Ted Cruz for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-92",
+     "output": "Jared Moskowitz For Congress",
+     "passed": true,
+     "duration_ms": 3888.0,
+     "input_tokens": 4,
+     "output_tokens": 15,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Jared Moskowitz For Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-93",
+     "output": "Friends of Sherrod Brown",
+     "passed": true,
+     "duration_ms": 3686.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Sherrod Brown"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-94",
+     "output": "Defeat Boebert PAC",
+     "passed": true,
+     "duration_ms": 2939.0,
+     "input_tokens": 4,
+     "output_tokens": 13,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Defeat Boebert PAC"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-95",
+     "output": "Mark Takano For Congress",
+     "passed": true,
+     "duration_ms": 3970.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Mark Takano For Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-96",
+     "output": "John James for Michigan",
+     "passed": true,
+     "duration_ms": 2939.0,
+     "input_tokens": 4,
+     "output_tokens": 9,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "John James for Michigan"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-97",
+     "output": "Friends of Sherrod Brown",
+     "passed": true,
+     "duration_ms": 3022.0,
+     "input_tokens": 4,
+     "output_tokens": 14,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Friends of Sherrod Brown"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-98",
+     "output": "Caraveo for Congress",
+     "passed": true,
+     "duration_ms": 3056.0,
+     "input_tokens": 4,
+     "output_tokens": 11,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Caraveo for Congress"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-99",
+     "output": "Gillibrand for Senate",
+     "passed": true,
+     "duration_ms": 2933.0,
+     "input_tokens": 4,
+     "output_tokens": 12,
+     "scores": {
+      "match": {
+       "value": "C",
+       "explanation": "Gillibrand for Senate"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-100",
+     "output": "Powered By People",
+     "passed": true,
+     "duration_ms": 2878.0,
+     "input_tokens": 4,
      "output_tokens": 7,
      "scores": {
       "match": {

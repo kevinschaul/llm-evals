@@ -1,6 +1,6 @@
 {
  "eval": "code-atom-cumulative-downloads",
- "generated": "2026-08-19T15:38:57+00:00",
+ "generated": "2026-09-20T20:44:25+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -9,6 +9,38 @@
   }
  ],
  "runs": [
+  {
+   "provider_id": "claude-fable-5-1",
+   "model": "claude-fable-5-1",
+   "full_model": "anthropic/claude-fable-5-1",
+   "solver": "claude_code",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T20:43:18+00:00",
+   "pass_rate": 1.0,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": true,
+     "duration_ms": 64645.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {
+      "check_output": {
+       "value": 1.0,
+       "explanation": "✓ CSV matches expected"
+      }
+     },
+     "diff": "diff --git a/cumulative_downloads.csv b/cumulative_downloads.csv\nnew file mode 100644\nindex 0000000..c5c046b\n--- /dev/null\n+++ b/cumulative_downloads.csv\n@@ -0,0 +1,30 @@\n+period,usa,china,eu\r\n+Nov 23,7,0,1\r\n+Dec 23,9,0,1\r\n+Jan 24,11,1,3\r\n+Feb 24,14,1,6\r\n+Mar 24,17,2,9\r\n+Apr 24,22,2,15\r\n+May 24,27,3,21\r\n+Jun 24,33,5,25\r\n+Jul 24,39,6,28\r\n+Aug 24,49,9,32\r\n+Sep 24,60,12,35\r\n+Oct 24,71,17,38\r\n+Nov 24,92,25,42\r\n+Dec 24,115,38,45\r\n+Jan 25,134,50,52\r\n+Feb 25,157,67,59\r\n+Mar 25,177,97,65\r\n+Apr 25,203,129,72\r\n+May 25,227,164,78\r\n+Jun 25,251,203,83\r\n+Jul 25,273,249,88\r\n+Aug 25,312,335,96\r\n+Sep 25,377,424,103\r\n+Oct 25,443,521,111\r\n+Nov 25,495,612,121\r\n+Dec 25,547,716,131\r\n+Jan 26,610,844,142\r\n+Feb 26,663,971,150\r\n+Mar 26,723,1151,163\r\n",
+     "checks": [
+      {
+       "name": "CSV matches expected",
+       "passed": true
+      }
+     ]
+    }
+   ]
+  },
   {
    "provider_id": "claude-haiku-4-5",
    "model": "claude-haiku-4-5",

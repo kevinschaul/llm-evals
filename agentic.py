@@ -27,6 +27,17 @@ from inspect_ai.solver import Solver, TaskState, Generate, solver
 from inspect_ai.util import span
 
 
+FENCE_CONFIG = Path(__file__).parent / "fence.json"
+# Fixed so it can be listed in fence.json's allowLocalOutboundPorts; this means
+# only one served-site eval can run at a time.
+SITE_PORT = 8765
+
+
+def _fence(cmd: list[str]) -> list[str]:
+    """Wrap an agent command in the fence sandbox using the project's fence.json."""
+    return ["fence", "--settings", str(FENCE_CONFIG), "--", *cmd]
+
+
 async def _run(*cmd: str, cwd: Optional[str] = None) -> tuple[int, bytes, bytes]:
     process = await asyncio.create_subprocess_exec(
         *cmd,
@@ -168,9 +179,13 @@ async def _serve_site_dir(
     os.makedirs(work_dir)
     async with span("serve_site"):
         await git_init_commit(work_dir)
+        port = SITE_PORT
         with socket.socket() as s:
-            s.bind(("127.0.0.1", 0))
-            port = s.getsockname()[1]
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try:
+                s.bind(("127.0.0.1", port))
+            except OSError as e:
+                raise RuntimeError(f"Port {port} is already in use: {e}") from e
         url = f"http://127.0.0.1:{port}/"
         proc = subprocess.Popen(
             [
@@ -333,13 +348,20 @@ def claude_code() -> Solver:
         cmd.append(state.input_text)
 
         env = os.environ.copy()
-        env.pop("ANTHROPIC_API_KEY", None)
+        # Default to the CLI's subscription login; set AGENTIC_USE_API_KEY=1 to
+        # bill ANTHROPIC_API_KEY instead.
+        if not os.environ.get("AGENTIC_USE_API_KEY"):
+            env.pop("ANTHROPIC_API_KEY", None)
         for key in list(env.keys()):
             if key == "CLAUDECODE" or key.startswith("CLAUDE_CODE_"):
                 del env[key]
 
         await _run_agent_cli(
-            cmd, env=env, cwd=work_dir, state=state, parser=_parse_claude_event
+            _fence(cmd),
+            env=env,
+            cwd=work_dir,
+            state=state,
+            parser=_parse_claude_event,
         )
         return state
 
@@ -368,7 +390,7 @@ def codex() -> Solver:
         cmd.append(state.input_text)
 
         await _run_agent_cli(
-            cmd,
+            _fence(cmd),
             env=os.environ.copy(),
             cwd=work_dir,
             state=state,
@@ -431,9 +453,10 @@ async def _run_agent_cli(cmd, env, cwd, state, parser) -> None:
     await process.wait()
 
     if process.returncode != 0:
+        agent = cmd[cmd.index("--") + 1] if cmd[0] == "fence" else cmd[0]
         error_lines = stderr_lines + event_error_lines
         raise RuntimeError(
-            f"Agent CLI failed (exit {process.returncode}, cmd={cmd[0]}):\n"
+            f"Agent CLI failed (exit {process.returncode}, cmd={agent}):\n"
             + "\n".join(error_lines)
         )
 
@@ -554,7 +577,7 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
                 state.store.set("pi_cfg_dir", cfg_dir)
 
         cmd = [
-            "pi-docker",
+            "pi",
             "-p",
             "--mode",
             "json",
@@ -569,16 +592,10 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
         if system_message:
             cmd.extend(["--append-system-prompt", system_message])
 
-        # pi runs inside a container (via pi-docker), so a URL pointing at
-        # 127.0.0.1 on the host (e.g. from serve_site_archive) isn't
-        # reachable as-is; host.docker.internal is Docker Desktop's existing
-        # route to host-bound ports, so no extra container network access
-        # needs to be granted.
-        prompt = state.input_text.replace("://127.0.0.1:", "://host.docker.internal:")
-        cmd.append(prompt)
+        cmd.append(state.input_text)
 
         await _run_agent_cli(
-            cmd, env=env, cwd=work_dir, state=state, parser=_parse_pi_event
+            _fence(cmd), env=env, cwd=work_dir, state=state, parser=_parse_pi_event
         )
         return state
 

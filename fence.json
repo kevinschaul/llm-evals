@@ -1,0 +1,8 @@
+{
+  "extends": "code",
+  "runtimeExecPolicy": "argv",
+  "network": {
+    "allowLocalOutbound": true,
+    "allowLocalOutboundPorts": [1112, 8765]
+  }
+}

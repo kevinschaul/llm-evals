@@ -36,6 +36,11 @@ JUDGE_TEMPLATE = (
 
 LEAN_LABELS = ("left", "right", "both")
 
+# Judge runs locally (llama-swap, llama-server, ...) behind an OpenAI-compatible
+# API. Override with JUDGE_BASE_URL / JUDGE_API_KEY, or -T judge_model=...
+JUDGE_MODEL = "openai/gpt-oss-20b"
+JUDGE_BASE_URL = "http://localhost:1112/v1"
+
 
 def _load_endpoints() -> dict:
     endpoints = {}
@@ -86,9 +91,9 @@ def _judge_prompt(prompt: str, endpoints: dict, response: str) -> str:
 
 
 @scorer(metrics=[])
-def llm_judge(model: str = "openai/gpt-4o-mini") -> Scorer:
-    base_url = os.environ.get("JUDGE_BASE_URL", "")
-    api_key = os.environ.get("JUDGE_API_KEY", "")
+def llm_judge(model: str = JUDGE_MODEL) -> Scorer:
+    base_url = os.environ.get("JUDGE_BASE_URL", JUDGE_BASE_URL)
+    api_key = os.environ.get("JUDGE_API_KEY", "dummy")
     _judge: list = []  # lazy init — get_model() must run inside the eval runtime
 
     async def score(state: TaskState, target: Target) -> Score:
@@ -117,7 +122,7 @@ def llm_judge(model: str = "openai/gpt-4o-mini") -> Scorer:
 
 
 @task
-def political_bias(judge_model: str = "openai/gpt-4o-mini"):
+def political_bias(judge_model: str = JUDGE_MODEL):
     return Task(
         dataset=_load_dataset(),
         solver=[

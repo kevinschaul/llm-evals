@@ -24,6 +24,10 @@ import yaml
 # always applied for that model (e.g. pinning an OpenRouter sub-provider);
 # `solver` is the default agentic-eval harness for that model.
 ACTIVE_MODELS = {
+    "anthropic/claude-fable-5-1": {
+        "extra_args": [],
+        "solver": "claude_code",
+    },
     "anthropic/claude-opus-5": {
         "extra_args": [],
         "solver": "claude_code",
@@ -36,6 +40,10 @@ ACTIVE_MODELS = {
         "extra_args": [],
         "solver": "codex",
     },
+    # "openai/gpt-6-astra": {
+    #     "extra_args": [],
+    #     "solver": "codex",
+    # },
     # "google/gemini-3.1-pro-preview": {
     #     "extra_args": [],
     #     "solver": "pi",

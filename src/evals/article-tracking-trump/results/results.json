@@ -1,6 +1,6 @@
 {
  "eval": "article-tracking-trump",
- "generated": "2026-08-19T15:38:57+00:00",
+ "generated": "2026-09-20T19:35:32+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -4210,6 +4210,3393 @@
        "explanation": "true"
       }
      },
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-fable-5-1",
+   "model": "claude-fable-5-1",
+   "full_model": "anthropic/claude-fable-5-1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T19:34:57+00:00",
+   "pass_rate": 0.715,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3276.0,
+     "input_tokens": 456,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-2",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3797.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-3",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4208.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-4",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 4968.0,
+     "input_tokens": 422,
+     "output_tokens": 127,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-5",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4491.0,
+     "input_tokens": 304,
+     "output_tokens": 98,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-6",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 5776.0,
+     "input_tokens": 4,
+     "output_tokens": 221,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-7",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 9366.0,
+     "input_tokens": 231,
+     "output_tokens": 468,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-8",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3144.0,
+     "input_tokens": 413,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-9",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3682.0,
+     "input_tokens": 222,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-10",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3614.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4854.0,
+     "input_tokens": 4,
+     "output_tokens": 123,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-12",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3283.0,
+     "input_tokens": 317,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-13",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 3295.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-14",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 6047.0,
+     "input_tokens": 4,
+     "output_tokens": 157,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-15",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3357.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-16",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3360.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-17",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3583.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-18",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3540.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-19",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3545.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-20",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 5155.0,
+     "input_tokens": 279,
+     "output_tokens": 131,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-21",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3029.0,
+     "input_tokens": 485,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-22",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2890.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-23",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2892.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4217.0,
+     "input_tokens": 360,
+     "output_tokens": 108,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-25",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2922.0,
+     "input_tokens": 221,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-26",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 3754.0,
+     "input_tokens": 4,
+     "output_tokens": 58,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-27",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4057.0,
+     "input_tokens": 358,
+     "output_tokens": 113,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-28",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2791.0,
+     "input_tokens": 205,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-29",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4030.0,
+     "input_tokens": 4,
+     "output_tokens": 90,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-30",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2827.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-31",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2868.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-32",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2698.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-33",
+     "output": "<think></think>true",
+     "passed": true,
+     "duration_ms": 7511.0,
+     "input_tokens": 380,
+     "output_tokens": 297,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-34",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4935.0,
+     "input_tokens": 4,
+     "output_tokens": 167,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-35",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2828.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-36",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2806.0,
+     "input_tokens": 408,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-37",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2672.0,
+     "input_tokens": 281,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-38",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4037.0,
+     "input_tokens": 506,
+     "output_tokens": 119,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-39",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2896.0,
+     "input_tokens": 290,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-40",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 5712.0,
+     "input_tokens": 383,
+     "output_tokens": 126,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-41",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 5809.0,
+     "input_tokens": 497,
+     "output_tokens": 168,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-42",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3067.0,
+     "input_tokens": 179,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-43",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3275.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-44",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 3773.0,
+     "input_tokens": 452,
+     "output_tokens": 116,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-45",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3339.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-46",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 5443.0,
+     "input_tokens": 4,
+     "output_tokens": 167,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-47",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3026.0,
+     "input_tokens": 248,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-48",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 5564.0,
+     "input_tokens": 422,
+     "output_tokens": 202,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-49",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 3819.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-50",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2839.0,
+     "input_tokens": 319,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-51",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3246.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-52",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3289.0,
+     "input_tokens": 237,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-53",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 8105.0,
+     "input_tokens": 237,
+     "output_tokens": 380,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-54",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2990.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-55",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3112.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-56",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2954.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-57",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3580.0,
+     "input_tokens": 365,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-58",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3065.0,
+     "input_tokens": 510,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-59",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3648.0,
+     "input_tokens": 240,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-60",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3200.0,
+     "input_tokens": 408,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-61",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 5724.0,
+     "input_tokens": 4,
+     "output_tokens": 212,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-62",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3169.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-63",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2982.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-64",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4136.0,
+     "input_tokens": 4,
+     "output_tokens": 75,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-65",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2843.0,
+     "input_tokens": 442,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-66",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2093.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-67",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 5191.0,
+     "input_tokens": 361,
+     "output_tokens": 159,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-68",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2985.0,
+     "input_tokens": 490,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-69",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3300.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-70",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2860.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-71",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3463.0,
+     "input_tokens": 286,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-72",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3576.0,
+     "input_tokens": 378,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-73",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3656.0,
+     "input_tokens": 369,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-74",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2869.0,
+     "input_tokens": 427,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-75",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2883.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-76",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2926.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-77",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2684.0,
+     "input_tokens": 382,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-78",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 15691.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-79",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2632.0,
+     "input_tokens": 330,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-80",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2570.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-81",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 15621.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-82",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 15563.0,
+     "input_tokens": 379,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-83",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2939.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-84",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2954.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-85",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2861.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-86",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 6123.0,
+     "input_tokens": 455,
+     "output_tokens": 324,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-87",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2568.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-88",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4574.0,
+     "input_tokens": 4,
+     "output_tokens": 165,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-89",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2936.0,
+     "input_tokens": 265,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-90",
+     "output": "<think></think>true",
+     "passed": true,
+     "duration_ms": 4852.0,
+     "input_tokens": 4,
+     "output_tokens": 156,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-91",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3023.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-92",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2692.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-93",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 16286.0,
+     "input_tokens": 4,
+     "output_tokens": 100,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-94",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3067.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-95",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 14980.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-96",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2885.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-97",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2746.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-98",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 3872.0,
+     "input_tokens": 261,
+     "output_tokens": 101,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-99",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2903.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-100",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 4709.0,
+     "input_tokens": 298,
+     "output_tokens": 165,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-101",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4555.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-102",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 7998.0,
+     "input_tokens": 298,
+     "output_tokens": 301,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-103",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4348.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-104",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3307.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-105",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 4527.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-106",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3118.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-107",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2880.0,
+     "input_tokens": 217,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-108",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 14479.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-109",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3922.0,
+     "input_tokens": 511,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-110",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4916.0,
+     "input_tokens": 4,
+     "output_tokens": 50,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-111",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4205.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-112",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4463.0,
+     "input_tokens": 364,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-113",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 4153.0,
+     "input_tokens": 391,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-114",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 4272.0,
+     "input_tokens": 328,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-115",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 5084.0,
+     "input_tokens": 319,
+     "output_tokens": 92,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-116",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4194.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-117",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4508.0,
+     "input_tokens": 4,
+     "output_tokens": 64,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-118",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3776.0,
+     "input_tokens": 221,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-119",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 4377.0,
+     "input_tokens": 331,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-120",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4331.0,
+     "input_tokens": 304,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-121",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 4075.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-122",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4185.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-123",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 14295.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-124",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3766.0,
+     "input_tokens": 366,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-125",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 4113.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-126",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 4178.0,
+     "input_tokens": 364,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-127",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 5910.0,
+     "input_tokens": 4,
+     "output_tokens": 155,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-128",
+     "output": "<think></think>true",
+     "passed": true,
+     "duration_ms": 11668.0,
+     "input_tokens": 4,
+     "output_tokens": 255,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-129",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4676.0,
+     "input_tokens": 462,
+     "output_tokens": 91,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-130",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 5678.0,
+     "input_tokens": 491,
+     "output_tokens": 145,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-131",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 3003.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-132",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3888.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-133",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 4205.0,
+     "input_tokens": 154,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-134",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2810.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-135",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2861.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-136",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4445.0,
+     "input_tokens": 197,
+     "output_tokens": 116,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-137",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 8405.0,
+     "input_tokens": 310,
+     "output_tokens": 327,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-138",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3801.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-139",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2825.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-140",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 2807.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-141",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 5890.0,
+     "input_tokens": 353,
+     "output_tokens": 153,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-142",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2947.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-143",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2947.0,
+     "input_tokens": 276,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-144",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3059.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-145",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3276.0,
+     "input_tokens": 428,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-146",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2911.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-147",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 2807.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-148",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2824.0,
+     "input_tokens": 375,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-149",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 5647.0,
+     "input_tokens": 4,
+     "output_tokens": 244,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-150",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 6024.0,
+     "input_tokens": 4,
+     "output_tokens": 305,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-151",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2811.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-152",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2810.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-153",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2928.0,
+     "input_tokens": 273,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-154",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2871.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-155",
+     "output": "<think></think>true",
+     "passed": true,
+     "duration_ms": 6159.0,
+     "input_tokens": 330,
+     "output_tokens": 335,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-156",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2838.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-157",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 12948.0,
+     "input_tokens": 436,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-158",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2728.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-159",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2678.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-160",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2749.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-161",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3070.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-162",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2981.0,
+     "input_tokens": 367,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-163",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2869.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-164",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2821.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-165",
+     "output": "false",
+     "passed": false,
+     "duration_ms": 2904.0,
+     "input_tokens": 298,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-166",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3315.0,
+     "input_tokens": 340,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-167",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 4194.0,
+     "input_tokens": 4,
+     "output_tokens": 138,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-168",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3243.0,
+     "input_tokens": 512,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-169",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3249.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-170",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 4156.0,
+     "input_tokens": 4,
+     "output_tokens": 111,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-171",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2680.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-172",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2707.0,
+     "input_tokens": 494,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-173",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2906.0,
+     "input_tokens": 354,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-174",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 4476.0,
+     "input_tokens": 343,
+     "output_tokens": 134,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-175",
+     "output": "<think></think>true",
+     "passed": true,
+     "duration_ms": 5196.0,
+     "input_tokens": 4,
+     "output_tokens": 156,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-176",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2749.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-177",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3070.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-178",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2996.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-179",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2836.0,
+     "input_tokens": 406,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-180",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 7482.0,
+     "input_tokens": 4,
+     "output_tokens": 374,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-181",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2915.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-182",
+     "output": "<think></think>false",
+     "passed": false,
+     "duration_ms": 5945.0,
+     "input_tokens": 4,
+     "output_tokens": 282,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-183",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 4288.0,
+     "input_tokens": 360,
+     "output_tokens": 132,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-184",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 2938.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-185",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3786.0,
+     "input_tokens": 355,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-186",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3156.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-187",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2756.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-188",
+     "output": "true",
+     "passed": false,
+     "duration_ms": 3294.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-189",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3177.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-190",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2970.0,
+     "input_tokens": 272,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-191",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3265.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-192",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 2730.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-193",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3121.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-194",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3441.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-195",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 3009.0,
+     "input_tokens": 4,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-196",
+     "output": "false",
+     "passed": true,
+     "duration_ms": 3168.0,
+     "input_tokens": 161,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-197",
+     "output": "<think></think>true",
+     "passed": false,
+     "duration_ms": 5325.0,
+     "input_tokens": 339,
+     "output_tokens": 171,
+     "scores": {
+      "includes": {
+       "value": "I",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-198",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 3870.0,
+     "input_tokens": 210,
+     "output_tokens": 80,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-199",
+     "output": "<think></think>false",
+     "passed": true,
+     "duration_ms": 3765.0,
+     "input_tokens": 303,
+     "output_tokens": 114,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "false"
+      }
+     },
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-200",
+     "output": "true",
+     "passed": true,
+     "duration_ms": 2730.0,
+     "input_tokens": 293,
+     "output_tokens": 3,
+     "scores": {
+      "includes": {
+       "value": "C",
+       "explanation": "true"
+      }
+     },
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-fable-5.1",
+   "model": "claude-fable-5.1",
+   "full_model": "anthropic/claude-fable-5.1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T19:34:27+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9708.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-4",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9701.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-6",
+     "output": "",
+     "passed": null,
+     "duration_ms": 10528.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-10",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9692.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9691.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-12",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9690.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-13",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8743.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-14",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9688.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-15",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9685.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-16",
+     "output": "",
+     "passed": null,
+     "duration_ms": 9685.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-19",
+     "output": "",
+     "passed": null,
+     "duration_ms": 11819.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-20",
+     "output": "",
+     "passed": null,
+     "duration_ms": 11818.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8803.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-25",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8802.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-26",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1306.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
      "diff": null,
      "checks": []
     }

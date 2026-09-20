@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-08-19T15:39:00+00:00",
+ "generated": "2026-09-20T19:35:53+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -122,6 +122,72 @@
        "explanation": "Matched 0 of 15 incidents"
       }
      },
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-fable-5-1",
+   "model": "claude-fable-5-1",
+   "full_model": "anthropic/claude-fable-5-1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T19:35:35+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "[{\"state_or_tribe_or_territory\": \"KY\", \"incident_description\": \"Severe Winter Storms and Snowstorms\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-01-30\"},\n{\"state_or_tribe_or_territory\": \"OK\", \"incident_description\": \"Wildfires and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": false, \"HM\": true, \"requested\": \"2025-03-21\"},\n{\"state_or_tribe_or_territory\": \"HI\", \"incident_description\": \"Flooding\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-03-27\"},\n{\"state_or_tribe_or_territory\": \"MS\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-01\"},\n{\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Wildfires\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-02\"},\n{\"state_or_tribe_or_territory\": \"MI\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"EM\", \"IA\": false, \"PA\": true, \"HM\": false, \"requested\": \"2025-04-11\"},\n{\"state_or_tribe_or_territory\": \"NE\", \"incident_description\": \"Severe Winter Storm and Straight-line Winds\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"},\n{\"state_or_tribe_or_territory\": \"KS\", \"incident_description\": \"Severe Winter Storm, Straight-line Winds, Flooding, and Wildfire\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-14\"},\n{\"state_or_tribe_or_territory\": \"IA\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-15\"},\n{\"state_or_tribe_or_territory\": \"TX\", \"incident_description\": \"Severe Weather and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"},\n{\"state_or_tribe_or_territory\": \"TN\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-17\"},\n{\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms and Tornadoes (Appeal) - APPROVED\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-18\"},\n{\"state_or_tribe_or_territory\": \"Muscogee (Creek) Nation\", \"incident_description\": \"Severe Winter Storm\", \"incident_type\": \"DR\", \"IA\": false, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-21\"},\n{\"state_or_tribe_or_territory\": \"MO\", \"incident_description\": \"Severe Storms, Straight-line Winds, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-04-30\"},\n{\"state_or_tribe_or_territory\": \"AR\", \"incident_description\": \"Severe Storms, Tornadoes, and Flooding\", \"incident_type\": \"DR\", \"IA\": true, \"PA\": true, \"HM\": true, \"requested\": \"2025-05-03\"}]",
+     "passed": null,
+     "duration_ms": 14941.0,
+     "input_tokens": 4,
+     "output_tokens": 1326,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 273.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "claude-fable-5.1",
+   "model": "claude-fable-5.1",
+   "full_model": "anthropic/claude-fable-5.1",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-20T19:34:49+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-jpg",
+     "output": "",
+     "passed": null,
+     "duration_ms": 1332.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-pdf",
+     "output": "",
+     "passed": null,
+     "duration_ms": 275.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
      "diff": null,
      "checks": []
     }
