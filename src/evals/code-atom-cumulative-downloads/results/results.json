@@ -1,6 +1,6 @@
 {
  "eval": "code-atom-cumulative-downloads",
- "generated": "2026-09-20T20:44:25+00:00",
+ "generated": "2026-09-21T21:43:34+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -262,6 +262,28 @@
        "passed": true
       }
      ]
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-6-astra",
+   "model": "gpt-6-astra",
+   "full_model": "openai/gpt-6-astra",
+   "solver": "codex",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-21T21:41:03+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": null,
+     "duration_ms": 36055.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
     }
    ]
   },

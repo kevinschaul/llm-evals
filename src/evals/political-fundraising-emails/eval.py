@@ -37,5 +37,5 @@ def political_fundraising_emails():
             generate(cache=True)
         ],
         scorer=match(),
-        config=GenerateConfig(temperature=0.0)
+        config=GenerateConfig()
     )

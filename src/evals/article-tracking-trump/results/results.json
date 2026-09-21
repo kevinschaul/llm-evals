@@ -1,6 +1,6 @@
 {
  "eval": "article-tracking-trump",
- "generated": "2026-09-20T19:35:32+00:00",
+ "generated": "2026-09-21T21:43:34+00:00",
  "tests": [
   {
    "id": "test-1",
@@ -7421,182 +7421,6 @@
        "explanation": "true"
       }
      },
-     "diff": null,
-     "checks": []
-    }
-   ]
-  },
-  {
-   "provider_id": "claude-fable-5.1",
-   "model": "claude-fable-5.1",
-   "full_model": "anthropic/claude-fable-5.1",
-   "solver": "",
-   "openrouter_provider": "",
-   "timestamp": "2026-09-20T19:34:27+00:00",
-   "pass_rate": null,
-   "samples": [
-    {
-     "id": "test-1",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9708.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-4",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9701.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-6",
-     "output": "",
-     "passed": null,
-     "duration_ms": 10528.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-10",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9692.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-11",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9691.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-12",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9690.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-13",
-     "output": "",
-     "passed": null,
-     "duration_ms": 8743.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-14",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9688.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-15",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9685.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-16",
-     "output": "",
-     "passed": null,
-     "duration_ms": 9685.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-19",
-     "output": "",
-     "passed": null,
-     "duration_ms": 11819.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-20",
-     "output": "",
-     "passed": null,
-     "duration_ms": 11818.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-24",
-     "output": "",
-     "passed": null,
-     "duration_ms": 8803.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-25",
-     "output": "",
-     "passed": null,
-     "duration_ms": 8802.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-26",
-     "output": "",
-     "passed": null,
-     "duration_ms": 1306.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
      "diff": null,
      "checks": []
     }
@@ -33744,6 +33568,270 @@
      "output": "",
      "passed": null,
      "duration_ms": 345.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    }
+   ]
+  },
+  {
+   "provider_id": "gpt-6-astra",
+   "model": "gpt-6-astra",
+   "full_model": "openai/gpt-6-astra",
+   "solver": "",
+   "openrouter_provider": "",
+   "timestamp": "2026-09-21T21:30:35+00:00",
+   "pass_rate": null,
+   "samples": [
+    {
+     "id": "test-1",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8914.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-2",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8709.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-3",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8911.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-4",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8910.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-5",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8911.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-6",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8910.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-7",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8909.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-8",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8911.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-9",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8910.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-10",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8909.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-11",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8908.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-12",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8910.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-13",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8908.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-14",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8907.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-15",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8905.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-16",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8907.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-17",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8908.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-18",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8906.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-19",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8906.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-20",
+     "output": "",
+     "passed": null,
+     "duration_ms": 8904.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-24",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3333.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-25",
+     "output": "",
+     "passed": null,
+     "duration_ms": 3331.0,
+     "input_tokens": null,
+     "output_tokens": null,
+     "scores": {},
+     "diff": null,
+     "checks": []
+    },
+    {
+     "id": "test-26",
+     "output": "",
+     "passed": null,
+     "duration_ms": 367.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},

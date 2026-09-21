@@ -43,5 +43,5 @@ As a reminder, the Washington Post is very interested in automated vehicles, aut
             generate(cache=True)
         ],
         scorer=includes(),
-        config=GenerateConfig(temperature=0.0)
+        config=GenerateConfig()
     )

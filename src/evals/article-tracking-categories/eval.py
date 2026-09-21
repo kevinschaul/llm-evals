@@ -43,5 +43,5 @@ Respond ONLY with the category.
             generate(cache=True)
         ],
         scorer=includes(),
-        config=GenerateConfig(temperature=0.0)
+        config=GenerateConfig()
     )

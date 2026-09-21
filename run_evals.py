@@ -40,10 +40,10 @@ ACTIVE_MODELS = {
         "extra_args": [],
         "solver": "codex",
     },
-    # "openai/gpt-6-astra": {
-    #     "extra_args": [],
-    #     "solver": "codex",
-    # },
+    "openai/gpt-6-astra": {
+        "extra_args": [],
+        "solver": "codex",
+    },
     # "google/gemini-3.1-pro-preview": {
     #     "extra_args": [],
     #     "solver": "pi",
