@@ -42,5 +42,5 @@ def ocr_translation():
         dataset=MemoryDataset(samples),
         solver=[generate(cache=True)],
         scorer=includes(),
-        config=GenerateConfig(temperature=0.0),
+        config=GenerateConfig(),
     )

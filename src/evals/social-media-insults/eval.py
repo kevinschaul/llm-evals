@@ -50,5 +50,5 @@ Now, categorize this post: {input}"""
             generate(cache=True)
         ],
         scorer=includes(),
-        config=GenerateConfig(temperature=0.1)
+        config=GenerateConfig()
     )

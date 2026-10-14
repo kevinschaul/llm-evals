@@ -39,7 +39,7 @@ LEAN_LABELS = ("left", "right", "both")
 # Judge runs locally (llama-swap, llama-server, ...) behind an OpenAI-compatible
 # API. Override with JUDGE_BASE_URL / JUDGE_API_KEY, or -T judge_model=...
 JUDGE_MODEL = "openai/gpt-oss-20b"
-JUDGE_BASE_URL = "http://localhost:1112/v1"
+JUDGE_BASE_URL = "http://box.local:1112/v1"
 
 
 def _load_endpoints() -> dict:

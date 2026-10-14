@@ -1,6 +1,6 @@
 {
  "eval": "extract-fema-incidents",
- "generated": "2026-10-08T01:46:00+00:00",
+ "generated": "2026-10-14T13:04:48+00:00",
  "tests": [
   {
    "id": "test-jpg",
@@ -665,39 +665,6 @@
      "output": "",
      "passed": null,
      "duration_ms": 4054.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    }
-   ]
-  },
-  {
-   "provider_id": "gpt-5.6-luna",
-   "model": "gpt-5.6-luna",
-   "full_model": "openai/gpt-5.6-luna",
-   "solver": "",
-   "openrouter_provider": "",
-   "timestamp": "2026-08-18T16:52:30+00:00",
-   "pass_rate": null,
-   "samples": [
-    {
-     "id": "test-jpg",
-     "output": "",
-     "passed": null,
-     "duration_ms": 3180.0,
-     "input_tokens": null,
-     "output_tokens": null,
-     "scores": {},
-     "diff": null,
-     "checks": []
-    },
-    {
-     "id": "test-pdf",
-     "output": "",
-     "passed": null,
-     "duration_ms": 3207.0,
      "input_tokens": null,
      "output_tokens": null,
      "scores": {},
