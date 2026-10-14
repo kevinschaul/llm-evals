@@ -533,10 +533,23 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
 
         env = os.environ.copy()
 
+        # Dynamic provider config (below) must live inside work_dir, not the
+        # system temp dir: the fenced `pi` subprocess runs in a filesystem
+        # sandbox that gives it its own private /tmp, so a file written to
+        # tempfile.mkdtemp()'s default location is invisible to it (silently
+        # falls back to no matching model -- "Model ... not found"). work_dir
+        # is the one path the sandbox shares with the host.
+        cfg_dir = None
+
         effective_base_url = os.environ.get("PI_BASE_URL", base_url)
         if effective_base_url:
-            model_id = model.name
-            cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-")
+            # model.name includes inspect-ai's service-routing prefix (e.g.
+            # "llama-cpp/strata-qwen3.8-iq2xs"), which the backend itself
+            # doesn't recognize as a model id. service_model_name() strips
+            # that prefix down to what the API actually expects.
+            service_model_name = getattr(model.api, "service_model_name", None)
+            model_id = service_model_name() if service_model_name else model.name
+            cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-", dir=work_dir)
             models_json = {
                 "providers": {
                     provider: {
@@ -553,13 +566,12 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
             }
             Path(cfg_dir, "models.json").write_text(json.dumps(models_json))
             env["PI_CODING_AGENT_DIR"] = cfg_dir
-            state.store.set("pi_cfg_dir", cfg_dir)
             model_arg = f"{provider}/{model_id}"
         else:
             model_arg = _pi_model_arg(model)
             routing = getattr(model, "model_args", {}).get("provider")
             if type(model.api).__name__ == "OpenRouterAPI" and routing:
-                cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-")
+                cfg_dir = tempfile.mkdtemp(prefix="pi-cfg-", dir=work_dir)
                 models_json = {
                     "providers": {
                         "openrouter": {
@@ -574,7 +586,6 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
                 }
                 Path(cfg_dir, "models.json").write_text(json.dumps(models_json))
                 env["PI_CODING_AGENT_DIR"] = cfg_dir
-                state.store.set("pi_cfg_dir", cfg_dir)
 
         cmd = [
             "pi",
@@ -594,9 +605,14 @@ def pi(base_url: Optional[str] = None, provider: str = "llama-swap") -> Solver:
 
         cmd.append(state.input_text)
 
-        await _run_agent_cli(
-            _fence(cmd), env=env, cwd=work_dir, state=state, parser=_parse_pi_event
-        )
+        try:
+            await _run_agent_cli(
+                _fence(cmd), env=env, cwd=work_dir, state=state, parser=_parse_pi_event
+            )
+        finally:
+            # Remove it now, before the git_diff scorer runs over work_dir --
+            # not via the generic cleanup solver, which only runs after scoring.
+            _rm_tree(cfg_dir)
         return state
 
     return solve
